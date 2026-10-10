@@ -1,0 +1,62 @@
+{
+  "id": "uikit_voice_agent_flat",
+  "version": "1.0.0",
+  "name": "Voice agent — flat documentary UI",
+  "niche": "home-services",
+  "states": ["idle", "answered", "confirm"],
+  "contrast_min": 4.5,
+  "palette": {
+    "surface": "#12151C",
+    "panel": "#1A1F2E",
+    "border": "#2A3142",
+    "text": "#F4F6F8",
+    "muted": "#9AA3B5",
+    "danger": "#E25555",
+    "success": "#3DDC97",
+    "accent": "#3DDC97",
+    "note": "Override from brand-harvest ASSET_VERIFIED when available — do not invent navy/mint if site differs"
+  },
+  "type": {
+    "family": "Inter Tight",
+    "fallback": "system-ui, sans-serif",
+    "label_max_chars": 28
+  },
+  "layout": {
+    "phone_frame_fill_pct": 70,
+    "corner_radius_px": 12,
+    "border_px": 1,
+    "density": "sparse — one primary action per state"
+  },
+  "states_spec": {
+    "idle": {
+      "badge": "Missed · 1",
+      "badge_color": "danger",
+      "rows": ["Incoming — unknown", "Ringing…"],
+      "primary_action": null,
+      "never": ["fake call volume", "invented %"]
+    },
+    "answered": {
+      "badge": "Answered",
+      "badge_color": "success",
+      "rows": ["Caller line (ASSET_VERIFIED or placeholder)", "Agent: How can I help?"],
+      "primary_action": "Listening",
+      "never": ["neon waveform spam"]
+    },
+    "confirm": {
+      "badge": "Booked",
+      "badge_color": "success",
+      "rows": ["Routine visit", "Calendar confirm card"],
+      "primary_action": "Confirm",
+      "never": ["customer logos", "PHI"]
+    }
+  },
+  "motion": {
+    "preferred": "hold still + hard cuts between states",
+    "transition_id": "tr_hard_cut",
+    "optional": "soft zoom on tap target in CapCut",
+    "avoid": "full T2V of UI (melts type)"
+  },
+  "prompt_template": "Flat mobile UI screenshot, documentary product photography of a phone screen, NOT a 3D mockup floating in space, NOT neon, NOT glassmorphism spam. App: {{brand}} front-desk tool. Chrome: surface {{surface}} panel {{panel}} accent {{accent}}. Rounded 12px cards, 1px borders, system sans. STATE: {{state_block}}. No fake metrics. No robot avatar as the product. Hard light from screen only. 9:16; UI ≥70% frame. NEGATIVES: holographic, cyberpunk, purple glow, melted text, dashboard spaghetti",
+  "qa_hooks": ["contrast ≥4.5:1", "product-demo present", "no duplicate headline/caption from UI strings"],
+  "demo_html": "preview.html"
+}

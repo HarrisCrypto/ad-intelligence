@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Voice agent UI kit — flat documentary</title>
+  <style>
+    :root {
+      --surface: #12151c;
+      --panel: #1a1f2e;
+      --border: #2a3142;
+      --text: #f4f6f8;
+      --muted: #9aa3b5;
+      --danger: #e25555;
+      --success: #3ddc97;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Inter Tight", system-ui, sans-serif;
+      background: #0b0d12;
+      color: var(--text);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+    .phone {
+      width: 220px;
+      height: 400px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 18px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .label { font-size: 11px; color: var(--muted); letter-spacing: 0.04em; text-transform: uppercase; }
+    .badge {
+      align-self: flex-start;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 8px;
+      border-radius: 999px;
+    }
+    .badge.danger { background: color-mix(in srgb, var(--danger) 22%, transparent); color: var(--danger); }
+    .badge.success { background: color-mix(in srgb, var(--success) 22%, transparent); color: var(--success); }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px;
+      font-size: 13px;
+      line-height: 1.35;
+    }
+    .row { color: var(--muted); margin-top: 6px; }
+    .cta {
+      margin-top: auto;
+      text-align: center;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 10px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: color-mix(in srgb, var(--success) 18%, var(--panel));
+      color: var(--success);
+    }
+    h1 { width: 100%; text-align: center; font-size: 1rem; font-weight: 600; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <h1>uikit_voice_agent_flat — idle → answered → confirm</h1>
+  <div class="phone" data-state="idle">
+    <div class="label">Idle</div>
+    <div class="badge danger">Missed · 1</div>
+    <div class="card">Incoming — unknown<div class="row">Ringing…</div></div>
+  </div>
+  <div class="phone" data-state="answered">
+    <div class="label">Answered</div>
+    <div class="badge success">Answered</div>
+    <div class="card">“AC died — can someone come?”<div class="row">Agent: How can I help?</div></div>
+    <div class="cta">Listening</div>
+  </div>
+  <div class="phone" data-state="confirm">
+    <div class="label">Confirm</div>
+    <div class="badge success">Booked</div>
+    <div class="card">Routine visit<div class="row">Thu · 9:00 AM</div></div>
+    <div class="cta">Confirm</div>
+  </div>
+</body>
+</html>

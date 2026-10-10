@@ -27,6 +27,12 @@
 - `classroom/niche-packs/home-services.md` — objections, hook bank, slop list
 - `classroom/scripts/validate-card.mjs` + `retrieve-cards.mjs` — media rejection + niche retrieve
 
+### Added (Gate 3)
+- `library/{transitions,camera,captions,lighting,grades}/catalog.json` — executable craft presets
+- `library/ui-kits/voice-agent-flat/` — 3-state kit + HTML preview
+- `library/templates/home-services-missed-call/` — study-card → library binding
+- `library/scripts/resolve-toolbox.mjs` + `demo-compose-plan.mjs`
+
 ### Fixed
 - Finish completeness is evidence-derived: `render-status-contradicts-log` when `NOT_RENDERED` contradicts job receipts (B7.3)
 - Compact retrieve keeps `gold_fixture` + `gold_fixtures[]` (B1.1)

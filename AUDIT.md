@@ -197,8 +197,8 @@ Already **82 lines** (under ~150). Content still encodes the old ritual: brainst
 | --- | --- |
 | `classroom/study-cards/` + schema + private-cache | **Done** (Gate 2 — 16 confirmed cards + validate/retrieve) |
 | Niche packs / derived patterns from cards | **Done** (`classroom/niche-packs/home-services.md`) |
-| `library/` transitions/camera/captions/lighting/grades/type/sound/ui-kits/templates | **Partial** (typography + sound in Gate 2.5; rest = Phase 3) |
-| Remotion / deterministic compose | **Missing** (Phase 3/4) |
+| `library/` transitions/camera/captions/lighting/grades/type/sound/ui-kits/templates | **Done** (Gate 3 catalogs + voice UI kit + template; Remotion optional later) |
+| Remotion / deterministic compose | **Partial** (compose plan demo; full Remotion = later) |
 | `pipeline/qa` render instruments | **Done** (Phase 5 early) |
 | `pipeline/critic` vision loop | **Missing** (Phase 6) |
 | `specs/ad-spec.schema.json` | **Missing** (Phase 4) |

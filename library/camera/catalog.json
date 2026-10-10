@@ -1,0 +1,43 @@
+{
+  "id": "library-camera",
+  "version": "1.0.0",
+  "purpose": "Camera grammar presets for prompts + assembler notes",
+  "items": [
+    {
+      "id": "cam_static_lock",
+      "name": "Static lock-off",
+      "move": "none",
+      "lens_hint": "35–50mm equiv",
+      "prompt_fragment": "locked tripod, no handheld shake, subject centered-safe",
+      "when": ["UI phone insert", "before/after match", "endcard plate"],
+      "i2v_strength": "low / still hold preferred"
+    },
+    {
+      "id": "cam_slow_push",
+      "name": "Slow push-in",
+      "move": "dolly-in ~5%",
+      "lens_hint": "35mm",
+      "prompt_fragment": "slow push-in, label stays sharp, no new typography",
+      "when": ["product/hero", "talking-head breath"],
+      "i2v_strength": "subtle 2–4s"
+    },
+    {
+      "id": "cam_phone_native",
+      "name": "Phone-native UGC",
+      "move": "micro handheld",
+      "lens_hint": "phone wide",
+      "prompt_fragment": "eye-level phone cam, imperfect native light, slight handheld",
+      "when": ["owner confession", "UGC hook"],
+      "i2v_strength": "low"
+    },
+    {
+      "id": "cam_screen_ortho",
+      "name": "Orthographic screen record look",
+      "move": "none + optional soft zoom on tap target",
+      "lens_hint": "flat UI",
+      "prompt_fragment": "flat mobile UI screenshot filling ≥70% frame, documentary of phone screen, NOT floating 3D mockup",
+      "when": ["voice-agent UI states", "SaaS aha"],
+      "i2v_strength": "prefer stills + CapCut zoom"
+    }
+  ]
+}

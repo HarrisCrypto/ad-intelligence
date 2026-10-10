@@ -1,0 +1,82 @@
+{
+  "id": "tpl_home_services_missed_call",
+  "version": "1.0.0",
+  "name": "Home services — missed call → booked",
+  "niche": "home-services",
+  "duration_s": 24,
+  "aspect": "9:16",
+  "study_card_ids": [
+    "hvac-missed-call-void-01",
+    "voice-call-ui-demo-03",
+    "tech-hard-cut-pacing-01"
+  ],
+  "gold_fixture": "examples/voice-agent-front-desk.md",
+  "library": {
+    "ui_kit": "uikit_voice_agent_flat",
+    "transition_default": "tr_hard_cut",
+    "camera_hook": "cam_static_lock",
+    "camera_ui": "cam_screen_ortho",
+    "lighting_hook": "lit_desk_practical_night",
+    "lighting_ui": "lit_screen_only",
+    "grade": "grade_flat_ui_doc",
+    "captions": {
+      "hook": "cap_hook_anton",
+      "body": "cap_burn_inter_tight",
+      "cta": "cap_cta_poppins",
+      "legal": "cap_legal_footer"
+    }
+  },
+  "timeline": [
+    {
+      "id": "C1",
+      "t": [0, 8],
+      "job": "missed-call void",
+      "camera": "cam_static_lock",
+      "lighting": "lit_desk_practical_night",
+      "transition_out": "tr_hard_cut",
+      "on_screen_text_role": "hook",
+      "audio": ["ring_sfx", "vo_optional"]
+    },
+    {
+      "id": "U2a",
+      "t": [8, 14],
+      "job": "UI idle → answered",
+      "ui_state": "idle",
+      "camera": "cam_screen_ortho",
+      "lighting": "lit_screen_only",
+      "transition_out": "tr_hard_cut",
+      "on_screen_text_role": "body"
+    },
+    {
+      "id": "U2b",
+      "t": [14, 20],
+      "job": "booking confirm",
+      "ui_state": "answered",
+      "camera": "cam_screen_ortho",
+      "transition_out": "tr_hard_cut",
+      "on_screen_text_role": "body"
+    },
+    {
+      "id": "E1",
+      "t": [20, 24],
+      "job": "one CTA endcard",
+      "ui_state": "confirm",
+      "camera": "cam_static_lock",
+      "transition_out": null,
+      "on_screen_text_role": "cta",
+      "cta_min_hold_s": 3
+    }
+  ],
+  "qa_expect_pass_hints": [
+    "hard cuts in body",
+    "product demo UI present",
+    "CTA ≥3s",
+    "no sine bed",
+    "format video_timed"
+  ],
+  "what_not_to_copy": [
+    "Competitor assets",
+    "Invented call volume",
+    "Silent hook-only finish"
+  ]
+}
