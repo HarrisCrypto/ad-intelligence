@@ -95,6 +95,7 @@ function sectionBlock(text, headingRe) {
 }
 
 function fail(issues, id, msg, line) {
+  if (issues.some((x) => x.id === id && x.msg === msg)) return;
   issues.push({ id, msg, line: line || null });
 }
 
@@ -398,7 +399,153 @@ function lint(text, filePath) {
     }
   }
 
+  // Study honesty — synthesis cannot be laundered into observed proof
+  lintStudyCitationHonesty(text, lines, issues);
+
   return issues;
+}
+
+/** Load public (+ optional private) studies for provenance lookup. */
+function loadStudyIndex() {
+  const map = new Map();
+  const corpusPath = path.join(ROOT, "studies", "corpus.json");
+  if (fs.existsSync(corpusPath)) {
+    try {
+      const corpus = JSON.parse(fs.readFileSync(corpusPath, "utf8"));
+      for (const s of corpus.studies || []) {
+        if (s?.id) map.set(s.id, s);
+      }
+    } catch {
+      /* ignore */
+    }
+  }
+  const privDirs = [
+    path.join(ROOT, "studies", "private"),
+    process.env.AD_INTEL_STUDIES_PRIVATE,
+  ].filter(Boolean);
+  for (const dir of privDirs) {
+    if (!fs.existsSync(dir)) continue;
+    for (const f of fs.readdirSync(dir)) {
+      if (!f.endsWith(".json")) continue;
+      try {
+        const s = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
+        if (s?.id) map.set(s.id, s);
+      } catch {
+        /* ignore */
+      }
+    }
+  }
+  return map;
+}
+
+/**
+ * If a package cites study_* ids, provenance must be declared honestly.
+ * Citing a synthesis study as observed / ad-library / named-campaign proof → fail.
+ */
+function lintStudyCitationHonesty(text, lines, issues) {
+  const ids = [
+    ...new Set(
+      [...text.matchAll(/\b(study_[a-z0-9][a-z0-9_-]*)\b/gi)].map((m) =>
+        m[1].toLowerCase()
+      )
+    ),
+  ];
+  if (!ids.length) return;
+
+  const index = loadStudyIndex();
+  const proofLaunder =
+    /observed\s+(evidence|ad|campaign|teardown)|proven by (this |the )?study|study (proves|shows|demonstrates|confirms)|as (seen|observed) in (the )?study|real[- ]ad (teardown|evidence|proof)|named[- ]campaign (evidence|proof)|measured (CTR|ROAS|CPA) from (the )?study|study['’]s (CTR|ROAS|performance)|library evidence proves/i;
+  let synthesisProofFlagged = false;
+
+  for (const id of ids) {
+    const study = index.get(id);
+    const line = lines.findIndex((l) => new RegExp(`\\b${id}\\b`, "i").test(l));
+    const lineNo = line >= 0 ? line + 1 : null;
+
+    // Window around first mention for local provenance labels
+    const windowStart = Math.max(0, line >= 0 ? line - 3 : 0);
+    const windowEnd = Math.min(lines.length, line >= 0 ? line + 8 : lines.length);
+    const local = lines.slice(windowStart, windowEnd).join("\n");
+    const globalHasProv =
+      /Study provenance|provenance:\s*observed|basis:\s*(synthesis|ad-library|named-campaign|owned-ad)/i.test(
+        text
+      );
+    const localHasProv =
+      /observed\s*:\s*(true|false)|basis\s*:\s*(synthesis|ad-library|named-campaign|owned-ad)|STRUCTURE_ONLY|structure only — not proof|not proof metrics/i.test(
+        local
+      );
+
+    if (!globalHasProv && !localHasProv) {
+      fail(
+        issues,
+        "study-provenance-undeclared",
+        `Cited \`${id}\` without declaring study provenance (observed + basis). Synthesis must be labeled STRUCTURE_ONLY — not proof.`,
+        lineNo
+      );
+    }
+
+    // Package claims observed:true / ad-library for this id
+    const claimsObservedTrue = new RegExp(
+      `${id}[\\s\\S]{0,180}observed\\s*:\\s*true|observed\\s*:\\s*true[\\s\\S]{0,180}${id}`,
+      "i"
+    ).test(text);
+    const claimsAdLibrary = new RegExp(
+      `${id}[\\s\\S]{0,200}basis\\s*:\\s*(ad-library|named-campaign)|basis\\s*:\\s*(ad-library|named-campaign)[\\s\\S]{0,200}${id}`,
+      "i"
+    ).test(text);
+
+    const basis = study?.provenance?.basis || null;
+    const observed = study?.provenance?.observed;
+
+    if (study && basis === "synthesis" && !synthesisProofFlagged) {
+      if (claimsObservedTrue || claimsAdLibrary) {
+        fail(
+          issues,
+          "study-synthesis-cited-as-proof",
+          `Study \`${id}\` is basis:synthesis / observed:false in corpus — package must not claim observed:true or ad-library/named-campaign proof.`,
+          lineNo
+        );
+        synthesisProofFlagged = true;
+      } else if (proofLaunder.test(text) && new RegExp(id, "i").test(text)) {
+        const idx = text.toLowerCase().indexOf(id);
+        const slice = text.slice(Math.max(0, idx - 250), idx + id.length + 250);
+        if (proofLaunder.test(slice) || proofLaunder.test(local)) {
+          fail(
+            issues,
+            "study-synthesis-cited-as-proof",
+            `Synthesis study \`${id}\` cited with observed-proof language. Emulate structure only; never invent evidence.`,
+            lineNo
+          );
+          synthesisProofFlagged = true;
+        }
+      }
+    }
+
+    if (
+      study &&
+      observed === false &&
+      claimsObservedTrue &&
+      !synthesisProofFlagged
+    ) {
+      fail(
+        issues,
+        "study-synthesis-cited-as-proof",
+        `Study \`${id}\` has observed:false — package claims observed:true.`,
+        lineNo
+      );
+      synthesisProofFlagged = true;
+    }
+
+    if (!study && /study_fixture_|study_private|study_example/i.test(id) === false) {
+      // Unknown study id still requires provenance; warn as unknown
+      fail(
+        issues,
+        "study-unknown-id",
+        `Study id \`${id}\` not found in studies/corpus.json (or private). Do not invent study ids.`,
+        lineNo
+      );
+    }
+  }
 }
 
 function main() {

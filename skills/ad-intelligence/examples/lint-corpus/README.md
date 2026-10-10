@@ -12,5 +12,6 @@ Used by `scripts/demo-quality-gates.mjs` to prove the mechanical gate catches co
 | `fail-copy-leak.md` | Ledger language in consumer copy fails |
 | `fail-logo-multi-cta.md` | Thin scripts / logo-first / multi-CTA fail |
 | `fail-invented-metrics.md` | Fake proof / missing freshness fail |
+| `fail-study-synthesis-as-proof.md` | Citing `basis:synthesis` study as observed/ad-library proof |
 
 Do **not** treat these as templates to copy.

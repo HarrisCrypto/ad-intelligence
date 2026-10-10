@@ -22,6 +22,66 @@ const BLUEPRINT_REQUIRED = [
   "output_contract",
 ];
 
+/** Refuse embedded creatives / blobs — structured notes only. */
+export function rejectMediaPayload(obj, { file = "study" } = {}) {
+  const errors = [];
+  let raw;
+  try {
+    raw = JSON.stringify(obj);
+  } catch {
+    return [`${file}: not serializable`];
+  }
+  if (/data:(image|video|audio)\//i.test(raw)) {
+    errors.push(
+      `${file}: embedded data: URI media forbidden — store structure notes only, never creatives`
+    );
+  }
+  // Long base64-ish blobs (not normal prose / ids)
+  if (/[A-Za-z0-9+/]{800,}={0,2}/.test(raw)) {
+    errors.push(
+      `${file}: large base64 blob detected — media bytes are forbidden in studies`
+    );
+  }
+  const mediaKey =
+    /^(media|video|image|thumbnail|frame|frames|asset_bytes|binary|blob|mp4|png|jpg|jpeg|webp|gif|screenshot_bytes)$/i;
+  function walk(node, p) {
+    if (!node || typeof node !== "object") return;
+    for (const [k, v] of Object.entries(node)) {
+      const path = p ? `${p}.${k}` : k;
+      if (mediaKey.test(k)) {
+        if (
+          typeof v === "string" &&
+          (v.length > 120 ||
+            /^data:/i.test(v) ||
+            /\.(mp4|mov|webm|mkv|avi|jpg|jpeg|png|webp|gif)\b/i.test(v))
+        ) {
+          errors.push(
+            `${file}: media field \`${path}\` rejected — do not store creatives; describe structure only`
+          );
+        } else if (v && typeof v === "object") {
+          errors.push(
+            `${file}: media object \`${path}\` rejected — structured breakdowns only`
+          );
+        }
+      }
+      if (typeof v === "string") {
+        if (
+          /\.(mp4|mov|webm|mkv|avi)\b/i.test(v) &&
+          /(https?:|\.\/|\/tmp\/|file:)/i.test(v)
+        ) {
+          errors.push(
+            `${file}: media URL/path in \`${path}\` forbidden — no creative files in git/private studies`
+          );
+        }
+      } else if (v && typeof v === "object") {
+        walk(v, path);
+      }
+    }
+  }
+  walk(obj, "");
+  return errors;
+}
+
 export function validateProvenance(prov, { requireObservedFields = false } = {}) {
   const errors = [];
   if (!prov || typeof prov !== "object") {
@@ -68,6 +128,7 @@ export function validateStudy(study, { file = "study" } = {}) {
   if (!study || typeof study !== "object") {
     return [`${file}: not an object`];
   }
+  errors.push(...rejectMediaPayload(study, { file }));
   for (const k of [
     "id",
     "title",
@@ -110,6 +171,7 @@ export function validateStudy(study, { file = "study" } = {}) {
 export function validateBlueprint(bp, { file = "blueprint" } = {}) {
   const errors = [];
   if (!bp || typeof bp !== "object") return [`${file}: not an object`];
+  errors.push(...rejectMediaPayload(bp, { file }));
   for (const k of BLUEPRINT_REQUIRED) {
     if (bp[k] === undefined || bp[k] === null) errors.push(`${file}: missing ${k}`);
   }

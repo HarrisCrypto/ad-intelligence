@@ -30,7 +30,9 @@ Every study **must** carry:
 | `named-campaign` | Named teardown (private) | Structure yes; never paste lines |
 | `owned-ad` | Your brand’s ad | Yes for your metrics if true |
 
-Retrieve **surfaces** `provenance` on every item. Packages that treat `basis:synthesis` as observed evidence are inventing proof one level up.
+**Public corpus is intentionally 100% `synthesis` / `observed:false`.** Observed / named-campaign / owned-ad studies are **private** via `ingest-blueprint.mjs` → `studies/private/` after a real library watch. Do not invent public “observed” rows.
+
+Retrieve **surfaces** `provenance` on every item. **Lint enforces it:** `lint-package.mjs` fails `study-synthesis-cited-as-proof` / `study-provenance-undeclared` if a package launders synthesis into observed evidence (see `examples/lint-corpus/fail-study-synthesis-as-proof.md`).
 
 ## Agent loop
 

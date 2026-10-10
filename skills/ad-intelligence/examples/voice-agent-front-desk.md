@@ -27,6 +27,9 @@ Demonstrates **assembler-aware** render planning when single-pass cinema gen is 
 - Primary pattern id: `local-service-trust`
 - Challenger pattern id: `pas-pain-stack`
 - Dual-track twin id: `app-demo-ui`
+- Study id: `study_voice_agent_missed_call`
+- Study provenance: observed:false · basis:synthesis — STRUCTURE_ONLY (emulate timing/shots; not proof metrics)
+- Attention model id (primary): `am_voice_agent_missed`
 - Flow id: `missed-call-solve-cta`
 - Hook family ids: costly-mistake, geo-specific, ui-aha
 - Trend class: none
@@ -34,6 +37,7 @@ Demonstrates **assembler-aware** render planning when single-pass cinema gen is 
 - Pipeline route: assembler keyframes + short clips / screen UI / CapCut (see assembler-pipeline.md)
 - Swipe-signal notes: local trust + PAS high longevity; fails on fake call metrics / multi-CTA / diagnosing patients
 - Retrieve warnings: none
+- LAST-VERIFIED: creative-stack 2026-10-10
 
 ### Job-to-be-done (one sentence)
 Make the after-hours missed-call feel expensive, show Deskline answering calmly, then one path to book a demo.

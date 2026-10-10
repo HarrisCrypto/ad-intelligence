@@ -429,6 +429,8 @@ Replace every `[[LIKE_THIS]]`. Tags must be USER_SUPPLIED | ASSET_VERIFIED | PLA
 - Primary pattern id: `[[from retrieve.mjs]]`
 - Challenger pattern id: `[[from retrieve]]`
 - Dual-track twin id: `[[≠ primary; cinema/high-prod if dual-track]]`
+- Study id: `[[study_* from retrieve studies — or n/a if match_status none_for_query]]`
+- Study provenance: observed:[[true|false]] · basis:[[synthesis|ad-library|named-campaign|owned-ad]] — [[STRUCTURE_ONLY if synthesis; never invent proof]]
 - Attention model id (primary): `[[am_* from retrieve attention_models]]`
 - Attention model id (challenger): `[[am_*]]`
 - Research notes (public libraries — structure only): [[Meta/TikTok/X/YouTube — what timing you stole]]
@@ -438,7 +440,8 @@ Replace every `[[LIKE_THIS]]`. Tags must be USER_SUPPLIED | ASSET_VERIFIED | PLA
 - Niche pack: [[…]]
 - Pipeline route (from pattern-to-pipeline): [[…]]
 - Swipe-signal notes: [[…|none]]
-- Retrieve warnings: [[none|paste warnings]]
+- Retrieve warnings: [[none|paste warnings — heed no_study_match / study_niche_weak]]
+- LAST-VERIFIED: [[creative-stack date]]
 
 ### Job-to-be-done (one sentence)
 [[One job only — what the viewer should do/feel next]]
