@@ -24,11 +24,15 @@ List **Assumptions**. Ask only for offer, product refs, regulated claims if miss
 
 ### Pipeline rung (pick one)
 
+Index: [`../references/creative-stack/README.md`](../references/creative-stack/README.md)
+
 | Rung | When | Follow |
 | --- | --- | --- |
 | Connected | Seedance / Higgsfield / peer MCP in session | `connected-run-protocol.md` — **call tools** |
-| Handoff | Those tools exist for the user, not in-session | Seedance contract + Higgsfield briefs (unchanged) |
-| **Assembler** | No single-pass long video gen — only stills / short clips / CapCut | `assembler-pipeline.md` |
+| Handoff | Those tools exist for the user but not in-session | Seedance contract + Higgsfield briefs (unchanged) |
+| **Assembler** | No single-pass long video gen — only stills / short clips / CapCut | [`assembler-pipeline.md`](../references/creative-stack/assembler-pipeline.md) |
+
+Service-niche phone / front-desk gold: [`../examples/voice-agent-front-desk.md`](../examples/voice-agent-front-desk.md).
 
 ## 2) Retrieve
 
