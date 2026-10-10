@@ -1,5 +1,18 @@
 # Changelog
 
+## 3.12.1 — 2026-10-10
+
+Close remaining 35-lens ROI items: offline retrieve for no-shell harnesses, lite context pack, hard no-shell lint checklist; drop “cinematic” plugin keywords.
+
+### Added
+- `references/retrieve-offline-compact.json` (+ `build-offline-retrieve.mjs`)
+- `prompts/no-shell-lint-checklist.md`
+- `prompts/context-pack-lite.md` via `build-context-pack.mjs --lite --write`
+
+### Changed
+- One-shot / harness-equalization: offline path + hard checklist
+- Plugin **3.12.1**
+
 ## 3.12.0 — 2026-10-10
 
 **Multi-harness Agent OS** — 35-lens pass + safe patterns from Agent Skills / awesome-agent-skills ecosystems so any LLM can discover the skill, equalize its own tools, and still hit gold density.

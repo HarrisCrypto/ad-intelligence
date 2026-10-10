@@ -39,7 +39,8 @@ ANY HARNESS PATH
 4) Follow prompts/one-shot.md             # concept → beats → craft → lint
 5) Open examples/visual/attention-lab.html
 
-NO SHELL? Paste prompts/context-pack.md into system context.
+NO SHELL? Paste prompts/context-pack-lite.md + use references/retrieve-offline-compact.json
+         + prompts/no-shell-lint-checklist.md (never fake ok:true).
 
 Discovery: .cursor/skills · .claude/skills · .agents/skills · .github/skills · AGENTS.md
 `);

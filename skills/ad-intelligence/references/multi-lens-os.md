@@ -30,6 +30,10 @@ probe-harness → equalize rung → (brief-from-url?) → retrieve+attention mod
 → Concept/angles → ≥6 exact beats → Craft → lint → deliver
 ```
 
+No shell: lite context-pack → `retrieve-offline-compact.json` → `no-shell-lint-checklist.md` (never fake ok:true).
+
+Follow-up from consultant ROI list (v3.12.1): offline retrieve, `--lite` pack, hard no-shell checklist, drop cinematic keywords.
+
 ## Borrowed *patterns* (not content) from high-star ecosystems
 
 | Pattern | Source class | Our implementation |

@@ -74,6 +74,9 @@ const discovery = {
   github_copilot: ".github/skills/ad-intelligence",
   agents_dir: ".agents/skills/ad-intelligence",
   context_pack: "skills/ad-intelligence/prompts/context-pack.md",
+  context_pack_lite: "skills/ad-intelligence/prompts/context-pack-lite.md",
+  offline_retrieve: "skills/ad-intelligence/references/retrieve-offline-compact.json",
+  no_shell_lint: "skills/ad-intelligence/prompts/no-shell-lint-checklist.md",
 };
 
 const next = [

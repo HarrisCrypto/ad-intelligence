@@ -1,7 +1,7 @@
 {
   "name": "ad-intelligence",
   "displayName": "Ad Intelligence",
-  "version": "3.12.0",
+  "version": "3.12.1",
   "description": "One-shot agency-grade ads for any harness: probe tools, Attention Lab, multi-skill discovery, craft lint.",
   "author": {
     "name": "HarrisCrypto"
@@ -12,11 +12,12 @@
     "seedance",
     "higgsfield",
     "viral",
-    "cinematic",
     "ugc",
     "tiktok",
     "meta",
-    "creative-stack"
+    "youtube",
+    "creative-stack",
+    "one-shot"
   ],
   "skills": [
     "./skills/ad-intelligence/SKILL.md"

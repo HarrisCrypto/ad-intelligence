@@ -38,7 +38,9 @@ Agents fail when they fill ledgers before having an idea. **Research → attenti
 6. LINT LOOP:
    node scripts/lint-package.mjs packages/<brand>-ad.md
    Fix until ok:true. Paste real lint JSON (never invent it).
-   No shell → "LINT: not run (no shell)" + self-check; do not fake JSON.
+   No shell → prompts/no-shell-lint-checklist.md (every box) + footer;
+   use references/retrieve-offline-compact.json for pattern ids;
+   never invent ok:true JSON.
 ```
 
 ## Niche cheat sheet

@@ -11,7 +11,7 @@ description: >-
   Higgsfield. Probe → equalize → concept → ≥6 beats → lint until ok.
 compatibility: Requires Node 18+ for scripts. Optional network for URL brief + libraries. MCP video tools optional (connected rung).
 metadata:
-  version: "3.12.0"
+  version: "3.12.1"
   open_standard: agentskills
 ---
 
@@ -36,7 +36,7 @@ Ads, creatives, hooks, UGC, Meta/TikTok/Instagram/X/YouTube, “ads for my site,
 9. Deliver the file
 
 Ready check: `node scripts/agent-ready.mjs`  
-No shell: paste [`prompts/context-pack.md`](prompts/context-pack.md).
+No shell: paste [`prompts/context-pack-lite.md`](prompts/context-pack-lite.md) · offline [`retrieve-offline-compact.json`](references/retrieve-offline-compact.json) · [`no-shell-lint-checklist.md`](prompts/no-shell-lint-checklist.md).
 
 ## Pipeline rung (after probe)
 

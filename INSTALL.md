@@ -2,7 +2,7 @@
 
 **Repo:** https://github.com/HarrisCrypto/ad-intelligence  
 **Skill root:** `skills/ad-intelligence/`  
-**Version:** **3.12.0** — see [CHANGELOG.md](./CHANGELOG.md)
+**Version:** **3.12.1** — see [CHANGELOG.md](./CHANGELOG.md)
 
 ---
 
@@ -20,7 +20,8 @@ Agents miss the skill path, ignore their real tools, fill ledgers before ideas, 
 | **Claude Code** | `.claude/skills/ad-intelligence` |
 | **GitHub Copilot** | `.github/skills/ad-intelligence` |
 | **Codex / OpenClaw / generic** | `.agents/skills/ad-intelligence` · root [`AGENTS.md`](./AGENTS.md) |
-| **Any LLM (no skill loader)** | Paste `skills/ad-intelligence/prompts/context-pack.md` |
+| **Any LLM (no skill loader)** | Paste `context-pack-lite.md` (small) or `context-pack.md` (full) |
+| **No shell** | Offline retrieve JSON + `prompts/no-shell-lint-checklist.md` |
 | **Cloud Agents** | Clone this repo as the workspace |
 
 Ready check:
@@ -34,7 +35,7 @@ node skills/ad-intelligence/scripts/agent-ready.mjs
 ## Paste this to your agent (one-shot)
 
 ```text
-Use Ad Intelligence v3.12 from https://github.com/HarrisCrypto/ad-intelligence
+Use Ad Intelligence v3.12.1 from https://github.com/HarrisCrypto/ad-intelligence
 Follow skills/ad-intelligence/prompts/one-shot.md EXACTLY.
 First: node skills/ad-intelligence/scripts/probe-harness.mjs — fill the tool card and pick a rung.
 If I give a website: node skills/ad-intelligence/scripts/brief-from-url.mjs <url>

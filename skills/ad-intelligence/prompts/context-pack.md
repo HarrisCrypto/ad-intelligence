@@ -1,7 +1,8 @@
-# Ad Intelligence — CONTEXT PACK (v3.12)
+# Ad Intelligence — CONTEXT PACK (v3.12.1)
 
 _Paste into system context. Then follow the one-shot sequence._
 _Repo: https://github.com/HarrisCrypto/ad-intelligence_
+_Lite pack: node scripts/build-context-pack.mjs --lite_
 
 ---
 ## 1) ONE-SHOT
@@ -46,7 +47,9 @@ Agents fail when they fill ledgers before having an idea. **Research → attenti
 6. LINT LOOP:
    node scripts/lint-package.mjs packages/<brand>-ad.md
    Fix until ok:true. Paste real lint JSON (never invent it).
-   No shell → "LINT: not run (no shell)" + self-check; do not fake JSON.
+   No shell → prompts/no-shell-lint-checklist.md (every box) + footer;
+   use references/retrieve-offline-compact.json for pattern ids;
+   never invent ok:true JSON.
 ```
 
 ## Niche cheat sheet
@@ -108,7 +111,7 @@ node scripts/probe-harness.mjs
 | Text-only / no gen tools | **package-only** | Still ship lint-clean package + unit prompts. Say `NOT_RENDERED`. |
 | Browser / web fetch | Use for URL briefs + public ad libraries | `brief-from-url.mjs` · `ad-libraries.md` |
 | Shell + Node | Use mechanical loop | start → retrieve → lint until ok |
-| No shell | Paste `prompts/context-pack.md`; write `"LINT: not run (no shell)"` — **never invent lint JSON** |
+| No shell | Paste `prompts/context-pack-lite.md` (or full pack) · offline retrieve JSON · `no-shell-lint-checklist.md` — **never invent lint JSON** |
 
 ## Equalization rules (non-negotiable)
 
@@ -139,50 +142,84 @@ HARNESS TOOL CARD
 Rung chosen + tool card filled + lint-clean package (or honest no-shell self-check).
 
 ---
-## 3) ATTENTION + ANY NICHE
+## 3) NO-SHELL LINT
 
-# Attention + any niche + harness
+# No-shell lint checklist — hard gate
 
-- Probe: node scripts/probe-harness.mjs → prompts/harness-equalization.md
-- View models: examples/visual/attention-lab.html
-- Public libraries: references/ad-libraries.md (Meta, TikTok, X, YouTube, LinkedIn)
-- URL briefs: prompts/brief-from-url.md
-- Emulate: prompts/emulate-attention-model.md
-- Angles: references/angle-axes.md
-- Hair/shampoo → beauty · Food → food_bev · AI/voice agent → saas + voice gold
-- retrieve.mjs returns attention_models + research URLs — use them
-- Equalize tools: connected | handoff | assembler | package-only — never fake MCP jobs
+Use **only** when you cannot run `node scripts/lint-package.mjs`.  
+Write at the top of the delivery: `LINT: not run (no shell)` — **never invent `"ok": true` JSON.**
+
+Tick every box. Any fail → rewrite before delivery.
+
+## Required sections (must exist as headings)
+
+- [ ] Brief  
+- [ ] Retrieval (pattern ids from live retrieve **or** `references/retrieve-offline-compact.json`)  
+- [ ] Job-to-be-done (one sentence)  
+- [ ] Concept (+ “Not the default because…”)  
+- [ ] Consistency systems (sheets)  
+- [ ] Creative stack / Hooks  
+- [ ] Timed script (≥6 rows; exact quoted VO/on-screen — not “sparse”)  
+- [ ] Claim ledger (no invented proof)  
+- [ ] Craft system (≥2 `#HEX`, real font names, motion, E1, 9:16+1:1)  
+- [ ] Render plan  
+- [ ] Caption + Paid social copy (no ASSUMED/PLACEHOLDER/“only when supplied” leaks)  
+- [ ] CTA (exactly one primary in-cut)  
+- [ ] AI disclosure / rights  
+- [ ] Self-critique  
+- [ ] First-time-right  
+
+## Hard fails
+
+- [ ] No leftover `[[BRACKETS]]`  
+- [ ] Attention model id (`am_*`) named  
+- [ ] Harness tool card / rung declared  
+- [ ] Muted-first 0–3s (no logo sting)  
+- [ ] Craft free of: cinematic, stunning, 8k, sleek, epic, nice…  
+- [ ] No invented Seedance/Higgsfield job ids (`NOT_RENDERED` OK)  
+- [ ] Offline retrieve used only if no shell — ids must exist in offline JSON  
+
+## Offline retrieve
+
+Open `references/retrieve-offline-compact.json` → key like `beauty|tiktok` or `voice ai|meta` → paste `picks` + `attention_models`.
+
+## Deliverable footer (paste)
+
+```text
+LINT: not run (no shell)
+NO-SHELL CHECKLIST: all boxes ticked
+RUNG: [[connected|handoff|assembler|package-only]]
+ATTENTION MODEL: [[am_*]]
+PATTERN PRIMARY: [[id from offline or prior retrieve]]
+```
 
 ---
-## 4) CRAFT DEFAULTS
+## 4) ATTENTION + HARNESS
+
+- Probe: node scripts/probe-harness.mjs
+- Lab: examples/visual/attention-lab.html
+- Libraries: references/ad-libraries.md
+- Offline retrieve: references/retrieve-offline-compact.json
+- Angles: references/angle-axes.md
+
+---
+## 5) CRAFT DEFAULTS
 
 # Craft defaults (compressed)
 
-## AD-DEFAULTS to refuse (unless brief forces + you explain)
-- Smiling person holding product to camera
-- Floating product + particles / god-rays
-- Logo-first open or whoosh logo sting in 0–3s
-- “Tired of X? Meet Y.”
-- Drone skyline for local “#1”
-- Neon / holographic SaaS cockpit with invented %
-- Cream+serif+terracotta or purple-glow AI-default looks
-- Invented review counts / ROAS
-- Image collage + crappy slogan (no cut/timing/shots)
+## Refuse
+- Smiling hold-to-camera · floating product+particles · logo-first 0–3s
+- “Tired of X? Meet Y.” · drone #1 · neon SaaS % · purple-glow AI
+- Invented reviews/ROAS · image collage + slogan
 
-## Hook / edit
-- 0–3s muted-first; brand cue via product/place/color OK; logo sting only on endcard
-- ≥6 timed-script rows for ~24s; EXACT on-screen/VO words in quotes
-- Captions carry the story muted; one CTA; product hold ≥1.2s; endcard ≥2.5s
-- Pick an attention model (am_*) and match its timing sheet
-
-## Craft lint (must pass)
-- ≥2 #HEX; real font names (no -style/-like); motion; E1; 9:16+1:1
-- No cinematic/stunning/8k/sleek/nice in craft/prompts
-- No “only when supplied” / ASSUMED in paid primary or captions
-- No leftover [[BRACKETS]]
+## Must
+- Attention model am_* · Concept + Not the default because…
+- ≥6 timed rows · EXACT quoted VO · one CTA · muted-first
+- Craft: ≥2 #HEX · real fonts · motion · E1 · 9:16+1:1
+- No leftover [[BRACKETS]] · never invent lint JSON or job ids
 
 ---
-## 5) PACKAGE SKELETON
+## 6) PACKAGE SKELETON
 
 # Package skeleton — COPY THIS FILE, fill [[BRACKETS]], do not delete sections
 
@@ -409,7 +446,7 @@ NEGATIVES: melted type, wrong label, logo redraw, extra fingers, watermark, iden
 - Self-critique completed: yes
 
 ---
-## 6) GOLD DENSITY EXCERPT (beauty — match this specificity)
+## 7) GOLD DENSITY EXCERPT
 
 ### Concept (chosen)
 - Three options: (1) smiling hold-to-camera serum (2) “4:07pm” base-fail clock (3) ASMR drop only  
@@ -438,28 +475,8 @@ NEGATIVES: melted type, wrong label, logo redraw, extra fingers, watermark, iden
 - Endcard module E1: brand wordmark SVG clear space · one soft CTA · 3s hold · comps E1_9x16 + E1_1x1
 - Aspect matrix: 9:16 master; 1:1 reflow type (not center-crop); cinema twin may add 16:9
 - Finish handoff: CapCut V1 clips U1–U3 · V2 captions/endcard · per production-finish-spec.md
-
-#### Unit U1 — paste-ready prompt
-```text
-COMMERCIAL AD UNIT — beauty — pov-day-in-life — U1
-Job: makeup lasting a double shift feels inevitable; soft-shop serum.
-Lens / Light / Surface / Motion: front-camera phone; AM window light; skin + frosted glass; slow push-in.
-Aspect: 9:16; lower caption zone clear.
-
-REF BINDING: Image 1 = hero pack. Image 2 = label. Image 3 = ¾. Image 4 = face front.
-
-PRODUCT SHEET LOCK: 30ml frosted glass, soft-sage label, matte cap; no logo melt; true color.
-CHARACTER SHEET LOCK: gold hoops, white tee, candid tired energy; same person every frame.
-
-TIMELINE:
-0–2s HOOK: mirror selfie; on-screen POV idea (burn exact words in CapCut).
-2–10s: commute/desk; serum briefly visible matching Image 1.
-
-AUDIO PATH: muted gen + captions (VO optional in post)
-NEGATIVES: melted type, wrong label, identity drift, extra fingers, watermark, clinical claims on screen
-```
 ---
-## 7) COMMANDS
+## 8) COMMANDS
 
 ```bash
 cd skills/ad-intelligence
@@ -468,5 +485,4 @@ node scripts/agent-ready.mjs
 node scripts/start-package.mjs --out packages/<brand>-ad.md
 node scripts/retrieve.mjs --niche <n> --platform <p> --limit 5 --compact
 node scripts/lint-package.mjs packages/<brand>-ad.md
-# open examples/visual/attention-lab.html
 ```

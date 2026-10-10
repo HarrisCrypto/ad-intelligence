@@ -1,0 +1,1304 @@
+{
+  "id": "retrieve-offline-compact",
+  "version": "1.0.0",
+  "updated": "2026-10-10",
+  "purpose": "Compact retrieve slices for harnesses without shell. Prefer live retrieve.mjs when available. Never invent pattern ids.",
+  "how_to_use": "Match niche|platform key (or closest). Paste picks + attention_models into package Retrieval. Then one-shot.",
+  "by_query": {
+    "beauty|tiktok": {
+      "query": {
+        "niche": "beauty",
+        "platform": "tiktok"
+      },
+      "resolved": {
+        "niche_id": "beauty",
+        "platform": "tiktok",
+        "match_quality": "ok"
+      },
+      "picks": {
+        "primary": "beauty-macro-tabletop",
+        "challenger": "before-after-reveal",
+        "dual_track_twin": "vfx-transformation",
+        "routes": {
+          "beauty-macro-tabletop": {
+            "stack": [
+              "midjourney_flux_macro_keyframes",
+              "seedance_or_kling_i2v",
+              "capcut"
+            ],
+            "duration_s": 10
+          },
+          "before-after-reveal": {
+            "stack": [
+              "product-photoshoot_or_owned_stills",
+              "seedance_or_runway",
+              "capcut"
+            ],
+            "duration_s": 12
+          },
+          "vfx-transformation": {
+            "stack": [
+              "runway",
+              "kling",
+              "seedance.video_edit",
+              "capcut"
+            ],
+            "duration_s": 10
+          }
+        }
+      },
+      "attention_models": {
+        "primary": "am_hair_transform",
+        "challenger": "am_before_after_matchcut",
+        "models": [
+          {
+            "id": "am_hair_transform",
+            "name": "Hair / shampoo transform",
+            "why_stops_scroll": "Hair motion + matched before/after lighting",
+            "pattern_ids": [
+              "before-after-reveal",
+              "grwm-soft-sell",
+              "ugc-talking-head-scroll-stop",
+              "beauty-macro-tabletop"
+            ],
+            "ideal_seconds": 18
+          },
+          {
+            "id": "am_before_after_matchcut",
+            "name": "Before → after match-cut",
+            "why_stops_scroll": "Matched framing makes change undeniable in one cut",
+            "pattern_ids": [
+              "before-after-reveal",
+              "vfx-transformation"
+            ],
+            "ideal_seconds": 15
+          },
+          {
+            "id": "am_macro_lust_loop",
+            "name": "Macro lust / product loop",
+            "why_stops_scroll": "Texture/motion mid-action before brand talk",
+            "pattern_ids": [
+              "beauty-macro-tabletop",
+              "product-loop-demo",
+              "unboxing-asmr"
+            ],
+            "ideal_seconds": 12
+          },
+          {
+            "id": "am_grwm_ritual",
+            "name": "GRWM / ritual soft-sell",
+            "why_stops_scroll": "Identity ritual first; product earns insert",
+            "pattern_ids": [
+              "grwm-soft-sell",
+              "pov-day-in-life"
+            ],
+            "ideal_seconds": 35
+          }
+        ],
+        "research": [
+          {
+            "id": "tiktok_creative_center",
+            "name": "TikTok Creative Center",
+            "url": "https://ads.tiktok.com/business/creativecenter",
+            "how": "Top ads / tips by region → watch hook velocity, caption burn-in, loopability. Emulate pacing, not brand.",
+            "platforms": [
+              "tiktok"
+            ]
+          }
+        ]
+      },
+      "results": [
+        {
+          "id": "beauty-macro-tabletop",
+          "name": "Beauty / tabletop macro film",
+          "production_tier": "high_production",
+          "virality_posture": "brand_film"
+        },
+        {
+          "id": "before-after-reveal",
+          "name": "Before → After reveal (craft proof)",
+          "production_tier": "hybrid_polished",
+          "virality_posture": "share_engineered"
+        },
+        {
+          "id": "grwm-soft-sell",
+          "name": "GRWM / get-ready-with-me soft sell",
+          "production_tier": "native_ugc",
+          "virality_posture": "trend_reactive"
+        },
+        {
+          "id": "vfx-transformation",
+          "name": "VFX transformation spot",
+          "production_tier": "high_production",
+          "virality_posture": "share_engineered"
+        },
+        {
+          "id": "influencer-collab-brief",
+          "name": "Influencer collab / spark seeding brief",
+          "production_tier": "native_ugc",
+          "virality_posture": "trend_reactive"
+        }
+      ]
+    },
+    "shampoo|tiktok": {
+      "query": {
+        "niche": "shampoo",
+        "platform": "tiktok"
+      },
+      "resolved": {
+        "niche_id": "beauty",
+        "platform": "tiktok",
+        "match_quality": "ok"
+      },
+      "picks": {
+        "primary": "beauty-macro-tabletop",
+        "challenger": "before-after-reveal",
+        "dual_track_twin": "vfx-transformation",
+        "routes": {
+          "beauty-macro-tabletop": {
+            "stack": [
+              "midjourney_flux_macro_keyframes",
+              "seedance_or_kling_i2v",
+              "capcut"
+            ],
+            "duration_s": 10
+          },
+          "before-after-reveal": {
+            "stack": [
+              "product-photoshoot_or_owned_stills",
+              "seedance_or_runway",
+              "capcut"
+            ],
+            "duration_s": 12
+          },
+          "vfx-transformation": {
+            "stack": [
+              "runway",
+              "kling",
+              "seedance.video_edit",
+              "capcut"
+            ],
+            "duration_s": 10
+          }
+        }
+      },
+      "attention_models": {
+        "primary": "am_hair_transform",
+        "challenger": "am_before_after_matchcut",
+        "models": [
+          {
+            "id": "am_hair_transform",
+            "name": "Hair / shampoo transform",
+            "why_stops_scroll": "Hair motion + matched before/after lighting",
+            "pattern_ids": [
+              "before-after-reveal",
+              "grwm-soft-sell",
+              "ugc-talking-head-scroll-stop",
+              "beauty-macro-tabletop"
+            ],
+            "ideal_seconds": 18
+          },
+          {
+            "id": "am_before_after_matchcut",
+            "name": "Before → after match-cut",
+            "why_stops_scroll": "Matched framing makes change undeniable in one cut",
+            "pattern_ids": [
+              "before-after-reveal",
+              "vfx-transformation"
+            ],
+            "ideal_seconds": 15
+          },
+          {
+            "id": "am_macro_lust_loop",
+            "name": "Macro lust / product loop",
+            "why_stops_scroll": "Texture/motion mid-action before brand talk",
+            "pattern_ids": [
+              "beauty-macro-tabletop",
+              "product-loop-demo",
+              "unboxing-asmr"
+            ],
+            "ideal_seconds": 12
+          },
+          {
+            "id": "am_grwm_ritual",
+            "name": "GRWM / ritual soft-sell",
+            "why_stops_scroll": "Identity ritual first; product earns insert",
+            "pattern_ids": [
+              "grwm-soft-sell",
+              "pov-day-in-life"
+            ],
+            "ideal_seconds": 35
+          }
+        ],
+        "research": [
+          {
+            "id": "tiktok_creative_center",
+            "name": "TikTok Creative Center",
+            "url": "https://ads.tiktok.com/business/creativecenter",
+            "how": "Top ads / tips by region → watch hook velocity, caption burn-in, loopability. Emulate pacing, not brand.",
+            "platforms": [
+              "tiktok"
+            ]
+          }
+        ]
+      },
+      "results": [
+        {
+          "id": "beauty-macro-tabletop",
+          "name": "Beauty / tabletop macro film",
+          "production_tier": "high_production",
+          "virality_posture": "brand_film"
+        },
+        {
+          "id": "before-after-reveal",
+          "name": "Before → After reveal (craft proof)",
+          "production_tier": "hybrid_polished",
+          "virality_posture": "share_engineered"
+        },
+        {
+          "id": "grwm-soft-sell",
+          "name": "GRWM / get-ready-with-me soft sell",
+          "production_tier": "native_ugc",
+          "virality_posture": "trend_reactive"
+        },
+        {
+          "id": "vfx-transformation",
+          "name": "VFX transformation spot",
+          "production_tier": "high_production",
+          "virality_posture": "share_engineered"
+        },
+        {
+          "id": "influencer-collab-brief",
+          "name": "Influencer collab / spark seeding brief",
+          "production_tier": "native_ugc",
+          "virality_posture": "trend_reactive"
+        }
+      ]
+    },
+    "food|instagram": {
+      "query": {
+        "niche": "food",
+        "platform": "instagram"
+      },
+      "resolved": {
+        "niche_id": "food-bev",
+        "platform": "meta",
+        "match_quality": "ok"
+      },
+      "picks": {
+        "primary": "beauty-macro-tabletop",
+        "challenger": "skit-sketch-ad",
+        "dual_track_twin": "street-interview",
+        "routes": {
+          "beauty-macro-tabletop": {
+            "stack": [
+              "midjourney_flux_macro_keyframes",
+              "seedance_or_kling_i2v",
+              "capcut"
+            ],
+            "duration_s": 10
+          },
+          "skit-sketch-ad": {
+            "stack": [
+              "higgsfield.ugc-video",
+              "kling",
+              "seedance",
+              "capcut"
+            ],
+            "notes": "Comedy timing — generate silent first, add VO"
+          },
+          "street-interview": {
+            "stack": [
+              "live_production",
+              "capcut"
+            ],
+            "clip_strategy": "multi_clip",
+            "ai_gen_safety": "real_footage_only"
+          }
+        }
+      },
+      "attention_models": {
+        "primary": "am_food_crave_asmr",
+        "challenger": "am_macro_lust_loop",
+        "models": [
+          {
+            "id": "am_food_crave_asmr",
+            "name": "Food / bev crave ASMR",
+            "why_stops_scroll": "Pour/crunch/steam mid-action before brand",
+            "pattern_ids": [
+              "unboxing-asmr",
+              "product-loop-demo",
+              "beauty-macro-tabletop"
+            ],
+            "ideal_seconds": 12
+          },
+          {
+            "id": "am_macro_lust_loop",
+            "name": "Macro lust / product loop",
+            "why_stops_scroll": "Texture/motion mid-action before brand talk",
+            "pattern_ids": [
+              "beauty-macro-tabletop",
+              "product-loop-demo",
+              "unboxing-asmr"
+            ],
+            "ideal_seconds": 12
+          },
+          {
+            "id": "am_skit_punchline",
+            "name": "Skit → product punchline",
+            "why_stops_scroll": "Comedy premise completes only when product appears",
+            "pattern_ids": [
+              "skit-sketch-ad",
+              "meme-native-trend",
+              "green-screen-rant"
+            ],
+            "ideal_seconds": 18
+          }
+        ],
+        "research": [
+          {
+            "id": "meta_ad_library",
+            "name": "Meta Ad Library",
+            "url": "https://www.facebook.com/ads/library/",
+            "how": "Search advertiser or keyword → filter Active → study 0–3s hook, text density, endcard CTA. Note structure only.",
+            "platforms": [
+              "meta",
+              "facebook",
+              "instagram"
+            ]
+          }
+        ]
+      },
+      "results": [
+        {
+          "id": "beauty-macro-tabletop",
+          "name": "Beauty / tabletop macro film",
+          "production_tier": "high_production",
+          "virality_posture": "brand_film"
+        },
+        {
+          "id": "skit-sketch-ad",
+          "name": "Skit / sketch comedy ad",
+          "production_tier": "hybrid_polished",
+          "virality_posture": "share_engineered"
+        },
+        {
+          "id": "street-interview",
+          "name": "Street interview / man-on-the-street",
+          "production_tier": "hybrid_polished",
+          "virality_posture": "share_engineered"
+        },
+        {
+          "id": "meme-native-trend",
+          "name": "Meme / native trend hijack",
+          "production_tier": "native_ugc",
+          "virality_posture": "trend_reactive"
+        },
+        {
+          "id": "cultural-moment",
+          "name": "Cultural moment / newsjack (tasteful)",
+          "production_tier": "hybrid_polished",
+          "virality_posture": "trend_reactive"
+        }
+      ]
+    },
+    "saas|meta": {
+      "query": {
+        "niche": "saas",
+        "platform": "meta"
+      },
+      "resolved": {
+        "niche_id": "saas",
+        "platform": "meta",
+        "match_quality": "ok"
+      },
+      "picks": {
+        "primary": "motion-design-explainer",
+        "challenger": "app-demo-ui",
+        "dual_track_twin": "app-demo-ui",
+        "routes": {
+          "motion-design-explainer": {
+            "stack": [
+              "ae_or_capcut",
+              "elevenlabs",
+              "seedance_optional"
+            ],
+            "clip_strategy": "multi_clip",
+            "duration_s": 30
+          },
+          "app-demo-ui": {
+            "stack": [
+              "screen_record",
+              "seedance_broll_optional",
+              "capcut"
+            ],
+            "notes": "UI truth > AI fantasy UI"
+          }
+        }
+      },
+      "attention_models": {
+        "primary": "am_ui_aha_saas",
+        "challenger": "am_voice_agent_missed",
+        "models": [
+          {
+            "id": "am_ui_aha_saas",
+            "name": "UI aha (software / AI)",
+            "why_stops_scroll": "Pain object then real UI doing one job in first taps",
+            "pattern_ids": [
+              "app-demo-ui",
+              "pas-pain-stack",
+              "motion-design-explainer"
+            ],
+            "ideal_seconds": 24
+          },
+          {
+            "id": "am_voice_agent_missed",
+            "name": "Voice / AI agent missed-call",
+            "why_stops_scroll": "Missed-call void is universal pain; agent answers as mechanism",
+            "pattern_ids": [
+              "pas-pain-stack",
+              "app-demo-ui",
+              "local-service-trust"
+            ],
+            "ideal_seconds": 24
+          },
+          {
+            "id": "am_pas_pain_stack",
+            "name": "PAS pain stack",
+            "why_stops_scroll": "Concrete pain object before solution branding",
+            "pattern_ids": [
+              "pas-pain-stack",
+              "objection-faq",
+              "listicle-text-overlay"
+            ],
+            "ideal_seconds": 27
+          },
+          {
+            "id": "am_text_first_x",
+            "name": "Text-first punch (X / LinkedIn)",
+            "why_stops_scroll": "First line alone stops the feed; media supports",
+            "pattern_ids": [
+              "hot-take-controversy",
+              "listicle-text-overlay",
+              "pas-pain-stack"
+            ],
+            "ideal_seconds": 15
+          }
+        ],
+        "research": [
+          {
+            "id": "meta_ad_library",
+            "name": "Meta Ad Library",
+            "url": "https://www.facebook.com/ads/library/",
+            "how": "Search advertiser or keyword → filter Active → study 0–3s hook, text density, endcard CTA. Note structure only.",
+            "platforms": [
+              "meta",
+              "facebook",
+              "instagram"
+            ]
+          }
+        ]
+      },
+      "results": [
+        {
+          "id": "motion-design-explainer",
+          "name": "Motion-design explainer",
+          "production_tier": "high_production",
+          "virality_posture": "evergreen_dr"
+        },
+        {
+          "id": "app-demo-ui",
+          "name": "App / UI demo ad",
+          "production_tier": "high_production",
+          "virality_posture": "evergreen_dr"
+        },
+        {
+          "id": "listicle-text-overlay",
+          "name": "Listicle / text-overlay education",
+          "production_tier": "native_ugc",
+          "virality_posture": "share_engineered"
+        },
+        {
+          "id": "pas-pain-stack",
+          "name": "Problem → Agitate → Solve (pain stack)",
+          "production_tier": "hybrid_polished",
+          "virality_posture": "evergreen_dr"
+        },
+        {
+          "id": "green-screen-rant",
+          "name": "Green-screen rant / myth-bust",
+          "production_tier": "native_ugc",
+          "virality_posture": "share_engineered"
+        }
+      ]
+    },
+    "voice ai|meta": {
+      "query": {
+        "niche": "voice ai",
+        "platform": "meta"
+      },
+      "resolved": {
+        "niche_id": "saas",
+        "platform": "meta",
+        "match_quality": "ok"
+      },
+      "picks": {
+        "primary": "motion-design-explainer",
+        "challenger": "app-demo-ui",
+        "dual_track_twin": "app-demo-ui",
+        "routes": {
+          "motion-design-explainer": {
+            "stack": [
+              "ae_or_capcut",
+              "elevenlabs",
+              "seedance_optional"
+            ],
+            "clip_strategy": "multi_clip",
+            "duration_s": 30
+          },
+          "app-demo-ui": {
+            "stack": [
+              "screen_record",
+              "seedance_broll_optional",
+              "capcut"
+            ],
+            "notes": "UI truth > AI fantasy UI"
+          }
+        }
+      },
+      "attention_models": {
+        "primary": "am_ui_aha_saas",
+        "challenger": "am_voice_agent_missed",
+        "models": [
+          {
+            "id": "am_ui_aha_saas",
+            "name": "UI aha (software / AI)",
+            "why_stops_scroll": "Pain object then real UI doing one job in first taps",
+            "pattern_ids": [
+              "app-demo-ui",
+              "pas-pain-stack",
+              "motion-design-explainer"
+            ],
+            "ideal_seconds": 24
+          },
+          {
+            "id": "am_voice_agent_missed",
+            "name": "Voice / AI agent missed-call",
+            "why_stops_scroll": "Missed-call void is universal pain; agent answers as mechanism",
+            "pattern_ids": [
+              "pas-pain-stack",
+              "app-demo-ui",
+              "local-service-trust"
+            ],
+            "ideal_seconds": 24
+          },
+          {
+            "id": "am_pas_pain_stack",
+            "name": "PAS pain stack",
+            "why_stops_scroll": "Concrete pain object before solution branding",
+            "pattern_ids": [
+              "pas-pain-stack",
+              "objection-faq",
+              "listicle-text-overlay"
+            ],
+            "ideal_seconds": 27
+          },
+          {
+            "id": "am_text_first_x",
+            "name": "Text-first punch (X / LinkedIn)",
+            "why_stops_scroll": "First line alone stops the feed; media supports",
+            "pattern_ids": [
+              "hot-take-controversy",
+              "listicle-text-overlay",
+              "pas-pain-stack"
+            ],
+            "ideal_seconds": 15
+          }
+        ],
+        "research": [
+          {
+            "id": "meta_ad_library",
+            "name": "Meta Ad Library",
+            "url": "https://www.facebook.com/ads/library/",
+            "how": "Search advertiser or keyword → filter Active → study 0–3s hook, text density, endcard CTA. Note structure only.",
+            "platforms": [
+              "meta",
+              "facebook",
+              "instagram"
+            ]
+          }
+        ]
+      },
+      "results": [
+        {
+          "id": "motion-design-explainer",
+          "name": "Motion-design explainer",
+          "production_tier": "high_production",
+          "virality_posture": "evergreen_dr"
+        },
+        {
+          "id": "app-demo-ui",
+          "name": "App / UI demo ad",
+          "production_tier": "high_production",
+          "virality_posture": "evergreen_dr"
+        },
+        {
+          "id": "listicle-text-overlay",
+          "name": "Listicle / text-overlay education",
+          "production_tier": "native_ugc",
+          "virality_posture": "share_engineered"
+        },
+        {
+          "id": "pas-pain-stack",
+          "name": "Problem → Agitate → Solve (pain stack)",
+          "production_tier": "hybrid_polished",
+          "virality_posture": "evergreen_dr"
+        },
+        {
+          "id": "green-screen-rant",
+          "name": "Green-screen rant / myth-bust",
+          "production_tier": "native_ugc",
+          "virality_posture": "share_engineered"
+        }
+      ]
+    },
+    "local-services|meta": {
+      "query": {
+        "niche": "local-services",
+        "platform": "meta"
+      },
+      "resolved": {
+        "niche_id": "local-services",
+        "platform": "meta",
+        "match_quality": "ok"
+      },
+      "picks": {
+        "primary": "local-service-trust",
+        "challenger": "social-proof-stack",
+        "dual_track_twin": "founder-story-origin",
+        "routes": {
+          "local-service-trust": {
+            "stack": [
+              "live_phone_facility",
+              "capcut",
+              "meta_ads"
+            ],
+            "clip_strategy": "multi_clip",
+            "ai_gen_safety": "real_footage_preferred",
+            "notes": "Facility/NAP must be real; AI B-roll only"
+          },
+          "social-proof-stack": {
+            "stack": [
+              "owned_reviews",
+              "capcut_montage",
+              "higgsfield.video-montage"
+            ],
+            "notes": "No invented reviews"
+          },
+          "founder-story-origin": {
+            "stack": [
+              "live_or_higgsfield.ugc-video",
+              "seedance_broll",
+              "capcut"
+            ],
+            "clip_strategy": "multi_clip"
+          }
+        }
+      },
+      "attention_models": {
+        "primary": "am_local_geo_trust",
+        "challenger": "am_voice_agent_missed",
+        "models": [
+          {
+            "id": "am_local_geo_trust",
+            "name": "Local geo trust",
+            "why_stops_scroll": "City + specialty in first frame before stock skyline",
+            "pattern_ids": [
+              "local-service-trust",
+              "social-proof-stack"
+            ],
+            "ideal_seconds": 20
+          },
+          {
+            "id": "am_voice_agent_missed",
+            "name": "Voice / AI agent missed-call",
+            "why_stops_scroll": "Missed-call void is universal pain; agent answers as mechanism",
+            "pattern_ids": [
+              "pas-pain-stack",
+              "app-demo-ui",
+              "local-service-trust"
+            ],
+            "ideal_seconds": 24
+          },
+          {
+            "id": "am_before_after_matchcut",
+            "name": "Before → after match-cut",
+            "why_stops_scroll": "Matched framing makes change undeniable in one cut",
+            "pattern_ids": [
+              "before-after-reveal",
+              "vfx-transformation"
+            ],
+            "ideal_seconds": 15
+          }
+        ],
+        "research": [
+          {
+            "id": "meta_ad_library",
+            "name": "Meta Ad Library",
+            "url": "https://www.facebook.com/ads/library/",
+            "how": "Search advertiser or keyword → filter Active → study 0–3s hook, text density, endcard CTA. Note structure only.",
+            "platforms": [
+              "meta",
+              "facebook",
+              "instagram"
+            ]
+          }
+        ]
+      },
+      "results": [
+        {
+          "id": "local-service-trust",
+          "name": "Local service trust ad (geo + proof + call)",
+          "production_tier": "native_ugc",
+          "virality_posture": "evergreen_dr"
+        },
+        {
+          "id": "social-proof-stack",
+          "name": "Social proof stack (reviews → result → offer)",
+          "production_tier": "hybrid_polished",
+          "virality_posture": "evergreen_dr"
+        },
+        {
+          "id": "pas-pain-stack",
+          "name": "Problem → Agitate → Solve (pain stack)",
+          "production_tier": "hybrid_polished",
+          "virality_posture": "evergreen_dr"
+        },
+        {
+          "id": "founder-story-origin",
+          "name": "Founder / craftsperson origin story",
+          "production_tier": "high_production",
+          "virality_posture": "brand_film"
+        },
+        {
+          "id": "before-after-reveal",
+          "name": "Before → After reveal (craft proof)",
+          "production_tier": "hybrid_polished",
+          "virality_posture": "share_engineered"
+        }
+      ]
+    },
+    "ecommerce|tiktok": {
+      "query": {
+        "niche": "ecommerce",
+        "platform": "tiktok"
+      },
+      "resolved": {
+        "niche_id": "ecommerce",
+        "platform": "tiktok",
+        "match_quality": "ok"
+      },
+      "picks": {
+        "primary": "product-loop-demo",
+        "challenger": "ugc-talking-head-scroll-stop",
+        "dual_track_twin": "offer-urgency",
+        "routes": {
+          "product-loop-demo": {
+            "stack": [
+              "product-photoshoot",
+              "seedance_or_kling_loop",
+              "capcut"
+            ],
+            "duration_s": 8
+          },
+          "ugc-talking-head-scroll-stop": {
+            "stack": [
+              "live_production_or_higgsfield.ugc-video",
+              "elevenlabs_optional",
+              "capcut"
+            ],
+            "notes": "Prefer real creator for trust"
+          },
+          "offer-urgency": {
+            "stack": [
+              "higgsfield.ads-studio",
+              "capcut_text",
+              "meta_ads"
+            ],
+            "notes": "Static+video twins"
+          }
+        }
+      },
+      "attention_models": {
+        "primary": "am_food_crave_asmr",
+        "challenger": "am_macro_lust_loop",
+        "models": [
+          {
+            "id": "am_food_crave_asmr",
+            "name": "Food / bev crave ASMR",
+            "why_stops_scroll": "Pour/crunch/steam mid-action before brand",
+            "pattern_ids": [
+              "unboxing-asmr",
+              "product-loop-demo",
+              "beauty-macro-tabletop"
+            ],
+            "ideal_seconds": 12
+          },
+          {
+            "id": "am_macro_lust_loop",
+            "name": "Macro lust / product loop",
+            "why_stops_scroll": "Texture/motion mid-action before brand talk",
+            "pattern_ids": [
+              "beauty-macro-tabletop",
+              "product-loop-demo",
+              "unboxing-asmr"
+            ],
+            "ideal_seconds": 12
+          },
+          {
+            "id": "am_muted_confession",
+            "name": "Muted confession UGC",
+            "why_stops_scroll": "Specific costly mistake in burned text before face sells anything",
+            "pattern_ids": [
+              "ugc-talking-head-scroll-stop"
+            ],
+            "ideal_seconds": 21
+          },
+          {
+            "id": "am_skit_punchline",
+            "name": "Skit → product punchline",
+            "why_stops_scroll": "Comedy premise completes only when product appears",
+            "pattern_ids": [
+              "skit-sketch-ad",
+              "meme-native-trend",
+              "green-screen-rant"
+            ],
+            "ideal_seconds": 18
+          }
+        ],
+        "research": [
+          {
+            "id": "tiktok_creative_center",
+            "name": "TikTok Creative Center",
+            "url": "https://ads.tiktok.com/business/creativecenter",
+            "how": "Top ads / tips by region → watch hook velocity, caption burn-in, loopability. Emulate pacing, not brand.",
+            "platforms": [
+              "tiktok"
+            ]
+          }
+        ]
+      },
+      "results": [
+        {
+          "id": "product-loop-demo",
+          "name": "Product loop / satisfying demo",
+          "production_tier": "hybrid_polished",
+          "virality_posture": "evergreen_dr"
+        },
+        {
+          "id": "ugc-talking-head-scroll-stop",
+          "name": "UGC talking head — scroll-stop confession",
+          "production_tier": "native_ugc",
+          "virality_posture": "evergreen_dr"
+        },
+        {
+          "id": "offer-urgency",
+          "name": "Offer / urgency drop ad",
+          "production_tier": "hybrid_polished",
+          "virality_posture": "evergreen_dr"
+        },
+        {
+          "id": "comparison-vs",
+          "name": "Comparison / vs old way",
+          "production_tier": "hybrid_polished",
+          "virality_posture": "evergreen_dr"
+        },
+        {
+          "id": "unboxing-asmr",
+          "name": "Unboxing / ASMR first impression",
+          "production_tier": "hybrid_polished",
+          "virality_posture": "evergreen_dr"
+        }
+      ]
+    },
+    "fitness|tiktok": {
+      "query": {
+        "niche": "fitness",
+        "platform": "tiktok"
+      },
+      "resolved": {
+        "niche_id": "fitness",
+        "platform": "tiktok",
+        "match_quality": "ok"
+      },
+      "picks": {
+        "primary": "performance-sports-cine",
+        "challenger": "challenge-participation",
+        "dual_track_twin": "before-after-reveal",
+        "routes": {
+          "performance-sports-cine": {
+            "stack": [
+              "seedance_2_5",
+              "runway",
+              "sora_veo",
+              "suno"
+            ],
+            "duration_s": 30
+          },
+          "challenge-participation": {
+            "stack": [
+              "capcut",
+              "creator_seeding",
+              "tiktok_spark"
+            ],
+            "duration_s": 12
+          },
+          "before-after-reveal": {
+            "stack": [
+              "product-photoshoot_or_owned_stills",
+              "seedance_or_runway",
+              "capcut"
+            ],
+            "duration_s": 12
+          }
+        }
+      },
+      "attention_models": {
+        "primary": "am_before_after_matchcut",
+        "challenger": "am_grwm_ritual",
+        "models": [
+          {
+            "id": "am_before_after_matchcut",
+            "name": "Before → after match-cut",
+            "why_stops_scroll": "Matched framing makes change undeniable in one cut",
+            "pattern_ids": [
+              "before-after-reveal",
+              "vfx-transformation"
+            ],
+            "ideal_seconds": 15
+          },
+          {
+            "id": "am_grwm_ritual",
+            "name": "GRWM / ritual soft-sell",
+            "why_stops_scroll": "Identity ritual first; product earns insert",
+            "pattern_ids": [
+              "grwm-soft-sell",
+              "pov-day-in-life"
+            ],
+            "ideal_seconds": 35
+          },
+          {
+            "id": "am_muted_confession",
+            "name": "Muted confession UGC",
+            "why_stops_scroll": "Specific costly mistake in burned text before face sells anything",
+            "pattern_ids": [
+              "ugc-talking-head-scroll-stop"
+            ],
+            "ideal_seconds": 21
+          }
+        ],
+        "research": [
+          {
+            "id": "tiktok_creative_center",
+            "name": "TikTok Creative Center",
+            "url": "https://ads.tiktok.com/business/creativecenter",
+            "how": "Top ads / tips by region → watch hook velocity, caption burn-in, loopability. Emulate pacing, not brand.",
+            "platforms": [
+              "tiktok"
+            ]
+          }
+        ]
+      },
+      "results": [
+        {
+          "id": "performance-sports-cine",
+          "name": "Performance / sports cinema",
+          "production_tier": "premium_cinema",
+          "virality_posture": "brand_film"
+        },
+        {
+          "id": "challenge-participation",
+          "name": "Challenge / participation loop",
+          "production_tier": "native_ugc",
+          "virality_posture": "share_engineered"
+        },
+        {
+          "id": "before-after-reveal",
+          "name": "Before → After reveal (craft proof)",
+          "production_tier": "hybrid_polished",
+          "virality_posture": "share_engineered"
+        },
+        {
+          "id": "pov-day-in-life",
+          "name": "POV / day-in-the-life soft sell",
+          "production_tier": "native_ugc",
+          "virality_posture": "trend_reactive"
+        },
+        {
+          "id": "offer-urgency",
+          "name": "Offer / urgency drop ad",
+          "production_tier": "hybrid_polished",
+          "virality_posture": "evergreen_dr"
+        }
+      ]
+    },
+    "fintech|meta": {
+      "query": {
+        "niche": "fintech",
+        "platform": "meta"
+      },
+      "resolved": {
+        "niche_id": "fintech",
+        "platform": "meta",
+        "match_quality": "ok"
+      },
+      "picks": {
+        "primary": "kinetic-type-explainer",
+        "challenger": "app-demo-ui",
+        "dual_track_twin": "app-demo-ui",
+        "routes": {
+          "kinetic-type-explainer": {
+            "stack": [
+              "capcut_or_ae",
+              "elevenlabs",
+              "seedance_optional"
+            ],
+            "clip_strategy": "single_pass",
+            "duration_s": 20
+          },
+          "app-demo-ui": {
+            "stack": [
+              "screen_record",
+              "seedance_broll_optional",
+              "capcut"
+            ],
+            "notes": "UI truth > AI fantasy UI"
+          }
+        }
+      },
+      "attention_models": {
+        "primary": "am_ui_aha_saas",
+        "challenger": "am_pas_pain_stack",
+        "models": [
+          {
+            "id": "am_ui_aha_saas",
+            "name": "UI aha (software / AI)",
+            "why_stops_scroll": "Pain object then real UI doing one job in first taps",
+            "pattern_ids": [
+              "app-demo-ui",
+              "pas-pain-stack",
+              "motion-design-explainer"
+            ],
+            "ideal_seconds": 24
+          },
+          {
+            "id": "am_pas_pain_stack",
+            "name": "PAS pain stack",
+            "why_stops_scroll": "Concrete pain object before solution branding",
+            "pattern_ids": [
+              "pas-pain-stack",
+              "objection-faq",
+              "listicle-text-overlay"
+            ],
+            "ideal_seconds": 27
+          },
+          {
+            "id": "am_skit_punchline",
+            "name": "Skit → product punchline",
+            "why_stops_scroll": "Comedy premise completes only when product appears",
+            "pattern_ids": [
+              "skit-sketch-ad",
+              "meme-native-trend",
+              "green-screen-rant"
+            ],
+            "ideal_seconds": 18
+          },
+          {
+            "id": "am_text_first_x",
+            "name": "Text-first punch (X / LinkedIn)",
+            "why_stops_scroll": "First line alone stops the feed; media supports",
+            "pattern_ids": [
+              "hot-take-controversy",
+              "listicle-text-overlay",
+              "pas-pain-stack"
+            ],
+            "ideal_seconds": 15
+          }
+        ],
+        "research": [
+          {
+            "id": "meta_ad_library",
+            "name": "Meta Ad Library",
+            "url": "https://www.facebook.com/ads/library/",
+            "how": "Search advertiser or keyword → filter Active → study 0–3s hook, text density, endcard CTA. Note structure only.",
+            "platforms": [
+              "meta",
+              "facebook",
+              "instagram"
+            ]
+          }
+        ]
+      },
+      "results": [
+        {
+          "id": "kinetic-type-explainer",
+          "name": "Kinetic typography explainer",
+          "production_tier": "high_production",
+          "virality_posture": "share_engineered"
+        },
+        {
+          "id": "app-demo-ui",
+          "name": "App / UI demo ad",
+          "production_tier": "high_production",
+          "virality_posture": "evergreen_dr"
+        },
+        {
+          "id": "green-screen-rant",
+          "name": "Green-screen rant / myth-bust",
+          "production_tier": "native_ugc",
+          "virality_posture": "share_engineered"
+        },
+        {
+          "id": "skit-sketch-ad",
+          "name": "Skit / sketch comedy ad",
+          "production_tier": "hybrid_polished",
+          "virality_posture": "share_engineered"
+        },
+        {
+          "id": "objection-faq",
+          "name": "Objection-handling FAQ ad",
+          "production_tier": "native_ugc",
+          "virality_posture": "evergreen_dr"
+        }
+      ]
+    },
+    "apps|tiktok": {
+      "query": {
+        "niche": "apps",
+        "platform": "tiktok"
+      },
+      "resolved": {
+        "niche_id": "apps",
+        "platform": "tiktok",
+        "match_quality": "ok"
+      },
+      "picks": {
+        "primary": "app-demo-ui",
+        "challenger": "vfx-transformation",
+        "dual_track_twin": "vfx-transformation",
+        "routes": {
+          "app-demo-ui": {
+            "stack": [
+              "screen_record",
+              "seedance_broll_optional",
+              "capcut"
+            ],
+            "notes": "UI truth > AI fantasy UI"
+          },
+          "vfx-transformation": {
+            "stack": [
+              "runway",
+              "kling",
+              "seedance.video_edit",
+              "capcut"
+            ],
+            "duration_s": 10
+          }
+        }
+      },
+      "attention_models": {
+        "primary": "am_voice_agent_missed",
+        "challenger": "am_ui_aha_saas",
+        "models": [
+          {
+            "id": "am_voice_agent_missed",
+            "name": "Voice / AI agent missed-call",
+            "why_stops_scroll": "Missed-call void is universal pain; agent answers as mechanism",
+            "pattern_ids": [
+              "pas-pain-stack",
+              "app-demo-ui",
+              "local-service-trust"
+            ],
+            "ideal_seconds": 24
+          },
+          {
+            "id": "am_ui_aha_saas",
+            "name": "UI aha (software / AI)",
+            "why_stops_scroll": "Pain object then real UI doing one job in first taps",
+            "pattern_ids": [
+              "app-demo-ui",
+              "pas-pain-stack",
+              "motion-design-explainer"
+            ],
+            "ideal_seconds": 24
+          },
+          {
+            "id": "am_pas_pain_stack",
+            "name": "PAS pain stack",
+            "why_stops_scroll": "Concrete pain object before solution branding",
+            "pattern_ids": [
+              "pas-pain-stack",
+              "objection-faq",
+              "listicle-text-overlay"
+            ],
+            "ideal_seconds": 27
+          },
+          {
+            "id": "am_skit_punchline",
+            "name": "Skit → product punchline",
+            "why_stops_scroll": "Comedy premise completes only when product appears",
+            "pattern_ids": [
+              "skit-sketch-ad",
+              "meme-native-trend",
+              "green-screen-rant"
+            ],
+            "ideal_seconds": 18
+          }
+        ],
+        "research": [
+          {
+            "id": "tiktok_creative_center",
+            "name": "TikTok Creative Center",
+            "url": "https://ads.tiktok.com/business/creativecenter",
+            "how": "Top ads / tips by region → watch hook velocity, caption burn-in, loopability. Emulate pacing, not brand.",
+            "platforms": [
+              "tiktok"
+            ]
+          }
+        ]
+      },
+      "results": [
+        {
+          "id": "app-demo-ui",
+          "name": "App / UI demo ad",
+          "production_tier": "high_production",
+          "virality_posture": "evergreen_dr"
+        },
+        {
+          "id": "vfx-transformation",
+          "name": "VFX transformation spot",
+          "production_tier": "high_production",
+          "virality_posture": "share_engineered"
+        },
+        {
+          "id": "skit-sketch-ad",
+          "name": "Skit / sketch comedy ad",
+          "production_tier": "hybrid_polished",
+          "virality_posture": "share_engineered"
+        },
+        {
+          "id": "meme-native-trend",
+          "name": "Meme / native trend hijack",
+          "production_tier": "native_ugc",
+          "virality_posture": "trend_reactive"
+        },
+        {
+          "id": "series-cliffhanger",
+          "name": "Series / Part-1 cliffhanger",
+          "production_tier": "hybrid_polished",
+          "virality_posture": "share_engineered"
+        }
+      ]
+    }
+  }
+}

@@ -19,7 +19,7 @@ node scripts/probe-harness.mjs
 | Text-only / no gen tools | **package-only** | Still ship lint-clean package + unit prompts. Say `NOT_RENDERED`. |
 | Browser / web fetch | Use for URL briefs + public ad libraries | `brief-from-url.mjs` · `ad-libraries.md` |
 | Shell + Node | Use mechanical loop | start → retrieve → lint until ok |
-| No shell | Paste `prompts/context-pack.md`; write `"LINT: not run (no shell)"` — **never invent lint JSON** |
+| No shell | Paste `prompts/context-pack-lite.md` (or full pack) · offline retrieve JSON · `no-shell-lint-checklist.md` — **never invent lint JSON** |
 
 ## Equalization rules (non-negotiable)
 

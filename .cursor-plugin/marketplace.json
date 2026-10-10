@@ -11,17 +11,17 @@
       "name": "ad-intelligence",
       "source": ".",
       "description": "One-shot agency-grade ads — multi-harness probe, Attention Lab, craft lint.",
-      "version": "3.12.0",
+      "version": "3.12.1",
       "keywords": [
         "ads",
         "viral",
         "tiktok",
-        "cinematic",
         "ugc",
         "high-production",
         "meta",
         "youtube",
-        "creative"
+        "creative",
+        "one-shot"
       ]
     }
   ]
