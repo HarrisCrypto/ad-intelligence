@@ -154,6 +154,56 @@ console.log("\nSTUDIES JOIN (retrieve patterns ⊕ studies + provenance)");
   } catch {
     /* ignore */
   }
+
+  // search_text format must survive compact projection (no silent video-shaped drop)
+  const search = spawnSync(
+    process.execPath,
+    [
+      path.join(__dirname, "retrieve.mjs"),
+      "--niche",
+      "local-services",
+      "--platform",
+      "meta",
+      "--compact",
+    ],
+    {
+      encoding: "utf8",
+      cwd: ROOT,
+      env: { ...process.env, AD_INTEL_STUDIES_PRIVATE: fixtureDir },
+    }
+  );
+  let searchJ = null;
+  try {
+    searchJ = JSON.parse(search.stdout || "{}");
+  } catch {
+    searchJ = null;
+  }
+  const searchItem = (searchJ?.studies?.items || []).find(
+    (s) => s.id === "study_fixture_search_text"
+  );
+  const formatOk =
+    searchItem &&
+    searchItem.format === "search_text" &&
+    searchItem.timing_observable === false &&
+    searchItem.structure?.format === "search_text" &&
+    searchItem.structure?.timing_observable === false &&
+    searchItem.structure?.format_note &&
+    searchItem.structure?.duration_s == null &&
+    Array.isArray(searchItem.observed_limits) &&
+    searchItem.observed_limits.length >= 1 &&
+    !(searchItem.structure?.beats || []).some((b) =>
+      /\d+\s*[-–]\s*\d+\s*s|\b\d+\s*s\b/i.test(String(b.t || ""))
+    );
+  report.studies_format = { ok: !!formatOk, id: searchItem?.id || null };
+  if (!formatOk) report.pass = false;
+  console.log(
+    `  [${formatOk ? "PASS" : "FAIL"}] search_text format projects through retrieve (not video-shaped)`
+  );
+  if (!formatOk) {
+    console.log(
+      `         item=${searchItem?.id} format=${searchItem?.format} timing=${searchItem?.timing_observable} note=${!!searchItem?.structure?.format_note}`
+    );
+  }
 }
 
 console.log(

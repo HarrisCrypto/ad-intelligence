@@ -17,7 +17,7 @@ Read this in under a minute, then open a gold fixture:
 | **Stress briefs (messy prompts)** | [`examples/stress-briefs/`](./skills/ad-intelligence/examples/stress-briefs/) |
 | Shape-only skeleton (structure, not quality) | [`entertainment-creator-series.md`](./skills/ad-intelligence/examples/entertainment-creator-series.md) |
 
-**v3.16:** Lint gate `study-synthesis-cited-as-proof` (+ media reject, loud no-study retrieve). **v3.15:** Provenanced studies + ingest + join tests + human-build log + CI. **v3.14:** Studies corpus. **v3.13:** Finish-the-cut. **v3.12:** Multi-harness OS. **v3.11:** Attention Lab.
+**v3.17:** Study `format` / `timing_observable` projected through retrieve (search_text ≠ video). **v3.16:** Lint `study-synthesis-cited-as-proof`. **v3.15:** Studies OS + ingest + CI. **v3.14–3.11:** corpus, finish-the-cut, multi-harness, Attention Lab.
 
 **v3.6–3.7:** triple-path / assembler / voice / Wan–LTX–Grok (+ peers) routing + render-QA.
 

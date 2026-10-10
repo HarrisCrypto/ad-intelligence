@@ -240,6 +240,14 @@ if (fs.existsSync(studiesPath)) {
     (corpus.studies || []).every((s) => s.provenance?.observed === false),
     "observed must stay private via ingest"
   );
+  ok(
+    "public studies have structure.format",
+    (corpus.studies || []).every(
+      (s) =>
+        s.structure?.format === "video_timed" &&
+        s.structure?.timing_observable === true
+    )
+  );
   const synFail = runNode("lint-package.mjs", [
     "examples/lint-corpus/fail-study-synthesis-as-proof.md",
   ]);

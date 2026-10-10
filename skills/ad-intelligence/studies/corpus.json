@@ -1,6 +1,6 @@
 {
   "id": "ad-intelligence-studies",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "updated": "2026-10-10",
   "purpose": "Archetypal studies of viral, high-performing, and top-tier ad structures \u2014 when to emulate, what to steal, how a human builds them. Public entries are synthesis (observed:false). Not scrapes. Not named campaigns. Never cite as proof metrics.",
   "mission": "Any LLM / any harness / one-shot for any company: study \u2192 emulate structure \u2192 build with real tools.",
@@ -68,7 +68,9 @@
             "job": "one CTA endcard",
             "note": "post owns type"
           }
-        ]
+        ],
+        "format": "video_timed",
+        "timing_observable": true
       },
       "steal": [
         "Mid-thought open",
@@ -202,7 +204,9 @@
             "job": "light CTA",
             "note": "one path"
           }
-        ]
+        ],
+        "format": "video_timed",
+        "timing_observable": true
       },
       "steal": [
         "Punchline timing",
@@ -321,7 +325,9 @@
             "job": "one CTA",
             "note": "Start free / Book demo"
           }
-        ]
+        ],
+        "format": "video_timed",
+        "timing_observable": true
       },
       "steal": [
         "Object-led open",
@@ -448,7 +454,9 @@
             "job": "signature endcard",
             "note": "logo+CTA in post"
           }
-        ]
+        ],
+        "format": "video_timed",
+        "timing_observable": true
       },
       "steal": [
         "Motivated camera",
@@ -568,7 +576,9 @@
             "job": "pack lock + CTA",
             "note": "SKU-true"
           }
-        ]
+        ],
+        "format": "video_timed",
+        "timing_observable": true
       },
       "steal": [
         "Matched framing",
@@ -671,7 +681,9 @@
             "job": "pack + order CTA or seamless loop",
             "note": "organic may omit CTA"
           }
-        ]
+        ],
+        "format": "video_timed",
+        "timing_observable": true
       },
       "steal": [
         "Mid-action open",
@@ -771,7 +783,9 @@
             "job": "phone hold \u22653s",
             "note": "NAP match"
           }
-        ]
+        ],
+        "format": "video_timed",
+        "timing_observable": true
       },
       "steal": [
         "Geo in frame 0",
@@ -878,7 +892,9 @@
             "job": "one CTA endcard",
             "note": "post owns type"
           }
-        ]
+        ],
+        "format": "video_timed",
+        "timing_observable": true
       },
       "steal": [
         "Void vs answered split",
@@ -996,7 +1012,9 @@
             "job": "soft brand + one CTA",
             "note": "value first"
           }
-        ]
+        ],
+        "format": "video_timed",
+        "timing_observable": true
       },
       "steal": [
         "Card template consistency",
@@ -1098,7 +1116,9 @@
             "job": "one link CTA",
             "note": "single path"
           }
-        ]
+        ],
+        "format": "video_timed",
+        "timing_observable": true
       },
       "steal": [
         "Readable at 1\u00d7 muted",

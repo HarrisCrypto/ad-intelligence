@@ -249,6 +249,9 @@
               "basis": "synthesis",
               "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
             },
+            "format": "video_timed",
+            "timing_observable": true,
+            "observed_limits": null,
             "when_to_emulate": [
               "Shampoo, skincare, cosmetics",
               "Texture sells"
@@ -263,6 +266,8 @@
               "Face morph as ‘results’"
             ],
             "structure": {
+              "format": "video_timed",
+              "timing_observable": true,
               "duration_s": 18,
               "hook_0_3": "BEFORE state or macro mid-motion — no logo",
               "beats": [
@@ -286,7 +291,8 @@
                   "job": "pack lock + CTA",
                   "note": "SKU-true"
                 }
-              ]
+              ],
+              "format_note": null
             },
             "human_build": [
               {
@@ -332,6 +338,9 @@
               "basis": "synthesis",
               "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
             },
+            "format": "video_timed",
+            "timing_observable": true,
+            "observed_limits": null,
             "when_to_emulate": [
               "Launch memory",
               "Luxury, auto, flagship DTC",
@@ -348,6 +357,8 @@
               "Invented awards/metrics"
             ],
             "structure": {
+              "format": "video_timed",
+              "timing_observable": true,
               "duration_s": 30,
               "hook_0_3": "Spectacle that is still the product’s physics — no logo",
               "beats": [
@@ -371,7 +382,8 @@
                   "job": "signature endcard",
                   "note": "logo+CTA in post"
                 }
-              ]
+              ],
+              "format_note": null
             },
             "human_build": [
               {
@@ -693,6 +705,9 @@
               "basis": "synthesis",
               "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
             },
+            "format": "video_timed",
+            "timing_observable": true,
+            "observed_limits": null,
             "when_to_emulate": [
               "Shampoo, skincare, cosmetics",
               "Texture sells"
@@ -707,6 +722,8 @@
               "Face morph as ‘results’"
             ],
             "structure": {
+              "format": "video_timed",
+              "timing_observable": true,
               "duration_s": 18,
               "hook_0_3": "BEFORE state or macro mid-motion — no logo",
               "beats": [
@@ -730,7 +747,8 @@
                   "job": "pack lock + CTA",
                   "note": "SKU-true"
                 }
-              ]
+              ],
+              "format_note": null
             },
             "human_build": [
               {
@@ -776,6 +794,9 @@
               "basis": "synthesis",
               "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
             },
+            "format": "video_timed",
+            "timing_observable": true,
+            "observed_limits": null,
             "when_to_emulate": [
               "Launch memory",
               "Luxury, auto, flagship DTC",
@@ -792,6 +813,8 @@
               "Invented awards/metrics"
             ],
             "structure": {
+              "format": "video_timed",
+              "timing_observable": true,
               "duration_s": 30,
               "hook_0_3": "Spectacle that is still the product’s physics — no logo",
               "beats": [
@@ -815,7 +838,8 @@
                   "job": "signature endcard",
                   "note": "logo+CTA in post"
                 }
-              ]
+              ],
+              "format_note": null
             },
             "human_build": [
               {
@@ -1092,6 +1116,9 @@
               "basis": "synthesis",
               "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
             },
+            "format": "video_timed",
+            "timing_observable": true,
+            "observed_limits": null,
             "when_to_emulate": [
               "CPG, restaurants, coffee, snacks"
             ],
@@ -1104,6 +1131,8 @@
               "Fake CGI steam that breaks trust"
             ],
             "structure": {
+              "format": "video_timed",
+              "timing_observable": true,
               "duration_s": 12,
               "hook_0_3": "Pour/bite/steam mid-action",
               "beats": [
@@ -1122,7 +1151,8 @@
                   "job": "pack + order CTA or seamless loop",
                   "note": "organic may omit CTA"
                 }
-              ]
+              ],
+              "format_note": null
             },
             "human_build": [
               {
@@ -1160,6 +1190,9 @@
               "basis": "synthesis",
               "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
             },
+            "format": "video_timed",
+            "timing_observable": true,
+            "observed_limits": null,
             "when_to_emulate": [
               "Share/comment goals",
               "Apps, food, fintech humor",
@@ -1175,6 +1208,8 @@
               "Uncleared sounds in paid"
             ],
             "structure": {
+              "format": "video_timed",
+              "timing_observable": true,
               "duration_s": 18,
               "hook_0_3": "Absurd premise completes only when product appears",
               "beats": [
@@ -1198,7 +1233,8 @@
                   "job": "light CTA",
                   "note": "one path"
                 }
-              ]
+              ],
+              "format_note": null
             },
             "human_build": [
               {
@@ -1524,6 +1560,9 @@
               "basis": "synthesis",
               "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
             },
+            "format": "video_timed",
+            "timing_observable": true,
+            "observed_limits": null,
             "when_to_emulate": [
               "Lead gen / trial",
               "SaaS, B2B, fintech education",
@@ -1539,6 +1578,8 @@
               "Competitor UI chrome"
             ],
             "structure": {
+              "format": "video_timed",
+              "timing_observable": true,
               "duration_s": 27,
               "hook_0_3": "Pain object before brand",
               "beats": [
@@ -1567,7 +1608,8 @@
                   "job": "one CTA",
                   "note": "Start free / Book demo"
                 }
-              ]
+              ],
+              "format_note": null
             },
             "human_build": [
               {
@@ -1622,6 +1664,9 @@
               "basis": "synthesis",
               "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
             },
+            "format": "video_timed",
+            "timing_observable": true,
+            "observed_limits": null,
             "when_to_emulate": [
               "Voice AI, front-desk, after-hours SaaS",
               "OPlyai-class products"
@@ -1636,6 +1681,8 @@
               "Robot mascot as product"
             ],
             "structure": {
+              "format": "video_timed",
+              "timing_observable": true,
               "duration_s": 24,
               "hook_0_3": "Phone ringing → void (no logo)",
               "beats": [
@@ -1659,7 +1706,8 @@
                   "job": "one CTA endcard",
                   "note": "post owns type"
                 }
-              ]
+              ],
+              "format_note": null
             },
             "human_build": [
               {
@@ -1995,6 +2043,9 @@
               "basis": "synthesis",
               "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
             },
+            "format": "video_timed",
+            "timing_observable": true,
+            "observed_limits": null,
             "when_to_emulate": [
               "Voice AI, front-desk, after-hours SaaS",
               "OPlyai-class products"
@@ -2009,6 +2060,8 @@
               "Robot mascot as product"
             ],
             "structure": {
+              "format": "video_timed",
+              "timing_observable": true,
               "duration_s": 24,
               "hook_0_3": "Phone ringing → void (no logo)",
               "beats": [
@@ -2032,7 +2085,8 @@
                   "job": "one CTA endcard",
                   "note": "post owns type"
                 }
-              ]
+              ],
+              "format_note": null
             },
             "human_build": [
               {
@@ -2086,6 +2140,9 @@
               "basis": "synthesis",
               "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
             },
+            "format": "video_timed",
+            "timing_observable": true,
+            "observed_limits": null,
             "when_to_emulate": [
               "Lead gen / trial",
               "SaaS, B2B, fintech education",
@@ -2101,6 +2158,8 @@
               "Competitor UI chrome"
             ],
             "structure": {
+              "format": "video_timed",
+              "timing_observable": true,
               "duration_s": 27,
               "hook_0_3": "Pain object before brand",
               "beats": [
@@ -2129,7 +2188,8 @@
                   "job": "one CTA",
                   "note": "Start free / Book demo"
                 }
-              ]
+              ],
+              "format_note": null
             },
             "human_build": [
               {
@@ -2421,6 +2481,9 @@
               "basis": "synthesis",
               "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
             },
+            "format": "video_timed",
+            "timing_observable": true,
+            "observed_limits": null,
             "when_to_emulate": [
               "Trades, clinics, local services",
               "Click-to-call"
@@ -2435,6 +2498,8 @@
               "Wrong phone"
             ],
             "structure": {
+              "format": "video_timed",
+              "timing_observable": true,
               "duration_s": 20,
               "hook_0_3": "City + specialty on real place",
               "beats": [
@@ -2458,7 +2523,8 @@
                   "job": "phone hold ≥3s",
                   "note": "NAP match"
                 }
-              ]
+              ],
+              "format_note": null
             },
             "human_build": [
               {
@@ -2495,6 +2561,9 @@
               "basis": "synthesis",
               "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
             },
+            "format": "video_timed",
+            "timing_observable": true,
+            "observed_limits": null,
             "when_to_emulate": [
               "Voice AI, front-desk, after-hours SaaS",
               "OPlyai-class products"
@@ -2509,6 +2578,8 @@
               "Robot mascot as product"
             ],
             "structure": {
+              "format": "video_timed",
+              "timing_observable": true,
               "duration_s": 24,
               "hook_0_3": "Phone ringing → void (no logo)",
               "beats": [
@@ -2532,7 +2603,8 @@
                   "job": "one CTA endcard",
                   "note": "post owns type"
                 }
-              ]
+              ],
+              "format_note": null
             },
             "human_build": [
               {
@@ -2854,6 +2926,9 @@
               "basis": "synthesis",
               "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
             },
+            "format": "video_timed",
+            "timing_observable": true,
+            "observed_limits": null,
             "when_to_emulate": [
               "Cold social, need trust fast",
               "Beauty, health-adjacent lifestyle, consumer apps",
@@ -2871,6 +2946,8 @@
               "Studio ‘UGC’ polish"
             ],
             "structure": {
+              "format": "video_timed",
+              "timing_observable": true,
               "duration_s": 21,
               "hook_0_3": "Specific costly mistake in burned text before brand",
               "beats": [
@@ -2899,7 +2976,8 @@
                   "job": "one CTA endcard",
                   "note": "post owns type"
                 }
-              ]
+              ],
+              "format_note": null
             },
             "human_build": [
               {
@@ -2958,6 +3036,9 @@
               "basis": "synthesis",
               "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
             },
+            "format": "video_timed",
+            "timing_observable": true,
+            "observed_limits": null,
             "when_to_emulate": [
               "CPG, restaurants, coffee, snacks"
             ],
@@ -2970,6 +3051,8 @@
               "Fake CGI steam that breaks trust"
             ],
             "structure": {
+              "format": "video_timed",
+              "timing_observable": true,
               "duration_s": 12,
               "hook_0_3": "Pour/bite/steam mid-action",
               "beats": [
@@ -2988,7 +3071,8 @@
                   "job": "pack + order CTA or seamless loop",
                   "note": "organic may omit CTA"
                 }
-              ]
+              ],
+              "format_note": null
             },
             "human_build": [
               {
@@ -3258,6 +3342,9 @@
               "basis": "synthesis",
               "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
             },
+            "format": "video_timed",
+            "timing_observable": true,
+            "observed_limits": null,
             "when_to_emulate": [
               "Cold social, need trust fast",
               "Beauty, health-adjacent lifestyle, consumer apps",
@@ -3275,6 +3362,8 @@
               "Studio ‘UGC’ polish"
             ],
             "structure": {
+              "format": "video_timed",
+              "timing_observable": true,
               "duration_s": 21,
               "hook_0_3": "Specific costly mistake in burned text before brand",
               "beats": [
@@ -3303,7 +3392,8 @@
                   "job": "one CTA endcard",
                   "note": "post owns type"
                 }
-              ]
+              ],
+              "format_note": null
             },
             "human_build": [
               {
@@ -3638,6 +3728,9 @@
               "basis": "synthesis",
               "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
             },
+            "format": "video_timed",
+            "timing_observable": true,
+            "observed_limits": null,
             "when_to_emulate": [
               "Lead gen / trial",
               "SaaS, B2B, fintech education",
@@ -3653,6 +3746,8 @@
               "Competitor UI chrome"
             ],
             "structure": {
+              "format": "video_timed",
+              "timing_observable": true,
               "duration_s": 27,
               "hook_0_3": "Pain object before brand",
               "beats": [
@@ -3681,7 +3776,8 @@
                   "job": "one CTA",
                   "note": "Start free / Book demo"
                 }
-              ]
+              ],
+              "format_note": null
             },
             "human_build": [
               {
@@ -3736,6 +3832,9 @@
               "basis": "synthesis",
               "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
             },
+            "format": "video_timed",
+            "timing_observable": true,
+            "observed_limits": null,
             "when_to_emulate": [
               "B2B, founder POV, hot take with mechanism"
             ],
@@ -3749,6 +3848,8 @@
               "Wall of hashtags"
             ],
             "structure": {
+              "format": "video_timed",
+              "timing_observable": true,
               "duration_s": 15,
               "hook_0_3": "First line alone stops the feed",
               "beats": [
@@ -3772,7 +3873,8 @@
                   "job": "one link CTA",
                   "note": "single path"
                 }
-              ]
+              ],
+              "format_note": null
             },
             "human_build": [
               {
@@ -4088,6 +4190,9 @@
               "basis": "synthesis",
               "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
             },
+            "format": "video_timed",
+            "timing_observable": true,
+            "observed_limits": null,
             "when_to_emulate": [
               "Lead gen / trial",
               "SaaS, B2B, fintech education",
@@ -4103,6 +4208,8 @@
               "Competitor UI chrome"
             ],
             "structure": {
+              "format": "video_timed",
+              "timing_observable": true,
               "duration_s": 27,
               "hook_0_3": "Pain object before brand",
               "beats": [
@@ -4131,7 +4238,8 @@
                   "job": "one CTA",
                   "note": "Start free / Book demo"
                 }
-              ]
+              ],
+              "format_note": null
             },
             "human_build": [
               {
@@ -4186,6 +4294,9 @@
               "basis": "synthesis",
               "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
             },
+            "format": "video_timed",
+            "timing_observable": true,
+            "observed_limits": null,
             "when_to_emulate": [
               "Voice AI, front-desk, after-hours SaaS",
               "OPlyai-class products"
@@ -4200,6 +4311,8 @@
               "Robot mascot as product"
             ],
             "structure": {
+              "format": "video_timed",
+              "timing_observable": true,
               "duration_s": 24,
               "hook_0_3": "Phone ringing → void (no logo)",
               "beats": [
@@ -4223,7 +4336,8 @@
                   "job": "one CTA endcard",
                   "note": "post owns type"
                 }
-              ]
+              ],
+              "format_note": null
             },
             "human_build": [
               {

@@ -1,5 +1,19 @@
 # Changelog
 
+## 3.17.0 — 2026-10-10
+
+**Study format projection** — search-text / static observations must not look like timed video after retrieve.
+
+### Added
+- Required `structure.format` + `timing_observable` on every study
+- Retrieve/`compactStudy` projects `format`, `timing_observable`, `observed_limits`, `structure.format_note` (non-video)
+- Fixture `study_fixture_search_text` + gates assert search_text survives compact retrieve
+- Validate rejects video-second beat labels on `search_text` / static formats
+
+### Changed
+- Public corpus backfilled `format: video_timed`
+- Plugin **3.17.0**
+
 ## 3.16.0 — 2026-10-10
 
 **Mechanical honesty for studies** — the claim “studies are honest about what they are” is now lint-enforced, not README-only.

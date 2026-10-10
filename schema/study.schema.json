@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://local/ad-intelligence/study.schema.json",
   "title": "AdStudy",
-  "description": "Emulation study with hard provenance. Synthesis is not proof.",
+  "description": "Emulation study with hard provenance + media format. Synthesis is not proof. search_text is not video timing.",
   "type": "object",
   "required": [
     "id",
@@ -32,10 +32,28 @@
     "when_not": { "type": "array", "items": { "type": "string" } },
     "structure": {
       "type": "object",
-      "required": ["hook_0_3", "beats"],
+      "required": ["format", "timing_observable", "hook_0_3", "beats"],
       "properties": {
-        "duration_s": { "type": "number" },
-        "hook_0_3": { "type": "string" },
+        "format": {
+          "type": "string",
+          "enum": [
+            "video_timed",
+            "search_text",
+            "display_static",
+            "carousel_static",
+            "unknown"
+          ],
+          "description": "Media kind observed/distilled. search_text/display_static must not be treated as 0–3s video."
+        },
+        "timing_observable": {
+          "type": "boolean",
+          "description": "false when no video/motion/audio timing was observable"
+        },
+        "duration_s": { "type": ["number", "null"] },
+        "hook_0_3": {
+          "type": "string",
+          "description": "Open job. For video_timed = 0–3s; for search_text = primary headline — not seconds."
+        },
         "beats": {
           "type": "array",
           "minItems": 2,
@@ -71,25 +89,24 @@
       "type": "object",
       "required": ["observed", "basis", "claim_firewall"],
       "properties": {
-        "observed": {
-          "type": "boolean",
-          "description": "true only if a human watched a specific ad and filled research_where"
-        },
+        "observed": { "type": "boolean" },
         "basis": {
           "type": "string",
           "enum": ["synthesis", "ad-library", "named-campaign", "owned-ad"]
         },
         "claim_firewall": { "type": "string", "minLength": 20 },
         "observed_date": { "type": "string" },
-        "library_ids": { "type": "array", "items": { "type": "string" } }
+        "library_ids": { "type": "array", "items": { "type": "string" } },
+        "observed_limits": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "What was NOT observable (e.g. no video, no timing)"
+        }
       }
     },
     "research_where": { "type": "object" },
     "source_notes": { "type": "string" },
     "gold_fixture": { "type": "string" },
-    "human_build_log": {
-      "type": "string",
-      "description": "Path to a filled human-build log artifact (markdown)"
-    }
+    "human_build_log": { "type": "string" }
   }
 }

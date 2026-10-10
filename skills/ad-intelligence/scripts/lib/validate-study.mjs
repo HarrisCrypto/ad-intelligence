@@ -8,6 +8,20 @@ const BASIS = new Set([
   "owned-ad",
 ]);
 
+const STRUCTURE_FORMATS = new Set([
+  "video_timed",
+  "search_text",
+  "display_static",
+  "carousel_static",
+  "unknown",
+]);
+
+const NON_VIDEO_FORMATS = new Set([
+  "search_text",
+  "display_static",
+  "carousel_static",
+]);
+
 const BLUEPRINT_REQUIRED = [
   "id",
   "name",
@@ -157,6 +171,36 @@ export function validateStudy(study, { file = "study" } = {}) {
   if (!study.structure?.hook_0_3 || !Array.isArray(study.structure?.beats) || study.structure.beats.length < 2) {
     errors.push(`${file}: structure.hook_0_3 + ≥2 beats required`);
   }
+  const fmt = study.structure?.format;
+  if (!STRUCTURE_FORMATS.has(fmt)) {
+    errors.push(
+      `${file}: structure.format required (video_timed|search_text|display_static|carousel_static|unknown)`
+    );
+  }
+  if (typeof study.structure?.timing_observable !== "boolean") {
+    errors.push(`${file}: structure.timing_observable boolean required`);
+  }
+  if (NON_VIDEO_FORMATS.has(fmt)) {
+    if (study.structure.timing_observable !== false) {
+      errors.push(
+        `${file}: format=${fmt} requires timing_observable:false (no video seconds inventable)`
+      );
+    }
+    // Beats must not look like video timecodes
+    for (const b of study.structure.beats || []) {
+      if (/\d+\s*[-–]\s*\d+\s*s|\b\d+\s*s\b/i.test(String(b.t || ""))) {
+        errors.push(
+          `${file}: format=${fmt} beat.t "${b.t}" looks like video seconds — use headline/description/sitelink labels`
+        );
+        break;
+      }
+    }
+  }
+  if (fmt === "video_timed" && study.structure.timing_observable === false) {
+    errors.push(
+      `${file}: format=video_timed with timing_observable:false — use search_text/display_static/unknown instead`
+    );
+  }
   if (!Array.isArray(study.human_build) || study.human_build.length < 1) {
     errors.push(`${file}: human_build[] playbook required`);
   }
@@ -227,7 +271,15 @@ export function blueprintToStudy(bp) {
     when_to_emulate: ["Private observed/synthesis breakdown — check provenance"],
     when_not: ["If provenance.basis is synthesis, do not cite as proof"],
     structure: {
-      duration_s: bp.duration_seconds?.ideal || bp.duration_seconds?.max,
+      format: bp.structure?.format || bp.format || "video_timed",
+      timing_observable:
+        typeof bp.structure?.timing_observable === "boolean"
+          ? bp.structure.timing_observable
+          : (bp.format || bp.structure?.format) === "search_text" ||
+              (bp.format || bp.structure?.format) === "display_static"
+            ? false
+            : true,
+      duration_s: bp.duration_seconds?.ideal || bp.duration_seconds?.max || null,
       hook_0_3: bp.hook?.pattern_interrupt || bp.hook?.visual || "",
       beats,
     },

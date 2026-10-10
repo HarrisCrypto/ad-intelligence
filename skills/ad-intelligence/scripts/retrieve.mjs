@@ -370,16 +370,32 @@ function scoreStudy(study, q, pickIds, amIds) {
     score += 3;
 
   if (study.private) score += 2;
+  if (study.provenance?.observed === true) score += 4;
   return score;
 }
 
 function compactStudy(study) {
+  const fmt = study.structure?.format || null;
+  const timingObservable =
+    typeof study.structure?.timing_observable === "boolean"
+      ? study.structure.timing_observable
+      : fmt === "video_timed";
+  const nonVideo =
+    fmt === "search_text" ||
+    fmt === "display_static" ||
+    fmt === "carousel_static" ||
+    timingObservable === false;
+
   return {
     id: study.id,
     class: study.class,
     title: study.title,
     private: !!study.private,
     provenance: study.provenance || null,
+    // First-class — do not bury "no video" only inside provenance prose
+    observed_limits: study.provenance?.observed_limits || null,
+    format: fmt,
+    timing_observable: timingObservable,
     when_to_emulate: (study.when_to_emulate || []).slice(0, 4),
     when_not: (study.when_not || []).slice(0, 3),
     steal: study.steal || [],
@@ -388,9 +404,14 @@ function compactStudy(study) {
     pattern_ids: study.pattern_ids || [],
     structure: study.structure
       ? {
-          duration_s: study.structure.duration_s,
+          format: fmt,
+          timing_observable: timingObservable,
+          duration_s: nonVideo ? null : study.structure.duration_s ?? null,
           hook_0_3: study.structure.hook_0_3,
           beats: (study.structure.beats || []).slice(0, 8),
+          format_note: nonVideo
+            ? "NOT video timing — do not invent 0–3s / motion / audio from these beats. Use a video_timed study or attention model for cuts."
+            : null,
         }
       : null,
     human_build: study.human_build || [],
@@ -992,11 +1013,14 @@ function main() {
         ingest: studiesPayload.ingest,
         join: studiesPayload.join,
         errors: studiesPayload.errors,
-        items: studiesPayload.items.slice(0, 3).map((s) => ({
+        items: studiesPayload.items.slice(0, 5).map((s) => ({
           id: s.id,
           class: s.class,
           title: s.title,
           provenance: s.provenance,
+          format: s.format,
+          timing_observable: s.timing_observable,
+          observed_limits: s.observed_limits,
           when_to_emulate: s.when_to_emulate,
           steal: s.steal,
           never_copy: s.never_copy,
