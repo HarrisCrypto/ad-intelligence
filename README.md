@@ -6,7 +6,7 @@ Packages that do **not** invent proof, drift product identity, or burn three red
 
 **Triple-path (pick one rung):** connected MCP → call tools; Seedance/Higgsfield exist for the user but not in-session → same-quality handoffs; only image gen + short clips + CapCut → **assembler** (same sheets, ledger, lint, render-QA). Index: [creative-stack/README.md](./skills/ad-intelligence/references/creative-stack/README.md).
 
-**One-shot path:** Concept → dense beats → Craft → lint. Cursor discovers the skill via `.cursor/skills/ad-intelligence`. Empty skeletons and sparse VO fail lint. See [one-shot.md](./skills/ad-intelligence/prompts/one-shot.md).
+**One-shot path:** Research public libraries → pick an [attention model](./skills/ad-intelligence/examples/visual/attention-lab.html) → Concept → dense beats → Craft → lint. Cursor discovers the skill via `.cursor/skills/ad-intelligence`. Empty skeletons and sparse VO fail lint.
 
 **Elite craft bar:** every package ships a **Craft system** (palette, type, motion, sound, endcard). [elite-creative-os.md](./skills/ad-intelligence/references/elite-creative-os.md).
 
@@ -23,7 +23,10 @@ Packages that do **not** invent proof, drift product identity, or burn three red
 | **Assembler (third rung)** | [assembler-pipeline.md](./skills/ad-intelligence/references/creative-stack/assembler-pipeline.md) |
 | **No Seedance? Model routing** | [alternative-model-routing.md](./skills/ad-intelligence/references/creative-stack/alternative-model-routing.md) (Wan → LTX → Grok → Hunyuan/Cog/SkyReels → Hailuo/Luma/Pika/…) |
 | **Voice / front-desk gold fixture** | [voice-agent-front-desk.md](./skills/ad-intelligence/examples/voice-agent-front-desk.md) |
-| **Visual design examples** | [examples/visual/index.html](./skills/ad-intelligence/examples/visual/index.html) |
+| **Attention Lab (TikTok/Meta/X models)** | [attention-lab.html](./skills/ad-intelligence/examples/visual/attention-lab.html) |
+| **Public ad libraries ritual** | [ad-libraries.md](./skills/ad-intelligence/references/ad-libraries.md) |
+| **Brief from any URL** | [brief-from-url.md](./skills/ad-intelligence/prompts/brief-from-url.md) |
+| **Visual storyboard frames** | [examples/visual/index.html](./skills/ad-intelligence/examples/visual/index.html) |
 | **Install in minutes** | [INSTALL.md](./INSTALL.md) |
 | **Canonical quality targets** | [skills/ad-intelligence/demo/](./skills/ad-intelligence/demo/) |
 | **Full-depth gold fixtures** | beauty · local · SaaS · physical · voice/front-desk — see [PROOF.md](./PROOF.md) |
@@ -32,7 +35,7 @@ Packages that do **not** invent proof, drift product identity, or burn three red
 | **Ship gate demo** | `node skills/ad-intelligence/scripts/demo-quality-gates.mjs` |
 | **Contribute** | [CONTRIBUTING.md](./CONTRIBUTING.md) |
 
-**Version 3.10.0** — [CHANGELOG.md](./CHANGELOG.md)
+**Version 3.11.0** — [CHANGELOG.md](./CHANGELOG.md)
 
 ---
 

@@ -1,5 +1,26 @@
 # Changelog
 
+## 3.11.0 — 2026-10-10
+
+**Attention Lab + any-niche research** — agents can view teachable scroll-stop models, open public TikTok/Meta/IG/X/YouTube libraries, and brief from any URL (hair, food, AI/voice SaaS, …) without image+slogan slop.
+
+### Added
+- `references/attention-models.json` — 14 timing/shot/word models across platforms
+- `references/ad-libraries.md` — Meta Ad Library, TikTok Creative Center, Google Transparency, X Ads, LinkedIn
+- `examples/visual/attention-lab.html` (+ `build-attention-lab.mjs` / `attention-data.js`)
+- `prompts/brief-from-url.md`, `prompts/emulate-attention-model.md`
+- Stress brief `messy-ai-ops-site.md` (URL-style AI/voice agent)
+- `retrieve.mjs` returns `attention_models` + research URLs (compact too)
+
+### Changed
+- Niche synonyms/aliases: shampoo/haircare, food, AI/voice agent → correct packs
+- One-shot / SKILL / skeleton / context-pack: research → model → Concept → craft
+- Swipe niche hints: apps, home, pets, automotive, fashion
+- Plugin **3.11.0**
+
+### Preserved
+- No scraped creatives; claim firewall; craft lint; gold fixtures; Cursor `.cursor/skills` discovery
+
 ## 3.10.0 — 2026-10-10
 
 **One-shot quality that agents can’t paperwork-game** — concept-first density, Cursor discovery, and lint that rejects empty skeletons.

@@ -1,35 +1,40 @@
 ---
 name: ad-intelligence
 description: >-
-  Writes one shoot-ready ad package in a single pass: concept, muted-first hook,
-  dense beat sheet with exact on-screen/VO words, craft specs, and generator
-  prompts (Seedance, Higgsfield, Kling, Wan, CapCut). Use when the user asks for
-  an ad, ads, commercial, promo, TikTok, Reels, Shorts, Meta, YouTube, LinkedIn
-  ad, UGC script, hooks, storyboard, launch film, or says ads look generic/AI.
-  Concept first → ≥6 beat rows → lint until ok. Works with or without Higgsfield.
+  Writes one shoot-ready ad package in a single pass for any niche (beauty/hair,
+  food, SaaS/AI agents, local, ecommerce…): research public ad libraries, pick an
+  attention model, concept, muted-first hook, dense beat sheet with exact words,
+  craft (design/layout/cut/timing/shots/animation), and generator prompts. Use for
+  ads, TikTok, Reels, Shorts, Meta, Instagram, X, YouTube, LinkedIn, UGC, or when
+  ads look like AI slop. URL briefs OK. Concept + model → ≥6 beats → lint until ok.
 ---
 
 # Ad Intelligence — one-shot ad maker
 
-**Do not brainstorm.** Top agents get quality by **copying a skeleton, filling brackets, and linting until green.**
+**Do not brainstorm.** Top agents: **research live attention → copy skeleton → emulate model timing → lint until green.**
 
 ## When to use
 
-User wants ads, creatives, hooks, UGC, Meta/TikTok/YouTube spots, launch films, or “make this not look AI.”
+User wants ads, creatives, hooks, UGC, Meta/TikTok/Instagram/X/YouTube spots, launch films, “ads for my site,” or “make this not look AI.”
 
 ## ONE-SHOT (mandatory)
 
 Follow [`prompts/one-shot.md`](prompts/one-shot.md) exactly:
 
-1. `node scripts/start-package.mjs --out packages/<brand>-ad.md`
-2. `node scripts/retrieve.mjs --niche <n> --platform <p> --limit 5 --compact`
-3. **Creative first:** Concept (3→1 + “Not the default because…”) → timed script ≥6 rows with EXACT quoted words → Craft system → unit prompts
-4. Fill remaining `[[BRACKETS]]` (sheets/ledger). No leftover brackets.
-5. `node scripts/lint-package.mjs packages/<brand>-ad.md` until `"ok": true` (never invent lint JSON)
-6. Deliver the file.
+1. URL/site brief? → [`prompts/brief-from-url.md`](prompts/brief-from-url.md)
+2. `node scripts/start-package.mjs --out packages/<brand>-ad.md`
+3. `node scripts/retrieve.mjs --niche <n> --platform <p> --limit 5 --compact`  
+   → patterns **and** `attention_models` + public library URLs
+4. Open [`examples/visual/attention-lab.html`](examples/visual/attention-lab.html) (and/or library URLs) — steal structure
+5. **Creative first:** attention model → Concept (3→1 + “Not the default because…”) → timed script ≥6 rows with EXACT quoted words → Craft system (HEX/fonts/motion/E1) → unit prompts
+6. Fill remaining `[[BRACKETS]]`. No leftovers.
+7. `node scripts/lint-package.mjs packages/<brand>-ad.md` until `"ok": true`
+8. Deliver the file.
 
-Gold density: `examples/beauty-dtc-dual-track.md` (or local / saas / physical / voice).  
-External LLMs: paste [`prompts/context-pack.md`](prompts/context-pack.md) (or `node scripts/build-context-pack.mjs`).
+Gold density: beauty · local · saas · physical · voice.  
+Emulate: [`prompts/emulate-attention-model.md`](prompts/emulate-attention-model.md).  
+Libraries: [`references/ad-libraries.md`](references/ad-libraries.md).  
+External LLMs: [`prompts/context-pack.md`](prompts/context-pack.md).
 
 ## Pipeline rung
 
@@ -42,9 +47,9 @@ External LLMs: paste [`prompts/context-pack.md`](prompts/context-pack.md) (or `n
 ## Non-negotiables
 
 - One JTBD · muted-first 0–3s · one primary CTA · dual-track for serious brands  
-- Sheets + claim ledger before product pixels  
-- Craft system specific enough for craft-* lint (no cinematic/stunning/8k/nice colors)  
-- Consumer copy: no “only when supplied” / ASSUMED / PLACEHOLDER leaks  
+- Design + cut + timing + shots + animation specified — not image collage + slogan  
+- Sheets + claim ledger; never invent proof  
+- Craft passes craft-* lint  
 - `NOT_RENDERED` until real export/job ids  
 
 ## Depth docs (only if blocked)
@@ -52,12 +57,11 @@ External LLMs: paste [`prompts/context-pack.md`](prompts/context-pack.md) (or `n
 | Need | File |
 | --- | --- |
 | Full playbook | `prompts/one-shot.md` |
-| Pasteable pack for external LLMs | `node scripts/build-context-pack.mjs` |
+| Attention lab (view models) | `examples/visual/attention-lab.html` |
+| Public ad libraries | `references/ad-libraries.md` |
+| Style catalog (47 patterns) | `references/style-catalog.md` |
+| Pasteable pack | `node scripts/build-context-pack.mjs` |
 | Agency craft rules | `references/elite-creative-os.md` |
-| CapCut finish | `references/production-finish-spec.md` |
-| Master pipeline | `pipelines/one-stop-ad-maker.md` |
-| Output sections | `references/output-template.md` |
-| Install / GitHub | `../../INSTALL.md` · `prompts/bootstrap-from-github.md` |
 
 ## Verify
 

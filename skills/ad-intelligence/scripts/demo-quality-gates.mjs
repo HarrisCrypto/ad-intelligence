@@ -62,9 +62,10 @@ for (const c of listCorpus()) {
   console.log(`  [${mark}] ${c}`);
 }
 
-console.log("\nVISUAL GALLERY");
-console.log("  examples/visual/index.html  (open in browser)");
-console.log("  examples/stress-briefs/     (messy prompts for agent drills)");
+  console.log("\nVISUAL GALLERY");
+  console.log("  examples/visual/attention-lab.html  (models + public libraries)");
+  console.log("  examples/visual/index.html          (storyboard frames)");
+  console.log("  examples/stress-briefs/             (messy prompts for agent drills)");
 
 console.log(
   report.pass

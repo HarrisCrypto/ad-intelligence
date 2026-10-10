@@ -43,6 +43,16 @@ const NICHE_SYNONYMS = {
   coffee: "food-bev",
   restaurant: "food-bev",
   snack: "food-bev",
+  food: "food-bev",
+  beverage: "food-bev",
+  shampoo: "beauty",
+  haircare: "beauty",
+  "hair care": "beauty",
+  hair: "beauty",
+  conditioner: "beauty",
+  skincare: "beauty",
+  makeup: "beauty",
+  cosmetics: "beauty",
   supplement: "health",
   supplements: "health",
   clinic: "health",
@@ -51,13 +61,21 @@ const NICHE_SYNONYMS = {
   banking: "fintech",
   coaching: "education",
   course: "education",
-  skincare: "beauty",
-  makeup: "beauty",
   wellness: "health",
   gym: "fitness",
   apparel: "fashion",
   shopify: "ecommerce",
   dtc: "ecommerce",
+  "ai agent": "saas",
+  "voice ai": "saas",
+  "voice agent": "saas",
+  chatbot: "saas",
+  "ai ops": "saas",
+  "ai assistant": "saas",
+  llm: "saas",
+  "b2b software": "saas",
+  software: "saas",
+  "mobile app": "apps",
 };
 
 const PLATFORM_ALIASES = {
@@ -69,6 +87,8 @@ const PLATFORM_ALIASES = {
   shorts: "youtube_shorts",
   yt: "youtube",
   google: "google_youtube",
+  twitter: "x",
+  "x.com": "x",
 };
 
 function parseArgs(argv) {
@@ -424,15 +444,16 @@ function main() {
     };
   }
 
+  const nicheKey = (nicheId || q.niche || "").toLowerCase();
+  const nicheMatch = (n) =>
+    n.niche.includes(nicheKey.replace(/-/g, "_")) ||
+    n.niche.includes(nicheKey.replace(/_/g, "-")) ||
+    nicheKey.includes(n.niche);
+
   let swipeSignals = null;
   const swipePath = path.join(DB_ROOT, "references", "swipe-signals.json");
   if (fs.existsSync(swipePath)) {
     const swipe = loadJson(swipePath);
-    const nicheKey = (nicheId || q.niche || "").toLowerCase();
-    const nicheMatch = (n) =>
-      n.niche.includes(nicheKey.replace(/-/g, "_")) ||
-      n.niche.includes(nicheKey.replace(/_/g, "-")) ||
-      nicheKey.includes(n.niche);
 
     let nicheHints = [];
     if (nicheKey) {
@@ -485,6 +506,93 @@ function main() {
     };
   }
 
+  let attentionModels = null;
+  const attentionPath = path.join(
+    DB_ROOT,
+    "references",
+    "attention-models.json"
+  );
+  if (fs.existsSync(attentionPath)) {
+    const am = loadJson(attentionPath);
+    const plat = (q.platform || "").toLowerCase();
+    const nicheNorm = nicheKey.replace(/-/g, "_");
+    const pickIds = new Set(
+      [primary, challenger, dualTwin].filter(Boolean)
+    );
+    const matched = (am.models || [])
+      .map((m) => {
+        const nicheOk =
+          !nicheNorm ||
+          (m.niches || []).some(
+            (n) =>
+              n === nicheNorm ||
+              n.replace(/_/g, "-") === nicheKey ||
+              nicheNorm.includes(n) ||
+              n.includes(nicheNorm)
+          );
+        const platOk =
+          !plat ||
+          (m.platforms || []).some(
+            (p) => p === plat || p.includes(plat) || plat.includes(p)
+          );
+        if (!nicheOk || !platOk) return null;
+        let score = 0;
+        for (const pid of m.pattern_ids || []) {
+          if (pickIds.has(pid)) score += 5;
+        }
+        const nicheHits = (m.niches || []).filter(
+          (n) =>
+            n === nicheNorm ||
+            n.replace(/_/g, "-") === nicheKey ||
+            nicheNorm.includes(n)
+        ).length;
+        score += nicheHits * 2;
+        // Prefer tighter niche lists (specialist models over universal UGC)
+        score += Math.max(0, 8 - (m.niches || []).length);
+        if (m.gold_fixture) score += 3;
+        if (plat && (m.platforms || []).includes(plat)) score += 1;
+        return { m, score };
+      })
+      .filter(Boolean)
+      .sort((a, b) => b.score - a.score)
+      .map((x) => x.m);
+    const libs = (am.public_libraries || []).filter(
+      (lib) =>
+        !plat ||
+        (lib.platforms || []).some(
+          (p) => p === plat || p.includes(plat) || plat.includes(p)
+        )
+    );
+    attentionModels = {
+      file: "references/attention-models.json",
+      docs: "references/ad-libraries.md",
+      lab: "examples/visual/attention-lab.html",
+      emulate: "prompts/emulate-attention-model.md",
+      note: "Teachable timing/shot models — emulate structure; research live ads via public libraries only",
+      primary: matched[0]?.id || null,
+      challenger: matched[1]?.id || null,
+      count: matched.length,
+      models: matched.slice(0, 6).map((m) => ({
+        id: m.id,
+        name: m.name,
+        style_id: m.style_id,
+        pattern_ids: m.pattern_ids,
+        ideal_seconds: m.ideal_seconds,
+        why_stops_scroll: m.why_stops_scroll,
+        timing: m.timing,
+        anti_slop: m.anti_slop,
+        gold_fixture: m.gold_fixture || null,
+      })),
+      research: (libs.length ? libs : am.public_libraries || []).map((lib) => ({
+        id: lib.id,
+        name: lib.name,
+        url: lib.url,
+        how: lib.how,
+        platforms: lib.platforms,
+      })),
+    };
+  }
+
   const viralOs = loadJson(
     path.join(DATABASE, "trends/viral-operating-system.json")
   );
@@ -507,6 +615,7 @@ function main() {
     results,
     niche: nichePack,
     swipe_signals: swipeSignals,
+    attention_models: attentionModels,
     viral_os_summary: {
       id: viralOs.id,
       trend_classes: viralOs.trend_classes.map((t) => t.id),
@@ -518,6 +627,7 @@ function main() {
     ],
     claim_firewall: "references/claim-firewall.json",
     brief_defaults: "references/brief-defaults.json",
+    brief_from_url: "prompts/brief-from-url.md",
     render_plan: "references/creative-stack/render-plan.md",
     anti_patterns_file: "database/anti-patterns.json",
     hooks_file: "database/hooks/library.json",
@@ -529,6 +639,22 @@ function main() {
       resolved: payload.resolved,
       warnings,
       picks: payload.picks,
+      attention_models: attentionModels
+        ? {
+            primary: attentionModels.primary,
+            challenger: attentionModels.challenger,
+            models: attentionModels.models.map((m) => ({
+              id: m.id,
+              name: m.name,
+              why_stops_scroll: m.why_stops_scroll,
+              pattern_ids: m.pattern_ids,
+              ideal_seconds: m.ideal_seconds,
+            })),
+            research: attentionModels.research,
+            lab: attentionModels.lab,
+            emulate: attentionModels.emulate,
+          }
+        : null,
       results: results.map((r) => ({
         id: r.blueprint?.id,
         score: r.score,
@@ -542,7 +668,7 @@ function main() {
           .slice(0, 2),
         beats: (r.blueprint?.beats || []).slice(0, 6),
       })),
-      next: "Fill Concept + ≥6-row timed script; see prompts/one-shot.md",
+      next: "Pick attention model → emulate timing → Concept + ≥6-row script → lint (prompts/one-shot.md)",
     };
     console.log(JSON.stringify(compact, null, 2));
   } else {

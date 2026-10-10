@@ -1,8 +1,8 @@
 {
   "name": "ad-intelligence",
   "displayName": "Ad Intelligence",
-  "version": "3.10.0",
-  "description": "One-shot agency-grade ads: concept-first density, Cursor skill discovery, craft lint that rejects empty skeletons.",
+  "version": "3.11.0",
+  "description": "One-shot agency-grade ads for any niche: Attention Lab, public ad-library research, concept-first craft lint.",
   "author": {
     "name": "HarrisCrypto"
   },

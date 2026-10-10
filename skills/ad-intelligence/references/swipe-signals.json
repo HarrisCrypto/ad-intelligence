@@ -1,6 +1,6 @@
 {
   "id": "swipe-signals",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "updated": "2026-10-10",
   "purpose": "Anonymized longevity signals — formats and hook families that tend to survive, plus common failure modes. No scraped creatives or brand names.",
   "how_agents_use": "After niche+pattern retrieval, optionally read matching niche/format signals. Prefer high-longevity hook families when user wants evergreen performance. Feed fails_when into Self-critique. Never invent CTR/ROAS numbers.",
@@ -195,6 +195,31 @@
       "niche": "travel",
       "high_longevity": ["pov_day_in_life", "hero_product_film", "ugc_talking_head"],
       "common_failures": ["Uncleared destination music", "Fake scarcity countdown", "Mismatch vs booking landing"]
+    },
+    {
+      "niche": "apps",
+      "high_longevity": ["app_demo_ui", "skit_sketch", "meme_native", "ugc_talking_head"],
+      "common_failures": ["Fake UI chrome", "Feature laundry", "Trend audio in paid"]
+    },
+    {
+      "niche": "home",
+      "high_longevity": ["before_after", "product_loop", "ugc_talking_head"],
+      "common_failures": ["Fake renovation timelines", "Wrong SKU finish", "Stock house mismatch"]
+    },
+    {
+      "niche": "pets",
+      "high_longevity": ["ugc_talking_head", "product_loop", "before_after"],
+      "common_failures": ["Unsafe challenges", "Invented vet claims"]
+    },
+    {
+      "niche": "automotive",
+      "high_longevity": ["hero_product_film", "before_after", "local_service_trust"],
+      "common_failures": ["Unproven #1 dealer", "Fake MPG/range", "Stock lot footage as 'your car'"]
+    },
+    {
+      "niche": "fashion",
+      "high_longevity": ["pov_day_in_life", "hero_product_film", "ugc_talking_head"],
+      "common_failures": ["Size/color mismatch vs PDP", "Stolen trend audio in paid"]
     }
   ],
   "failure_mode_index": [

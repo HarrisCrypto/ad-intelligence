@@ -1,4 +1,4 @@
-# Ad Intelligence — CONTEXT PACK (v3.10)
+# Ad Intelligence — CONTEXT PACK (v3.11)
 
 _Paste into system context. Then follow the one-shot sequence._
 _Repo: https://github.com/HarrisCrypto/ad-intelligence_
@@ -8,12 +8,14 @@ _Repo: https://github.com/HarrisCrypto/ad-intelligence_
 
 # ONE-SHOT playbook — creative first, then paperwork
 
-Agents fail when they fill ledgers before having an idea. **Concept → dense beat sheet → craft → lint.**
+Agents fail when they fill ledgers before having an idea. **Research → attention model → Concept → dense beat sheet → craft → lint.**
 
 ## Hard sequence
 
 ```text
-0. OPEN closest gold fixture (beauty / local / saas / physical / voice) — steal DENSITY, not brand facts.
+0. BRIEF
+   - If user gave a URL/site: follow prompts/brief-from-url.md (gather offer/proof/CTA; list Assumptions).
+   - OPEN closest gold fixture (beauty / local / saas / physical / voice) — steal DENSITY, not brand facts.
 
 1. START FILE:
    node scripts/start-package.mjs --out packages/<brand>-ad.md
@@ -21,14 +23,19 @@ Agents fail when they fill ledgers before having an idea. **Concept → dense be
 2. RETRIEVE (prefer compact):
    node scripts/retrieve.mjs --niche <niche> --platform <platform> --limit 5 --compact
    Paste primary / challenger / dual_track_twin (twin ≠ primary).
+   Paste attention_models.primary + challenger (timing sheets).
+   Open attention_models.research[] URLs (Meta Ad Library, TikTok Creative Center, X, YouTube) —
+   10-minute look: steal STRUCTURE only. Lab: examples/visual/attention-lab.html
 
-3. WRITE CREATIVE FIRST (before polishing ledger):
-   a) Concept: 3 one-liners → pick ONE → "Not the default because…"
+3. EMULATE + WRITE CREATIVE FIRST (before polishing ledger):
+   a) Attention model id + “why this stops scroll for THIS brief”
+   b) Concept: 3 one-liners → pick ONE → "Not the default because…"
       (ban: smiling hold-to-camera, floating product+particles, drone #1, neon SaaS cockpit, invented %)
-   b) Timed script: ≥6 rows, ≈≤3–4s each. VO/text = EXACT words in quotes (not “sparse”).
-   c) Captions cover the cut. One CTA. Muted-first 0–3s (no logo).
-   d) Craft system: ≥2 #HEX, real font names (no -style/-like), motion, E1, 9:16+1:1
-   e) One paste-ready prompt PER unit (CAMERA/LIGHT/MOTION/GRADE/NEGATIVES)
+   c) Timed script: ≥6 rows matching model timing (±). VO/text = EXACT words in quotes (not “sparse”).
+   d) Captions cover the cut. One CTA. Muted-first 0–3s (no logo).
+   e) Craft system: ≥2 #HEX, real font names (no -style/-like), motion, E1, 9:16+1:1
+      Design/layout/cut/shots/animation called out — not “nice images + caption.”
+   f) One paste-ready prompt PER unit (CAMERA/LIGHT/MOTION/GRADE/NEGATIVES)
 
 4. FILL remaining [[BRACKETS]] (sheets, ledger, rights). Never invent proof.
 
@@ -38,17 +45,30 @@ Agents fail when they fill ledgers before having an idea. **Concept → dense be
    No shell → write "LINT: not run (no shell)" + tick self-check; do not fake JSON.
 ```
 
+## Niche cheat sheet
+
+| Ask | Niche | Models / gold |
+| --- | --- | --- |
+| Hair, shampoo, skincare | beauty | `am_hair_transform`, beauty gold |
+| Food, coffee, snacks | food_bev | `am_food_crave_asmr` |
+| AI agent / voice / SaaS site | saas | `am_voice_agent_missed`, voice + saas gold |
+| Local service | local_services | `am_local_geo_trust` |
+| Any DTC product | ecommerce | `am_macro_lust_loop` / hero |
+
+Full map: `references/ad-libraries.md`. Emulate: `prompts/emulate-attention-model.md`.
+
 ## Refusal / rewrite
 
 Do **not** deliver if:
 
 - Any `[[BRACKET]]` left  
-- No Concept with “Not the default because…”  
+- No attention model id + no Concept with “Not the default because…”  
 - Timed script &lt; 6 rows or VO cells say “sparse” / “≤N words”  
 - Craft is adjectives only or fonts hedged (-style/-like)  
 - Invented metrics without `[PLACEHOLDER…]`  
 - Multi-CTA or logo-first 0–3s  
 - Chat-only brainstorm with no package file  
+- Image collage + crappy slogan (no cut/timing/shots)
 
 Thin brief → assume via brief-defaults, list Assumptions, ask ≤3 questions, **still ship**.
 
@@ -61,7 +81,19 @@ Rung = assembler. Name Wan / LTX / Grok / Kling / Hailuo / stills+CapCut. Same s
 Lint `"ok": true` **and** a stranger can mute-watch 0–3s and know the situation.
 
 ---
-## 2) CRAFT DEFAULTS
+## 2) ATTENTION + ANY NICHE
+
+# Attention + any niche
+
+- View models: examples/visual/attention-lab.html
+- Public libraries: references/ad-libraries.md (Meta, TikTok, X, YouTube, LinkedIn)
+- URL briefs: prompts/brief-from-url.md
+- Emulate: prompts/emulate-attention-model.md
+- Hair/shampoo → beauty · Food → food_bev · AI/voice agent → saas + voice gold
+- retrieve.mjs returns attention_models + research URLs — use them
+
+---
+## 3) CRAFT DEFAULTS
 
 # Craft defaults (compressed)
 
@@ -74,11 +106,13 @@ Lint `"ok": true` **and** a stranger can mute-watch 0–3s and know the situatio
 - Neon / holographic SaaS cockpit with invented %
 - Cream+serif+terracotta or purple-glow AI-default looks
 - Invented review counts / ROAS
+- Image collage + crappy slogan (no cut/timing/shots)
 
 ## Hook / edit
 - 0–3s muted-first; brand cue via product/place/color OK; logo sting only on endcard
 - ≥6 timed-script rows for ~24s; EXACT on-screen/VO words in quotes
 - Captions carry the story muted; one CTA; product hold ≥1.2s; endcard ≥2.5s
+- Pick an attention model (am_*) and match its timing sheet
 
 ## Craft lint (must pass)
 - ≥2 #HEX; real font names (no -style/-like); motion; E1; 9:16+1:1
@@ -87,7 +121,7 @@ Lint `"ok": true` **and** a stranger can mute-watch 0–3s and know the situatio
 - No leftover [[BRACKETS]]
 
 ---
-## 3) PACKAGE SKELETON
+## 4) PACKAGE SKELETON
 
 # Package skeleton — COPY THIS FILE, fill [[BRACKETS]], do not delete sections
 
@@ -117,6 +151,9 @@ Replace every `[[LIKE_THIS]]`. Tags must be USER_SUPPLIED | ASSET_VERIFIED | PLA
 - Primary pattern id: `[[from retrieve.mjs]]`
 - Challenger pattern id: `[[from retrieve]]`
 - Dual-track twin id: `[[≠ primary; cinema/high-prod if dual-track]]`
+- Attention model id (primary): `[[am_* from retrieve attention_models]]`
+- Attention model id (challenger): `[[am_*]]`
+- Research notes (public libraries — structure only): [[Meta/TikTok/X/YouTube — what timing you stole]]
 - Flow id: `[[flow or n/a]]`
 - Hook family ids: [[…]]
 - Trend class (if any): [[…|none]]
@@ -132,6 +169,7 @@ Replace every `[[LIKE_THIS]]`. Tags must be USER_SUPPLIED | ASSET_VERIFIED | PLA
 - Options: (1) [[AI-default you refuse]] (2) [[stronger idea]] (3) [[alt]]
 - **Chosen:** [[one-line idea + the memorable frame]]
 - Not the default because: [[concrete reason tied to brief — not vibes]]
+- Emulates attention model: [[am_* — timing/shots/words stolen; brand facts original]]
 
 ### Consistency systems (required)
 - Identity mode: [[pack|ui|place-service|multi-sku|n/a]]
@@ -308,7 +346,7 @@ NEGATIVES: melted type, wrong label, logo redraw, extra fingers, watermark, iden
 - Self-critique completed: yes
 
 ---
-## 4) GOLD DENSITY EXCERPT (beauty — match this specificity)
+## 5) GOLD DENSITY EXCERPT (beauty — match this specificity)
 
 ### Concept (chosen)
 - Three options: (1) smiling hold-to-camera serum (2) “4:07pm” base-fail clock (3) ASMR drop only  
@@ -358,11 +396,12 @@ AUDIO PATH: muted gen + captions (VO optional in post)
 NEGATIVES: melted type, wrong label, identity drift, extra fingers, watermark, clinical claims on screen
 ```
 ---
-## 5) COMMANDS
+## 6) COMMANDS
 
 ```bash
 cd skills/ad-intelligence
 node scripts/start-package.mjs --out packages/<brand>-ad.md
 node scripts/retrieve.mjs --niche <n> --platform <p> --limit 5 --compact
 node scripts/lint-package.mjs packages/<brand>-ad.md
+# open examples/visual/attention-lab.html
 ```

@@ -3,7 +3,13 @@
   "niche": "saas",
   "aliases": [
     "b2b_software",
-    "software"
+    "software",
+    "ai_agent",
+    "voice_ai",
+    "voice_agent",
+    "chatbot",
+    "ai_ops",
+    "ai_assistant"
   ],
   "audience": "Operators skeptical of feature dumps.",
   "jobs_to_be_done": [
@@ -24,17 +30,29 @@
       "id": "workflow-tax",
       "hook_seed": "Hours lost to handoffs",
       "pattern": "pas-pain-stack"
+    },
+    {
+      "id": "missed-call-agent",
+      "hook_seed": "Missed after-hours → agent answers → booked",
+      "pattern": "pas-pain-stack",
+      "attention_model": "am_voice_agent_missed",
+      "gold": "examples/voice-agent-front-desk.md"
     }
   ],
   "lexicon": {
     "use": [
       "workflow",
       "time-to-value",
-      "source of truth"
+      "source of truth",
+      "missed call",
+      "after-hours",
+      "routed",
+      "booked"
     ],
     "avoid_unless_true": [
       "AI-powered without mechanism",
-      "10x"
+      "10x",
+      "replaces your whole team"
     ]
   },
   "proof_types": [

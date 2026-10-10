@@ -40,11 +40,13 @@ const craftRules = `# Craft defaults (compressed)
 - Neon / holographic SaaS cockpit with invented %
 - Cream+serif+terracotta or purple-glow AI-default looks
 - Invented review counts / ROAS
+- Image collage + crappy slogan (no cut/timing/shots)
 
 ## Hook / edit
 - 0–3s muted-first; brand cue via product/place/color OK; logo sting only on endcard
 - ≥6 timed-script rows for ~24s; EXACT on-screen/VO words in quotes
 - Captions carry the story muted; one CTA; product hold ≥1.2s; endcard ≥2.5s
+- Pick an attention model (am_*) and match its timing sheet
 
 ## Craft lint (must pass)
 - ≥2 #HEX; real font names (no -style/-like); motion; E1; 9:16+1:1
@@ -53,24 +55,37 @@ const craftRules = `# Craft defaults (compressed)
 - No leftover [[BRACKETS]]
 `;
 
+const attentionBrief = `# Attention + any niche
+
+- View models: examples/visual/attention-lab.html
+- Public libraries: references/ad-libraries.md (Meta, TikTok, X, YouTube, LinkedIn)
+- URL briefs: prompts/brief-from-url.md
+- Emulate: prompts/emulate-attention-model.md
+- Hair/shampoo → beauty · Food → food_bev · AI/voice agent → saas + voice gold
+- retrieve.mjs returns attention_models + research URLs — use them
+`;
+
 const parts = [
-  "# Ad Intelligence — CONTEXT PACK (v3.10)\n\n",
+  "# Ad Intelligence — CONTEXT PACK (v3.11)\n\n",
   "_Paste into system context. Then follow the one-shot sequence._\n",
   "_Repo: https://github.com/HarrisCrypto/ad-intelligence_\n",
   "\n---\n## 1) ONE-SHOT\n\n",
   read("prompts/one-shot.md"),
-  "\n---\n## 2) CRAFT DEFAULTS\n\n",
+  "\n---\n## 2) ATTENTION + ANY NICHE\n\n",
+  attentionBrief,
+  "\n---\n## 3) CRAFT DEFAULTS\n\n",
   craftRules,
-  "\n---\n## 3) PACKAGE SKELETON\n\n",
+  "\n---\n## 4) PACKAGE SKELETON\n\n",
   read("references/package-skeleton.md"),
-  "\n---\n## 4) GOLD DENSITY EXCERPT (beauty — match this specificity)\n\n",
+  "\n---\n## 5) GOLD DENSITY EXCERPT (beauty — match this specificity)\n\n",
   craftExcerpt,
-  "\n---\n## 5) COMMANDS\n\n",
+  "\n---\n## 6) COMMANDS\n\n",
   "```bash\n",
   "cd skills/ad-intelligence\n",
   "node scripts/start-package.mjs --out packages/<brand>-ad.md\n",
   "node scripts/retrieve.mjs --niche <n> --platform <p> --limit 5 --compact\n",
   "node scripts/lint-package.mjs packages/<brand>-ad.md\n",
+  "# open examples/visual/attention-lab.html\n",
   "```\n",
 ];
 

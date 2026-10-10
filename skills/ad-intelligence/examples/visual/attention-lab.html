@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ad Intelligence — Attention Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #070b12;
+      --panel: #101826;
+      --ink: #e8eef8;
+      --muted: #8b97ab;
+      --line: rgba(232, 238, 248, 0.12);
+      --teal: #2ec4b6;
+      --amber: #f0b429;
+      --rose: #ff6b6b;
+      --good: #5dd39e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "IBM Plex Sans", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(900px 500px at 0% 0%, rgba(46, 196, 182, 0.16), transparent 55%),
+        radial-gradient(800px 480px at 100% 10%, rgba(240, 180, 41, 0.08), transparent 50%),
+        var(--bg);
+      line-height: 1.45;
+      min-height: 100vh;
+    }
+    a { color: var(--teal); text-underline-offset: 3px; }
+    header, main, footer { max-width: 1180px; margin: 0 auto; padding: 0 1.25rem; }
+    header { padding-top: 3.2rem; padding-bottom: 1.5rem; }
+    .kicker {
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--teal);
+      margin: 0 0 0.75rem;
+    }
+    h1 {
+      font-family: "Bricolage Grotesque", sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      line-height: 1.05;
+      margin: 0 0 0.85rem;
+      max-width: 16ch;
+      font-weight: 700;
+    }
+    .lede { color: var(--muted); max-width: 58ch; margin: 0 0 1.4rem; font-size: 1.05rem; }
+    .row { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-bottom: 1rem; }
+    .chip {
+      border: 1px solid var(--line);
+      background: rgba(16, 24, 38, 0.8);
+      padding: 0.35rem 0.7rem;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .filters {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 0.75rem;
+      margin: 1.25rem 0 2rem;
+      padding: 1rem;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(16, 24, 38, 0.65);
+    }
+    label { display: grid; gap: 0.35rem; font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+    select, input[type="search"] {
+      font: inherit;
+      color: var(--ink);
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 0.55rem 0.65rem;
+    }
+    section { margin: 2.5rem 0; }
+    h2 {
+      font-family: "Bricolage Grotesque", sans-serif;
+      font-size: 1.65rem;
+      margin: 0 0 0.4rem;
+      font-weight: 700;
+    }
+    .section-note { color: var(--muted); margin: 0 0 1.1rem; max-width: 65ch; }
+    .lib-grid, .model-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 0.9rem;
+    }
+    .lib-card, .model-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 1rem 1.05rem 1.15rem;
+      animation: rise 0.55s ease both;
+    }
+    .model-card:nth-child(2) { animation-delay: 0.05s; }
+    .model-card:nth-child(3) { animation-delay: 0.1s; }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: none; }
+    }
+    .lib-card h3, .model-card h3 {
+      margin: 0 0 0.35rem;
+      font-family: "Bricolage Grotesque", sans-serif;
+      font-size: 1.15rem;
+    }
+    .lib-card p, .model-card p { margin: 0.35rem 0; color: var(--muted); font-size: 0.9rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.55rem 0; }
+    .tag {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.45rem;
+      border-radius: 6px;
+      background: rgba(46, 196, 182, 0.12);
+      color: var(--teal);
+      border: 1px solid rgba(46, 196, 182, 0.25);
+    }
+    .tag.amber { background: rgba(240, 180, 41, 0.12); color: var(--amber); border-color: rgba(240, 180, 41, 0.28); }
+    .phone {
+      margin-top: 0.75rem;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: #05080f;
+      padding: 0.75rem;
+      aspect-ratio: 9 / 14;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      gap: 0.5rem;
+      overflow: hidden;
+    }
+    .phone .bar {
+      height: 4px;
+      border-radius: 99px;
+      background: linear-gradient(90deg, var(--teal), var(--amber));
+      width: 42%;
+      animation: pulse 2.4s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { width: 28%; opacity: 0.7; }
+      50% { width: 72%; opacity: 1; }
+    }
+    .beats { display: grid; gap: 0.4rem; align-content: start; overflow: auto; }
+    .beat {
+      border-left: 2px solid var(--teal);
+      padding: 0.35rem 0.5rem;
+      background: rgba(255,255,255,0.03);
+      border-radius: 0 8px 8px 0;
+      font-size: 0.72rem;
+    }
+    .beat strong { display: block; color: var(--ink); font-size: 0.78rem; }
+    .beat span { color: var(--muted); }
+    .do-dont {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+      margin-top: 0.7rem;
+      font-size: 0.78rem;
+    }
+    .do-dont div { padding: 0.5rem; border-radius: 8px; background: rgba(255,255,255,0.03); }
+    .do-dont .do { border: 1px solid rgba(93, 211, 158, 0.3); }
+    .do-dont .dont { border: 1px solid rgba(255, 107, 107, 0.3); }
+    .do-dont h4 { margin: 0 0 0.3rem; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; }
+    .do-dont .do h4 { color: var(--good); }
+    .do-dont .dont h4 { color: var(--rose); }
+    .do-dont ul { margin: 0; padding-left: 1rem; color: var(--muted); }
+    .empty { color: var(--muted); padding: 1.5rem; border: 1px dashed var(--line); border-radius: 12px; }
+    footer { padding: 1rem 1.25rem 3rem; color: var(--muted); font-size: 0.85rem; }
+    .nav-links { margin-top: 0.75rem; }
+    .nav-links a { margin-right: 1rem; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="kicker">Ad Intelligence · Attention Lab</p>
+    <h1>See what stops the scroll — then emulate the structure</h1>
+    <p class="lede">
+      Public library links for TikTok, Meta/Instagram, X, YouTube, LinkedIn — plus teachable
+      attention models (timing, shots, words, cuts). Steal structure. Never invent metrics.
+      Works for hair, food, SaaS/AI agents, local — any niche in the pack.
+    </p>
+    <div class="row">
+      <span class="chip">v3.11 attention layer</span>
+      <span class="chip">Public libraries · not scraped ads</span>
+      <span class="chip">Pairs with retrieve + one-shot lint</span>
+    </div>
+    <p class="nav-links">
+      <a href="./index.html">Storyboard frames</a>
+      <a href="../../references/ad-libraries.md">Research ritual</a>
+      <a href="../../prompts/brief-from-url.md">Brief from URL</a>
+    </p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Open live ads (legal research)</h2>
+      <p class="section-note">Spend 10 minutes here before writing. Note hook type, time-to-product, text density — not brand copy.</p>
+      <div class="lib-grid" id="libs"></div>
+    </section>
+
+    <section>
+      <h2>Attention models</h2>
+      <p class="section-note">Filter by platform or niche. Each card is a shootable timing sheet — map to pattern ids via retrieve.</p>
+      <div class="filters">
+        <label>Platform
+          <select id="platform">
+            <option value="">All platforms</option>
+          </select>
+        </label>
+        <label>Niche
+          <select id="niche">
+            <option value="">All niches</option>
+          </select>
+        </label>
+        <label>Search
+          <input type="search" id="q" placeholder="hair, voice, food, UI…" />
+        </label>
+      </div>
+      <div class="model-grid" id="models"></div>
+      <p class="empty" id="empty" hidden>No models match — clear filters.</p>
+    </section>
+
+    <section>
+      <h2>Any-niche quick path</h2>
+      <p class="section-note">
+        URL brief (e.g. your AI site) → <code>prompts/brief-from-url.md</code> →
+        <code>retrieve.mjs --compact</code> → pick a model above → emulate → lint.
+        Hair/shampoo → beauty models. Food → crave ASMR. Voice/AI agent →
+        <code>am_voice_agent_missed</code> + voice gold fixture.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    Teaching models only. Not performance proof. Run
+    <code>node scripts/demo-quality-gates.mjs</code> from the skill root.
+  </footer>
+
+  <script src="./attention-data.js"></script>
+  <script>
+    const data = window.AD_INTEL_ATTENTION;
+    if (!data) {
+      document.getElementById("models").innerHTML =
+        "<p class='empty'>Missing attention-data.js — run <code>node scripts/build-attention-lab.mjs</code></p>";
+      throw new Error("no data");
+    }
+
+    const libsEl = document.getElementById("libs");
+    libsEl.innerHTML = data.public_libraries.map((lib) => `
+      <article class="lib-card">
+        <h3>${lib.name}</h3>
+        <div class="tags">${lib.platforms.map((p) => `<span class="tag amber">${p}</span>`).join("")}</div>
+        <p>${lib.how}</p>
+        <p><a href="${lib.url}" target="_blank" rel="noopener">${lib.url.replace(/^https?:\/\//, "")}</a></p>
+      </article>
+    `).join("");
+
+    const platforms = new Set();
+    const niches = new Set();
+    data.models.forEach((m) => {
+      (m.platforms || []).forEach((p) => platforms.add(p));
+      (m.niches || []).forEach((n) => niches.add(n));
+    });
+    const platformSel = document.getElementById("platform");
+    const nicheSel = document.getElementById("niche");
+    [...platforms].sort().forEach((p) => {
+      platformSel.insertAdjacentHTML("beforeend", `<option value="${p}">${p}</option>`);
+    });
+    [...niches].sort().forEach((n) => {
+      nicheSel.insertAdjacentHTML("beforeend", `<option value="${n}">${n}</option>`);
+    });
+
+    function render() {
+      const p = platformSel.value;
+      const n = nicheSel.value;
+      const q = document.getElementById("q").value.trim().toLowerCase();
+      const list = data.models.filter((m) => {
+        if (p && !(m.platforms || []).includes(p)) return false;
+        if (n && !(m.niches || []).includes(n)) return false;
+        if (q) {
+          const blob = [m.id, m.name, m.why_stops_scroll, ...(m.niches || []), ...(m.pattern_ids || [])]
+            .join(" ")
+            .toLowerCase();
+          if (!blob.includes(q)) return false;
+        }
+        return true;
+      });
+      document.getElementById("empty").hidden = list.length > 0;
+      document.getElementById("models").innerHTML = list.map((m) => `
+        <article class="model-card">
+          <h3>${m.name}</h3>
+          <p><code>${m.id}</code> · ~${m.ideal_seconds || "?"}s · ${m.style_id || ""}</p>
+          <p>${m.why_stops_scroll || ""}</p>
+          <div class="tags">
+            ${(m.platforms || []).slice(0, 4).map((x) => `<span class="tag">${x}</span>`).join("")}
+            ${(m.niches || []).slice(0, 4).map((x) => `<span class="tag amber">${x}</span>`).join("")}
+          </div>
+          <div class="phone" aria-label="Beat timeline">
+            <div class="bar"></div>
+            <div class="beats">
+              ${(m.timing || []).map((b) => `
+                <div class="beat">
+                  <strong>${b.t}</strong>
+                  <span>${b.shot || ""}</span><br/>
+                  <span>“${(b.on_screen || "").replace(/"/g, "'")}”</span>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+          <div class="do-dont">
+            <div class="do">
+              <h4>Do</h4>
+              <ul>${(m.words_do || []).map((x) => `<li>${x}</li>`).join("")}</ul>
+            </div>
+            <div class="dont">
+              <h4>Don’t</h4>
+              <ul>${(m.words_dont || []).concat(m.anti_slop || []).slice(0, 5).map((x) => `<li>${x}</li>`).join("")}</ul>
+            </div>
+          </div>
+          <p style="margin-top:0.7rem;font-size:0.8rem">Patterns: <code>${(m.pattern_ids || []).join("</code> · <code>")}</code></p>
+        </article>
+      `).join("");
+    }
+
+    platformSel.addEventListener("change", render);
+    nicheSel.addEventListener("change", render);
+    document.getElementById("q").addEventListener("input", render);
+    render();
+  </script>
+</body>
+</html>

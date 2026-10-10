@@ -26,6 +26,9 @@ Replace every `[[LIKE_THIS]]`. Tags must be USER_SUPPLIED | ASSET_VERIFIED | PLA
 - Primary pattern id: `[[from retrieve.mjs]]`
 - Challenger pattern id: `[[from retrieve]]`
 - Dual-track twin id: `[[≠ primary; cinema/high-prod if dual-track]]`
+- Attention model id (primary): `[[am_* from retrieve attention_models]]`
+- Attention model id (challenger): `[[am_*]]`
+- Research notes (public libraries — structure only): [[Meta/TikTok/X/YouTube — what timing you stole]]
 - Flow id: `[[flow or n/a]]`
 - Hook family ids: [[…]]
 - Trend class (if any): [[…|none]]
@@ -41,6 +44,7 @@ Replace every `[[LIKE_THIS]]`. Tags must be USER_SUPPLIED | ASSET_VERIFIED | PLA
 - Options: (1) [[AI-default you refuse]] (2) [[stronger idea]] (3) [[alt]]
 - **Chosen:** [[one-line idea + the memorable frame]]
 - Not the default because: [[concrete reason tied to brief — not vibes]]
+- Emulates attention model: [[am_* — timing/shots/words stolen; brand facts original]]
 
 ### Consistency systems (required)
 - Identity mode: [[pack|ui|place-service|multi-sku|n/a]]
