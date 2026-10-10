@@ -1,0 +1,51 @@
+{
+  "id": "private-example-do-not-commit-real-media",
+  "class": "performance_dr",
+  "title": "EXAMPLE — replace with your structured breakdown",
+  "private": true,
+  "when_to_emulate": ["Same niche + funnel as your brief"],
+  "when_not": ["Different JTBD", "Regulated claim you cannot match"],
+  "platforms": ["meta", "tiktok"],
+  "niches": ["saas"],
+  "attention_model_ids": ["am_pas_pain_stack"],
+  "pattern_ids": ["pas-pain-stack"],
+  "structure": {
+    "duration_s": 24,
+    "hook_0_3": "Describe what you observed — visual job + text density",
+    "beats": [
+      { "t": "0–3s", "job": "thumbstop", "note": "structure only" },
+      { "t": "3–12s", "job": "agitate", "note": "…" },
+      { "t": "12–20s", "job": "mechanism", "note": "…" },
+      { "t": "20–24s", "job": "CTA", "note": "one path" }
+    ]
+  },
+  "steal": ["Cut rate", "When product appears", "Caption burn-in style"],
+  "never_copy": ["Their brand lines", "Their reviews", "Their claimed metrics"],
+  "why_it_works": ["Fill from your observation"],
+  "human_build": [
+    {
+      "step": 1,
+      "action": "Lock product sheet from your assets",
+      "tools": ["sheets"]
+    },
+    {
+      "step": 2,
+      "action": "Generate or shoot units per finish-the-cut; fill human-build log",
+      "tools": ["kling", "capcut", "human-build-log"]
+    }
+  ],
+  "provenance": {
+    "observed": true,
+    "basis": "ad-library",
+    "claim_firewall": "Observed in a public ad library — emulate structure only; never invent CTR/ROAS or paste their lines.",
+    "observed_date": "YYYY-MM-DD",
+    "library_ids": ["meta_ad_library"]
+  },
+  "research_where": {
+    "libraries": ["meta_ad_library"],
+    "search_hints": ["your category keywords"],
+    "observed_date": "YYYY-MM-DD",
+    "what_to_note": "0–3s hook type, time-to-product, CTA count"
+  },
+  "source_notes": "Private breakdown — keep out of public PRs. No media files in git. Ingest via: node scripts/ingest-blueprint.mjs this.json --write"
+}

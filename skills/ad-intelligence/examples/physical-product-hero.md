@@ -36,6 +36,11 @@ Teaching fixture for lint + template compliance. Fictional product. Not a scrape
 ### Job-to-be-done (one sentence)
 Make precise-temp pour feel craft-inevitable, then one Shop NestBrew path.
 
+### Concept (chosen)
+- Options: (1) floating kettle + particles (2) macro steam → pour physics → shop (3) talking-head review  
+- **Chosen:** Silent spectacle pour as the idea  
+- Not the default because: no floating product/particles; identity locked to sheet stills
+
 ### Consistency systems (required)
 - Identity mode: pack
 - Provenance of sheet fields: ASSUMED (fixture) / PLACEHOLDER for specs
@@ -81,10 +86,14 @@ Make precise-temp pour feel craft-inevitable, then one Shop NestBrew path.
 ### Timed script
 | t | Visual | VO / text | Purpose | Claim tags |
 | --- | --- | --- | --- | --- |
-| 0–3s | Macro steam / light streak; no logo | — | Spectacle hook | — |
-| 3–18s | Desire world + pour physics (Images 1,4,5) | sparse | Desire | ASSUMED |
-| 18–26s | Temp ring settle (Image 3) — no fake degree burn unless USER_SUPPLIED | capability as feel | PLACEHOLDER if digits |
-| 26–30s | Hero pack endcard space | Shop NestBrew | One CTA | ASSUMED |
+| 0–3s | Macro steam / light streak; no logo | “Listen.” | Spectacle | — |
+| 3–7s | Slow dolly on matte body (Image 1) | “Steel. Steady.” | Desire | ASSUMED |
+| 7–12s | Pour physics (Images 4–5) | “The line holds.” | Desire | ASSUMED |
+| 12–16s | Stream into cup | “No splash.” | Payoff | ASSUMED |
+| 16–20s | Temp ring settle (Image 3) — no fake digits | “Ready when it is.” | Capability | PLACEHOLDER |
+| 20–24s | Pack hero hold | “NestBrew.” | Brand | ASSUMED |
+| 24–27s | Endcard prep | “One kettle.” | Bridge | ASSUMED |
+| 27–30s | Endcard | “Shop NestBrew.” | One CTA | ASSUMED |
 
 ### Shot list / visual system
 Hard product key, cool shadows, slow dolly + pour. Anamorphic feel for hero; tighter loop for social. Leave lower caption band quiet for burn-in and endcard.
@@ -93,7 +102,7 @@ Hard product key, cool shadows, slow dolly + pour. Anamorphic feel for hero; tig
 - Style id + production_tier + virality_posture: `hero_product_film` + `product_loop` twin · premium_cinema + loop_performance
 - Palette: matte black `#121212` · cool steel `#A8B0B8` · warm practical accent `#E8C59A` [ASSUMED from sheet]
 - Grade name: high-contrast editorial — cool shadows, hard product key, label always readable
-- Typography: hook spectacle ≤5 words or none 0–3s (no type preferred) · captions sparse grotesk · CTA Shop one only on endcard · legal omit unless USER_SUPPLIED
+- Typography: hook Anton 400 ≤5 words · captions Inter Tight 500 · CTA Shop one only on endcard · legal omit unless USER_SUPPLIED
 - Motion grammar: 0–3s macro spectacle no logo → slow dolly 3–10s → pour physics 10–16s → pack hero hold → E1 3–5s; loop twin = continuous 3–5s pour (matched ends)
 - Sound plan: muted-first; diegetic pour SFX; original bed; no uncleared track
 - Endcard module E1: logo SVG (not model-drawn) · Shop CTA · 9:16 + 1:1 + optional 16:9 hero

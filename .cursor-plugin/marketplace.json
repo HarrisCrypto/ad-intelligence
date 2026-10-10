@@ -10,18 +10,18 @@
     {
       "name": "ad-intelligence",
       "source": ".",
-      "description": "One-shot agency-grade ads — skeleton→lint loop, elite craft, triple-path + model routing.",
-      "version": "3.9.0",
+      "description": "One-shot agency-grade ads — provenanced studies, ingest, human-build logs, craft lint.",
+      "version": "3.15.0",
       "keywords": [
         "ads",
         "viral",
         "tiktok",
-        "cinematic",
         "ugc",
         "high-production",
         "meta",
         "youtube",
-        "creative"
+        "creative",
+        "one-shot"
       ]
     }
   ]

@@ -5,21 +5,29 @@ MISSION: One-shot agency-grade ad package via HarrisCrypto/ad-intelligence.
 
 REPO:
   git clone https://github.com/HarrisCrypto/ad-intelligence.git
-  cd ad-intelligence/skills/ad-intelligence
+  cd ad-intelligence
 
-BEST PATH (pasteable):
-  node scripts/build-context-pack.mjs
-  # paste that entire output into system context, then send the brief
+READY:
+  node skills/ad-intelligence/scripts/agent-ready.mjs
 
-OR READ IN ORDER:
-  1. prompts/one-shot.md
-  2. references/package-skeleton.md
-  3. SKILL.md
-  4. Closest examples/* gold fixture for craft density
+BEST PATH (pasteable, any LLM):
+  node skills/ad-intelligence/scripts/build-context-pack.mjs
+  # paste output into system context, then send the brief
 
-THEN RUN:
+OR skill loaders:
+  Cursor → .cursor/skills/ad-intelligence
+  Claude Code → .claude/skills/ad-intelligence
+  Copilot → .github/skills/ad-intelligence
+  Others → .agents/skills/ad-intelligence or AGENTS.md
+
+THEN:
+  node skills/ad-intelligence/scripts/probe-harness.mjs
+  # fill tool card → choose rung
+  # URL? node skills/ad-intelligence/scripts/brief-from-url.mjs <url>
+  cd skills/ad-intelligence
   node scripts/start-package.mjs --out packages/<brand>-ad.md
-  node scripts/retrieve.mjs --niche <niche> --platform <platform> --limit 5
+  node scripts/retrieve.mjs --niche <niche> --platform <platform> --limit 5 --compact
+  # Attention Lab + emulate model timing
   # fill [[BRACKETS]]
   node scripts/lint-package.mjs packages/<brand>-ad.md   # until ok:true
 

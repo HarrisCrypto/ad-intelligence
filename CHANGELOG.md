@@ -1,5 +1,144 @@
 # Changelog
 
+## 3.15.0 — 2026-10-10
+
+**Studies honesty + any-harness proof** — provenance labels, ingest validator, loud private failures, join reconciliation tests, human-build log artifact, CI fresh-clone gates. Addresses: unlabelled synthesis-as-proof risk, empty private workflow, untested join, build-log as artifact.
+
+### Added
+- Hard `provenance` on every study (`observed`, `basis`, `claim_firewall`) — surfaced in retrieve
+- `schema/study.schema.json` · `scripts/lib/validate-study.mjs` · `scripts/ingest-blueprint.mjs`
+- Retrieve `studies.join` reconciliation rule; exit **3** on invalid study files (no silent skip)
+- `studies/fixtures/private-join/` + gates asserting join; `fresh-clone-prove.mjs`
+- `.github/workflows/fresh-clone-gates.yml`
+- `references/human-build-log.template.md` + seed `examples/human-build-logs/voice-agent-assembler-seed.md`
+
+### Changed
+- One-shot: copy provenance; fill build **log** artifact; never launder synthesis into proof
+- Plugin **3.15.0**
+
+### Note
+Until this PR merges, default `main` clone is still older — use branch `cursor/multi-harness-agent-os-08cd` or wait for merge. CI proves the PR ref.
+
+## 3.14.0 — 2026-10-10
+
+**Studies OS** — any LM / any harness can one-shot from archetypal viral, performance, and award-film structures: when to emulate, what to steal, how a human builds with real tools — without scraping creatives.
+
+### Added
+- `studies/corpus.json` — 10 archetypal studies (confession UGC, skit, PAS, hero film, beauty macro, food loop, local geo, voice agent, listicle, text-first X)
+- `studies/README.md` · `studies/private.example.json` · gitignored `studies/private/`
+- `references/human-build-os.md` — tool ladders + class playbooks (viral / DR / brand film)
+- `retrieve.mjs` returns matched `studies` (public + private) in full and `--compact`
+- Offline retrieve + context packs include studies / human-build
+
+### Changed
+- One-shot / SKILL / emulate / Attention Lab / INSTALL: study → emulate → human_build → finish-the-cut
+- Plugin **3.14.0**
+
+### Preserved
+- No scraped creatives in public repo; claim firewall; private competitor breakdowns stay local
+
+## 3.13.0 — 2026-10-10
+
+**Finish the cut** — stop the Hermes failure mode: render an 8s hook, then ask the human for UI screenshots while parallel agents burn credits on rubber dashboards.
+
+### Added
+- `prompts/finish-the-cut.md` — full-duration completion contract; one agent owns budget
+- `references/generated-ui-authenticity.md` — generate calm flat UI states when no captures exist
+
+### Changed
+- One-shot / SKILL / assembler / brief-defaults / voice gold: generate UI instead of stalling; user assets are v2 upgrades
+- Harness equalization: no parallel credit burn; finish-the-cut duty when gen tools exist
+- Plugin **3.13.0**
+
+### Preserved
+- Prefer real screen records when supplied; never invent metrics; post owns tiny type/logo
+
+## 3.12.2 — 2026-10-10
+
+Backtest hardening: compact retrieve keeps timing sheets; attention ranking respects query affinity (shampoo≠generic beauty); `scripts/backtest.mjs` mechanical suite.
+
+### Added
+- `scripts/backtest.mjs` — discovery, gates, retrieve matrix, offline align, URL brief, lint negatives, ranking sanity, gold lint
+
+### Fixed
+- `--compact` dropped `timing` (broke emulate path)
+- Hair specialist winning every beauty query; food_crave winning plain ecommerce
+
+## 3.12.1 — 2026-10-10
+
+Close remaining 35-lens ROI items: offline retrieve for no-shell harnesses, lite context pack, hard no-shell lint checklist; drop “cinematic” plugin keywords.
+
+### Added
+- `references/retrieve-offline-compact.json` (+ `build-offline-retrieve.mjs`)
+- `prompts/no-shell-lint-checklist.md`
+- `prompts/context-pack-lite.md` via `build-context-pack.mjs --lite --write`
+
+### Changed
+- One-shot / harness-equalization: offline path + hard checklist
+- Plugin **3.12.1**
+
+## 3.12.0 — 2026-10-10
+
+**Multi-harness Agent OS** — 35-lens pass + safe patterns from Agent Skills / awesome-agent-skills ecosystems so any LLM can discover the skill, equalize its own tools, and still hit gold density.
+
+### Added
+- Discovery symlinks: `.claude/skills`, `.agents/skills`, `.github/skills` (+ existing `.cursor/skills`)
+- Root `AGENTS.md` for Codex / OpenClaw / generic agents
+- `scripts/probe-harness.mjs` + `scripts/agent-ready.mjs`
+- `prompts/harness-equalization.md` — capability → rung (connected/handoff/assembler/package-only)
+- `references/angle-axes.md`, `brand-context.example.md`, `multi-lens-os.md`
+- SKILL.md `compatibility` + `metadata.version` (agentskills-friendly)
+
+### Changed
+- One-shot / harness system prompt / bootstrap / INSTALL / context-pack: probe-first
+- Plugin **3.12.0**
+
+### Preserved
+- Attention Lab, public libraries, claim firewall, craft lint, no scraped creatives
+
+## 3.11.0 — 2026-10-10
+
+**Attention Lab + any-niche research** — agents can view teachable scroll-stop models, open public TikTok/Meta/IG/X/YouTube libraries, and brief from any URL (hair, food, AI/voice SaaS, …) without image+slogan slop.
+
+### Added
+- `references/attention-models.json` — 14 timing/shot/word models across platforms
+- `references/ad-libraries.md` — Meta Ad Library, TikTok Creative Center, Google Transparency, X Ads, LinkedIn
+- `examples/visual/attention-lab.html` (+ `build-attention-lab.mjs` / `attention-data.js`)
+- `prompts/brief-from-url.md`, `prompts/emulate-attention-model.md`
+- `scripts/brief-from-url.mjs` — fetch public page → tagged S1 brief (no invented proof)
+- Stress brief `messy-ai-ops-site.md` (URL-style AI/voice agent)
+- `retrieve.mjs` returns `attention_models` + research URLs (compact too)
+- `brief-defaults` S1_url extract checklist; tool-catalog public-library vs private-ingest boundary
+
+### Changed
+- Niche synonyms/aliases: shampoo/haircare, food, AI/voice agent → correct packs
+- One-shot / SKILL / skeleton / context-pack: research → model → Concept → craft
+- Swipe niche hints: apps, home, pets, automotive, fashion
+- Plugin **3.11.0**
+
+### Preserved
+- No scraped creatives; claim firewall; craft lint; gold fixtures; Cursor `.cursor/skills` discovery
+
+## 3.10.0 — 2026-10-10
+
+**One-shot quality that agents can’t paperwork-game** — concept-first density, Cursor discovery, and lint that rejects empty skeletons.
+
+### Added
+- `.cursor/skills/ad-intelligence` symlink so Cursor discovers the skill when the repo is open
+- Lint rules: `unfilled-placeholder`, Concept (“Not the default because…”), script-density ≥6 rows, exact-copy (no “sparse” VO), font-hedge bans
+- `examples/lint-corpus/fail-unfilled-skeleton.md`
+- Committed `prompts/context-pack.md` (pasteable for external LLMs)
+- `retrieve.mjs --compact` for pick-focused context
+
+### Changed
+- `prompts/one-shot.md` / skeleton / output template: Concept → dense beats → craft before ledger polish
+- Gold fixtures denser (Concept + ≥6 exact-VO rows + real fonts)
+- SKILL description: trigger-rich + concept-first one-shot
+- Plugin **3.10.0**
+
+### Preserved
+- Claim firewall honesty, triple-path, assembler + model routing, elite craft OS
+
 ## 3.9.0 — 2026-10-10
 
 **One-shot agent path** — stop brainstorming; copy skeleton → retrieve → fill → lint loop (how top Cursor skills keep quality reliable).

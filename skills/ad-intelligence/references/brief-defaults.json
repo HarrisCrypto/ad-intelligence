@@ -1,17 +1,44 @@
 {
   "id": "brief-defaults",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "instruction": "When the user gives a thin brief, assume from this table, list Assumptions, ask ≤3 blocking questions (offer, product refs, regulated claims), and proceed. Never withhold the package. Never invent proof.",
   "question_limit": 3,
   "asset_ladder": {
     "S0_text_only": {
-      "may_render": ["product-less units: hands, environment, typography, kinetic type, real UI screen record"],
-      "must_not": ["product pack hero film without refs"],
-      "handoff": "Emit sheets with [REQUEST FROM USER] rows + asset request list"
+      "may_render": [
+        "environment / phone / hands / kinetic type",
+        "generated UI stills via generated-ui-authenticity.md (ASSUMED)",
+        "generated pack-locked product stills from sheet",
+        "short i2v + CapCut assemble covering full timed duration"
+      ],
+      "must_not": [
+        "Stop after hook waiting on user screenshots when gen tools exist",
+        "Neon/rubber AI dashboards",
+        "Invent proof metrics on UI"
+      ],
+      "handoff": "Optional REQUEST for real UI/logo as v2 upgrade — never a blocker; follow prompts/finish-the-cut.md",
+      "docs": ["prompts/finish-the-cut.md", "references/generated-ui-authenticity.md"]
     },
     "S1_url": {
+      "script": "scripts/brief-from-url.mjs",
+      "docs": "prompts/brief-from-url.md",
       "connected": "Fetch page → product-photoshoot stills → then video",
-      "handoff": "Pull visible claims tagged ASSET_VERIFIED/unverified; request pack photos"
+      "handoff": "Pull visible claims tagged ASSET_VERIFIED/PLACEHOLDER; generate missing UI/pack stills; optional request for real captures as upgrade",
+      "extract_checklist": [
+        "brand / site name",
+        "one-line offer (meta description or H1)",
+        "niche guess (ASSUMED until retrieve confirms)",
+        "primary CTA candidates from link/button text",
+        "og:image or other visible asset URLs",
+        "proof only if literally on-page — else PLACEHOLDER",
+        "platforms default by niche; confirm with user if blocking"
+      ],
+      "must_not": [
+        "Invent review counts, ROAS, or customer logos",
+        "Treat og marketing copy as clinical proof",
+        "Skip attention model + one-shot after gather",
+        "Stall the cut asking for screenshots when image/video gen is available"
+      ]
     },
     "S2_product_photos": {
       "may_render": ["full product lock units via image_references"],

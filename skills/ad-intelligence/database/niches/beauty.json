@@ -4,7 +4,12 @@
   "aliases": [
     "skincare",
     "makeup",
-    "hair"
+    "hair",
+    "shampoo",
+    "haircare",
+    "hair care",
+    "conditioner",
+    "cosmetics"
   ],
   "audience": "Appearance-conscious shoppers who respond to texture, transformation, and creator trust.",
   "jobs_to_be_done": [
@@ -30,6 +35,12 @@
       "id": "routine-pov",
       "hook_seed": "POV: your skin finally…",
       "pattern": "pov-day-in-life"
+    },
+    {
+      "id": "hair-transform",
+      "hook_seed": "BEFORE frizz → AFTER movement (matched light)",
+      "pattern": "before-after-reveal",
+      "attention_model": "am_hair_transform"
     }
   ],
   "lexicon": {
@@ -38,7 +49,10 @@
       "texture",
       "shade",
       "routine",
-      "patch test honesty"
+      "patch test honesty",
+      "shine",
+      "frizz",
+      "wash day"
     ],
     "avoid_unless_true": [
       "dermatologist-approved",

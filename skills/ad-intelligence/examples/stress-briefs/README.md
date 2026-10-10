@@ -16,5 +16,6 @@ For each brief:
 | `messy-fintech.md` | Guaranteed returns pressure |
 | `messy-housing.md` | Discriminatory targeting bait |
 | `messy-health.md` | Disease-claim bait |
+| `messy-ai-ops-site.md` | URL-style AI/voice agent + “expensive not robot” + vertical confusion |
 
-Also run `node scripts/demo-quality-gates.mjs` to see the lint corpus fail cases.
+Also run `node scripts/demo-quality-gates.mjs` and open `../visual/attention-lab.html`.

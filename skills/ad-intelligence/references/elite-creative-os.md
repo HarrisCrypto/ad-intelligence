@@ -193,6 +193,28 @@ Three hook options as a **stack** each: frame 0 + motion 0–1s + ≤7 words tex
 - Adjectives: cinematic, stunning, 8k/4k, sleek, epic, dynamic, vibrant, nice…  
 - Compliance leaks in **paid primary** or **captions** (“only when supplied”, “no invented”, ASSUMED, fixture)
 
+### Why those words are banned (and where creativity lives)
+
+They are **not** banned because cinema/beauty is bad. They are banned because LLMs use them as **empty substitutes** for craft — “cinematic product shot” instead of “35mm, side key, warm tungsten, 1.2s pack hold.”
+
+| Rigid (on purpose) | Creative (encouraged) |
+| --- | --- |
+| Skeleton → retrieve → lint loop | Concept 3→1 + “Not the default because…” |
+| Craft/shot/unit prompts must be concrete | Angle axes, attention model choice, dual-track twins |
+| No invented proof / job ids | Studying live ads in public libraries + Attention Lab |
+
+**Scope of the ban:** Craft system, Shot list, and unit prompts only — not a ban on making beautiful ads.  
+**Replace with:** camera verb, lens/light, grade name, HEX, font, cut timing.
+
+**Study real ads (choose what’s right for the customer):**
+
+1. Open `examples/visual/attention-lab.html` — filter by niche/platform  
+2. Open Meta Ad Library / TikTok Creative Center / X / YouTube Transparency (`ad-libraries.md`)  
+3. Pick an `am_*` model whose timing matches what stops *you*  
+4. Emulate structure for *this* brand — never paste competitor copy  
+
+The agent does **not** scrape TikTok into the repo. It **researches** public libraries + teachable models, then invents original creative grounded in that structure.
+
 ## 13) Self-critique craft pass (add to rubric evidence)
 
 Before shipping, answer YES or fix:

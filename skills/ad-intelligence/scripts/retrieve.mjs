@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Retrieve ad blueprints by platform / style / funnel / niche / tier / virality / job.
+ * Retrieve ad blueprints + studies by platform / style / funnel / niche / tier / virality / job.
  *
  * Usage:
  *   node retrieve.mjs --niche beauty --tag viral --limit 5
@@ -9,11 +9,15 @@
  *   node retrieve.mjs --production high_production --virality brand_film
  *   node retrieve.mjs --list
  *   node retrieve.mjs --list-niches
+ *   node retrieve.mjs --niche beauty --platform tiktok --compact
+ *
+ * Compact payload includes studies (public corpus + optional studies/private/).
  */
 
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { validateStudy } from "./lib/validate-study.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DB_ROOT = path.join(__dirname, "..");
@@ -42,6 +46,16 @@ const NICHE_SYNONYMS = {
   coffee: "food-bev",
   restaurant: "food-bev",
   snack: "food-bev",
+  food: "food-bev",
+  beverage: "food-bev",
+  shampoo: "beauty",
+  haircare: "beauty",
+  "hair care": "beauty",
+  hair: "beauty",
+  conditioner: "beauty",
+  skincare: "beauty",
+  makeup: "beauty",
+  cosmetics: "beauty",
   supplement: "health",
   supplements: "health",
   clinic: "health",
@@ -50,13 +64,21 @@ const NICHE_SYNONYMS = {
   banking: "fintech",
   coaching: "education",
   course: "education",
-  skincare: "beauty",
-  makeup: "beauty",
   wellness: "health",
   gym: "fitness",
   apparel: "fashion",
   shopify: "ecommerce",
   dtc: "ecommerce",
+  "ai agent": "saas",
+  "voice ai": "saas",
+  "voice agent": "saas",
+  chatbot: "saas",
+  "ai ops": "saas",
+  "ai assistant": "saas",
+  llm: "saas",
+  "b2b software": "saas",
+  software: "saas",
+  "mobile app": "apps",
 };
 
 const PLATFORM_ALIASES = {
@@ -68,15 +90,18 @@ const PLATFORM_ALIASES = {
   shorts: "youtube_shorts",
   yt: "youtube",
   google: "google_youtube",
+  twitter: "x",
+  "x.com": "x",
 };
 
 function parseArgs(argv) {
-  const out = { limit: 5, list: false, listNiches: false };
+  const out = { limit: 5, list: false, listNiches: false, compact: false };
   for (let i = 2; i < argv.length; i++) {
     const a = argv[i];
     const next = argv[i + 1];
     if (a === "--list") out.list = true;
     else if (a === "--list-niches") out.listNiches = true;
+    else if (a === "--compact") out.compact = true;
     else if (a === "--platform" && next) {
       out.platform = next;
       i++;
@@ -188,6 +213,221 @@ function resolvePlatform(raw) {
     };
   }
   return { platform: key, warnings: [] };
+}
+
+function normToken(s) {
+  return String(s || "")
+    .toLowerCase()
+    .replace(/_/g, "-");
+}
+
+function privateStudiesDir() {
+  return (
+    process.env.AD_INTEL_STUDIES_PRIVATE ||
+    path.join(DB_ROOT, "studies", "private")
+  );
+}
+
+/**
+ * Load public + private studies. Invalid private files are NOT silently skipped —
+ * they appear in errors and set a non-zero exit hint.
+ */
+function loadStudies() {
+  const out = [];
+  const errors = [];
+  const corpusPath = path.join(DB_ROOT, "studies", "corpus.json");
+  if (fs.existsSync(corpusPath)) {
+    try {
+      const corpus = loadJson(corpusPath);
+      for (const s of corpus.studies || []) {
+        if (!s?.id) {
+          errors.push("public corpus entry missing id");
+          continue;
+        }
+        const verr = validateStudy(s, { file: `corpus:${s.id}` });
+        if (verr.length) {
+          errors.push(...verr);
+          continue;
+        }
+        out.push({ ...s, private: false, source: "public" });
+      }
+    } catch (e) {
+      errors.push(`public corpus parse_failed: ${e.message}`);
+    }
+  }
+  const privDir = privateStudiesDir();
+  if (fs.existsSync(privDir)) {
+    for (const f of fs.readdirSync(privDir)) {
+      if (!f.endsWith(".json")) continue;
+      const fp = path.join(privDir, f);
+      try {
+        const s = loadJson(fp);
+        if (!s?.id) {
+          errors.push(`private/${f}: missing id`);
+          continue;
+        }
+        const verr = validateStudy(
+          { ...s, private: true },
+          { file: `private/${f}` }
+        );
+        if (verr.length) {
+          errors.push(...verr);
+          continue;
+        }
+        out.push({ ...s, private: true, source: `private/${f}` });
+      } catch (e) {
+        errors.push(`private/${f}: parse_failed (${e.message})`);
+      }
+    }
+  }
+  return { studies: out, errors };
+}
+
+function scoreStudy(study, q, pickIds, amIds) {
+  let score = 0;
+  const nicheNorm = normToken(q.nicheResolved || q.niche);
+  const plat = (q.platform || "").toLowerCase();
+
+  if (nicheNorm) {
+    const nicheHit = (study.niches || []).some((n) => {
+      const nn = normToken(n);
+      return (
+        nn === nicheNorm ||
+        nn.includes(nicheNorm) ||
+        nicheNorm.includes(nn)
+      );
+    });
+    if (nicheHit) score += 8;
+    else score -= 1;
+  }
+
+  if (plat) {
+    if (
+      (study.platforms || []).some(
+        (p) => p === plat || p.includes(plat) || plat.includes(p)
+      )
+    )
+      score += 5;
+    else score -= 1;
+  }
+
+  for (const pid of study.pattern_ids || []) {
+    if (pickIds.has(pid)) score += 6;
+  }
+  for (const aid of study.attention_model_ids || []) {
+    if (amIds.has(aid)) score += 5;
+  }
+
+  if (q.tag) {
+    const t = q.tag.toLowerCase();
+    const hay = `${study.class || ""} ${study.title || ""}`.toLowerCase();
+    if (hay.includes(t)) score += 3;
+    if (t === "viral" && study.class === "viral_native") score += 4;
+    if (t === "award" && study.class === "award_brand_film") score += 4;
+  }
+
+  if (q.job) {
+    const hay = [
+      study.title,
+      study.class,
+      ...(study.when_to_emulate || []),
+      ...(study.steal || []),
+    ]
+      .join(" ")
+      .toLowerCase();
+    for (const token of q.job.toLowerCase().split(/\s+/).filter(Boolean)) {
+      if (hay.includes(token)) score += 2;
+    }
+  }
+
+  // Query-token affinity (voice/hair/food) — same spirit as attention ranking
+  const qRaw = `${q.niche || ""} ${nicheNorm} ${q.job || ""}`.toLowerCase();
+  const mid = `${study.id} ${study.title}`.toLowerCase();
+  if (/voice|missed.?call|front.?desk|after.?hours|oply/.test(qRaw)) {
+    if (/voice_agent|missed_call/.test(study.id)) score += 10;
+    else if (/pas_meta|ui_aha/.test(study.id)) score += 2;
+  } else if (/saas|software|b2b/.test(qRaw) && /pas|ui|voice|listicle|text_first/.test(mid)) {
+    score += 3;
+  }
+  if (/hair|shampoo|conditioner/.test(qRaw) && /beauty_macro|hair/.test(mid)) score += 8;
+  else if (/beauty|skincare|makeup/.test(qRaw) && /beauty|macro|confession|hero/.test(mid))
+    score += 4;
+  if (/food|snack|coffee|beverage|restaurant/.test(qRaw) && /food|crave|asmr/.test(mid))
+    score += 6;
+  else if (
+    nicheNorm === "ecommerce" &&
+    /food_crave|food \//.test(mid) &&
+    !/food|snack|coffee|beverage/.test(qRaw)
+  )
+    score -= 5;
+  if (/local|plumb|hvac|dentist|clinic/.test(qRaw) && /local|geo/.test(mid))
+    score += 6;
+  if (
+    nicheNorm === "ecommerce" &&
+    !/food|snack|coffee/.test(qRaw) &&
+    /hero_spectacle|macro_transform|confession/.test(study.id)
+  )
+    score += 3;
+
+  if (study.private) score += 2;
+  return score;
+}
+
+function compactStudy(study) {
+  return {
+    id: study.id,
+    class: study.class,
+    title: study.title,
+    private: !!study.private,
+    provenance: study.provenance || null,
+    when_to_emulate: (study.when_to_emulate || []).slice(0, 4),
+    when_not: (study.when_not || []).slice(0, 3),
+    steal: study.steal || [],
+    never_copy: study.never_copy || [],
+    attention_model_ids: study.attention_model_ids || [],
+    pattern_ids: study.pattern_ids || [],
+    structure: study.structure
+      ? {
+          duration_s: study.structure.duration_s,
+          hook_0_3: study.structure.hook_0_3,
+          beats: (study.structure.beats || []).slice(0, 8),
+        }
+      : null,
+    human_build: study.human_build || [],
+    human_build_log: study.human_build_log || null,
+    research_where: study.research_where || null,
+    gold_fixture: study.gold_fixture || null,
+  };
+}
+
+function reconcileJoin(primaryPattern, study, attentionPrimary) {
+  const studyPatterns = study?.pattern_ids || [];
+  const overlap = studyPatterns.includes(primaryPattern);
+  const conflict = Boolean(
+    primaryPattern && studyPatterns.length && !overlap
+  );
+  return {
+    layers: {
+      patterns: "grammar / stack routes (database/patterns)",
+      attention_models: "second-by-second timing sheets",
+      studies: "emulate structure + human_build playbook — check provenance",
+    },
+    precedence: [
+      "private observed (ad-library|named-campaign|owned-ad)",
+      "public observed",
+      "synthesis studies (structure only — not proof)",
+      "patterns alone",
+    ],
+    rule: "Patterns = grammar + routes. Studies = what to emulate + how to build; provenance.basis must be copied into the package. Attention models = timing. When study.pattern_ids miss picks.primary, keep pattern for stack/route and study.structure for beat jobs — do not invent a merge. Never treat basis:synthesis as observed metrics proof.",
+    primary_pattern: primaryPattern || null,
+    primary_study: study?.id || null,
+    attention_model: attentionPrimary || null,
+    pattern_study_overlap: overlap,
+    pattern_study_conflict: conflict,
+    conflict_resolution: conflict
+      ? "Use study.structure for beats/hook jobs; use picks.routes[primary] for tool stack; note conflict in package Retrieval."
+      : "Aligned or no study patterns — use study beats + pattern route together.",
+  };
 }
 
 function scoreEntry(entry, q, recommendedIds) {
@@ -422,15 +662,16 @@ function main() {
     };
   }
 
+  const nicheKey = (nicheId || q.niche || "").toLowerCase();
+  const nicheMatch = (n) =>
+    n.niche.includes(nicheKey.replace(/-/g, "_")) ||
+    n.niche.includes(nicheKey.replace(/_/g, "-")) ||
+    nicheKey.includes(n.niche);
+
   let swipeSignals = null;
   const swipePath = path.join(DB_ROOT, "references", "swipe-signals.json");
   if (fs.existsSync(swipePath)) {
     const swipe = loadJson(swipePath);
-    const nicheKey = (nicheId || q.niche || "").toLowerCase();
-    const nicheMatch = (n) =>
-      n.niche.includes(nicheKey.replace(/-/g, "_")) ||
-      n.niche.includes(nicheKey.replace(/_/g, "-")) ||
-      nicheKey.includes(n.niche);
 
     let nicheHints = [];
     if (nicheKey) {
@@ -483,9 +724,162 @@ function main() {
     };
   }
 
+  let attentionModels = null;
+  const attentionPath = path.join(
+    DB_ROOT,
+    "references",
+    "attention-models.json"
+  );
+  if (fs.existsSync(attentionPath)) {
+    const am = loadJson(attentionPath);
+    const plat = (q.platform || "").toLowerCase();
+    const nicheNorm = nicheKey.replace(/-/g, "_");
+    const pickIds = new Set(
+      [primary, challenger, dualTwin].filter(Boolean)
+    );
+    const matched = (am.models || [])
+      .map((m) => {
+        const nicheOk =
+          !nicheNorm ||
+          (m.niches || []).some(
+            (n) =>
+              n === nicheNorm ||
+              n.replace(/_/g, "-") === nicheKey ||
+              nicheNorm.includes(n) ||
+              n.includes(nicheNorm)
+          );
+        const platOk =
+          !plat ||
+          (m.platforms || []).some(
+            (p) => p === plat || p.includes(plat) || plat.includes(p)
+          );
+        if (!nicheOk || !platOk) return null;
+        let score = 0;
+        for (const pid of m.pattern_ids || []) {
+          if (pickIds.has(pid)) score += 5;
+        }
+        const nicheHits = (m.niches || []).filter(
+          (n) =>
+            n === nicheNorm ||
+            n.replace(/_/g, "-") === nicheKey ||
+            nicheNorm.includes(n)
+        ).length;
+        score += nicheHits * 2;
+        // Prefer tighter niche lists (specialist models over universal UGC)
+        score += Math.max(0, 8 - (m.niches || []).length);
+        if (m.gold_fixture) score += 3;
+        if (plat && (m.platforms || []).includes(plat)) score += 1;
+        // Query-token affinity — don't let hair specialist win every beauty query
+        const qRaw = `${q.niche || ""} ${nicheKey}`.toLowerCase();
+        const mid = `${m.id} ${m.name}`.toLowerCase();
+        if (/hair|shampoo|conditioner/.test(qRaw) && /hair/.test(mid)) score += 8;
+        else if (!/hair|shampoo|conditioner/.test(qRaw) && /hair_transform|hair \//.test(mid))
+          score -= 6;
+        if (/food|snack|coffee|beverage|restaurant/.test(qRaw) && /food|crave|asmr/.test(mid))
+          score += 6;
+        else if (
+          nicheNorm === "ecommerce" &&
+          /food_crave|food \//.test(mid) &&
+          !/food|snack|coffee/.test(qRaw)
+        )
+          score -= 4;
+        if (/voice|agent|saas|software/.test(qRaw) && /voice|ui_aha|pas_pain/.test(mid))
+          score += 4;
+        return { m, score };
+      })
+      .filter(Boolean)
+      .sort((a, b) => b.score - a.score)
+      .map((x) => x.m);
+    const libs = (am.public_libraries || []).filter(
+      (lib) =>
+        !plat ||
+        (lib.platforms || []).some(
+          (p) => p === plat || p.includes(plat) || plat.includes(p)
+        )
+    );
+    attentionModels = {
+      file: "references/attention-models.json",
+      docs: "references/ad-libraries.md",
+      lab: "examples/visual/attention-lab.html",
+      emulate: "prompts/emulate-attention-model.md",
+      note: "Teachable timing/shot models — emulate structure; research live ads via public libraries only",
+      primary: matched[0]?.id || null,
+      challenger: matched[1]?.id || null,
+      count: matched.length,
+      models: matched.slice(0, 6).map((m) => ({
+        id: m.id,
+        name: m.name,
+        style_id: m.style_id,
+        pattern_ids: m.pattern_ids,
+        ideal_seconds: m.ideal_seconds,
+        why_stops_scroll: m.why_stops_scroll,
+        timing: m.timing,
+        anti_slop: m.anti_slop,
+        gold_fixture: m.gold_fixture || null,
+      })),
+      research: (libs.length ? libs : am.public_libraries || []).map((lib) => ({
+        id: lib.id,
+        name: lib.name,
+        url: lib.url,
+        how: lib.how,
+        platforms: lib.platforms,
+      })),
+    };
+  }
+
   const viralOs = loadJson(
     path.join(DATABASE, "trends/viral-operating-system.json")
   );
+
+  const pickIds = new Set(
+    [primary, challenger, dualTwin].filter(Boolean)
+  );
+  const amIds = new Set(
+    (attentionModels?.models || []).map((m) => m.id).filter(Boolean)
+  );
+  if (attentionModels?.primary) amIds.add(attentionModels.primary);
+  if (attentionModels?.challenger) amIds.add(attentionModels.challenger);
+
+  const { studies: allStudies, errors: studyErrors } = loadStudies();
+  if (studyErrors.length) {
+    warnings.push(...studyErrors.map((e) => `study_invalid:${e}`));
+  }
+
+  const rankedStudies = allStudies
+    .map((s) => ({ study: s, score: scoreStudy(s, q, pickIds, amIds) }))
+    .filter((x) => x.score > 0)
+    .sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score;
+      // Prefer observed over synthesis when scores tie
+      const ao = a.study.provenance?.observed ? 1 : 0;
+      const bo = b.study.provenance?.observed ? 1 : 0;
+      if (ao !== bo) return bo - ao;
+      return a.study.id.localeCompare(b.study.id);
+    });
+
+  const primaryStudy = rankedStudies[0]?.study || null;
+  const studiesPayload = {
+    file: "studies/corpus.json",
+    docs: "studies/README.md",
+    human_build_os: "references/human-build-os.md",
+    human_build_log_template: "references/human-build-log.template.md",
+    ingest: "scripts/ingest-blueprint.mjs",
+    emulate: "prompts/emulate-attention-model.md",
+    note: "Check provenance on every study. basis:synthesis = structure only — never launder into proof. Private: studies/private/ via ingest-blueprint.mjs.",
+    primary: primaryStudy?.id || null,
+    challenger: rankedStudies[1]?.study?.id || null,
+    count: rankedStudies.length,
+    errors: studyErrors,
+    join: reconcileJoin(
+      primary,
+      primaryStudy,
+      attentionModels?.primary || null
+    ),
+    items: rankedStudies.slice(0, 5).map((x) => ({
+      score: x.score,
+      ...compactStudy(x.study),
+    })),
+  };
 
   const payload = {
     query: q,
@@ -505,6 +899,8 @@ function main() {
     results,
     niche: nichePack,
     swipe_signals: swipeSignals,
+    attention_models: attentionModels,
+    studies: studiesPayload,
     viral_os_summary: {
       id: viralOs.id,
       trend_classes: viralOs.trend_classes.map((t) => t.id),
@@ -516,15 +912,84 @@ function main() {
     ],
     claim_firewall: "references/claim-firewall.json",
     brief_defaults: "references/brief-defaults.json",
+    brief_from_url: "prompts/brief-from-url.md",
     render_plan: "references/creative-stack/render-plan.md",
     anti_patterns_file: "database/anti-patterns.json",
     hooks_file: "database/hooks/library.json",
     flows_file: "database/flows/library.json",
+    human_build_os: "references/human-build-os.md",
   };
 
-  console.log(JSON.stringify(payload, null, 2));
+  if (q.compact) {
+    const compact = {
+      resolved: payload.resolved,
+      warnings,
+      picks: payload.picks,
+      attention_models: attentionModels
+        ? {
+            primary: attentionModels.primary,
+            challenger: attentionModels.challenger,
+            models: attentionModels.models.map((m) => ({
+              id: m.id,
+              name: m.name,
+              why_stops_scroll: m.why_stops_scroll,
+              pattern_ids: m.pattern_ids,
+              ideal_seconds: m.ideal_seconds,
+              timing: m.timing,
+              anti_slop: m.anti_slop,
+            })),
+            research: attentionModels.research,
+            lab: attentionModels.lab,
+            emulate: attentionModels.emulate,
+          }
+        : null,
+      studies: {
+        primary: studiesPayload.primary,
+        challenger: studiesPayload.challenger,
+        count: studiesPayload.count,
+        human_build_os: studiesPayload.human_build_os,
+        human_build_log_template: studiesPayload.human_build_log_template,
+        ingest: studiesPayload.ingest,
+        join: studiesPayload.join,
+        errors: studiesPayload.errors,
+        items: studiesPayload.items.slice(0, 3).map((s) => ({
+          id: s.id,
+          class: s.class,
+          title: s.title,
+          provenance: s.provenance,
+          when_to_emulate: s.when_to_emulate,
+          steal: s.steal,
+          never_copy: s.never_copy,
+          structure: s.structure,
+          human_build: s.human_build,
+          attention_model_ids: s.attention_model_ids,
+          pattern_ids: s.pattern_ids,
+          private: s.private,
+        })),
+      },
+      results: results.map((r) => ({
+        id: r.blueprint?.id,
+        score: r.score,
+        name: r.blueprint?.name,
+        niches: r.blueprint?.niches,
+        platforms: r.blueprint?.platforms,
+        production_tier: r.blueprint?.production_tier,
+        virality_posture: r.blueprint?.virality_posture,
+        ideal_seconds: r.blueprint?.ideal_seconds || r.blueprint?.duration_s,
+        hook: (r.blueprint?.hook_examples || r.blueprint?.hooks || [])
+          .slice(0, 2),
+        beats: (r.blueprint?.beats || []).slice(0, 6),
+      })),
+      next: "Pick study + attention model → emulate structure → human_build → Concept + ≥6-row script → finish-the-cut → lint (prompts/one-shot.md)",
+    };
+    console.log(JSON.stringify(compact, null, 2));
+  } else {
+    console.log(JSON.stringify(payload, null, 2));
+  }
 
   if (matchQuality === "none") process.exitCode = 2;
+  // Loud failure: invalid private/public studies must not silently degrade
+  if (studyErrors.length) process.exitCode = process.exitCode || 3;
 }
 
 main();

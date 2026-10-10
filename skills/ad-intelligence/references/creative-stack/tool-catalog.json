@@ -1,6 +1,6 @@
 {
   "id": "creative-tool-catalog",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "purpose": "One-stop knowledge of the tools and systems a perfect ad-making agent should know — even when those tools are not connected. Emit ready-to-run prompts, pipelines, and handoff briefs so humans or connected MCPs can execute at Seedance / Higgsfield quality — or via Wan / LTX / Grok / Hunyuan / CogVideoX / SkyReels / Kling / Hailuo / Luma / Pika when those are the available stack.",
   "rule": "Never pretend a render finished if no tool was called. Never invent Seedance job ids. Always deliver: pattern + shot list + tool route + copy-paste prompts + QA. If Seedance/Higgsfield MCP exists, prefer calling it; else follow alternative-model-routing.md; otherwise ship executable briefs.",
   "alternative_routing_doc": "alternative-model-routing.md",
@@ -374,10 +374,23 @@
       "best_for": ["Carousels", "Stories frames", "Endcards", "Display"]
     },
     {
-      "id": "foreplay_magicbrief",
-      "name": "Foreplay / MagicBrief / ad libraries",
+      "id": "public_ad_libraries",
+      "name": "Public ad libraries (Meta / TikTok Creative Center / Google Transparency / X / LinkedIn)",
       "category": "research",
-      "best_for": ["Swipe research", "Competitor breakdowns (private ingest only)"]
+      "best_for": [
+        "Live attention research in-browser",
+        "Emulate timing/shot/text density via attention-models.json"
+      ],
+      "docs": "references/ad-libraries.md",
+      "lab": "examples/visual/attention-lab.html",
+      "boundary": "VIEW + take structure notes only. Do not scrape creatives into the public skill repo. No invented CTR/ROAS."
+    },
+    {
+      "id": "foreplay_magicbrief",
+      "name": "Foreplay / MagicBrief (private swipe tools)",
+      "category": "research",
+      "best_for": ["Private swipe boards", "Competitor breakdowns (private ingest only)"],
+      "boundary": "Private ingest → anonymize into gitignored private-signals.json. Never commit scraped creatives or advertiser PII."
     },
     {
       "id": "live_production",

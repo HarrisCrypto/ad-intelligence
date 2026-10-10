@@ -1,67 +1,82 @@
 ---
 name: ad-intelligence
 description: >-
-  Makes agency-grade one-shot ad packages (TikTok, Meta, YouTube, UGC, product
-  films, local service, SaaS, voice/front-desk). Use when the user asks to make
-  an ad, creative, hook, UGC, launch film, paid social, or storyboard — or says
-  ads look like slop / need first-shot quality. Copy package-skeleton → retrieve
-  → fill Craft system → lint-package until ok. Works with or without Higgsfield/Seedance.
+  Writes one shoot-ready ad package in a single pass for any niche (beauty/hair,
+  food, SaaS/AI agents, local, ecommerce…): probe harness tools, equalize to a
+  pipeline rung, retrieve viral/pro/award studies, research public ad libraries,
+  emulate structure (never copy), build like a human with real tools, concept,
+  muted-first hook, dense beat sheet with exact words, craft (design/layout/cut/
+  timing/shots/animation), and generator prompts. Use for ads, TikTok, Reels,
+  Shorts, Meta, Instagram, X, YouTube, LinkedIn, UGC, URL briefs, or AI slop.
+  Works in Cursor, Claude Code, Codex, Gemini, OpenClaw, Copilot — with or without
+  Higgsfield. Probe → study → emulate → human_build → ≥6 beats → finish-the-cut → lint.
+compatibility: Requires Node 18+ for scripts. Optional network for URL brief + libraries. MCP video tools optional (connected rung).
+metadata:
+  version: "3.15.0"
+  open_standard: agentskills
 ---
 
 # Ad Intelligence — one-shot ad maker
 
-**Do not brainstorm.** Top agents get quality by **copying a skeleton, filling brackets, and linting until green.**
+**Do not brainstorm.** Top agents: **probe tools → equalize rung → study → emulate → human_build → skeleton → finish-the-cut → lint green.**
 
 ## When to use
 
-User wants ads, creatives, hooks, UGC, Meta/TikTok/YouTube spots, launch films, or “make this not look AI.”
+Ads, creatives, hooks, UGC, Meta/TikTok/Instagram/X/YouTube, “ads for my site,” or “make this not look AI.”
 
 ## ONE-SHOT (mandatory)
 
-Follow [`prompts/one-shot.md`](prompts/one-shot.md) exactly:
+1. `node scripts/probe-harness.mjs` → fill tool card ([`prompts/harness-equalization.md`](prompts/harness-equalization.md))
+2. URL/site? → `node scripts/brief-from-url.mjs <url>` ([`prompts/brief-from-url.md`](prompts/brief-from-url.md))
+3. Optional brand file? Read `references/brand-context.md` or `.agents/brand-context.md` if present
+4. `node scripts/start-package.mjs --out packages/<brand>-ad.md`
+5. `node scripts/retrieve.mjs --niche <n> --platform <p> --limit 5 --compact` — paste **studies** + attention models + pattern picks
+6. Open [`examples/visual/attention-lab.html`](examples/visual/attention-lab.html) + research URLs — emulate structure ([`studies/README.md`](studies/README.md))
+7. **Creative:** study + attention model + [angle axes](references/angle-axes.md) → Concept → ≥6 exact-VO rows → Craft → unit prompts via [`human-build-os.md`](references/human-build-os.md)
+8. Fill `[[BRACKETS]]` → `node scripts/lint-package.mjs …` until `"ok": true`
+9. **Finish the cut** ([`prompts/finish-the-cut.md`](prompts/finish-the-cut.md)) — full duration; generate UI if needed ([`generated-ui-authenticity.md`](references/generated-ui-authenticity.md)); no “send screenshots” stall
+10. Deliver the file + real job ids
 
-1. `node scripts/start-package.mjs --out packages/<brand>-ad.md`  
-   (or copy [`references/package-skeleton.md`](references/package-skeleton.md))
-2. `node scripts/retrieve.mjs --niche <niche|alias> --platform <platform> --limit 5`
-3. Fill every `[[BRACKET]]` — sheets, ledger, **Craft system** (≥2 HEX, named type, motion, E1, aspects), unit prompts with CAMERA/LIGHT/MOTION/GRADE
-4. `node scripts/lint-package.mjs packages/<brand>-ad.md` → fix → re-lint until `"ok": true`
-5. Deliver the file. Never invent proof or Seedance job ids.
+Ready check: `node scripts/agent-ready.mjs`  
+No shell: paste [`prompts/context-pack-lite.md`](prompts/context-pack-lite.md) · offline [`retrieve-offline-compact.json`](references/retrieve-offline-compact.json) · [`no-shell-lint-checklist.md`](prompts/no-shell-lint-checklist.md).
 
-Closest gold for craft density: `examples/beauty-dtc-dual-track.md` (or local / saas / physical / voice).
-
-## Pipeline rung
+## Pipeline rung (after probe)
 
 | If | Then |
 | --- | --- |
-| Seedance/Higgsfield MCP live | `connected-run-protocol.md` — **call tools** |
+| Seedance/Higgsfield MCP live | connected — **call tools** |
 | Those tools exist for user, not here | handoff prompts |
-| No single-pass gen | `assembler-pipeline.md` + `alternative-model-routing.md` (Wan→LTX→Grok→…) |
+| Image/short video + editor | assembler + `alternative-model-routing.md` |
+| Text-only | package-only — still gold density, `NOT_RENDERED` |
 
-## Non-negotiables
-
-- One JTBD · muted-first 0–3s · one primary CTA · dual-track for serious brands  
-- Sheets + claim ledger before product pixels  
-- Craft system specific enough for craft-* lint (no cinematic/stunning/8k/nice colors)  
-- Consumer copy: no “only when supplied” / ASSUMED / PLACEHOLDER leaks  
-- `NOT_RENDERED` until real export/job ids  
-
-## Depth docs (only if blocked)
+## Progressive disclosure (read only if needed)
 
 | Need | File |
 | --- | --- |
 | Full playbook | `prompts/one-shot.md` |
-| Pasteable pack for external LLMs | `node scripts/build-context-pack.mjs` |
-| Agency craft rules | `references/elite-creative-os.md` |
-| CapCut finish | `references/production-finish-spec.md` |
-| Master pipeline | `pipelines/one-stop-ad-maker.md` |
-| Output sections | `references/output-template.md` |
-| Install / GitHub | `../../INSTALL.md` · `prompts/bootstrap-from-github.md` |
+| Studies (viral / pro / award) | `studies/corpus.json` · `studies/README.md` |
+| How a human builds | `references/human-build-os.md` · **log:** `human-build-log.template.md` |
+| Ingest private studies | `scripts/ingest-blueprint.mjs` |
+| Prove fresh clone | `scripts/fresh-clone-prove.mjs` |
+| Tool equalization | `prompts/harness-equalization.md` |
+| Attention lab | `examples/visual/attention-lab.html` |
+| Finish full cut (no stall) | `prompts/finish-the-cut.md` |
+| Generated UI (no screenshots) | `references/generated-ui-authenticity.md` |
+| Public libraries | `references/ad-libraries.md` |
+| Multi-lens OS | `references/multi-lens-os.md` |
+| Style catalog | `references/style-catalog.md` |
+| Elite craft | `references/elite-creative-os.md` |
+| Install / harness matrix | `../../INSTALL.md` · `../../AGENTS.md` |
+
+## Non-negotiables
+
+- One JTBD · muted-first · one CTA · dual-track when serious  
+- Design + cut + timing + shots + animation — not collage + slogan  
+- Never invent proof or job ids · never invent lint JSON  
 
 ## Verify
 
 ```bash
+node scripts/agent-ready.mjs
 node scripts/demo-quality-gates.mjs
-node scripts/lint-package.mjs packages/<brand>-ad.md
 ```
-
-Human proof: `../../PROOF.md`

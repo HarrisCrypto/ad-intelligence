@@ -1,6 +1,10 @@
 # Local-only longevity / winning notes (never commit advertiser data)
 skills/ad-intelligence/references/private-signals.json
 
+# Private ad studies / competitor breakdowns (never commit media or named scrapes)
+skills/ad-intelligence/studies/private/**
+!skills/ad-intelligence/studies/private/.gitkeep
+
 # OS / editor
 .DS_Store
 *.swp
@@ -9,3 +13,6 @@ skills/ad-intelligence/references/private-signals.json
 
 # Node
 node_modules/
+
+# Generated local packages (start-package / backtest scratch)
+skills/ad-intelligence/packages/

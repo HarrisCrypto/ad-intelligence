@@ -38,6 +38,11 @@ Demonstrates **assembler-aware** render planning when single-pass cinema gen is 
 ### Job-to-be-done (one sentence)
 Make the after-hours missed-call feel expensive, show Deskline answering calmly, then one path to book a demo.
 
+### Concept (chosen)
+- Options: (1) robot receptionist deepfake (2) empty clinic ring → calm UI answer (3) invented “10k calls” chart  
+- **Chosen:** Missed ring → Deskline Answered chip → book demo  
+- Not the default because: no deepfake receptionist; no invented call volume
+
 ### Consistency systems (required)
 - Identity mode: ui + place-service
 - Provenance of sheet fields: ASSUMED (fixture) / PLACEHOLDER for owner quote + live phone demo number
@@ -85,11 +90,14 @@ Make the after-hours missed-call feel expensive, show Deskline answering calmly,
 ### Timed script
 | t | Visual | VO / text | Purpose | Claim tags |
 | --- | --- | --- | --- | --- |
-| 0–3s | Dim clinic desk; phone lights up (K1) | After hours. No answer. | Pain hook muted-first | ASSUMED |
-| 3–8s | Ring continues / missed UI (C1) | sparse | Agitate | ASSUMED |
-| 8–16s | Deskline phone UI Answered chip (Image 1–2) | Calm VO: “Thanks for calling — I can help book a visit.” | Solve | ASSUMED |
-| 16–22s | Calendar confirm card (Image 3) | “You’re set.” | Aha | ASSUMED |
-| 22–28s | Clean endcard space | Book a demo | One CTA | ASSUMED |
+| 0–3s | Dim clinic desk; phone lights (K1) | “After hours.” | Pain | ASSUMED |
+| 3–6s | Ring continues (C1) | “No answer.” | Agitate | ASSUMED |
+| 6–9s | Missed-call UI | “Caller gone.” | Cost | ASSUMED |
+| 9–14s | Deskline Answered chip (Image 1–2) | “Thanks for calling — I can help book a visit.” | Solve | ASSUMED |
+| 14–18s | Calendar confirm (Image 3) | “You’re set.” | Aha | ASSUMED |
+| 18–22s | Owner glance at phone (no PHI) | “You review later.” | Bridge | ASSUMED |
+| 22–25s | Clean UI hold | “After-hours covered.” | Payoff | ASSUMED |
+| 25–28s | Endcard | “Book a demo.” | One CTA | ASSUMED |
 
 ### Shot list / visual system
 Documentary clinic light → product UI sharp and flat (no neon cockpit) → endcard. Prefer screen-recorded UI. Lower caption band clear. No patient faces or charts.
@@ -98,7 +106,7 @@ Documentary clinic light → product UI sharp and flat (no neon cockpit) → end
 - Style id + production_tier + virality_posture: service phone / front-desk · production_tier assembler_hybrid · virality_posture b2b_local_trust
 - Palette: calm clinic blue `#4A6FA5` · soft gray `#E8EEF4` · accent missed-call red sparingly `#C45C5C` [ASSUMED]
 - Grade name: flat UI documentary — readable screens, no neon AI cockpit, no patient PHI
-- Typography: hook “Missed call?” ≤4 words Inter-like sans · UI labels post · CTA “Book a demo” one only
+- Typography: hook Inter Tight Bold “Missed call?” ≤4 words · UI labels post · CTA “Book a demo” one only
 - Motion grammar: K1 still ring/miss → C1 short i2v 3–5s → screen-record UI aha → E1 demo CTA ≥3s
 - Sound plan: muted UI + VO in CapCut; optional soft ring SFX; paid-safe bed
 - Endcard module E1: logo · Book a demo · no multi-CTA · 9:16 Meta + 1:1 LinkedIn
@@ -114,39 +122,42 @@ Documentary clinic light → product UI sharp and flat (no neon cockpit) → end
 | E1 | 22–28s CTA | 6 | capcut_endcard | — | logo SVG | one CTA |
 | A1 | VO bed | 28 | TTS + original music | — | voice sheet | paid-safe |
 
-#### Unit U2 — paste-ready prompt (prefer screen record; gen only if needed)
+#### Unit U2 — paste-ready prompt (screen record **or** generated UI stills — do not stall)
 ```text
 COMMERCIAL AD UNIT — local-services — deskline front-desk — U2
-Job: show after-hours answer + booking confirm in real Deskline UI; no invented metrics.
-Lens / Light / Surface / Motion: flat UI capture; slow tap; mint Answered chip.
+Job: show after-hours answer + booking confirm; no invented metrics.
+Lens / Light / Surface / Motion: flat UI documentary; hard cuts between 3 states; mint Answered chip.
 Aspect: 9:16 Meta; separate 1:1 LinkedIn unit.
 
-REF BINDING: Image 1 = phone UI idle. Image 2 = Answered chip. Image 3 = calendar confirm.
+REF BINDING: Image 1 = UI idle. Image 2 = Answered. Image 3 = calendar confirm.
+If user did not supply screenshots: GENERATE these three stills via
+references/generated-ui-authenticity.md (ASSUMED) — finish-the-cut.md forbids stopping here.
 
 PRODUCT SHEET LOCK: slate panel, mint accent, clean labels; no fake EMR; no patient names.
 CHARACTER SHEET LOCK: voice-only; if avatar appears, disclose + face sheet.
 
 TIMELINE:
-0–8s inside unit: incoming → Answered chip → book routine visit → confirm card.
+0–8s inside unit: idle → Answered chip → book routine visit → confirm card (holds/cuts).
 AUDIO PATH: muted UI + VO laid in CapCut (assembler)
-NEGATIVES: invented call counts, melted UI type, robot face as product, disease claims
+NEGATIVES: invented call counts, melted UI type, neon cockpit, robot face as product, disease claims
 ```
 
 #### Unit U2 — mcp_params / assembler handoff
 ```json
 {
   "pipeline_rung": "assembler",
-  "preferred": "screen_record",
-  "fallback_model": "short_i2v_optional",
+  "preferred": "screen_record_or_generated_ui_stills",
+  "fallback_model": "image_gen_flat_ui → capcut_hard_cuts",
   "duration": 14,
   "aspect_ratio": "9:16",
-  "prompt": "Prefer real Deskline screenshots/screen record; Image 1–3 from product sheet",
+  "prompt": "Three flat UI states from product sheet; generate if no captures; never neon dashboard",
   "medias": [
     { "role": "image_references", "value": "<MEDIA_ID:ui_idle>" },
     { "role": "image_references", "value": "<MEDIA_ID:ui_answered>" },
     { "role": "image_references", "value": "<MEDIA_ID:ui_confirm>" }
   ],
   "finish_in_post": ["captions", "TTS_VO", "endcard", "aspects"],
+  "blocking_on_user_assets": false,
   "get_cost": false,
   "draft": true
 }

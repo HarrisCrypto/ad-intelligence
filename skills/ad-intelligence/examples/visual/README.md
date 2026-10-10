@@ -1,8 +1,19 @@
-# Visual design examples
+# Visual design examples + Attention Lab
 
-**Open the gallery:** [`index.html`](./index.html) (open in a browser).
+## Open in a browser
 
-Storyboard stills for the four full-depth gold fixtures — what muted-first hooks, product/place lock, and one-CTA endcards should *look* like.
+| Page | What |
+| --- | --- |
+| [`attention-lab.html`](./attention-lab.html) | **Start here** — public ad library links + filterable attention models (timing/shots/words) for TikTok, Meta/IG, X, YouTube, LinkedIn |
+| [`index.html`](./index.html) | Storyboard stills for gold fixtures (beauty, local, SaaS, physical) |
+
+Regenerate embedded model data after editing `references/attention-models.json`:
+
+```bash
+node scripts/build-attention-lab.mjs
+```
+
+## Storyboard frames
 
 | Frame | Niche | Beat |
 | --- | --- | --- |
@@ -16,13 +27,16 @@ Storyboard stills for the four full-depth gold fixtures — what muted-first hoo
 
 ## Rules
 
-- Fictional brands only (AuraBarrier, Northside, RelayHQ, NestBrew)
-- **Not** scraped competitor creatives
-- **Not** performance proof — teaching visuals paired with markdown packages
-- Agents: use as style/lock reference; still fill sheets + claim ledger from user assets
+- Fictional brands only in frames (AuraBarrier, Northside, RelayHQ, NestBrew)
+- Attention models are **teachable structures**, not scraped ads
+- Public library links are for live research — do not commit competitor creatives
+- **Not** performance proof
+- Agents: emulate timing/shot grammar; fill sheets + claim ledger from user assets
 
 ## Pair with
 
 - Full-depth packages in `../`
-- Stress briefs in `../stress-briefs/`
-- Lint corpus in `../lint-corpus/` (should fail `lint-package.mjs`)
+- `../../references/ad-libraries.md`
+- `../../prompts/brief-from-url.md`
+- `../../prompts/emulate-attention-model.md`
+- Stress briefs in `../stress-briefs/` (includes `messy-ai-ops-site.md`)

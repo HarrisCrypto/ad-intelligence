@@ -19,13 +19,18 @@ Replace every `[[LIKE_THIS]]`. Tags must be USER_SUPPLIED | ASSET_VERIFIED | PLA
 - Production tier: [[hybrid_polished|premium_cinema|documentary_trust|clean_product|…]]
 - Virality posture: [[trend_reactive|evergreen_dr|brand_film|local_performance|…]]
 - Proof available: [[list or [PLACEHOLDER: …]]]
-- Tool access: [[connected MCP|prompt-handoff|assembler]]
+- Tool access: [[connected MCP|prompt-handoff|assembler|package-only]]
+- Harness: [[Cursor|Claude|Codex|Gemini|OpenClaw|ChatGPT|other]]
+- Tools declared: [[image/video/MCP/browser — from probe + tool card]]
 - Assumptions: [[from brief-defaults if any]]
 
 ### Retrieval
 - Primary pattern id: `[[from retrieve.mjs]]`
 - Challenger pattern id: `[[from retrieve]]`
 - Dual-track twin id: `[[≠ primary; cinema/high-prod if dual-track]]`
+- Attention model id (primary): `[[am_* from retrieve attention_models]]`
+- Attention model id (challenger): `[[am_*]]`
+- Research notes (public libraries — structure only): [[Meta/TikTok/X/YouTube — what timing you stole]]
 - Flow id: `[[flow or n/a]]`
 - Hook family ids: [[…]]
 - Trend class (if any): [[…|none]]
@@ -36,6 +41,12 @@ Replace every `[[LIKE_THIS]]`. Tags must be USER_SUPPLIED | ASSET_VERIFIED | PLA
 
 ### Job-to-be-done (one sentence)
 [[One job only — what the viewer should do/feel next]]
+
+### Concept (chosen)
+- Options: (1) [[AI-default you refuse]] (2) [[stronger idea]] (3) [[alt]]
+- **Chosen:** [[one-line idea + the memorable frame]]
+- Not the default because: [[concrete reason tied to brief — not vibes]]
+- Emulates attention model: [[am_* — timing/shots/words stolen; brand facts original]]
 
 ### Consistency systems (required)
 - Identity mode: [[pack|ui|place-service|multi-sku|n/a]]
@@ -77,12 +88,17 @@ Replace every `[[LIKE_THIS]]`. Tags must be USER_SUPPLIED | ASSET_VERIFIED | PLA
 3. [[…]]
 
 ### Timed script
+(≥6 rows. VO/text = EXACT words in quotes — not “sparse”.)
 | t | Visual | VO / text | Purpose | Claim tags |
 | --- | --- | --- | --- | --- |
-| 0–3s | [[no logo — concrete scene]] | [[≤7 words or —]] | Hook | [[TAG]] |
-| 3–10s | [[…]] | [[…]] | Orient / ritual | [[TAG]] |
-| 10–18s | [[product/UI lock]] | [[…]] | Mechanism | [[TAG]] |
-| 18–24s | [[endcard space]] | [[ONE CTA]] | CTA | [[TAG]] |
+| 0–2s | [[no logo — concrete scene]] | “[[exact]]” | Hook | [[TAG]] |
+| 2–4s | [[…]] | “[[exact]]” | Agitate/orient | [[TAG]] |
+| 4–7s | [[…]] | “[[exact]]” | Bridge | [[TAG]] |
+| 7–10s | [[…]] | “[[exact]]” | Ritual | [[TAG]] |
+| 10–14s | [[product/UI lock]] | “[[exact]]” | Mechanism | [[TAG]] |
+| 14–18s | [[…]] | “[[exact]]” | Payoff | [[TAG]] |
+| 18–21s | [[…]] | “[[exact]]” | Bridge | [[TAG]] |
+| 21–24s | [[endcard space]] | “[[ONE CTA]]” | CTA | [[TAG]] |
 
 ### Shot list / visual system
 [[beat → camera/lens → light — one line each; concrete nouns only]]
@@ -91,7 +107,7 @@ Replace every `[[LIKE_THIS]]`. Tags must be USER_SUPPLIED | ASSET_VERIFIED | PLA
 - Style id + production_tier + virality_posture: [[…]]
 - Palette: dominant `#[[______]]` · support `#[[______]]` · accent `#[[______]]` [[[TAG]]]
 - Grade name: [[clean daylight|cool clinical|warm tungsten|flat UI doc|high-contrast editorial]] — [[skin/product priority]]
-- Typography: hook [[named display/condensed]] ≤7 words · captions [[named sans]] 2-line · CTA [[one line]] · legal [[last 1.5s|omit]]
+- Typography: hook [[Anton|DIN 2014|Inter Tight]] [[weight]] ≤7 words · captions [[Inter Tight]] 2-line · CTA [[one line]] · legal [[last 1.5s|omit]] (no -style/-like hedges)
 - Motion grammar: [[0–2s … → … → product hold ≥1.2s → E1 ≥2.5s]]
 - Sound plan: muted-first captions; [[VO?]] [[bed paid-safe]] [[SFX]]; no uncleared trend audio for paid
 - Endcard module E1: logo SVG · one CTA “[[…]]” · hold ≥2.5s · comps E1_9x16 + E1_1x1

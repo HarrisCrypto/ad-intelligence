@@ -5,7 +5,12 @@
     "cpg",
     "beverage",
     "restaurant",
-    "dtc_food"
+    "dtc_food",
+    "food",
+    "snack",
+    "coffee",
+    "drink",
+    "grocery"
   ],
   "audience": "Craving + culture; ASMR and skits convert.",
   "jobs_to_be_done": [

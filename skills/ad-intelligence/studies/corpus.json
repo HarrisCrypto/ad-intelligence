@@ -1,0 +1,1150 @@
+{
+  "id": "ad-intelligence-studies",
+  "version": "1.1.0",
+  "updated": "2026-10-10",
+  "purpose": "Archetypal studies of viral, high-performing, and top-tier ad structures \u2014 when to emulate, what to steal, how a human builds them. Public entries are synthesis (observed:false). Not scrapes. Not named campaigns. Never cite as proof metrics.",
+  "mission": "Any LLM / any harness / one-shot for any company: study \u2192 emulate structure \u2192 build with real tools.",
+  "studies": [
+    {
+      "id": "study_viral_confession_ugc",
+      "class": "viral_native",
+      "title": "Viral confession UGC (TikTok / Reels native)",
+      "when_to_emulate": [
+        "Cold social, need trust fast",
+        "Beauty, health-adjacent lifestyle, consumer apps",
+        "Budget favors phone + captions over cinema"
+      ],
+      "when_not": [
+        "Luxury brand-film brief",
+        "Regulated disease claims",
+        "You only have studio talent that looks fake-UGC"
+      ],
+      "platforms": [
+        "tiktok",
+        "meta",
+        "instagram",
+        "youtube_shorts"
+      ],
+      "niches": [
+        "beauty",
+        "health",
+        "ecommerce",
+        "apps",
+        "saas",
+        "fitness"
+      ],
+      "attention_model_ids": [
+        "am_muted_confession"
+      ],
+      "pattern_ids": [
+        "ugc-talking-head-scroll-stop"
+      ],
+      "structure": {
+        "duration_s": 21,
+        "hook_0_3": "Specific costly mistake in burned text before brand",
+        "beats": [
+          {
+            "t": "0\u20131.5s",
+            "job": "confession text + imperfect face",
+            "note": "no logo"
+          },
+          {
+            "t": "1.5\u20136s",
+            "job": "name failure mode",
+            "note": "one mechanism noun"
+          },
+          {
+            "t": "6\u201314s",
+            "job": "demo insert",
+            "note": "product/UI as proof"
+          },
+          {
+            "t": "14\u201318s",
+            "job": "outcome in plain words",
+            "note": "ledger-safe"
+          },
+          {
+            "t": "18\u201321s",
+            "job": "one CTA endcard",
+            "note": "post owns type"
+          }
+        ]
+      },
+      "steal": [
+        "Mid-thought open",
+        "Text density \u22648 words",
+        "Jump cuts on breath",
+        "Brand late"
+      ],
+      "never_copy": [
+        "Their confession lines",
+        "Fake review counts",
+        "Studio \u2018UGC\u2019 polish"
+      ],
+      "why_it_works": [
+        "Native texture beats brand film on cold feed",
+        "Specific confession creates ID faster than features"
+      ],
+      "human_build": [
+        {
+          "step": 1,
+          "action": "Write confession hook from customer language (reviews/support), not vibes",
+          "tools": [
+            "brief",
+            "claim-ledger"
+          ]
+        },
+        {
+          "step": 2,
+          "action": "Shoot or gen talking-head still \u2192 short i2v; keep imperfect light",
+          "tools": [
+            "phone",
+            "kling",
+            "flux"
+          ]
+        },
+        {
+          "step": 3,
+          "action": "Insert product/UI demo unit locked to sheet",
+          "tools": [
+            "screen_record",
+            "generated-ui-authenticity"
+          ]
+        },
+        {
+          "step": 4,
+          "action": "CapCut: captions, jump cuts, one CTA endcard, loudness",
+          "tools": [
+            "capcut"
+          ]
+        },
+        {
+          "step": 5,
+          "action": "Export 9:16 (+1:1 if paid Meta); re-lint package with job ids",
+          "tools": [
+            "lint-package"
+          ]
+        }
+      ],
+      "research_where": {
+        "libraries": [
+          "tiktok_creative_center",
+          "meta_ad_library"
+        ],
+        "search_hints": [
+          "UGC talking head",
+          "confession skincare",
+          "I wasted money on"
+        ],
+        "what_to_note": "Seconds until product appears; caption word count 0\u20133s"
+      },
+      "source_notes": "Archetypal feed structure. Not a scrape.",
+      "provenance": {
+        "observed": false,
+        "basis": "synthesis",
+        "claim_firewall": "STRUCTURE_ONLY \u2014 distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
+      }
+    },
+    {
+      "id": "study_viral_skit_punchline",
+      "class": "viral_native",
+      "title": "Skit \u2192 product punchline",
+      "when_to_emulate": [
+        "Share/comment goals",
+        "Apps, food, fintech humor",
+        "Younger skew"
+      ],
+      "when_not": [
+        "Serious medical/finance compliance tone",
+        "Paid with uncleared trend audio"
+      ],
+      "platforms": [
+        "tiktok",
+        "instagram",
+        "youtube_shorts",
+        "meta"
+      ],
+      "niches": [
+        "food_bev",
+        "apps",
+        "fintech",
+        "ecommerce",
+        "creator"
+      ],
+      "attention_model_ids": [
+        "am_skit_punchline"
+      ],
+      "pattern_ids": [
+        "skit-sketch-ad",
+        "meme-native-trend"
+      ],
+      "structure": {
+        "duration_s": 18,
+        "hook_0_3": "Absurd premise completes only when product appears",
+        "beats": [
+          {
+            "t": "0\u20132s",
+            "job": "cold open bit",
+            "note": "premise line"
+          },
+          {
+            "t": "2\u201310s",
+            "job": "escalate",
+            "note": "no hard sell"
+          },
+          {
+            "t": "10\u201315s",
+            "job": "product = punchline",
+            "note": "mechanism = joke"
+          },
+          {
+            "t": "15\u201318s",
+            "job": "light CTA",
+            "note": "one path"
+          }
+        ]
+      },
+      "steal": [
+        "Punchline timing",
+        "Character continuity",
+        "Paid = original audio"
+      ],
+      "never_copy": [
+        "Their bit wording",
+        "Uncleared sounds in paid"
+      ],
+      "why_it_works": [
+        "Comedy earns watch; product resolves the joke"
+      ],
+      "human_build": [
+        {
+          "step": 1,
+          "action": "Write premise where product is the only logical punchline",
+          "tools": [
+            "concept",
+            "angle-axes"
+          ]
+        },
+        {
+          "step": 2,
+          "action": "Shoot/gen silent performance first; add VO/bed in post",
+          "tools": [
+            "kling",
+            "capcut"
+          ]
+        },
+        {
+          "step": 3,
+          "action": "Clear audio rights before paid boost",
+          "tools": [
+            "rights"
+          ]
+        }
+      ],
+      "research_where": {
+        "libraries": [
+          "tiktok_creative_center"
+        ],
+        "search_hints": [
+          "skit ad app",
+          "sketch product reveal"
+        ],
+        "what_to_note": "When product enters; audio type (original vs trend)"
+      },
+      "source_notes": "Archetypal. Not a scrape.",
+      "provenance": {
+        "observed": false,
+        "basis": "synthesis",
+        "claim_firewall": "STRUCTURE_ONLY \u2014 distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
+      }
+    },
+    {
+      "id": "study_perf_pas_meta",
+      "class": "performance_dr",
+      "title": "Performance PAS (Meta / YouTube)",
+      "when_to_emulate": [
+        "Lead gen / trial",
+        "SaaS, B2B, fintech education",
+        "Retarget + cold"
+      ],
+      "when_not": [
+        "Pure brand fame with no offer",
+        "No concrete pain scene"
+      ],
+      "platforms": [
+        "meta",
+        "youtube",
+        "linkedin",
+        "tiktok"
+      ],
+      "niches": [
+        "saas",
+        "b2b_services",
+        "fintech",
+        "education",
+        "apps"
+      ],
+      "attention_model_ids": [
+        "am_pas_pain_stack",
+        "am_ui_aha_saas"
+      ],
+      "pattern_ids": [
+        "pas-pain-stack",
+        "app-demo-ui"
+      ],
+      "structure": {
+        "duration_s": 27,
+        "hook_0_3": "Pain object before brand",
+        "beats": [
+          {
+            "t": "0\u20133s",
+            "job": "pain object",
+            "note": "bill, inbox, missed call"
+          },
+          {
+            "t": "3\u201310s",
+            "job": "agitate once",
+            "note": "no feature laundry"
+          },
+          {
+            "t": "10\u201320s",
+            "job": "solve via demo",
+            "note": "real or generated UI"
+          },
+          {
+            "t": "20\u201324s",
+            "job": "objection crush",
+            "note": "ledger-safe"
+          },
+          {
+            "t": "24\u201327s",
+            "job": "one CTA",
+            "note": "Start free / Book demo"
+          }
+        ]
+      },
+      "steal": [
+        "Object-led open",
+        "Solution after ~10s",
+        "Single CTA"
+      ],
+      "never_copy": [
+        "Fake ROI",
+        "Competitor UI chrome"
+      ],
+      "why_it_works": [
+        "Pain specificity filters the right clicker"
+      ],
+      "human_build": [
+        {
+          "step": 1,
+          "action": "Name one JTBD + pain object from real workflow",
+          "tools": [
+            "brief-from-url",
+            "sheets"
+          ]
+        },
+        {
+          "step": 2,
+          "action": "Build 3 UI states (idle/solve/confirm) \u2014 capture or generate authentic flat UI",
+          "tools": [
+            "generated-ui-authenticity",
+            "flux"
+          ]
+        },
+        {
+          "step": 3,
+          "action": "Gen pain B-roll (phone/desk) + assemble PAS in CapCut with VO",
+          "tools": [
+            "kling",
+            "tts",
+            "capcut"
+          ]
+        },
+        {
+          "step": 4,
+          "action": "Finish-the-cut across full duration; log jobs; lint",
+          "tools": [
+            "finish-the-cut",
+            "lint-package"
+          ]
+        }
+      ],
+      "research_where": {
+        "libraries": [
+          "meta_ad_library",
+          "linkedin_ad_library"
+        ],
+        "search_hints": [
+          "CRM",
+          "AI agent",
+          "missed call",
+          "workflow"
+        ],
+        "what_to_note": "Time-to-UI; primary text length; CTA"
+      },
+      "source_notes": "Archetypal DR. Not a scrape.",
+      "provenance": {
+        "observed": false,
+        "basis": "synthesis",
+        "claim_firewall": "STRUCTURE_ONLY \u2014 distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
+      }
+    },
+    {
+      "id": "study_award_hero_spectacle",
+      "class": "award_brand_film",
+      "title": "Hero spectacle / brand film craft",
+      "when_to_emulate": [
+        "Launch memory",
+        "Luxury, auto, flagship DTC",
+        "You have dual-track budget (cinema + UGC twin)"
+      ],
+      "when_not": [
+        "Cold performance only with $50/day",
+        "No product lock assets"
+      ],
+      "platforms": [
+        "meta",
+        "youtube",
+        "instagram",
+        "tiktok"
+      ],
+      "niches": [
+        "ecommerce",
+        "luxury",
+        "automotive",
+        "fashion",
+        "beauty",
+        "home"
+      ],
+      "attention_model_ids": [
+        "am_hero_spectacle"
+      ],
+      "pattern_ids": [
+        "hero-product-film",
+        "cinematic-brand-spot"
+      ],
+      "structure": {
+        "duration_s": 30,
+        "hook_0_3": "Spectacle that is still the product\u2019s physics \u2014 no logo",
+        "beats": [
+          {
+            "t": "0\u20133s",
+            "job": "spectacle/macro",
+            "note": "no logo sting"
+          },
+          {
+            "t": "3\u201318s",
+            "job": "human + product moves",
+            "note": "sheet lock"
+          },
+          {
+            "t": "18\u201326s",
+            "job": "one capability climax",
+            "note": "experience not bullets"
+          },
+          {
+            "t": "26\u201330s",
+            "job": "signature endcard",
+            "note": "logo+CTA in post"
+          }
+        ]
+      },
+      "steal": [
+        "Motivated camera",
+        "Product hold \u22651.2s",
+        "Grade consistency",
+        "Endcard craft"
+      ],
+      "never_copy": [
+        "Their art direction verbatim",
+        "Invented awards/metrics"
+      ],
+      "why_it_works": [
+        "Memory + desire before ask; dual-track feeds performance"
+      ],
+      "human_build": [
+        {
+          "step": 1,
+          "action": "Lock pack/colorway sheet + capability line (one JTBD)",
+          "tools": [
+            "product-sheet"
+          ]
+        },
+        {
+          "step": 2,
+          "action": "Keyframe stills (hero angles) \u2192 i2v clips on ladder Wan/LTX/Kling/Seedance",
+          "tools": [
+            "flux",
+            "kling",
+            "seedance"
+          ]
+        },
+        {
+          "step": 3,
+          "action": "Grade + type + logo endcard in CapCut/AE; never hope model burns logo",
+          "tools": [
+            "capcut",
+            "figma"
+          ]
+        },
+        {
+          "step": 4,
+          "action": "Cut UGC twin same JTBD for spend efficiency",
+          "tools": [
+            "dual-track"
+          ]
+        }
+      ],
+      "research_where": {
+        "libraries": [
+          "meta_ad_library",
+          "google_ads_transparency",
+          "youtube"
+        ],
+        "search_hints": [
+          "brand film product",
+          "launch teaser"
+        ],
+        "what_to_note": "Logo timing; capability as experience vs feature list"
+      },
+      "source_notes": "Archetypal premium craft. Not a named award entry. Provenance: synthesis.",
+      "provenance": {
+        "observed": false,
+        "basis": "synthesis",
+        "claim_firewall": "STRUCTURE_ONLY \u2014 distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
+      }
+    },
+    {
+      "id": "study_beauty_macro_transform",
+      "class": "performance_dr",
+      "title": "Beauty / hair macro + matched transform",
+      "when_to_emulate": [
+        "Shampoo, skincare, cosmetics",
+        "Texture sells"
+      ],
+      "when_not": [
+        "Clinical claims without substantiation"
+      ],
+      "platforms": [
+        "tiktok",
+        "instagram",
+        "meta"
+      ],
+      "niches": [
+        "beauty"
+      ],
+      "attention_model_ids": [
+        "am_hair_transform",
+        "am_macro_lust_loop",
+        "am_before_after_matchcut"
+      ],
+      "pattern_ids": [
+        "beauty-macro-tabletop",
+        "before-after-reveal",
+        "grwm-soft-sell"
+      ],
+      "structure": {
+        "duration_s": 18,
+        "hook_0_3": "BEFORE state or macro mid-motion \u2014 no logo",
+        "beats": [
+          {
+            "t": "0\u20132s",
+            "job": "before/macro",
+            "note": "matched light"
+          },
+          {
+            "t": "2\u20138s",
+            "job": "process/texture",
+            "note": "true color"
+          },
+          {
+            "t": "8\u201314s",
+            "job": "after/movement",
+            "note": "same angle"
+          },
+          {
+            "t": "14\u201318s",
+            "job": "pack lock + CTA",
+            "note": "SKU-true"
+          }
+        ]
+      },
+      "steal": [
+        "Matched framing",
+        "True color",
+        "Pack label readable"
+      ],
+      "never_copy": [
+        "Fake clinical %",
+        "Face morph as \u2018results\u2019"
+      ],
+      "why_it_works": [
+        "Eye believes matched before/after + texture lust"
+      ],
+      "human_build": [
+        {
+          "step": 1,
+          "action": "Shade/SKU lock on sheet; refuse mismatch",
+          "tools": [
+            "product-sheet"
+          ]
+        },
+        {
+          "step": 2,
+          "action": "Macro stills + before/after pair \u2192 short i2v on hair/texture only",
+          "tools": [
+            "flux",
+            "kling"
+          ]
+        },
+        {
+          "step": 3,
+          "action": "CapCut labels BEFORE/AFTER; shop CTA endcard",
+          "tools": [
+            "capcut"
+          ]
+        }
+      ],
+      "research_where": {
+        "libraries": [
+          "tiktok_creative_center",
+          "meta_ad_library"
+        ],
+        "search_hints": [
+          "shampoo before after",
+          "serum macro texture"
+        ],
+        "what_to_note": "Lighting match; when bottle appears"
+      },
+      "source_notes": "Archetypal beauty DR. Not a scrape.",
+      "provenance": {
+        "observed": false,
+        "basis": "synthesis",
+        "claim_firewall": "STRUCTURE_ONLY \u2014 distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
+      }
+    },
+    {
+      "id": "study_food_crave_loop",
+      "class": "viral_native",
+      "title": "Food / bev crave ASMR loop",
+      "when_to_emulate": [
+        "CPG, restaurants, coffee, snacks"
+      ],
+      "when_not": [
+        "Health halo without proof"
+      ],
+      "platforms": [
+        "tiktok",
+        "instagram",
+        "meta"
+      ],
+      "niches": [
+        "food_bev",
+        "ecommerce"
+      ],
+      "attention_model_ids": [
+        "am_food_crave_asmr",
+        "am_macro_lust_loop"
+      ],
+      "pattern_ids": [
+        "product-loop-demo",
+        "unboxing-asmr",
+        "beauty-macro-tabletop"
+      ],
+      "structure": {
+        "duration_s": 12,
+        "hook_0_3": "Pour/bite/steam mid-action",
+        "beats": [
+          {
+            "t": "0\u20132s",
+            "job": "crave open",
+            "note": "no logo"
+          },
+          {
+            "t": "2\u20138s",
+            "job": "satisfy loop",
+            "note": "SKU truth"
+          },
+          {
+            "t": "8\u201312s",
+            "job": "pack + order CTA or seamless loop",
+            "note": "organic may omit CTA"
+          }
+        ]
+      },
+      "steal": [
+        "Mid-action open",
+        "Loop seam",
+        "True food color"
+      ],
+      "never_copy": [
+        "Fake CGI steam that breaks trust"
+      ],
+      "why_it_works": [
+        "Sensory interrupt before brand talk"
+      ],
+      "human_build": [
+        {
+          "step": 1,
+          "action": "Shoot or gen macro pour/crunch still \u2192 i2v loop",
+          "tools": [
+            "flux",
+            "kling"
+          ]
+        },
+        {
+          "step": 2,
+          "action": "Design loop reset; CapCut captions optional",
+          "tools": [
+            "capcut"
+          ]
+        }
+      ],
+      "research_where": {
+        "libraries": [
+          "tiktok_creative_center"
+        ],
+        "search_hints": [
+          "ASMR pour",
+          "food loop ad"
+        ],
+        "what_to_note": "Audio design even if muted captions exist"
+      },
+      "source_notes": "Archetypal. Not a scrape.",
+      "provenance": {
+        "observed": false,
+        "basis": "synthesis",
+        "claim_firewall": "STRUCTURE_ONLY \u2014 distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
+      }
+    },
+    {
+      "id": "study_local_geo_phone",
+      "class": "performance_dr",
+      "title": "Local geo trust \u2192 phone CTA",
+      "when_to_emulate": [
+        "Trades, clinics, local services",
+        "Click-to-call"
+      ],
+      "when_not": [
+        "National brand with no geo"
+      ],
+      "platforms": [
+        "meta",
+        "youtube",
+        "tiktok"
+      ],
+      "niches": [
+        "local_services",
+        "health",
+        "home",
+        "automotive"
+      ],
+      "attention_model_ids": [
+        "am_local_geo_trust"
+      ],
+      "pattern_ids": [
+        "local-service-trust",
+        "social-proof-stack"
+      ],
+      "structure": {
+        "duration_s": 20,
+        "hook_0_3": "City + specialty on real place",
+        "beats": [
+          {
+            "t": "0\u20133s",
+            "job": "geo hook",
+            "note": "facility/van truth"
+          },
+          {
+            "t": "3\u201310s",
+            "job": "work proof",
+            "note": "no stock skyline"
+          },
+          {
+            "t": "10\u201315s",
+            "job": "proof if ledger-backed",
+            "note": "PLACEHOLDER OK"
+          },
+          {
+            "t": "15\u201320s",
+            "job": "phone hold \u22653s",
+            "note": "NAP match"
+          }
+        ]
+      },
+      "steal": [
+        "Geo in frame 0",
+        "One CTA = call",
+        "NAP consistency"
+      ],
+      "never_copy": [
+        "Unproven #1",
+        "Wrong phone"
+      ],
+      "why_it_works": [
+        "Local intent + clear next step"
+      ],
+      "human_build": [
+        {
+          "step": 1,
+          "action": "Confirm NAP + specialty; shoot facility or gen careful place plate",
+          "tools": [
+            "brief",
+            "phone"
+          ]
+        },
+        {
+          "step": 2,
+          "action": "Assemble geo \u2192 work \u2192 phone endcard in CapCut",
+          "tools": [
+            "capcut",
+            "kling"
+          ]
+        }
+      ],
+      "research_where": {
+        "libraries": [
+          "meta_ad_library"
+        ],
+        "search_hints": [
+          "plumber city name",
+          "dentist near me ads"
+        ],
+        "what_to_note": "Phone on screen duration; multi-CTA fails"
+      },
+      "source_notes": "Archetypal local. Not a scrape.",
+      "provenance": {
+        "observed": false,
+        "basis": "synthesis",
+        "claim_firewall": "STRUCTURE_ONLY \u2014 distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
+      }
+    },
+    {
+      "id": "study_voice_agent_missed_call",
+      "class": "performance_dr",
+      "title": "Voice / AI agent missed-call \u2192 booked",
+      "when_to_emulate": [
+        "Voice AI, front-desk, after-hours SaaS",
+        "OPlyai-class products"
+      ],
+      "when_not": [
+        "You plan to invent booking %"
+      ],
+      "platforms": [
+        "meta",
+        "linkedin",
+        "tiktok",
+        "youtube",
+        "x"
+      ],
+      "niches": [
+        "saas",
+        "apps",
+        "local_services",
+        "b2b_services",
+        "health"
+      ],
+      "attention_model_ids": [
+        "am_voice_agent_missed",
+        "am_ui_aha_saas"
+      ],
+      "pattern_ids": [
+        "pas-pain-stack",
+        "app-demo-ui"
+      ],
+      "gold_fixture": "examples/voice-agent-front-desk.md",
+      "structure": {
+        "duration_s": 24,
+        "hook_0_3": "Phone ringing \u2192 void (no logo)",
+        "beats": [
+          {
+            "t": "0\u20138s",
+            "job": "missed-call void",
+            "note": "gen OK"
+          },
+          {
+            "t": "8\u201314s",
+            "job": "UI idle \u2192 answered",
+            "note": "generate if no captures"
+          },
+          {
+            "t": "14\u201320s",
+            "job": "booking confirm",
+            "note": "flat UI documentary"
+          },
+          {
+            "t": "20\u201324s",
+            "job": "one CTA endcard",
+            "note": "post owns type"
+          }
+        ]
+      },
+      "steal": [
+        "Void vs answered split",
+        "Calm UI not neon brain",
+        "Full cut not hook-only"
+      ],
+      "never_copy": [
+        "Fake call volume",
+        "Robot mascot as product"
+      ],
+      "why_it_works": [
+        "Universal pain; mechanism is the answer"
+      ],
+      "human_build": [
+        {
+          "step": 1,
+          "action": "Lock UI sheet (3 states) + voice sheet",
+          "tools": [
+            "sheets",
+            "generated-ui-authenticity"
+          ]
+        },
+        {
+          "step": 2,
+          "action": "Render K1/C1 ring void (Kling turbo OK)",
+          "tools": [
+            "kling"
+          ]
+        },
+        {
+          "step": 3,
+          "action": "Generate 3 UI stills; CapCut hard cuts + TTS + endcard \u2014 finish-the-cut",
+          "tools": [
+            "flux",
+            "capcut",
+            "tts",
+            "finish-the-cut"
+          ]
+        },
+        {
+          "step": 4,
+          "action": "Do not ask human for screenshots as a blocker; optional v2 upgrade",
+          "tools": [
+            "finish-the-cut"
+          ]
+        }
+      ],
+      "research_where": {
+        "libraries": [
+          "meta_ad_library",
+          "linkedin_ad_library"
+        ],
+        "search_hints": [
+          "AI phone agent",
+          "missed call",
+          "after hours receptionist"
+        ],
+        "what_to_note": "UI realism; whether they stall on \u2018request a demo\u2019 only"
+      },
+      "source_notes": "Archetypal + gold fixture density. Not a scrape.",
+      "provenance": {
+        "observed": false,
+        "basis": "synthesis",
+        "claim_firewall": "STRUCTURE_ONLY \u2014 distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
+      }
+    },
+    {
+      "id": "study_listicle_save_bait",
+      "class": "viral_native",
+      "title": "Listicle / save-bait education",
+      "when_to_emulate": [
+        "Education, SaaS tips, creator growth",
+        "Save/share goals"
+      ],
+      "when_not": [
+        "Hard sell on card 1"
+      ],
+      "platforms": [
+        "tiktok",
+        "instagram",
+        "linkedin",
+        "x"
+      ],
+      "niches": [
+        "saas",
+        "education",
+        "creator",
+        "apps",
+        "fintech"
+      ],
+      "attention_model_ids": [
+        "am_listicle_save",
+        "am_text_first_x"
+      ],
+      "pattern_ids": [
+        "listicle-text-overlay",
+        "save-share-bait"
+      ],
+      "structure": {
+        "duration_s": 30,
+        "hook_0_3": "N tips for SPECIFIC job",
+        "beats": [
+          {
+            "t": "0\u20132s",
+            "job": "title card",
+            "note": "specific"
+          },
+          {
+            "t": "2\u201324s",
+            "job": "cards 1\u2013N",
+            "note": "actionable"
+          },
+          {
+            "t": "24\u201330s",
+            "job": "soft brand + one CTA",
+            "note": "value first"
+          }
+        ]
+      },
+      "steal": [
+        "Card template consistency",
+        "Muted-legible type",
+        "Value before sell"
+      ],
+      "never_copy": [
+        "Vague tips",
+        "Fake \u2018experts say\u2019"
+      ],
+      "why_it_works": [
+        "Saves extend distribution; specificity earns trust"
+      ],
+      "human_build": [
+        {
+          "step": 1,
+          "action": "Outline N tips from real expertise; no invented studies",
+          "tools": [
+            "ledger"
+          ]
+        },
+        {
+          "step": 2,
+          "action": "Design card template in Figma/CapCut; animate progress ticks",
+          "tools": [
+            "figma",
+            "capcut"
+          ]
+        }
+      ],
+      "research_where": {
+        "libraries": [
+          "tiktok_creative_center",
+          "x_ads_repository"
+        ],
+        "search_hints": [
+          "tips for",
+          "save this"
+        ],
+        "what_to_note": "Card timing; when brand appears"
+      },
+      "source_notes": "Archetypal. Not a scrape.",
+      "provenance": {
+        "observed": false,
+        "basis": "synthesis",
+        "claim_firewall": "STRUCTURE_ONLY \u2014 distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
+      }
+    },
+    {
+      "id": "study_text_first_x",
+      "class": "performance_dr",
+      "title": "Text-first punch (X / LinkedIn)",
+      "when_to_emulate": [
+        "B2B, founder POV, hot take with mechanism"
+      ],
+      "when_not": [
+        "Empty engagement bait"
+      ],
+      "platforms": [
+        "x",
+        "linkedin",
+        "meta"
+      ],
+      "niches": [
+        "saas",
+        "fintech",
+        "b2b_services",
+        "creator",
+        "education"
+      ],
+      "attention_model_ids": [
+        "am_text_first_x"
+      ],
+      "pattern_ids": [
+        "hot-take-controversy",
+        "pas-pain-stack"
+      ],
+      "structure": {
+        "duration_s": 15,
+        "hook_0_3": "First line alone stops the feed",
+        "beats": [
+          {
+            "t": "0\u20131s",
+            "job": "bold first line",
+            "note": "high contrast"
+          },
+          {
+            "t": "1\u20138s",
+            "job": "proof visual/UI",
+            "note": "support"
+          },
+          {
+            "t": "8\u201312s",
+            "job": "mechanism",
+            "note": "how"
+          },
+          {
+            "t": "12\u201315s",
+            "job": "one link CTA",
+            "note": "single path"
+          }
+        ]
+      },
+      "steal": [
+        "Readable at 1\u00d7 muted",
+        "Short lines",
+        "Opinion + mechanism"
+      ],
+      "never_copy": [
+        "Guaranteed returns",
+        "Wall of hashtags"
+      ],
+      "why_it_works": [
+        "Platform rewards text-led hooks"
+      ],
+      "human_build": [
+        {
+          "step": 1,
+          "action": "Write first line that states a costly belief",
+          "tools": [
+            "concept"
+          ]
+        },
+        {
+          "step": 2,
+          "action": "Pair with one UI/product still; kinetic type in CapCut",
+          "tools": [
+            "capcut",
+            "flux"
+          ]
+        }
+      ],
+      "research_where": {
+        "libraries": [
+          "x_ads_repository",
+          "linkedin_ad_library"
+        ],
+        "search_hints": [
+          "category hot take ads"
+        ],
+        "what_to_note": "First-line length; media ratio"
+      },
+      "source_notes": "Archetypal. Not a scrape.",
+      "provenance": {
+        "observed": false,
+        "basis": "synthesis",
+        "claim_firewall": "STRUCTURE_ONLY \u2014 distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
+      }
+    }
+  ]
+}

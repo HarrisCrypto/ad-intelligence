@@ -36,6 +36,11 @@ Teaching fixture for lint + template compliance. Fictional business. Not a scrap
 ### Job-to-be-done (one sentence)
 Get high-intent Austin leak calls with city + specialty on screen and the phone number held three seconds.
 
+### Concept (chosen)
+- Options: (1) drone skyline “#1 plumber” (2) real bay + geo line (3) fake five-star stack  
+- **Chosen:** Real facility cold open → WIP proof → phone  
+- Not the default because: no drone skyline, no invented #1; place is the brand cue
+
 ### Consistency systems (required)
 - Identity mode: place-service
 - Provenance of sheet fields: ASSUMED (fixture) / PLACEHOLDER for review + live phone
@@ -82,10 +87,13 @@ Get high-intent Austin leak calls with city + specialty on screen and the phone 
 ### Timed script
 | t | Visual | VO / text | Purpose | Claim tags |
 | --- | --- | --- | --- | --- |
-| 0–3s | Real facility exterior matching Image 1 | Austin · leak diagnosis | Geo thumb-stop | ASSUMED |
-| 3–8s | Honest WIP bay (Image 3) | sparse / optional soft VO | Trust / craft | ASSUMED |
-| 8–14s | Review card overlay | [PLACEHOLDER: Google review quote] | Proof honesty | PLACEHOLDER |
-| 14–20s | Endcard: phone held large 3s+ | Call [PLACEHOLDER: NAP phone] | One CTA | PLACEHOLDER |
+| 0–2s | Facility exterior (Image 1) | “Austin. Leak?” | Geo hook | ASSUMED |
+| 2–4s | Signage readable | “We diagnose first.” | Orient | ASSUMED |
+| 4–7s | WIP bay (Image 3) | “Real bay. Real tools.” | Trust | ASSUMED |
+| 7–10s | Van stripe (Image 2) | “Northside Plumbing.” | Brand cue | ASSUMED |
+| 10–14s | Review card (CapCut) | “[PLACEHOLDER: Google review quote]” | Proof | PLACEHOLDER |
+| 14–17s | Phone number large | “Call now.” | CTA prep | PLACEHOLDER |
+| 17–20s | NAP endcard hold | “Call [PLACEHOLDER: NAP phone]” | One CTA | PLACEHOLDER |
 
 ### Shot list / visual system
 Exterior locked-off → WIP handheld → static review card (CapCut) → NAP endcard. Grade: documentary daylight. No teal-orange film grade. Lower third clear for phone burn-in.
@@ -94,7 +102,7 @@ Exterior locked-off → WIP handheld → static review card (CapCut) → NAP end
 - Style id + production_tier + virality_posture: `local_service_trust` · production_tier documentary_trust · virality_posture local_performance
 - Palette: dominant van white `#F5F5F5` · support brand navy `#1B3A5F` · accent safety orange `#E86A17` [ASSUMED from sheet]
 - Grade name: flat UI documentary daylight — honest, not teal-orange cinema
-- Typography: hook ≤6 words DIN-like bold sans · NAP phone burn-in ≥3s large · CTA = phone only · legal small if licensed claim
+- Typography: hook DIN 2014 Bold ≤6 words · NAP phone burn-in ≥3s large · CTA = phone only · legal small if licensed claim
 - Motion grammar: locked-off exterior 0–3s → handheld WIP 3–10s → static review card 10–16s → NAP endcard hold ≥3s
 - Sound plan: muted-first; optional light tool SFX; VO optional; paid-safe bed only
 - Endcard module E1: logo SVG · phone CTA only · service area line USER_SUPPLIED or PLACEHOLDER · 9:16 + 1:1 / 4:5

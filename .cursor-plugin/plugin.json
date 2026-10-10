@@ -1,8 +1,8 @@
 {
   "name": "ad-intelligence",
   "displayName": "Ad Intelligence",
-  "version": "3.9.0",
-  "description": "One-shot agency-grade ads: skeleton→retrieve→lint loop, elite craft OS, triple-path + model routing.",
+  "version": "3.15.0",
+  "description": "One-shot agency-grade ads: provenanced studies, ingest, human-build logs, finish the cut, craft lint.",
   "author": {
     "name": "HarrisCrypto"
   },
@@ -12,11 +12,12 @@
     "seedance",
     "higgsfield",
     "viral",
-    "cinematic",
     "ugc",
     "tiktok",
     "meta",
-    "creative-stack"
+    "youtube",
+    "creative-stack",
+    "one-shot"
   ],
   "skills": [
     "./skills/ad-intelligence/SKILL.md"
