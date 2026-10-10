@@ -31,7 +31,9 @@ Lint, study provenance, finish-the-cut *document* rules, claim ledger, and backt
 | `schema/` | `ad-blueprint`, `study`, `query` JSON schemas |
 | `ingest/` | Sample private-study ingest JSON + README |
 | `scripts/rebuild-index.mjs` | Rebuilds `database/index.json` from patterns |
-| `packages/` (gitignored under skill) | Local start-package / backtest scratch |
+| `packages/` (repo root) | Empty placeholder (`.gitkeep`) — **easy to confuse** with skill scratch |
+| `skills/ad-intelligence/packages/` | Local start-package / backtest scratch (**gitignored**) |
+| `.cursor/rules/ad-intelligence.mdc` | Cursor routing rule → same one-shot path (`alwaysApply: false`) |
 
 **Plan targets — all MISSING at root and under skill:**
 
