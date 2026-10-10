@@ -811,19 +811,37 @@ function main() {
       .filter(Boolean)
       .sort((a, b) => b.score - a.score)
       .map((x) => x.m);
-    const libs = (am.public_libraries || []).filter(
-      (lib) =>
-        !plat ||
-        (lib.platforms || []).some(
-          (p) => p === plat || p.includes(plat) || plat.includes(p)
-        )
+    const libs = (am.public_libraries || []).filter((lib) => {
+      if (lib.id === "attention_lab_offline") return true;
+      if (!plat) return true;
+      const hit = (lib.platforms || []).some(
+        (p) => p === plat || p.includes(plat) || plat.includes(p)
+      );
+      const styleHit = (lib.covers_styles_also || []).some(
+        (p) => p === plat || p.includes(plat) || plat.includes(p)
+      );
+      return hit || styleHit;
+    });
+    // Prefer primary platform libs first, then login_free fallbacks, then offline
+    const accessRank = { login_free: 0, partial_free: 1, often_walled: 2, offline: 3 };
+    const sortedLibs = [...libs].sort((a, b) => {
+      const ap = (a.platforms || []).some((p) => p === plat) ? 0 : 1;
+      const bp = (b.platforms || []).some((p) => p === plat) ? 0 : 1;
+      if (ap !== bp) return ap - bp;
+      return (accessRank[a.access] ?? 9) - (accessRank[b.access] ?? 9);
+    });
+    const kw = encodeURIComponent(
+      (q.niche || nicheKey || "category").replace(/-/g, " ")
     );
+    const fill = (tpl) =>
+      tpl ? tpl.replace(/\{keyword\}/g, kw) : null;
     attentionModels = {
       file: "references/attention-models.json",
       docs: "references/ad-libraries.md",
       lab: "examples/visual/attention-lab.html",
       emulate: "prompts/emulate-attention-model.md",
-      note: "Teachable timing/shot models — emulate structure; research live ads via public libraries only",
+      library_access: "scripts/library-access.mjs",
+      note: "Teachable timing/shot models — emulate structure. If TikTok/Meta wall, walk research[].fallbacks (Google Transparency is login_free). Never invent CTR.",
       primary: matched[0]?.id || null,
       challenger: matched[1]?.id || null,
       count: matched.length,
@@ -838,13 +856,20 @@ function main() {
         anti_slop: m.anti_slop,
         gold_fixture: m.gold_fixture || null,
       })),
-      research: (libs.length ? libs : am.public_libraries || []).map((lib) => ({
-        id: lib.id,
-        name: lib.name,
-        url: lib.url,
-        how: lib.how,
-        platforms: lib.platforms,
-      })),
+      research: (sortedLibs.length ? sortedLibs : am.public_libraries || []).map(
+        (lib) => ({
+          id: lib.id,
+          name: lib.name,
+          access: lib.access || "unknown",
+          url: lib.entry_url || lib.url,
+          deep_link: fill(lib.deep_link_template),
+          how: lib.how,
+          when_walled: lib.when_walled || null,
+          fallbacks: lib.fallbacks || [],
+          platforms: lib.platforms,
+          covers_styles_also: lib.covers_styles_also || [],
+        })
+      ),
     };
   }
 
@@ -1000,6 +1025,8 @@ function main() {
             research: attentionModels.research,
             lab: attentionModels.lab,
             emulate: attentionModels.emulate,
+            library_access: attentionModels.library_access,
+            note: attentionModels.note,
           }
         : null,
       studies: {

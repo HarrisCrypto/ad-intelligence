@@ -23,8 +23,10 @@ Agents fail when they fill ledgers before having an idea — or render a hook an
    Paste studies.primary (+ human_build steps) — viral / performance / award archetypes.
    Paste primary / challenger / dual_track_twin (twin ≠ primary).
    Paste attention_models.primary + challenger (timing included).
-   Open research URLs + examples/visual/attention-lab.html — STRUCTURE only.
-   Optional 10 min in public libraries (studies[].research_where).
+   Research access plan:
+   node scripts/library-access.mjs --niche <niche> --platform <platform> --keyword <kw>
+   Open entry_url / deep_link. If TikTok/Meta login-wall → fallbacks (Google Transparency is login_free).
+   Attention Lab always works offline. Note STRUCTURE only (+ format: video_timed vs search_text).
 
 4. EMULATE + HUMAN BUILD + WRITE CREATIVE FIRST:
    a) Study id + provenance (observed/basis) + attention model + angle axis

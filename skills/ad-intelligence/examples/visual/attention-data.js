@@ -15,29 +15,67 @@ window.AD_INTEL_ATTENTION = {
         "facebook",
         "instagram"
       ],
+      "covers_styles_also": [
+        "tiktok"
+      ],
       "name": "Meta Ad Library",
+      "access": "login_free",
       "url": "https://www.facebook.com/ads/library/",
-      "how": "Search advertiser or keyword → filter Active → study 0–3s hook, text density, endcard CTA. Note structure only."
+      "entry_url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=US&media_type=all",
+      "deep_link_template": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=US&media_type=video&q={keyword}&search_type=keyword_unordered",
+      "how": "Use entry/deep link (not empty homepage). Active → All ads → study 0–3s hook, text density, endcard CTA. Age-restricted creatives may hide when signed out.",
+      "fallbacks": [
+        "google_ads_transparency",
+        "attention_lab_offline"
+      ],
+      "when_walled": "Incognito + country deep link; else Google Transparency + Attention Lab video models."
     },
     {
       "id": "tiktok_creative_center",
       "platforms": [
         "tiktok"
       ],
-      "name": "TikTok Creative Center",
+      "covers_styles_also": [
+        "meta",
+        "instagram",
+        "youtube_shorts"
+      ],
+      "name": "TikTok Creative Center — Top Ads",
+      "access": "partial_free",
       "url": "https://ads.tiktok.com/business/creativecenter",
-      "how": "Top ads / tips by region → watch hook velocity, caption burn-in, loopability. Emulate pacing, not brand."
+      "entry_url": "https://ads.tiktok.com/business/creativecenter/inspiration/topads/pc/en",
+      "deep_link_template": "https://ads.tiktok.com/business/creativecenter/inspiration/topads/pc/en?period=30&region=US",
+      "how": "Signed-out: first ~4–5 Top Ads cards (hook velocity, caption burn-in). View more / full filters need free TikTok login.",
+      "fallbacks": [
+        "meta_ad_library",
+        "google_ads_transparency",
+        "attention_lab_offline"
+      ],
+      "when_walled": "Do not stall. Use Meta video Ad Library + YouTube Shorts via Google Transparency + tiktok-tagged Attention Lab models for the same styles."
     },
     {
       "id": "google_ads_transparency",
       "platforms": [
         "youtube",
         "google",
-        "youtube_shorts"
+        "youtube_shorts",
+        "google_display"
+      ],
+      "covers_styles_also": [
+        "meta",
+        "tiktok"
       ],
       "name": "Google Ads Transparency Center",
+      "access": "login_free",
       "url": "https://adstransparency.google.com/",
-      "how": "Search advertiser → inspect YouTube/short formats for open/close structure."
+      "entry_url": "https://adstransparency.google.com/?region=US",
+      "deep_link_template": "https://adstransparency.google.com/?region=US&domain={keyword}",
+      "how": "Search advertiser or domain → YouTube/Shorts/search creatives. Best login-free when Meta/TikTok wall. Search ads → format search_text (no invented 0–3s).",
+      "fallbacks": [
+        "meta_ad_library",
+        "attention_lab_offline"
+      ],
+      "when_walled": "Rare — if blocked, use Attention Lab + synthesis studies only."
     },
     {
       "id": "x_ads_repository",
@@ -46,8 +84,15 @@ window.AD_INTEL_ATTENTION = {
         "twitter"
       ],
       "name": "X Ads Repository",
+      "access": "often_walled",
       "url": "https://ads.x.com/transparency",
-      "how": "Find promoted posts → note first line punch + media ratio; X rewards text-led hooks."
+      "entry_url": "https://ads.x.com/transparency",
+      "how": "Promoted posts → first-line punch + media ratio. If walled, use am_text_first_x + Google/Meta text-led ads.",
+      "fallbacks": [
+        "google_ads_transparency",
+        "attention_lab_offline"
+      ],
+      "when_walled": "Attention model am_text_first_x + LinkedIn/Google copy structure."
     },
     {
       "id": "linkedin_ad_library",
@@ -55,8 +100,36 @@ window.AD_INTEL_ATTENTION = {
         "linkedin"
       ],
       "name": "LinkedIn Ad Library",
+      "access": "often_walled",
       "url": "https://www.linkedin.com/ad-library",
-      "how": "B2B only — study problem framing and single CTA; avoid feature laundry."
+      "entry_url": "https://www.linkedin.com/ad-library",
+      "how": "B2B problem framing + single CTA. If walled, use Google Transparency B2B advertisers + am_pas_pain_stack.",
+      "fallbacks": [
+        "google_ads_transparency",
+        "meta_ad_library",
+        "attention_lab_offline"
+      ],
+      "when_walled": "Google Transparency + SaaS gold fixtures."
+    },
+    {
+      "id": "attention_lab_offline",
+      "platforms": [
+        "tiktok",
+        "meta",
+        "instagram",
+        "youtube_shorts",
+        "youtube",
+        "x",
+        "linkedin",
+        "google"
+      ],
+      "name": "Attention Lab (offline — always works)",
+      "access": "offline",
+      "url": "examples/visual/attention-lab.html",
+      "entry_url": "examples/visual/attention-lab.html",
+      "how": "Filter by platform/niche — teachable timing sheets when every live portal walls. Pair with studies/corpus.json.",
+      "fallbacks": [],
+      "when_walled": "This is the last rung — still ship with format-aware studies."
     }
   ],
   "models": [

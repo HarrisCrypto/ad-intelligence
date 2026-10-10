@@ -1,5 +1,20 @@
 # Changelog
 
+## 3.18.0 — 2026-10-10
+
+**Library access when TikTok / Meta gate you** — agents still see styles across platforms.
+
+### Added
+- Access tiers + deep links + fallback ladder in `references/ad-libraries.md`
+- `public_libraries` metadata: `access`, `entry_url`, `deep_link_template`, `fallbacks`, `when_walled`, `covers_styles_also`
+- `scripts/library-access.mjs` — prints research plan for niche/platform/keyword
+- Retrieve `attention_models.research` includes access + deep_link + fallbacks
+- Attention Lab cards show access tier + fallbacks
+
+### Changed
+- One-shot / SKILL: run library-access before stalling on login walls
+- Plugin **3.18.0**
+
 ## 3.17.0 — 2026-10-10
 
 **Study format projection** — search-text / static observations must not look like timed video after retrieve.
