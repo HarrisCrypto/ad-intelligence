@@ -1,5 +1,23 @@
 # Changelog
 
+## 3.4.0 — 2026-10-10
+
+Final polish: multi-niche full-depth gold fixtures + version sync. Quality gates unchanged.
+
+### Added
+- Full-depth lint-clean fixtures: `local-service-trust.md`, `saas-demo-pas.md`, `physical-product-hero.md` (match beauty honesty/structure)
+- `examples/README.md` depth table
+
+### Changed
+- `PROOF.md` + `demo/` point at four full-depth fixtures; entertainment remains shape-only
+- README / INSTALL / SKILL quality-bar pointers list multi-niche fixtures
+- Plugin / marketplace version **3.4.0**
+- Output template confirmed aligned (claim ledger, consistency systems, render plan/log, self-critique, AI disclosure)
+
+### Preserved
+- Dual-path, claim firewall, sheets, render plans, mechanical lint, self-critique, dual-track default
+- Adoption layer from 3.3 (PROOF, INSTALL, CONTRIBUTING, private swipe notes)
+
 ## 3.3.0 — 2026-10-10
 
 Adoption upgrade: make the value obvious and the repo easy to install — without diluting lint, claim firewall, sheets, render plans, or dual-path logic.

@@ -2,7 +2,7 @@
 
 **Repo:** https://github.com/HarrisCrypto/ad-intelligence  
 **Skill root:** `skills/ad-intelligence/`  
-**Version:** see [CHANGELOG.md](./CHANGELOG.md)
+**Version:** **3.4.0** — see [CHANGELOG.md](./CHANGELOG.md)
 
 ---
 
@@ -24,11 +24,14 @@ Plugin metadata lives at `.cursor-plugin/` (`plugin.json` + `marketplace.json`) 
 Copy this block when you need the agent to self-orient with no extra explanation:
 
 ```text
-You are using Ad Intelligence (skills/ad-intelligence/).
+You are using Ad Intelligence (skills/ad-intelligence/) v3.4.
 1. Read SKILL.md and pipelines/one-stop-ad-maker.md
-2. Quality bar: examples/beauty-dtc-dual-track.md (also demo/)
+2. Quality bar (full-depth, lint-clean): examples/beauty-dtc-dual-track.md,
+   local-service-trust.md, saas-demo-pas.md, or physical-product-hero.md
+   (bookmarks in demo/). Match output-template.md sections exactly.
 3. Retrieve: node scripts/retrieve.mjs --niche <niche|alias> --platform <platform> --limit 5
-4. Fill output-template.md: sheets, claim ledger, timed script, render plan, self-critique
+4. Fill output-template.md: sheets, claim ledger, timed script, render plan + log,
+   self-critique, AI disclosure
 5. If generators connected → call them (connected-run-protocol.md). Else → MCP-correct handoffs.
 6. Ship only if: node scripts/lint-package.mjs <package.md> exits 0
 Never invent proof. Dual-track default for serious brands. One CTA. Muted-first.
@@ -106,11 +109,15 @@ No hosted database required. Optional private longevity notes: see [CONTRIBUTING
 ## Verify
 
 - Chat cites **pattern ids**, a **claim ledger**, a **render plan**, and **lint**.
-- `lint-package.mjs` on the beauty gold fixture returns `"ok": true`.
+- `lint-package.mjs` on any full-depth gold fixture returns `"ok": true`.
 - If not: say explicitly *Follow ad-intelligence SKILL.md and lint before delivery.*
 
 ## Proof & quality bar
 
 - [PROOF.md](./PROOF.md) — before/after vs generic slop  
-- [demo/](./skills/ad-intelligence/demo/) — canonical quality target pointer  
-- Full fixture: `skills/ad-intelligence/examples/beauty-dtc-dual-track.md`
+- [demo/](./skills/ad-intelligence/demo/) — canonical quality-target pointers  
+- Full-depth lint-clean fixtures:
+  - `skills/ad-intelligence/examples/beauty-dtc-dual-track.md`
+  - `skills/ad-intelligence/examples/local-service-trust.md`
+  - `skills/ad-intelligence/examples/saas-demo-pas.md`
+  - `skills/ad-intelligence/examples/physical-product-hero.md`

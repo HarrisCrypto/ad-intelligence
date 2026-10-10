@@ -10,12 +10,14 @@ Packages that do **not** invent proof, drift product identity, or burn three red
 | --- | --- |
 | **Why it exists (before/after)** | [PROOF.md](./PROOF.md) |
 | **Install in minutes** | [INSTALL.md](./INSTALL.md) |
-| **Canonical quality target** | [skills/ad-intelligence/demo/](./skills/ad-intelligence/demo/) |
-| **Full-depth gold fixture** | [beauty-dtc-dual-track.md](./skills/ad-intelligence/examples/beauty-dtc-dual-track.md) |
+| **Canonical quality targets** | [skills/ad-intelligence/demo/](./skills/ad-intelligence/demo/) |
+| **Full-depth gold fixtures** | beauty · local · SaaS · physical product — see [PROOF.md](./PROOF.md) |
 | **Ship gate** | `node skills/ad-intelligence/scripts/lint-package.mjs <package.md>` |
 | **Contribute** | [CONTRIBUTING.md](./CONTRIBUTING.md) |
 
-**Version 3.3.0** — [CHANGELOG.md](./CHANGELOG.md)
+**Version 3.4.0** — [CHANGELOG.md](./CHANGELOG.md)
+
+Four full-depth, lint-clean fixtures now exist (not just beauty) so agents can match depth across common niches.
 
 ---
 
@@ -45,6 +47,7 @@ cd ad-intelligence
 cd skills/ad-intelligence
 node scripts/retrieve.mjs --niche skincare --platform tiktok --limit 5
 node scripts/lint-package.mjs examples/beauty-dtc-dual-track.md
+node scripts/lint-package.mjs examples/local-service-trust.md
 ```
 
 Agent quick-start block: [INSTALL.md](./INSTALL.md#quick-start-for-agents)
@@ -62,7 +65,7 @@ Agent quick-start block: [INSTALL.md](./INSTALL.md#quick-start-for-agents)
 | Render plan + connected-run | Production-shaped generation |
 | Swipe signals | Anonymized longevity (+ optional private notes) |
 | Lint + first-time-right | Ship gate |
-| Proof + demo | Adoption / quality bar |
+| Proof + demo + multi-niche gold | Adoption / quality bar |
 
 Skill root: `skills/ad-intelligence/SKILL.md`
 
@@ -79,6 +82,12 @@ See [`skills/ad-intelligence/references/creative-stack/LAST-VERIFIED.md`](./skil
 | Higgsfield generate_video / Ads Studio / UGC / Ad Multiplier | Connected generation | 2026-10-10 |
 | CapCut finishing | Captions, endcard, aspects | always |
 | Meta / TikTok / YouTube flags | Disclosure + rights tree | 2026-10-10 |
+
+---
+
+## What remains after this (honest)
+
+Further gains come from **usage** (real packages that slip lint → new gates), occasional **LAST-VERIFIED** updates as tools change, and human review on regulated niches — not from redesigning the skill.
 
 ---
 

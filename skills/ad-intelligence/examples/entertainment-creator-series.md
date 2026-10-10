@@ -1,4 +1,6 @@
-> **shape-only — not a length or quality target.** Required depth: see `examples/beauty-dtc-dual-track.md`. Do not claim Gates PASS from this skeleton.
+> **shape-only — not a length or quality target.**  
+> Full-depth fixtures (lint-clean): `beauty-dtc-dual-track.md`, `local-service-trust.md`, `saas-demo-pas.md`, `physical-product-hero.md`.  
+> Do not claim Gates PASS from this skeleton.
 
 # Gold example — Entertainment / creator (series cliffhanger)
 

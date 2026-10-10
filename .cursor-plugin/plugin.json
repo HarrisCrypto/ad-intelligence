@@ -1,8 +1,8 @@
 {
   "name": "ad-intelligence",
   "displayName": "Ad Intelligence",
-  "version": "3.3.0",
-  "description": "First-shot non-slop ads: proof, lint, provenance, sheets, MCP-correct render plans.",
+  "version": "3.4.0",
+  "description": "First-shot non-slop ads: multi-niche gold fixtures, lint, provenance, MCP-correct plans.",
   "author": {
     "name": "HarrisCrypto"
   },

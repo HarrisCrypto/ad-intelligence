@@ -41,7 +41,10 @@ Human proof of value: `../../PROOF.md`. Install: `../../INSTALL.md`.
 ### 0) Orient
 - Pipeline, creative-stack (render-plan, connected-run, sheets, Seedance, Higgsfield)
 - `claim-firewall.json`, `brief-defaults.json`, `policy-precheck.json`
-- `examples/beauty-dtc-dual-track.md` or `demo/` (**quality bar** — other examples are shape-only)
+- Full-depth quality bar: `examples/beauty-dtc-dual-track.md`,
+  `local-service-trust.md`, `saas-demo-pas.md`, `physical-product-hero.md`
+  (bookmarks in `demo/`). Entertainment example is shape-only.
+- `references/output-template.md` — required sections
 - `swipe-signals.md` / `.json` (+ optional local `private-signals.json`)
 - style catalog, viral OS
 
@@ -74,8 +77,8 @@ Rubric with evidence + caps → failures → A/B/C.
 | `scripts/lint-package.mjs` | Mechanical ship gate |
 | `references/creative-stack/render-plan.md` | Generation units |
 | `references/output-template.md` | Required deliverable |
-| `examples/beauty-dtc-dual-track.md` | Full gold fixture |
-| `demo/` | Canonical quality-target pointer |
+| `examples/` (beauty, local, saas, physical) | Full-depth gold fixtures (4 niches) |
+| `demo/` | Canonical quality-target pointers |
 | `checklists/first-time-right.json` | Ship gates |
 | `../../PROOF.md` | Before/after vs slop |
 | `../../CHANGELOG.md` | Versions |
