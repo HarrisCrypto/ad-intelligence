@@ -5,6 +5,19 @@ skills/ad-intelligence/references/private-signals.json
 skills/ad-intelligence/studies/private/**
 !skills/ad-intelligence/studies/private/.gitkeep
 
+# Classroom local reference media (annotation-only in git — never commit competitor creatives)
+classroom/private-cache/**
+!classroom/private-cache/.gitkeep
+
+# Render / regression media (synthesized in CI; default deny blobs)
+regression/**/*.mp4
+regression/**/*.mov
+regression/**/*.wav
+regression/**/*.mp3
+regression/**/.qa-frame0-*.png
+regression/**/last-qa.json
+*.cube
+
 # OS / editor
 .DS_Store
 *.swp

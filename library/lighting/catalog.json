@@ -1,0 +1,35 @@
+{
+  "id": "library-lighting",
+  "version": "1.0.0",
+  "purpose": "Lighting recipes for gen prompts + grade pairing",
+  "items": [
+    {
+      "id": "lit_desk_practical_night",
+      "name": "After-hours desk practical",
+      "prompt_fragment": "dim shop/desk, single warm practical lamp, phone screen as key, no cinematic god-rays",
+      "pairs_with_grades": ["grade_cool_clinical", "grade_flat_ui_doc"],
+      "when": ["missed-call void", "after-hours ring"]
+    },
+    {
+      "id": "lit_bay_daylight",
+      "name": "Bay / van daylight",
+      "prompt_fragment": "real facility daylight, honest work light, no drone golden-hour fake",
+      "pairs_with_grades": ["grade_clean_daylight"],
+      "when": ["local geo trust", "van/bay proof"]
+    },
+    {
+      "id": "lit_screen_only",
+      "name": "Screen-only UI",
+      "prompt_fragment": "hard light from phone screen only; dark desk ≤10% of frame; labels sharp",
+      "pairs_with_grades": ["grade_flat_ui_doc"],
+      "when": ["UI documentary states"]
+    },
+    {
+      "id": "lit_phone_native_ugc",
+      "name": "UGC native",
+      "prompt_fragment": "imperfect room light, no softbox, no beauty dish",
+      "pairs_with_grades": ["grade_clean_daylight"],
+      "when": ["owner talking-head"]
+    }
+  ]
+}

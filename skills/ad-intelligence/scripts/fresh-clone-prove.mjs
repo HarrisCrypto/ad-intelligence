@@ -115,7 +115,17 @@ if (item.provenance.basis === "synthesis" && item.provenance.observed !== false)
   fail("synthesis study must have observed:false");
 }
 
-console.log("OK — fresh checkout proves studies + gates + retrieve provenance join");
+const proveQa = path.join(root, "pipeline", "qa", "prove-qa.mjs");
+if (fs.existsSync(proveQa)) {
+  const qa = run(process.execPath, root, [proveQa]);
+  if (qa.status !== 0) {
+    fail(`pipeline/qa/prove-qa failed:\n${qa.stdout}\n${qa.stderr}`);
+  }
+}
+
+console.log(
+  "OK — fresh checkout proves studies + gates + retrieve provenance join + render QA"
+);
 console.log(
   JSON.stringify(
     {
@@ -124,6 +134,7 @@ console.log(
       study: payload.studies.primary,
       provenance: item.provenance,
       gates: "pass",
+      render_qa: fs.existsSync(proveQa) ? "pass" : "skipped",
     },
     null,
     2

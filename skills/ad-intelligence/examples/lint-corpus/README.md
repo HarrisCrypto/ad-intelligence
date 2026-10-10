@@ -13,5 +13,8 @@ Used by `scripts/demo-quality-gates.mjs` to prove the mechanical gate catches co
 | `fail-logo-multi-cta.md` | Thin scripts / logo-first / multi-CTA fail |
 | `fail-invented-metrics.md` | Fake proof / missing freshness fail |
 | `fail-study-synthesis-as-proof.md` | Citing `basis:synthesis` study as observed/ad-library proof |
+| `fail-shape-claims-pass.md` | Shape-only fixture claiming checklist/lint PASS |
+| `fail-incomplete-hook-only.md` | RENDERED delivery that only covers the ~8s hook |
+| `fail-silent-cut-incomplete.md` | RENDERED delivery with no VO/SFX/bed audio path |
 
 Do **not** treat these as templates to copy.

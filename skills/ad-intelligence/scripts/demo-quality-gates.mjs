@@ -206,10 +206,31 @@ console.log("\nSTUDIES JOIN (retrieve patterns ⊕ studies + provenance)");
   }
 }
 
+console.log("\nRENDER QA (pipeline — Oply v1 must FAIL for the right reasons)");
+{
+  const repoRoot = path.join(ROOT, "..", "..");
+  const proveQa = path.join(repoRoot, "pipeline", "qa", "prove-qa.mjs");
+  if (!fs.existsSync(proveQa)) {
+    report.pass = false;
+    console.log("  [FAIL] pipeline/qa/prove-qa.mjs missing");
+  } else {
+    const r = spawnSync(process.execPath, [proveQa], {
+      encoding: "utf8",
+      cwd: repoRoot,
+      maxBuffer: 20 * 1024 * 1024,
+    });
+    const okQa = r.status === 0;
+    if (!okQa) report.pass = false;
+    report.render_qa = { ok: okQa };
+    console.log(`  [${okQa ? "PASS" : "FAIL"}] prove-qa (oply-v1 expected fails)`);
+    if (!okQa) console.log((r.stdout || r.stderr || "").slice(-400));
+  }
+}
+
 console.log(
   report.pass
-    ? "\nOK — gold green, corpus caught, studies join healthy."
-    : "\nERROR — unexpected lint/join results; inspect above."
+    ? "\nOK — gold green, corpus caught, studies join healthy, render QA green."
+    : "\nERROR — unexpected lint/join/QA results; inspect above."
 );
 
 process.exit(report.pass ? 0 : 1);

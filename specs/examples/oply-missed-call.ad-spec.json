@@ -1,0 +1,134 @@
+{
+  "id": "oply-missed-call-v2-spec",
+  "version": 1,
+  "template_id": "tpl_home_services_missed_call",
+  "brief": {
+    "brand": "Oply",
+    "niche": "home-services",
+    "platforms": ["meta", "tiktok"],
+    "offer": "After-hours AI phone agent that answers and books",
+    "jtbd": "Make the missed call feel expensive, then show the phone answered and booked",
+    "url": "https://oplyai.com",
+    "funnel": "bof_conversion",
+    "assumptions": ["Palette/CTA from brand-harvest when available"]
+  },
+  "structure": {
+    "format": "video_timed",
+    "timing_observable": true,
+    "duration_s": 24,
+    "aspect": "9:16",
+    "format_note": "Full cut required — not hook-only"
+  },
+  "retrieval": {
+    "study_card_ids": [
+      "hvac-missed-call-void-01",
+      "voice-call-ui-demo-03",
+      "tech-hard-cut-pacing-01"
+    ],
+    "study_id": "study_voice_agent_missed_call",
+    "attention_model_id": "am_voice_agent_missed",
+    "niche_pack": "classroom/niche-packs/home-services.md",
+    "gold_fixture": "examples/voice-agent-front-desk.md"
+  },
+  "library": {
+    "ui_kit": "uikit_voice_agent_flat",
+    "transition_default": "tr_hard_cut",
+    "grade": "grade_flat_ui_doc",
+    "camera_hook": "cam_static_lock",
+    "lighting_hook": "lit_desk_practical_night",
+    "captions": {
+      "hook": "cap_hook_anton",
+      "body": "cap_burn_inter_tight",
+      "cta": "cap_cta_poppins"
+    },
+    "typography_provision": "library/typography",
+    "voice_tier": "V1"
+  },
+  "timeline": [
+    {
+      "id": "C1",
+      "t": [0, 8],
+      "job": "missed-call void",
+      "camera": "cam_static_lock",
+      "lighting": "lit_desk_practical_night",
+      "transition_out": "tr_hard_cut",
+      "on_screen_text": "Missed. Again.",
+      "spoken": "It's after hours. Your phone rings. Nobody picks up."
+    },
+    {
+      "id": "U2a",
+      "t": [8, 14],
+      "job": "UI idle → answered",
+      "ui_state": "idle",
+      "camera": "cam_screen_ortho",
+      "transition_out": "tr_hard_cut",
+      "on_screen_text": "Answered"
+    },
+    {
+      "id": "U2b",
+      "t": [14, 20],
+      "job": "booking confirm",
+      "ui_state": "confirm",
+      "camera": "cam_screen_ortho",
+      "transition_out": "tr_hard_cut",
+      "on_screen_text": "Booked"
+    },
+    {
+      "id": "E1",
+      "t": [20, 24],
+      "job": "one CTA endcard",
+      "camera": "cam_static_lock",
+      "transition_out": null,
+      "on_screen_text": "Book a demo",
+      "spoken": "Book a demo."
+    }
+  ],
+  "claim_ledger": [
+    {
+      "claim_or_asset": "Product answers + books after hours",
+      "where": "U2a–U2b",
+      "tag": "ASSUMED",
+      "source": "site positioning — verify via brand-harvest"
+    },
+    {
+      "claim_or_asset": "Call volume / booking %",
+      "where": "none",
+      "tag": "PLACEHOLDER",
+      "source": "[PLACEHOLDER: needs user proof]"
+    },
+    {
+      "claim_or_asset": "CTA Book a demo",
+      "where": "E1",
+      "tag": "ASSUMED",
+      "source": "funnel"
+    }
+  ],
+  "cta": {
+    "primary": "Book a demo",
+    "on_screen_min_s": 3,
+    "jargon_ban": ["access call", "unlock AI"]
+  },
+  "brand_harvest": {
+    "url": "https://oplyai.com",
+    "status": "run brand-harvest.mjs before craft",
+    "palette_source": "ASSET_VERIFIED preferred"
+  },
+  "render_status": "NOT_RENDERED",
+  "what_not_to_copy": [
+    "Competitor scripts/UI",
+    "Invented call stats",
+    "Silent 8s hook as finished ad",
+    "Neon AI brain visuals"
+  ],
+  "qa": {
+    "expect_instruments": [
+      "resolution",
+      "bitrate",
+      "loudness",
+      "cut-rate",
+      "product-demo",
+      "cta",
+      "safe-zone"
+    ]
+  }
+}

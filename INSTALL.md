@@ -2,7 +2,7 @@
 
 **Repo:** https://github.com/HarrisCrypto/ad-intelligence  
 **Skill root:** `skills/ad-intelligence/`  
-**Version:** **3.18.0** — see [CHANGELOG.md](./CHANGELOG.md)  
+**Version:** **3.19.0** — see [CHANGELOG.md](./CHANGELOG.md)  
 **Verify any harness:** `git clone https://github.com/HarrisCrypto/ad-intelligence.git && node skills/ad-intelligence/scripts/fresh-clone-prove.mjs`
 
 ---
@@ -36,13 +36,14 @@ node skills/ad-intelligence/scripts/agent-ready.mjs
 ## Paste this to your agent (one-shot)
 
 ```text
-Use Ad Intelligence v3.18 from https://github.com/HarrisCrypto/ad-intelligence
+Use Ad Intelligence v3.19 from https://github.com/HarrisCrypto/ad-intelligence
 Follow skills/ad-intelligence/prompts/one-shot.md EXACTLY — studies provenance + human-build LOG + finish-the-cut.md.
 First: node skills/ad-intelligence/scripts/probe-harness.mjs — fill the tool card and pick a rung.
 If I give a website: node skills/ad-intelligence/scripts/brief-from-url.mjs <url>
 Research: node scripts/library-access.mjs — if TikTok/Meta login-wall, use Google Transparency + Meta deep links + Attention Lab.
 Retrieve studies + attention models; emulate structure (never copy).
 Build with real tools per human-build-os.md. If UI screenshots are missing: generate authentic flat UI — do not stall.
+Finish every second of the timed script + lay audio (VO/SFX/bed) in CapCut — an 8s silent hook is not done.
 
 Brief:
 - Company / product / URL:

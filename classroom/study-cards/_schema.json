@@ -1,0 +1,157 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/HarrisCrypto/ad-intelligence/classroom/study-cards/_schema.json",
+  "title": "AdStudyCard",
+  "type": "object",
+  "required": [
+    "id",
+    "source",
+    "niche",
+    "format",
+    "duration_s",
+    "aspect",
+    "hook",
+    "shots",
+    "stats",
+    "audio",
+    "look",
+    "cta",
+    "offer_and_proof",
+    "why_it_works",
+    "steal",
+    "what_not_to_copy",
+    "tags",
+    "status",
+    "structure"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-_]{2,80}$" },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "confirmed"],
+      "description": "draft excluded from default retrieve; confirmed has human why_it_works review"
+    },
+    "source": {
+      "type": "object",
+      "required": ["platform", "url_or_library_id", "accessed", "rights"],
+      "properties": {
+        "platform": { "type": "string" },
+        "url_or_library_id": { "type": "string" },
+        "accessed": { "type": "string" },
+        "rights": {
+          "type": "string",
+          "enum": ["annotation-only", "local-cache-ok", "owned"]
+        },
+        "verified_via": {
+          "type": "string",
+          "enum": ["human_browser", "agent_runtime", "synthesis", "owned"]
+        }
+      }
+    },
+    "niche": { "type": "string" },
+    "format": {
+      "type": "string",
+      "enum": [
+        "UGC",
+        "motion-graphics",
+        "product-demo",
+        "screen-recording",
+        "cinematic",
+        "talking-head",
+        "hybrid",
+        "search_text",
+        "display_static",
+        "carousel_static"
+      ]
+    },
+    "structure": {
+      "type": "object",
+      "required": ["format", "timing_observable"],
+      "properties": {
+        "format": {
+          "type": "string",
+          "enum": [
+            "video_timed",
+            "search_text",
+            "display_static",
+            "carousel_static",
+            "unknown"
+          ]
+        },
+        "timing_observable": { "type": "boolean" },
+        "format_note": { "type": "string" }
+      }
+    },
+    "duration_s": { "type": ["number", "null"] },
+    "aspect": { "type": "string" },
+    "performance_signal": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string" },
+        "value": { "type": "string" },
+        "as_of": { "type": "string" }
+      }
+    },
+    "hook": {
+      "type": "object",
+      "required": ["mechanism", "first_second_description"],
+      "properties": {
+        "mechanism": { "type": "string" },
+        "first_second_description": { "type": "string" },
+        "on_screen_text": { "type": "string" },
+        "spoken": { "type": "string" }
+      }
+    },
+    "shots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["t_start", "t_end", "purpose"],
+        "properties": {
+          "t_start": { "type": ["number", "null"] },
+          "t_end": { "type": ["number", "null"] },
+          "shot_type": { "type": "string" },
+          "framing": { "type": "string" },
+          "camera_move": { "type": "string" },
+          "subject": { "type": "string" },
+          "lighting": { "type": "string" },
+          "color": { "type": "string" },
+          "on_screen_text": { "type": "string" },
+          "caption_style": { "type": "string" },
+          "transition_out": { "type": "string" },
+          "sfx": { "type": "string" },
+          "music_event": { "type": "string" },
+          "purpose": { "type": "string" },
+          "source": {
+            "type": "string",
+            "enum": ["measured", "model-estimate", "synthesis"]
+          }
+        }
+      }
+    },
+    "stats": {
+      "type": "object",
+      "properties": {
+        "shot_count": { "type": "number" },
+        "avg_shot_s": { "type": "number" },
+        "cuts_per_10s": { "type": "number" },
+        "longest_hold_s": { "type": "number" },
+        "first_cut_at_s": { "type": "number" },
+        "text_density": { "type": "string" },
+        "loudness_lufs": { "type": ["number", "null"] },
+        "stats_source": { "type": "string" }
+      }
+    },
+    "audio": { "type": "object" },
+    "look": { "type": "object" },
+    "cta": { "type": "object" },
+    "offer_and_proof": { "type": "object" },
+    "why_it_works": { "type": "string" },
+    "steal": { "type": "array", "items": { "type": "string" } },
+    "what_not_to_copy": { "type": "array", "items": { "type": "string" } },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "linked_study_id": { "type": "string" },
+    "gold_fixture": { "type": "string" }
+  },
+  "additionalProperties": true
+}

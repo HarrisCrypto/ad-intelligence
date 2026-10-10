@@ -1,5 +1,72 @@
 # Changelog
 
+## Unreleased — Classroom + Production Hub
+
+**Gate 0–1 + Phase 5 early** — audit, legal floor, and render QA that fails Oply v1 for the right reasons.
+
+### Added
+- `AUDIT.md` — Phase 0 inventory, script runs, keep/replace/gaps (Gate 0)
+- `HUB.md` — single-track status board
+- `classroom/README.md` — legal & sourcing rules (Gate 1)
+- `classroom/known-failure-modes.md` — Oply + process failure seeds
+- `classroom/private-cache/` gitignored for local reference media
+- `pipeline/qa/` — `run-qa.mjs`, `synthesize-oply-v1.mjs`, `prove-qa.mjs`
+- `regression/fail/oply-v1/` — expected hard fails from measured teardown (C1)
+- `regression/false-positive/` — corpus stub for over-aggressive gates (B7.2)
+
+### Added (Gate 2.5)
+- `scripts/brand-harvest.mjs` (+ `pipeline/scripts/brand-harvest.mjs`) — live-site palette/fonts/CTA/assets → ASSET_VERIFIED consistency block
+- `library/typography/` — OFL Anton, Poppins, Inter Tight + `fallback-map.json`
+- `library/sound/` — voice tier ladder + real-bed rule (no sine drones)
+- Probe reports hardware (CPU/RAM/GPU/ffmpeg) + quality ceiling + voice tier default
+
+### Added (Gate 2)
+- `classroom/study-cards/_schema.json` — AdStudyCard schema (`format` + `timing_observable`, `what_not_to_copy`, confirmed/draft)
+- `classroom/study-cards/home-services/` — 10 confirmed cards (void→answer, geo phone, UI demo, search_text honesty, …)
+- `classroom/study-cards/technique/` — 6 confirmed pacing/caption/safe-zone/UI/format cards
+- `classroom/niche-packs/home-services.md` — objections, hook bank, slop list
+- `classroom/scripts/validate-card.mjs` + `retrieve-cards.mjs` — media rejection + niche retrieve
+
+### Added (Gate 3)
+- `library/{transitions,camera,captions,lighting,grades}/catalog.json` — executable craft presets
+- `library/ui-kits/voice-agent-flat/` — 3-state kit + HTML preview
+- `library/templates/home-services-missed-call/` — study-card → library binding
+- `library/scripts/resolve-toolbox.mjs` + `demo-compose-plan.mjs`
+
+### Added (Gate 4)
+- `specs/ad-spec.schema.json` + `validate-ad-spec.mjs`
+- Example specs: `oply-missed-call`, `local-geo-phone`
+- Second template: `library/templates/home-services-local-geo/`
+
+### Added (Gate 6 + E2E)
+- `pipeline/critic/critique-frames.mjs` — offline package critic + QA handoff
+- `pipeline/qa/synthesize-oply-v2.mjs` + `regression/pass/oply-v2/` — PASS inverse of oply-v1
+- `pipeline/scripts/e2e-brief-to-plan.mjs` — brief → retrieve → spec → plan → optional v2 QA
+
+### Fixed
+- Finish completeness is evidence-derived: `render-status-contradicts-log` when `NOT_RENDERED` contradicts job receipts (B7.3)
+- Compact retrieve keeps `gold_fixture` + `gold_fixtures[]` (B1.1)
+
+### Note
+v3.19 finish-cut quality lands in the same PR branch as this hub work.
+
+## 3.19.0 — 2026-10-10
+
+**Finish-the-cut quality bar** — silent 8s hooks cannot count as finished ads; shape-claims-pass no longer punishes honest synthesis labels.
+
+### Fixed
+- `shape-claims-pass` scoped to real fixture markers (`shape-only`, `not a length or quality target`, `SHAPE FIXTURE`) and `examples/` paths — bare `structure only` (retrieve join / synthesis honesty) no longer false-positives when lint reports PASS
+
+### Added
+- Lint: `incomplete-hook-only` — RENDERED packages that only cover the ~8s hook while the timed script continues
+- Lint: `silent-cut-incomplete` — RENDERED packages with no VO/SFX/bed audio path
+- Fail corpus: `fail-incomplete-hook-only.md`, `fail-silent-cut-incomplete.md`, `fail-shape-claims-pass.md`
+- Finish-the-cut contract: `Audio laid in post` line; Done means requires full duration + audio + quality bar
+
+### Changed
+- One-shot / SKILL / context packs / harness prompt: full cut + audio is mandatory for RENDERED
+- Plugin **3.19.0**
+
 ## 3.18.0 — 2026-10-10
 
 **Library access when TikTok / Meta gate you** — agents still see styles across platforms.

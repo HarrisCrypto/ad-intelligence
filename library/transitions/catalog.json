@@ -1,0 +1,51 @@
+{
+  "id": "library-transitions",
+  "version": "1.0.0",
+  "purpose": "Executable transition presets — pick by id in render plans / CapCut / ffmpeg xfade",
+  "default_for_short_form_dr": "tr_hard_cut",
+  "items": [
+    {
+      "id": "tr_hard_cut",
+      "name": "Hard cut",
+      "duration_s": 0,
+      "ffmpeg": { "filter": null, "note": "concat demuxer or hard edit — no xfade" },
+      "capcut": { "transition": "none", "duration_s": 0 },
+      "when": ["short-form DR body", "UI state changes", "void→answer"],
+      "avoid_when": [],
+      "anti_slop": ["Do not replace with 0.5s dissolve by default"]
+    },
+    {
+      "id": "tr_whip",
+      "name": "Whip / directional blur cut",
+      "duration_s": 0.12,
+      "ffmpeg": {
+        "filter": "xfade=transition=slideleft:duration=0.12",
+        "note": "Use only at reveal beats; keep ≤0.15s"
+      },
+      "capcut": { "transition": "whip-ish slide", "duration_s": 0.12 },
+      "when": ["before/after reveal", "punchline cut"],
+      "avoid_when": ["UI documentary states", "CTA endcard in"],
+      "anti_slop": ["Long whoosh with stock SFX"]
+    },
+    {
+      "id": "tr_match_cut",
+      "name": "Match-cut (aligned framing)",
+      "duration_s": 0,
+      "ffmpeg": { "filter": null, "note": "Editorial — same framing both sides; hard cut" },
+      "capcut": { "transition": "none", "align": "match subject position" },
+      "when": ["before/after", "phone void vs answered UI occupying same region"],
+      "avoid_when": ["Mismatched angles sold as proof"],
+      "anti_slop": ["Different lens height"]
+    },
+    {
+      "id": "tr_fade_soft",
+      "name": "Soft fade (discouraged for DR)",
+      "duration_s": 0.4,
+      "ffmpeg": { "filter": "xfade=transition=fade:duration=0.4" },
+      "capcut": { "transition": "dissolve", "duration_s": 0.4 },
+      "when": ["brand film only", "endcard soft out"],
+      "avoid_when": ["home-services DR body", "≥6 beat slow timelines"],
+      "anti_slop": ["Chaining fades as the whole edit — fm_slow_pacing"]
+    }
+  ]
+}

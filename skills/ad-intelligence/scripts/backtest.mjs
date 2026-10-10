@@ -79,6 +79,37 @@ try {
   /* ignore */
 }
 ok("probe-harness --json", !!probeJ && probeJ.files_missing?.length === 0, probeJ?.recommended_rung_hint);
+ok(
+  "probe reports hardware + ceiling",
+  !!probeJ?.runtime?.hardware?.cores &&
+    typeof probeJ.runtime.hardware.gpu?.present === "boolean" &&
+    !!probeJ.runtime.hardware.quality_ceiling,
+  probeJ?.runtime?.hardware?.gpu?.present === false ? "CPU-only ceiling" : "GPU"
+);
+ok(
+  "typography library provisioned",
+  fs.existsSync(path.join(REPO, "library/typography/fonts/anton/Anton-Regular.ttf")) &&
+    fs.existsSync(path.join(REPO, "library/typography/fallback-map.json"))
+);
+{
+  const bh = runNode("brand-harvest.mjs", ["https://oplyai.com", "--json"]);
+  let bhJ = null;
+  try {
+    bhJ = JSON.parse(bh.stdout || "{}");
+  } catch {
+    /* ignore */
+  }
+  ok(
+    "brand-harvest oplyai.com ASSET_VERIFIED",
+    bh.status === 0 &&
+      bhJ?.ok &&
+      bhJ.palette?.background?.tag === "ASSET_VERIFIED" &&
+      bhJ.palette?.accent?.tag === "ASSET_VERIFIED" &&
+      /same brain/i.test(String(bhJ.brand?.tagline?.value || "")) &&
+      /access call/i.test(String(bhJ.copy?.ctas?.value?.[0] || "")),
+    bhJ?.brand?.tagline?.value || bh.stderr?.slice(0, 80)
+  );
+}
 
 // 4) Retrieve matrix
 console.log("\nRETRIEVE MATRIX");
@@ -290,6 +321,98 @@ if (fs.existsSync(studiesPath)) {
       (synJ?.issues || []).some((i) => i.id === "study-synthesis-cited-as-proof"),
     (synJ?.issues || []).map((i) => i.id).join(",")
   );
+
+  // shape-claims-pass must NOT fire on honest synthesis "structure only" labels
+  const synLabelPkg = path.join(ROOT, "packages", "_backtest-structure-only.md");
+  fs.writeFileSync(
+    synLabelPkg,
+    fs
+      .readFileSync(
+        path.join(ROOT, "examples", "voice-agent-front-desk.md"),
+        "utf8"
+      )
+      .replace(
+        /Study provenance:[^\n]*/i,
+        "Study provenance: observed:false · basis:synthesis — structure only — not proof"
+      )
+      .replace(
+        /Checklist gates:[^\n]*/i,
+        "Checklist gates: PASS (assembler handoff; NOT_RENDERED explicit)"
+      )
+      .replace(
+        /lint-package\.mjs:[^\n]*/i,
+        "lint-package.mjs: PASS"
+      )
+  );
+  const synLabelLint = runNode("lint-package.mjs", [synLabelPkg]);
+  let synLabelJ = null;
+  try {
+    synLabelJ = JSON.parse(synLabelLint.stdout || "{}");
+  } catch {
+    /* ignore */
+  }
+  ok(
+    "structure-only synthesis label does not trip shape-claims-pass",
+    !(synLabelJ?.issues || []).some((i) => i.id === "shape-claims-pass"),
+    (synLabelJ?.issues || []).map((i) => i.id).join(",")
+  );
+  try {
+    fs.unlinkSync(synLabelPkg);
+  } catch {
+    /* ignore */
+  }
+
+  // B7.3 — NOT_RENDERED header cannot opt out when Render log has job ids
+  {
+    const src = fs.readFileSync(
+      path.join(ROOT, "examples/lint-corpus/fail-incomplete-hook-only.md"),
+      "utf8"
+    );
+    const contradict = src.replace(
+      /Render status:\s*RENDERED/i,
+      "Render status: NOT_RENDERED"
+    );
+    const tmp = path.join(ROOT, "packages", "_backtest-status-contradict.md");
+    fs.writeFileSync(tmp, contradict);
+    const r = runNode("lint-package.mjs", [tmp]);
+    let j = null;
+    try {
+      j = JSON.parse(r.stdout || "{}");
+    } catch {
+      /* ignore */
+    }
+    ok(
+      "lint catches render-status-contradicts-log (B7.3)",
+      r.status !== 0 &&
+        (j?.issues || []).some((i) => i.id === "render-status-contradicts-log") &&
+        (j?.issues || []).some((i) => i.id === "incomplete-hook-only"),
+      (j?.issues || []).map((i) => i.id).join(",")
+    );
+    try {
+      fs.unlinkSync(tmp);
+    } catch {
+      /* ignore */
+    }
+  }
+
+  for (const [rel, ruleId] of [
+    ["examples/lint-corpus/fail-incomplete-hook-only.md", "incomplete-hook-only"],
+    ["examples/lint-corpus/fail-silent-cut-incomplete.md", "silent-cut-incomplete"],
+    ["examples/lint-corpus/fail-shape-claims-pass.md", "shape-claims-pass"],
+  ]) {
+    const r = runNode("lint-package.mjs", [rel]);
+    let j = null;
+    try {
+      j = JSON.parse(r.stdout || "{}");
+    } catch {
+      /* ignore */
+    }
+    ok(
+      `lint catches ${ruleId}`,
+      r.status !== 0 && (j?.issues || []).some((i) => i.id === ruleId),
+      (j?.issues || []).map((i) => i.id).join(",")
+    );
+  }
   const voice = retrieveCompact("voice ai", "meta").json;
   ok(
     "voice ai study = missed-call",

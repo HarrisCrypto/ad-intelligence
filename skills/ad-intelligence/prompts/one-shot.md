@@ -97,7 +97,8 @@ Rung = assembler. Name Wan / LTX / Grok / Kling / Hailuo / stills+CapCut. Same s
 
 1. Lint `"ok": true`  
 2. Study + model named; structure emulated, words original  
-3. Full timed duration covered (finish-the-cut contract)  
-4. Stranger can mute-watch 0–3s and know the situation  
-5. UI/product looks authentic — generated flat documentary chrome OK; rubber AI UI not OK  
+3. Full timed duration covered (finish-the-cut contract) — **not** an 8s silent hook  
+4. Audio laid in post (VO and/or SFX and/or paid-safe bed) — silent model exports are incomplete  
+5. Stranger can mute-watch 0–3s and know the situation; with sound, hears the full story  
+6. UI/product looks authentic — generated flat documentary chrome OK; rubber AI UI not OK  
 

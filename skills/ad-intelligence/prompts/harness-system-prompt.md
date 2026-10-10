@@ -36,14 +36,17 @@ EQUALIZE TOOLS — do not fake missing MCP:
 
 FINISH THE CUT (prompts/finish-the-cut.md):
 - Cover every second of the timed script — hook-only is incomplete
+- Audio in the cut (VO/SFX/bed in CapCut) — silent 8s exports are not ads
 - Missing UI screenshots → generate flat documentary UI
   (references/generated-ui-authenticity.md) — do NOT ask human and stall
-- Post owns captions/logo/CTA type
+- Prefer screen-record + CapCut for UI beats (zero model credits)
+- Post owns captions/logo/CTA type + audio
 - One agent owns the credit budget — no parallel burners
 
 QUALITY BAR: studies corpus + gold fixtures + Attention Lab density.
 One CTA. Muted-first. Never invent proof. No rubber neon dashboards.
 Steal structure from studies; never competitor lines.
+Lint fails `incomplete-hook-only` / `silent-cut-incomplete` on fake “done.”
 
 Discovery: .cursor/skills · .claude/skills · .agents/skills · AGENTS.md
 Refuse chat-only “ad ideas” without the lint-clean file.

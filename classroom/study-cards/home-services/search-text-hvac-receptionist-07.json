@@ -1,0 +1,93 @@
+{
+  "id": "search-text-hvac-receptionist-07",
+  "status": "confirmed",
+  "source": {
+    "platform": "google",
+    "url_or_library_id": "synthesis:study_fixture_search_text+google_ads_transparency",
+    "accessed": "2026-10-10",
+    "rights": "annotation-only",
+    "verified_via": "synthesis"
+  },
+  "niche": "home-services",
+  "format": "search_text",
+  "structure": {
+    "format": "search_text",
+    "timing_observable": false,
+    "format_note": "RSA/search — do NOT invent 0–3s video beats from this card"
+  },
+  "duration_s": null,
+  "aspect": "n/a",
+  "linked_study_id": "study_fixture_search_text",
+  "hook": {
+    "mechanism": "vertical-first headline qualification",
+    "first_second_description": "Primary headline names HVAC + receptionist job — not a video second",
+    "on_screen_text": "HVAC After-Hours Answering"
+  },
+  "shots": [
+    {
+      "t_start": null,
+      "t_end": null,
+      "purpose": "headline: vertical + offer noun",
+      "source": "synthesis"
+    },
+    {
+      "t_start": null,
+      "t_end": null,
+      "purpose": "description: hours / mechanism",
+      "source": "synthesis"
+    },
+    {
+      "t_start": null,
+      "t_end": null,
+      "purpose": "sitelink: How it works",
+      "source": "synthesis"
+    },
+    {
+      "t_start": null,
+      "t_end": null,
+      "purpose": "sitelink: Reviews / proof path",
+      "source": "synthesis"
+    }
+  ],
+  "stats": {
+    "shot_count": 0,
+    "avg_shot_s": 0,
+    "cuts_per_10s": 0,
+    "longest_hold_s": 0,
+    "first_cut_at_s": 0,
+    "text_density": "headline ≤30 chars preferred",
+    "loudness_lufs": null,
+    "stats_source": "n/a — search_text"
+  },
+  "audio": {
+    "note": "none — search text"
+  },
+  "look": {
+    "note": "platform RSA typography"
+  },
+  "cta": {
+    "primary": "call / landing NAP match"
+  },
+  "offer_and_proof": {
+    "offer": "after-hours answering for HVAC",
+    "proof": "sitelinks split mechanism vs proof"
+  },
+  "why_it_works": "Segment-in-headline filters the right clicker; mechanism and proof as separate sitelinks avoid blend.",
+  "steal": [
+    "Vertical-first headline",
+    "Hours when that is the pain",
+    "Sitelinks: mechanism vs proof split"
+  ],
+  "what_not_to_copy": [
+    "Competitor brand lines",
+    "Invented video beats / 0–3s from search text",
+    "Claimed CTR/ROAS"
+  ],
+  "tags": [
+    "home-services",
+    "search_text",
+    "google",
+    "hvac",
+    "format-honesty"
+  ]
+}
