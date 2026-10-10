@@ -1,5 +1,22 @@
 # Changelog
 
+## 3.6.0 — 2026-10-10
+
+Three targeted upgrades for agents **without** Seedance/Higgsfield, plus post-render QA and a voice/front-desk gold fixture.
+
+### Added
+- `references/creative-stack/assembler-pipeline.md` — third rung (keyframes + short clips + CapCut); sheets/ledger/lint unchanged
+- `checklists/render-qa.json` — post-render / assembler export checks (hands, text-melt, identity drift, audio, frozen beats, duration, endcard, muted-fail, …)
+- `examples/voice-agent-front-desk.md` — full-depth lint-clean phone-call / front-desk service fixture (assembler-aware)
+
+### Changed
+- SKILL.md, one-stop pipeline, output template, first-time-right: pipeline rung + render-qa gates
+- PROOF / demo / INSTALL / demo-quality-gates: list voice fixture + assembler path
+- Plugin **3.6.0**
+
+### Preserved
+- Connected + handoff paths unchanged; dual-track; claim firewall; mechanical lint; prior gold fixtures
+
 ## 3.5.0 — 2026-10-10
 
 Toward-perfect layer: **visual design examples**, stress briefs, lint corpus demo, deeper compliance, richer signals — gates still intact.

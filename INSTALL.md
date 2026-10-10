@@ -2,7 +2,7 @@
 
 **Repo:** https://github.com/HarrisCrypto/ad-intelligence  
 **Skill root:** `skills/ad-intelligence/`  
-**Version:** **3.5.0** — see [CHANGELOG.md](./CHANGELOG.md)
+**Version:** **3.6.0** — see [CHANGELOG.md](./CHANGELOG.md)
 
 ---
 
@@ -24,18 +24,19 @@ Plugin metadata lives at `.cursor-plugin/` (`plugin.json` + `marketplace.json`) 
 Copy this block when you need the agent to self-orient with no extra explanation:
 
 ```text
-You are using Ad Intelligence (skills/ad-intelligence/) v3.5.
+You are using Ad Intelligence (skills/ad-intelligence/) v3.6.
 1. Read SKILL.md and pipelines/one-stop-ad-maker.md
 2. Quality bar: full-depth examples (beauty, local-service-trust, saas-demo-pas,
-   physical-product-hero) + visual frames in examples/visual/
-3. For messy/regulated briefs, read examples/stress-briefs/ expected traps + policy-precheck.json
-4. Retrieve: node scripts/retrieve.mjs --niche <niche|alias> --platform <platform> --limit 5
-5. Fill output-template.md: sheets, claim ledger, timed script, render plan + log,
-   self-critique, AI disclosure (HUMAN_REVIEW_REQUIRED when policy says so)
-6. If generators connected → call them (connected-run-protocol.md). Else → MCP-correct handoffs.
-7. Ship only if: node scripts/lint-package.mjs <package.md> exits 0
-   (optional sanity: node scripts/demo-quality-gates.mjs)
-Never invent proof. Dual-track default for serious brands. One CTA. Muted-first.
+   physical-product-hero, voice-agent-front-desk) + visual frames in examples/visual/
+3. Pick pipeline rung: connected MCP → call tools; handoff prompts if those tools
+   exist for the user; assembler-pipeline.md if you only have stills/short clips/CapCut
+4. For messy/regulated briefs, read examples/stress-briefs/ + policy-precheck.json
+5. Retrieve: node scripts/retrieve.mjs --niche <niche|alias> --platform <platform> --limit 5
+6. Fill output-template.md: sheets, claim ledger, timed script, render plan + log,
+   render-qa, self-critique, AI disclosure
+7. Ship only if: lint-package.mjs exits 0 AND render-qa.json run or emitted
+   (optional: node scripts/demo-quality-gates.mjs)
+Never invent proof. Never claim rendered without job/export ids. One CTA. Muted-first.
 ```
 
 One-shot user prompt:
@@ -118,6 +119,8 @@ No hosted database required. Optional private longevity notes: see [CONTRIBUTING
 - [PROOF.md](./PROOF.md) — before/after vs generic slop  
 - [Visual gallery](./skills/ad-intelligence/examples/visual/index.html) — actual storyboard design frames  
 - [demo/](./skills/ad-intelligence/demo/) — canonical quality-target pointers  
-- Full-depth lint-clean fixtures: beauty · local · SaaS · physical (`examples/`)  
+- Full-depth lint-clean fixtures: beauty · local · SaaS · physical · voice/front-desk (`examples/`)  
+- Assembler path (no single-pass gen): `skills/ad-intelligence/references/creative-stack/assembler-pipeline.md`  
+- Render QA: `skills/ad-intelligence/checklists/render-qa.json`  
 - Stress briefs: `skills/ad-intelligence/examples/stress-briefs/`  
 - Gate demo: `node skills/ad-intelligence/scripts/demo-quality-gates.mjs`

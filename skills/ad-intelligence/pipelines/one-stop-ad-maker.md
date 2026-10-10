@@ -3,8 +3,9 @@
 Default path for **any company / any niche**. Goal: **first-shot production packages**.
 
 ```
-BRIEF → RETRIEVE → ASSET LADDER / SHEETS → LEDGER → RENDER PLAN → GENERATE/HANDOFF
-→ FINISH → SELF-CRITIQUE → LINT/QA → DISTRIBUTE → SCALE → REVISE (minimal lever)
+BRIEF → RETRIEVE → ASSET LADDER / SHEETS → LEDGER → RENDER PLAN
+→ CONNECTED / HANDOFF / ASSEMBLER → FINISH → SELF-CRITIQUE → LINT + RENDER-QA
+→ DISTRIBUTE → SCALE → REVISE (minimal lever)
 ```
 
 ## 1) Brief (≤3 blocking questions)
@@ -17,9 +18,17 @@ BRIEF → RETRIEVE → ASSET LADDER / SHEETS → LEDGER → RENDER PLAN → GENE
 | Proof on hand | user — never invent |
 | Asset ladder | S0 text / S1 URL / S2 photos / S3 footage+talent |
 | Dual-track? | default YES for serious brands |
-| Tool access | connected MCP / handoff / live |
+| Tool access | connected MCP / handoff / **assembler** / live |
 
 List **Assumptions**. Ask only for offer, product refs, regulated claims if missing.
+
+### Pipeline rung (pick one)
+
+| Rung | When | Follow |
+| --- | --- | --- |
+| Connected | Seedance / Higgsfield / peer MCP in session | `connected-run-protocol.md` — **call tools** |
+| Handoff | Those tools exist for the user, not in-session | Seedance contract + Higgsfield briefs (unchanged) |
+| **Assembler** | No single-pass long video gen — only stills / short clips / CapCut | `assembler-pipeline.md` |
 
 ## 2) Retrieve
 
@@ -37,30 +46,36 @@ Also: swipe-signals (only when niche matched), style catalog, mistakes, platform
 
 | Track | Stack |
 | --- | --- |
-| High-production | Sheets → stills → Seedance units → CapCut |
+| High-production | Sheets → stills → Seedance units **or assembler keyframes/clips** → CapCut |
 | Viral / UGC | Sheets → UGC / creator → CapCut |
 | Static | Ads Studio / photoshoot / Canva |
-| Scale | Ad Multiplier (one variable) |
+| Voice / front-desk | UI screen record + VO in post (assembler-friendly) |
+| Scale | Ad Multiplier (one variable) when available |
 
 ## 4) Consistency + asset ladder — hard gate
 
 - [ ] Product sheet inlined (mode pack/ui/place/multi-sku) with tags  
-- [ ] Character sheet if talent  
+- [ ] Character sheet if talent / voice identity notes if VO-led  
 - [ ] **S0: no product pixels** — product-less units or REQUEST refs  
 - [ ] S1 connected: fetch URL → photoshoot → then video  
 - [ ] Claim & asset ledger started  
-- [ ] Disclosure plan if AI talent (no fake personal endorsements)
+- [ ] Disclosure plan if AI talent/voice (no fake personal endorsements)
 
-## 5) Render plan → generate
+## 5) Render plan → generate / handoff / assemble
 
 Emit timed script + **Render plan** (`render-plan.md`):
 
-1. Hook units (5–8s) ×3 drafts when connected  
+1. Hook units (5–8s) ×3 drafts when connected — **or** keyframe K1 + short clip C1 on assembler  
 2. Body/CTA units (split ≤ model max)  
 3. Static twin  
 4. Cinema twin if dual-track (same locks; separate aspect generates)
 
-Connected → `connected-run-protocol.md`. Handoff → paste-ready prompts + mcp_params placeholders.
+- Connected → `connected-run-protocol.md`  
+- Handoff → paste-ready prompts + mcp_params placeholders  
+- Assembler → `assembler-pipeline.md` (keyframes + short clips + finish in post)
+
+Prefer real stills / screen record / image-to-video over pure text-to-video when identity matters.  
+Burn captions, endcard, logo, and legal **in post** — not inside the model.
 
 ## 6) Finish
 
@@ -77,7 +92,8 @@ node scripts/lint-package.mjs <package.md>
 ```
 
 `first-time-right.json` — lint-pass overrides self-scores.  
-Render-acceptance: job ids or explicit NOT_RENDERED.
+**Render QA:** `checklists/render-qa.json` on exports (or emit checklist if NOT_RENDERED).  
+Render-acceptance: job/export ids or explicit NOT_RENDERED — never fake PASS.
 
 ## 9) Distribute
 
@@ -86,18 +102,20 @@ Naming: `brand_pattern_posture_aspect_unit_variant`
 
 ## 10) Scale
 
-Ad Multiplier / Spark — preserve locks.
+Ad Multiplier / Spark — preserve locks. Assembler: swap one variable per cut.
 
 ## 11) Revise (kill redo loops)
 
-Classify → edit one unit_id / add ref / recut — sheets immutable unless new user assets. Bump package version; re-lint.
+Classify → edit one unit_id / add ref / recut — sheets immutable unless new user assets. Bump package version; re-lint; re-run render-QA on changed exports.
 
 ## Agent self-check before “done”
 
 - [ ] Pattern ids + retrieve warnings handled  
+- [ ] Pipeline rung stated (connected / handoff / assembler)  
 - [ ] Sheets + ledger + render plan  
 - [ ] Dual-track if serious brand  
 - [ ] No invented proof  
 - [ ] Lint exit 0  
 - [ ] NOT_RENDERED or receipt  
+- [ ] Render-QA run or emitted  
 - [ ] Self-critique + variants  

@@ -101,9 +101,19 @@
       "fail_if": "Empty critique or uniform uncited 5s"
     },
     {
+      "id": "pipeline-rung",
+      "ask": "Pipeline rung stated: connected / handoff / assembler, matching available tools?",
+      "fail_if": "Assumes Seedance/Higgsfield when unavailable, or skips assembler guidance when only stills/short clips exist"
+    },
+    {
       "id": "render-acceptance",
-      "ask": "If connected: frame audit + receipt. If handoff: NOT_RENDERED explicit?",
-      "fail_if": "Claims rendered PASS without job ids"
+      "ask": "If connected/assembler exports exist: receipts + render-qa. If handoff/assembler plan only: NOT_RENDERED explicit?",
+      "fail_if": "Claims rendered PASS without job/export ids"
+    },
+    {
+      "id": "render-qa",
+      "ask": "checklists/render-qa.json run on exports OR emitted for finisher (N/A when NOT_RENDERED)?",
+      "fail_if": "Exports claimed done with no hands/text/identity/audio/muted/CTA checks"
     },
     {
       "id": "lint-pass",

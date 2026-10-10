@@ -5,7 +5,7 @@
 **Default full-depth fixture:** [`../examples/beauty-dtc-dual-track.md`](../examples/beauty-dtc-dual-track.md)
 
 **Also full-depth (lint-clean):**  
-[`local-service-trust.md`](../examples/local-service-trust.md) · [`saas-demo-pas.md`](../examples/saas-demo-pas.md) · [`physical-product-hero.md`](../examples/physical-product-hero.md)
+[`local-service-trust.md`](../examples/local-service-trust.md) · [`saas-demo-pas.md`](../examples/saas-demo-pas.md) · [`physical-product-hero.md`](../examples/physical-product-hero.md) · [`voice-agent-front-desk.md`](../examples/voice-agent-front-desk.md)
 
 ## Must be present in every shipped package
 

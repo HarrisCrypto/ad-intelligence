@@ -17,6 +17,7 @@ const GOLD = [
   "examples/local-service-trust.md",
   "examples/saas-demo-pas.md",
   "examples/physical-product-hero.md",
+  "examples/voice-agent-front-desk.md",
 ];
 
 function lint(rel) {

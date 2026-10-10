@@ -6,6 +6,7 @@
 | `local-service-trust.md` | **Full-depth** | lint `"ok": true` |
 | `saas-demo-pas.md` | **Full-depth** | lint `"ok": true` |
 | `physical-product-hero.md` | **Full-depth** | lint `"ok": true` |
+| `voice-agent-front-desk.md` | **Full-depth** | lint `"ok": true` · assembler-aware |
 | `visual/` | Design frames | Open `visual/index.html` |
 | `stress-briefs/` | Drill prompts | Expected traps listed |
 | `lint-corpus/` | Must **fail** lint | Used by demo-quality-gates |
@@ -15,3 +16,6 @@
 ```bash
 node ../scripts/demo-quality-gates.mjs
 ```
+
+No Seedance/Higgsfield? See `../references/creative-stack/assembler-pipeline.md`.  
+Post-export checks: `../checklists/render-qa.json`.
