@@ -38,8 +38,10 @@ Agents fail when they fill ledgers before having an idea — or render a hook an
    Paste studies.primary (+ human_build steps) — viral / performance / award archetypes.
    Paste primary / challenger / dual_track_twin (twin ≠ primary).
    Paste attention_models.primary + challenger (timing included).
-   Open research URLs + examples/visual/attention-lab.html — STRUCTURE only.
-   Optional 10 min in public libraries (studies[].research_where).
+   Research access plan:
+   node scripts/library-access.mjs --niche <niche> --platform <platform> --keyword <kw>
+   Open entry_url / deep_link. If TikTok/Meta login-wall → fallbacks (Google Transparency is login_free).
+   Attention Lab always works offline. Note STRUCTURE only (+ format: video_timed vs search_text).
 
 4. EMULATE + HUMAN BUILD + WRITE CREATIVE FIRST:
    a) Study id + provenance (observed/basis) + attention model + angle axis
@@ -372,7 +374,8 @@ Replace every `[[LIKE_THIS]]`. Tags must be USER_SUPPLIED | ASSET_VERIFIED | PLA
 - Study format: [[video_timed|search_text|display_static|…]] · timing_observable:[[true|false]] — [[if false, do NOT invent 0–3s video beats from this study]]
 - Attention model id (primary): `[[am_* from retrieve attention_models]]`
 - Attention model id (challenger): `[[am_*]]`
-- Research notes (public libraries — structure only): [[Meta/TikTok/X/YouTube — what timing you stole]]
+- Research notes (public libraries — structure only): [[what you saw + format]]
+- Library access: [[login_free|partial_free|often_walled|offline]] — [[if walled, which fallbacks: Google Transparency / Meta deep link / Attention Lab]]
 - Flow id: `[[flow or n/a]]`
 - Hook family ids: [[…]]
 - Trend class (if any): [[…|none]]

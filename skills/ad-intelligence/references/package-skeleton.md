@@ -33,7 +33,8 @@ Replace every `[[LIKE_THIS]]`. Tags must be USER_SUPPLIED | ASSET_VERIFIED | PLA
 - Study format: [[video_timed|search_text|display_static|…]] · timing_observable:[[true|false]] — [[if false, do NOT invent 0–3s video beats from this study]]
 - Attention model id (primary): `[[am_* from retrieve attention_models]]`
 - Attention model id (challenger): `[[am_*]]`
-- Research notes (public libraries — structure only): [[Meta/TikTok/X/YouTube — what timing you stole]]
+- Research notes (public libraries — structure only): [[what you saw + format]]
+- Library access: [[login_free|partial_free|often_walled|offline]] — [[if walled, which fallbacks: Google Transparency / Meta deep link / Attention Lab]]
 - Flow id: `[[flow or n/a]]`
 - Hook family ids: [[…]]
 - Trend class (if any): [[…|none]]

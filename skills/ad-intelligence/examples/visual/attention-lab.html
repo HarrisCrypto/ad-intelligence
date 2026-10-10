@@ -201,7 +201,11 @@
   <main>
     <section>
       <h2>Open live ads (legal research)</h2>
-      <p class="section-note">Spend 10 minutes here before writing. Note hook type, time-to-product, text density — not brand copy.</p>
+      <p class="section-note">
+        Spend 10 minutes here before writing. Note hook type, time-to-product, text density — not brand copy.
+        <strong>Login walls ≠ skip:</strong> use each card’s entry link + fallbacks (Google Transparency is login-free).
+        Plan printer: <code>node scripts/library-access.mjs --niche … --platform …</code>
+      </p>
       <div class="lib-grid" id="libs"></div>
     </section>
 
@@ -253,14 +257,34 @@
     }
 
     const libsEl = document.getElementById("libs");
-    libsEl.innerHTML = data.public_libraries.map((lib) => `
+    const accessClass = (a) => {
+      if (a === "login_free" || a === "offline") return "tag";
+      if (a === "partial_free") return "tag amber";
+      return "tag amber";
+    };
+    libsEl.innerHTML = data.public_libraries.map((lib) => {
+      const href = lib.entry_url || lib.url;
+      const isOffline = lib.access === "offline" || !/^https?:/i.test(href);
+      const link = isOffline
+        ? `<p><a href="${href}">${href}</a> <span class="tag">always works</span></p>`
+        : `<p><a href="${href}" target="_blank" rel="noopener">${href.replace(/^https?:\/\//, "")}</a></p>`;
+      const fb = (lib.fallbacks || []).length
+        ? `<p><span class="tag amber">fallbacks</span> ${(lib.fallbacks || []).join(" · ")}</p>`
+        : "";
+      const wall = lib.when_walled ? `<p>${lib.when_walled}</p>` : "";
+      return `
       <article class="lib-card">
         <h3>${lib.name}</h3>
-        <div class="tags">${lib.platforms.map((p) => `<span class="tag amber">${p}</span>`).join("")}</div>
+        <div class="tags">
+          <span class="${accessClass(lib.access)}">${lib.access || "unknown"}</span>
+          ${lib.platforms.map((p) => `<span class="tag amber">${p}</span>`).join("")}
+        </div>
         <p>${lib.how}</p>
-        <p><a href="${lib.url}" target="_blank" rel="noopener">${lib.url.replace(/^https?:\/\//, "")}</a></p>
-      </article>
-    `).join("");
+        ${link}
+        ${fb}
+        ${wall}
+      </article>`;
+    }).join("");
 
     const platforms = new Set();
     const niches = new Set();

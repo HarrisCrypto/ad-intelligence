@@ -213,6 +213,33 @@ ok(
   fs.existsSync(path.join(ROOT, "scripts", "ingest-blueprint.mjs"))
 );
 ok(
+  "library-access.mjs",
+  fs.existsSync(path.join(ROOT, "scripts", "library-access.mjs"))
+);
+{
+  const la = runNode("library-access.mjs", [
+    "--niche",
+    "saas",
+    "--platform",
+    "tiktok",
+    "--keyword",
+    "voice agent",
+  ]);
+  let plan = null;
+  try {
+    plan = JSON.parse(la.stdout || "{}");
+  } catch {
+    /* ignore */
+  }
+  ok(
+    "library-access tiktok has fallbacks",
+    la.status === 0 &&
+      plan?.primary?.access === "partial_free" &&
+      (plan?.fallbacks || []).some((f) => f.access === "login_free"),
+    plan?.primary?.access
+  );
+}
+ok(
   "fresh-clone-prove.mjs",
   fs.existsSync(path.join(ROOT, "scripts", "fresh-clone-prove.mjs"))
 );

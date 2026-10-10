@@ -1,8 +1,8 @@
 {
   "name": "ad-intelligence",
   "displayName": "Ad Intelligence",
-  "version": "3.17.0",
-  "description": "One-shot agency-grade ads: study format honesty (search≠video), lint gates, ingest, finish the cut.",
+  "version": "3.18.0",
+  "description": "One-shot agency-grade ads: library access ladder when TikTok/Meta gate, study honesty, finish the cut.",
   "author": {
     "name": "HarrisCrypto"
   },

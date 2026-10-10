@@ -12,7 +12,7 @@ description: >-
   Higgsfield. Probe → study → emulate → human_build → ≥6 beats → finish-the-cut → lint.
 compatibility: Requires Node 18+ for scripts. Optional network for URL brief + libraries. MCP video tools optional (connected rung).
 metadata:
-  version: "3.17.0"
+  version: "3.18.0"
   open_standard: agentskills
 ---
 
@@ -31,7 +31,7 @@ Ads, creatives, hooks, UGC, Meta/TikTok/Instagram/X/YouTube, “ads for my site,
 3. Optional brand file? Read `references/brand-context.md` or `.agents/brand-context.md` if present
 4. `node scripts/start-package.mjs --out packages/<brand>-ad.md`
 5. `node scripts/retrieve.mjs --niche <n> --platform <p> --limit 5 --compact` — paste **studies** + attention models + pattern picks
-6. Open [`examples/visual/attention-lab.html`](examples/visual/attention-lab.html) + research URLs — emulate structure ([`studies/README.md`](studies/README.md))
+6. Research access: `node scripts/library-access.mjs --niche <n> --platform <p> --keyword …` — if TikTok/Meta wall, walk login-free fallbacks (Google Transparency + Meta deep links + Attention Lab). Emulate structure ([`ad-libraries.md`](references/ad-libraries.md) · [`studies/README.md`](studies/README.md))
 7. **Creative:** study + attention model + [angle axes](references/angle-axes.md) → Concept → ≥6 exact-VO rows → Craft → unit prompts via [`human-build-os.md`](references/human-build-os.md)
 8. Fill `[[BRACKETS]]` → `node scripts/lint-package.mjs …` until `"ok": true`
 9. **Finish the cut** ([`prompts/finish-the-cut.md`](prompts/finish-the-cut.md)) — full duration; generate UI if needed ([`generated-ui-authenticity.md`](references/generated-ui-authenticity.md)); no “send screenshots” stall
@@ -62,7 +62,7 @@ No shell: paste [`prompts/context-pack-lite.md`](prompts/context-pack-lite.md) �
 | Attention lab | `examples/visual/attention-lab.html` |
 | Finish full cut (no stall) | `prompts/finish-the-cut.md` |
 | Generated UI (no screenshots) | `references/generated-ui-authenticity.md` |
-| Public libraries | `references/ad-libraries.md` |
+| Public libraries + access ladder | `references/ad-libraries.md` · `scripts/library-access.mjs` |
 | Multi-lens OS | `references/multi-lens-os.md` |
 | Style catalog | `references/style-catalog.md` |
 | Elite craft | `references/elite-creative-os.md` |
