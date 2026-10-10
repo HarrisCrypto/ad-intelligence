@@ -1,34 +1,42 @@
-# Demo — canonical quality target
+# Demo — canonical quality targets
 
-**Point agents here** when you need the single quality bar for a first-shot package.
+**Point agents here** when you need the quality bar for a first-shot package.
 
-## Canonical package (full-depth, lint-clean)
+## Full-depth fixtures (lint-clean)
 
-→ **[`../examples/beauty-dtc-dual-track.md`](../examples/beauty-dtc-dual-track.md)**
+Any of these is a valid depth target — pick the closest niche:
 
-That file is the required depth for shipable work: brief, retrieval, consistency sheets, claim ledger, timed script, render plan (real MCP roles), captions, one CTA, AI disclosure, self-critique + A/B/C, first-time-right / lint.
+| Niche | Package |
+| --- | --- |
+| Beauty DTC | [`../examples/beauty-dtc-dual-track.md`](../examples/beauty-dtc-dual-track.md) |
+| Local service | [`../examples/local-service-trust.md`](../examples/local-service-trust.md) |
+| SaaS | [`../examples/saas-demo-pas.md`](../examples/saas-demo-pas.md) |
+| Physical product | [`../examples/physical-product-hero.md`](../examples/physical-product-hero.md) |
+
+Default bookmark if niche unknown: **beauty** (also [`canonical-quality-target.md`](./canonical-quality-target.md)).
+
+Each includes: consistency sheets + provenance, claim ledger, timed script, MCP-correct render plan, self-critique with evidence, A/B/C variants, AI disclosure/rights.
 
 ```bash
 cd ..   # skills/ad-intelligence
 node scripts/lint-package.mjs examples/beauty-dtc-dual-track.md
-# expect: "ok": true
+node scripts/lint-package.mjs examples/local-service-trust.md
+node scripts/lint-package.mjs examples/saas-demo-pas.md
+node scripts/lint-package.mjs examples/physical-product-hero.md
+# expect: "ok": true on each
 ```
 
 ## Agent one-liner
 
 ```text
-Match the depth and honesty of skills/ad-intelligence/examples/beauty-dtc-dual-track.md
-(also linked from demo/). Pass lint-package.mjs before delivery.
+Match the depth and honesty of the full-depth fixtures in skills/ad-intelligence/examples/
+(beauty-dtc-dual-track, local-service-trust, saas-demo-pas, or physical-product-hero).
+Pass lint-package.mjs before delivery. See also demo/.
 ```
 
-## Not the quality bar
+## Shape-only (not the quality bar)
 
-These are **shape-only** skeletons (structure reminders, not ship targets):
-
-- `../examples/local-service-trust.md`
-- `../examples/saas-demo-pas.md`
-- `../examples/physical-product-hero.md`
-- `../examples/entertainment-creator-series.md`
+- [`../examples/entertainment-creator-series.md`](../examples/entertainment-creator-series.md) — structure reminder only; deepen before ship
 
 ## Human proof
 

@@ -3,6 +3,10 @@
 Copy this structure every time. Do not omit sections; use `N/A — reason` if needed.  
 **Not done until:** Claim ledger filled · Render plan complete · Self-critique done · `node scripts/lint-package.mjs <file>` exits 0 (or same rules checked manually).
 
+**Gold fixtures that follow this template (lint-clean):**  
+`examples/beauty-dtc-dual-track.md`, `local-service-trust.md`, `saas-demo-pas.md`, `physical-product-hero.md`.  
+Required sections include: Consistency systems · Claim & asset ledger · Render plan · Render log · Caption · CTA · AI disclosure & rights · Self-critique & variants.
+
 Use four-backtick outer fences in your reply if you nest code blocks, so Seedance/JSON stubs cannot close the template early.
 
 ````markdown

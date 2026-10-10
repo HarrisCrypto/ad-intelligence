@@ -26,7 +26,9 @@
 | Private signals overlay | 2026-10-10 | `private-signals.example.json` → local `private-signals.json` |
 | Lint package gate | 2026-10-10 | Beauty gold must stay `"ok": true` |
 | Proof / demo adoption layer | 2026-10-10 | `PROOF.md` + `demo/` |
+| Full-depth gold fixtures (4 niches) | 2026-10-10 | beauty, local, saas, physical — all lint-clean |
 
 **Changelog (mini):**  
 - 2026-10-10 — v3.2: removed invented `product_hero` file roles; multi-clip + cost/receipt.  
-- 2026-10-10 — v3.3: adoption proof/install/contribute; swipe-signals.md + private overlay; tool-status table in README.
+- 2026-10-10 — v3.3: adoption proof/install/contribute; swipe-signals.md + private overlay; tool-status table in README.  
+- 2026-10-10 — v3.4: three more full-depth gold fixtures; multi-niche quality bar.

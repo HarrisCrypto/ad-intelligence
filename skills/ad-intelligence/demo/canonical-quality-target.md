@@ -1,8 +1,11 @@
 # Canonical quality target (pointer)
 
-> **Agents:** Treat this file as the bookmark. The full lint-clean package is next door.
+> **Agents:** Treat this file as the bookmark. Full lint-clean packages are in `examples/`.
 
-**Full-depth fixture:** [`../examples/beauty-dtc-dual-track.md`](../examples/beauty-dtc-dual-track.md)
+**Default full-depth fixture:** [`../examples/beauty-dtc-dual-track.md`](../examples/beauty-dtc-dual-track.md)
+
+**Also full-depth (lint-clean):**  
+[`local-service-trust.md`](../examples/local-service-trust.md) · [`saas-demo-pas.md`](../examples/saas-demo-pas.md) · [`physical-product-hero.md`](../examples/physical-product-hero.md)
 
 ## Must be present in every shipped package
 
@@ -12,9 +15,12 @@
 4. **Claim & asset ledger** — no invented reviews/metrics
 5. Timed script (muted-first hook; **one** primary CTA)
 6. **Render plan** with clip/unit ids and real MCP roles (`start_image`, `image_references`, …)
-7. Self-critique: rubric with evidence, 2–3 failure modes, A/B/C variants
-8. AI disclosure & rights
-9. `node scripts/lint-package.mjs <package.md>` → exit 0
+7. **Render log** (`NOT_RENDERED` if handoff-only)
+8. Self-critique: rubric with evidence, 2–3 failure modes, A/B/C variants
+9. AI disclosure & rights
+10. `node scripts/lint-package.mjs <package.md>` → exit 0
+
+Structure source of truth: [`../references/output-template.md`](../references/output-template.md)
 
 ## Dual-path
 
@@ -25,6 +31,9 @@ Not connected → same-quality handoffs; never claim rendered without job ids.
 
 ```bash
 node ../scripts/lint-package.mjs ../examples/beauty-dtc-dual-track.md
+node ../scripts/lint-package.mjs ../examples/local-service-trust.md
+node ../scripts/lint-package.mjs ../examples/saas-demo-pas.md
+node ../scripts/lint-package.mjs ../examples/physical-product-hero.md
 ```
 
 Human-facing before/after: repo [`PROOF.md`](../../../PROOF.md).
