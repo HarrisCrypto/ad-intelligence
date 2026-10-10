@@ -9,6 +9,7 @@
   "style": "local_service_trust",
   "funnel_stage": "bof_conversion",
   "niches": [
+    "local_services",
     "home_services",
     "medical",
     "legal",

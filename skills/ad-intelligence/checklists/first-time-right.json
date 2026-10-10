@@ -1,26 +1,42 @@
 {
   "id": "first-time-right-checklist",
   "name": "First-time-right creative QA (run before delivering)",
-  "rule": "Do not deliver an ad package until every applicable item is PASS or N/A with reason.",
+  "rule": "Do not deliver until every applicable item is PASS or N/A with reason. Mechanical lint-pass overrides self-scores.",
   "gates": [
     {
       "id": "brief-locked",
-      "ask": "Platform, niche, offer, funnel, production tier, and CTA are explicit?",
-      "fail_if": "Any of those are guessed without stating assumptions"
+      "ask": "Platform, niche, offer, funnel, production tier, and CTA are explicit or assumed via brief-defaults with Assumptions listed?",
+      "fail_if": "Guessed without stating assumptions; or >3 blocking questions with no package"
     },
     {
       "id": "pattern-cited",
-      "ask": "Primary pattern id + challenger id retrieved from the database?",
-      "fail_if": "Freewheeled style with no pattern id"
+      "ask": "Primary + challenger retrieved; retrieve warnings acknowledged?",
+      "fail_if": "Freewheeled style with no pattern id or ignored match_quality:none"
     },
     {
       "id": "single-job",
-      "ask": "One job-to-be-done stated in one sentence?",
+      "ask": "One job-to-be-done in one sentence?",
       "fail_if": "Multiple jobs or feature laundry"
     },
     {
+      "id": "asset-ladder",
+      "ask": "S0–S3 stated; no product pixels without refs at S0?",
+      "fail_if": "Product hero film with no stills and no REQUEST rows"
+    },
+    {
+      "id": "consistency-sheets",
+      "ask": "Product/character sheets inlined with provenance tags or REQUEST gaps?",
+      "fail_if": "Generating product/talent ads with no sheet and no request for refs"
+    },
+    {
+      "id": "claims-provenance",
+      "ask": "Claim & asset ledger complete; every metric/review/price/geo tagged?",
+      "fail_if": "Invented proof or untagged claims; AI persona personal-results endorsement",
+      "replaces": "proof-honest"
+    },
+    {
       "id": "hook-window",
-      "ask": "0–3s works muted (text or pure visual) and does not open on logo?",
+      "ask": "0–3s works muted and does not open on logo?",
       "fail_if": "Logo-first or abstract brand talk in first 3s"
     },
     {
@@ -31,18 +47,18 @@
     },
     {
       "id": "beats-timed",
-      "ask": "Script has timecodes matching a flow from flows/library.json?",
-      "fail_if": "Wall of undated copy"
+      "ask": "Timed script + Render plan units with durations ≤ model max?",
+      "fail_if": "Wall of undated copy or single 45s prompt for a 15s-capable model"
     },
     {
-      "id": "proof-honest",
-      "ask": "All proof is user-provided or marked [PLACEHOLDER]?",
-      "fail_if": "Invented reviews, metrics, celebs, awards"
+      "id": "render-plan",
+      "ask": "Render plan with unit ids, real MCP roles, Image-N bindings, audio path?",
+      "fail_if": "Made-up roles (product_hero file paths) or missing clip split"
     },
     {
       "id": "one-cta",
       "ask": "Exactly one primary CTA in the cut?",
-      "fail_if": "Shop + follow + comment keyword + link spam together"
+      "fail_if": "Slash-menu CTAs in one cut"
     },
     {
       "id": "landing-mirror",
@@ -50,72 +66,108 @@
       "fail_if": "Offer/SKU/geo mismatch"
     },
     {
-      "id": "rights",
-      "ask": "Audio, faces, footage rights called out for paid use?",
-      "fail_if": "Assumes trending sound is free for ads"
+      "id": "rights-disclosure",
+      "ask": "Audio/faces/footage rights + synthetic disclosure addressed?",
+      "fail_if": "Trending sound assumed free for ads OR AI talent hidden as real customer"
+    },
+    {
+      "id": "policy-precheck",
+      "ask": "policy-precheck.json + claim-firewall niche rules applied?",
+      "fail_if": "Regulated niche with no category/disclaimer/blocked-format check"
     },
     {
       "id": "anti-pattern-scan",
-      "ask": "Checked against anti-patterns.json + mistakes library?",
+      "ask": "Checked anti-patterns + mistakes + slop lexicon?",
       "fail_if": "Skipped QA"
     },
     {
       "id": "output-contract",
-      "ask": "All deliverables in the pattern output_contract present?",
+      "ask": "Pattern output_contract deliverables present?",
       "fail_if": "Missing shot list/captions/matrix when required"
     },
     {
       "id": "dual-track",
-      "ask": "If user asked viral AND quality: both postures delivered with same JTBD?",
-      "fail_if": "Only one track when both requested",
-      "when": "user asked for viral + cinematic/high-production"
+      "ask": "Serious brands: viral + high-production with same JTBD/claims/sheets; separate aspect generates?",
+      "fail_if": "Only one track for serious brand without stated reason; or center-crop twin"
     },
     {
       "id": "platform-native",
-      "ask": "Aspect ratio, caption style, and length fit the platform?",
-      "fail_if": "16:9 letterbox dumped into TikTok without vertical cut"
+      "ask": "Aspect, captions, length fit platform?",
+      "fail_if": "Wrong aspect dumped without vertical cut"
+    },
+    {
+      "id": "self-critique-variants",
+      "ask": "Rubric with evidence for 5s, caps respected, 2–3 failures, A/B/C?",
+      "fail_if": "Empty critique or uniform uncited 5s"
+    },
+    {
+      "id": "render-acceptance",
+      "ask": "If connected: frame audit + receipt. If handoff: NOT_RENDERED explicit?",
+      "fail_if": "Claims rendered PASS without job ids"
+    },
+    {
+      "id": "lint-pass",
+      "ask": "node scripts/lint-package.mjs <package.md> exits 0 (or manual same rules)?",
+      "fail_if": "Lint failures ignored; self-score used to override"
+    },
+    {
+      "id": "tool-freshness",
+      "ask": "Checked LAST-VERIFIED.md or warned if stale >90 days; probed models if connected?",
+      "fail_if": "Blind outdated model IDs"
     }
   ],
   "score_rubric": {
     "scale": "1-5 per dimension",
+    "caps": [
+      "PLACEHOLDER proof → desire_or_proof ≤3",
+      "Refs not attached → consistency_lock ≤2",
+      "Failed render unit → production_truth ≤3"
+    ],
     "dimensions": [
       {
         "id": "thumbstop",
         "name": "Thumb-stop (0–1.5s)",
-        "5": "Instant format/scene/spectacle; impossible to scroll past casually",
+        "5": "Instant format/scene/spectacle",
+        "3": "Clear but slow",
         "1": "Logo, greeting, or vague claim"
       },
       {
         "id": "clarity",
         "name": "Message clarity by 8s",
-        "5": "Viewer can repeat the job-to-be-done",
-        "1": "Still unclear what is being sold"
+        "5": "Viewer can repeat the JTBD",
+        "1": "Still unclear what is sold"
       },
       {
         "id": "native_fit",
         "name": "Platform native fit",
-        "5": "Indistinguishable from top organic in that format OR clearly intentional cinema",
-        "1": "TV spot awkwardly cropped / fake UGC"
+        "5": "Top organic OR honest cinema",
+        "1": "TV spot cropped / fake UGC"
       },
       {
         "id": "desire_or_proof",
         "name": "Desire or proof",
-        "5": "Strong sensory desire OR credible proof beat",
-        "1": "Claims without evidence or feeling"
+        "5": "Sensory desire OR credible USER/ASSET proof",
+        "1": "Claims without evidence"
       },
       {
         "id": "cta_hygiene",
         "name": "CTA hygiene",
-        "5": "One clear next step matching funnel",
+        "5": "One clear next step",
         "1": "No CTA or conflicting CTAs"
       },
       {
         "id": "production_truth",
         "name": "Production truth",
-        "5": "Tier matches brief; craft choices intentional",
-        "1": "Wrong tier (cheap CGI, over-polished fake UGC, etc.)"
+        "5": "Tier matches brief; craft intentional",
+        "1": "Wrong tier"
+      },
+      {
+        "id": "consistency_lock",
+        "name": "Product/character consistency",
+        "5": "Sheets + ordered refs + Image-N bindings",
+        "1": "Text-only product/talent"
       }
     ],
-    "ship_rule": "Ship only if all dimensions ≥4, or user explicitly accepts a draft with listed risks."
+    "ship_rule": "Ship if lint-pass + all dimensions ≥4 (after caps), or user accepts draft with listed risks. Self-critique mandatory either way. Lint overrides vibes."
   }
 }

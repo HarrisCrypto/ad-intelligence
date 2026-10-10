@@ -1,0 +1,116 @@
+{
+  "id": "swipe-signals",
+  "version": "1.0.0",
+  "updated": "2026-10-10",
+  "purpose": "Anonymized longevity signals — formats and hook families that tend to survive, plus common failure modes. No scraped creatives or brand names.",
+  "how_agents_use": "After niche+pattern retrieval, optionally read matching niche/format signals. Prefer high-longevity hook families when user wants evergreen performance. Never invent CTR/ROAS numbers.",
+  "longevity_tiers": {
+    "high": "Often reusable for months with light refreshes",
+    "medium": "Works in bursts; refresh hooks weekly",
+    "low": "Trend-tied; expire fast"
+  },
+  "by_format": [
+    {
+      "format": "ugc_talking_head",
+      "longevity": "high",
+      "hook_families": ["confession", "costly-mistake", "unpopular-belief", "objection-first"],
+      "survives_when": ["Specific scene language", "Imperfect native delivery", "One mechanism"],
+      "fails_when": ["Fake studio UGC", "Logo-first", "Feature laundry"]
+    },
+    {
+      "format": "before_after",
+      "longevity": "high",
+      "hook_families": ["before-label", "pattern-interrupt-visual"],
+      "survives_when": ["Matched framing", "Short process", "Honest lighting"],
+      "fails_when": ["Mismatched angles", "Overlong process", "Fake transformation"]
+    },
+    {
+      "format": "product_loop",
+      "longevity": "high",
+      "hook_families": ["satisfying-mid-action", "macro-lust"],
+      "survives_when": ["Seamless loop", "Benefit visible in motion"],
+      "fails_when": ["Talking over a product that should demo itself"]
+    },
+    {
+      "format": "pov_day_in_life",
+      "longevity": "medium",
+      "hook_families": ["pov-identity", "grwm"],
+      "survives_when": ["Identity first", "Product as prop"],
+      "fails_when": ["Hard sell mid-ritual"]
+    },
+    {
+      "format": "meme_native",
+      "longevity": "low",
+      "hook_families": ["trend-payload", "skit-cold-open"],
+      "survives_when": ["Punchline = product truth", "Fast ship"],
+      "fails_when": ["Forced trend", "Uncleared audio in paid"]
+    },
+    {
+      "format": "hero_product_film",
+      "longevity": "high",
+      "hook_families": ["spectacle-open", "macro-lust"],
+      "survives_when": ["Product lock", "One capability as experience", "Strong endcard"],
+      "fails_when": ["Pretty with no JTBD", "Melted packaging"]
+    },
+    {
+      "format": "listicle_text_overlay",
+      "longevity": "high",
+      "hook_families": ["save-this", "open-loop"],
+      "survives_when": ["Actionable items", "Muted-legible cards"],
+      "fails_when": ["Vague tips", "Hard sell on card 1"]
+    },
+    {
+      "format": "local_service_trust",
+      "longevity": "high",
+      "hook_families": ["geo-specific"],
+      "survives_when": ["Real facility", "Phone on screen 3s", "NAP match"],
+      "fails_when": ["Stock city footage", "Wrong phone"]
+    },
+    {
+      "format": "app_demo_ui",
+      "longevity": "high",
+      "hook_families": ["ui-aha"],
+      "survives_when": ["Real UI", "Aha in first taps"],
+      "fails_when": ["Fantastical fake UI"]
+    },
+    {
+      "format": "social_proof_stack",
+      "longevity": "high",
+      "hook_families": ["customer-voice"],
+      "survives_when": ["Real quotes", "Outcome-specific"],
+      "fails_when": ["Invented testimonials"]
+    }
+  ],
+  "by_niche_hints": [
+    {
+      "niche": "beauty",
+      "high_longevity": ["before_after", "beauty_macro_tabletop", "ugc_talking_head", "grwm_soft_sell"],
+      "common_failures": ["Unsubstantiated clinical claims", "Shade mismatch on landing", "Overfiltered skin"]
+    },
+    {
+      "niche": "saas",
+      "high_longevity": ["pas_pain_stack", "app_demo_ui", "listicle_text_overlay", "green_screen_rant"],
+      "common_failures": ["Feature laundry", "Fake dashboards", "Vague AI claims"]
+    },
+    {
+      "niche": "local_services",
+      "high_longevity": ["local_service_trust", "before_after", "social_proof_stack"],
+      "common_failures": ["Stock footage", "Multi-CTA", "NAP mismatch"]
+    },
+    {
+      "niche": "ecommerce",
+      "high_longevity": ["product_loop", "ugc_demo", "offer_urgency", "unboxing_asmr"],
+      "common_failures": ["Wrong SKU on PDP", "Fake urgency timers", "No demo"]
+    },
+    {
+      "niche": "entertainment",
+      "high_longevity": ["launch_teaser", "series_cliffhanger", "music_video_brand"],
+      "common_failures": ["Spoiling the hook", "Uncleared music", "No clear watch CTA"]
+    },
+    {
+      "niche": "creator",
+      "high_longevity": ["series_cliffhanger", "hot_take_controversy", "save_share_bait"],
+      "common_failures": ["Cliff without Part 2", "Empty engagement bait"]
+    }
+  ]
+}

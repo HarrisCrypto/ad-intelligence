@@ -1,0 +1,106 @@
+{
+  "id": "brief-defaults",
+  "version": "1.0.0",
+  "instruction": "When the user gives a thin brief, assume from this table, list Assumptions, ask ≤3 blocking questions (offer, product refs, regulated claims), and proceed. Never withhold the package. Never invent proof.",
+  "question_limit": 3,
+  "asset_ladder": {
+    "S0_text_only": {
+      "may_render": ["product-less units: hands, environment, typography, kinetic type, real UI screen record"],
+      "must_not": ["product pack hero film without refs"],
+      "handoff": "Emit sheets with [REQUEST FROM USER] rows + asset request list"
+    },
+    "S1_url": {
+      "connected": "Fetch page → product-photoshoot stills → then video",
+      "handoff": "Pull visible claims tagged ASSET_VERIFIED/unverified; request pack photos"
+    },
+    "S2_product_photos": {
+      "may_render": ["full product lock units via image_references"],
+      "notes": "Fill product sheet from photos"
+    },
+    "S3_photos_plus_footage_or_talent": {
+      "may_render": ["UGC, testimonials from owned footage, cinema twins"],
+      "notes": "real_footage_only patterns unlocked"
+    }
+  },
+  "by_niche": {
+    "beauty": {
+      "goal": "purchases",
+      "platforms": ["tiktok", "meta"],
+      "funnel": "tof_awareness",
+      "production_tier": "hybrid_polished",
+      "virality_posture": "trend_reactive",
+      "duration_s": 20,
+      "cta_type": "soft_shop",
+      "dual_track": true,
+      "talent_default": "creator_or_hands"
+    },
+    "local-services": {
+      "goal": "leads",
+      "platforms": ["meta", "google_youtube"],
+      "funnel": "bof_conversion",
+      "production_tier": "native_ugc",
+      "virality_posture": "evergreen_dr",
+      "duration_s": 20,
+      "cta_type": "call_now",
+      "dual_track": false,
+      "talent_default": "real_owner_or_facility"
+    },
+    "saas": {
+      "goal": "leads",
+      "platforms": ["linkedin", "meta", "youtube"],
+      "funnel": "mof_consideration",
+      "production_tier": "hybrid_polished",
+      "virality_posture": "evergreen_dr",
+      "duration_s": 30,
+      "cta_type": "start_trial",
+      "dual_track": true,
+      "talent_default": "screen_plus_optional_founder"
+    },
+    "ecommerce": {
+      "goal": "purchases",
+      "platforms": ["tiktok", "meta"],
+      "funnel": "tof_awareness",
+      "production_tier": "hybrid_polished",
+      "virality_posture": "share_engineered",
+      "duration_s": 18,
+      "cta_type": "shop_now",
+      "dual_track": true,
+      "talent_default": "ugc_hands"
+    },
+    "health": {
+      "goal": "leads",
+      "platforms": ["meta", "youtube"],
+      "funnel": "mof_consideration",
+      "production_tier": "hybrid_polished",
+      "virality_posture": "evergreen_dr",
+      "duration_s": 25,
+      "cta_type": "learn_more",
+      "dual_track": true,
+      "talent_default": "real_or_disclose_AI",
+      "policy_note": "Run claim-firewall + policy-precheck"
+    },
+    "fintech": {
+      "goal": "app_installs",
+      "platforms": ["meta", "tiktok", "youtube"],
+      "funnel": "tof_awareness",
+      "production_tier": "hybrid_polished",
+      "virality_posture": "evergreen_dr",
+      "duration_s": 20,
+      "cta_type": "download",
+      "dual_track": true,
+      "talent_default": "motion_or_founder",
+      "policy_note": "Special Ad Category / authorization may apply"
+    },
+    "default": {
+      "goal": "traffic",
+      "platforms": ["meta", "tiktok"],
+      "funnel": "tof_awareness",
+      "production_tier": "hybrid_polished",
+      "virality_posture": "share_engineered",
+      "duration_s": 20,
+      "cta_type": "learn_more",
+      "dual_track": true,
+      "talent_default": "ugc_or_product"
+    }
+  }
+}
