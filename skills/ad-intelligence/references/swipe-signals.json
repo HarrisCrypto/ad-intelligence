@@ -1,0 +1,155 @@
+{
+  "id": "swipe-signals",
+  "version": "1.0.0",
+  "purpose": "Anonymized high-longevity hook/format signals and common failure modes. Not scraped creatives. Not advertiser-specific proof.",
+  "last_verified": "2026-10-10",
+  "longevity_tiers": ["high", "medium", "trend"],
+  "hook_families": [
+    {
+      "id": "confession_wrong",
+      "longevity": "high",
+      "formats": ["ugc-talking-head-scroll-stop", "pov-day-in-life"],
+      "note": "Specific confession; muted text must carry"
+    },
+    {
+      "id": "spectacle_interrupt",
+      "longevity": "high",
+      "formats": ["hero-product-film", "beauty-macro-tabletop", "vfx-transformation"],
+      "note": "0–1.5s visual; no logo"
+    },
+    {
+      "id": "before_after_honest",
+      "longevity": "high",
+      "formats": ["before-after-reveal"],
+      "note": "Same angle/lighting; no fake timelines"
+    },
+    {
+      "id": "utility_save_bait",
+      "longevity": "high",
+      "formats": ["save-share-bait", "listicle-text-overlay", "kinetic-type-explainer"],
+      "note": "Promise stealable artifact"
+    },
+    {
+      "id": "local_proof_phone",
+      "longevity": "high",
+      "formats": ["local-service-trust"],
+      "note": "Geo + specialty in first 3s"
+    },
+    {
+      "id": "objection_faq",
+      "longevity": "medium",
+      "formats": ["objection-faq"],
+      "note": "One objection per cut"
+    },
+    {
+      "id": "unboxing_texture",
+      "longevity": "medium",
+      "formats": ["unboxing-asmr", "ugc-demo-hands"],
+      "note": "Product lock critical"
+    },
+    {
+      "id": "trend_meme_audio",
+      "longevity": "trend",
+      "formats": ["meme-native-trend", "duet-stitch-react"],
+      "note": "Organic first; paid needs cleared audio"
+    },
+    {
+      "id": "skit_punchline",
+      "longevity": "medium",
+      "formats": ["skit-sketch-ad"],
+      "note": "Punchline equals product job"
+    },
+    {
+      "id": "founder_origin",
+      "longevity": "medium",
+      "formats": ["founder-story-origin"],
+      "note": "Short; one proof placeholder max"
+    }
+  ],
+  "niche_format_survival": {
+    "beauty": {
+      "high": ["pov-day-in-life", "grwm-soft-sell", "beauty-macro-tabletop", "before-after-reveal"],
+      "avoid": ["fake clinical overlays", "celebrity lookalike filters"]
+    },
+    "local-services": {
+      "high": ["local-service-trust"],
+      "avoid": ["stock handshake", "unproven #1 claims"]
+    },
+    "saas": {
+      "high": ["save-share-bait", "kinetic-type-explainer", "objection-faq"],
+      "avoid": ["feature-tour dumps", "invented dashboard metrics"]
+    },
+    "ecommerce": {
+      "high": ["product-loop-demo", "unboxing-asmr", "ugc-demo-hands", "hero-product-film"],
+      "avoid": ["logo-first cold", "melting packshots"]
+    },
+    "entertainment": {
+      "high": ["series-cliffhanger", "bts-making-of", "duet-stitch-react", "challenge-participation"],
+      "avoid": ["teleprompter hard-sell", "unclear clip IP"]
+    },
+    "creator": {
+      "high": ["series-cliffhanger", "bts-making-of", "save-share-bait"],
+      "avoid": ["unclear IP", "multi-CTA spam"]
+    },
+    "fitness": {
+      "high": ["challenge-participation", "pov-day-in-life", "performance-sports-cine"],
+      "avoid": ["unsafe challenges", "invented transformation timelines"]
+    },
+    "fintech": {
+      "high": ["skit-sketch-ad", "comparison-vs"],
+      "avoid": ["guaranteed returns", "fake celebrity endorsement"]
+    }
+  },
+  "failure_modes": [
+    {
+      "id": "fm_logo_first",
+      "fix": "Opens on logo / brand talk",
+      "variant_fix": "Swap 0–3s to spectacle or confession"
+    },
+    {
+      "id": "fm_identity_drift",
+      "fix": "Product/face changes mid-spot",
+      "variant_fix": "Enforce sheets + omni_reference; edit body only"
+    },
+    {
+      "id": "fm_fake_proof",
+      "fix": "Invented metrics/reviews on screen",
+      "variant_fix": "PLACEHOLDER or omit; sensory desire instead"
+    },
+    {
+      "id": "fm_muted_fail",
+      "fix": "Hook dies without sound",
+      "variant_fix": "Bigger burned text; visual interrupt"
+    },
+    {
+      "id": "fm_wrong_tier",
+      "fix": "Fake UGC too polished / cinema too soft",
+      "variant_fix": "Match production_truth to brief"
+    },
+    {
+      "id": "fm_multi_cta",
+      "fix": "Multiple CTAs in cut",
+      "variant_fix": "One CTA; secondary in caption only"
+    },
+    {
+      "id": "fm_trend_audio_paid",
+      "fix": "Trending sound in paid",
+      "variant_fix": "Original/licensed bed; organic twin separate"
+    },
+    {
+      "id": "fm_geo_mismatch",
+      "fix": "Local ad without city/specialty",
+      "variant_fix": "On-screen geo in 0–3s"
+    },
+    {
+      "id": "fm_feature_laundry",
+      "fix": "Feature list without job",
+      "variant_fix": "One JTBD; utility artifact CTA"
+    },
+    {
+      "id": "fm_no_disclosure",
+      "fix": "Synthetic talent unlabeled where required",
+      "variant_fix": "Fill AI disclosure block + platform label"
+    }
+  ]
+}

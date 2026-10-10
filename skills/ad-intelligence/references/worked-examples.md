@@ -2,6 +2,8 @@
 
 These are **synthetic teaching examples** — not scraped ads. Use them as reference points for structure, pacing, and QA. Swap niche nouns; keep the beat logic.
 
+For **complete** filled output templates (sheets + self-critique + rights), see `../examples/` (beauty DTC, local service, SaaS, physical product, entertainment/creator).
+
 ---
 
 ## 1) Viral POV — beauty DTC (15–35s)

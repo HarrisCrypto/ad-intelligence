@@ -8,6 +8,9 @@
  *   node retrieve.mjs --platform tiktok --job "pov trend skit"
  *   node retrieve.mjs --list
  *   node retrieve.mjs --list-niches
+ *
+ * Optional longevity layer (not scored here — load after retrieve):
+ *   references/swipe-signals.md | references/swipe-signals.json
  */
 
 import fs from "node:fs";
@@ -217,6 +220,15 @@ function main() {
         anti_patterns_file: "database/anti-patterns.json",
         hooks_file: "database/hooks/library.json",
         flows_file: "database/flows/library.json",
+        swipe_signals: {
+          note: "Optional high-longevity hooks + failure modes (anonymized). Load after pattern pick; feed Self-critique & variants.",
+          md: "references/swipe-signals.md",
+          json: "references/swipe-signals.json",
+        },
+        consistency_sheets: {
+          product: "references/creative-stack/product-sheet-template.md",
+          character: "references/creative-stack/character-sheet-template.md",
+        },
       },
       null,
       2

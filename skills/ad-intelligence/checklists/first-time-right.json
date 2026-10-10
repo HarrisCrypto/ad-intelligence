@@ -19,6 +19,11 @@
       "fail_if": "Multiple jobs or feature laundry"
     },
     {
+      "id": "consistency-sheets",
+      "ask": "Product sheet filled or missing refs explicitly requested; character sheet filled if talent; style lock stated?",
+      "fail_if": "Generated without product/character consistency system or silently skipped sheets"
+    },
+    {
       "id": "hook-window",
       "ask": "0–3s works muted (text or pure visual) and does not open on logo?",
       "fail_if": "Logo-first or abstract brand talk in first 3s"
@@ -55,6 +60,11 @@
       "fail_if": "Assumes trending sound is free for ads"
     },
     {
+      "id": "ai-disclosure",
+      "ask": "AI disclosure & rights block filled (synthetic media flags, likeness policy, paid-safe decision)?",
+      "fail_if": "Silent on synthetic media or celebrity/deepfake risk"
+    },
+    {
       "id": "anti-pattern-scan",
       "ask": "Checked against anti-patterns.json + mistakes library?",
       "fail_if": "Skipped QA"
@@ -65,6 +75,11 @@
       "fail_if": "Missing shot list/captions/matrix when required"
     },
     {
+      "id": "self-critique-variants",
+      "ask": "Self-critique section present: all rubric dims scored, 2–3 niche/platform failure modes listed, A/B/C variants that attack those failures?",
+      "fail_if": "Delivered first draft without scored critique or concrete variants"
+    },
+    {
       "id": "dual-track",
       "ask": "If user asked viral AND quality: both postures delivered with same JTBD?",
       "fail_if": "Only one track when both requested",
@@ -72,8 +87,8 @@
     },
     {
       "id": "platform-native",
-      "ask": "Aspect ratio, caption style, and length fit the platform?",
-      "fail_if": "16:9 letterbox dumped into TikTok without vertical cut"
+      "ask": "Aspect ratio, caption style, length, and disclosure fit the platform?",
+      "fail_if": "16:9 letterbox dumped into TikTok without vertical cut; missing required synthetic-media label when applicable"
     }
   ],
   "score_rubric": {
@@ -112,10 +127,10 @@
       {
         "id": "production_truth",
         "name": "Production truth",
-        "5": "Tier matches brief; craft choices intentional",
-        "1": "Wrong tier (cheap CGI, over-polished fake UGC, etc.)"
+        "5": "Tier matches brief; craft choices intentional; product/character locks hold",
+        "1": "Wrong tier (cheap CGI, over-polished fake UGC, identity drift, etc.)"
       }
     ],
-    "ship_rule": "Ship only if all dimensions ≥4, or user explicitly accepts a draft with listed risks."
+    "ship_rule": "Ship only if all dimensions ≥4, or user explicitly accepts a draft with listed risks. Self-critique section must show scores + failure modes + A/B/C variants before delivery."
   }
 }

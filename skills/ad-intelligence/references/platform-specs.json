@@ -1,75 +1,256 @@
 {
   "id": "platform-specs",
   "name": "Platform-native defaults (first-time-right)",
+  "version": "2.0.0",
+  "last_verified": "2026-10-10",
+  "ai_disclosure_2026": {
+    "rule": "If synthetic or significantly AI-altered people/scenes appear in paid or organic placements, assume disclosure may be required. Prefer labeling over silence. Verify current platform toggles before upload.",
+    "flags": [
+      "ai_generated_talent",
+      "ai_altered_face_or_body",
+      "fully_synthetic_product_scene",
+      "voice_clone",
+      "deepfake_or_lookalike_risk"
+    ],
+    "default_label_copy": "Includes AI-generated or AI-altered media",
+    "never": "Celebrity or real-person clone without license"
+  },
+  "rights_decision_tree": {
+    "audio": [
+      {
+        "if": "trending_platform_sound",
+        "then": "organic_only_unless_cleared_commercial_license"
+      },
+      {
+        "if": "original_suno_or_licensed_bed",
+        "then": "paid_safe"
+      },
+      {
+        "if": "unknown",
+        "then": "hold_for_legal_or_replace"
+      }
+    ],
+    "faces": [
+      {
+        "if": "real_talent_with_release",
+        "then": "paid_safe"
+      },
+      {
+        "if": "ugc_without_release",
+        "then": "organic_only_or_obtain_release"
+      },
+      {
+        "if": "ai_avatar_original",
+        "then": "paid_safe_with_disclosure_if_required"
+      },
+      {
+        "if": "celebrity_or_lookalike",
+        "then": "block_unless_licensed"
+      }
+    ],
+    "footage": [
+      {
+        "if": "brand_owned_or_licensed",
+        "then": "paid_safe"
+      },
+      {
+        "if": "stock_with_commercial_license",
+        "then": "paid_safe"
+      },
+      {
+        "if": "scraped_or_competitor_creative",
+        "then": "block"
+      }
+    ],
+    "outcome_enum": ["paid_safe", "organic_only", "hold_for_legal", "block"]
+  },
   "platforms": {
     "tiktok": {
       "aspect": ["9:16"],
       "ideal_seconds": [9, 15, 21, 34],
-      "captions": "Burned-in or native captions; huge hook text",
+      "captions": "Burned-in or native captions; huge hook text; first line = format signal",
+      "caption_style": {
+        "hook_text": "large, high-contrast, top-safe",
+        "body": "sparse; one idea per beat",
+        "cta": "endcard or last line only"
+      },
+      "native_format_signals": [
+        "POV overlay in first 1s",
+        "Green-screen / stitch layout recognizable instantly",
+        "Creator-facing camera, slight handheld"
+      ],
       "hook_max_s": 1.5,
-      "notes": "Native > polished. Sound-on optional but muted must work. Spark Ads for creator whitelisting."
+      "synthetic_media_disclosure": "Use platform AI label when available; state in package AI disclosure block",
+      "rights_notes": "Spark Ads for creator whitelisting; trending sounds usually organic-only",
+      "notes": "Native > polished. Sound-on optional but muted must work."
     },
     "meta": {
       "aspect": ["4:5", "9:16", "1:1"],
       "ideal_seconds": [15, 30],
-      "captions": "Assume muted; text safe zones for UI",
+      "captions": "Assume muted; text safe zones for UI chrome",
+      "caption_style": {
+        "hook_text": "readable at phone distance; avoid edge collide with Like bar",
+        "body": "primary text carries mechanism",
+        "cta": "one in-ad + matching headline"
+      },
+      "native_format_signals": [
+        "UGC-looking talking head or hands demo",
+        "Carousel problem→solution cards",
+        "Advantage+ needs creative diversity not one twin"
+      ],
       "hook_max_s": 3,
-      "notes": "Primary text + headline matter. Advantage+ still needs creative diversity."
+      "synthetic_media_disclosure": "Enable Meta AI/altered media declarations when applicable (verify current Ads Manager toggles)",
+      "rights_notes": "Licensed audio for paid; no scraped competitor frames",
+      "notes": "Primary text + headline matter."
     },
     "youtube": {
       "aspect": ["16:9"],
       "ideal_seconds": [15, 30, 60],
-      "captions": "Optional but good for accessibility",
+      "captions": "Optional but good for accessibility; endcard clear",
+      "caption_style": {
+        "hook_text": "can be subtler; audio-forward OK",
+        "body": "broadcast-safe lower thirds if any",
+        "cta": "endcard + verbal once"
+      },
+      "native_format_signals": [
+        "Skippable: value before skip point",
+        "Bumper: single idea in 6s",
+        "Cinema grade acceptable"
+      ],
       "hook_max_s": 5,
+      "synthetic_media_disclosure": "Disclose synthetic media per YouTube/Google ads policies when required",
+      "rights_notes": "Clear music for ads; Content ID risk on uncleared beds",
       "notes": "Skippable needs hook before skip; bumpers 6s non-skip."
     },
     "youtube_shorts": {
       "aspect": ["9:16"],
       "ideal_seconds": [15, 30, 45],
-      "captions": "Required energy",
+      "captions": "Required energy; large burned text",
+      "caption_style": {
+        "hook_text": "TikTok-like prominence",
+        "body": "series-friendly sparse overlays",
+        "cta": "one"
+      },
+      "native_format_signals": [
+        "Treat like TikTok",
+        "Stronger for search + series cliffhangers"
+      ],
       "hook_max_s": 1.5,
-      "notes": "Treat like TikTok; stronger for search + series."
+      "synthetic_media_disclosure": "Same as YouTube when altered/synthetic people",
+      "rights_notes": "Prefer original audio for paid",
+      "notes": "Series and saves > hard sell for organic."
     },
     "linkedin": {
       "aspect": ["1:1", "4:5", "16:9"],
       "ideal_seconds": [15, 30],
       "captions": "Captions on; professional tone unless skit intentionally",
+      "caption_style": {
+        "hook_text": "credible, specific, non-hype",
+        "body": "B2B proof placeholders honest",
+        "cta": "one (demo / download / apply)"
+      },
+      "native_format_signals": [
+        "Hot take + explainer",
+        "Documentary cutdown",
+        "Kinetic type for frameworks"
+      ],
       "hook_max_s": 3,
+      "synthetic_media_disclosure": "Disclose synthetic spokespeople; avoid fake executives",
+      "rights_notes": "No invented customer logos",
       "notes": "Hot takes + explainers + documentary travel well."
     },
     "ctv_ott": {
       "aspect": ["16:9"],
       "ideal_seconds": [15, 30],
       "captions": "Broadcast-safe",
+      "caption_style": {
+        "hook_text": "minimal; audio-forward",
+        "body": "no busy lower-thirds",
+        "cta": "endcard logo + URL/QR if supplied"
+      },
+      "native_format_signals": [
+        "Premium cinema",
+        "Clear endcard",
+        "No fake UGC framing"
+      ],
       "hook_max_s": 3,
+      "synthetic_media_disclosure": "Network/publisher rules may require AI labels — check buy",
+      "rights_notes": "Fully cleared audio and talent mandatory",
       "notes": "Premium cinema; clear endcard; audio-forward OK."
     },
     "snapchat": {
       "aspect": ["9:16"],
       "ideal_seconds": [6, 10, 15],
       "captions": "Big, playful",
+      "caption_style": {
+        "hook_text": "immediate",
+        "body": "minimal",
+        "cta": "swipe-up / one action"
+      },
+      "native_format_signals": [
+        "Full-bleed vertical",
+        "Fast cuts",
+        "Lens/AR-native when relevant"
+      ],
       "hook_max_s": 1,
+      "synthetic_media_disclosure": "Disclose AI talent when used",
+      "rights_notes": "Commercial audio license for paid",
       "notes": "Full-bleed vertical; fast."
     },
     "pinterest": {
       "aspect": ["2:3", "1:1", "9:16"],
       "ideal_seconds": [6, 15],
       "captions": "Text-led ideas perform",
+      "caption_style": {
+        "hook_text": "idea-first title",
+        "body": "utility steps",
+        "cta": "save / try"
+      },
+      "native_format_signals": [
+        "Idea pin utility",
+        "Aesthetic product still + soft motion"
+      ],
       "hook_max_s": 2,
+      "synthetic_media_disclosure": "Label AI lifestyle scenes if required",
+      "rights_notes": "Product sheet lock for pack accuracy",
       "notes": "Idea pins / video; utility and aesthetic."
     },
     "organic_short": {
       "aspect": ["9:16"],
       "ideal_seconds": [15, 45, 60],
       "captions": "Native",
+      "caption_style": {
+        "hook_text": "format signal first",
+        "body": "series continuity",
+        "cta": "soft; one"
+      },
+      "native_format_signals": [
+        "Series cliffhanger",
+        "Save/share bait",
+        "Creator voice"
+      ],
       "hook_max_s": 1.5,
+      "synthetic_media_disclosure": "Platform AI labels when synthetic",
+      "rights_notes": "Trend sounds OK organic if ToS allows; not for paid twin",
       "notes": "Series and saves > hard sell."
     },
     "influencer_seed": {
       "aspect": ["9:16"],
       "ideal_seconds": [20, 60],
       "captions": "Creator’s style",
+      "caption_style": {
+        "hook_text": "creator-owned",
+        "body": "must-say 3 only",
+        "cta": "one code/path"
+      },
+      "native_format_signals": [
+        "Not teleprompter",
+        "FTC paid partnership",
+        "Whitelisting plan"
+      ],
       "hook_max_s": 3,
+      "synthetic_media_disclosure": "If AI avatar influencer: disclose; no celebrity deepfake",
+      "rights_notes": "Contract + usage window + Spark/whitelist",
       "notes": "Brief not teleprompter; FTC disclosure; whitelisting plan."
     }
   }

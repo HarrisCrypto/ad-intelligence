@@ -2,9 +2,11 @@
 
 Use with the pattern’s timed script. Swap bracket tokens only.
 
+**Before any recipe:** fill or request `product-sheet-template.md` and (if talent) `character-sheet-template.md`. Paste lock language into every video prompt. Check `CHANGELOG.md` for last-verified model notes.
+
 ## Seedance — see `seedance-prompt-contract.md`
 
-Primary for **Higgsfield-peer / ByteDance-quality** spots.
+Primary for **Higgsfield-peer / ByteDance-quality** spots. Always include product sheet + Soul-ID + style lock blocks.
 
 ## Kling / Runway / Luma — image-to-video product move
 

@@ -1,7 +1,8 @@
 # Ad Intelligence — one-stop perfect ad maker
 
 > **Install / point your agent:** [`INSTALL.md`](./INSTALL.md)  
-> **Own GitHub repo (not Union Jack):** [`PUBLISH.md`](./PUBLISH.md)
+> **Own GitHub repo (not Union Jack):** [`PUBLISH.md`](./PUBLISH.md)  
+> **What changed:** [`CHANGELOG.md`](./CHANGELOG.md)
 
 Pattern database **plus** a full **creative-stack OS** so agents make
 **Seedance / Higgsfield-quality** ads for **any company or niche** —
@@ -9,18 +10,27 @@ Pattern database **plus** a full **creative-stack OS** so agents make
 - when tools **are** connected → call Higgsfield MCP / generators  
 - when tools **are not** connected → still ship copy-paste Seedance prompts, Higgsfield execution briefs, CapCut finishing, and media-buy checklists  
 
+**Patterns + QA gates + consistency systems** are the leverage — not the model alone.  
+Never invent proof; use user assets or `[PLACEHOLDER]`. Dual-track (viral + high-production) is the default for serious brands.
+
 ## Who this is for
 
-Any brand, agency, app, local service, DTC, B2B, creator, entertainment, nonprofit — **not** tied to one client.
+Any brand, agency, app, local service, DTC, B2B, creator, entertainment, nonprofit — **not** tied to one client.  
+Any LLM harness (Cursor, Claude, Grok, OpenClaw, Hermes, etc.).
 
-## What’s inside (v3)
+## What’s inside (v4)
 
 | Layer | Contents |
 | --- | --- |
 | Patterns | **47** blueprints (viral, share, cinema, DR) |
 | Creative stack | **Seedance 2.0/2.5**, **Higgsfield** workflows, Kling, Runway, Sora/Veo, CapCut, Symphony, Meta, ElevenLabs, Suno… |
+| Consistency | Product sheet + character/Soul-ID sheet + style lock (pre-gen hard gate) |
+| Self-critique | Rubric scores + niche failure modes + A/B/C variants (kill redo) |
+| Examples | 5 gold-standard filled packages (beauty, local, SaaS, physical, creator) |
+| Signals | Anonymized swipe / longevity patterns (`swipe-signals`) |
 | Pipelines | Pattern → tool route + one-stop master pipeline |
 | Prompt contracts | Seedance YAML+prompt, cross-tool recipes |
+| Platforms | Native format, captions, 2026 AI disclosure, rights tree |
 | Viral OS | Trend classes + weekly ops |
 | Niches | 23 vertical packs |
 | QA | Mistakes library + first-time-right checklist/rubric |
@@ -31,6 +41,7 @@ Any brand, agency, app, local service, DTC, B2B, creator, entertainment, nonprof
 - **Seedance** — 15–30s single-pass spots, omni-reference product lock, native audio, region edits  
 - **Higgsfield** — Ads Studio, UGC video, Marketing Studio, Ad Multiplier, Katana, product photoshoot, brand assets  
 - **Peers** — Kling, Runway, Sora/Veo, Midjourney/FLUX, CapCut, TikTok Symphony, Meta Advantage+, ElevenLabs, Suno  
+- **Freshness** — `skills/ad-intelligence/references/creative-stack/CHANGELOG.md`
 
 See `skills/ad-intelligence/references/creative-stack/` and  
 `skills/ad-intelligence/pipelines/one-stop-ad-maker.md`.
@@ -43,7 +54,10 @@ node scripts/retrieve.mjs --niche beauty --tag viral --limit 5
 node scripts/retrieve.mjs --production premium_cinema --limit 5
 ```
 
-Ask: *Using ad-intelligence, make Seedance/Higgsfield-quality dual-track ads for [brand].*
+Ask: *Using ad-intelligence, make Seedance/Higgsfield-quality dual-track ads for [brand].*  
+Agent should produce sheets → timed script → Seedance/Higgsfield brief → self-critique variants → rights in one pass.
+
+Gold examples: `skills/ad-intelligence/examples/`.
 
 ## Package & sell
 
