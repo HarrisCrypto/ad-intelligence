@@ -234,11 +234,21 @@
         "challenger": "study_award_hero_spectacle",
         "count": 9,
         "human_build_os": "references/human-build-os.md",
+        "join": {
+          "rule": "Patterns = grammar + routes. Studies = what to emulate + how to build; provenance.basis must be copied into the package. Attention models = timing. When study.pattern_ids miss picks.primary, keep pattern for stack/route and study.structure for beat jobs — do not invent a merge. Never treat basis:synthesis as observed metrics proof.",
+          "pattern_study_conflict": false,
+          "conflict_resolution": "Aligned or no study patterns — use study beats + pattern route together."
+        },
         "items": [
           {
             "id": "study_beauty_macro_transform",
             "class": "performance_dr",
             "title": "Beauty / hair macro + matched transform",
+            "provenance": {
+              "observed": false,
+              "basis": "synthesis",
+              "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
+            },
             "when_to_emulate": [
               "Shampoo, skincare, cosmetics",
               "Texture sells"
@@ -317,6 +327,11 @@
             "id": "study_award_hero_spectacle",
             "class": "award_brand_film",
             "title": "Hero spectacle / brand film craft",
+            "provenance": {
+              "observed": false,
+              "basis": "synthesis",
+              "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
+            },
             "when_to_emulate": [
               "Launch memory",
               "Luxury, auto, flagship DTC",
@@ -663,11 +678,21 @@
         "challenger": "study_award_hero_spectacle",
         "count": 9,
         "human_build_os": "references/human-build-os.md",
+        "join": {
+          "rule": "Patterns = grammar + routes. Studies = what to emulate + how to build; provenance.basis must be copied into the package. Attention models = timing. When study.pattern_ids miss picks.primary, keep pattern for stack/route and study.structure for beat jobs — do not invent a merge. Never treat basis:synthesis as observed metrics proof.",
+          "pattern_study_conflict": false,
+          "conflict_resolution": "Aligned or no study patterns — use study beats + pattern route together."
+        },
         "items": [
           {
             "id": "study_beauty_macro_transform",
             "class": "performance_dr",
             "title": "Beauty / hair macro + matched transform",
+            "provenance": {
+              "observed": false,
+              "basis": "synthesis",
+              "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
+            },
             "when_to_emulate": [
               "Shampoo, skincare, cosmetics",
               "Texture sells"
@@ -746,6 +771,11 @@
             "id": "study_award_hero_spectacle",
             "class": "award_brand_film",
             "title": "Hero spectacle / brand film craft",
+            "provenance": {
+              "observed": false,
+              "basis": "synthesis",
+              "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
+            },
             "when_to_emulate": [
               "Launch memory",
               "Luxury, auto, flagship DTC",
@@ -1047,11 +1077,21 @@
         "challenger": "study_viral_skit_punchline",
         "count": 9,
         "human_build_os": "references/human-build-os.md",
+        "join": {
+          "rule": "Patterns = grammar + routes. Studies = what to emulate + how to build; provenance.basis must be copied into the package. Attention models = timing. When study.pattern_ids miss picks.primary, keep pattern for stack/route and study.structure for beat jobs — do not invent a merge. Never treat basis:synthesis as observed metrics proof.",
+          "pattern_study_conflict": false,
+          "conflict_resolution": "Aligned or no study patterns — use study beats + pattern route together."
+        },
         "items": [
           {
             "id": "study_food_crave_loop",
             "class": "viral_native",
             "title": "Food / bev crave ASMR loop",
+            "provenance": {
+              "observed": false,
+              "basis": "synthesis",
+              "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
+            },
             "when_to_emulate": [
               "CPG, restaurants, coffee, snacks"
             ],
@@ -1115,6 +1155,11 @@
             "id": "study_viral_skit_punchline",
             "class": "viral_native",
             "title": "Skit → product punchline",
+            "provenance": {
+              "observed": false,
+              "basis": "synthesis",
+              "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
+            },
             "when_to_emulate": [
               "Share/comment goals",
               "Apps, food, fintech humor",
@@ -1464,11 +1509,21 @@
         "challenger": "study_voice_agent_missed_call",
         "count": 10,
         "human_build_os": "references/human-build-os.md",
+        "join": {
+          "rule": "Patterns = grammar + routes. Studies = what to emulate + how to build; provenance.basis must be copied into the package. Attention models = timing. When study.pattern_ids miss picks.primary, keep pattern for stack/route and study.structure for beat jobs — do not invent a merge. Never treat basis:synthesis as observed metrics proof.",
+          "pattern_study_conflict": true,
+          "conflict_resolution": "Use study.structure for beats/hook jobs; use picks.routes[primary] for tool stack; note conflict in package Retrieval."
+        },
         "items": [
           {
             "id": "study_perf_pas_meta",
             "class": "performance_dr",
             "title": "Performance PAS (Meta / YouTube)",
+            "provenance": {
+              "observed": false,
+              "basis": "synthesis",
+              "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
+            },
             "when_to_emulate": [
               "Lead gen / trial",
               "SaaS, B2B, fintech education",
@@ -1562,6 +1617,11 @@
             "id": "study_voice_agent_missed_call",
             "class": "performance_dr",
             "title": "Voice / AI agent missed-call → booked",
+            "provenance": {
+              "observed": false,
+              "basis": "synthesis",
+              "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
+            },
             "when_to_emulate": [
               "Voice AI, front-desk, after-hours SaaS",
               "OPlyai-class products"
@@ -1920,11 +1980,21 @@
         "challenger": "study_perf_pas_meta",
         "count": 10,
         "human_build_os": "references/human-build-os.md",
+        "join": {
+          "rule": "Patterns = grammar + routes. Studies = what to emulate + how to build; provenance.basis must be copied into the package. Attention models = timing. When study.pattern_ids miss picks.primary, keep pattern for stack/route and study.structure for beat jobs — do not invent a merge. Never treat basis:synthesis as observed metrics proof.",
+          "pattern_study_conflict": true,
+          "conflict_resolution": "Use study.structure for beats/hook jobs; use picks.routes[primary] for tool stack; note conflict in package Retrieval."
+        },
         "items": [
           {
             "id": "study_voice_agent_missed_call",
             "class": "performance_dr",
             "title": "Voice / AI agent missed-call → booked",
+            "provenance": {
+              "observed": false,
+              "basis": "synthesis",
+              "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
+            },
             "when_to_emulate": [
               "Voice AI, front-desk, after-hours SaaS",
               "OPlyai-class products"
@@ -2011,6 +2081,11 @@
             "id": "study_perf_pas_meta",
             "class": "performance_dr",
             "title": "Performance PAS (Meta / YouTube)",
+            "provenance": {
+              "observed": false,
+              "basis": "synthesis",
+              "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
+            },
             "when_to_emulate": [
               "Lead gen / trial",
               "SaaS, B2B, fintech education",
@@ -2331,11 +2406,21 @@
         "challenger": "study_voice_agent_missed_call",
         "count": 9,
         "human_build_os": "references/human-build-os.md",
+        "join": {
+          "rule": "Patterns = grammar + routes. Studies = what to emulate + how to build; provenance.basis must be copied into the package. Attention models = timing. When study.pattern_ids miss picks.primary, keep pattern for stack/route and study.structure for beat jobs — do not invent a merge. Never treat basis:synthesis as observed metrics proof.",
+          "pattern_study_conflict": false,
+          "conflict_resolution": "Aligned or no study patterns — use study beats + pattern route together."
+        },
         "items": [
           {
             "id": "study_local_geo_phone",
             "class": "performance_dr",
             "title": "Local geo trust → phone CTA",
+            "provenance": {
+              "observed": false,
+              "basis": "synthesis",
+              "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
+            },
             "when_to_emulate": [
               "Trades, clinics, local services",
               "Click-to-call"
@@ -2405,6 +2490,11 @@
             "id": "study_voice_agent_missed_call",
             "class": "performance_dr",
             "title": "Voice / AI agent missed-call → booked",
+            "provenance": {
+              "observed": false,
+              "basis": "synthesis",
+              "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
+            },
             "when_to_emulate": [
               "Voice AI, front-desk, after-hours SaaS",
               "OPlyai-class products"
@@ -2749,11 +2839,21 @@
         "challenger": "study_food_crave_loop",
         "count": 9,
         "human_build_os": "references/human-build-os.md",
+        "join": {
+          "rule": "Patterns = grammar + routes. Studies = what to emulate + how to build; provenance.basis must be copied into the package. Attention models = timing. When study.pattern_ids miss picks.primary, keep pattern for stack/route and study.structure for beat jobs — do not invent a merge. Never treat basis:synthesis as observed metrics proof.",
+          "pattern_study_conflict": true,
+          "conflict_resolution": "Use study.structure for beats/hook jobs; use picks.routes[primary] for tool stack; note conflict in package Retrieval."
+        },
         "items": [
           {
             "id": "study_viral_confession_ugc",
             "class": "viral_native",
             "title": "Viral confession UGC (TikTok / Reels native)",
+            "provenance": {
+              "observed": false,
+              "basis": "synthesis",
+              "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
+            },
             "when_to_emulate": [
               "Cold social, need trust fast",
               "Beauty, health-adjacent lifestyle, consumer apps",
@@ -2853,6 +2953,11 @@
             "id": "study_food_crave_loop",
             "class": "viral_native",
             "title": "Food / bev crave ASMR loop",
+            "provenance": {
+              "observed": false,
+              "basis": "synthesis",
+              "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
+            },
             "when_to_emulate": [
               "CPG, restaurants, coffee, snacks"
             ],
@@ -3138,11 +3243,21 @@
         "challenger": "study_beauty_macro_transform",
         "count": 9,
         "human_build_os": "references/human-build-os.md",
+        "join": {
+          "rule": "Patterns = grammar + routes. Studies = what to emulate + how to build; provenance.basis must be copied into the package. Attention models = timing. When study.pattern_ids miss picks.primary, keep pattern for stack/route and study.structure for beat jobs — do not invent a merge. Never treat basis:synthesis as observed metrics proof.",
+          "pattern_study_conflict": true,
+          "conflict_resolution": "Use study.structure for beats/hook jobs; use picks.routes[primary] for tool stack; note conflict in package Retrieval."
+        },
         "items": [
           {
             "id": "study_viral_confession_ugc",
             "class": "viral_native",
             "title": "Viral confession UGC (TikTok / Reels native)",
+            "provenance": {
+              "observed": false,
+              "basis": "synthesis",
+              "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
+            },
             "when_to_emulate": [
               "Cold social, need trust fast",
               "Beauty, health-adjacent lifestyle, consumer apps",
@@ -3242,6 +3357,11 @@
             "id": "study_beauty_macro_transform",
             "class": "performance_dr",
             "title": "Beauty / hair macro + matched transform",
+            "provenance": {
+              "observed": false,
+              "basis": "synthesis",
+              "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
+            },
             "when_to_emulate": [
               "Shampoo, skincare, cosmetics",
               "Texture sells"
@@ -3586,11 +3706,21 @@
         "challenger": "study_text_first_x",
         "count": 10,
         "human_build_os": "references/human-build-os.md",
+        "join": {
+          "rule": "Patterns = grammar + routes. Studies = what to emulate + how to build; provenance.basis must be copied into the package. Attention models = timing. When study.pattern_ids miss picks.primary, keep pattern for stack/route and study.structure for beat jobs — do not invent a merge. Never treat basis:synthesis as observed metrics proof.",
+          "pattern_study_conflict": true,
+          "conflict_resolution": "Use study.structure for beats/hook jobs; use picks.routes[primary] for tool stack; note conflict in package Retrieval."
+        },
         "items": [
           {
             "id": "study_perf_pas_meta",
             "class": "performance_dr",
             "title": "Performance PAS (Meta / YouTube)",
+            "provenance": {
+              "observed": false,
+              "basis": "synthesis",
+              "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
+            },
             "when_to_emulate": [
               "Lead gen / trial",
               "SaaS, B2B, fintech education",
@@ -3684,6 +3814,11 @@
             "id": "study_text_first_x",
             "class": "performance_dr",
             "title": "Text-first punch (X / LinkedIn)",
+            "provenance": {
+              "observed": false,
+              "basis": "synthesis",
+              "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
+            },
             "when_to_emulate": [
               "B2B, founder POV, hot take with mechanism"
             ],
@@ -4021,11 +4156,21 @@
         "challenger": "study_voice_agent_missed_call",
         "count": 9,
         "human_build_os": "references/human-build-os.md",
+        "join": {
+          "rule": "Patterns = grammar + routes. Studies = what to emulate + how to build; provenance.basis must be copied into the package. Attention models = timing. When study.pattern_ids miss picks.primary, keep pattern for stack/route and study.structure for beat jobs — do not invent a merge. Never treat basis:synthesis as observed metrics proof.",
+          "pattern_study_conflict": false,
+          "conflict_resolution": "Aligned or no study patterns — use study beats + pattern route together."
+        },
         "items": [
           {
             "id": "study_perf_pas_meta",
             "class": "performance_dr",
             "title": "Performance PAS (Meta / YouTube)",
+            "provenance": {
+              "observed": false,
+              "basis": "synthesis",
+              "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
+            },
             "when_to_emulate": [
               "Lead gen / trial",
               "SaaS, B2B, fintech education",
@@ -4119,6 +4264,11 @@
             "id": "study_voice_agent_missed_call",
             "class": "performance_dr",
             "title": "Voice / AI agent missed-call → booked",
+            "provenance": {
+              "observed": false,
+              "basis": "synthesis",
+              "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
+            },
             "when_to_emulate": [
               "Voice AI, front-desk, after-hours SaaS",
               "OPlyai-class products"

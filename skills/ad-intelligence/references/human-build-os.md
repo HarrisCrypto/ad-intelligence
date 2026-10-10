@@ -2,7 +2,9 @@
 
 **Mission:** Studies teach *what* to emulate. This file teaches *how* a human builds it with real tools — so any LM finishes a cut instead of stopping at a concept slide.
 
-Pair with: `studies/corpus.json` (`human_build` steps) · `prompts/finish-the-cut.md` · `references/generated-ui-authenticity.md` · retrieve `payload.studies`.
+Pair with: `studies/corpus.json` (`human_build` **playbook** steps) · **`human-build-log.template.md` (the auditable artifact)** · `prompts/finish-the-cut.md` · `references/generated-ui-authenticity.md` · retrieve `payload.studies` (always copy `provenance`).
+
+`human_build` in a study is a checklist. The **log** is the filled artifact (decisions, job ids, retries, cost, lint). Seed: `examples/human-build-logs/voice-agent-assembler-seed.md`.
 
 ## Rule
 

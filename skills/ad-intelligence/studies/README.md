@@ -8,30 +8,69 @@
 | **Studies (public)** | Archetypal teardowns + when to emulate + human build steps | `studies/corpus.json` |
 | **Live research** | Meta / TikTok / X / YouTube public libraries | `references/ad-libraries.md` |
 | **Private corpus** | Your real-ad breakdowns (never commit media) | `studies/private/` (gitignored) |
-| **Method** | How a practitioner assembles the cut | `references/human-build-os.md` |
+| **Method** | Playbooks + **build-log artifact** | `human-build-os.md` · `human-build-log.template.md` |
+| **Ingest** | Validate → normalize → write private | `scripts/ingest-blueprint.mjs` |
 
-## Rules
+## Provenance (hard rule)
 
-- **Steal structure** (timing, shot job, text density, cut rhythm).  
-- **Never** paste competitor lines, logos, or claimed CTR/ROAS.  
-- Public studies are **archetypal distillations** — not named campaigns, not scrapes.  
-- For named competitors: browse libraries → fill private blueprints via `ingest/README.md`.
+Every study **must** carry:
+
+```json
+"provenance": {
+  "observed": false,
+  "basis": "synthesis",
+  "claim_firewall": "STRUCTURE_ONLY — …"
+}
+```
+
+| `basis` | Meaning | May cite as proof? |
+| --- | --- | --- |
+| `synthesis` | Distilled archetype (public corpus) | **No** — structure only |
+| `ad-library` | Human watched a public-library ad | Structure yes; never invent CTR |
+| `named-campaign` | Named teardown (private) | Structure yes; never paste lines |
+| `owned-ad` | Your brand’s ad | Yes for your metrics if true |
+
+Retrieve **surfaces** `provenance` on every item. Packages that treat `basis:synthesis` as observed evidence are inventing proof one level up.
 
 ## Agent loop
 
 ```text
-retrieve → pick study + attention model
+retrieve → pick study + attention model (copy provenance into package)
 → research_where (optional 10 min in public libraries)
 → emulate structure for THIS brand
-→ human_build steps with real tools
+→ human_build playbook + fill human-build LOG artifact
 → finish-the-cut → lint
 ```
+
+## Join rule (patterns ⊕ studies)
+
+- **Patterns** = grammar + tool routes  
+- **Studies** = emulate jobs + playbook (check provenance)  
+- **Attention models** = timing sheets  
+- If `study.pattern_ids` miss `picks.primary`: use study beats for the script, pattern route for the stack — note the conflict. Retrieve returns `studies.join`.
 
 ## Add a private study
 
 ```bash
-cp studies/private.example.json studies/private/my-competitor-01.json
-# edit breakdown; do not commit creatives
+# From AdBlueprint notes (see ../../ingest/sample-ingest.json — needs provenance)
+node scripts/ingest-blueprint.mjs ../../ingest/sample-ingest.json --write
+
+# Or from study-shaped JSON
+cp studies/private.example.json /tmp/my.json
+# edit; set provenance.observed + basis
+node scripts/ingest-blueprint.mjs /tmp/my.json --write
+
 node scripts/retrieve.mjs --niche saas --platform tiktok --compact
-# payload.studies includes private when present
+# payload.studies includes private when valid; invalid files → errors + exit 3
+```
+
+## Prove any harness (not only Cursor)
+
+Work lives on PR branch until merged to `main`. Fresh clone:
+
+```bash
+git clone -b cursor/multi-harness-agent-os-08cd https://github.com/HarrisCrypto/ad-intelligence.git
+cd ad-intelligence/skills/ad-intelligence
+node scripts/fresh-clone-prove.mjs
+node scripts/demo-quality-gates.mjs
 ```

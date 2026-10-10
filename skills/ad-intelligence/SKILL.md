@@ -12,7 +12,7 @@ description: >-
   Higgsfield. Probe → study → emulate → human_build → ≥6 beats → finish-the-cut → lint.
 compatibility: Requires Node 18+ for scripts. Optional network for URL brief + libraries. MCP video tools optional (connected rung).
 metadata:
-  version: "3.14.0"
+  version: "3.15.0"
   open_standard: agentskills
 ---
 
@@ -55,7 +55,9 @@ No shell: paste [`prompts/context-pack-lite.md`](prompts/context-pack-lite.md) �
 | --- | --- |
 | Full playbook | `prompts/one-shot.md` |
 | Studies (viral / pro / award) | `studies/corpus.json` · `studies/README.md` |
-| How a human builds | `references/human-build-os.md` |
+| How a human builds | `references/human-build-os.md` · **log:** `human-build-log.template.md` |
+| Ingest private studies | `scripts/ingest-blueprint.mjs` |
+| Prove fresh clone | `scripts/fresh-clone-prove.mjs` |
 | Tool equalization | `prompts/harness-equalization.md` |
 | Attention lab | `examples/visual/attention-lab.html` |
 | Finish full cut (no stall) | `prompts/finish-the-cut.md` |

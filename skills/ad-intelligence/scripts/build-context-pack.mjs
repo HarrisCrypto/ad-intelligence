@@ -47,13 +47,13 @@ const craftRules = `# Craft defaults (compressed)
 `;
 
 const liteParts = [
-  "# Ad Intelligence — CONTEXT PACK LITE (v3.14)\n\n",
+  "# Ad Intelligence — CONTEXT PACK LITE (v3.15)\n\n",
   "_Small-window paste. Prefer full pack if context allows._\n",
-  "_Repo: https://github.com/HarrisCrypto/ad-intelligence_\n\n",
+  "_Repo: https://github.com/HarrisCrypto/ad-intelligence_ _(PR branch until main merges)_\n\n",
   "## Sequence\n",
   "1. Tool card → rung (connected|handoff|assembler|package-only)\n",
   "2. Offline retrieve: references/retrieve-offline-compact.json (or live retrieve if shell)\n",
-  "3. Study + attention model → emulate → human_build → Concept → ≥6 exact-VO beats → Craft\n",
+  "3. Study + provenance + attention model → emulate → human_build LOG → Concept → ≥6 beats\n",
   "4. Finish the cut (prompts/finish-the-cut.md) — generate UI if needed; no stall\n",
   "5. No shell → prompts/no-shell-lint-checklist.md (never fake ok:true)\n\n",
   "---\n## ONE-SHOT\n\n",
@@ -75,7 +75,7 @@ const liteParts = [
 ];
 
 const fullParts = [
-  "# Ad Intelligence — CONTEXT PACK (v3.14)\n\n",
+  "# Ad Intelligence — CONTEXT PACK (v3.15)\n\n",
   "_Paste into system context. Then follow the one-shot sequence._\n",
   "_Repo: https://github.com/HarrisCrypto/ad-intelligence_\n",
   "_Lite pack: node scripts/build-context-pack.mjs --lite_\n",

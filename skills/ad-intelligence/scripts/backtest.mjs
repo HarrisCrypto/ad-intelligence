@@ -108,12 +108,14 @@ for (const [niche, platform, expectNicheSub, expectAmSub] of matrix) {
   const studiesOk =
     !!json.studies?.primary &&
     (json.studies?.items || []).length >= 1 &&
-    Array.isArray(json.studies.items[0]?.human_build);
+    Array.isArray(json.studies.items[0]?.human_build) &&
+    !!json.studies.items[0]?.provenance?.basis &&
+    !!json.studies?.join?.rule;
   liveSlices[`${niche}|${platform}`] = json;
   ok(
     `retrieve ${niche}|${platform}`,
     nicheOk && amOk && picksOk && timingOk && studiesOk,
-    `niche=${json.resolved?.niche_id} am=${am} study=${json.studies?.primary} primary=${json.picks?.primary} timing=${json.attention_models?.models?.[0]?.timing?.length || 0}`
+    `niche=${json.resolved?.niche_id} am=${am} study=${json.studies?.primary} basis=${json.studies?.items?.[0]?.provenance?.basis} primary=${json.picks?.primary}`
   );
 }
 
@@ -202,6 +204,18 @@ const studiesPath = path.join(ROOT, "studies", "corpus.json");
 const humanBuildPath = path.join(ROOT, "references", "human-build-os.md");
 ok("studies/corpus.json", fs.existsSync(studiesPath));
 ok("human-build-os.md", fs.existsSync(humanBuildPath));
+ok(
+  "human-build-log.template.md",
+  fs.existsSync(path.join(ROOT, "references", "human-build-log.template.md"))
+);
+ok(
+  "ingest-blueprint.mjs",
+  fs.existsSync(path.join(ROOT, "scripts", "ingest-blueprint.mjs"))
+);
+ok(
+  "fresh-clone-prove.mjs",
+  fs.existsSync(path.join(ROOT, "scripts", "fresh-clone-prove.mjs"))
+);
 if (fs.existsSync(studiesPath)) {
   const corpus = JSON.parse(fs.readFileSync(studiesPath, "utf8"));
   ok("studies ≥8", (corpus.studies || []).length >= 8, String((corpus.studies || []).length));
@@ -209,6 +223,18 @@ if (fs.existsSync(studiesPath)) {
     (s) => Array.isArray(s.human_build) && s.human_build.length >= 2
   );
   ok("studies have human_build", withBuild.length === (corpus.studies || []).length);
+  const withProv = (corpus.studies || []).filter(
+    (s) =>
+      s.provenance &&
+      typeof s.provenance.observed === "boolean" &&
+      s.provenance.basis === "synthesis" &&
+      s.provenance.observed === false
+  );
+  ok(
+    "public studies labelled synthesis",
+    withProv.length === (corpus.studies || []).length,
+    `${withProv.length}/${(corpus.studies || []).length}`
+  );
   const voice = retrieveCompact("voice ai", "meta").json;
   ok(
     "voice ai study = missed-call",

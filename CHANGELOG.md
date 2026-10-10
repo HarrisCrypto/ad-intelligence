@@ -1,5 +1,24 @@
 # Changelog
 
+## 3.15.0 — 2026-10-10
+
+**Studies honesty + any-harness proof** — provenance labels, ingest validator, loud private failures, join reconciliation tests, human-build log artifact, CI fresh-clone gates. Addresses: unlabelled synthesis-as-proof risk, empty private workflow, untested join, build-log as artifact.
+
+### Added
+- Hard `provenance` on every study (`observed`, `basis`, `claim_firewall`) — surfaced in retrieve
+- `schema/study.schema.json` · `scripts/lib/validate-study.mjs` · `scripts/ingest-blueprint.mjs`
+- Retrieve `studies.join` reconciliation rule; exit **3** on invalid study files (no silent skip)
+- `studies/fixtures/private-join/` + gates asserting join; `fresh-clone-prove.mjs`
+- `.github/workflows/fresh-clone-gates.yml`
+- `references/human-build-log.template.md` + seed `examples/human-build-logs/voice-agent-assembler-seed.md`
+
+### Changed
+- One-shot: copy provenance; fill build **log** artifact; never launder synthesis into proof
+- Plugin **3.15.0**
+
+### Note
+Until this PR merges, default `main` clone is still older — use branch `cursor/multi-harness-agent-os-08cd` or wait for merge. CI proves the PR ref.
+
 ## 3.14.0 — 2026-10-10
 
 **Studies OS** — any LM / any harness can one-shot from archetypal viral, performance, and award-film structures: when to emulate, what to steal, how a human builds with real tools — without scraping creatives.

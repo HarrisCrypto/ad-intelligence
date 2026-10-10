@@ -62,15 +62,104 @@ for (const c of listCorpus()) {
   console.log(`  [${mark}] ${c}`);
 }
 
-  console.log("\nVISUAL GALLERY");
-  console.log("  examples/visual/attention-lab.html  (models + public libraries)");
-  console.log("  examples/visual/index.html          (storyboard frames)");
-  console.log("  examples/stress-briefs/             (messy prompts for agent drills)");
+console.log("\nVISUAL GALLERY");
+console.log("  examples/visual/attention-lab.html  (models + public libraries)");
+console.log("  examples/visual/index.html          (storyboard frames)");
+console.log("  examples/stress-briefs/             (messy prompts for agent drills)");
+
+console.log("\nSTUDIES JOIN (retrieve patterns ⊕ studies + provenance)");
+{
+  const fixtureDir = path.join(ROOT, "studies", "fixtures", "private-join");
+  const env = {
+    ...process.env,
+    AD_INTEL_STUDIES_PRIVATE: fixtureDir,
+  };
+  const r = spawnSync(
+    process.execPath,
+    [
+      path.join(__dirname, "retrieve.mjs"),
+      "--niche",
+      "voice ai",
+      "--platform",
+      "meta",
+      "--compact",
+    ],
+    { encoding: "utf8", cwd: ROOT, env }
+  );
+  let j = null;
+  try {
+    j = JSON.parse(r.stdout || "{}");
+  } catch {
+    j = null;
+  }
+  const items = j?.studies?.items || [];
+  const hasFixture = items.some((s) => s.id === "study_fixture_join_voice");
+  const hasProv = items.every((s) => s.provenance?.basis);
+  const hasJoin = Boolean(j?.studies?.join?.rule);
+  const synthesisHonest = items
+    .filter((s) => s.provenance?.basis === "synthesis")
+    .every((s) => s.provenance?.observed === false);
+  const joinOk = hasFixture && hasProv && hasJoin && synthesisHonest && j?.studies?.primary;
+  report.studies_join = { ok: joinOk, hasFixture, hasProv, hasJoin };
+  if (!joinOk) report.pass = false;
+  console.log(
+    `  [${joinOk ? "PASS" : "FAIL"}] retrieve join + provenance (fixture private dir)`
+  );
+  if (!joinOk) {
+    console.log(
+      `         fixture=${hasFixture} prov=${hasProv} join=${hasJoin} primary=${j?.studies?.primary}`
+    );
+  }
+
+  // Invalid private file must surface errors (loud fail)
+  const badDir = path.join(ROOT, "packages", "_gate-bad-study");
+  fs.mkdirSync(badDir, { recursive: true });
+  fs.writeFileSync(
+    path.join(badDir, "broken.json"),
+    JSON.stringify({ id: "broken", title: "no provenance" })
+  );
+  const bad = spawnSync(
+    process.execPath,
+    [
+      path.join(__dirname, "retrieve.mjs"),
+      "--niche",
+      "saas",
+      "--platform",
+      "meta",
+      "--compact",
+    ],
+    {
+      encoding: "utf8",
+      cwd: ROOT,
+      env: { ...process.env, AD_INTEL_STUDIES_PRIVATE: badDir },
+    }
+  );
+  let badJ = null;
+  try {
+    badJ = JSON.parse(bad.stdout || "{}");
+  } catch {
+    badJ = null;
+  }
+  const loud =
+    bad.status === 3 &&
+    Array.isArray(badJ?.studies?.errors) &&
+    badJ.studies.errors.length > 0;
+  report.studies_loud = { ok: loud };
+  if (!loud) report.pass = false;
+  console.log(
+    `  [${loud ? "PASS" : "FAIL"}] invalid private study fails loudly (exit 3)`
+  );
+  try {
+    fs.rmSync(badDir, { recursive: true, force: true });
+  } catch {
+    /* ignore */
+  }
+}
 
 console.log(
   report.pass
-    ? "\nOK — gold green, corpus caught. Gates look healthy."
-    : "\nERROR — unexpected lint results; inspect above."
+    ? "\nOK — gold green, corpus caught, studies join healthy."
+    : "\nERROR — unexpected lint/join results; inspect above."
 );
 
 process.exit(report.pass ? 0 : 1);

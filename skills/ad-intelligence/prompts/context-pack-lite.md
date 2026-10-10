@@ -1,12 +1,12 @@
-# Ad Intelligence — CONTEXT PACK LITE (v3.14)
+# Ad Intelligence — CONTEXT PACK LITE (v3.15)
 
 _Small-window paste. Prefer full pack if context allows._
-_Repo: https://github.com/HarrisCrypto/ad-intelligence_
+_Repo: https://github.com/HarrisCrypto/ad-intelligence_ _(PR branch until main merges)_
 
 ## Sequence
 1. Tool card → rung (connected|handoff|assembler|package-only)
 2. Offline retrieve: references/retrieve-offline-compact.json (or live retrieve if shell)
-3. Study + attention model → emulate → human_build → Concept → ≥6 exact-VO beats → Craft
+3. Study + provenance + attention model → emulate → human_build LOG → Concept → ≥6 beats
 4. Finish the cut (prompts/finish-the-cut.md) — generate UI if needed; no stall
 5. No shell → prompts/no-shell-lint-checklist.md (never fake ok:true)
 
@@ -42,15 +42,17 @@ Agents fail when they fill ledgers before having an idea — or render a hook an
    Optional 10 min in public libraries (studies[].research_where).
 
 4. EMULATE + HUMAN BUILD + WRITE CREATIVE FIRST:
-   a) Study id + attention model id + angle axis (references/angle-axes.md)
+   a) Study id + provenance (observed/basis) + attention model + angle axis
       Steal study.steal; obey study.never_copy; follow when_to_emulate.
-   b) Map study.human_build + references/human-build-os.md to YOUR rung/tools
+      NEVER cite basis:synthesis as observed proof or metrics.
+   b) Map study.human_build playbook + references/human-build-os.md to YOUR rung
    c) Concept: 3 one-liners → pick ONE → "Not the default because…"
       (ban: smiling hold-to-camera, floating product+particles, drone #1, neon SaaS cockpit, invented %)
    d) Timed script: ≥6 rows matching study/model timing (±). EXACT quoted VO/text.
    e) Captions cover the cut. One CTA. Muted-first 0–3s (no logo).
    f) Craft: ≥2 #HEX, real fonts, motion, E1, 9:16+1:1 — cut/shots/animation named
    g) One paste-ready prompt PER unit (CAMERA/LIGHT/MOTION/GRADE/NEGATIVES)
+   h) Start human-build LOG artifact (references/human-build-log.template.md)
 
 5. FILL remaining [[BRACKETS]]. Never invent proof.
 
@@ -63,8 +65,9 @@ Agents fail when they fill ledgers before having an idea — or render a hook an
 7. FINISH THE CUT (if image/video tools exist):
    Follow prompts/finish-the-cut.md — cover EVERY second of the timed script.
    Missing UI/screenshots? → references/generated-ui-authenticity.md (generate 3 states).
-   Post owns captions/logo/CTA type. Log real job ids. No parallel agents.
+   Post owns captions/logo/CTA type. Log real job ids into the human-build LOG. No parallel agents.
    Do NOT deliver “send me screenshots to finish” when you can generate.
+   Deliver package + lint JSON + build log (seed shape: examples/human-build-logs/).
 ```
 
 ## Niche cheat sheet
@@ -85,7 +88,8 @@ Full map: `studies/corpus.json` · `references/ad-libraries.md`. Emulate: `promp
 Do **not** deliver if:
 
 - Any `[[BRACKET]]` left  
-- No study id + no attention model id + no Concept with “Not the default because…”  
+- No study id + provenance + attention model id + no Concept with “Not the default because…”  
+- Cited a `basis:synthesis` study as observed performance proof  
 - Timed script &lt; 6 rows or VO cells say “sparse” / “≤N words”  
 - Craft is adjectives only or fonts hedged (-style/-like)  
 - Invented metrics without `[PLACEHOLDER…]`  
@@ -186,7 +190,9 @@ The interface **is** the product. Rubber holographic UI is the trap (credits bur
 
 **Mission:** Studies teach *what* to emulate. This file teaches *how* a human builds it with real tools — so any LM finishes a cut instead of stopping at a concept slide.
 
-Pair with: `studies/corpus.json` (`human_build` steps) · `prompts/finish-the-cut.md` · `references/generated-ui-authenticity.md` · retrieve `payload.studies`.
+Pair with: `studies/corpus.json` (`human_build` **playbook** steps) · **`human-build-log.template.md` (the auditable artifact)** · `prompts/finish-the-cut.md` · `references/generated-ui-authenticity.md` · retrieve `payload.studies` (always copy `provenance`).
+
+`human_build` in a study is a checklist. The **log** is the filled artifact (decisions, job ids, retries, cost, lint). Seed: `examples/human-build-logs/voice-agent-assembler-seed.md`.
 
 ## Rule
 

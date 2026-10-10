@@ -17,7 +17,7 @@ Read this in under a minute, then open a gold fixture:
 | **Stress briefs (messy prompts)** | [`examples/stress-briefs/`](./skills/ad-intelligence/examples/stress-briefs/) |
 | Shape-only skeleton (structure, not quality) | [`entertainment-creator-series.md`](./skills/ad-intelligence/examples/entertainment-creator-series.md) |
 
-**v3.14:** Studies corpus + human-build OS (viral / pro / award → emulate → build like a human). **v3.13:** Finish-the-cut + generated UI authenticity (no hook-only stall). **v3.12:** Multi-harness Agent OS + backtest. **v3.11:** Attention Lab. Plus craft OS / assembler routing.
+**v3.15:** Provenanced studies + ingest + join tests + human-build **log** artifact + CI fresh-clone gates. **v3.14:** Studies corpus + human-build OS. **v3.13:** Finish-the-cut. **v3.12:** Multi-harness Agent OS. **v3.11:** Attention Lab.
 
 **v3.6–3.7:** triple-path / assembler / voice / Wan–LTX–Grok (+ peers) routing + render-QA.
 

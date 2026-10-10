@@ -17,6 +17,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { validateStudy } from "./lib/validate-study.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DB_ROOT = path.join(__dirname, "..");
@@ -220,33 +221,66 @@ function normToken(s) {
     .replace(/_/g, "-");
 }
 
+function privateStudiesDir() {
+  return (
+    process.env.AD_INTEL_STUDIES_PRIVATE ||
+    path.join(DB_ROOT, "studies", "private")
+  );
+}
+
+/**
+ * Load public + private studies. Invalid private files are NOT silently skipped —
+ * they appear in errors and set a non-zero exit hint.
+ */
 function loadStudies() {
   const out = [];
+  const errors = [];
   const corpusPath = path.join(DB_ROOT, "studies", "corpus.json");
   if (fs.existsSync(corpusPath)) {
     try {
       const corpus = loadJson(corpusPath);
       for (const s of corpus.studies || []) {
-        if (s?.id) out.push({ ...s, private: false, source: "public" });
+        if (!s?.id) {
+          errors.push("public corpus entry missing id");
+          continue;
+        }
+        const verr = validateStudy(s, { file: `corpus:${s.id}` });
+        if (verr.length) {
+          errors.push(...verr);
+          continue;
+        }
+        out.push({ ...s, private: false, source: "public" });
       }
-    } catch {
-      /* ignore corrupt public corpus */
+    } catch (e) {
+      errors.push(`public corpus parse_failed: ${e.message}`);
     }
   }
-  const privDir = path.join(DB_ROOT, "studies", "private");
+  const privDir = privateStudiesDir();
   if (fs.existsSync(privDir)) {
     for (const f of fs.readdirSync(privDir)) {
       if (!f.endsWith(".json")) continue;
+      const fp = path.join(privDir, f);
       try {
-        const s = loadJson(path.join(privDir, f));
-        if (s?.id)
-          out.push({ ...s, private: true, source: `private/${f}` });
-      } catch {
-        /* skip bad private files */
+        const s = loadJson(fp);
+        if (!s?.id) {
+          errors.push(`private/${f}: missing id`);
+          continue;
+        }
+        const verr = validateStudy(
+          { ...s, private: true },
+          { file: `private/${f}` }
+        );
+        if (verr.length) {
+          errors.push(...verr);
+          continue;
+        }
+        out.push({ ...s, private: true, source: `private/${f}` });
+      } catch (e) {
+        errors.push(`private/${f}: parse_failed (${e.message})`);
       }
     }
   }
-  return out;
+  return { studies: out, errors };
 }
 
 function scoreStudy(study, q, pickIds, amIds) {
@@ -345,6 +379,7 @@ function compactStudy(study) {
     class: study.class,
     title: study.title,
     private: !!study.private,
+    provenance: study.provenance || null,
     when_to_emulate: (study.when_to_emulate || []).slice(0, 4),
     when_not: (study.when_not || []).slice(0, 3),
     steal: study.steal || [],
@@ -359,8 +394,39 @@ function compactStudy(study) {
         }
       : null,
     human_build: study.human_build || [],
+    human_build_log: study.human_build_log || null,
     research_where: study.research_where || null,
     gold_fixture: study.gold_fixture || null,
+  };
+}
+
+function reconcileJoin(primaryPattern, study, attentionPrimary) {
+  const studyPatterns = study?.pattern_ids || [];
+  const overlap = studyPatterns.includes(primaryPattern);
+  const conflict = Boolean(
+    primaryPattern && studyPatterns.length && !overlap
+  );
+  return {
+    layers: {
+      patterns: "grammar / stack routes (database/patterns)",
+      attention_models: "second-by-second timing sheets",
+      studies: "emulate structure + human_build playbook — check provenance",
+    },
+    precedence: [
+      "private observed (ad-library|named-campaign|owned-ad)",
+      "public observed",
+      "synthesis studies (structure only — not proof)",
+      "patterns alone",
+    ],
+    rule: "Patterns = grammar + routes. Studies = what to emulate + how to build; provenance.basis must be copied into the package. Attention models = timing. When study.pattern_ids miss picks.primary, keep pattern for stack/route and study.structure for beat jobs — do not invent a merge. Never treat basis:synthesis as observed metrics proof.",
+    primary_pattern: primaryPattern || null,
+    primary_study: study?.id || null,
+    attention_model: attentionPrimary || null,
+    pattern_study_overlap: overlap,
+    pattern_study_conflict: conflict,
+    conflict_resolution: conflict
+      ? "Use study.structure for beats/hook jobs; use picks.routes[primary] for tool stack; note conflict in package Retrieval."
+      : "Aligned or no study patterns — use study beats + pattern route together.",
   };
 }
 
@@ -774,23 +840,41 @@ function main() {
   if (attentionModels?.primary) amIds.add(attentionModels.primary);
   if (attentionModels?.challenger) amIds.add(attentionModels.challenger);
 
-  const rankedStudies = loadStudies()
+  const { studies: allStudies, errors: studyErrors } = loadStudies();
+  if (studyErrors.length) {
+    warnings.push(...studyErrors.map((e) => `study_invalid:${e}`));
+  }
+
+  const rankedStudies = allStudies
     .map((s) => ({ study: s, score: scoreStudy(s, q, pickIds, amIds) }))
     .filter((x) => x.score > 0)
     .sort((a, b) => {
       if (b.score !== a.score) return b.score - a.score;
+      // Prefer observed over synthesis when scores tie
+      const ao = a.study.provenance?.observed ? 1 : 0;
+      const bo = b.study.provenance?.observed ? 1 : 0;
+      if (ao !== bo) return bo - ao;
       return a.study.id.localeCompare(b.study.id);
     });
 
+  const primaryStudy = rankedStudies[0]?.study || null;
   const studiesPayload = {
     file: "studies/corpus.json",
     docs: "studies/README.md",
     human_build_os: "references/human-build-os.md",
+    human_build_log_template: "references/human-build-log.template.md",
+    ingest: "scripts/ingest-blueprint.mjs",
     emulate: "prompts/emulate-attention-model.md",
-    note: "Archetypal viral/pro/award structures — emulate timing & craft; never copy brand facts. Private studies load from studies/private/ when present.",
-    primary: rankedStudies[0]?.study?.id || null,
+    note: "Check provenance on every study. basis:synthesis = structure only — never launder into proof. Private: studies/private/ via ingest-blueprint.mjs.",
+    primary: primaryStudy?.id || null,
     challenger: rankedStudies[1]?.study?.id || null,
     count: rankedStudies.length,
+    errors: studyErrors,
+    join: reconcileJoin(
+      primary,
+      primaryStudy,
+      attentionModels?.primary || null
+    ),
     items: rankedStudies.slice(0, 5).map((x) => ({
       score: x.score,
       ...compactStudy(x.study),
@@ -864,10 +948,15 @@ function main() {
         challenger: studiesPayload.challenger,
         count: studiesPayload.count,
         human_build_os: studiesPayload.human_build_os,
+        human_build_log_template: studiesPayload.human_build_log_template,
+        ingest: studiesPayload.ingest,
+        join: studiesPayload.join,
+        errors: studiesPayload.errors,
         items: studiesPayload.items.slice(0, 3).map((s) => ({
           id: s.id,
           class: s.class,
           title: s.title,
+          provenance: s.provenance,
           when_to_emulate: s.when_to_emulate,
           steal: s.steal,
           never_copy: s.never_copy,
@@ -899,6 +988,8 @@ function main() {
   }
 
   if (matchQuality === "none") process.exitCode = 2;
+  // Loud failure: invalid private/public studies must not silently degrade
+  if (studyErrors.length) process.exitCode = process.exitCode || 3;
 }
 
 main();

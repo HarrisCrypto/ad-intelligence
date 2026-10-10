@@ -38,7 +38,8 @@ Packages that do **not** invent proof, drift product identity, or burn three red
 | **Ship gate demo** | `node skills/ad-intelligence/scripts/demo-quality-gates.mjs` |
 | **Contribute** | [CONTRIBUTING.md](./CONTRIBUTING.md) |
 
-**Version 3.14.0** — [CHANGELOG.md](./CHANGELOG.md)
+**Version 3.15.0** — [CHANGELOG.md](./CHANGELOG.md)  
+**Branch note:** studies OS ships on [`cursor/multi-harness-agent-os-08cd`](https://github.com/HarrisCrypto/ad-intelligence/tree/cursor/multi-harness-agent-os-08cd) / [PR #15](https://github.com/HarrisCrypto/ad-intelligence/pull/15) until merged to `main`.
 
 ---
 

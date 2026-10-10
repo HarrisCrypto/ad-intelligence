@@ -74,10 +74,18 @@ for (const q of QUERIES) {
           challenger: j.studies.challenger,
           count: j.studies.count,
           human_build_os: j.studies.human_build_os,
+          join: j.studies.join
+            ? {
+                rule: j.studies.join.rule,
+                pattern_study_conflict: j.studies.join.pattern_study_conflict,
+                conflict_resolution: j.studies.join.conflict_resolution,
+              }
+            : null,
           items: (j.studies.items || []).slice(0, 2).map((s) => ({
             id: s.id,
             class: s.class,
             title: s.title,
+            provenance: s.provenance,
             when_to_emulate: s.when_to_emulate,
             steal: s.steal,
             never_copy: s.never_copy,

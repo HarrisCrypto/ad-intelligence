@@ -26,8 +26,13 @@ Agent retrieves: patterns (public skill) ⊕ your private blueprints
 
 1. Find 10 ads you admire (Meta Ad Library, TikTok Creative Center, etc.).
 2. For each, fill `sample-ingest.json` fields yourself (or with a vision model).
-3. Drop files into a private folder: `private-blueprints/*.json` (do not commit).
-4. Point retrieve at both `database/patterns` and `private-blueprints`.
+3. **Required:** `provenance: { observed, basis, claim_firewall }` — never skip.
+4. Validate + write private study:
+   ```bash
+   cd skills/ad-intelligence
+   node scripts/ingest-blueprint.mjs ../../ingest/sample-ingest.json --write
+   ```
+5. Retrieve joins patterns ⊕ `studies/private/*.json` (invalid files → exit 3, not silent skip).
 
 ### Level 1 — Licensed swipe tools
 

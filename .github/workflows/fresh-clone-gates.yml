@@ -1,0 +1,36 @@
+name: Fresh clone gates
+
+# Proves any harness getting this ref (not only a dirty Cursor workspace).
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  gates:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR / push ref
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Studies present on this ref
+        run: |
+          test -f skills/ad-intelligence/studies/corpus.json
+          node -e "const c=require('./skills/ad-intelligence/studies/corpus.json'); if(!c.studies?.length) process.exit(1); for (const s of c.studies){ if(typeof s.provenance?.observed!=='boolean') process.exit(2);} "
+
+      - name: Demo quality gates (+ studies join fixture)
+        working-directory: skills/ad-intelligence
+        run: node scripts/demo-quality-gates.mjs
+
+      - name: Backtest suite
+        working-directory: skills/ad-intelligence
+        run: node scripts/backtest.mjs
+
+      - name: Fresh-checkout prove (retrieve provenance join)
+        working-directory: skills/ad-intelligence
+        run: node scripts/fresh-clone-prove.mjs

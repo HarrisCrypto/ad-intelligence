@@ -53,5 +53,12 @@
   "output_contract": {
     "deliverables": ["script", "shot_list", "primary_text"]
   },
-  "source_notes": "Private research note. Do not redistribute original creative."
+  "source_notes": "Private research note. Do not redistribute original creative.",
+  "provenance": {
+    "observed": true,
+    "basis": "ad-library",
+    "claim_firewall": "Observed breakdown — structure only; never invent CTR/ROAS or paste verbatim competitor copy.",
+    "observed_date": "2026-10-10",
+    "library_ids": ["meta_ad_library"]
+  }
 }
