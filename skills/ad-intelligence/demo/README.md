@@ -31,11 +31,10 @@ Follow [`../references/creative-stack/assembler-pipeline.md`](../references/crea
 ## Agent one-liner
 
 ```text
-Match the depth of the full-depth fixtures in skills/ad-intelligence/examples/
-(including voice-agent-front-desk) AND elite-creative-os.md Craft system
-(palette, type, motion, endcard). Choose connected / handoff / assembler rung.
-Pass lint-package.mjs; run or emit render-qa.json before done.
-If repo missing: prompts/bootstrap-from-github.md
+ONE-SHOT: prompts/one-shot.md
+start-package.mjs → retrieve.mjs → fill skeleton → lint until ok:true.
+Match craft density of gold fixtures + elite-creative-os.md.
+If repo missing: build-context-pack.mjs or bootstrap-from-github.md
 ```
 
 ## Shape-only (not the quality bar)

@@ -1,129 +1,73 @@
-# Install Ad Intelligence (low friction)
+# Install Ad Intelligence (one-shot)
 
 **Repo:** https://github.com/HarrisCrypto/ad-intelligence  
 **Skill root:** `skills/ad-intelligence/`  
-**Version:** **3.8.1** — see [CHANGELOG.md](./CHANGELOG.md)
+**Version:** **3.9.0** — see [CHANGELOG.md](./CHANGELOG.md)
 
 ---
 
-## One-line paths
+## Why agents fail (and the fix)
 
-| Harness | Fastest install |
+Agents brainstorm. This skill forces: **copy skeleton → retrieve → fill → lint until green.**  
+That is the one-shot path used by reliable Cursor skills (procedure + template + validation loop).
+
+---
+
+## Fastest paths
+
+| Harness | Do this |
 | --- | --- |
-| **Cursor (plugin)** | Customize → From GitHub Repository → paste `https://github.com/HarrisCrypto/ad-intelligence` → install **ad-intelligence** |
-| **Cursor (this repo open)** | Already available — ask `/ad-intelligence` or “use the ad-intelligence skill” |
-| **Claude / Grok / Hermes / other** | **Clone the repo** → prepend [`harness-system-prompt.md`](./skills/ad-intelligence/prompts/harness-system-prompt.md) → follow [`bootstrap-from-github.md`](./skills/ad-intelligence/prompts/bootstrap-from-github.md) |
-| **Cloud Agents** | Keep this repo as the workspace **or** copy `skills/ad-intelligence` into `.cursor/skills/` |
-
-Plugin metadata lives at `.cursor-plugin/` (`plugin.json` + `marketplace.json`).
-
-**Critical:** Pasting a thin “make me ads” prompt without cloning this repo will not hit the quality bar. The LLM needs `elite-creative-os.md`, gold fixtures, retrieve, and lint on disk.
+| **Cursor (plugin)** | Customize → From GitHub Repository → `https://github.com/HarrisCrypto/ad-intelligence` → install **ad-intelligence** → `/ad-intelligence` |
+| **Cursor (repo open)** | `/ad-intelligence` or ask to make an ad — agent should follow `prompts/one-shot.md` |
+| **Any other LLM** | Clone repo → run `node skills/ad-intelligence/scripts/build-context-pack.mjs` → paste output as system → give brief |
+| **Cloud Agents** | Clone this repo as the workspace |
 
 ---
 
-## Quick start for agents
+## Paste this to your agent (one-shot)
 
 ```text
-You are using Ad Intelligence v3.8.1 from https://github.com/HarrisCrypto/ad-intelligence
-Skill root: skills/ad-intelligence/
+Use Ad Intelligence v3.9 from https://github.com/HarrisCrypto/ad-intelligence
+Follow skills/ad-intelligence/prompts/one-shot.md EXACTLY.
 
-BOOTSTRAP (if repo not open):
-  git clone https://github.com/HarrisCrypto/ad-intelligence.git
-  cd ad-intelligence/skills/ad-intelligence
-  Follow prompts/bootstrap-from-github.md
-
-READ IN ORDER:
-  SKILL.md → prompts/harness-system-prompt.md →
-  references/elite-creative-os.md → references/production-finish-spec.md →
-  pipelines/one-stop-ad-maker.md → references/output-template.md →
-  closest examples/* gold fixture
-  No Seedance/Higgsfield? → creative-stack/assembler-pipeline.md +
-  alternative-model-routing.md
-
-RUN TOOLS:
-  node scripts/retrieve.mjs --niche <niche|alias> --platform <platform> --limit 5
-  node scripts/lint-package.mjs path/to/package.md
-  optional: node scripts/demo-quality-gates.mjs
-
-DELIVER: full output-template including Craft system (palette, type, motion,
-sound, endcard, aspects). Must feel like a custom motion template from a top
-shop — not vibes. Never invent proof or Seedance jobs. One CTA. Muted-first.
-```
-
-One-shot user prompt:
-
-```text
-/ad-intelligence
-Clone or use HarrisCrypto/ad-intelligence. Follow elite-creative-os.md.
-Make first-shot dual-track ads for:
+Brief:
 - Company / product:
 - Niche:
 - Platforms:
-- Goal:
-- Assets on hand (stills, URL, reviews):
-- Tools: Higgsfield/Seedance connected | handoff | assembler (Wan/LTX/Grok/…):
+- Goal / offer:
+- Assets (stills/URL/reviews):
+- Tools: Higgsfield/Seedance connected | handoff | assembler:
 
-Retrieve → sheets → Craft system → render plan → CapCut finish spec → lint + render-qa.
+Commands (from skills/ad-intelligence/):
+1) node scripts/start-package.mjs --out packages/<brand>-ad.md
+2) node scripts/retrieve.mjs --niche <niche> --platform <platform> --limit 5
+3) Fill every [[BRACKET]] (Craft system must pass craft lint)
+4) node scripts/lint-package.mjs packages/<brand>-ad.md until ok:true
+5) Deliver the file + lint JSON — no chat-only brainstorm
 ```
 
 ---
 
-## Discoverable commands
-
-From skill root (`skills/ad-intelligence/`):
-
-```bash
-node scripts/retrieve.mjs --niche beauty --platform tiktok --limit 5
-node scripts/retrieve.mjs --list
-node scripts/lint-package.mjs examples/beauty-dtc-dual-track.md
-node scripts/demo-quality-gates.mjs
-```
-
----
-
-## Cursor details
-
-1. **Plugin install:** Customize → From GitHub Repository → this URL → Skills list **ad-intelligence**.
-2. **In-chat:** `/ad-intelligence` — then require retrieve + lint + Craft system.
-3. **Sticky session:** Option/Alt+Enter on the skill → Custom Mode.
-4. **Optional rule** (`.cursor/rules/ads.mdc`):
-
-```markdown
----
-description: Ads and creatives use Ad Intelligence
-alwaysApply: false
----
-When the user asks for ads, creatives, hooks, UGC, or launch films: follow
-skills/ad-intelligence/SKILL.md and elite-creative-os.md, run retrieve.mjs,
-fill Craft system + output template, and pass lint-package.mjs before done.
-```
-
-5. **Cloud:** Prefer cloning this repo so agents get the skill + scripts.
-
----
-
-## Non-Cursor harnesses
+## External LLM (no Cursor skills)
 
 ```bash
 git clone https://github.com/HarrisCrypto/ad-intelligence.git
-cd ad-intelligence/skills/ad-intelligence
-# Prepend prompts/harness-system-prompt.md
-# Follow prompts/bootstrap-from-github.md
-node scripts/retrieve.mjs --niche <niche> --limit 5
+cd ad-intelligence
+node skills/ad-intelligence/scripts/build-context-pack.mjs > /tmp/ad-pack.md
+# Paste /tmp/ad-pack.md into the model system prompt, then send the brief.
 ```
 
 ---
 
-## Verify quality is actually loading
+## Verify the agent actually loaded the skill
 
-- Agent cites **pattern ids**, **Craft system** (palette/type/endcard), **claim ledger**, **render plan**, and **lint**.
-- `lint-package.mjs` on gold fixtures returns `"ok": true`.
-- Package looks like a **custom CapCut/Figma template**, not a brainstorm paragraph.
-- If not: paste `bootstrap-from-github.md` and insist on clone + elite-creative-os.
+- Writes `packages/*-ad.md` from the skeleton  
+- Cites pattern ids from `retrieve.mjs`  
+- Craft system has ≥2 HEX + named type + E1 endcard  
+- Pastes `"ok": true` from lint  
 
-## Proof & quality bar
+If you only get a paragraph of “hook ideas,” the one-shot path was skipped — paste `prompts/one-shot.md` and insist.
 
-- [PROOF.md](./PROOF.md) · [elite-creative-os.md](./skills/ad-intelligence/references/elite-creative-os.md)  
-- [Visual gallery](./skills/ad-intelligence/examples/visual/index.html)  
-- [demo/](./skills/ad-intelligence/demo/) · gold fixtures in `examples/`  
-- Assembler + routing: `creative-stack/` · Render QA: `checklists/render-qa.json`  
+## Proof
+
+[PROOF.md](./PROOF.md) · [elite-creative-os.md](./skills/ad-intelligence/references/elite-creative-os.md) · gold fixtures in `skills/ad-intelligence/examples/`

@@ -1,5 +1,24 @@
 # Changelog
 
+## 3.9.0 — 2026-10-10
+
+**One-shot agent path** — stop brainstorming; copy skeleton → retrieve → fill → lint loop (how top Cursor skills keep quality reliable).
+
+### Added
+- `prompts/one-shot.md` — hard sequence + refusal rules
+- `references/package-skeleton.md` — fill-`[[BRACKET]]` package agents copy
+- `scripts/start-package.mjs` — write skeleton to `packages/<brand>-ad.md`
+- `scripts/build-context-pack.mjs` — single pasteable pack for any LLM
+- `.cursor/rules/ad-intelligence.mdc` — route ad requests to the one-shot path
+
+### Changed
+- `SKILL.md` rewritten: trigger-rich description + mandatory one-shot procedure first
+- Harness / INSTALL / README: one-shot commands as the default
+- Plugin **3.9.0**
+
+### Preserved
+- Craft lint (3.8.1), elite OS, assembler + model routing, claim firewall, gold fixtures
+
 ## 3.8.1 — 2026-10-10
 
 Harden craft gates so a Craft system **heading** is not enough — vague “cinematic / nice colors” packages fail lint (follow-up from quality audit).
