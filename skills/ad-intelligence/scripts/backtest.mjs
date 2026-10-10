@@ -79,6 +79,37 @@ try {
   /* ignore */
 }
 ok("probe-harness --json", !!probeJ && probeJ.files_missing?.length === 0, probeJ?.recommended_rung_hint);
+ok(
+  "probe reports hardware + ceiling",
+  !!probeJ?.runtime?.hardware?.cores &&
+    typeof probeJ.runtime.hardware.gpu?.present === "boolean" &&
+    !!probeJ.runtime.hardware.quality_ceiling,
+  probeJ?.runtime?.hardware?.gpu?.present === false ? "CPU-only ceiling" : "GPU"
+);
+ok(
+  "typography library provisioned",
+  fs.existsSync(path.join(REPO, "library/typography/fonts/anton/Anton-Regular.ttf")) &&
+    fs.existsSync(path.join(REPO, "library/typography/fallback-map.json"))
+);
+{
+  const bh = runNode("brand-harvest.mjs", ["https://oplyai.com", "--json"]);
+  let bhJ = null;
+  try {
+    bhJ = JSON.parse(bh.stdout || "{}");
+  } catch {
+    /* ignore */
+  }
+  ok(
+    "brand-harvest oplyai.com ASSET_VERIFIED",
+    bh.status === 0 &&
+      bhJ?.ok &&
+      bhJ.palette?.background?.tag === "ASSET_VERIFIED" &&
+      bhJ.palette?.accent?.tag === "ASSET_VERIFIED" &&
+      /same brain/i.test(String(bhJ.brand?.tagline?.value || "")) &&
+      /access call/i.test(String(bhJ.copy?.ctas?.value?.[0] || "")),
+    bhJ?.brand?.tagline?.value || bh.stderr?.slice(0, 80)
+  );
+}
 
 // 4) Retrieve matrix
 console.log("\nRETRIEVE MATRIX");

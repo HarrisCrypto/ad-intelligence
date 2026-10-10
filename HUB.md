@@ -7,8 +7,8 @@
 | **0** | [`AUDIT.md`](./AUDIT.md) | ✅ Done — user ack |
 | **1** | [`classroom/README.md`](./classroom/README.md) legal/sourcing | ✅ Done |
 | **5 (early)** | [`pipeline/qa`](./pipeline/qa/) + [`regression/fail/oply-v1`](./regression/fail/oply-v1/) | ✅ Done — prove-qa catches measured fails; B7.3 lint fixed |
-| **2.5** | Brand harvest + font/voice/music provision | ⏳ Next |
-| **2** | Study cards (home-services / AI phone first) | Pending |
+| **2.5** | Brand harvest + typography/sound provision | ✅ Done — `brand-harvest.mjs`, `library/typography`, `library/sound`, probe hardware |
+| **2** | Study cards (home-services / AI phone first) | ⏳ Next |
 | **3** | Executable `library/` + demos | Pending |
 | **4** | `specs/ad-spec.schema.json` + 2 templates | Pending |
 | **6** | Vision critic loop | Pending |

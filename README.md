@@ -14,6 +14,7 @@ Packages that do **not** invent proof, drift product identity, or burn three red
 | --- | --- |
 | **Classroom + Hub status (unified track)** | [HUB.md](./HUB.md) · [AUDIT.md](./AUDIT.md) · [classroom/](./classroom/) |
 | **Render QA (actual video)** | [pipeline/qa/](./pipeline/qa/) · [regression/fail/oply-v1](./regression/fail/oply-v1/) · `node pipeline/qa/prove-qa.mjs` |
+| **Brand harvest (Gate 2.5)** | `node skills/ad-intelligence/scripts/brand-harvest.mjs <url>` · [library/typography](./library/typography/) · [library/sound](./library/sound/) |
 | **Why it exists (before/after)** | [PROOF.md](./PROOF.md) |
 | **ONE-SHOT playbook (agents start here)** | [one-shot.md](./skills/ad-intelligence/prompts/one-shot.md) |
 | **Package skeleton (copy & fill)** | [package-skeleton.md](./skills/ad-intelligence/references/package-skeleton.md) |

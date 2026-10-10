@@ -26,16 +26,13 @@ Ads, creatives, hooks, UGC, Meta/TikTok/Instagram/X/YouTube, “ads for my site,
 
 ## ONE-SHOT (mandatory)
 
-1. `node scripts/probe-harness.mjs` → fill tool card ([`prompts/harness-equalization.md`](prompts/harness-equalization.md))
-2. URL/site? → `node scripts/brief-from-url.mjs <url>` ([`prompts/brief-from-url.md`](prompts/brief-from-url.md))
-3. Optional brand file? Read `references/brand-context.md` or `.agents/brand-context.md` if present
-4. `node scripts/start-package.mjs --out packages/<brand>-ad.md`
-5. `node scripts/retrieve.mjs --niche <n> --platform <p> --limit 5 --compact` — paste **studies** + attention models + pattern picks
-6. Research access: `node scripts/library-access.mjs --niche <n> --platform <p> --keyword …` — if TikTok/Meta wall, walk login-free fallbacks (Google Transparency + Meta deep links + Attention Lab). Emulate structure ([`ad-libraries.md`](references/ad-libraries.md) · [`studies/README.md`](studies/README.md))
-7. **Creative:** study + attention model + [angle axes](references/angle-axes.md) → Concept → ≥6 exact-VO rows → Craft → unit prompts via [`human-build-os.md`](references/human-build-os.md)
-8. Fill `[[BRACKETS]]` → `node scripts/lint-package.mjs …` until `"ok": true`
-9. **Finish the cut** ([`prompts/finish-the-cut.md`](prompts/finish-the-cut.md)) — **every second** of the timed script + **audio in CapCut** (VO/SFX/bed); generate UI if needed ([`generated-ui-authenticity.md`](references/generated-ui-authenticity.md)); no “send screenshots” stall; an 8s silent hook is **not** done
-10. Deliver the file + real job ids (full cut, not hook-only)
+1. `node scripts/probe-harness.mjs` → tool card + **hardware/ceiling** ([`harness-equalization.md`](prompts/harness-equalization.md))
+2. URL/site? → `brief-from-url.mjs` then **`brand-harvest.mjs <url>`** (Gate 2.5 — lock palette/mascot/CTA from the site; never invent)
+3. Provision fonts from [`library/typography/`](../../library/typography/) if craft names them; voice tier per [`library/sound/`](../../library/sound/)
+4. `start-package.mjs` → `retrieve.mjs --compact` — open **`gold_fixtures`**; library-access if Meta/TikTok wall
+5. Emulate study structure ([`studies/README.md`](studies/README.md)) → Concept → ≥6 exact-VO rows → Craft via [`human-build-os.md`](references/human-build-os.md)
+6. Lint until `"ok": true` → **finish-the-cut** (full duration + audio) → `pipeline/qa/run-qa.mjs` on the export
+7. Deliver package + real job ids + QA JSON (not hook-only, not silent)
 
 Ready check: `node scripts/agent-ready.mjs`  
 No shell: paste [`prompts/context-pack-lite.md`](prompts/context-pack-lite.md) · offline [`retrieve-offline-compact.json`](references/retrieve-offline-compact.json) · [`no-shell-lint-checklist.md`](prompts/no-shell-lint-checklist.md).

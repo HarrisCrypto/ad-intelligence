@@ -1,0 +1,31 @@
+{
+  "version": "1.0.0",
+  "rule": "Resolve craft Typography names to shipped files before render. Log any substitute. Never silent Liberation.",
+  "families": {
+    "Anton": {
+      "files": ["fonts/anton/Anton-Regular.ttf"],
+      "license": "OFL",
+      "license_file": "fonts/anton/OFL.txt",
+      "roles": ["display", "hook"]
+    },
+    "Poppins": {
+      "files": [
+        "fonts/poppins/Poppins-Regular.ttf",
+        "fonts/poppins/Poppins-SemiBold.ttf",
+        "fonts/poppins/Poppins-Bold.ttf"
+      ],
+      "license": "OFL",
+      "license_file": "fonts/poppins/OFL.txt",
+      "roles": ["ui", "body", "cta"]
+    },
+    "Inter Tight": {
+      "files": ["fonts/inter-tight/InterTight[wght].ttf"],
+      "license": "OFL",
+      "license_file": "fonts/inter-tight/OFL.txt",
+      "roles": ["hook", "body"],
+      "aliases": ["InterTight", "Inter-Tight"]
+    }
+  },
+  "forbidden_silent_fallback": ["Liberation Sans", "DejaVu Sans", "Arial", "Helvetica"],
+  "if_missing": "Run library/typography provision (copy to ~/.fonts + fc-cache) or lower the quality ceiling in the tool card — do not invent a close-enough face in the export."
+}

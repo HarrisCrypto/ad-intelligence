@@ -14,6 +14,12 @@
 - `regression/fail/oply-v1/` — expected hard fails from measured teardown (C1)
 - `regression/false-positive/` — corpus stub for over-aggressive gates (B7.2)
 
+### Added (Gate 2.5)
+- `scripts/brand-harvest.mjs` (+ `pipeline/scripts/brand-harvest.mjs`) — live-site palette/fonts/CTA/assets → ASSET_VERIFIED consistency block
+- `library/typography/` — OFL Anton, Poppins, Inter Tight + `fallback-map.json`
+- `library/sound/` — voice tier ladder + real-bed rule (no sine drones)
+- Probe reports hardware (CPU/RAM/GPU/ffmpeg) + quality ceiling + voice tier default
+
 ### Fixed
 - Finish completeness is evidence-derived: `render-status-contradicts-log` when `NOT_RENDERED` contradicts job receipts (B7.3)
 - Compact retrieve keeps `gold_fixture` + `gold_fixtures[]` (B1.1)
