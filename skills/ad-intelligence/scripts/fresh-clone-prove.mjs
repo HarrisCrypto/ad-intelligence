@@ -3,12 +3,12 @@
  * Prove the skill works from a fresh checkout (any harness), not only a dirty workspace.
  *
  * CI: runs against the current checkout (Actions already cloned the PR ref).
- * Local: optional --clone clones the PR branch into a temp dir first.
+ * Local: optional --clone clones main (or --ref) into a temp dir first.
  *
  * Usage:
  *   node scripts/fresh-clone-prove.mjs
  *   node scripts/fresh-clone-prove.mjs --clone
- *   node scripts/fresh-clone-prove.mjs --clone --ref cursor/multi-harness-agent-os-08cd
+ *   node scripts/fresh-clone-prove.mjs --clone --ref main
  */
 import fs from "node:fs";
 import os from "node:os";
@@ -27,7 +27,7 @@ const ref =
   (refIdx >= 0 && args[refIdx + 1]) ||
   process.env.GITHUB_HEAD_REF ||
   process.env.GITHUB_REF_NAME ||
-  "cursor/multi-harness-agent-os-08cd";
+  "main";
 
 function fail(msg) {
   console.error(`FAIL: ${msg}`);
@@ -65,7 +65,7 @@ if (doClone) {
 const skill = path.join(root, "skills", "ad-intelligence");
 if (!fs.existsSync(path.join(skill, "studies", "corpus.json"))) {
   fail(
-    `studies/corpus.json missing under ${skill} — you may be on main (v3.9). Checkout the PR branch: ${ref}`
+    `studies/corpus.json missing under ${skill} — pull latest main (need ≥ v3.15). ref=${ref}`
   );
 }
 
