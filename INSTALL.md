@@ -2,7 +2,7 @@
 
 **Repo:** https://github.com/HarrisCrypto/ad-intelligence  
 **Skill root:** `skills/ad-intelligence/`  
-**Version:** **3.7.1** — see [CHANGELOG.md](./CHANGELOG.md)
+**Version:** **3.8.0** — see [CHANGELOG.md](./CHANGELOG.md)
 
 ---
 
@@ -12,51 +12,58 @@
 | --- | --- |
 | **Cursor (plugin)** | Customize → From GitHub Repository → paste `https://github.com/HarrisCrypto/ad-intelligence` → install **ad-intelligence** |
 | **Cursor (this repo open)** | Already available — ask `/ad-intelligence` or “use the ad-intelligence skill” |
-| **Claude / Grok / Hermes / other** | Clone repo → prepend [`skills/ad-intelligence/prompts/harness-system-prompt.md`](./skills/ad-intelligence/prompts/harness-system-prompt.md) → point the model at `SKILL.md` |
+| **Claude / Grok / Hermes / other** | **Clone the repo** → prepend [`harness-system-prompt.md`](./skills/ad-intelligence/prompts/harness-system-prompt.md) → follow [`bootstrap-from-github.md`](./skills/ad-intelligence/prompts/bootstrap-from-github.md) |
 | **Cloud Agents** | Keep this repo as the workspace **or** copy `skills/ad-intelligence` into `.cursor/skills/` |
 
-Plugin metadata lives at `.cursor-plugin/` (`plugin.json` + `marketplace.json`) so Cursor can install and version the skill as a plugin.
+Plugin metadata lives at `.cursor-plugin/` (`plugin.json` + `marketplace.json`).
+
+**Critical:** Pasting a thin “make me ads” prompt without cloning this repo will not hit the quality bar. The LLM needs `elite-creative-os.md`, gold fixtures, retrieve, and lint on disk.
 
 ---
 
 ## Quick start for agents
 
-Copy this block when you need the agent to self-orient with no extra explanation:
-
 ```text
-You are using Ad Intelligence (skills/ad-intelligence/) v3.7.1.
-1. Read SKILL.md and pipelines/one-stop-ad-maker.md
-2. Pipeline rungs index: references/creative-stack/README.md
-   (connected · handoff · assembler-pipeline.md)
-3. No Seedance/Higgsfield → alternative-model-routing.md
-   (Wan → LTX → Grok → Hunyuan/Cog/SkyReels → Kling/Hailuo/Luma/Pika/… → stills+CapCut).
-   Never invent Seedance jobs.
-4. Quality bar: full-depth examples (beauty, local-service-trust, saas-demo-pas,
-   physical-product-hero, voice-agent-front-desk) + visual frames in examples/visual/
-5. Pick pipeline rung: connected MCP → call tools; handoff prompts if those tools
-   exist for the user; assembler + alternative routing otherwise
-6. For messy/regulated briefs, read examples/stress-briefs/ + policy-precheck.json
-7. Retrieve: node scripts/retrieve.mjs --niche <niche|alias> --platform <platform> --limit 5
-8. Fill output-template.md: sheets, claim ledger, timed script, render plan + log,
-   render-qa, self-critique, AI disclosure
-9. Ship only if: lint-package.mjs exits 0 AND render-qa.json run or emitted
-   (optional: node scripts/demo-quality-gates.mjs)
-Never invent proof. Never claim rendered without job/export ids. One CTA. Muted-first.
+You are using Ad Intelligence v3.8.0 from https://github.com/HarrisCrypto/ad-intelligence
+Skill root: skills/ad-intelligence/
+
+BOOTSTRAP (if repo not open):
+  git clone https://github.com/HarrisCrypto/ad-intelligence.git
+  cd ad-intelligence/skills/ad-intelligence
+  Follow prompts/bootstrap-from-github.md
+
+READ IN ORDER:
+  SKILL.md → prompts/harness-system-prompt.md →
+  references/elite-creative-os.md → references/production-finish-spec.md →
+  pipelines/one-stop-ad-maker.md → references/output-template.md →
+  closest examples/* gold fixture
+  No Seedance/Higgsfield? → creative-stack/assembler-pipeline.md +
+  alternative-model-routing.md
+
+RUN TOOLS:
+  node scripts/retrieve.mjs --niche <niche|alias> --platform <platform> --limit 5
+  node scripts/lint-package.mjs path/to/package.md
+  optional: node scripts/demo-quality-gates.mjs
+
+DELIVER: full output-template including Craft system (palette, type, motion,
+sound, endcard, aspects). Must feel like a custom motion template from a top
+shop — not vibes. Never invent proof or Seedance jobs. One CTA. Muted-first.
 ```
 
 One-shot user prompt:
 
 ```text
 /ad-intelligence
+Clone or use HarrisCrypto/ad-intelligence. Follow elite-creative-os.md.
 Make first-shot dual-track ads for:
 - Company / product:
 - Niche:
 - Platforms:
 - Goal:
 - Assets on hand (stills, URL, reviews):
-- Tools: Higgsfield/Seedance connected | handoff | assembler (stills+short clips+CapCut):
+- Tools: Higgsfield/Seedance connected | handoff | assembler (Wan/LTX/Grok/…):
 
-Retrieve → sheets → render plan → full output template → lint + render-qa before delivery.
+Retrieve → sheets → Craft system → render plan → CapCut finish spec → lint + render-qa.
 ```
 
 ---
@@ -66,22 +73,18 @@ Retrieve → sheets → render plan → full output template → lint + render-q
 From skill root (`skills/ad-intelligence/`):
 
 ```bash
-# Patterns for a niche / platform (aliases work: skincare, plumbing, …)
 node scripts/retrieve.mjs --niche beauty --platform tiktok --limit 5
 node scripts/retrieve.mjs --list
-node scripts/retrieve.mjs --list-niches
-
-# Mechanical ship gate (required)
 node scripts/lint-package.mjs examples/beauty-dtc-dual-track.md
-node scripts/lint-package.mjs path/to/your-package.md
+node scripts/demo-quality-gates.mjs
 ```
 
 ---
 
 ## Cursor details
 
-1. **Plugin install:** Customize → From GitHub Repository → this URL → Skills should list **ad-intelligence**.
-2. **In-chat:** `/ad-intelligence` or “follow the ad-intelligence skill.”
+1. **Plugin install:** Customize → From GitHub Repository → this URL → Skills list **ad-intelligence**.
+2. **In-chat:** `/ad-intelligence` — then require retrieve + lint + Craft system.
 3. **Sticky session:** Option/Alt+Enter on the skill → Custom Mode.
 4. **Optional rule** (`.cursor/rules/ads.mdc`):
 
@@ -91,11 +94,11 @@ description: Ads and creatives use Ad Intelligence
 alwaysApply: false
 ---
 When the user asks for ads, creatives, hooks, UGC, or launch films: follow
-skills/ad-intelligence/SKILL.md, run retrieve.mjs, deliver the output template,
-and pass lint-package.mjs before claiming done.
+skills/ad-intelligence/SKILL.md and elite-creative-os.md, run retrieve.mjs,
+fill Craft system + output template, and pass lint-package.mjs before done.
 ```
 
-5. **Cloud:** Prefer cloning this repo so Cloud Agents get the skill; or sync `~/.cursor/skills/ad-intelligence`.
+5. **Cloud:** Prefer cloning this repo so agents get the skill + scripts.
 
 ---
 
@@ -104,28 +107,23 @@ and pass lint-package.mjs before claiming done.
 ```bash
 git clone https://github.com/HarrisCrypto/ad-intelligence.git
 cd ad-intelligence/skills/ad-intelligence
-# Prepend prompts/harness-system-prompt.md to the system prompt
+# Prepend prompts/harness-system-prompt.md
+# Follow prompts/bootstrap-from-github.md
 node scripts/retrieve.mjs --niche <niche> --limit 5
-# Require references/output-template.md + lint-package.mjs exit 0
 ```
-
-No hosted database required. Optional private longevity notes: see [CONTRIBUTING.md](./CONTRIBUTING.md) / `references/swipe-signals.md`.
 
 ---
 
-## Verify
+## Verify quality is actually loading
 
-- Chat cites **pattern ids**, a **claim ledger**, a **render plan**, and **lint**.
-- `lint-package.mjs` on any full-depth gold fixture returns `"ok": true`.
-- If not: say explicitly *Follow ad-intelligence SKILL.md and lint before delivery.*
+- Agent cites **pattern ids**, **Craft system** (palette/type/endcard), **claim ledger**, **render plan**, and **lint**.
+- `lint-package.mjs` on gold fixtures returns `"ok": true`.
+- Package looks like a **custom CapCut/Figma template**, not a brainstorm paragraph.
+- If not: paste `bootstrap-from-github.md` and insist on clone + elite-creative-os.
 
 ## Proof & quality bar
 
-- [PROOF.md](./PROOF.md) — before/after vs generic slop  
-- [Visual gallery](./skills/ad-intelligence/examples/visual/index.html) — actual storyboard design frames  
-- [demo/](./skills/ad-intelligence/demo/) — canonical quality-target pointers  
-- Full-depth lint-clean fixtures: beauty · local · SaaS · physical · voice/front-desk (`examples/`)  
-- Assembler path (no single-pass gen): `skills/ad-intelligence/references/creative-stack/assembler-pipeline.md`  
-- Render QA: `skills/ad-intelligence/checklists/render-qa.json`  
-- Stress briefs: `skills/ad-intelligence/examples/stress-briefs/`  
-- Gate demo: `node skills/ad-intelligence/scripts/demo-quality-gates.mjs`
+- [PROOF.md](./PROOF.md) · [elite-creative-os.md](./skills/ad-intelligence/references/elite-creative-os.md)  
+- [Visual gallery](./skills/ad-intelligence/examples/visual/index.html)  
+- [demo/](./skills/ad-intelligence/demo/) · gold fixtures in `examples/`  
+- Assembler + routing: `creative-stack/` · Render QA: `checklists/render-qa.json`  

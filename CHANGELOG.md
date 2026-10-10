@@ -1,5 +1,25 @@
 # Changelog
 
+## 3.8.0 — 2026-10-10
+
+Elite craft layer so packages look like **custom templates from a top creative shop** — even without Higgsfield — and so any LLM actually loads the GitHub repo + tools.
+
+### Added
+- `references/elite-creative-os.md` — agency craft OS (hooks, edit rhythm, palette/grade, typography, motion, sound, endcard)
+- `references/production-finish-spec.md` — CapCut / aspect / type finish template
+- `prompts/bootstrap-from-github.md` — clone → read order → retrieve/lint for any harness
+- Output template + lint: required **Craft system** section
+- `first-time-right` gate `craft-bar`
+
+### Changed
+- All five gold fixtures: filled Craft system blocks
+- Harness system prompt rewritten for elite craft + repo/tool mandates
+- SKILL / one-stop / INSTALL / README: craft bar + bootstrap path
+- Plugin **3.8.0**
+
+### Preserved
+- Claim firewall, mechanical lint honesty, three rungs, alternative model routing, render-QA
+
 ## 3.7.1 — 2026-10-10
 
 Expand alternative-model routing with more open-weight and hosted peers agents actually use.

@@ -101,6 +101,11 @@
       "fail_if": "Empty critique or uniform uncited 5s"
     },
     {
+      "id": "craft-bar",
+      "ask": "Craft system filled (palette, grade, typography, motion grammar, sound, endcard, aspects) per elite-creative-os.md — package reads like a custom motion template?",
+      "fail_if": "Vague ‘cinematic’ only; missing type/endcard/aspect specs; hopes model draws logo/CTA text"
+    },
+    {
       "id": "pipeline-rung",
       "ask": "Pipeline rung stated: connected / handoff / assembler, matching available tools?",
       "fail_if": "Assumes Seedance/Higgsfield when unavailable, or skips assembler guidance when only stills/short clips exist"

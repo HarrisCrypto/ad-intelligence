@@ -89,6 +89,17 @@ Make precise-temp pour feel craft-inevitable, then one Shop NestBrew path.
 ### Shot list / visual system
 Hard product key, cool shadows, slow dolly + pour. Anamorphic feel for hero; tighter loop for social. Leave lower caption band quiet for burn-in and endcard.
 
+### Craft system (required)
+- Style id + production_tier + virality_posture: `hero_product_film` + `product_loop` twin · premium_cinema + loop_performance
+- Palette: matte black body · cool steel `#A8B0B8` · warm practical accent `#E8C59A` [ASSUMED from sheet]
+- Grade name: high-contrast editorial — cool shadows, hard product key, label always readable
+- Typography: hook spectacle ≤5 words or none 0–3s · captions sparse · CTA Shop one only on endcard · legal specs PLACEHOLDER/omit
+- Motion grammar: 0–3s macro spectacle no logo → slow dolly 3–10s → pour physics 10–16s → pack hero hold → E1 3–5s; loop twin = continuous 3–5s pour (matched ends)
+- Sound plan: muted-first; diegetic pour SFX; original bed; no uncleared track
+- Endcard module E1: logo SVG (not model-drawn) · Shop CTA · 9:16 + 1:1 + optional 16:9 hero
+- Aspect matrix: separate comps; loop vs hero are different unit ids
+- Finish handoff: sheet multi-angle stills → I2V units → CapCut endcard/captions per production-finish-spec.md
+
 ### Render plan (required)
 | unit_id | beats | seconds | model | start/end | refs | acceptance |
 | --- | --- | --- | --- | --- | --- | --- |

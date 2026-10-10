@@ -87,6 +87,17 @@ Make “makeup that lasts a double shift” feel inevitable, then soft-shop the 
 ### Shot list / visual system
 Front camera → bag insert → macro drop (100mm feel) → end-day mirror. Grade: clean daylight. Leave lower caption safe zone clear.
 
+### Craft system (required)
+- Style id + production_tier + virality_posture: `pov_day_in_life` + hybrid_polished; twin `beauty_macro_tabletop` / premium_cinema; trend_reactive + brand_film
+- Palette: dominant soft sage `#8FA89A` · support frost white `#F4F7F5` · accent warm gold hoop `#C4A574` [ASSUMED]
+- Grade name: clean daylight — skin natural, label sharp, no beauty-filter plastic
+- Typography: hook display bold condensed white on soft plate ≤7 words · captions neutral sans 2-line · CTA “Link in bio” end only · legal footer last 1.5s if needed
+- Motion grammar: 0–2s locked front-cam hold → 2–10s micro handheld sway → 10–18s 100mm macro static with drip physics → 18–24s mirror hold ≥1.2s → E1 3s
+- Sound plan: muted-first captions; optional soft bed paid-safe; light glass SFX on drip; no uncleared trend audio
+- Endcard module E1: brand wordmark SVG clear space · one soft CTA · 3s hold · comps E1_9x16 + E1_1x1
+- Aspect matrix: 9:16 master; 1:1 reflow type (not center-crop); cinema twin may add 16:9
+- Finish handoff: CapCut V1 clips U1–U3 · V2 captions/endcard · per production-finish-spec.md
+
 ### Render plan (required)
 | unit_id | beats | seconds | model | start/end | refs | acceptance |
 | --- | --- | --- | --- | --- | --- | --- |
