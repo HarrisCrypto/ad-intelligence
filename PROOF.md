@@ -17,7 +17,7 @@ Read this in under a minute, then open a gold fixture:
 | **Stress briefs (messy prompts)** | [`examples/stress-briefs/`](./skills/ad-intelligence/examples/stress-briefs/) |
 | Shape-only skeleton (structure, not quality) | [`entertainment-creator-series.md`](./skills/ad-intelligence/examples/entertainment-creator-series.md) |
 
-**v3.12:** Multi-harness Agent OS + backtest suite (`backtest.mjs`). **v3.11:** Attention Lab + public libraries + URL briefs. **v3.10:** concept-first lint. Plus craft OS / assembler routing.
+**v3.13:** Finish-the-cut + generated UI authenticity (no hook-only stall). **v3.12:** Multi-harness Agent OS + backtest. **v3.11:** Attention Lab. Plus craft OS / assembler routing.
 
 **v3.6–3.7:** triple-path / assembler / voice / Wan–LTX–Grok (+ peers) routing + render-QA.
 
