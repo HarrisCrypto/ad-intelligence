@@ -1,8 +1,8 @@
 {
   "name": "ad-intelligence",
   "displayName": "Ad Intelligence",
-  "version": "3.15.0",
-  "description": "One-shot agency-grade ads: provenanced studies, ingest, human-build logs, finish the cut, craft lint.",
+  "version": "3.16.0",
+  "description": "One-shot agency-grade ads: lint-enforced study honesty, ingest, human-build logs, finish the cut.",
   "author": {
     "name": "HarrisCrypto"
   },

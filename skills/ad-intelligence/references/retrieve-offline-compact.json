@@ -232,7 +232,7 @@
       "studies": {
         "primary": "study_beauty_macro_transform",
         "challenger": "study_award_hero_spectacle",
-        "count": 9,
+        "count": 3,
         "human_build_os": "references/human-build-os.md",
         "join": {
           "rule": "Patterns = grammar + routes. Studies = what to emulate + how to build; provenance.basis must be copied into the package. Attention models = timing. When study.pattern_ids miss picks.primary, keep pattern for stack/route and study.structure for beat jobs — do not invent a merge. Never treat basis:synthesis as observed metrics proof.",
@@ -676,7 +676,7 @@
       "studies": {
         "primary": "study_beauty_macro_transform",
         "challenger": "study_award_hero_spectacle",
-        "count": 9,
+        "count": 3,
         "human_build_os": "references/human-build-os.md",
         "join": {
           "rule": "Patterns = grammar + routes. Studies = what to emulate + how to build; provenance.basis must be copied into the package. Attention models = timing. When study.pattern_ids miss picks.primary, keep pattern for stack/route and study.structure for beat jobs — do not invent a merge. Never treat basis:synthesis as observed metrics proof.",
@@ -1075,7 +1075,7 @@
       "studies": {
         "primary": "study_food_crave_loop",
         "challenger": "study_viral_skit_punchline",
-        "count": 9,
+        "count": 2,
         "human_build_os": "references/human-build-os.md",
         "join": {
           "rule": "Patterns = grammar + routes. Studies = what to emulate + how to build; provenance.basis must be copied into the package. Attention models = timing. When study.pattern_ids miss picks.primary, keep pattern for stack/route and study.structure for beat jobs — do not invent a merge. Never treat basis:synthesis as observed metrics proof.",
@@ -1507,7 +1507,7 @@
       "studies": {
         "primary": "study_perf_pas_meta",
         "challenger": "study_voice_agent_missed_call",
-        "count": 10,
+        "count": 5,
         "human_build_os": "references/human-build-os.md",
         "join": {
           "rule": "Patterns = grammar + routes. Studies = what to emulate + how to build; provenance.basis must be copied into the package. Attention models = timing. When study.pattern_ids miss picks.primary, keep pattern for stack/route and study.structure for beat jobs — do not invent a merge. Never treat basis:synthesis as observed metrics proof.",
@@ -1978,7 +1978,7 @@
       "studies": {
         "primary": "study_voice_agent_missed_call",
         "challenger": "study_perf_pas_meta",
-        "count": 10,
+        "count": 5,
         "human_build_os": "references/human-build-os.md",
         "join": {
           "rule": "Patterns = grammar + routes. Studies = what to emulate + how to build; provenance.basis must be copied into the package. Attention models = timing. When study.pattern_ids miss picks.primary, keep pattern for stack/route and study.structure for beat jobs — do not invent a merge. Never treat basis:synthesis as observed metrics proof.",
@@ -2404,7 +2404,7 @@
       "studies": {
         "primary": "study_local_geo_phone",
         "challenger": "study_voice_agent_missed_call",
-        "count": 9,
+        "count": 2,
         "human_build_os": "references/human-build-os.md",
         "join": {
           "rule": "Patterns = grammar + routes. Studies = what to emulate + how to build; provenance.basis must be copied into the package. Attention models = timing. When study.pattern_ids miss picks.primary, keep pattern for stack/route and study.structure for beat jobs — do not invent a merge. Never treat basis:synthesis as observed metrics proof.",
@@ -2837,7 +2837,7 @@
       "studies": {
         "primary": "study_viral_confession_ugc",
         "challenger": "study_food_crave_loop",
-        "count": 9,
+        "count": 4,
         "human_build_os": "references/human-build-os.md",
         "join": {
           "rule": "Patterns = grammar + routes. Studies = what to emulate + how to build; provenance.basis must be copied into the package. Attention models = timing. When study.pattern_ids miss picks.primary, keep pattern for stack/route and study.structure for beat jobs — do not invent a merge. Never treat basis:synthesis as observed metrics proof.",
@@ -3240,8 +3240,8 @@
       },
       "studies": {
         "primary": "study_viral_confession_ugc",
-        "challenger": "study_beauty_macro_transform",
-        "count": 9,
+        "challenger": null,
+        "count": 1,
         "human_build_os": "references/human-build-os.md",
         "join": {
           "rule": "Patterns = grammar + routes. Studies = what to emulate + how to build; provenance.basis must be copied into the package. Attention models = timing. When study.pattern_ids miss picks.primary, keep pattern for stack/route and study.structure for beat jobs — do not invent a merge. Never treat basis:synthesis as observed metrics proof.",
@@ -3351,89 +3351,6 @@
             ],
             "pattern_ids": [
               "ugc-talking-head-scroll-stop"
-            ]
-          },
-          {
-            "id": "study_beauty_macro_transform",
-            "class": "performance_dr",
-            "title": "Beauty / hair macro + matched transform",
-            "provenance": {
-              "observed": false,
-              "basis": "synthesis",
-              "claim_firewall": "STRUCTURE_ONLY — distillation, not observed evidence. Emulate timing/shot jobs; never invent CTR/ROAS or cite as a named campaign."
-            },
-            "when_to_emulate": [
-              "Shampoo, skincare, cosmetics",
-              "Texture sells"
-            ],
-            "steal": [
-              "Matched framing",
-              "True color",
-              "Pack label readable"
-            ],
-            "never_copy": [
-              "Fake clinical %",
-              "Face morph as ‘results’"
-            ],
-            "structure": {
-              "duration_s": 18,
-              "hook_0_3": "BEFORE state or macro mid-motion — no logo",
-              "beats": [
-                {
-                  "t": "0–2s",
-                  "job": "before/macro",
-                  "note": "matched light"
-                },
-                {
-                  "t": "2–8s",
-                  "job": "process/texture",
-                  "note": "true color"
-                },
-                {
-                  "t": "8–14s",
-                  "job": "after/movement",
-                  "note": "same angle"
-                },
-                {
-                  "t": "14–18s",
-                  "job": "pack lock + CTA",
-                  "note": "SKU-true"
-                }
-              ]
-            },
-            "human_build": [
-              {
-                "step": 1,
-                "action": "Shade/SKU lock on sheet; refuse mismatch",
-                "tools": [
-                  "product-sheet"
-                ]
-              },
-              {
-                "step": 2,
-                "action": "Macro stills + before/after pair → short i2v on hair/texture only",
-                "tools": [
-                  "flux",
-                  "kling"
-                ]
-              },
-              {
-                "step": 3,
-                "action": "CapCut labels BEFORE/AFTER; shop CTA endcard",
-                "tools": [
-                  "capcut"
-                ]
-              }
-            ],
-            "attention_model_ids": [
-              "am_hair_transform",
-              "am_macro_lust_loop",
-              "am_before_after_matchcut"
-            ],
-            "pattern_ids": [
-              "beauty-macro-tabletop",
-              "before-after-reveal",
-              "grwm-soft-sell"
             ]
           }
         ]
@@ -3704,7 +3621,7 @@
       "studies": {
         "primary": "study_perf_pas_meta",
         "challenger": "study_text_first_x",
-        "count": 10,
+        "count": 4,
         "human_build_os": "references/human-build-os.md",
         "join": {
           "rule": "Patterns = grammar + routes. Studies = what to emulate + how to build; provenance.basis must be copied into the package. Attention models = timing. When study.pattern_ids miss picks.primary, keep pattern for stack/route and study.structure for beat jobs — do not invent a merge. Never treat basis:synthesis as observed metrics proof.",
@@ -4154,7 +4071,7 @@
       "studies": {
         "primary": "study_perf_pas_meta",
         "challenger": "study_voice_agent_missed_call",
-        "count": 9,
+        "count": 5,
         "human_build_os": "references/human-build-os.md",
         "join": {
           "rule": "Patterns = grammar + routes. Studies = what to emulate + how to build; provenance.basis must be copied into the package. Attention models = timing. When study.pattern_ids miss picks.primary, keep pattern for stack/route and study.structure for beat jobs — do not invent a merge. Never treat basis:synthesis as observed metrics proof.",

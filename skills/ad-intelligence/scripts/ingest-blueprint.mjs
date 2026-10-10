@@ -48,6 +48,21 @@ function main() {
     console.error(`File not found: ${abs}`);
     process.exit(2);
   }
+  if (/\.(mp4|mov|webm|mkv|avi|jpg|jpeg|png|webp|gif|pdf|zip)$/i.test(abs)) {
+    console.error(
+      JSON.stringify(
+        {
+          ok: false,
+          errors: [
+            "Media/binary files rejected — ingest structured JSON notes only (no creatives)",
+          ],
+        },
+        null,
+        2
+      )
+    );
+    process.exit(1);
+  }
   let raw;
   try {
     raw = JSON.parse(fs.readFileSync(abs, "utf8"));

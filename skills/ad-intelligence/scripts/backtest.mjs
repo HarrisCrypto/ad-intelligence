@@ -235,6 +235,26 @@ if (fs.existsSync(studiesPath)) {
     withProv.length === (corpus.studies || []).length,
     `${withProv.length}/${(corpus.studies || []).length}`
   );
+  ok(
+    "public corpus has zero observed:true",
+    (corpus.studies || []).every((s) => s.provenance?.observed === false),
+    "observed must stay private via ingest"
+  );
+  const synFail = runNode("lint-package.mjs", [
+    "examples/lint-corpus/fail-study-synthesis-as-proof.md",
+  ]);
+  let synJ = null;
+  try {
+    synJ = JSON.parse(synFail.stdout || "{}");
+  } catch {
+    /* ignore */
+  }
+  ok(
+    "lint catches study-synthesis-cited-as-proof",
+    synFail.status !== 0 &&
+      (synJ?.issues || []).some((i) => i.id === "study-synthesis-cited-as-proof"),
+    (synJ?.issues || []).map((i) => i.id).join(",")
+  );
   const voice = retrieveCompact("voice ai", "meta").json;
   ok(
     "voice ai study = missed-call",

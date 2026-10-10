@@ -12,7 +12,7 @@ description: >-
   Higgsfield. Probe → study → emulate → human_build → ≥6 beats → finish-the-cut → lint.
 compatibility: Requires Node 18+ for scripts. Optional network for URL brief + libraries. MCP video tools optional (connected rung).
 metadata:
-  version: "3.15.0"
+  version: "3.16.0"
   open_standard: agentskills
 ---
 

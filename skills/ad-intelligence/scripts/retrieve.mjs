@@ -845,9 +845,26 @@ function main() {
     warnings.push(...studyErrors.map((e) => `study_invalid:${e}`));
   }
 
+  const nicheNormForStudy = normToken(nicheId || q.niche || "");
+  const studyNicheHit = (study) =>
+    !nicheNormForStudy ||
+    (study.niches || []).some((n) => {
+      const nn = normToken(n);
+      return (
+        nn === nicheNormForStudy ||
+        nn.includes(nicheNormForStudy) ||
+        nicheNormForStudy.includes(nn)
+      );
+    });
+
   const rankedStudies = allStudies
     .map((s) => ({ study: s, score: scoreStudy(s, q, pickIds, amIds) }))
-    .filter((x) => x.score > 0)
+    .filter((x) => {
+      if (x.score <= 0) return false;
+      // Niche resolved → require niche alignment (else empty / loud none)
+      if (nicheNormForStudy && !studyNicheHit(x.study)) return false;
+      return true;
+    })
     .sort((a, b) => {
       if (b.score !== a.score) return b.score - a.score;
       // Prefer observed over synthesis when scores tie
@@ -858,6 +875,20 @@ function main() {
     });
 
   const primaryStudy = rankedStudies[0]?.study || null;
+  const primaryNicheHit = Boolean(primaryStudy && studyNicheHit(primaryStudy));
+  let studyMatchStatus = "ok";
+  if (!rankedStudies.length) {
+    studyMatchStatus = "none_for_query";
+    warnings.push(
+      "no_study_match:NO STUDY matched this niche/platform — do not invent a study id; use patterns + attention models only, or ingest a private observed study via ingest-blueprint.mjs"
+    );
+  } else if (nicheNormForStudy && !primaryNicheHit) {
+    studyMatchStatus = "weak_no_niche_hit";
+    warnings.push(
+      `study_niche_weak:primary study ${primaryStudy.id} niches do not include ${nicheNormForStudy} — weak match; do not invent observed evidence`
+    );
+  }
+
   const studiesPayload = {
     file: "studies/corpus.json",
     docs: "studies/README.md",
@@ -865,7 +896,14 @@ function main() {
     human_build_log_template: "references/human-build-log.template.md",
     ingest: "scripts/ingest-blueprint.mjs",
     emulate: "prompts/emulate-attention-model.md",
-    note: "Check provenance on every study. basis:synthesis = structure only — never launder into proof. Private: studies/private/ via ingest-blueprint.mjs.",
+    note: "Check provenance on every study. basis:synthesis = structure only — never launder into proof. Private observed: studies/private/ via ingest-blueprint.mjs.",
+    match_status: studyMatchStatus,
+    loud:
+      studyMatchStatus === "none_for_query"
+        ? "NO STUDY for this niche/platform. Do not invent one. Patterns + attention models only, or ingest private observed."
+        : studyMatchStatus === "weak_no_niche_hit"
+          ? `WEAK STUDY MATCH (niche miss). Primary ${primaryStudy?.id} is not niche-aligned — treat as structure hint only.`
+          : null,
     primary: primaryStudy?.id || null,
     challenger: rankedStudies[1]?.study?.id || null,
     count: rankedStudies.length,
@@ -947,6 +985,8 @@ function main() {
         primary: studiesPayload.primary,
         challenger: studiesPayload.challenger,
         count: studiesPayload.count,
+        match_status: studiesPayload.match_status,
+        loud: studiesPayload.loud,
         human_build_os: studiesPayload.human_build_os,
         human_build_log_template: studiesPayload.human_build_log_template,
         ingest: studiesPayload.ingest,

@@ -1,5 +1,21 @@
 # Changelog
 
+## 3.16.0 — 2026-10-10
+
+**Mechanical honesty for studies** — the claim “studies are honest about what they are” is now lint-enforced, not README-only.
+
+### Added
+- `lint-package.mjs`: `study-synthesis-cited-as-proof`, `study-provenance-undeclared`, `study-unknown-id`
+- Fail corpus: `examples/lint-corpus/fail-study-synthesis-as-proof.md`
+- Media rejection in `validate-study.mjs` / ingest (data-URIs, base64 blobs, media URLs/keys)
+- Retrieve `studies.match_status` + `loud` when no niche-aligned study (`none_for_query`)
+- Observed-shape fixture docs under `studies/fixtures/observed-shape/` (private path; public corpus stays synthesis)
+
+### Changed
+- Voice gold Retrieval declares synthesis study provenance honestly
+- Package skeleton requires study provenance lines when citing studies
+- Plugin **3.16.0**
+
 ## 3.15.0 — 2026-10-10
 
 **Studies honesty + any-harness proof** — provenance labels, ingest validator, loud private failures, join reconciliation tests, human-build log artifact, CI fresh-clone gates. Addresses: unlabelled synthesis-as-proof risk, empty private workflow, untested join, build-log as artifact.
