@@ -9,8 +9,10 @@
 - `references/ad-libraries.md` — Meta Ad Library, TikTok Creative Center, Google Transparency, X Ads, LinkedIn
 - `examples/visual/attention-lab.html` (+ `build-attention-lab.mjs` / `attention-data.js`)
 - `prompts/brief-from-url.md`, `prompts/emulate-attention-model.md`
+- `scripts/brief-from-url.mjs` — fetch public page → tagged S1 brief (no invented proof)
 - Stress brief `messy-ai-ops-site.md` (URL-style AI/voice agent)
 - `retrieve.mjs` returns `attention_models` + research URLs (compact too)
+- `brief-defaults` S1_url extract checklist; tool-catalog public-library vs private-ingest boundary
 
 ### Changed
 - Niche synonyms/aliases: shampoo/haircare, food, AI/voice agent → correct packs

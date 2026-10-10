@@ -2,6 +2,18 @@
 
 When the user says “make ads for **https://example.com**” (e.g. OPlyai.com), **gather first**, then one-shot.
 
+## Fast gather (script)
+
+```bash
+cd skills/ad-intelligence
+node scripts/brief-from-url.mjs https://example.com
+node scripts/brief-from-url.mjs https://example.com --out /tmp/brief.md
+node scripts/brief-from-url.mjs https://example.com --json
+```
+
+Emits brand/offer/niche guess/CTA candidates with **ASSET_VERIFIED | PLACEHOLDER | ASSUMED** tags.  
+If fetch fails (no network), gather manually from the table below — still ship.
+
 ## Gather (do not invent)
 
 From the site / about / pricing / product pages, extract:

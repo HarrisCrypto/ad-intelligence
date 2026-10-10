@@ -14,7 +14,8 @@ Agents fail when they fill ledgers before having an idea. **Research → attenti
 
 ```text
 0. BRIEF
-   - If user gave a URL/site: follow prompts/brief-from-url.md (gather offer/proof/CTA; list Assumptions).
+   - If user gave a URL/site: `node scripts/brief-from-url.mjs <url>` (or prompts/brief-from-url.md).
+     Keep ASSET_VERIFIED vs PLACEHOLDER tags; list Assumptions.
    - OPEN closest gold fixture (beauty / local / saas / physical / voice) — steal DENSITY, not brand facts.
 
 1. START FILE:

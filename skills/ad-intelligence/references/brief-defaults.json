@@ -1,6 +1,6 @@
 {
   "id": "brief-defaults",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "instruction": "When the user gives a thin brief, assume from this table, list Assumptions, ask ≤3 blocking questions (offer, product refs, regulated claims), and proceed. Never withhold the package. Never invent proof.",
   "question_limit": 3,
   "asset_ladder": {
@@ -10,8 +10,24 @@
       "handoff": "Emit sheets with [REQUEST FROM USER] rows + asset request list"
     },
     "S1_url": {
+      "script": "scripts/brief-from-url.mjs",
+      "docs": "prompts/brief-from-url.md",
       "connected": "Fetch page → product-photoshoot stills → then video",
-      "handoff": "Pull visible claims tagged ASSET_VERIFIED/unverified; request pack photos"
+      "handoff": "Pull visible claims tagged ASSET_VERIFIED/PLACEHOLDER; request pack photos",
+      "extract_checklist": [
+        "brand / site name",
+        "one-line offer (meta description or H1)",
+        "niche guess (ASSUMED until retrieve confirms)",
+        "primary CTA candidates from link/button text",
+        "og:image or other visible asset URLs",
+        "proof only if literally on-page — else PLACEHOLDER",
+        "platforms default by niche; confirm with user if blocking"
+      ],
+      "must_not": [
+        "Invent review counts, ROAS, or customer logos",
+        "Treat og marketing copy as clinical proof",
+        "Skip attention model + one-shot after gather"
+      ]
     },
     "S2_product_photos": {
       "may_render": ["full product lock units via image_references"],
