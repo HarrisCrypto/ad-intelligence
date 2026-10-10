@@ -27,7 +27,7 @@ Packages that do **not** invent proof, drift product identity, or burn three red
 | **Ship gate demo** | `node skills/ad-intelligence/scripts/demo-quality-gates.mjs` |
 | **Contribute** | [CONTRIBUTING.md](./CONTRIBUTING.md) |
 
-**Version 3.8.0** — [CHANGELOG.md](./CHANGELOG.md)
+**Version 3.8.1** — [CHANGELOG.md](./CHANGELOG.md)
 
 ---
 

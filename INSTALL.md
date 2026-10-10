@@ -2,7 +2,7 @@
 
 **Repo:** https://github.com/HarrisCrypto/ad-intelligence  
 **Skill root:** `skills/ad-intelligence/`  
-**Version:** **3.8.0** — see [CHANGELOG.md](./CHANGELOG.md)
+**Version:** **3.8.1** — see [CHANGELOG.md](./CHANGELOG.md)
 
 ---
 
@@ -24,7 +24,7 @@ Plugin metadata lives at `.cursor-plugin/` (`plugin.json` + `marketplace.json`).
 ## Quick start for agents
 
 ```text
-You are using Ad Intelligence v3.8.0 from https://github.com/HarrisCrypto/ad-intelligence
+You are using Ad Intelligence v3.8.1 from https://github.com/HarrisCrypto/ad-intelligence
 Skill root: skills/ad-intelligence/
 
 BOOTSTRAP (if repo not open):

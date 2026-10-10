@@ -1,5 +1,22 @@
 # Changelog
 
+## 3.8.1 — 2026-10-10
+
+Harden craft gates so a Craft system **heading** is not enough — vague “cinematic / nice colors” packages fail lint (follow-up from quality audit).
+
+### Added
+- Lint rules: `craft-hex`, `craft-type` / `craft-font-generic`, `craft-endcard`, `craft-aspect`, `craft-motion`, `craft-vague-lexicon`, `copy-leak`
+- Lint corpus: `fail-vague-craft.md`, `fail-copy-leak.md`
+
+### Changed
+- Gold fixtures: named type roles, ≥2 HEX palettes, consumer paid copy without ledger leaks
+- `elite-creative-os.md` + output template: document hard craft lint bans
+- `retrieve.mjs`: dual-track twin never equals primary
+- Plugin **3.8.1**
+
+### Preserved
+- Claim firewall, three rungs, elite OS / finish spec / bootstrap from 3.8.0
+
 ## 3.8.0 — 2026-10-10
 
 Elite craft layer so packages look like **custom templates from a top creative shop** — even without Higgsfield — and so any LLM actually loads the GitHub repo + tools.
