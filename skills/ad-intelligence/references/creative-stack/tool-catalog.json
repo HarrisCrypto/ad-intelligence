@@ -1,13 +1,14 @@
 {
   "id": "creative-tool-catalog",
-  "version": "3.1.0",
-  "purpose": "One-stop knowledge of the tools and systems a perfect ad-making agent should know — even when those tools are not connected. Emit ready-to-run prompts, pipelines, and handoff briefs so humans or connected MCPs can execute at Seedance / Higgsfield quality — or via Wan 2.2 / LTX-2.5 / Grok Imagine when those are the available stack.",
+  "version": "3.2.0",
+  "purpose": "One-stop knowledge of the tools and systems a perfect ad-making agent should know — even when those tools are not connected. Emit ready-to-run prompts, pipelines, and handoff briefs so humans or connected MCPs can execute at Seedance / Higgsfield quality — or via Wan / LTX / Grok / Hunyuan / CogVideoX / SkyReels / Kling / Hailuo / Luma / Pika when those are the available stack.",
   "rule": "Never pretend a render finished if no tool was called. Never invent Seedance job ids. Always deliver: pattern + shot list + tool route + copy-paste prompts + QA. If Seedance/Higgsfield MCP exists, prefer calling it; else follow alternative-model-routing.md; otherwise ship executable briefs.",
   "alternative_routing_doc": "alternative-model-routing.md",
   "tiers": {
     "connected_generation": "MCP/API available — call tools",
     "prompt_handoff": "No tool connected — write production-grade prompts + settings",
-    "local_open_weights": "Wan 2.2 / LTX-2.5 (or peers) run locally or via open hosts — name real tool in render plan",
+    "local_open_weights": "Wan / LTX / Hunyuan / CogVideoX / SkyReels (etc.) locally or via open hosts — name real tool in render plan",
+    "hosted_api_peers": "Kling / Runway / Veo-Sora / Hailuo / Luma / Pika / Grok — API or product handoff",
     "human_production": "Shoot live / hire creators — emit briefs + shot lists"
   },
   "systems": [
@@ -211,37 +212,109 @@
       "verified_notes": "Public xAI docs describe grok-imagine-video-1.5 T2V/I2V (incl. native 1080p on 1.5). Treat as prompt/API handoff unless the session can call xAI."
     },
     {
+      "id": "hunyuan_video",
+      "name": "Tencent HunyuanVideo (1.5 family)",
+      "category": "video_gen",
+      "quality_bar": "open_weight_alternative",
+      "access": "prompt_handoff_or_local",
+      "license_notes": "Tencent Hunyuan Community License — geographic exclusions often include EU/UK/South Korea; confirm card before commercial ship.",
+      "where": ["Hugging Face / ModelScope HunyuanVideo", "ComfyUI"],
+      "best_for": ["Cinematic local motion", "Open experimentation when territory allows", "I2V product moves"],
+      "prompt_tips": ["Prefer I2V from sheet still", "Camera + lighting lock", "No model-drawn logo/CTA"],
+      "limitations": ["Geo/commercial license traps", "Do not invent API schemas"],
+      "assembler_role": "Short hunyuan_video_i2v units → CapCut",
+      "routing_priority": 5
+    },
+    {
+      "id": "cogvideox",
+      "name": "CogVideoX / CogVideoX1.5",
+      "category": "video_gen",
+      "quality_bar": "open_weight_draft_alternative",
+      "access": "prompt_handoff_or_local",
+      "license_notes": "Varies by checkpoint (2B often more permissive; larger cards may differ) — read the model card.",
+      "where": ["GitHub zai-org/CogVideo", "Hugging Face", "Diffusers / Comfy"],
+      "best_for": ["Prompt-adherent drafts", "Lower-memory local experiments", "T2V/I2V short clips"],
+      "prompt_tips": ["Concise shot grammar", "Start-frame lock on I2V checkpoints"],
+      "limitations": ["Often weaker product lock than Wan 2.2", "Duration/res per checkpoint"],
+      "assembler_role": "Draft clips → promote winners in CapCut",
+      "routing_priority": 5
+    },
+    {
+      "id": "skyreels",
+      "name": "SkyReels V3",
+      "category": "video_gen",
+      "quality_bar": "open_weight_multiref_alternative",
+      "access": "prompt_handoff_or_local_or_api",
+      "license_notes": "Skywork / community terms on model card — verify before commercial ship.",
+      "where": ["Hugging Face SkyReels", "local inference", "some API routes"],
+      "best_for": ["Multi-reference character/object/bg", "Audio-guided generation", "Video-to-video / extend"],
+      "prompt_tips": ["Bind 1–N sheet refs as references", "Instruction = action + camera", "Do not invent talent identity"],
+      "limitations": ["Heavier ops", "Deployment maturity varies", "CTA/text still in post"],
+      "assembler_role": "skyreels_r2v / v2v units for identity-heavy beats",
+      "routing_priority": 5
+    },
+    {
       "id": "kling",
       "name": "Kling AI",
       "category": "video_gen",
-      "routing_priority": 5,
+      "access": "api_or_product_handoff",
+      "routing_priority": 6,
       "best_for": ["Motion control / character performance", "Image-to-video product moves", "Longer cinematic B-roll"],
       "prompt_tips": ["Lock start frame from product still", "Specify camera move + physics", "Keep product label readable in prompt"],
       "assembler_role": "Short locked-start clips in assembler timeline"
     },
     {
       "id": "runway",
-      "name": "Runway Gen-3 / Aleph",
+      "name": "Runway (Gen-3 / Gen-4.x / Aleph — verify current)",
       "category": "video_gen",
-      "routing_priority": 5,
+      "access": "api_or_product_handoff",
+      "routing_priority": 6,
       "best_for": ["Director-style camera language", "VFX-ish transformations", "Editorial motion"],
       "prompt_tips": ["Shot size + lens + move", "Avoid overcrowding prompt", "Use image reference for product lock"],
-      "assembler_role": "Editorial motion units → CapCut finish"
+      "assembler_role": "Editorial motion units → CapCut finish",
+      "notes": "Product names evolve — emit current model name the user has; do not invent endpoints."
     },
     {
       "id": "sora_veo",
       "name": "OpenAI Sora / Google Veo",
       "category": "video_gen",
-      "routing_priority": 5,
+      "access": "api_or_product_handoff",
+      "routing_priority": 6,
       "best_for": ["High cinematic world-building", "Brand films", "Complex scenes"],
       "prompt_tips": ["Scene blocks with timecodes", "Lighting + lens language", "Separate VO/captions in post"],
       "assembler_role": "Cinema units when user has access; VO/captions in post"
     },
     {
-      "id": "luma_minimax_hailuo",
-      "name": "Luma / MiniMax Hailuo / equivalents",
+      "id": "minimax_hailuo",
+      "name": "MiniMax Hailuo",
       "category": "video_gen",
-      "best_for": ["Fast ideation clips", "Keyframed start-end", "Batch exploration"]
+      "access": "api_or_product_handoff",
+      "routing_priority": 6,
+      "best_for": ["Camera-controlled T2V/I2V", "Fast hosted ideation", "Subject-referenced product moves"],
+      "prompt_tips": ["Start/subject image from sheet", "Explicit camera verbs", "No tiny brand text in-model"],
+      "limitations": ["Hosted terms/geo may apply — confirm account region", "Never invent job ids"],
+      "assembler_role": "Ideation + body B-roll units → CapCut",
+      "notes": "Some community licenses for related MiniMax open weights exclude major territories — prefer hosted product terms for the API path you actually use."
+    },
+    {
+      "id": "luma",
+      "name": "Luma Dream Machine / Ray (verify current)",
+      "category": "video_gen",
+      "access": "api_or_product_handoff",
+      "routing_priority": 6,
+      "best_for": ["Keyframed start–end", "Fast ideation clips", "Short camera bridges"],
+      "prompt_tips": ["Sheet stills as start/end", "Short deliberate moves"],
+      "assembler_role": "Bridge stills into motion; finish in CapCut"
+    },
+    {
+      "id": "pika",
+      "name": "Pika",
+      "category": "video_gen",
+      "access": "api_or_product_handoff",
+      "routing_priority": 6,
+      "best_for": ["Social-native hooks", "Quick motion tests", "Lightweight ideation"],
+      "prompt_tips": ["Punchy camera/action", "Avoid in-model CTA type"],
+      "assembler_role": "Hook tests → CapCut captions/endcard"
     },
     {
       "id": "midjourney_flux_sd",

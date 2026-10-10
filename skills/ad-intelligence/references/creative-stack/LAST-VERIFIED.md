@@ -19,6 +19,8 @@
 | Wan 2.2 | 2026-10-10 | public docs | Apache 2.0 open weights; T2V/I2V/TI2V; prefer I2V assembler units — see `alternative-model-routing.md` |
 | LTX-2.5 | 2026-10-10 | public docs | Native A/V; Community License free under ~$10M revenue — confirm LICENSE |
 | Grok Imagine video 1.5 | 2026-10-10 | xAI public docs | `grok-imagine-video-1.5` T2V/I2V; API/product handoff — never invent request ids |
+| HunyuanVideo / CogVideoX / SkyReels | 2026-10-10 | public docs | Open-weight peers; confirm geo/license cards before commercial |
+| Hailuo / Luma / Pika | 2026-10-10 | public product docs | Hosted peers — prompt/API handoff; name real tool |
 | Render plan contract | 2026-10-10 | skill | `render-plan.md` + `connected-run-protocol.md` |
 | Meta / TikTok / YT policy flags | 2026-10-10 | editorial | See `policy-precheck.json` v1.1 — not legal advice |
 
@@ -46,4 +48,6 @@
 - 2026-10-10 — v3.5: visual storyboard gallery; stress briefs; lint corpus demo; policy-precheck depth.  
 - 2026-10-10 — v3.6: assembler path; render-QA; voice/front-desk gold fixture.  
 - 2026-10-10 — v3.7: alternative-model-routing (Wan 2.2 / LTX-2.5 / Grok Imagine ladder).  
+- 2026-10-10 — v3.7.1: expand routing — Hunyuan, CogVideoX, SkyReels, Hailuo, Luma, Pika.  
+
 

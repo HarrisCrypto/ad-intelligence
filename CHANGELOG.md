@@ -1,5 +1,20 @@
 # Changelog
 
+## 3.7.1 — 2026-10-10
+
+Expand alternative-model routing with more open-weight and hosted peers agents actually use.
+
+### Added / expanded
+- `alternative-model-routing.md`: **HunyuanVideo**, **CogVideoX**, **SkyReels**, **Hailuo**, **Luma**, **Pika** (+ quick chooser)
+- `tool-catalog.json` v3.2: matching entries with license/access notes (no invented endpoints)
+
+### Changed
+- Assembler preferred-tools table, SKILL / one-stop / harness / creative-stack README pointers
+- Plugin **3.7.1**
+
+### Preserved
+- Priority still Wan → LTX → Grok before other opens; three rungs; sheets/ledger/lint/render-QA
+
 ## 3.7.0 — 2026-10-10
 
 Alternative-model routing for agents **without** Seedance/Higgsfield — aim for cinematic quality via open/accessible tools instead of defaulting to silent stills.

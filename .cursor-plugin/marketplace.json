@@ -10,8 +10,8 @@
     {
       "name": "ad-intelligence",
       "source": ".",
-      "description": "First-shot non-slop ads for any niche — lint, sheets, render plans, triple-path + Wan/LTX/Grok routing.",
-      "version": "3.7.0",
+      "description": "First-shot non-slop ads for any niche — lint, sheets, render plans, triple-path + broad video-model routing.",
+      "version": "3.7.1",
       "keywords": [
         "ads",
         "viral",

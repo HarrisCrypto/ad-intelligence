@@ -26,8 +26,8 @@ consistency, and mechanical lint are the leverage** — not vibes.
    - Connected MCP (Seedance/Higgsfield/peers) → `connected-run-protocol.md` and **call tools**
    - Those tools exist for the user but not in-session → handoff prompts (unchanged)
    - **No Seedance/Higgsfield** → `creative-stack/assembler-pipeline.md` +
-     `creative-stack/alternative-model-routing.md` (prefer Wan 2.2 → LTX-2.5 → Grok Imagine →
-     Kling/Runway/Veo-Sora → stills+CapCut). **Never invent Seedance jobs.**
+     `creative-stack/alternative-model-routing.md` (Wan → LTX → Grok → Hunyuan/Cog/SkyReels →
+     Kling/Hailuo/Luma/Pika/Runway/Veo-Sora → stills+CapCut). **Never invent Seedance jobs.**
    Never claim rendered without job/export ids (`NOT_RENDERED` if none).
 6. Deliver `references/output-template.md` fully — Claim ledger, Render plan,
    Self-critique & variants, Render QA.
