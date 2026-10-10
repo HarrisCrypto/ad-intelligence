@@ -4,8 +4,9 @@ description: >-
   One-stop advertisement maker for any company or niche. Patterns + consistency
   sheets + provenance ledger + render plans + mechanical lint + self-critique
   so harnesses hit production quality first shot — calling generators when
-  connected, or emitting MCP-correct handoffs when not. Eliminates slop, redo
-  loops, hallucinated proof, and weak locks.
+  connected, emitting MCP-correct handoffs when not, or using the assembler
+  pipeline when only image/short-clip tools exist. Eliminates slop, redo loops,
+  hallucinated proof, and weak locks.
 ---
 
 # Ad Intelligence — one-stop ad maker
@@ -19,14 +20,17 @@ consistency, and mechanical lint are the leverage** — not vibes.
 2. Retrieve patterns (aliases resolve; heed `warnings` / `match_quality`).
 3. **Asset ladder + sheets:** fill or request product/character sheets with
    provenance tags before product pixels. S0 = no product pixels without refs.
-4. Emit a **Render plan** (`creative-stack/render-plan.md`) — real MCP roles,
-   clip units, Image-N bindings — not invented `product_hero` file YAML.
-5. If Higgsfield MCP available → `connected-run-protocol.md` and **call tools**.
-   Else → same-quality handoffs. Never claim rendered without job ids.
+4. Emit a **Render plan** (`creative-stack/render-plan.md`) — real tool roles,
+   clip/keyframe units, Image-N bindings — not invented `product_hero` file YAML.
+5. **Choose a pipeline rung:**
+   - Connected MCP (Seedance/Higgsfield/peers) → `connected-run-protocol.md` and **call tools**
+   - Those tools exist for the user but not in-session → handoff prompts (unchanged)
+   - **No single-pass generator** → `creative-stack/assembler-pipeline.md` (keyframes + short clips + post)
+   Never claim rendered without job/export ids (`NOT_RENDERED` if none).
 6. Deliver `references/output-template.md` fully — Claim ledger, Render plan,
-   Self-critique & variants.
-7. Pass `checklists/first-time-right.json` including **lint-pass**:
-   `node scripts/lint-package.mjs <package.md>` (or manual same rules).
+   Self-critique & variants, Render QA.
+7. Pass `checklists/first-time-right.json` including **lint-pass** and **render-qa**:
+   `node scripts/lint-package.mjs <package.md>` (+ `checklists/render-qa.json` on exports).
 8. Never invent proof. Claim-firewall + policy-precheck on regulated niches.
 9. Dual-track default for serious brands. Muted-first. One CTA. Timed beats.
 10. Check `LAST-VERIFIED.md`; probe models when connected.
@@ -39,19 +43,21 @@ Human proof of value: `../../PROOF.md`. Install: `../../INSTALL.md`.
 ## Master workflow
 
 ### 0) Orient
-- Pipeline, creative-stack (render-plan, connected-run, sheets, Seedance, Higgsfield)
+- Pipeline, creative-stack (render-plan, connected-run, **assembler-pipeline**, sheets, Seedance, Higgsfield)
 - `claim-firewall.json`, `brief-defaults.json`, `policy-precheck.json`
 - Full-depth quality bar: `examples/beauty-dtc-dual-track.md`,
-  `local-service-trust.md`, `saas-demo-pas.md`, `physical-product-hero.md`
-  (bookmarks in `demo/`). Visual frames: `examples/visual/`.
+  `local-service-trust.md`, `saas-demo-pas.md`, `physical-product-hero.md`,
+  `voice-agent-front-desk.md` (bookmarks in `demo/`). Visual frames: `examples/visual/`.
   Entertainment example is shape-only.
 - Messy/regulated drills: `examples/stress-briefs/` + `policy-precheck.json`
 - `references/output-template.md` — required sections
+- `checklists/render-qa.json` — post-render / assembler export checks
 - `swipe-signals.md` / `.json` (+ optional local `private-signals.json`)
 - style catalog, viral OS
 
 ### 1) Brief
-≤3 blocking questions. Else assume via `brief-defaults.json` and list Assumptions.
+≤3 blocking questions. Else assume via `brief-defaults.json` and list Assumptions.  
+Note tool access: connected / handoff / **assembler**.
 
 ### 2) Retrieve
 ```bash
@@ -61,14 +67,14 @@ node scripts/retrieve.mjs --niche <niche|alias> --platform <platform> --limit 5
 ### 3) Sheets + ledger
 Inline sheets + Claim & asset ledger (USER_SUPPLIED / ASSET_VERIFIED / PLACEHOLDER / ASSUMED).
 
-### 4) Render plan → generate / handoff
-Split clips; bind refs; cost gate when connected.
+### 4) Render plan → generate / handoff / assemble
+Split clips (or keyframes + short clips on assembler rung); bind refs; cost gate when connected.
 
 ### 5) Self-critique & variants
 Rubric with evidence + caps → failures → A/B/C.
 
-### 6) Lint & ship
-`lint-package.mjs` exit 0 → distribute → scale. Revisions: minimal lever only.
+### 6) Lint + Render QA & ship
+`lint-package.mjs` exit 0 → run/emit `render-qa.json` → distribute → scale.
 
 ## Map
 
@@ -78,8 +84,10 @@ Rubric with evidence + caps → failures → A/B/C.
 | `scripts/retrieve.mjs` | Niche aliases + recommended boost |
 | `scripts/lint-package.mjs` | Mechanical ship gate |
 | `references/creative-stack/render-plan.md` | Generation units |
+| `references/creative-stack/assembler-pipeline.md` | Third rung — no single-pass gen |
+| `checklists/render-qa.json` | Post-render / export checks |
 | `references/output-template.md` | Required deliverable |
-| `examples/` (beauty, local, saas, physical) | Full-depth gold fixtures (4 niches) |
+| `examples/` | Full-depth gold fixtures (5+) |
 | `examples/visual/` | Storyboard design gallery |
 | `examples/stress-briefs/` | Messy / regulated prompt drills |
 | `scripts/demo-quality-gates.mjs` | Gold PASS + corpus CAUGHT demo |

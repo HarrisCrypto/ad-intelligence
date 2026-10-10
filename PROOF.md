@@ -8,13 +8,13 @@ Read this in under a minute, then open a gold fixture:
 
 | Depth | File |
 | --- | --- |
-| **Full-depth fixtures (lint-clean quality bar)** | [`beauty-dtc-dual-track.md`](./skills/ad-intelligence/examples/beauty-dtc-dual-track.md) · [`local-service-trust.md`](./skills/ad-intelligence/examples/local-service-trust.md) · [`saas-demo-pas.md`](./skills/ad-intelligence/examples/saas-demo-pas.md) · [`physical-product-hero.md`](./skills/ad-intelligence/examples/physical-product-hero.md) |
+| **Full-depth fixtures (lint-clean quality bar)** | [`beauty-dtc-dual-track.md`](./skills/ad-intelligence/examples/beauty-dtc-dual-track.md) · [`local-service-trust.md`](./skills/ad-intelligence/examples/local-service-trust.md) · [`saas-demo-pas.md`](./skills/ad-intelligence/examples/saas-demo-pas.md) · [`physical-product-hero.md`](./skills/ad-intelligence/examples/physical-product-hero.md) · [`voice-agent-front-desk.md`](./skills/ad-intelligence/examples/voice-agent-front-desk.md) |
 | **Visual design examples** | [`examples/visual/index.html`](./skills/ad-intelligence/examples/visual/index.html) |
 | **Canonical demo pointer** | [`skills/ad-intelligence/demo/`](./skills/ad-intelligence/demo/) |
 | **Stress briefs (messy prompts)** | [`examples/stress-briefs/`](./skills/ad-intelligence/examples/stress-briefs/) |
 | Shape-only skeleton (structure, not quality) | [`entertainment-creator-series.md`](./skills/ad-intelligence/examples/entertainment-creator-series.md) |
 
-**v3.5:** four niches have full-depth, lint-clean fixtures **plus** a [visual storyboard gallery](./skills/ad-intelligence/examples/visual/index.html) (actual design frames), stress briefs for messy/regulated prompts, and a lint corpus demo that proves slop gets caught.
+**v3.6:** five full-depth fixtures (adds voice/front-desk), plus an **assembler pipeline** for agents without Seedance/Higgsfield, and **render-QA** checks before calling exports done. Visual gallery + stress briefs from v3.5 remain.
 
 ---
 
@@ -103,7 +103,20 @@ Each pair: same brief. Left = typical generic LLM. Right = ad-intelligence disci
 - Series cliffhanger; Soul-ID if talent; **one** in-cut CTA = Watch (merch in caption only)
 - Shape-only skeleton (deepen to full-depth before ship): [`entertainment-creator-series.md`](./skills/ad-intelligence/examples/entertainment-creator-series.md)
 
-### 6) Generic “make me ads” — structure vs vibes
+### 6) Voice / front-desk — phone-call story (assembler-friendly)
+
+**Brief:** “Ads for our AI that answers the clinic phone after hours.”
+
+**Generic slop:**
+> “Answers 10,000 calls a month! Cures no-shows! Shop, book, and follow!” Robot receptionist deepfake; invented lift %.
+
+**Ad-intelligence package (signals):**
+- Missed-call pain → Deskline UI aha → one **Book a demo** CTA  
+- Metrics omitted; owner quote `[PLACEHOLDER]`  
+- Assembler render plan (keyframes + screen record + CapCut) when no Seedance  
+- Full lint-clean fixture: [`voice-agent-front-desk.md`](./skills/ad-intelligence/examples/voice-agent-front-desk.md)
+
+### 7) Generic “make me ads” — structure vs vibes
 
 **Brief:** “Just make high-converting ads for my brand.”
 
@@ -113,6 +126,7 @@ Each pair: same brief. Left = typical generic LLM. Right = ad-intelligence disci
 **Ad-intelligence package (signals):**
 - Retrieve → pattern ids + routes → sheets → claim ledger → timed script → render plan → self-critique → **`lint-package.mjs` exit 0**
 - Thin briefs filled via `brief-defaults.json` with Assumptions listed
+- Pipeline rung: connected / handoff / **assembler**
 
 ---
 

@@ -31,9 +31,13 @@
 | Full-depth gold fixtures | 2026-10-10 | beauty, local, saas, physical |
 | Visual design gallery | 2026-10-10 | `examples/visual/index.html` + 7 frames |
 | Stress briefs | 2026-10-10 | `examples/stress-briefs/` messy prompts |
+| Assembler pipeline | 2026-10-10 | Third rung when no single-pass video gen |
+| Render QA checklist | 2026-10-10 | `checklists/render-qa.json` |
+| Voice / front-desk gold | 2026-10-10 | `examples/voice-agent-front-desk.md` |
 
 **Changelog (mini):**  
 - 2026-10-10 — v3.2: removed invented `product_hero` file roles; multi-clip + cost/receipt.  
 - 2026-10-10 — v3.3: adoption proof/install/contribute; private swipe overlay.  
 - 2026-10-10 — v3.4: three more full-depth gold fixtures.  
 - 2026-10-10 — v3.5: visual storyboard gallery; stress briefs; lint corpus demo; policy-precheck depth.  
+- 2026-10-10 — v3.6: assembler path; render-QA; voice/front-desk gold fixture.  

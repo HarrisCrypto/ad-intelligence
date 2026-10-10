@@ -1,0 +1,83 @@
+{
+  "id": "render-qa",
+  "name": "Post-render / assembler export QA",
+  "version": "1.0.0",
+  "rule": "Run on every connected export OR emit this checklist for human assemblers before calling a package done. Does not replace lint-package.mjs (markdown gate).",
+  "applies_to": ["connected_render", "assembler_export", "handoff_when_user_returns_with_files"],
+  "when_not_rendered": "If Render status is NOT_RENDERED, mark all checks N/A — checklist emitted for the finisher; do not claim PASS.",
+  "checks": [
+    {
+      "id": "hands-fingers",
+      "ask": "Hands/fingers anatomically OK across frames (no warps, merges, extras)?",
+      "fail_if": "Warped or extra fingers in hero/talent beats",
+      "fix": "Regenerate that unit or cut away; prefer still hold"
+    },
+    {
+      "id": "text-melt",
+      "ask": "On-screen model text/logo is absent or intentional; no garbled/melted type?",
+      "fail_if": "Melted pack labels, gibberish UI, model-drawn logo as final brand mark",
+      "fix": "Remove; burn real text/logo in CapCut from sheet assets"
+    },
+    {
+      "id": "identity-drift",
+      "ask": "Product/place/UI/talent matches sheets every beat?",
+      "fail_if": "Colorway, silhouette, face, or facility drifts vs Image-N refs",
+      "fix": "Re-bind refs; regenerate drifted unit only"
+    },
+    {
+      "id": "audio-sync",
+      "ask": "VO/music/SFX aligned; no overlapping mismatched beds; lip sync acceptable if dialogue?",
+      "fail_if": "Double beds, offset VO, uncanny lip flop on talking head",
+      "fix": "Re-lay audio in post; mute gen audio if needed"
+    },
+    {
+      "id": "frozen-beats",
+      "ask": "Motion continuous where intended; no accidental freeze or stutter holding as a 'shot'?",
+      "fail_if": "Dead freeze mid-demo unless intentional hold frame",
+      "fix": "Trim or replace clip unit"
+    },
+    {
+      "id": "duration-match",
+      "ask": "Export length matches media plan and timed script (±0.5s)?",
+      "fail_if": "15s plan shipped as 7s or 40s without stated reason",
+      "fix": "Re-time assembly; split or extend units intentionally"
+    },
+    {
+      "id": "logo-endcard",
+      "ask": "Endcard uses official logo asset; safe margins; not logo-first cold open?",
+      "fail_if": "Model-invented logo; endcard colliding with UI chrome; logo opens the spot",
+      "fix": "Rebuild endcard in post from SVG/PNG"
+    },
+    {
+      "id": "muted-fail",
+      "ask": "0–3s works with sound off (text or pure visual interrupt)?",
+      "fail_if": "Joke/hook only works with audio; blank first seconds",
+      "fix": "Add burned hook text or stronger visual interrupt"
+    },
+    {
+      "id": "one-cta-on-export",
+      "ask": "Finished cut still has exactly one primary CTA?",
+      "fail_if": "Assembler added Shop+Follow+Comment burns",
+      "fix": "Strip secondary CTAs to caption/primary text only"
+    },
+    {
+      "id": "aspect-exports",
+      "ask": "Required aspects are separate exports (not naive center-crop)?",
+      "fail_if": "16:9 letterbox dumped to TikTok; faces cropped off",
+      "fix": "Re-frame per platform-specs"
+    },
+    {
+      "id": "claims-on-screen",
+      "ask": "No invented metrics/reviews appeared in burn-ins during finish?",
+      "fail_if": "Editor added '94%' or fake stars not in ledger",
+      "fix": "Remove or replace with PLACEHOLDER/USER_SUPPLIED only"
+    },
+    {
+      "id": "receipt-honesty",
+      "ask": "Render log lists real job/export ids for every claimed PASS unit?",
+      "fail_if": "Package says rendered PASS with empty log",
+      "fix": "Set NOT_RENDERED or attach receipts"
+    }
+  ],
+  "ship_rule": "Connected/assembler exports: all applicable checks PASS or N/A with reason before Render status PASS. Handoff-only: emit checklist for finisher; keep NOT_RENDERED."
+}

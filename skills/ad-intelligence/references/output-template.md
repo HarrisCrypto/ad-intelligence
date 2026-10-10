@@ -4,8 +4,8 @@ Copy this structure every time. Do not omit sections; use `N/A — reason` if ne
 **Not done until:** Claim ledger filled · Render plan complete · Self-critique done · `node scripts/lint-package.mjs <file>` exits 0 (or same rules checked manually).
 
 **Gold fixtures that follow this template (lint-clean):**  
-`examples/beauty-dtc-dual-track.md`, `local-service-trust.md`, `saas-demo-pas.md`, `physical-product-hero.md`.  
-Required sections include: Consistency systems · Claim & asset ledger · Render plan · Render log · Caption · CTA · AI disclosure & rights · Self-critique & variants.
+`examples/beauty-dtc-dual-track.md`, `local-service-trust.md`, `saas-demo-pas.md`, `physical-product-hero.md`, `voice-agent-front-desk.md`.  
+Required sections include: Consistency systems · Claim & asset ledger · Render plan · Render log · Caption · CTA · AI disclosure & rights · Self-critique & variants · Render QA.
 
 Use four-backtick outer fences in your reply if you nest code blocks, so Seedance/JSON stubs cannot close the template early.
 
@@ -15,7 +15,8 @@ Use four-backtick outer fences in your reply if you nest code blocks, so Seedanc
 - Asset ladder state: S0 / S1 / S2 / S3
 - Generation readiness: CONCEPT_READY / GENERATION_READY
 - Connected tools?: yes / no
-- Render status: NOT_RENDERED / UNVERIFIED / PASS (job ids required for PASS)
+- Pipeline rung: connected / handoff / assembler
+- Render status: NOT_RENDERED / UNVERIFIED / PASS (job/export ids required for PASS)
 
 ### Brief (locked or assumed)
 - Brand / offer:
@@ -25,7 +26,7 @@ Use four-backtick outer fences in your reply if you nest code blocks, so Seedanc
 - Production tier:
 - Virality posture:
 - Proof available:
-- Tool access: connected MCP / prompt-handoff only / live shoot
+- Tool access: connected MCP / prompt-handoff only / assembler (own pipeline) / live shoot
 - Assumptions (from brief-defaults.json if any):
 
 ### Retrieval
@@ -58,9 +59,10 @@ Use four-backtick outer fences in your reply if you nest code blocks, so Seedanc
 
 ### Creative stack (required)
 - Pipeline id / posture default:
-- Primary generator:
+- Pipeline rung: connected | handoff | assembler (see assembler-pipeline.md)
+- Primary generator: (Seedance / Higgsfield / short i2v / screen_record / …)
 - Supporting tools:
-- Connected now?: yes → follow connected-run-protocol.md | no → handoff
+- Connected now?: yes → connected-run-protocol.md | no single-pass → assembler | else → handoff
 - Creative-stack last verified date checked?: yes / stale warning
 - Policy precheck (policy-precheck.json / claim-firewall): 
 
@@ -75,10 +77,10 @@ Use four-backtick outer fences in your reply if you nest code blocks, so Seedanc
 ### Shot list / visual system
 
 
-### Render plan (required — see creative-stack/render-plan.md)
-| unit_id | beats | seconds | model | start/end | refs | acceptance |
+### Render plan (required — see creative-stack/render-plan.md; assembler → assembler-pipeline.md)
+| unit_id | beats | seconds | model / tool | start/end | refs | acceptance |
 | --- | --- | --- | --- | --- | --- | --- |
-| U1 |  |  |  |  |  |  |
+| U1 or K1/C1 |  |  |  |  |  |  |
 
 #### Unit U1 — paste-ready prompt
 ```text
@@ -102,10 +104,15 @@ NEGATIVES: melted type, wrong label, identity drift, extra fingers, watermark
 }
 ```
 
-### Render log (connected only; else NOT_RENDERED)
-| job_id | unit_id | status | vs_sheet | action |
+### Render log (connected/assembler exports; else NOT_RENDERED)
+| job_id / export_id | unit_id | status | vs_sheet | action |
 | --- | --- | --- | --- | --- |
 |  |  |  |  |  |
+
+### Render QA (required — see checklists/render-qa.json)
+- Status: N/A (NOT_RENDERED) / PASS / FAIL with ids
+- Checks run or emitted for finisher: hands-fingers · text-melt · identity-drift · audio-sync · frozen-beats · duration-match · logo-endcard · muted-fail · one-cta-on-export · aspect-exports · claims-on-screen · receipt-honesty
+- Notes:
 
 ### Caption track (muted-first) — timed lines or SRT
 
@@ -170,6 +177,7 @@ Caps: any PLACEHOLDER proof → desire_or_proof ≤3; refs not attached → cons
 
 ### First-time-right QA
 - lint-package.mjs: PASS / FAIL (paste output)
+- render-qa.json: PASS / FAIL / N/A-NOT_RENDERED (checklist emitted?: yes/no)
 - Checklist gates: PASS / fails listed:
 - Mistakes library + claim-firewall + policy-precheck: yes
 - Self-critique completed: yes
