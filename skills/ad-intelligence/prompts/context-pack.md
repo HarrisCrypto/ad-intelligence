@@ -431,6 +431,7 @@ Replace every `[[LIKE_THIS]]`. Tags must be USER_SUPPLIED | ASSET_VERIFIED | PLA
 - Dual-track twin id: `[[≠ primary; cinema/high-prod if dual-track]]`
 - Study id: `[[study_* from retrieve studies — or n/a if match_status none_for_query]]`
 - Study provenance: observed:[[true|false]] · basis:[[synthesis|ad-library|named-campaign|owned-ad]] — [[STRUCTURE_ONLY if synthesis; never invent proof]]
+- Study format: [[video_timed|search_text|display_static|…]] · timing_observable:[[true|false]] — [[if false, do NOT invent 0–3s video beats from this study]]
 - Attention model id (primary): `[[am_* from retrieve attention_models]]`
 - Attention model id (challenger): `[[am_*]]`
 - Research notes (public libraries — structure only): [[Meta/TikTok/X/YouTube — what timing you stole]]

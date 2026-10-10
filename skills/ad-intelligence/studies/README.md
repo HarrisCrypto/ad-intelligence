@@ -32,6 +32,18 @@ Every study **must** carry:
 
 **Public corpus is intentionally 100% `synthesis` / `observed:false`.** Observed / named-campaign / owned-ad studies are **private** via `ingest-blueprint.mjs` → `studies/private/` after a real library watch. Do not invent public “observed” rows.
 
+### `structure.format` (required)
+
+| format | timing_observable | Meaning |
+| --- | --- | --- |
+| `video_timed` | `true` | Seconds / motion / audio were (or are) part of the structure |
+| `search_text` | `false` | Static search / RSA — **not** 0–3s video |
+| `display_static` | `false` | Static display |
+| `carousel_static` | `false` | Card carousel without timed AV |
+| `unknown` | usually `false` | Do not invent timing |
+
+Retrieve projects `format`, `timing_observable`, `observed_limits`, and `structure.format_note` for non-video. Gates assert `search_text` is not silently video-shaped.
+
 Retrieve **surfaces** `provenance` on every item. **Lint enforces it:** `lint-package.mjs` fails `study-synthesis-cited-as-proof` / `study-provenance-undeclared` if a package launders synthesis into observed evidence (see `examples/lint-corpus/fail-study-synthesis-as-proof.md`).
 
 ## Agent loop
