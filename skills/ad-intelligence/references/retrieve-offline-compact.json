@@ -48,9 +48,50 @@
         }
       },
       "attention_models": {
-        "primary": "am_hair_transform",
-        "challenger": "am_before_after_matchcut",
+        "primary": "am_before_after_matchcut",
+        "challenger": "am_hair_transform",
         "models": [
+          {
+            "id": "am_before_after_matchcut",
+            "name": "Before → after match-cut",
+            "why_stops_scroll": "Matched framing makes change undeniable in one cut",
+            "pattern_ids": [
+              "before-after-reveal",
+              "vfx-transformation"
+            ],
+            "ideal_seconds": 15,
+            "timing": [
+              {
+                "t": "0–2s",
+                "shot": "BEFORE locked frame + label",
+                "on_screen": "BEFORE",
+                "vo": "—"
+              },
+              {
+                "t": "2–8s",
+                "shot": "Honest process (speed OK)",
+                "on_screen": "Process noun",
+                "vo": "What changed"
+              },
+              {
+                "t": "8–12s",
+                "shot": "AFTER same angle/light",
+                "on_screen": "AFTER",
+                "vo": "Outcome"
+              },
+              {
+                "t": "12–15s",
+                "shot": "Product/service lock + CTA",
+                "on_screen": "One CTA",
+                "vo": "CTA"
+              }
+            ],
+            "anti_slop": [
+              "Mismatched angles",
+              "Overfiltered skin",
+              "Fake renovation"
+            ]
+          },
           {
             "id": "am_hair_transform",
             "name": "Hair / shampoo transform",
@@ -61,17 +102,37 @@
               "ugc-talking-head-scroll-stop",
               "beauty-macro-tabletop"
             ],
-            "ideal_seconds": 18
-          },
-          {
-            "id": "am_before_after_matchcut",
-            "name": "Before → after match-cut",
-            "why_stops_scroll": "Matched framing makes change undeniable in one cut",
-            "pattern_ids": [
-              "before-after-reveal",
-              "vfx-transformation"
+            "ideal_seconds": 18,
+            "timing": [
+              {
+                "t": "0–2s",
+                "shot": "BEFORE hair state — natural light",
+                "on_screen": "BEFORE label",
+                "vo": "Confession"
+              },
+              {
+                "t": "2–8s",
+                "shot": "Wash/apply macro texture",
+                "on_screen": "Texture noun",
+                "vo": "One step"
+              },
+              {
+                "t": "8–14s",
+                "shot": "AFTER same angle + movement",
+                "on_screen": "AFTER",
+                "vo": "Feel line"
+              },
+              {
+                "t": "14–18s",
+                "shot": "Bottle lock + CTA",
+                "on_screen": "Shop — shade/SKU true",
+                "vo": "CTA"
+              }
             ],
-            "ideal_seconds": 15
+            "anti_slop": [
+              "Stock model swap as 'results'",
+              "Clinical % invention"
+            ]
           },
           {
             "id": "am_macro_lust_loop",
@@ -82,7 +143,38 @@
               "product-loop-demo",
               "unboxing-asmr"
             ],
-            "ideal_seconds": 12
+            "ideal_seconds": 12,
+            "timing": [
+              {
+                "t": "0–2s",
+                "shot": "Macro mid-pour/spread/shine — no logo",
+                "on_screen": "Sensory verb ≤5 words",
+                "vo": "ASMR optional"
+              },
+              {
+                "t": "2–7s",
+                "shot": "Continuous physics loop or 180° pack lock",
+                "on_screen": "One benefit",
+                "vo": "Sparse"
+              },
+              {
+                "t": "7–10s",
+                "shot": "Human context insert (hand/use)",
+                "on_screen": "SKU-true colorway",
+                "vo": "—"
+              },
+              {
+                "t": "10–12s",
+                "shot": "Endcard or seamless loop reset",
+                "on_screen": "Shop CTA or none on organic loop",
+                "vo": "—"
+              }
+            ],
+            "anti_slop": [
+              "Floating product + sparkles",
+              "Melted label",
+              "Wrong shade/SKU"
+            ]
           },
           {
             "id": "am_grwm_ritual",
@@ -92,7 +184,37 @@
               "grwm-soft-sell",
               "pov-day-in-life"
             ],
-            "ideal_seconds": 35
+            "ideal_seconds": 35,
+            "timing": [
+              {
+                "t": "0–3s",
+                "shot": "POV ritual start",
+                "on_screen": "POV / ritual line",
+                "vo": "Casual"
+              },
+              {
+                "t": "3–20s",
+                "shot": "Routine steps",
+                "on_screen": "Sparse",
+                "vo": "Storytime"
+              },
+              {
+                "t": "20–28s",
+                "shot": "Product earns insert",
+                "on_screen": "Why this step",
+                "vo": "Soft reason"
+              },
+              {
+                "t": "28–35s",
+                "shot": "Mirror check + CTA",
+                "on_screen": "Soft CTA",
+                "vo": "—"
+              }
+            ],
+            "anti_slop": [
+              "Studio GRWM fake mess",
+              "Shade mismatch"
+            ]
           }
         ],
         "research": [
@@ -196,7 +318,37 @@
               "ugc-talking-head-scroll-stop",
               "beauty-macro-tabletop"
             ],
-            "ideal_seconds": 18
+            "ideal_seconds": 18,
+            "timing": [
+              {
+                "t": "0–2s",
+                "shot": "BEFORE hair state — natural light",
+                "on_screen": "BEFORE label",
+                "vo": "Confession"
+              },
+              {
+                "t": "2–8s",
+                "shot": "Wash/apply macro texture",
+                "on_screen": "Texture noun",
+                "vo": "One step"
+              },
+              {
+                "t": "8–14s",
+                "shot": "AFTER same angle + movement",
+                "on_screen": "AFTER",
+                "vo": "Feel line"
+              },
+              {
+                "t": "14–18s",
+                "shot": "Bottle lock + CTA",
+                "on_screen": "Shop — shade/SKU true",
+                "vo": "CTA"
+              }
+            ],
+            "anti_slop": [
+              "Stock model swap as 'results'",
+              "Clinical % invention"
+            ]
           },
           {
             "id": "am_before_after_matchcut",
@@ -206,7 +358,38 @@
               "before-after-reveal",
               "vfx-transformation"
             ],
-            "ideal_seconds": 15
+            "ideal_seconds": 15,
+            "timing": [
+              {
+                "t": "0–2s",
+                "shot": "BEFORE locked frame + label",
+                "on_screen": "BEFORE",
+                "vo": "—"
+              },
+              {
+                "t": "2–8s",
+                "shot": "Honest process (speed OK)",
+                "on_screen": "Process noun",
+                "vo": "What changed"
+              },
+              {
+                "t": "8–12s",
+                "shot": "AFTER same angle/light",
+                "on_screen": "AFTER",
+                "vo": "Outcome"
+              },
+              {
+                "t": "12–15s",
+                "shot": "Product/service lock + CTA",
+                "on_screen": "One CTA",
+                "vo": "CTA"
+              }
+            ],
+            "anti_slop": [
+              "Mismatched angles",
+              "Overfiltered skin",
+              "Fake renovation"
+            ]
           },
           {
             "id": "am_macro_lust_loop",
@@ -217,7 +400,38 @@
               "product-loop-demo",
               "unboxing-asmr"
             ],
-            "ideal_seconds": 12
+            "ideal_seconds": 12,
+            "timing": [
+              {
+                "t": "0–2s",
+                "shot": "Macro mid-pour/spread/shine — no logo",
+                "on_screen": "Sensory verb ≤5 words",
+                "vo": "ASMR optional"
+              },
+              {
+                "t": "2–7s",
+                "shot": "Continuous physics loop or 180° pack lock",
+                "on_screen": "One benefit",
+                "vo": "Sparse"
+              },
+              {
+                "t": "7–10s",
+                "shot": "Human context insert (hand/use)",
+                "on_screen": "SKU-true colorway",
+                "vo": "—"
+              },
+              {
+                "t": "10–12s",
+                "shot": "Endcard or seamless loop reset",
+                "on_screen": "Shop CTA or none on organic loop",
+                "vo": "—"
+              }
+            ],
+            "anti_slop": [
+              "Floating product + sparkles",
+              "Melted label",
+              "Wrong shade/SKU"
+            ]
           },
           {
             "id": "am_grwm_ritual",
@@ -227,7 +441,37 @@
               "grwm-soft-sell",
               "pov-day-in-life"
             ],
-            "ideal_seconds": 35
+            "ideal_seconds": 35,
+            "timing": [
+              {
+                "t": "0–3s",
+                "shot": "POV ritual start",
+                "on_screen": "POV / ritual line",
+                "vo": "Casual"
+              },
+              {
+                "t": "3–20s",
+                "shot": "Routine steps",
+                "on_screen": "Sparse",
+                "vo": "Storytime"
+              },
+              {
+                "t": "20–28s",
+                "shot": "Product earns insert",
+                "on_screen": "Why this step",
+                "vo": "Soft reason"
+              },
+              {
+                "t": "28–35s",
+                "shot": "Mirror check + CTA",
+                "on_screen": "Soft CTA",
+                "vo": "—"
+              }
+            ],
+            "anti_slop": [
+              "Studio GRWM fake mess",
+              "Shade mismatch"
+            ]
           }
         ],
         "research": [
@@ -330,7 +574,31 @@
               "product-loop-demo",
               "beauty-macro-tabletop"
             ],
-            "ideal_seconds": 12
+            "ideal_seconds": 12,
+            "timing": [
+              {
+                "t": "0–2s",
+                "shot": "Pour/bite/steam macro",
+                "on_screen": "Crave verb",
+                "vo": "ASMR"
+              },
+              {
+                "t": "2–8s",
+                "shot": "Satisfy loop",
+                "on_screen": "Flavor/SKU truth",
+                "vo": "—"
+              },
+              {
+                "t": "8–12s",
+                "shot": "Pack + CTA or loop",
+                "on_screen": "Order / find",
+                "vo": "—"
+              }
+            ],
+            "anti_slop": [
+              "Plastic food look",
+              "Logo-first"
+            ]
           },
           {
             "id": "am_macro_lust_loop",
@@ -341,7 +609,38 @@
               "product-loop-demo",
               "unboxing-asmr"
             ],
-            "ideal_seconds": 12
+            "ideal_seconds": 12,
+            "timing": [
+              {
+                "t": "0–2s",
+                "shot": "Macro mid-pour/spread/shine — no logo",
+                "on_screen": "Sensory verb ≤5 words",
+                "vo": "ASMR optional"
+              },
+              {
+                "t": "2–7s",
+                "shot": "Continuous physics loop or 180° pack lock",
+                "on_screen": "One benefit",
+                "vo": "Sparse"
+              },
+              {
+                "t": "7–10s",
+                "shot": "Human context insert (hand/use)",
+                "on_screen": "SKU-true colorway",
+                "vo": "—"
+              },
+              {
+                "t": "10–12s",
+                "shot": "Endcard or seamless loop reset",
+                "on_screen": "Shop CTA or none on organic loop",
+                "vo": "—"
+              }
+            ],
+            "anti_slop": [
+              "Floating product + sparkles",
+              "Melted label",
+              "Wrong shade/SKU"
+            ]
           },
           {
             "id": "am_skit_punchline",
@@ -352,7 +651,37 @@
               "meme-native-trend",
               "green-screen-rant"
             ],
-            "ideal_seconds": 18
+            "ideal_seconds": 18,
+            "timing": [
+              {
+                "t": "0–2s",
+                "shot": "Absurd cold open",
+                "on_screen": "Premise line",
+                "vo": "Bit start"
+              },
+              {
+                "t": "2–10s",
+                "shot": "Escalation beats",
+                "on_screen": "Escalation text",
+                "vo": "Bit"
+              },
+              {
+                "t": "10–15s",
+                "shot": "Product as punchline",
+                "on_screen": "Punchline = product truth",
+                "vo": "Reveal"
+              },
+              {
+                "t": "15–18s",
+                "shot": "Endcard light",
+                "on_screen": "One CTA",
+                "vo": "—"
+              }
+            ],
+            "anti_slop": [
+              "Logo open",
+              "Hard sell mid-bit"
+            ]
           }
         ],
         "research": [
@@ -449,7 +778,44 @@
               "pas-pain-stack",
               "motion-design-explainer"
             ],
-            "ideal_seconds": 24
+            "ideal_seconds": 24,
+            "timing": [
+              {
+                "t": "0–3s",
+                "shot": "Pain scene (inbox chaos / missed call / tab hell)",
+                "on_screen": "Pain noun",
+                "vo": "Costly mistake"
+              },
+              {
+                "t": "3–8s",
+                "shot": "Agitate once — no feature list",
+                "on_screen": "Reframe line",
+                "vo": "Why old way fails"
+              },
+              {
+                "t": "8–18s",
+                "shot": "Real UI screen record — cursor/tap path",
+                "on_screen": "Aha label",
+                "vo": "One mechanism"
+              },
+              {
+                "t": "18–21s",
+                "shot": "Outcome state of UI",
+                "on_screen": "Result verb",
+                "vo": "—"
+              },
+              {
+                "t": "21–24s",
+                "shot": "Endcard",
+                "on_screen": "Start free / Book demo",
+                "vo": "CTA once"
+              }
+            ],
+            "anti_slop": [
+              "Holographic UI",
+              "Stock handshake B-roll",
+              "Purple glow"
+            ]
           },
           {
             "id": "am_voice_agent_missed",
@@ -460,7 +826,43 @@
               "app-demo-ui",
               "local-service-trust"
             ],
-            "ideal_seconds": 24
+            "ideal_seconds": 24,
+            "timing": [
+              {
+                "t": "0–3s",
+                "shot": "Phone ringing → voicemail void",
+                "on_screen": "Missed after hours?",
+                "vo": "Ring / silence"
+              },
+              {
+                "t": "3–8s",
+                "shot": "Agitate: lost lead",
+                "on_screen": "Cost line — no fake $",
+                "vo": "Pain"
+              },
+              {
+                "t": "8–18s",
+                "shot": "Agent transcript / UI answering",
+                "on_screen": "Answered chip",
+                "vo": "Calm agent line"
+              },
+              {
+                "t": "18–21s",
+                "shot": "Booked outcome",
+                "on_screen": "Booked / routed",
+                "vo": "—"
+              },
+              {
+                "t": "21–24s",
+                "shot": "Endcard",
+                "on_screen": "One CTA to site",
+                "vo": "CTA"
+              }
+            ],
+            "anti_slop": [
+              "Robot mascot cliché",
+              "Neon AI brain"
+            ]
           },
           {
             "id": "am_pas_pain_stack",
@@ -471,7 +873,43 @@
               "objection-faq",
               "listicle-text-overlay"
             ],
-            "ideal_seconds": 27
+            "ideal_seconds": 27,
+            "timing": [
+              {
+                "t": "0–3s",
+                "shot": "Pain object close-up",
+                "on_screen": "Pain in quotes",
+                "vo": "Name it"
+              },
+              {
+                "t": "3–10s",
+                "shot": "Agitate with consequence",
+                "on_screen": "Cost of inaction",
+                "vo": "Stack once"
+              },
+              {
+                "t": "10–20s",
+                "shot": "Solve via demo/mechanism",
+                "on_screen": "One reframe",
+                "vo": "How"
+              },
+              {
+                "t": "20–24s",
+                "shot": "Proof or objection crush",
+                "on_screen": "Ledger-backed only",
+                "vo": "—"
+              },
+              {
+                "t": "24–27s",
+                "shot": "Endcard",
+                "on_screen": "One CTA",
+                "vo": "CTA"
+              }
+            ],
+            "anti_slop": [
+              "Abstract productivity montage",
+              "Fake case study numbers"
+            ]
           },
           {
             "id": "am_text_first_x",
@@ -482,7 +920,37 @@
               "listicle-text-overlay",
               "pas-pain-stack"
             ],
-            "ideal_seconds": 15
+            "ideal_seconds": 15,
+            "timing": [
+              {
+                "t": "0–1s",
+                "shot": "Bold first line on solid/grade",
+                "on_screen": "Hot take / costly belief",
+                "vo": "—"
+              },
+              {
+                "t": "1–8s",
+                "shot": "Proof visual or UI",
+                "on_screen": "Support line",
+                "vo": "Optional"
+              },
+              {
+                "t": "8–12s",
+                "shot": "Mechanism",
+                "on_screen": "How",
+                "vo": "—"
+              },
+              {
+                "t": "12–15s",
+                "shot": "CTA card",
+                "on_screen": "One link CTA",
+                "vo": "—"
+              }
+            ],
+            "anti_slop": [
+              "Wall of hashtags",
+              "Fake screenshots"
+            ]
           }
         ],
         "research": [
@@ -579,7 +1047,44 @@
               "pas-pain-stack",
               "motion-design-explainer"
             ],
-            "ideal_seconds": 24
+            "ideal_seconds": 24,
+            "timing": [
+              {
+                "t": "0–3s",
+                "shot": "Pain scene (inbox chaos / missed call / tab hell)",
+                "on_screen": "Pain noun",
+                "vo": "Costly mistake"
+              },
+              {
+                "t": "3–8s",
+                "shot": "Agitate once — no feature list",
+                "on_screen": "Reframe line",
+                "vo": "Why old way fails"
+              },
+              {
+                "t": "8–18s",
+                "shot": "Real UI screen record — cursor/tap path",
+                "on_screen": "Aha label",
+                "vo": "One mechanism"
+              },
+              {
+                "t": "18–21s",
+                "shot": "Outcome state of UI",
+                "on_screen": "Result verb",
+                "vo": "—"
+              },
+              {
+                "t": "21–24s",
+                "shot": "Endcard",
+                "on_screen": "Start free / Book demo",
+                "vo": "CTA once"
+              }
+            ],
+            "anti_slop": [
+              "Holographic UI",
+              "Stock handshake B-roll",
+              "Purple glow"
+            ]
           },
           {
             "id": "am_voice_agent_missed",
@@ -590,7 +1095,43 @@
               "app-demo-ui",
               "local-service-trust"
             ],
-            "ideal_seconds": 24
+            "ideal_seconds": 24,
+            "timing": [
+              {
+                "t": "0–3s",
+                "shot": "Phone ringing → voicemail void",
+                "on_screen": "Missed after hours?",
+                "vo": "Ring / silence"
+              },
+              {
+                "t": "3–8s",
+                "shot": "Agitate: lost lead",
+                "on_screen": "Cost line — no fake $",
+                "vo": "Pain"
+              },
+              {
+                "t": "8–18s",
+                "shot": "Agent transcript / UI answering",
+                "on_screen": "Answered chip",
+                "vo": "Calm agent line"
+              },
+              {
+                "t": "18–21s",
+                "shot": "Booked outcome",
+                "on_screen": "Booked / routed",
+                "vo": "—"
+              },
+              {
+                "t": "21–24s",
+                "shot": "Endcard",
+                "on_screen": "One CTA to site",
+                "vo": "CTA"
+              }
+            ],
+            "anti_slop": [
+              "Robot mascot cliché",
+              "Neon AI brain"
+            ]
           },
           {
             "id": "am_pas_pain_stack",
@@ -601,7 +1142,43 @@
               "objection-faq",
               "listicle-text-overlay"
             ],
-            "ideal_seconds": 27
+            "ideal_seconds": 27,
+            "timing": [
+              {
+                "t": "0–3s",
+                "shot": "Pain object close-up",
+                "on_screen": "Pain in quotes",
+                "vo": "Name it"
+              },
+              {
+                "t": "3–10s",
+                "shot": "Agitate with consequence",
+                "on_screen": "Cost of inaction",
+                "vo": "Stack once"
+              },
+              {
+                "t": "10–20s",
+                "shot": "Solve via demo/mechanism",
+                "on_screen": "One reframe",
+                "vo": "How"
+              },
+              {
+                "t": "20–24s",
+                "shot": "Proof or objection crush",
+                "on_screen": "Ledger-backed only",
+                "vo": "—"
+              },
+              {
+                "t": "24–27s",
+                "shot": "Endcard",
+                "on_screen": "One CTA",
+                "vo": "CTA"
+              }
+            ],
+            "anti_slop": [
+              "Abstract productivity montage",
+              "Fake case study numbers"
+            ]
           },
           {
             "id": "am_text_first_x",
@@ -612,7 +1189,37 @@
               "listicle-text-overlay",
               "pas-pain-stack"
             ],
-            "ideal_seconds": 15
+            "ideal_seconds": 15,
+            "timing": [
+              {
+                "t": "0–1s",
+                "shot": "Bold first line on solid/grade",
+                "on_screen": "Hot take / costly belief",
+                "vo": "—"
+              },
+              {
+                "t": "1–8s",
+                "shot": "Proof visual or UI",
+                "on_screen": "Support line",
+                "vo": "Optional"
+              },
+              {
+                "t": "8–12s",
+                "shot": "Mechanism",
+                "on_screen": "How",
+                "vo": "—"
+              },
+              {
+                "t": "12–15s",
+                "shot": "CTA card",
+                "on_screen": "One link CTA",
+                "vo": "—"
+              }
+            ],
+            "anti_slop": [
+              "Wall of hashtags",
+              "Fake screenshots"
+            ]
           }
         ],
         "research": [
@@ -717,7 +1324,38 @@
               "local-service-trust",
               "social-proof-stack"
             ],
-            "ideal_seconds": 20
+            "ideal_seconds": 20,
+            "timing": [
+              {
+                "t": "0–3s",
+                "shot": "Real facility/van/street",
+                "on_screen": "City + specialty",
+                "vo": "Geo line"
+              },
+              {
+                "t": "3–10s",
+                "shot": "Work-in-progress proof",
+                "on_screen": "Job noun",
+                "vo": "What you fix"
+              },
+              {
+                "t": "10–15s",
+                "shot": "Customer or before/after if true",
+                "on_screen": "Proof only if ledger",
+                "vo": "—"
+              },
+              {
+                "t": "15–20s",
+                "shot": "Phone hold endcard",
+                "on_screen": "Tap-to-call + NAP",
+                "vo": "Phone once"
+              }
+            ],
+            "anti_slop": [
+              "Generic skyline",
+              "Wrong phone",
+              "Multi-CTA"
+            ]
           },
           {
             "id": "am_voice_agent_missed",
@@ -728,7 +1366,43 @@
               "app-demo-ui",
               "local-service-trust"
             ],
-            "ideal_seconds": 24
+            "ideal_seconds": 24,
+            "timing": [
+              {
+                "t": "0–3s",
+                "shot": "Phone ringing → voicemail void",
+                "on_screen": "Missed after hours?",
+                "vo": "Ring / silence"
+              },
+              {
+                "t": "3–8s",
+                "shot": "Agitate: lost lead",
+                "on_screen": "Cost line — no fake $",
+                "vo": "Pain"
+              },
+              {
+                "t": "8–18s",
+                "shot": "Agent transcript / UI answering",
+                "on_screen": "Answered chip",
+                "vo": "Calm agent line"
+              },
+              {
+                "t": "18–21s",
+                "shot": "Booked outcome",
+                "on_screen": "Booked / routed",
+                "vo": "—"
+              },
+              {
+                "t": "21–24s",
+                "shot": "Endcard",
+                "on_screen": "One CTA to site",
+                "vo": "CTA"
+              }
+            ],
+            "anti_slop": [
+              "Robot mascot cliché",
+              "Neon AI brain"
+            ]
           },
           {
             "id": "am_before_after_matchcut",
@@ -738,7 +1412,38 @@
               "before-after-reveal",
               "vfx-transformation"
             ],
-            "ideal_seconds": 15
+            "ideal_seconds": 15,
+            "timing": [
+              {
+                "t": "0–2s",
+                "shot": "BEFORE locked frame + label",
+                "on_screen": "BEFORE",
+                "vo": "—"
+              },
+              {
+                "t": "2–8s",
+                "shot": "Honest process (speed OK)",
+                "on_screen": "Process noun",
+                "vo": "What changed"
+              },
+              {
+                "t": "8–12s",
+                "shot": "AFTER same angle/light",
+                "on_screen": "AFTER",
+                "vo": "Outcome"
+              },
+              {
+                "t": "12–15s",
+                "shot": "Product/service lock + CTA",
+                "on_screen": "One CTA",
+                "vo": "CTA"
+              }
+            ],
+            "anti_slop": [
+              "Mismatched angles",
+              "Overfiltered skin",
+              "Fake renovation"
+            ]
           }
         ],
         "research": [
@@ -830,20 +1535,9 @@
         }
       },
       "attention_models": {
-        "primary": "am_food_crave_asmr",
-        "challenger": "am_macro_lust_loop",
+        "primary": "am_macro_lust_loop",
+        "challenger": "am_food_crave_asmr",
         "models": [
-          {
-            "id": "am_food_crave_asmr",
-            "name": "Food / bev crave ASMR",
-            "why_stops_scroll": "Pour/crunch/steam mid-action before brand",
-            "pattern_ids": [
-              "unboxing-asmr",
-              "product-loop-demo",
-              "beauty-macro-tabletop"
-            ],
-            "ideal_seconds": 12
-          },
           {
             "id": "am_macro_lust_loop",
             "name": "Macro lust / product loop",
@@ -853,7 +1547,73 @@
               "product-loop-demo",
               "unboxing-asmr"
             ],
-            "ideal_seconds": 12
+            "ideal_seconds": 12,
+            "timing": [
+              {
+                "t": "0–2s",
+                "shot": "Macro mid-pour/spread/shine — no logo",
+                "on_screen": "Sensory verb ≤5 words",
+                "vo": "ASMR optional"
+              },
+              {
+                "t": "2–7s",
+                "shot": "Continuous physics loop or 180° pack lock",
+                "on_screen": "One benefit",
+                "vo": "Sparse"
+              },
+              {
+                "t": "7–10s",
+                "shot": "Human context insert (hand/use)",
+                "on_screen": "SKU-true colorway",
+                "vo": "—"
+              },
+              {
+                "t": "10–12s",
+                "shot": "Endcard or seamless loop reset",
+                "on_screen": "Shop CTA or none on organic loop",
+                "vo": "—"
+              }
+            ],
+            "anti_slop": [
+              "Floating product + sparkles",
+              "Melted label",
+              "Wrong shade/SKU"
+            ]
+          },
+          {
+            "id": "am_food_crave_asmr",
+            "name": "Food / bev crave ASMR",
+            "why_stops_scroll": "Pour/crunch/steam mid-action before brand",
+            "pattern_ids": [
+              "unboxing-asmr",
+              "product-loop-demo",
+              "beauty-macro-tabletop"
+            ],
+            "ideal_seconds": 12,
+            "timing": [
+              {
+                "t": "0–2s",
+                "shot": "Pour/bite/steam macro",
+                "on_screen": "Crave verb",
+                "vo": "ASMR"
+              },
+              {
+                "t": "2–8s",
+                "shot": "Satisfy loop",
+                "on_screen": "Flavor/SKU truth",
+                "vo": "—"
+              },
+              {
+                "t": "8–12s",
+                "shot": "Pack + CTA or loop",
+                "on_screen": "Order / find",
+                "vo": "—"
+              }
+            ],
+            "anti_slop": [
+              "Plastic food look",
+              "Logo-first"
+            ]
           },
           {
             "id": "am_muted_confession",
@@ -862,7 +1622,44 @@
             "pattern_ids": [
               "ugc-talking-head-scroll-stop"
             ],
-            "ideal_seconds": 21
+            "ideal_seconds": 21,
+            "timing": [
+              {
+                "t": "0–1.5s",
+                "shot": "Tight talking head, imperfect native light",
+                "on_screen": "Confession line in quotes",
+                "vo": "optional echo of text"
+              },
+              {
+                "t": "1.5–6s",
+                "shot": "Hold face; slight push-in",
+                "on_screen": "One mechanism noun",
+                "vo": "Name the failure mode"
+              },
+              {
+                "t": "6–14s",
+                "shot": "Demo insert or UI/product as proof",
+                "on_screen": "Benefit verb",
+                "vo": "How it fixes — one step"
+              },
+              {
+                "t": "14–18s",
+                "shot": "Return to face",
+                "on_screen": "Outcome in plain words",
+                "vo": "Social proof only if ledger-backed"
+              },
+              {
+                "t": "18–21s",
+                "shot": "Endcard E1",
+                "on_screen": "One CTA",
+                "vo": "CTA spoken once"
+              }
+            ],
+            "anti_slop": [
+              "Fake influencer polish",
+              "Stock smile hold-to-camera",
+              "Purple glow AI UI"
+            ]
           },
           {
             "id": "am_skit_punchline",
@@ -873,7 +1670,37 @@
               "meme-native-trend",
               "green-screen-rant"
             ],
-            "ideal_seconds": 18
+            "ideal_seconds": 18,
+            "timing": [
+              {
+                "t": "0–2s",
+                "shot": "Absurd cold open",
+                "on_screen": "Premise line",
+                "vo": "Bit start"
+              },
+              {
+                "t": "2–10s",
+                "shot": "Escalation beats",
+                "on_screen": "Escalation text",
+                "vo": "Bit"
+              },
+              {
+                "t": "10–15s",
+                "shot": "Product as punchline",
+                "on_screen": "Punchline = product truth",
+                "vo": "Reveal"
+              },
+              {
+                "t": "15–18s",
+                "shot": "Endcard light",
+                "on_screen": "One CTA",
+                "vo": "—"
+              }
+            ],
+            "anti_slop": [
+              "Logo open",
+              "Hard sell mid-bit"
+            ]
           }
         ],
         "research": [
@@ -975,7 +1802,38 @@
               "before-after-reveal",
               "vfx-transformation"
             ],
-            "ideal_seconds": 15
+            "ideal_seconds": 15,
+            "timing": [
+              {
+                "t": "0–2s",
+                "shot": "BEFORE locked frame + label",
+                "on_screen": "BEFORE",
+                "vo": "—"
+              },
+              {
+                "t": "2–8s",
+                "shot": "Honest process (speed OK)",
+                "on_screen": "Process noun",
+                "vo": "What changed"
+              },
+              {
+                "t": "8–12s",
+                "shot": "AFTER same angle/light",
+                "on_screen": "AFTER",
+                "vo": "Outcome"
+              },
+              {
+                "t": "12–15s",
+                "shot": "Product/service lock + CTA",
+                "on_screen": "One CTA",
+                "vo": "CTA"
+              }
+            ],
+            "anti_slop": [
+              "Mismatched angles",
+              "Overfiltered skin",
+              "Fake renovation"
+            ]
           },
           {
             "id": "am_grwm_ritual",
@@ -985,7 +1843,37 @@
               "grwm-soft-sell",
               "pov-day-in-life"
             ],
-            "ideal_seconds": 35
+            "ideal_seconds": 35,
+            "timing": [
+              {
+                "t": "0–3s",
+                "shot": "POV ritual start",
+                "on_screen": "POV / ritual line",
+                "vo": "Casual"
+              },
+              {
+                "t": "3–20s",
+                "shot": "Routine steps",
+                "on_screen": "Sparse",
+                "vo": "Storytime"
+              },
+              {
+                "t": "20–28s",
+                "shot": "Product earns insert",
+                "on_screen": "Why this step",
+                "vo": "Soft reason"
+              },
+              {
+                "t": "28–35s",
+                "shot": "Mirror check + CTA",
+                "on_screen": "Soft CTA",
+                "vo": "—"
+              }
+            ],
+            "anti_slop": [
+              "Studio GRWM fake mess",
+              "Shade mismatch"
+            ]
           },
           {
             "id": "am_muted_confession",
@@ -994,7 +1882,44 @@
             "pattern_ids": [
               "ugc-talking-head-scroll-stop"
             ],
-            "ideal_seconds": 21
+            "ideal_seconds": 21,
+            "timing": [
+              {
+                "t": "0–1.5s",
+                "shot": "Tight talking head, imperfect native light",
+                "on_screen": "Confession line in quotes",
+                "vo": "optional echo of text"
+              },
+              {
+                "t": "1.5–6s",
+                "shot": "Hold face; slight push-in",
+                "on_screen": "One mechanism noun",
+                "vo": "Name the failure mode"
+              },
+              {
+                "t": "6–14s",
+                "shot": "Demo insert or UI/product as proof",
+                "on_screen": "Benefit verb",
+                "vo": "How it fixes — one step"
+              },
+              {
+                "t": "14–18s",
+                "shot": "Return to face",
+                "on_screen": "Outcome in plain words",
+                "vo": "Social proof only if ledger-backed"
+              },
+              {
+                "t": "18–21s",
+                "shot": "Endcard E1",
+                "on_screen": "One CTA",
+                "vo": "CTA spoken once"
+              }
+            ],
+            "anti_slop": [
+              "Fake influencer polish",
+              "Stock smile hold-to-camera",
+              "Purple glow AI UI"
+            ]
           }
         ],
         "research": [
@@ -1089,7 +2014,44 @@
               "pas-pain-stack",
               "motion-design-explainer"
             ],
-            "ideal_seconds": 24
+            "ideal_seconds": 24,
+            "timing": [
+              {
+                "t": "0–3s",
+                "shot": "Pain scene (inbox chaos / missed call / tab hell)",
+                "on_screen": "Pain noun",
+                "vo": "Costly mistake"
+              },
+              {
+                "t": "3–8s",
+                "shot": "Agitate once — no feature list",
+                "on_screen": "Reframe line",
+                "vo": "Why old way fails"
+              },
+              {
+                "t": "8–18s",
+                "shot": "Real UI screen record — cursor/tap path",
+                "on_screen": "Aha label",
+                "vo": "One mechanism"
+              },
+              {
+                "t": "18–21s",
+                "shot": "Outcome state of UI",
+                "on_screen": "Result verb",
+                "vo": "—"
+              },
+              {
+                "t": "21–24s",
+                "shot": "Endcard",
+                "on_screen": "Start free / Book demo",
+                "vo": "CTA once"
+              }
+            ],
+            "anti_slop": [
+              "Holographic UI",
+              "Stock handshake B-roll",
+              "Purple glow"
+            ]
           },
           {
             "id": "am_pas_pain_stack",
@@ -1100,7 +2062,43 @@
               "objection-faq",
               "listicle-text-overlay"
             ],
-            "ideal_seconds": 27
+            "ideal_seconds": 27,
+            "timing": [
+              {
+                "t": "0–3s",
+                "shot": "Pain object close-up",
+                "on_screen": "Pain in quotes",
+                "vo": "Name it"
+              },
+              {
+                "t": "3–10s",
+                "shot": "Agitate with consequence",
+                "on_screen": "Cost of inaction",
+                "vo": "Stack once"
+              },
+              {
+                "t": "10–20s",
+                "shot": "Solve via demo/mechanism",
+                "on_screen": "One reframe",
+                "vo": "How"
+              },
+              {
+                "t": "20–24s",
+                "shot": "Proof or objection crush",
+                "on_screen": "Ledger-backed only",
+                "vo": "—"
+              },
+              {
+                "t": "24–27s",
+                "shot": "Endcard",
+                "on_screen": "One CTA",
+                "vo": "CTA"
+              }
+            ],
+            "anti_slop": [
+              "Abstract productivity montage",
+              "Fake case study numbers"
+            ]
           },
           {
             "id": "am_skit_punchline",
@@ -1111,7 +2109,37 @@
               "meme-native-trend",
               "green-screen-rant"
             ],
-            "ideal_seconds": 18
+            "ideal_seconds": 18,
+            "timing": [
+              {
+                "t": "0–2s",
+                "shot": "Absurd cold open",
+                "on_screen": "Premise line",
+                "vo": "Bit start"
+              },
+              {
+                "t": "2–10s",
+                "shot": "Escalation beats",
+                "on_screen": "Escalation text",
+                "vo": "Bit"
+              },
+              {
+                "t": "10–15s",
+                "shot": "Product as punchline",
+                "on_screen": "Punchline = product truth",
+                "vo": "Reveal"
+              },
+              {
+                "t": "15–18s",
+                "shot": "Endcard light",
+                "on_screen": "One CTA",
+                "vo": "—"
+              }
+            ],
+            "anti_slop": [
+              "Logo open",
+              "Hard sell mid-bit"
+            ]
           },
           {
             "id": "am_text_first_x",
@@ -1122,7 +2150,37 @@
               "listicle-text-overlay",
               "pas-pain-stack"
             ],
-            "ideal_seconds": 15
+            "ideal_seconds": 15,
+            "timing": [
+              {
+                "t": "0–1s",
+                "shot": "Bold first line on solid/grade",
+                "on_screen": "Hot take / costly belief",
+                "vo": "—"
+              },
+              {
+                "t": "1–8s",
+                "shot": "Proof visual or UI",
+                "on_screen": "Support line",
+                "vo": "Optional"
+              },
+              {
+                "t": "8–12s",
+                "shot": "Mechanism",
+                "on_screen": "How",
+                "vo": "—"
+              },
+              {
+                "t": "12–15s",
+                "shot": "CTA card",
+                "on_screen": "One link CTA",
+                "vo": "—"
+              }
+            ],
+            "anti_slop": [
+              "Wall of hashtags",
+              "Fake screenshots"
+            ]
           }
         ],
         "research": [
@@ -1219,7 +2277,43 @@
               "app-demo-ui",
               "local-service-trust"
             ],
-            "ideal_seconds": 24
+            "ideal_seconds": 24,
+            "timing": [
+              {
+                "t": "0–3s",
+                "shot": "Phone ringing → voicemail void",
+                "on_screen": "Missed after hours?",
+                "vo": "Ring / silence"
+              },
+              {
+                "t": "3–8s",
+                "shot": "Agitate: lost lead",
+                "on_screen": "Cost line — no fake $",
+                "vo": "Pain"
+              },
+              {
+                "t": "8–18s",
+                "shot": "Agent transcript / UI answering",
+                "on_screen": "Answered chip",
+                "vo": "Calm agent line"
+              },
+              {
+                "t": "18–21s",
+                "shot": "Booked outcome",
+                "on_screen": "Booked / routed",
+                "vo": "—"
+              },
+              {
+                "t": "21–24s",
+                "shot": "Endcard",
+                "on_screen": "One CTA to site",
+                "vo": "CTA"
+              }
+            ],
+            "anti_slop": [
+              "Robot mascot cliché",
+              "Neon AI brain"
+            ]
           },
           {
             "id": "am_ui_aha_saas",
@@ -1230,7 +2324,44 @@
               "pas-pain-stack",
               "motion-design-explainer"
             ],
-            "ideal_seconds": 24
+            "ideal_seconds": 24,
+            "timing": [
+              {
+                "t": "0–3s",
+                "shot": "Pain scene (inbox chaos / missed call / tab hell)",
+                "on_screen": "Pain noun",
+                "vo": "Costly mistake"
+              },
+              {
+                "t": "3–8s",
+                "shot": "Agitate once — no feature list",
+                "on_screen": "Reframe line",
+                "vo": "Why old way fails"
+              },
+              {
+                "t": "8–18s",
+                "shot": "Real UI screen record — cursor/tap path",
+                "on_screen": "Aha label",
+                "vo": "One mechanism"
+              },
+              {
+                "t": "18–21s",
+                "shot": "Outcome state of UI",
+                "on_screen": "Result verb",
+                "vo": "—"
+              },
+              {
+                "t": "21–24s",
+                "shot": "Endcard",
+                "on_screen": "Start free / Book demo",
+                "vo": "CTA once"
+              }
+            ],
+            "anti_slop": [
+              "Holographic UI",
+              "Stock handshake B-roll",
+              "Purple glow"
+            ]
           },
           {
             "id": "am_pas_pain_stack",
@@ -1241,7 +2372,43 @@
               "objection-faq",
               "listicle-text-overlay"
             ],
-            "ideal_seconds": 27
+            "ideal_seconds": 27,
+            "timing": [
+              {
+                "t": "0–3s",
+                "shot": "Pain object close-up",
+                "on_screen": "Pain in quotes",
+                "vo": "Name it"
+              },
+              {
+                "t": "3–10s",
+                "shot": "Agitate with consequence",
+                "on_screen": "Cost of inaction",
+                "vo": "Stack once"
+              },
+              {
+                "t": "10–20s",
+                "shot": "Solve via demo/mechanism",
+                "on_screen": "One reframe",
+                "vo": "How"
+              },
+              {
+                "t": "20–24s",
+                "shot": "Proof or objection crush",
+                "on_screen": "Ledger-backed only",
+                "vo": "—"
+              },
+              {
+                "t": "24–27s",
+                "shot": "Endcard",
+                "on_screen": "One CTA",
+                "vo": "CTA"
+              }
+            ],
+            "anti_slop": [
+              "Abstract productivity montage",
+              "Fake case study numbers"
+            ]
           },
           {
             "id": "am_skit_punchline",
@@ -1252,7 +2419,37 @@
               "meme-native-trend",
               "green-screen-rant"
             ],
-            "ideal_seconds": 18
+            "ideal_seconds": 18,
+            "timing": [
+              {
+                "t": "0–2s",
+                "shot": "Absurd cold open",
+                "on_screen": "Premise line",
+                "vo": "Bit start"
+              },
+              {
+                "t": "2–10s",
+                "shot": "Escalation beats",
+                "on_screen": "Escalation text",
+                "vo": "Bit"
+              },
+              {
+                "t": "10–15s",
+                "shot": "Product as punchline",
+                "on_screen": "Punchline = product truth",
+                "vo": "Reveal"
+              },
+              {
+                "t": "15–18s",
+                "shot": "Endcard light",
+                "on_screen": "One CTA",
+                "vo": "—"
+              }
+            ],
+            "anti_slop": [
+              "Logo open",
+              "Hard sell mid-bit"
+            ]
           }
         ],
         "research": [

@@ -33,11 +33,12 @@ Packages that do **not** invent proof, drift product identity, or burn three red
 | **Post-render QA** | [render-qa.json](./skills/ad-intelligence/checklists/render-qa.json) |
 | **Stress briefs** | [examples/stress-briefs/](./skills/ad-intelligence/examples/stress-briefs/) |
 | **Harness probe / ready** | `node skills/ad-intelligence/scripts/agent-ready.mjs` |
+| **Backtest suite** | `node skills/ad-intelligence/scripts/backtest.mjs` |
 | **Multi-harness entry** | [AGENTS.md](./AGENTS.md) · [harness-equalization](./skills/ad-intelligence/prompts/harness-equalization.md) |
 | **Ship gate demo** | `node skills/ad-intelligence/scripts/demo-quality-gates.mjs` |
 | **Contribute** | [CONTRIBUTING.md](./CONTRIBUTING.md) |
 
-**Version 3.12.1** — [CHANGELOG.md](./CHANGELOG.md)
+**Version 3.12.2** — [CHANGELOG.md](./CHANGELOG.md)
 
 ---
 

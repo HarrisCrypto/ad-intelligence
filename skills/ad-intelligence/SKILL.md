@@ -11,7 +11,7 @@ description: >-
   Higgsfield. Probe → equalize → concept → ≥6 beats → lint until ok.
 compatibility: Requires Node 18+ for scripts. Optional network for URL brief + libraries. MCP video tools optional (connected rung).
 metadata:
-  version: "3.12.1"
+  version: "3.12.2"
   open_standard: agentskills
 ---
 

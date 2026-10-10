@@ -1,5 +1,16 @@
 # Changelog
 
+## 3.12.2 — 2026-10-10
+
+Backtest hardening: compact retrieve keeps timing sheets; attention ranking respects query affinity (shampoo≠generic beauty); `scripts/backtest.mjs` mechanical suite.
+
+### Added
+- `scripts/backtest.mjs` — discovery, gates, retrieve matrix, offline align, URL brief, lint negatives, ranking sanity, gold lint
+
+### Fixed
+- `--compact` dropped `timing` (broke emulate path)
+- Hair specialist winning every beauty query; food_crave winning plain ecommerce
+
 ## 3.12.1 — 2026-10-10
 
 Close remaining 35-lens ROI items: offline retrieve for no-shell harnesses, lite context pack, hard no-shell lint checklist; drop “cinematic” plugin keywords.

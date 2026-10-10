@@ -62,6 +62,8 @@ for (const q of QUERIES) {
             why_stops_scroll: m.why_stops_scroll,
             pattern_ids: m.pattern_ids,
             ideal_seconds: m.ideal_seconds,
+            timing: m.timing,
+            anti_slop: m.anti_slop,
           })),
           research: j.attention_models.research,
         }

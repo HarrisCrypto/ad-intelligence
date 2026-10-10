@@ -11,7 +11,7 @@
       "name": "ad-intelligence",
       "source": ".",
       "description": "One-shot agency-grade ads — multi-harness probe, Attention Lab, craft lint.",
-      "version": "3.12.1",
+      "version": "3.12.2",
       "keywords": [
         "ads",
         "viral",

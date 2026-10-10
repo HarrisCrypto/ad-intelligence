@@ -24,6 +24,9 @@ if (probe.status && probe.status !== 0 && !probe.stdout) {
 }
 const p = JSON.parse(probe.stdout);
 const gates = run("demo-quality-gates.mjs");
+const backtest = process.argv.includes("--backtest")
+  ? run("backtest.mjs")
+  : null;
 
 console.log("Ad Intelligence — agent ready\n");
 console.log(`Skill root: ${ROOT}`);
@@ -31,6 +34,10 @@ console.log(`Probe rung hint: ${p.recommended_rung_hint}`);
 console.log(`Network: ${p.runtime.network_fetch ? "yes" : "no"}`);
 console.log(`Gates: ${gates.status === 0 ? "PASS" : "FAIL"}`);
 if (gates.status !== 0) console.log(gates.stdout || gates.stderr);
+if (backtest) {
+  console.log(`Backtest: ${backtest.status === 0 ? "PASS" : "FAIL"}`);
+  if (backtest.status !== 0) console.log(backtest.stdout || backtest.stderr);
+}
 console.log(`
 ANY HARNESS PATH
 1) node scripts/probe-harness.mjs          # equalize tools → rung
@@ -45,4 +52,9 @@ NO SHELL? Paste prompts/context-pack-lite.md + use references/retrieve-offline-c
 Discovery: .cursor/skills · .claude/skills · .agents/skills · .github/skills · AGENTS.md
 `);
 
-process.exitCode = gates.status === 0 && p.files_missing.length === 0 ? 0 : 1;
+process.exitCode =
+  gates.status === 0 &&
+  p.files_missing.length === 0 &&
+  (!backtest || backtest.status === 0)
+    ? 0
+    : 1;

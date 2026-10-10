@@ -551,6 +551,22 @@ function main() {
         score += Math.max(0, 8 - (m.niches || []).length);
         if (m.gold_fixture) score += 3;
         if (plat && (m.platforms || []).includes(plat)) score += 1;
+        // Query-token affinity — don't let hair specialist win every beauty query
+        const qRaw = `${q.niche || ""} ${nicheKey}`.toLowerCase();
+        const mid = `${m.id} ${m.name}`.toLowerCase();
+        if (/hair|shampoo|conditioner/.test(qRaw) && /hair/.test(mid)) score += 8;
+        else if (!/hair|shampoo|conditioner/.test(qRaw) && /hair_transform|hair \//.test(mid))
+          score -= 6;
+        if (/food|snack|coffee|beverage|restaurant/.test(qRaw) && /food|crave|asmr/.test(mid))
+          score += 6;
+        else if (
+          nicheNorm === "ecommerce" &&
+          /food_crave|food \//.test(mid) &&
+          !/food|snack|coffee/.test(qRaw)
+        )
+          score -= 4;
+        if (/voice|agent|saas|software/.test(qRaw) && /voice|ui_aha|pas_pain/.test(mid))
+          score += 4;
         return { m, score };
       })
       .filter(Boolean)
@@ -649,6 +665,8 @@ function main() {
               why_stops_scroll: m.why_stops_scroll,
               pattern_ids: m.pattern_ids,
               ideal_seconds: m.ideal_seconds,
+              timing: m.timing,
+              anti_slop: m.anti_slop,
             })),
             research: attentionModels.research,
             lab: attentionModels.lab,

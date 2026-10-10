@@ -9,3 +9,6 @@ skills/ad-intelligence/references/private-signals.json
 
 # Node
 node_modules/
+
+# Generated local packages (start-package / backtest scratch)
+skills/ad-intelligence/packages/
