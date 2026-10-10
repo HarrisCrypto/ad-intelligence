@@ -3,10 +3,14 @@
 Default path for **any company / any niche**. Goal: **first-shot production packages**.
 
 ```
-BRIEF → RETRIEVE → ASSET LADDER / SHEETS → LEDGER → RENDER PLAN
-→ CONNECTED / HANDOFF / ASSEMBLER → FINISH → SELF-CRITIQUE → LINT + RENDER-QA
-→ DISTRIBUTE → SCALE → REVISE (minimal lever)
+BRIEF → RETRIEVE → ASSET LADDER / SHEETS → LEDGER → CRAFT SYSTEM
+→ RENDER PLAN → CONNECTED / HANDOFF / ASSEMBLER → FINISH (custom template)
+→ SELF-CRITIQUE → LINT + RENDER-QA → DISTRIBUTE → SCALE → REVISE (minimal lever)
 ```
+
+**Craft bar:** before prompts, lock `elite-creative-os.md` (palette, type, motion,
+sound, endcard). Finish like `production-finish-spec.md`. No Seedance/Higgsfield
+still means **agency-looking** packages via assembler + alternative routing.
 
 ## 1) Brief (≤3 blocking questions)
 
@@ -118,10 +122,12 @@ Classify → edit one unit_id / add ref / recut — sheets immutable unless new 
 
 - [ ] Pattern ids + retrieve warnings handled  
 - [ ] Pipeline rung stated (connected / handoff / assembler)  
-- [ ] Sheets + ledger + render plan  
+- [ ] Sheets + ledger + **Craft system** + render plan  
+- [ ] Finish specs look like a custom CapCut/Figma template  
 - [ ] Dual-track if serious brand  
-- [ ] No invented proof  
+- [ ] No invented proof / no fake Seedance jobs  
 - [ ] Lint exit 0  
 - [ ] NOT_RENDERED or receipt  
 - [ ] Render-QA run or emitted  
 - [ ] Self-critique + variants  
+- [ ] Repo loaded (bootstrap-from-github if needed) + retrieve run  

@@ -8,7 +8,7 @@
 | **Handoff** | Those tools exist for the user, not in-session | [`seedance-prompt-contract.md`](./seedance-prompt-contract.md) · [`higgsfield-playbook.md`](./higgsfield-playbook.md) |
 | **Assembler (third rung)** | Only image gen + short/light video + CapCut-style finishing | [`assembler-pipeline.md`](./assembler-pipeline.md) |
 
-Assembler keeps the **same** sheets, claim ledger, render plan shape, lint, and render-QA — it only changes how media is built (keyframes + short clips + post).
+Assembler keeps the **same** sheets, claim ledger, **Craft system**, render plan shape, lint, and render-QA — it only changes how media is built (keyframes + short clips + post). Craft bar: [`../elite-creative-os.md`](../elite-creative-os.md) · finish: [`../production-finish-spec.md`](../production-finish-spec.md).
 
 **No Seedance/Higgsfield?** Use the quality ladder in [`alternative-model-routing.md`](./alternative-model-routing.md) — **Wan → LTX → Grok → Hunyuan/Cog/SkyReels → Kling/Hailuo/Luma/Pika/Runway/Veo-Sora → stills+CapCut**. Never invent Seedance jobs.
 

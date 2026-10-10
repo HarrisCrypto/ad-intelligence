@@ -6,9 +6,14 @@ Packages that do **not** invent proof, drift product identity, or burn three red
 
 **Triple-path (pick one rung):** connected MCP → call tools; Seedance/Higgsfield exist for the user but not in-session → same-quality handoffs; only image gen + short clips + CapCut → **assembler** (same sheets, ledger, lint, render-QA). Index: [creative-stack/README.md](./skills/ad-intelligence/references/creative-stack/README.md).
 
+**Elite craft bar:** every package ships a **Craft system** (palette, type, motion, sound, endcard) so finishes look like custom templates from a top shop — with or without Higgsfield. See [elite-creative-os.md](./skills/ad-intelligence/references/elite-creative-os.md).
+
 | Start here | Link |
 | --- | --- |
 | **Why it exists (before/after)** | [PROOF.md](./PROOF.md) |
+| **Load any LLM from GitHub** | [bootstrap-from-github.md](./skills/ad-intelligence/prompts/bootstrap-from-github.md) |
+| **Elite creative OS (craft bar)** | [elite-creative-os.md](./skills/ad-intelligence/references/elite-creative-os.md) |
+| **CapCut custom-template finish** | [production-finish-spec.md](./skills/ad-intelligence/references/production-finish-spec.md) |
 | **Pipeline rungs (connected / handoff / assembler)** | [creative-stack/README.md](./skills/ad-intelligence/references/creative-stack/README.md) |
 | **Assembler (third rung)** | [assembler-pipeline.md](./skills/ad-intelligence/references/creative-stack/assembler-pipeline.md) |
 | **No Seedance? Model routing** | [alternative-model-routing.md](./skills/ad-intelligence/references/creative-stack/alternative-model-routing.md) (Wan → LTX → Grok → Hunyuan/Cog/SkyReels → Hailuo/Luma/Pika/…) |
@@ -22,7 +27,7 @@ Packages that do **not** invent proof, drift product identity, or burn three red
 | **Ship gate demo** | `node skills/ad-intelligence/scripts/demo-quality-gates.mjs` |
 | **Contribute** | [CONTRIBUTING.md](./CONTRIBUTING.md) |
 
-**Version 3.7.1** — [CHANGELOG.md](./CHANGELOG.md)
+**Version 3.8.0** — [CHANGELOG.md](./CHANGELOG.md)
 
 ---
 
@@ -33,11 +38,13 @@ Packages that do **not** invent proof, drift product identity, or burn three red
 3. Claim ledger — user proof or `[PLACEHOLDER]`, never vibes  
 4. Timed script (muted-first, one CTA) + dual-track default  
 5. MCP-correct **render plan** — connected-run, handoff, or **assembler** units  
-6. Self-critique + A/B/C against real failure modes  
-7. **Mechanical lint** + **render-QA** + intentional fail corpus  
-8. **Visual storyboard gallery** paired to gold fixtures  
-9. Stress briefs for messy / regulated prompts  
-10. Service-niche **voice / front-desk** phone-call gold fixture
+6. **Craft system** — palette, type, motion, sound, endcard (custom-template finish)  
+7. Self-critique + A/B/C against real failure modes  
+8. **Mechanical lint** + **render-QA** + intentional fail corpus  
+9. **Visual storyboard gallery** paired to gold fixtures  
+10. Stress briefs for messy / regulated prompts  
+11. Service-niche **voice / front-desk** phone-call gold fixture  
+12. GitHub bootstrap so any LLM can clone, retrieve, and lint 
 
 ---
 

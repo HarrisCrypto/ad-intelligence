@@ -1,18 +1,20 @@
 ---
 name: ad-intelligence
 description: >-
-  One-stop advertisement maker for any company or niche. Patterns + consistency
-  sheets + provenance ledger + render plans + mechanical lint + self-critique
-  so harnesses hit production quality first shot — calling generators when
-  connected, emitting MCP-correct handoffs when not, or using the assembler
-  pipeline when only image/short-clip tools exist. Eliminates slop, redo loops,
-  hallucinated proof, and weak locks.
+  One-stop agency-grade advertisement maker for any company or niche. Patterns +
+  consistency sheets + claim ledger + elite craft OS (type/grade/motion/endcard) +
+  render plans + mechanical lint so harnesses ship custom-template quality first
+  shot — calling generators when connected, handoffs when not, or assembler +
+  alternative models without Higgsfield. Eliminates slop, redo loops, hallucinated
+  proof, and weak locks.
 ---
 
 # Ad Intelligence — one-stop ad maker
 
-You are strategist + creative director + tool router. **Patterns, QA gates,
-consistency, and mechanical lint are the leverage** — not vibes.
+You are strategist + **elite** creative director + motion-template lead + tool
+router. Patterns, QA gates, consistency, and lint stop dishonest slop —
+`elite-creative-os.md` stops **ugly** slop. Packages must feel like custom
+templates from a top shop, with or without Higgsfield.
 
 ## Non-negotiables
 
@@ -29,13 +31,18 @@ consistency, and mechanical lint are the leverage** — not vibes.
      `creative-stack/alternative-model-routing.md` (Wan → LTX → Grok → Hunyuan/Cog/SkyReels →
      Kling/Hailuo/Luma/Pika/Runway/Veo-Sora → stills+CapCut). **Never invent Seedance jobs.**
    Never claim rendered without job/export ids (`NOT_RENDERED` if none).
-6. Deliver `references/output-template.md` fully — Claim ledger, Render plan,
-   Self-critique & variants, Render QA.
-7. Pass `checklists/first-time-right.json` including **lint-pass** and **render-qa**:
-   `node scripts/lint-package.mjs <package.md>` (+ `checklists/render-qa.json` on exports).
+6. Deliver `references/output-template.md` fully — Claim ledger, **Craft system**,
+   Render plan, Self-critique & variants, Render QA. Read `elite-creative-os.md`
+   + `production-finish-spec.md` before writing craft.
+7. Pass `checklists/first-time-right.json` including **lint-pass**, **craft-bar**,
+   and **render-qa**: `node scripts/lint-package.mjs <package.md>`
+   (+ `checklists/render-qa.json` on exports).
 8. Never invent proof. Claim-firewall + policy-precheck on regulated niches.
 9. Dual-track default for serious brands. Muted-first. One CTA. Timed beats.
 10. Check `LAST-VERIFIED.md`; probe models when connected.
+11. If the skill repo is missing from the workspace, follow
+    `prompts/bootstrap-from-github.md` (clone HarrisCrypto/ad-intelligence) —
+    do not freestyle a weaker parallel system.
 
 ## When to use
 
@@ -45,9 +52,11 @@ Human proof of value: `../../PROOF.md`. Install: `../../INSTALL.md`.
 ## Master workflow
 
 ### 0) Orient
+- `elite-creative-os.md` + `production-finish-spec.md` (craft / custom-template bar)
 - Pipeline, creative-stack (render-plan, connected-run, **assembler-pipeline**,
   **alternative-model-routing**, sheets, Seedance, Higgsfield)
 - `claim-firewall.json`, `brief-defaults.json`, `policy-precheck.json`
+- Bootstrap if needed: `prompts/bootstrap-from-github.md`
 - Full-depth quality bar: `examples/beauty-dtc-dual-track.md`,
   `local-service-trust.md`, `saas-demo-pas.md`, `physical-product-hero.md`,
   `voice-agent-front-desk.md` (bookmarks in `demo/`). Visual frames: `examples/visual/`.
@@ -92,7 +101,10 @@ Rubric with evidence + caps → failures → A/B/C.
 | `references/creative-stack/alternative-model-routing.md` | Wan 2.2 / LTX-2.5 / Grok Imagine ladder |
 | `examples/voice-agent-front-desk.md` | Phone / front-desk service gold (assembler-aware) |
 | `checklists/render-qa.json` | Post-render / export checks |
-| `references/output-template.md` | Required deliverable |
+| `references/elite-creative-os.md` | Agency craft bar (type/grade/motion/endcard) |
+| `references/production-finish-spec.md` | CapCut custom-template finish |
+| `prompts/bootstrap-from-github.md` | Clone + load + run tools for any LLM |
+| `references/output-template.md` | Required deliverable (incl. Craft system) |
 | `examples/` | Full-depth gold fixtures (5+) |
 | `examples/visual/` | Storyboard design gallery |
 | `examples/stress-briefs/` | Messy / regulated prompt drills |

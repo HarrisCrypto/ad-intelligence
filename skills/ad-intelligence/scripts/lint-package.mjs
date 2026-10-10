@@ -24,6 +24,7 @@ const REQUIRED_H3 = [
   "Hooks",
   "Timed script",
   "Claim",
+  "Craft system",
   "Render plan",
   "Caption",
   "CTA",

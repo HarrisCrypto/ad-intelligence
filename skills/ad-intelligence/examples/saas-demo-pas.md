@@ -86,6 +86,17 @@ Name the handoff tax, show the aha inside real UI, then one path to start free t
 ### Shot list / visual system
 Phone/desktop screen recording preferred. Cursor moves slow. Brand teal only from sheet. No fake 3D offices with glowing dashboards. Caption safe zone clear.
 
+### Craft system (required)
+- Style id + production_tier + virality_posture: `app_demo_ui` + `pas-pain-stack` · production_tier clean_product · virality_posture b2b_clarity
+- Palette: brand teal from sheet · support near-white UI `#F7FAFC` · accent alert only for pain state [ASSUMED]
+- Grade name: flat UI documentary — crisp screens, no neon cockpit, no fake 3D office
+- Typography: hook display ≤7 words · UI callout labels post-composited · CTA “Start free trial” one only · legal if needed
+- Motion grammar: pain flash 0–3s → slow cursor aha 3–12s → outcome hold 12–18s → endcard ≥3s
+- Sound plan: muted-first captions; soft UI click SFX optional; no hype whooshes
+- Endcard module E1: logo SVG · one trial CTA · URL USER_SUPPLIED or omit · LinkedIn 1:1 + 9:16
+- Aspect matrix: LinkedIn 1:1 / 4:5 + 9:16; redesign type per aspect
+- Finish handoff: **screen-record real UI**; gen only B-roll under VO; CapCut captions
+
 ### Render plan (required)
 | unit_id | beats | seconds | model | start/end | refs | acceptance |
 | --- | --- | --- | --- | --- | --- | --- |

@@ -5,7 +5,9 @@ Copy this structure every time. Do not omit sections; use `N/A — reason` if ne
 
 **Gold fixtures that follow this template (lint-clean):**  
 `examples/beauty-dtc-dual-track.md`, `local-service-trust.md`, `saas-demo-pas.md`, `physical-product-hero.md`, `voice-agent-front-desk.md`.  
-Required sections include: Consistency systems · Claim & asset ledger · Render plan · Render log · Caption · CTA · AI disclosure & rights · Self-critique & variants · Render QA.
+Required sections include: Consistency systems · Claim & asset ledger · **Craft system** · Render plan · Render log · Caption · CTA · AI disclosure & rights · Self-critique & variants · Render QA.  
+
+**Craft bar:** `elite-creative-os.md` + `production-finish-spec.md`. Packages must read like custom motion templates — not vibes.
 
 Use four-backtick outer fences in your reply if you nest code blocks, so Seedance/JSON stubs cannot close the template early.
 
@@ -75,7 +77,18 @@ Use four-backtick outer fences in your reply if you nest code blocks, so Seedanc
 |  |  |  |  |  |
 
 ### Shot list / visual system
+(Beat → camera/lens → light — one line each; no vague “cinematic.”)
 
+### Craft system (required — see elite-creative-os.md + production-finish-spec.md)
+- Style id + production_tier + virality_posture:
+- Palette (dominant / support / accent + HEX or brand tokens):
+- Grade name (e.g. clean daylight / cool clinical / warm tungsten / flat UI doc):
+- Typography: hook display · captions · CTA · legal (family/weight/max words/safe zones):
+- Motion grammar per beat (camera verbs + hold times):
+- Sound plan (captions / VO / bed / SFX + paid-safe path):
+- Endcard module E1 (logo SVG, one CTA, legal, hold ≥2.5s, layouts per aspect):
+- Aspect matrix (9:16 / 1:1 / 16:9 as separate comps — not center-crop):
+- Finish handoff: CapCut/timeline notes from production-finish-spec.md (or N/A reason):
 
 ### Render plan (required — see creative-stack/render-plan.md; assembler → assembler-pipeline.md)
 | unit_id | beats | seconds | model / tool | start/end | refs | acceptance |

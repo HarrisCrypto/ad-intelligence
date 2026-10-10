@@ -94,6 +94,17 @@ Make the after-hours missed-call feel expensive, show Deskline answering calmly,
 ### Shot list / visual system
 Documentary clinic light → product UI sharp and flat (no neon cockpit) → endcard. Prefer screen-recorded UI. Lower caption band clear. No patient faces or charts.
 
+### Craft system (required)
+- Style id + production_tier + virality_posture: service phone / front-desk · production_tier assembler_hybrid · virality_posture b2b_local_trust
+- Palette: calm clinic blue `#4A6FA5` · soft gray `#E8EEF4` · accent missed-call red sparingly `#C45C5C` [ASSUMED]
+- Grade name: flat UI documentary — readable screens, no neon AI cockpit, no patient PHI
+- Typography: hook “Missed call?” ≤4 words · UI labels post · CTA “Book a demo” one only · no invented lift %
+- Motion grammar: K1 still ring/miss → C1 short i2v 3–5s → screen-record UI aha → E1 demo CTA ≥3s
+- Sound plan: muted UI + VO in CapCut; optional soft ring SFX; paid-safe bed
+- Endcard module E1: logo · Book a demo · no multi-CTA · 9:16 Meta + 1:1 LinkedIn
+- Aspect matrix: separate type layouts; assembler-friendly
+- Finish handoff: keyframes + short i2v + real UI record → CapCut (assembler-pipeline.md)
+
 ### Render plan (required — assembler-aware)
 | unit_id | beats | seconds | model / tool | start/end | refs | acceptance |
 | --- | --- | --- | --- | --- | --- | --- |
