@@ -81,7 +81,7 @@ Use four-backtick outer fences in your reply if you nest code blocks, so Seedanc
 
 ### Craft system (required — see elite-creative-os.md + production-finish-spec.md)
 Lint rejects vague craft. Need ≥2 HEX (or USER_SUPPLIED brand tokens), named type roles,
-motion verbs, Endcard E1, aspect matrix. Ban: cinematic / stunning / 8k / sleek / nice…
+motion verbs, Endcard E1, aspect matrix. Ban empty adjectives (see elite-creative-os §12).
 Keep PLACEHOLDER / ASSUMED / “only when supplied” in the **ledger** — never in caption or paid primary text.
 
 - Style id + production_tier + virality_posture:

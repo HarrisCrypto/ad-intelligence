@@ -6,11 +6,16 @@ Packages that do **not** invent proof, drift product identity, or burn three red
 
 **Triple-path (pick one rung):** connected MCP → call tools; Seedance/Higgsfield exist for the user but not in-session → same-quality handoffs; only image gen + short clips + CapCut → **assembler** (same sheets, ledger, lint, render-QA). Index: [creative-stack/README.md](./skills/ad-intelligence/references/creative-stack/README.md).
 
-**Elite craft bar:** every package ships a **Craft system** (palette, type, motion, sound, endcard) so finishes look like custom templates from a top shop — with or without Higgsfield. See [elite-creative-os.md](./skills/ad-intelligence/references/elite-creative-os.md).
+**One-shot path:** copy skeleton → retrieve → fill Craft system → lint until green. Agents that brainstorm will miss the bar. See [one-shot.md](./skills/ad-intelligence/prompts/one-shot.md).
+
+**Elite craft bar:** every package ships a **Craft system** (palette, type, motion, sound, endcard). [elite-creative-os.md](./skills/ad-intelligence/references/elite-creative-os.md).
 
 | Start here | Link |
 | --- | --- |
 | **Why it exists (before/after)** | [PROOF.md](./PROOF.md) |
+| **ONE-SHOT playbook (agents start here)** | [one-shot.md](./skills/ad-intelligence/prompts/one-shot.md) |
+| **Package skeleton (copy & fill)** | [package-skeleton.md](./skills/ad-intelligence/references/package-skeleton.md) |
+| **Pasteable context pack** | `node skills/ad-intelligence/scripts/build-context-pack.mjs` |
 | **Load any LLM from GitHub** | [bootstrap-from-github.md](./skills/ad-intelligence/prompts/bootstrap-from-github.md) |
 | **Elite creative OS (craft bar)** | [elite-creative-os.md](./skills/ad-intelligence/references/elite-creative-os.md) |
 | **CapCut custom-template finish** | [production-finish-spec.md](./skills/ad-intelligence/references/production-finish-spec.md) |
@@ -27,7 +32,7 @@ Packages that do **not** invent proof, drift product identity, or burn three red
 | **Ship gate demo** | `node skills/ad-intelligence/scripts/demo-quality-gates.mjs` |
 | **Contribute** | [CONTRIBUTING.md](./CONTRIBUTING.md) |
 
-**Version 3.8.1** — [CHANGELOG.md](./CHANGELOG.md)
+**Version 3.9.0** — [CHANGELOG.md](./CHANGELOG.md)
 
 ---
 
