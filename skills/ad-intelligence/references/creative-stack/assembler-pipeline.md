@@ -12,6 +12,19 @@ This is a **third rung** alongside:
 
 Connected and handoff paths stay unchanged. Assembler **does not** lower the quality bar.
 
+## Preferred tools (quality ladder)
+
+When Seedance / Higgsfield are unavailable, **do not** default straight to silent stills. Route video units with [`alternative-model-routing.md`](./alternative-model-routing.md):
+
+| Priority | Route |
+| --- | --- |
+| Best available | **Seedance / Higgsfield** when connected |
+| Strong alternative | **Wan 2.2** (open weights) → **LTX-2.5** (local A/V) → **Grok Imagine** (`grok-imagine-video-1.5`) when API/product available |
+| Peers | Kling · Runway · Veo/Sora if that is what the user has |
+| Fallback | Stills + CapCut only when no usable video model exists |
+
+Name the real tool in every render-plan unit. **Never invent a Seedance job** if the tool was not called.
+
 ## Non-negotiables (same as other rungs)
 
 1. Product / character sheets with provenance tags (or REQUEST gaps) before product/talent pixels  
@@ -58,7 +71,7 @@ Pipeline rung: assembler
 
 ## Render plan shape (assembler)
 
-Use the same output-template **Render plan** table. For generator column, name the actual tool (e.g. `flux_still`, `kling_i2v_5s`, `capcut_assemble`) — not invent Seedance jobs.
+Use the same output-template **Render plan** table. For generator column, name the actual tool (e.g. `wan_2_2_i2v`, `ltx_2_5`, `grok_imagine_video_1_5`, `kling_i2v_5s`, `flux_still`, `capcut_assemble`) — never invent Seedance jobs. Prefer the ladder in `alternative-model-routing.md`.
 
 ```yaml
 pipeline_rung: assembler

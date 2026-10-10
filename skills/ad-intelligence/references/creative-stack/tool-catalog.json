@@ -1,11 +1,13 @@
 {
   "id": "creative-tool-catalog",
-  "version": "3.0.0",
-  "purpose": "One-stop knowledge of the tools and systems a perfect ad-making agent should know — even when those tools are not connected. Emit ready-to-run prompts, pipelines, and handoff briefs so humans or connected MCPs can execute at Seedance / Higgsfield quality.",
-  "rule": "Never pretend a render finished if no tool was called. Always deliver: pattern + shot list + tool route + copy-paste prompts + QA. If a connected tool exists (e.g. Higgsfield MCP), prefer calling it; otherwise ship executable briefs.",
+  "version": "3.1.0",
+  "purpose": "One-stop knowledge of the tools and systems a perfect ad-making agent should know — even when those tools are not connected. Emit ready-to-run prompts, pipelines, and handoff briefs so humans or connected MCPs can execute at Seedance / Higgsfield quality — or via Wan 2.2 / LTX-2.5 / Grok Imagine when those are the available stack.",
+  "rule": "Never pretend a render finished if no tool was called. Never invent Seedance job ids. Always deliver: pattern + shot list + tool route + copy-paste prompts + QA. If Seedance/Higgsfield MCP exists, prefer calling it; else follow alternative-model-routing.md; otherwise ship executable briefs.",
+  "alternative_routing_doc": "alternative-model-routing.md",
   "tiers": {
     "connected_generation": "MCP/API available — call tools",
     "prompt_handoff": "No tool connected — write production-grade prompts + settings",
+    "local_open_weights": "Wan 2.2 / LTX-2.5 (or peers) run locally or via open hosts — name real tool in render plan",
     "human_production": "Shoot live / hire creators — emit briefs + shot lists"
   },
   "systems": [
@@ -115,25 +117,125 @@
       ]
     },
     {
+      "id": "wan_2_2",
+      "name": "Wan 2.2 (Alibaba Wan-AI / Wan-Video)",
+      "category": "video_gen",
+      "quality_bar": "best_fully_open_alternative",
+      "access": "prompt_handoff_or_local",
+      "license_notes": "Apache 2.0 on open Wan2.2 weights (T2V/I2V/TI2V family). Confirm current model card before commercial ship.",
+      "where": ["GitHub Wan-Video/Wan2.2", "Hugging Face Wan-AI", "ComfyUI / Diffusers", "community hosts"],
+      "best_for": [
+        "Product motion via image-to-video from sheet stills",
+        "Short cinematic B-roll units (≈5s class) in assembler timelines",
+        "Self-host / open-weight pipelines without Seedance"
+      ],
+      "modes": {
+        "t2v": "Text-to-video (A14B / TI2V-5B)",
+        "i2v": "Image-to-video — preferred for ads (start-frame lock)",
+        "ti2v": "Unified text+image path on TI2V-5B"
+      },
+      "prompt_tips": [
+        "Prefer I2V: sheet Image-N as start frame",
+        "Prompt = camera move + lighting + physics; forbid new typography/logo redraw",
+        "Keep label/color lock language explicit"
+      ],
+      "limitations": [
+        "Open T2V/I2V typically short silent clips — mux VO/bed in CapCut",
+        "Weaker multi-ref identity lock than Seedance omni — reuse same stills",
+        "Do not invent API job schemas; emit prompts + settings for local/host run"
+      ],
+      "assembler_role": "Keyframe stills → wan_2_2_i2v 3–5s units → CapCut finish",
+      "routing_priority": 2
+    },
+    {
+      "id": "ltx_2_5",
+      "name": "Lightricks LTX-2.5",
+      "category": "video_gen",
+      "quality_bar": "strong_local_av_alternative",
+      "access": "prompt_handoff_or_local",
+      "license_notes": "LTX-2.x Community License: commercial/production free under ~$10M annual revenue (entity-wide incl. affiliates); paid Commercial Use Agreement at/above. Confirm LICENSE before ship.",
+      "where": ["Hugging Face Lightricks/LTX-2.5", "ComfyUI / self-host"],
+      "best_for": [
+        "Cinema units with native synchronized audio",
+        "Camera-controlled short hero clips",
+        "Local GPU production when Seedance unavailable"
+      ],
+      "modes": {
+        "t2v_av": "Text to audio-video",
+        "i2v_av": "Image to audio-video (preferred for product lock)",
+        "conditioned": "Text/image/video-conditioned A/V workflows (per current card)"
+      },
+      "prompt_tips": [
+        "Shot size + lens + move + lighting in one block",
+        "Pin start image for product; light SFX/ambience cues OK",
+        "Still burn captions/CTA/logo in post"
+      ],
+      "limitations": [
+        "License cliff at $10M revenue",
+        "Heavy local VRAM — prefer short assembler units",
+        "Do not invent API endpoints; prompt handoff / local run"
+      ],
+      "assembler_role": "Keyframe → ltx_2_5 unit → trim/replace VO in CapCut if needed",
+      "routing_priority": 3
+    },
+    {
+      "id": "grok_imagine",
+      "name": "Grok Imagine Video (xAI)",
+      "category": "video_gen",
+      "quality_bar": "api_alternative_when_available",
+      "access": "api_or_product_handoff",
+      "license_notes": "Commercial xAI / Grok access required. Pricing and limits per current xAI docs — do not hardcode spend.",
+      "where": ["xAI API", "Grok product", "sometimes peer platforms listing grok video models"],
+      "model_ids_known": [
+        "grok-imagine-video-1.5",
+        "grok-imagine-video-1.5-lite",
+        "grok-imagine-video (edit/extend family — verify current docs)"
+      ],
+      "best_for": [
+        "Image-to-video from product sheet stills",
+        "Mid-length cinema units (docs: up to ~15s)",
+        "T2V/I2V when open-weight GPU is unavailable but xAI is"
+      ],
+      "prompt_tips": [
+        "Pass sheet still as start image; prompt = motion + light only",
+        "I2V aspect follows the still",
+        "Avoid model-drawn CTA type — CapCut for text/logo"
+      ],
+      "limitations": [
+        "Requires credentials/spend — not open weights",
+        "API shapes evolve — emit model id + prompt; never invent request ids",
+        "Name Grok/xAI explicitly; do not relabel as Seedance"
+      ],
+      "assembler_role": "Per-beat I2V or longer body unit + CapCut assemble",
+      "routing_priority": 4,
+      "verified_notes": "Public xAI docs describe grok-imagine-video-1.5 T2V/I2V (incl. native 1080p on 1.5). Treat as prompt/API handoff unless the session can call xAI."
+    },
+    {
       "id": "kling",
       "name": "Kling AI",
       "category": "video_gen",
+      "routing_priority": 5,
       "best_for": ["Motion control / character performance", "Image-to-video product moves", "Longer cinematic B-roll"],
-      "prompt_tips": ["Lock start frame from product still", "Specify camera move + physics", "Keep product label readable in prompt"]
+      "prompt_tips": ["Lock start frame from product still", "Specify camera move + physics", "Keep product label readable in prompt"],
+      "assembler_role": "Short locked-start clips in assembler timeline"
     },
     {
       "id": "runway",
       "name": "Runway Gen-3 / Aleph",
       "category": "video_gen",
+      "routing_priority": 5,
       "best_for": ["Director-style camera language", "VFX-ish transformations", "Editorial motion"],
-      "prompt_tips": ["Shot size + lens + move", "Avoid overcrowding prompt", "Use image reference for product lock"]
+      "prompt_tips": ["Shot size + lens + move", "Avoid overcrowding prompt", "Use image reference for product lock"],
+      "assembler_role": "Editorial motion units → CapCut finish"
     },
     {
       "id": "sora_veo",
       "name": "OpenAI Sora / Google Veo",
       "category": "video_gen",
+      "routing_priority": 5,
       "best_for": ["High cinematic world-building", "Brand films", "Complex scenes"],
-      "prompt_tips": ["Scene blocks with timecodes", "Lighting + lens language", "Separate VO/captions in post"]
+      "prompt_tips": ["Scene blocks with timecodes", "Lighting + lens language", "Separate VO/captions in post"],
+      "assembler_role": "Cinema units when user has access; VO/captions in post"
     },
     {
       "id": "luma_minimax_hailuo",

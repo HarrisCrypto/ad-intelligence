@@ -30,7 +30,9 @@ Index: [`../references/creative-stack/README.md`](../references/creative-stack/R
 | --- | --- | --- |
 | Connected | Seedance / Higgsfield / peer MCP in session | `connected-run-protocol.md` — **call tools** |
 | Handoff | Those tools exist for the user but not in-session | Seedance contract + Higgsfield briefs (unchanged) |
-| **Assembler** | No single-pass long video gen — only stills / short clips / CapCut | [`assembler-pipeline.md`](../references/creative-stack/assembler-pipeline.md) |
+| **Assembler** | No Seedance/Higgsfield — keyframes + short clips + CapCut | [`assembler-pipeline.md`](../references/creative-stack/assembler-pipeline.md) |
+
+On the assembler rung, pick video tools via [`alternative-model-routing.md`](../references/creative-stack/alternative-model-routing.md): **Wan 2.2 → LTX-2.5 → Grok Imagine → peers → stills+CapCut**. Never invent Seedance jobs.
 
 Service-niche phone / front-desk gold: [`../examples/voice-agent-front-desk.md`](../examples/voice-agent-front-desk.md).
 
@@ -50,7 +52,7 @@ Also: swipe-signals (only when niche matched), style catalog, mistakes, platform
 
 | Track | Stack |
 | --- | --- |
-| High-production | Sheets → stills → Seedance units **or assembler keyframes/clips** → CapCut |
+| High-production | Sheets → stills → Seedance units **or** Wan/LTX/Grok/peer clips (assembler) → CapCut |
 | Viral / UGC | Sheets → UGC / creator → CapCut |
 | Static | Ads Studio / photoshoot / Canva |
 | Voice / front-desk | UI screen record + VO in post (assembler-friendly) |
@@ -76,7 +78,7 @@ Emit timed script + **Render plan** (`render-plan.md`):
 
 - Connected → `connected-run-protocol.md`  
 - Handoff → paste-ready prompts + mcp_params placeholders  
-- Assembler → `assembler-pipeline.md` (keyframes + short clips + finish in post)
+- Assembler → `assembler-pipeline.md` + `alternative-model-routing.md` (name Wan/LTX/Grok/peer tools; never fake Seedance)
 
 Prefer real stills / screen record / image-to-video over pure text-to-video when identity matters.  
 Burn captions, endcard, logo, and legal **in post** — not inside the model.

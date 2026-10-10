@@ -1,5 +1,21 @@
 # Changelog
 
+## 3.7.0 — 2026-10-10
+
+Alternative-model routing for agents **without** Seedance/Higgsfield — aim for cinematic quality via open/accessible tools instead of defaulting to silent stills.
+
+### Added
+- `references/creative-stack/alternative-model-routing.md` — quality ladder: Wan 2.2 → LTX-2.5 → Grok Imagine (`grok-imagine-video-1.5`) → Kling/Runway/Veo-Sora → stills+CapCut
+- `tool-catalog.json` entries for Wan 2.2, LTX-2.5, Grok Imagine (license/access notes; prompt-handoff/local/API — no invented endpoints)
+
+### Changed
+- Assembler pipeline: Preferred tools subsection + ladder pointer
+- SKILL.md, one-stop pipeline, harness prompt, creative-stack README, INSTALL, LAST-VERIFIED
+- Plugin **3.7.0**
+
+### Preserved
+- Three rungs (connected / handoff / assembler); sheets, claim ledger, lint, render-QA, never invent proof/Seedance jobs
+
 ## 3.6.1 — 2026-10-10
 
 Discoverability: make the **assembler** rung and **voice/front-desk** fixture impossible to miss. No new gates; content from 3.6.0 unchanged.

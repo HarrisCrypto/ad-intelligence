@@ -1,8 +1,8 @@
 {
   "name": "ad-intelligence",
   "displayName": "Ad Intelligence",
-  "version": "3.6.1",
-  "description": "First-shot non-slop ads: triple-path (connected/handoff/assembler), render-QA, multi-niche gold including voice/front-desk.",
+  "version": "3.7.0",
+  "description": "First-shot non-slop ads: triple-path + Wan/LTX/Grok alternative routing, render-QA, multi-niche gold including voice/front-desk.",
   "author": {
     "name": "HarrisCrypto"
   },

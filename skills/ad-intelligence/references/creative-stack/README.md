@@ -10,10 +10,13 @@
 
 Assembler keeps the **same** sheets, claim ledger, render plan shape, lint, and render-QA — it only changes how media is built (keyframes + short clips + post).
 
+**No Seedance/Higgsfield?** Use the quality ladder in [`alternative-model-routing.md`](./alternative-model-routing.md) — prefer **Wan 2.2 → LTX-2.5 → Grok Imagine → Kling/Runway/Veo-Sora → stills+CapCut**. Never invent Seedance jobs.
+
 ## Also in this folder
 
 | File | Purpose |
 | --- | --- |
+| [`alternative-model-routing.md`](./alternative-model-routing.md) | Non-Seedance quality ladder (Wan / LTX / Grok / peers) |
 | [`render-plan.md`](./render-plan.md) | Clip/unit contract |
 | [`product-sheet-template.md`](./product-sheet-template.md) | Product lock |
 | [`character-sheet-template.md`](./character-sheet-template.md) | Talent / Soul-ID lock |
