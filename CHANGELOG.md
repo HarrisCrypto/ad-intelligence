@@ -1,5 +1,23 @@
 # Changelog
 
+## 3.5.0 — 2026-10-10
+
+Toward-perfect layer: **visual design examples**, stress briefs, lint corpus demo, deeper compliance, richer signals — gates still intact.
+
+### Added
+- `examples/visual/` — HTML gallery + 7 storyboard stills (beauty, local, SaaS, kettle) paired to gold fixtures
+- `examples/stress-briefs/` — messy real-world prompts (beauty, local, fintech, housing, health) with expected traps
+- `examples/lint-corpus/` — intentional fail packages
+- `scripts/demo-quality-gates.mjs` — proves gold PASS + corpus CAUGHT
+
+### Changed
+- `policy-precheck.json` v1.1 — housing/credit/health decision tree + human-review rule
+- `swipe-signals.json` v1.2 — real-estate / b2b / travel niche hints
+- LAST-VERIFIED, README, PROOF, INSTALL, demo pointers, plugin **3.5.0**
+
+### Preserved
+- Dual-path, sheets, claim ledger, render plans, lint, self-critique, dual-track, full-depth markdown fixtures
+
 ## 3.4.0 — 2026-10-10
 
 Final polish: multi-niche full-depth gold fixtures + version sync. Quality gates unchanged.

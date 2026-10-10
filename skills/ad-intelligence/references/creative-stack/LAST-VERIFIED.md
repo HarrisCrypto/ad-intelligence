@@ -2,6 +2,8 @@
 
 **Agent rule:** If today is >90 days after a row’s date, warn in the package. When MCP is connected, **`models_explore` / `get_workflow_instructions` override this table.**
 
+**How to refresh:** probe connected MCP → update date + `verified_via` → note what changed in the mini-changelog below. See also CONTRIBUTING.md.
+
 ## Generators & workflows
 
 | Item | Last verified | verified_via | Notes |
@@ -15,20 +17,23 @@
 | CapCut finishing | 2026-10-10 | skill | Captions, endcard, safe margins, aspect exports — always after gen |
 | Kling / Runway / peers | 2026-10-10 | doc | Image-to-video product moves; see `prompt-recipes.md` |
 | Render plan contract | 2026-10-10 | skill | `render-plan.md` + `connected-run-protocol.md` |
-| Meta / TikTok / YT policy flags | 2026-10-10 | editorial | See `policy-precheck.json` — not legal advice |
+| Meta / TikTok / YT policy flags | 2026-10-10 | editorial | See `policy-precheck.json` v1.1 — not legal advice |
 
-## Skill / signals freshness
+## Skill / signals / proof freshness
 
 | Item | Last verified | Notes |
 | --- | --- | --- |
 | Product / character sheets | 2026-10-10 | Provenance tags + identity modes |
-| Swipe signals public JSON | 2026-10-10 | v1.1.0 — formats + niches + `failure_mode_index` |
-| Private signals overlay | 2026-10-10 | `private-signals.example.json` → local `private-signals.json` |
-| Lint package gate | 2026-10-10 | Beauty gold must stay `"ok": true` |
-| Proof / demo adoption layer | 2026-10-10 | `PROOF.md` + `demo/` |
-| Full-depth gold fixtures (4 niches) | 2026-10-10 | beauty, local, saas, physical — all lint-clean |
+| Swipe signals public JSON | 2026-10-10 | v1.2.0 — more niches + failure modes |
+| Private signals overlay | 2026-10-10 | `private-signals.example.json` → local file |
+| Policy precheck | 2026-10-10 | v1.1.0 — housing/credit/health decision tree |
+| Lint package gate | 2026-10-10 | Gold pass + lint-corpus must fail |
+| Full-depth gold fixtures | 2026-10-10 | beauty, local, saas, physical |
+| Visual design gallery | 2026-10-10 | `examples/visual/index.html` + 7 frames |
+| Stress briefs | 2026-10-10 | `examples/stress-briefs/` messy prompts |
 
 **Changelog (mini):**  
 - 2026-10-10 — v3.2: removed invented `product_hero` file roles; multi-clip + cost/receipt.  
-- 2026-10-10 — v3.3: adoption proof/install/contribute; swipe-signals.md + private overlay; tool-status table in README.  
-- 2026-10-10 — v3.4: three more full-depth gold fixtures; multi-niche quality bar.
+- 2026-10-10 — v3.3: adoption proof/install/contribute; private swipe overlay.  
+- 2026-10-10 — v3.4: three more full-depth gold fixtures.  
+- 2026-10-10 — v3.5: visual storyboard gallery; stress briefs; lint corpus demo; policy-precheck depth.  
