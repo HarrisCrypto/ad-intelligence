@@ -422,16 +422,37 @@ function lint(text, filePath) {
   return issues;
 }
 
-/** True when the package claims a finished/rendered delivery (not NOT_RENDERED). */
-function claimsFinishedRender(text) {
-  if (/Render status:\s*NOT_RENDERED/i.test(text)) return false;
-  if (/Render status:\s*RENDERED/i.test(text)) return true;
+/** Render-log rows that look like real job receipts (not NOT_RENDERED placeholders). */
+function renderJobReceipts(text) {
+  const log = sectionBlock(text, /Render log/i);
+  if (!log) return [];
+  return log
+    .split("\n")
+    .filter(
+      (l) =>
+        /^\|/.test(l) &&
+        /[a-f0-9]{8,}/i.test(l) &&
+        !/job_id/i.test(l) &&
+        !/\bNOT_RENDERED\b/i.test(l)
+    );
+}
+
+/**
+ * Finishedness from evidence (receipts / concrete FINISH-THE-CUT / RENDERED),
+ * never from a lone NOT_RENDERED header that contradicts the log (B7.3).
+ */
+function claimsFinishedRender(text, issues) {
+  const receipts = renderJobReceipts(text);
+  const hasJobReceipt = receipts.length > 0;
+  const statusNotRendered = /Render status:\s*NOT_RENDERED/i.test(text);
+  const statusRendered = /Render status:\s*RENDERED/i.test(text);
 
   const finish =
     text.match(/FINISH-THE-CUT[\s\S]{0,1200}/i)?.[0] || "";
   const unitsRendered = finish.match(
     /Units rendered this session:\s*([^\n]+)/i
   )?.[1];
+  let finishClaimsUnits = false;
   if (unitsRendered) {
     const v = unitsRendered.trim();
     if (
@@ -439,27 +460,29 @@ function claimsFinishedRender(text) {
       !/^(\[\[|—|-|n\/a|none|not[ _-]?rendered|todo|tbd)\b/i.test(v) &&
       !/awaiting|not yet/i.test(v)
     ) {
-      return true;
+      finishClaimsUnits = true;
     }
   }
 
-  const log = sectionBlock(text, /Render log/i);
-  if (
-    log &&
-    /\|[ \t]*[a-f0-9]{8,}[ \t]*\|/i.test(log) &&
-    !/\bNOT_RENDERED\b/i.test(log)
-  ) {
-    return true;
+  if (hasJobReceipt && statusNotRendered) {
+    fail(
+      issues,
+      "render-status-contradicts-log",
+      "Render status is NOT_RENDERED but Render log lists real job ids — finishedness follows receipts, not the header"
+    );
   }
+
+  if (hasJobReceipt || statusRendered || finishClaimsUnits) return true;
+  if (statusNotRendered) return false;
   return false;
 }
 
 /**
  * Hook-only silent clips must not count as finished ads.
- * Skips honest NOT_RENDERED handoff packages.
+ * Skips honest NOT_RENDERED handoff packages (no job receipts).
  */
 function lintFinishCutComplete(text, issues) {
-  if (!claimsFinishedRender(text)) return;
+  if (!claimsFinishedRender(text, issues)) return;
 
   const scriptBlock = sectionBlock(text, /Timed script/i);
   const ends = [...scriptBlock.matchAll(/\d+\s*[-–]\s*(\d+)\s*s/gi)].map((m) =>
@@ -485,15 +508,7 @@ function lintFinishCutComplete(text, issues) {
       !/\b(U2|U3|C1|E1|A1)\b/i.test(unitsLine) &&
       (/\b(U2|U3|E1|A1|C1)\b/i.test(planned) || scriptEnd > 10);
 
-    const jobRows = log
-      .split("\n")
-      .filter(
-        (l) =>
-          /^\|/.test(l) &&
-          /[a-f0-9]{8,}/i.test(l) &&
-          !/job_id/i.test(l) &&
-          !/\bNOT_RENDERED\b/i.test(l)
-      );
+    const jobRows = renderJobReceipts(text);
     const unitIds = new Set();
     for (const row of jobRows) {
       const cells = row.split("|").map((c) => c.trim());

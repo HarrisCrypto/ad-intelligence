@@ -331,6 +331,39 @@ if (fs.existsSync(studiesPath)) {
     /* ignore */
   }
 
+  // B7.3 — NOT_RENDERED header cannot opt out when Render log has job ids
+  {
+    const src = fs.readFileSync(
+      path.join(ROOT, "examples/lint-corpus/fail-incomplete-hook-only.md"),
+      "utf8"
+    );
+    const contradict = src.replace(
+      /Render status:\s*RENDERED/i,
+      "Render status: NOT_RENDERED"
+    );
+    const tmp = path.join(ROOT, "packages", "_backtest-status-contradict.md");
+    fs.writeFileSync(tmp, contradict);
+    const r = runNode("lint-package.mjs", [tmp]);
+    let j = null;
+    try {
+      j = JSON.parse(r.stdout || "{}");
+    } catch {
+      /* ignore */
+    }
+    ok(
+      "lint catches render-status-contradicts-log (B7.3)",
+      r.status !== 0 &&
+        (j?.issues || []).some((i) => i.id === "render-status-contradicts-log") &&
+        (j?.issues || []).some((i) => i.id === "incomplete-hook-only"),
+      (j?.issues || []).map((i) => i.id).join(",")
+    );
+    try {
+      fs.unlinkSync(tmp);
+    } catch {
+      /* ignore */
+    }
+  }
+
   for (const [rel, ruleId] of [
     ["examples/lint-corpus/fail-incomplete-hook-only.md", "incomplete-hook-only"],
     ["examples/lint-corpus/fail-silent-cut-incomplete.md", "silent-cut-incomplete"],

@@ -2,7 +2,7 @@
 
 ## Unreleased — Classroom + Production Hub
 
-**Gate 0–1 on the unified hub track** — audit + legal floor before render QA.
+**Gate 0–1 + Phase 5 early** — audit, legal floor, and render QA that fails Oply v1 for the right reasons.
 
 ### Added
 - `AUDIT.md` — Phase 0 inventory, script runs, keep/replace/gaps (Gate 0)
@@ -10,6 +10,13 @@
 - `classroom/README.md` — legal & sourcing rules (Gate 1)
 - `classroom/known-failure-modes.md` — Oply + process failure seeds
 - `classroom/private-cache/` gitignored for local reference media
+- `pipeline/qa/` — `run-qa.mjs`, `synthesize-oply-v1.mjs`, `prove-qa.mjs`
+- `regression/fail/oply-v1/` — expected hard fails from measured teardown (C1)
+- `regression/false-positive/` — corpus stub for over-aggressive gates (B7.2)
+
+### Fixed
+- Finish completeness is evidence-derived: `render-status-contradicts-log` when `NOT_RENDERED` contradicts job receipts (B7.3)
+- Compact retrieve keeps `gold_fixture` + `gold_fixtures[]` (B1.1)
 
 ### Note
 v3.19 finish-cut quality lands in the same PR branch as this hub work.

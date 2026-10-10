@@ -9,11 +9,12 @@ skills/ad-intelligence/studies/private/**
 classroom/private-cache/**
 !classroom/private-cache/.gitkeep
 
-# Render / regression media (fixtures may add allowlists later; default deny blobs)
+# Render / regression media (synthesized in CI; default deny blobs)
 regression/**/*.mp4
 regression/**/*.mov
 regression/**/*.wav
 regression/**/*.mp3
+regression/**/.qa-frame0-*.png
 *.cube
 
 # OS / editor

@@ -1021,7 +1021,12 @@ function main() {
               ideal_seconds: m.ideal_seconds,
               timing: m.timing,
               anti_slop: m.anti_slop,
+              // Pointers must survive compact (B1.1) — open gold fixtures before craft
+              gold_fixture: m.gold_fixture || null,
             })),
+            gold_fixtures: attentionModels.models
+              .map((m) => m.gold_fixture)
+              .filter(Boolean),
             research: attentionModels.research,
             lab: attentionModels.lab,
             emulate: attentionModels.emulate,

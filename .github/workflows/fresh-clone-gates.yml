@@ -18,12 +18,17 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Install ffmpeg (render QA)
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
       - name: Studies present on this ref
         run: |
           test -f skills/ad-intelligence/studies/corpus.json
+          test -f pipeline/qa/prove-qa.mjs
+          test -f regression/fail/oply-v1/expected.json
           node -e "const c=require('./skills/ad-intelligence/studies/corpus.json'); if(!c.studies?.length) process.exit(1); for (const s of c.studies){ if(typeof s.provenance?.observed!=='boolean') process.exit(2);} "
 
-      - name: Demo quality gates (+ studies join fixture)
+      - name: Demo quality gates (+ studies join + render QA)
         working-directory: skills/ad-intelligence
         run: node scripts/demo-quality-gates.mjs
 

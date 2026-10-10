@@ -4,10 +4,10 @@
 
 | Gate | Deliverable | Status |
 | --- | --- | --- |
-| **0** | [`AUDIT.md`](./AUDIT.md) | ✅ Done — user ack (“make sure it’s all together”) |
-| **1** | [`classroom/README.md`](./classroom/README.md) legal/sourcing | ✅ This commit |
-| **5 (early)** | `pipeline/qa` + `regression/fail/oply-v1` | ⏳ Next |
-| **2.5** | Brand harvest + font/voice/music provision | Pending |
+| **0** | [`AUDIT.md`](./AUDIT.md) | ✅ Done — user ack |
+| **1** | [`classroom/README.md`](./classroom/README.md) legal/sourcing | ✅ Done |
+| **5 (early)** | [`pipeline/qa`](./pipeline/qa/) + [`regression/fail/oply-v1`](./regression/fail/oply-v1/) | ✅ Done — prove-qa catches measured fails; B7.3 lint fixed |
+| **2.5** | Brand harvest + font/voice/music provision | ⏳ Next |
 | **2** | Study cards (home-services / AI phone first) | Pending |
 | **3** | Executable `library/` + demos | Pending |
 | **4** | `specs/ad-spec.schema.json` + 2 templates | Pending |
