@@ -43,7 +43,9 @@ Human proof of value: `../../PROOF.md`. Install: `../../INSTALL.md`.
 - `claim-firewall.json`, `brief-defaults.json`, `policy-precheck.json`
 - Full-depth quality bar: `examples/beauty-dtc-dual-track.md`,
   `local-service-trust.md`, `saas-demo-pas.md`, `physical-product-hero.md`
-  (bookmarks in `demo/`). Entertainment example is shape-only.
+  (bookmarks in `demo/`). Visual frames: `examples/visual/`.
+  Entertainment example is shape-only.
+- Messy/regulated drills: `examples/stress-briefs/` + `policy-precheck.json`
 - `references/output-template.md` — required sections
 - `swipe-signals.md` / `.json` (+ optional local `private-signals.json`)
 - style catalog, viral OS
@@ -78,6 +80,9 @@ Rubric with evidence + caps → failures → A/B/C.
 | `references/creative-stack/render-plan.md` | Generation units |
 | `references/output-template.md` | Required deliverable |
 | `examples/` (beauty, local, saas, physical) | Full-depth gold fixtures (4 niches) |
+| `examples/visual/` | Storyboard design gallery |
+| `examples/stress-briefs/` | Messy / regulated prompt drills |
+| `scripts/demo-quality-gates.mjs` | Gold PASS + corpus CAUGHT demo |
 | `demo/` | Canonical quality-target pointers |
 | `checklists/first-time-right.json` | Ship gates |
 | `../../PROOF.md` | Before/after vs slop |

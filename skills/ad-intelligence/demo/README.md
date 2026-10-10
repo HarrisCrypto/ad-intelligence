@@ -38,6 +38,11 @@ Pass lint-package.mjs before delivery. See also demo/.
 
 - [`../examples/entertainment-creator-series.md`](../examples/entertainment-creator-series.md) — structure reminder only; deepen before ship
 
+## Visual design examples
+
+Open [`../visual/index.html`](../visual/index.html) for storyboard stills paired to these packages.
+
 ## Human proof
 
-See repo root [`PROOF.md`](../../../PROOF.md) for before/after vs generic LLM slop.
+See repo root [`PROOF.md`](../../../PROOF.md) for before/after vs generic LLM slop.  
+Stress drills: [`../stress-briefs/`](../stress-briefs/).

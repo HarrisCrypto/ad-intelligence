@@ -1,6 +1,6 @@
 {
   "id": "swipe-signals",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "updated": "2026-10-10",
   "purpose": "Anonymized longevity signals — formats and hook families that tend to survive, plus common failure modes. No scraped creatives or brand names.",
   "how_agents_use": "After niche+pattern retrieval, optionally read matching niche/format signals. Prefer high-longevity hook families when user wants evergreen performance. Feed fails_when into Self-critique. Never invent CTR/ROAS numbers.",
@@ -179,7 +179,22 @@
     {
       "niche": "health",
       "high_longevity": ["ugc_talking_head", "objection_faq", "before_after"],
-      "common_failures": ["Disease-claim language", "Invented study stats", "Missing disclaimer when required"]
+      "common_failures": ["Disease-claim language", "Invented study stats", "Missing disclaimer when required", "Diagnosing-the-viewer hooks"]
+    },
+    {
+      "niche": "real-estate",
+      "high_longevity": ["local_service_trust", "hero_product_film", "social_proof_stack"],
+      "common_failures": ["Discriminatory housing copy", "Missing SAC housing declaration", "Fake occupancy stats"]
+    },
+    {
+      "niche": "b2b-services",
+      "high_longevity": ["pas_pain_stack", "objection_faq", "listicle_text_overlay"],
+      "common_failures": ["Vague authority claims", "Invented client logos", "Multi-CTA cold outreach"]
+    },
+    {
+      "niche": "travel",
+      "high_longevity": ["pov_day_in_life", "hero_product_film", "ugc_talking_head"],
+      "common_failures": ["Uncleared destination music", "Fake scarcity countdown", "Mismatch vs booking landing"]
     }
   ],
   "failure_mode_index": [

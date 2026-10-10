@@ -79,6 +79,12 @@ First-shot packages help others trust the skill:
 See `skills/ad-intelligence/references/swipe-signals.md` → “Add your own private notes.”  
 Copy `private-signals.example.json` → `private-signals.json` (gitignored). Never commit real advertiser data.
 
+## Stress briefs & lint corpus
+
+- Add messy prompts under `examples/stress-briefs/` with **Expected traps** + **Pass looks like**.  
+- Add intentional fail packages under `examples/lint-corpus/fail-*.md` and ensure `demo-quality-gates.mjs` still reports CAUGHT.  
+- Visual frames: keep fictional brands only; never commit scraped creatives.
+
 ## PR checklist
 
 - [ ] Quality gates intact (lint still passes on beauty gold)

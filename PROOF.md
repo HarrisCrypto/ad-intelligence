@@ -9,10 +9,12 @@ Read this in under a minute, then open a gold fixture:
 | Depth | File |
 | --- | --- |
 | **Full-depth fixtures (lint-clean quality bar)** | [`beauty-dtc-dual-track.md`](./skills/ad-intelligence/examples/beauty-dtc-dual-track.md) · [`local-service-trust.md`](./skills/ad-intelligence/examples/local-service-trust.md) · [`saas-demo-pas.md`](./skills/ad-intelligence/examples/saas-demo-pas.md) · [`physical-product-hero.md`](./skills/ad-intelligence/examples/physical-product-hero.md) |
+| **Visual design examples** | [`examples/visual/index.html`](./skills/ad-intelligence/examples/visual/index.html) |
 | **Canonical demo pointer** | [`skills/ad-intelligence/demo/`](./skills/ad-intelligence/demo/) |
+| **Stress briefs (messy prompts)** | [`examples/stress-briefs/`](./skills/ad-intelligence/examples/stress-briefs/) |
 | Shape-only skeleton (structure, not quality) | [`entertainment-creator-series.md`](./skills/ad-intelligence/examples/entertainment-creator-series.md) |
 
-**v3.4:** four niches now have full-depth, lint-clean fixtures (beauty, local service, SaaS, physical product) — not just one beauty example.
+**v3.5:** four niches have full-depth, lint-clean fixtures **plus** a [visual storyboard gallery](./skills/ad-intelligence/examples/visual/index.html) (actual design frames), stress briefs for messy/regulated prompts, and a lint corpus demo that proves slop gets caught.
 
 ---
 
@@ -118,13 +120,12 @@ Each pair: same brief. Left = typical generic LLM. Right = ad-intelligence disci
 
 ```bash
 cd skills/ad-intelligence
-node scripts/lint-package.mjs examples/beauty-dtc-dual-track.md
-node scripts/lint-package.mjs examples/local-service-trust.md
-node scripts/lint-package.mjs examples/saas-demo-pas.md
-node scripts/lint-package.mjs examples/physical-product-hero.md
-# each must print "ok": true
+node scripts/demo-quality-gates.mjs   # gold PASS + lint-corpus CAUGHT
+# open examples/visual/index.html in a browser for design frames
 
 node scripts/retrieve.mjs --niche skincare --platform tiktok --limit 5
 ```
+
+Try a messy prompt from `examples/stress-briefs/` and confirm the agent still refuses invented proof.
 
 If an agent’s package fails lint or invents proof, open an issue (see [CONTRIBUTING.md](./CONTRIBUTING.md)) — that failure mode becomes the next gate.

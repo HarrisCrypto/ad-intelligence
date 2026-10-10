@@ -2,7 +2,7 @@
 
 **Repo:** https://github.com/HarrisCrypto/ad-intelligence  
 **Skill root:** `skills/ad-intelligence/`  
-**Version:** **3.4.0** — see [CHANGELOG.md](./CHANGELOG.md)
+**Version:** **3.5.0** — see [CHANGELOG.md](./CHANGELOG.md)
 
 ---
 
@@ -24,16 +24,17 @@ Plugin metadata lives at `.cursor-plugin/` (`plugin.json` + `marketplace.json`) 
 Copy this block when you need the agent to self-orient with no extra explanation:
 
 ```text
-You are using Ad Intelligence (skills/ad-intelligence/) v3.4.
+You are using Ad Intelligence (skills/ad-intelligence/) v3.5.
 1. Read SKILL.md and pipelines/one-stop-ad-maker.md
-2. Quality bar (full-depth, lint-clean): examples/beauty-dtc-dual-track.md,
-   local-service-trust.md, saas-demo-pas.md, or physical-product-hero.md
-   (bookmarks in demo/). Match output-template.md sections exactly.
-3. Retrieve: node scripts/retrieve.mjs --niche <niche|alias> --platform <platform> --limit 5
-4. Fill output-template.md: sheets, claim ledger, timed script, render plan + log,
-   self-critique, AI disclosure
-5. If generators connected → call them (connected-run-protocol.md). Else → MCP-correct handoffs.
-6. Ship only if: node scripts/lint-package.mjs <package.md> exits 0
+2. Quality bar: full-depth examples (beauty, local-service-trust, saas-demo-pas,
+   physical-product-hero) + visual frames in examples/visual/
+3. For messy/regulated briefs, read examples/stress-briefs/ expected traps + policy-precheck.json
+4. Retrieve: node scripts/retrieve.mjs --niche <niche|alias> --platform <platform> --limit 5
+5. Fill output-template.md: sheets, claim ledger, timed script, render plan + log,
+   self-critique, AI disclosure (HUMAN_REVIEW_REQUIRED when policy says so)
+6. If generators connected → call them (connected-run-protocol.md). Else → MCP-correct handoffs.
+7. Ship only if: node scripts/lint-package.mjs <package.md> exits 0
+   (optional sanity: node scripts/demo-quality-gates.mjs)
 Never invent proof. Dual-track default for serious brands. One CTA. Muted-first.
 ```
 
@@ -115,9 +116,8 @@ No hosted database required. Optional private longevity notes: see [CONTRIBUTING
 ## Proof & quality bar
 
 - [PROOF.md](./PROOF.md) — before/after vs generic slop  
+- [Visual gallery](./skills/ad-intelligence/examples/visual/index.html) — actual storyboard design frames  
 - [demo/](./skills/ad-intelligence/demo/) — canonical quality-target pointers  
-- Full-depth lint-clean fixtures:
-  - `skills/ad-intelligence/examples/beauty-dtc-dual-track.md`
-  - `skills/ad-intelligence/examples/local-service-trust.md`
-  - `skills/ad-intelligence/examples/saas-demo-pas.md`
-  - `skills/ad-intelligence/examples/physical-product-hero.md`
+- Full-depth lint-clean fixtures: beauty · local · SaaS · physical (`examples/`)  
+- Stress briefs: `skills/ad-intelligence/examples/stress-briefs/`  
+- Gate demo: `node skills/ad-intelligence/scripts/demo-quality-gates.mjs`

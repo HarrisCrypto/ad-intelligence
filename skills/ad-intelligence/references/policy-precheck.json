@@ -1,39 +1,111 @@
 {
   "id": "policy-precheck",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "updated": "2026-10-10",
   "disclaimer": "Lookup flags for agents — not legal advice. Prefer omission + human review when unsure. last_checked is editorial.",
+  "human_review_rule": "If category.requires_human_review is true, put HUMAN_REVIEW_REQUIRED in AI disclosure & rights and do not invent compliance copy.",
   "categories": {
     "housing": {
       "niches": ["real-estate"],
       "meta_special_ad_category": "housing",
-      "notes": "Declare SAC; avoid discriminatory targeting/copy"
+      "requires_human_review": true,
+      "banned_copy_shapes": [
+        "no kids",
+        "perfect for singles only",
+        "exclusive neighborhood vibe excluding protected classes",
+        "Christian / Jewish / etc. preferred"
+      ],
+      "required_actions": [
+        "Declare Meta Special Ad Category = Housing when applicable",
+        "Avoid discriminatory targeting and exclusionary lifestyle copy",
+        "Use inclusive housing language; show equal housing opportunity if advertiser supplies mark"
+      ],
+      "notes": "Fair housing risk is high — when unsure, omit targeting suggestions and flag human review."
     },
     "credit": {
       "niches": ["fintech"],
       "meta_special_ad_category": "credit",
-      "notes": "Lending/credit ads may need authorization"
+      "requires_human_review": true,
+      "banned_copy_shapes": [
+        "guaranteed returns",
+        "double your money",
+        "get rich",
+        "no risk",
+        "pre-approved without USER_SUPPLIED basis"
+      ],
+      "required_actions": [
+        "No performance promises unless USER_SUPPLIED + legal-approved",
+        "No celebrity lookalikes",
+        "Include advertiser-supplied disclosures only — do not invent APR/legal lines"
+      ],
+      "notes": "Lending/credit/investing ads may need platform authorization and legal review."
     },
     "employment": {
       "niches": ["b2b-services", "saas"],
       "meta_special_ad_category": "employment",
-      "when": "Hiring ads only"
+      "when": "Hiring ads only",
+      "requires_human_review": true,
+      "banned_copy_shapes": ["age preference", "gender preference", "national origin preference"],
+      "notes": "Declare Employment SAC; keep requirements job-related and non-discriminatory."
     },
     "health_personal_attributes": {
       "niches": ["health", "fitness", "beauty"],
-      "banned_copy_shapes": ["You have [condition]", "Are you [personal attribute]?"],
-      "format_watch": ["weight-loss before/after", "body-part zoom shame"],
-      "notes": "Prefer problem-scene without diagnosing the viewer"
+      "requires_human_review": true,
+      "banned_copy_shapes": [
+        "You have [condition]",
+        "Are you [personal attribute]?",
+        "cures [disease]",
+        "treats [disease]",
+        "diagnoses the viewer"
+      ],
+      "format_watch": ["weight-loss before/after shame", "body-part zoom shame", "miracle transformation timelines"],
+      "required_actions": [
+        "Prefer problem-scene without diagnosing the viewer",
+        "No disease-cure claims without USER_SUPPLIED regulatory-approved copy",
+        "Beauty: cosmetic desire OK; clinical % only if USER_SUPPLIED"
+      ],
+      "notes": "Health + personal-attribute targeting/copy is a common policy failure mode."
     },
     "kids": {
       "niches": ["kids-family"],
       "age_gate": true,
-      "banned": ["photoreal AI children", "direct hard sell to minors"]
+      "requires_human_review": true,
+      "banned": ["photoreal AI children", "direct hard sell to minors", "attractive-to-kids dark patterns"],
+      "notes": "Prefer parent-directed messaging; follow platform age policies."
     },
     "restricted_verticals": {
-      "examples": ["alcohol", "gambling", "crypto", "supplements", "CBD"],
-      "action": "Emit approval/age-gate banner; only use USER_SUPPLIED claims; check platform certs"
+      "examples": ["alcohol", "gambling", "crypto", "supplements", "CBD", "weight-loss drugs"],
+      "requires_human_review": true,
+      "action": "Emit approval/age-gate banner; only use USER_SUPPLIED claims; check platform certs; never invent before/after medical outcomes"
+    },
+    "political_social_issues": {
+      "niches": [],
+      "requires_human_review": true,
+      "when": "When brief is political / election / social-issue advocacy",
+      "action": "Do not invent authorization; flag platform political ad requirements"
     }
   },
+  "decision_tree": [
+    {
+      "if": "niche in housing/real-estate rental or sale ads",
+      "then": "housing SAC + human review"
+    },
+    {
+      "if": "credit lending investing insurance claims about returns",
+      "then": "credit category + ban guarantees + human review"
+    },
+    {
+      "if": "health disease cure or diagnoses viewer",
+      "then": "block claim; health_personal_attributes + human review"
+    },
+    {
+      "if": "supplement CBD alcohol gambling crypto",
+      "then": "restricted_verticals banner"
+    },
+    {
+      "if": "unsure",
+      "then": "omit risky claim; HUMAN_REVIEW_REQUIRED"
+    }
+  ],
   "gate": "Fill Policy category + prerequisites under AI disclosure & rights before ship"
 }
