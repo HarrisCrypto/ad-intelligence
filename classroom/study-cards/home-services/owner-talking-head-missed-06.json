@@ -1,0 +1,117 @@
+{
+  "id": "owner-talking-head-missed-06",
+  "status": "confirmed",
+  "source": {
+    "platform": "meta",
+    "url_or_library_id": "synthesis:am_muted_confession+local_services",
+    "accessed": "2026-10-10",
+    "rights": "annotation-only",
+    "verified_via": "synthesis"
+  },
+  "niche": "home-services",
+  "format": "talking-head",
+  "structure": {
+    "format": "video_timed",
+    "timing_observable": true
+  },
+  "duration_s": 21,
+  "aspect": "9:16",
+  "linked_study_id": "study_viral_confession_ugc",
+  "hook": {
+    "mechanism": "owner confession of costly missed call",
+    "first_second_description": "Owner mid-thought with burned confession before brand",
+    "on_screen_text": "I lost a furnace job at 8pm",
+    "spoken": "I lost a furnace job because nobody answered at eight."
+  },
+  "shots": [
+    {
+      "t_start": 0,
+      "t_end": 1.5,
+      "purpose": "confession text + face",
+      "source": "synthesis",
+      "shot_type": "talking-head",
+      "on_screen_text": "≤8 words",
+      "transition_out": "jump"
+    },
+    {
+      "t_start": 1.5,
+      "t_end": 6,
+      "purpose": "name failure mode",
+      "source": "synthesis",
+      "on_screen_text": "Missed call",
+      "transition_out": "jump"
+    },
+    {
+      "t_start": 6,
+      "t_end": 14,
+      "purpose": "demo insert",
+      "source": "synthesis",
+      "shot_type": "screen",
+      "subject": "agent answers",
+      "transition_out": "hard"
+    },
+    {
+      "t_start": 14,
+      "t_end": 18,
+      "purpose": "outcome plain words",
+      "source": "synthesis",
+      "shot_type": "talking-head",
+      "on_screen_text": "Call got booked",
+      "transition_out": "hard"
+    },
+    {
+      "t_start": 18,
+      "t_end": 21,
+      "purpose": "CTA endcard",
+      "source": "synthesis",
+      "shot_type": "endcard",
+      "transition_out": "hold"
+    }
+  ],
+  "stats": {
+    "shot_count": 5,
+    "avg_shot_s": 4.2,
+    "cuts_per_10s": 1.9,
+    "longest_hold_s": 4.2,
+    "first_cut_at_s": 1.5,
+    "text_density": "muted-first ≤8 words/card",
+    "loudness_lufs": null,
+    "stats_source": "synthesis-estimate from attention-model timing"
+  },
+  "audio": {
+    "vo": "first person",
+    "music": "native/licensed",
+    "captions": "burned always"
+  },
+  "look": {
+    "light": "imperfect phone cam",
+    "brand_late": true
+  },
+  "cta": {
+    "primary": "one CTA",
+    "brand_before_s": 18
+  },
+  "offer_and_proof": {
+    "offer": "book access / demo",
+    "proof": "owner language from real reviews/support — not vibes"
+  },
+  "why_it_works": "Specific confession creates identification faster than feature lists; demo insert proves the fix.",
+  "steal": [
+    "Mid-thought open",
+    "Text ≤8 words",
+    "Jump cuts on breath",
+    "Brand late"
+  ],
+  "what_not_to_copy": [
+    "Their confession lines verbatim",
+    "Fake review counts",
+    "Studio 'UGC' polish"
+  ],
+  "tags": [
+    "home-services",
+    "ugc",
+    "confession",
+    "meta",
+    "technique"
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "id": "overflow-answering-objection-05",
+  "status": "confirmed",
+  "source": {
+    "platform": "linkedin",
+    "url_or_library_id": "synthesis:am_pas_pain_stack+home-services-objections",
+    "accessed": "2026-10-10",
+    "rights": "annotation-only",
+    "verified_via": "synthesis"
+  },
+  "niche": "home-services",
+  "format": "talking-head",
+  "structure": {
+    "format": "video_timed",
+    "timing_observable": true
+  },
+  "duration_s": 27,
+  "aspect": "1:1",
+  "linked_study_id": "study_perf_pas_meta",
+  "hook": {
+    "mechanism": "objection-crush PAS",
+    "first_second_description": "Owner on phone cam: 'We already have an answering service…'",
+    "on_screen_text": "Answering service?",
+    "spoken": "We already pay for an answering service."
+  },
+  "shots": [
+    {
+      "t_start": 0,
+      "t_end": 3,
+      "purpose": "objection as hook",
+      "source": "synthesis",
+      "shot_type": "talking-head",
+      "framing": "MCU",
+      "transition_out": "hard"
+    },
+    {
+      "t_start": 3,
+      "t_end": 10,
+      "purpose": "agitate gap",
+      "source": "synthesis",
+      "on_screen_text": "Messages ≠ booked jobs",
+      "transition_out": "hard"
+    },
+    {
+      "t_start": 10,
+      "t_end": 20,
+      "purpose": "solve via demo",
+      "source": "synthesis",
+      "shot_type": "screen",
+      "subject": "book/transfer path",
+      "transition_out": "hard"
+    },
+    {
+      "t_start": 20,
+      "t_end": 24,
+      "purpose": "objection crush",
+      "source": "synthesis",
+      "on_screen_text": "Books or transfers — [PLACEHOLDER]",
+      "transition_out": "hard"
+    },
+    {
+      "t_start": 24,
+      "t_end": 27,
+      "purpose": "one CTA",
+      "source": "synthesis",
+      "shot_type": "endcard",
+      "on_screen_text": "Book a walkthrough",
+      "transition_out": "hold"
+    }
+  ],
+  "stats": {
+    "shot_count": 5,
+    "avg_shot_s": 5.4,
+    "cuts_per_10s": 1.48,
+    "longest_hold_s": 5.4,
+    "first_cut_at_s": 3,
+    "text_density": "muted-first ≤8 words/card",
+    "loudness_lufs": null,
+    "stats_source": "synthesis-estimate from attention-model timing"
+  },
+  "audio": {
+    "vo": "operator plain talk",
+    "music": "licensed low"
+  },
+  "look": {
+    "head": "imperfect native light",
+    "ui": "flat"
+  },
+  "cta": {
+    "primary": "Book a walkthrough"
+  },
+  "offer_and_proof": {
+    "offer": "demo that shows book/transfer vs message-take",
+    "proof": "[PLACEHOLDER: needs user proof]"
+  },
+  "why_it_works": "Names the real objection first so the demo has a job — prove booking, not voicemail replacement.",
+  "steal": [
+    "Objection as open",
+    "Agitate once",
+    "Demo the difference",
+    "Single CTA"
+  ],
+  "what_not_to_copy": [
+    "Fake case-study savings",
+    "Competitor answering-service brand names as villains",
+    "Multi-CTA endcard"
+  ],
+  "tags": [
+    "home-services",
+    "objection",
+    "pas",
+    "linkedin",
+    "b2b"
+  ]
+}

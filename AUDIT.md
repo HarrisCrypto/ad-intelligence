@@ -195,18 +195,18 @@ Already **82 lines** (under ~150). Content still encodes the old ritual: brainst
 
 | Plan component | Status |
 | --- | --- |
-| `classroom/study-cards/` + schema + private-cache | **Missing** |
-| Niche packs / derived patterns from cards | **Missing** (have `database/niches` + attention models instead) |
-| `library/` transitions/camera/captions/lighting/grades/type/sound/ui-kits/templates | **Missing** (prose in references/creative-stack) |
-| Remotion / deterministic compose | **Missing** |
-| `pipeline/qa` render instruments | **Missing** (only checklist JSON) |
-| `pipeline/critic` vision loop | **Missing** |
-| `specs/ad-spec.schema.json` | **Missing** (have package markdown skeleton) |
-| `regression/fail/oply-v1` + pass corpus + false-positive corpus | **Missing** |
-| Brand harvest Phase 2.5 | **Missing** |
-| Hardware in probe | **Missing** |
-| Pointer resolution (`gold_fixture`) | **Broken** (field exists, not projected) |
-| Evidence-derived finish gate | **Broken** (B7.3 reproduced) |
+| `classroom/study-cards/` + schema + private-cache | **Done** (Gate 2 — 16 confirmed cards + validate/retrieve) |
+| Niche packs / derived patterns from cards | **Done** (`classroom/niche-packs/home-services.md`) |
+| `library/` transitions/camera/captions/lighting/grades/type/sound/ui-kits/templates | **Partial** (typography + sound in Gate 2.5; rest = Phase 3) |
+| Remotion / deterministic compose | **Missing** (Phase 3/4) |
+| `pipeline/qa` render instruments | **Done** (Phase 5 early) |
+| `pipeline/critic` vision loop | **Missing** (Phase 6) |
+| `specs/ad-spec.schema.json` | **Missing** (Phase 4) |
+| `regression/fail/oply-v1` + pass corpus + false-positive corpus | **Done** (oply-v1 + false-positive stub) |
+| Brand harvest Phase 2.5 | **Done** |
+| Hardware in probe | **Done** |
+| Pointer resolution (`gold_fixture`) | **Fixed** (compact retrieve) |
+| Evidence-derived finish gate | **Fixed** (B7.3) |
 | Multi-aspect re-render QA | **Missing** (docs say separate aspects; no hard fail) |
 
 ---

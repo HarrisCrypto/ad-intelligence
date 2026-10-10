@@ -1,0 +1,88 @@
+{
+  "id": "tech-muted-first-safezone-03",
+  "status": "confirmed",
+  "source": {
+    "platform": "meta",
+    "url_or_library_id": "synthesis:fm_safe_zone+platform-notes",
+    "accessed": "2026-10-10",
+    "rights": "annotation-only",
+    "verified_via": "synthesis"
+  },
+  "niche": "home-services",
+  "format": "motion-graphics",
+  "structure": {
+    "format": "video_timed",
+    "timing_observable": true
+  },
+  "duration_s": 10,
+  "aspect": "9:16",
+  "hook": {
+    "mechanism": "muted-first safe zones",
+    "first_second_description": "All critical type inside Meta/Reels safe zone; UI chrome avoided",
+    "on_screen_text": "Safe zone"
+  },
+  "shots": [
+    {
+      "t_start": 0,
+      "t_end": 3,
+      "purpose": "hook text in safe zone",
+      "source": "synthesis",
+      "caption_style": "center-safe",
+      "transition_out": "hard"
+    },
+    {
+      "t_start": 3,
+      "t_end": 7,
+      "purpose": "demo keep type clear of chrome",
+      "source": "synthesis",
+      "transition_out": "hard"
+    },
+    {
+      "t_start": 7,
+      "t_end": 10,
+      "purpose": "CTA above bottom UI",
+      "source": "synthesis",
+      "shot_type": "endcard",
+      "transition_out": "hold"
+    }
+  ],
+  "stats": {
+    "shot_count": 3,
+    "avg_shot_s": 3.33,
+    "cuts_per_10s": 2,
+    "longest_hold_s": 3.33,
+    "first_cut_at_s": 3,
+    "text_density": "muted-first ≤8 words/card",
+    "loudness_lufs": null,
+    "stats_source": "synthesis-estimate from attention-model timing"
+  },
+  "audio": {
+    "note": "design assumes muted"
+  },
+  "look": {
+    "safe_zone": "top ~14% / bottom ~20% clear of critical type"
+  },
+  "cta": {
+    "primary": "above platform chrome"
+  },
+  "offer_and_proof": {
+    "offer": "n/a technique",
+    "proof": "safe-zone QA"
+  },
+  "why_it_works": "Reels/Meta chrome eats bottom/right; muted-first type only works if it survives the overlay.",
+  "steal": [
+    "Design muted-first",
+    "Keep CTA above bottom chrome",
+    "Test with platform UI overlay"
+  ],
+  "what_not_to_copy": [
+    "Edge-pinned legal as primary CTA",
+    "Competitor safe-zone templates as assets"
+  ],
+  "tags": [
+    "technique",
+    "safe-zone",
+    "meta",
+    "qa"
+  ]
+}

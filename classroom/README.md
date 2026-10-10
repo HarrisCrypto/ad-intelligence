@@ -102,4 +102,4 @@ Verify measurable claims with instruments (`ffprobe`, loudness, silence, scene d
 - [x] `classroom/private-cache/` gitignored  
 - [x] Cross-linked from `AUDIT.md` / hub status  
 
-Next: Phase 5 early (`pipeline/qa` + `regression/fail/oply-v1`) before expanding the classroom corpus.
+Next after Gate 1 was Phase 5 early + Gate 2.5 + Gate 2 (study cards). Next: Phase 3 executable toolbox.

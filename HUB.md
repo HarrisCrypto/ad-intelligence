@@ -8,8 +8,8 @@
 | **1** | [`classroom/README.md`](./classroom/README.md) legal/sourcing | ✅ Done |
 | **5 (early)** | [`pipeline/qa`](./pipeline/qa/) + [`regression/fail/oply-v1`](./regression/fail/oply-v1/) | ✅ Done — prove-qa catches measured fails; B7.3 lint fixed |
 | **2.5** | Brand harvest + typography/sound provision | ✅ Done — `brand-harvest.mjs`, `library/typography`, `library/sound`, probe hardware |
-| **2** | Study cards (home-services / AI phone first) | ⏳ Next |
-| **3** | Executable `library/` + demos | Pending |
+| **2** | Study cards (home-services / AI phone first) | ✅ Done — 16 confirmed; `retrieve-cards.mjs --niche home-services` ≥5 |
+| **3** | Executable `library/` + demos | ⏳ Next |
 | **4** | `specs/ad-spec.schema.json` + 2 templates | Pending |
 | **6** | Vision critic loop | Pending |
 | **E2E** | One-paragraph brief → finished ad; Oply rebuild | Pending |

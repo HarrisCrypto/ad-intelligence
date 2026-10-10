@@ -1,0 +1,101 @@
+{
+  "id": "book-demo-endcard-clarity-09",
+  "status": "confirmed",
+  "source": {
+    "platform": "meta",
+    "url_or_library_id": "synthesis:known-failure-modes+cta-clarity",
+    "accessed": "2026-10-10",
+    "rights": "annotation-only",
+    "verified_via": "synthesis"
+  },
+  "niche": "home-services",
+  "format": "motion-graphics",
+  "structure": {
+    "format": "video_timed",
+    "timing_observable": true
+  },
+  "duration_s": 12,
+  "aspect": "9:16",
+  "hook": {
+    "mechanism": "CTA clarity reverse-lesson",
+    "first_second_description": "Endcard pattern: large phone + plain verb; no jargon",
+    "on_screen_text": "Call (555) 010-0000"
+  },
+  "shots": [
+    {
+      "t_start": 0,
+      "t_end": 4,
+      "purpose": "mechanism one-liner",
+      "source": "synthesis",
+      "on_screen_text": "Answers when you can't",
+      "transition_out": "hard"
+    },
+    {
+      "t_start": 4,
+      "t_end": 8,
+      "purpose": "UI confirm flash",
+      "source": "synthesis",
+      "shot_type": "screen",
+      "transition_out": "hard"
+    },
+    {
+      "t_start": 8,
+      "t_end": 12,
+      "purpose": "CTA endcard large type",
+      "source": "synthesis",
+      "shot_type": "endcard",
+      "on_screen_text": "Call / Book demo",
+      "caption_style": "safe-zone large",
+      "transition_out": "hold"
+    }
+  ],
+  "stats": {
+    "shot_count": 3,
+    "avg_shot_s": 4,
+    "cuts_per_10s": 1.67,
+    "longest_hold_s": 4,
+    "first_cut_at_s": 4,
+    "text_density": "muted-first ≤8 words/card",
+    "loudness_lufs": null,
+    "stats_source": "synthesis-estimate from attention-model timing"
+  },
+  "audio": {
+    "vo": "CTA spoken once",
+    "music": "licensed"
+  },
+  "look": {
+    "type": "CTA ≥ platform minimum; legal last 1.5s or omit"
+  },
+  "cta": {
+    "primary": "Call or Book demo",
+    "ban": [
+      "access call",
+      "unlock",
+      "get started with AI"
+    ],
+    "phone_size": "dominant in safe zone"
+  },
+  "offer_and_proof": {
+    "offer": "book demo or call published number",
+    "proof": "clarity over cleverness"
+  },
+  "why_it_works": "Oply-class fails often die on jargon CTAs and tiny numbers; this card locks the endcard pattern that passes CTA QA.",
+  "steal": [
+    "Plain verb CTA",
+    "Phone large in safe zone",
+    "One CTA only",
+    "Legal last or omit"
+  ],
+  "what_not_to_copy": [
+    "Jargon CTAs",
+    "7pt fine print as primary",
+    "Competitor phone numbers"
+  ],
+  "tags": [
+    "home-services",
+    "cta",
+    "endcard",
+    "meta",
+    "qa"
+  ]
+}

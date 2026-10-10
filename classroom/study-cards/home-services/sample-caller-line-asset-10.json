@@ -1,0 +1,95 @@
+{
+  "id": "sample-caller-line-asset-10",
+  "status": "confirmed",
+  "source": {
+    "platform": "meta",
+    "url_or_library_id": "synthesis:niche-pack+ASSET_VERIFIED-caller-line",
+    "accessed": "2026-10-10",
+    "rights": "annotation-only",
+    "verified_via": "synthesis"
+  },
+  "niche": "home-services",
+  "format": "hybrid",
+  "structure": {
+    "format": "video_timed",
+    "timing_observable": true
+  },
+  "duration_s": 16,
+  "aspect": "9:16",
+  "hook": {
+    "mechanism": "sample caller line from brand's own site",
+    "first_second_description": "Audio/text of a real site-approved sample caller line into the agent",
+    "on_screen_text": "[ASSET_VERIFIED caller line]",
+    "spoken": "[ASSET_VERIFIED — from brand site only]"
+  },
+  "shots": [
+    {
+      "t_start": 0,
+      "t_end": 3,
+      "purpose": "caller line open",
+      "source": "synthesis",
+      "sfx": "caller VO from approved copy",
+      "transition_out": "hard"
+    },
+    {
+      "t_start": 3,
+      "t_end": 10,
+      "purpose": "agent handles",
+      "source": "synthesis",
+      "shot_type": "screen",
+      "subject": "waveform + UI",
+      "transition_out": "hard"
+    },
+    {
+      "t_start": 10,
+      "t_end": 16,
+      "purpose": "book + CTA",
+      "source": "synthesis",
+      "shot_type": "endcard",
+      "transition_out": "hold"
+    }
+  ],
+  "stats": {
+    "shot_count": 3,
+    "avg_shot_s": 5.33,
+    "cuts_per_10s": 1.25,
+    "longest_hold_s": 5.33,
+    "first_cut_at_s": 3,
+    "text_density": "muted-first ≤8 words/card",
+    "loudness_lufs": null,
+    "stats_source": "synthesis-estimate from attention-model timing"
+  },
+  "audio": {
+    "vo": "sample caller must be ASSET_VERIFIED or USER_SUPPLIED",
+    "ban": "invented customer quotes"
+  },
+  "look": {
+    "ui": "flat",
+    "waveform": "real product chrome"
+  },
+  "cta": {
+    "primary": "book / call"
+  },
+  "offer_and_proof": {
+    "offer": "hear the agent",
+    "proof": "site-approved sample line — never invent"
+  },
+  "why_it_works": "Brand-true caller language beats generic 'Hi I need a plumber' stock; harvest gate supplies the line.",
+  "steal": [
+    "Open on ASSET_VERIFIED sample caller",
+    "Show agent handling immediately",
+    "No invented testimonials"
+  ],
+  "what_not_to_copy": [
+    "Competitor sample calls",
+    "Invented customer quotes",
+    "Fake waveforms as proof of volume"
+  ],
+  "tags": [
+    "home-services",
+    "voice-ai",
+    "asset-verified",
+    "meta",
+    "brand-harvest"
+  ]
+}

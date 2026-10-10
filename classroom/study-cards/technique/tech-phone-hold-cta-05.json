@@ -1,0 +1,87 @@
+{
+  "id": "tech-phone-hold-cta-05",
+  "status": "confirmed",
+  "source": {
+    "platform": "meta",
+    "url_or_library_id": "synthesis:am_local_geo_trust+cta-hold",
+    "accessed": "2026-10-10",
+    "rights": "annotation-only",
+    "verified_via": "synthesis"
+  },
+  "niche": "home-services",
+  "format": "display_static",
+  "structure": {
+    "format": "display_static",
+    "timing_observable": false,
+    "format_note": "Static display/endcard pattern — timing not observable"
+  },
+  "duration_s": null,
+  "aspect": "1:1",
+  "hook": {
+    "mechanism": "phone-dominant static",
+    "first_second_description": "Static: city + specialty + large phone; one offer line",
+    "on_screen_text": "Call now · City HVAC"
+  },
+  "shots": [
+    {
+      "t_start": null,
+      "t_end": null,
+      "purpose": "hero: geo + specialty",
+      "source": "synthesis"
+    },
+    {
+      "t_start": null,
+      "t_end": null,
+      "purpose": "phone number dominant",
+      "source": "synthesis"
+    },
+    {
+      "t_start": null,
+      "t_end": null,
+      "purpose": "one offer line",
+      "source": "synthesis"
+    }
+  ],
+  "stats": {
+    "shot_count": 0,
+    "avg_shot_s": 0,
+    "cuts_per_10s": 0,
+    "longest_hold_s": 0,
+    "first_cut_at_s": 0,
+    "text_density": "3 lines max",
+    "loudness_lufs": null,
+    "stats_source": "n/a — display_static"
+  },
+  "audio": {
+    "note": "none"
+  },
+  "look": {
+    "hierarchy": "phone > geo > offer"
+  },
+  "cta": {
+    "primary": "phone",
+    "nap_match": true
+  },
+  "offer_and_proof": {
+    "offer": "call",
+    "proof": "NAP match landing"
+  },
+  "why_it_works": "Static local units convert when the phone is the visual hero and NAP matches the landing page.",
+  "steal": [
+    "Phone as largest element",
+    "Geo + specialty",
+    "One offer line"
+  ],
+  "what_not_to_copy": [
+    "Wrong NAP",
+    "Multi-offer clutter",
+    "Competitor marks"
+  ],
+  "tags": [
+    "technique",
+    "display_static",
+    "phone-cta",
+    "home-services",
+    "format-honesty"
+  ]
+}

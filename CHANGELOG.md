@@ -20,6 +20,13 @@
 - `library/sound/` — voice tier ladder + real-bed rule (no sine drones)
 - Probe reports hardware (CPU/RAM/GPU/ffmpeg) + quality ceiling + voice tier default
 
+### Added (Gate 2)
+- `classroom/study-cards/_schema.json` — AdStudyCard schema (`format` + `timing_observable`, `what_not_to_copy`, confirmed/draft)
+- `classroom/study-cards/home-services/` — 10 confirmed cards (void→answer, geo phone, UI demo, search_text honesty, …)
+- `classroom/study-cards/technique/` — 6 confirmed pacing/caption/safe-zone/UI/format cards
+- `classroom/niche-packs/home-services.md` — objections, hook bank, slop list
+- `classroom/scripts/validate-card.mjs` + `retrieve-cards.mjs` — media rejection + niche retrieve
+
 ### Fixed
 - Finish completeness is evidence-derived: `render-status-contradicts-log` when `NOT_RENDERED` contradicts job receipts (B7.3)
 - Compact retrieve keeps `gold_fixture` + `gold_fixtures[]` (B1.1)
