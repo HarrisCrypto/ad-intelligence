@@ -1,4 +1,4 @@
-# Ad Intelligence — CONTEXT PACK (v3.12.1)
+# Ad Intelligence — CONTEXT PACK (v3.14)
 
 _Paste into system context. Then follow the one-shot sequence._
 _Repo: https://github.com/HarrisCrypto/ad-intelligence_
@@ -7,9 +7,9 @@ _Lite pack: node scripts/build-context-pack.mjs --lite_
 ---
 ## 1) ONE-SHOT
 
-# ONE-SHOT playbook — creative first, then finish the cut
+# ONE-SHOT playbook — study → emulate → build like a human → finish the cut
 
-Agents fail when they fill ledgers before having an idea — or render a hook and stall asking for screenshots. **Research → attention model → Concept → dense beats → craft → lint → finish the full cut.**
+Agents fail when they fill ledgers before having an idea — or render a hook and stall asking for screenshots. **Retrieve studies → emulate structure → human_build with real tools → Concept → dense beats → craft → lint → finish the full cut.**
 
 ## Hard sequence
 
@@ -29,18 +29,22 @@ Agents fail when they fill ledgers before having an idea — or render a hook an
 
 3. RETRIEVE (prefer compact):
    node scripts/retrieve.mjs --niche <niche> --platform <platform> --limit 5 --compact
+   Paste studies.primary (+ human_build steps) — viral / performance / award archetypes.
    Paste primary / challenger / dual_track_twin (twin ≠ primary).
    Paste attention_models.primary + challenger (timing included).
    Open research URLs + examples/visual/attention-lab.html — STRUCTURE only.
+   Optional 10 min in public libraries (studies[].research_where).
 
-4. EMULATE + WRITE CREATIVE FIRST:
-   a) Attention model id + angle axis (references/angle-axes.md)
-   b) Concept: 3 one-liners → pick ONE → "Not the default because…"
+4. EMULATE + HUMAN BUILD + WRITE CREATIVE FIRST:
+   a) Study id + attention model id + angle axis (references/angle-axes.md)
+      Steal study.steal; obey study.never_copy; follow when_to_emulate.
+   b) Map study.human_build + references/human-build-os.md to YOUR rung/tools
+   c) Concept: 3 one-liners → pick ONE → "Not the default because…"
       (ban: smiling hold-to-camera, floating product+particles, drone #1, neon SaaS cockpit, invented %)
-   c) Timed script: ≥6 rows matching model timing (±). EXACT quoted VO/text.
-   d) Captions cover the cut. One CTA. Muted-first 0–3s (no logo).
-   e) Craft: ≥2 #HEX, real fonts, motion, E1, 9:16+1:1 — cut/shots/animation named
-   f) One paste-ready prompt PER unit (CAMERA/LIGHT/MOTION/GRADE/NEGATIVES)
+   d) Timed script: ≥6 rows matching study/model timing (±). EXACT quoted VO/text.
+   e) Captions cover the cut. One CTA. Muted-first 0–3s (no logo).
+   f) Craft: ≥2 #HEX, real fonts, motion, E1, 9:16+1:1 — cut/shots/animation named
+   g) One paste-ready prompt PER unit (CAMERA/LIGHT/MOTION/GRADE/NEGATIVES)
 
 5. FILL remaining [[BRACKETS]]. Never invent proof.
 
@@ -59,28 +63,30 @@ Agents fail when they fill ledgers before having an idea — or render a hook an
 
 ## Niche cheat sheet
 
-| Ask | Niche | Models / gold |
+| Ask | Niche | Study / model / gold |
 | --- | --- | --- |
-| Hair, shampoo, skincare | beauty | `am_hair_transform`, beauty gold |
-| Food, coffee, snacks | food_bev | `am_food_crave_asmr` |
-| AI agent / voice / SaaS site | saas | `am_voice_agent_missed`, voice + saas gold |
-| Local service | local_services | `am_local_geo_trust` |
-| Any DTC product | ecommerce | `am_macro_lust_loop` / hero |
+| Hair, shampoo, skincare | beauty | `study_beauty_macro_transform` · `am_hair_transform` |
+| Food, coffee, snacks | food_bev | `study_food_crave_loop` · `am_food_crave_asmr` |
+| AI agent / voice / SaaS site | saas | `study_voice_agent_missed_call` · voice + saas gold |
+| Local service | local_services | `study_local_geo_phone` · `am_local_geo_trust` |
+| Any DTC product | ecommerce | `study_award_hero_spectacle` / macro · dual-track |
+| Cold UGC trust | many | `study_viral_confession_ugc` |
 
-Full map: `references/ad-libraries.md`. Emulate: `prompts/emulate-attention-model.md`.
+Full map: `studies/corpus.json` · `references/ad-libraries.md`. Emulate: `prompts/emulate-attention-model.md`. Build: `references/human-build-os.md`.
 
 ## Refusal / rewrite
 
 Do **not** deliver if:
 
 - Any `[[BRACKET]]` left  
-- No attention model id + no Concept with “Not the default because…”  
+- No study id + no attention model id + no Concept with “Not the default because…”  
 - Timed script &lt; 6 rows or VO cells say “sparse” / “≤N words”  
 - Craft is adjectives only or fonts hedged (-style/-like)  
 - Invented metrics without `[PLACEHOLDER…]`  
 - Multi-CTA or logo-first 0–3s  
 - Chat-only brainstorm with no package file  
 - Image collage + crappy slogan (no cut/timing/shots)  
+- Copied competitor lines from a study or live library ad  
 - **Hook-only render + “send screenshots”** while gen tools were available  
 - Neon/rubber AI dashboard as the product UI  
 
@@ -88,17 +94,168 @@ Thin brief → assume via brief-defaults, list Assumptions, ask ≤3 questions, 
 
 ## No Seedance / Higgsfield
 
-Rung = assembler. Name Wan / LTX / Grok / Kling / Hailuo / stills+CapCut. Same skeleton. Same lint. Same finish-the-cut duty.
+Rung = assembler. Name Wan / LTX / Grok / Kling / Hailuo / stills+CapCut. Same skeleton. Same lint. Same finish-the-cut duty. Same `human_build` mapping.
 
 ## Done means
 
 1. Lint `"ok": true`  
-2. Full timed duration covered (finish-the-cut contract)  
-3. Stranger can mute-watch 0–3s and know the situation  
-4. UI/product looks authentic — generated flat documentary chrome OK; rubber AI UI not OK  
+2. Study + model named; structure emulated, words original  
+3. Full timed duration covered (finish-the-cut contract)  
+4. Stranger can mute-watch 0–3s and know the situation  
+5. UI/product looks authentic — generated flat documentary chrome OK; rubber AI UI not OK  
+
 
 ---
-## 2) HARNESS EQUALIZATION
+## 2) FINISH THE CUT
+
+# Finish the cut — do not stop after the hook
+
+**Failure mode this kills:** agent renders U1 (8s phone ring), then asks the human for screenshots/logo and leaves 16s unfinished — while parallel agents burn credits on rubber UI.
+
+## When gen tools exist (Kling / Wan / Flux / Seedance / etc.)
+
+You **owe a full-duration cut**, not a teaser.
+
+| Must | Must not |
+| --- | --- |
+| Cover **every second** of the timed script with units | Stop after hook “waiting on your UI” |
+| Generate missing UI/product stills via authenticity protocol | Invent dashboard metrics or neon cockpits |
+| Log **real** job/export ids per unit (or honest NOT_RENDERED) | Invent Seedance jobs |
+| Burn captions/logo/CTA in **post** (CapCut) | Ask models to paint tiny UI type as the product |
+| One session / one agent owns the render budget | Parallel agents racing the same package |
+
+## Completion contract (paste into Render log)
+
+```text
+FINISH-THE-CUT
+- Timed duration: [[Ns]]
+- Units planned: [[K1,C1,U2,…,E1,A1]]
+- Units rendered this session: [[list + job ids]]
+- Units generated as stills (awaiting i2v/assemble): [[list + media ids]]
+- Post assemble: [[CapCut steps — captions, VO, logo, aspects]]
+- Blocked only if: [[truly no gen tools AND no assets — else generate]]
+- User assets requested?: [[optional upgrade — NOT a blocker]]
+```
+
+## Asset ladder — generate vs ask
+
+| State | Do |
+| --- | --- |
+| User gave UI screenshots / logo SVG | Bind as Image-N; screen-record preferred for UI beats |
+| URL / brand colors only (S0–S1) | **Generate** calm UI keyframes per `generated-ui-authenticity.md`; tag ASSUMED; disclose synthetic UI if platform requires |
+| Pack product, no photos | Generate pack-locked stills from sheet; don’t ask and stall |
+| Truly text-only + **no** image/video tools | Package-only + NOT_RENDERED + paste-ready prompts — still full beat sheet |
+
+**Optional ask (≤1):** “If you have real product UI exports, send them for a v2 lock.”  
+**Forbidden ask as delivery:** “Send screenshots so I can finish” when you already have Kling/Flux/etc.
+
+## UI / SaaS / voice-agent products
+
+The interface **is** the product. Rubber holographic UI is the trap (credits burned, looks fake).
+
+1. Lock a **flat UI documentary** product sheet (palette, type, 3 screen states).  
+2. Generate **3 stills**: idle / solved / confirm — see `references/generated-ui-authenticity.md`.  
+3. Short i2v or hold + CapCut cuts between states (cursor/tap implied).  
+4. Burn labels/CTA in post if type melts.  
+5. Never invent “1,204 calls answered” on screen.
+
+## Credit hygiene
+
+- One harness owns renders for a package.  
+- Cost-check before each gen; prefer turbo/short clips for B-roll.  
+- Do not spawn a second agent on the same brief.  
+- Hook-only render is **incomplete** unless the brief asked for a 6–8s cut.
+
+## Done means
+
+1. Lint `ok: true`  
+2. Full timed script covered  
+3. Either all units have real job/export ids **or** a complete generated asset kit + CapCut assemble steps the agent (or user) can run without new creative decisions  
+4. Stranger mute-watches 0–3s and knows the situation  
+
+---
+## 3) HUMAN BUILD OS
+
+# Human Build OS — how a practitioner actually makes the ad
+
+**Mission:** Studies teach *what* to emulate. This file teaches *how* a human builds it with real tools — so any LM finishes a cut instead of stopping at a concept slide.
+
+Pair with: `studies/corpus.json` (`human_build` steps) · `prompts/finish-the-cut.md` · `references/generated-ui-authenticity.md` · retrieve `payload.studies`.
+
+## Rule
+
+Steal **structure** (timing, shot job, text density, cut rhythm). Never copy competitor lines, logos, reviews, or claimed CTR/ROAS.
+
+```text
+study.when_to_emulate → pick study
+→ rewrite every word for THIS brand
+→ run human_build steps with the tools you actually have
+→ finish-the-cut across the full timed duration
+→ lint until ok:true
+```
+
+## Tool ladders (pick what your harness probe found)
+
+| Job | Connected | Assembler | Package-only |
+| --- | --- | --- | --- |
+| Talking-head / confession | Seedance / Kling i2v | Kling / Hailuo / Wan + CapCut | Still + timed script + prompts |
+| UI / SaaS aha | Screen record → edit | Generate 3 flat UI states → CapCut | Exact UI prompts + states |
+| Macro beauty / food | Product plate → i2v | Flux/Nano stills → short i2v | Macro still prompts + loop notes |
+| Hero / brand film | Seedance cinema ladder | Wan/LTX/Kling keyframes → grade | Dual-track prompts + endcard spec |
+| Captions / CTA / logo | CapCut / AE in post | CapCut / CapCut web | Post owns type — never hope the model burns it |
+| Voice | Studio / Eleven / TTS | TTS in CapCut | VO script quoted in beats |
+
+Probe first (`probe-harness.mjs`). Do not invent MCP job ids. Missing UI captures → generate authentic flat UI; do not stall asking for screenshots.
+
+## Class playbooks
+
+### `viral_native` (confession, skit, food loop, listicle)
+
+1. Hook from **customer language** (reviews/support), not brand vibes.  
+2. Imperfect light / native texture on face or food — brand late.  
+3. Product/UI insert as **proof**, not a floating logo.  
+4. Jump cuts on breath; captions ≤8 words on the open.  
+5. One CTA endcard; export 9:16 (+1:1 if paid Meta).
+
+### `performance_dr` (PAS, local geo, voice agent, text-first)
+
+1. One JTBD + one pain **object** (bill, missed call, inbox, city).  
+2. Solution after ~8–12s via demo (real or generated UI).  
+3. Objection crush only with ledger-safe lines.  
+4. Single CTA path (Start free / Book / Call).  
+5. Finish every second of the timed sheet — hook-only is incomplete.
+
+### `award_brand_film` (hero spectacle)
+
+1. Lock product sheet (colorway/pack) before any gen.  
+2. Spectacle must still be the product’s physics — no logo 0–3s.  
+3. Keyframe stills → i2v; hold product ≥1.2s; grade once.  
+4. Signature endcard in post.  
+5. Always cut a UGC/DR twin for spend (dual-track).
+
+## Per-unit habit (every class)
+
+For each unit prompt name: **CAMERA / LIGHT / MOTION / GRADE / NEGATIVES**.  
+Craft block: ≥2 `#HEX`, real fonts, motion, E1, formats.  
+Claims: user proof or `[PLACEHOLDER…]` — never invented %.
+
+## Research ritual (10 minutes, optional but sharp)
+
+1. Open libraries from retrieve `attention_models.research` / `studies[].research_where`.  
+2. Note: hook type, seconds-to-product, caption density, CTA count, audio type.  
+3. Emulate those jobs for **this** brand (`prompts/emulate-attention-model.md`).  
+4. Private named-competitor breakdowns → `studies/private/` (gitignored).
+
+## Done
+
+- Study id + attention model id named in the package  
+- Timed script ≥6 rows with exact quoted VO  
+- `human_build` steps executed or explicitly mapped to your rung  
+- Full duration covered (`finish-the-cut`)  
+- Lint `"ok": true` with real JSON  
+
+---
+## 4) HARNESS EQUALIZATION
 
 # Harness equalization — make any LLM’s tools good enough
 
@@ -154,7 +311,7 @@ HARNESS TOOL CARD
 Rung chosen + tool card filled + lint-clean package (or honest no-shell self-check).
 
 ---
-## 3) NO-SHELL LINT
+## 5) NO-SHELL LINT
 
 # No-shell lint checklist — hard gate
 
@@ -206,16 +363,19 @@ PATTERN PRIMARY: [[id from offline or prior retrieve]]
 ```
 
 ---
-## 4) ATTENTION + HARNESS
+## 6) STUDIES + ATTENTION + HARNESS
 
 - Probe: node scripts/probe-harness.mjs
+- Studies: studies/corpus.json (via retrieve `studies`)
+- Human build: references/human-build-os.md
 - Lab: examples/visual/attention-lab.html
 - Libraries: references/ad-libraries.md
+- Generated UI: references/generated-ui-authenticity.md
 - Offline retrieve: references/retrieve-offline-compact.json
 - Angles: references/angle-axes.md
 
 ---
-## 5) CRAFT DEFAULTS
+## 7) CRAFT DEFAULTS
 
 # Craft defaults (compressed)
 
@@ -231,7 +391,7 @@ PATTERN PRIMARY: [[id from offline or prior retrieve]]
 - No leftover [[BRACKETS]] · never invent lint JSON or job ids
 
 ---
-## 6) PACKAGE SKELETON
+## 8) PACKAGE SKELETON
 
 # Package skeleton — COPY THIS FILE, fill [[BRACKETS]], do not delete sections
 
@@ -458,7 +618,7 @@ NEGATIVES: melted type, wrong label, logo redraw, extra fingers, watermark, iden
 - Self-critique completed: yes
 
 ---
-## 7) GOLD DENSITY EXCERPT
+## 9) GOLD DENSITY EXCERPT
 
 ### Concept (chosen)
 - Three options: (1) smiling hold-to-camera serum (2) “4:07pm” base-fail clock (3) ASMR drop only  
@@ -488,7 +648,7 @@ NEGATIVES: melted type, wrong label, logo redraw, extra fingers, watermark, iden
 - Aspect matrix: 9:16 master; 1:1 reflow type (not center-crop); cinema twin may add 16:9
 - Finish handoff: CapCut V1 clips U1–U3 · V2 captions/endcard · per production-finish-spec.md
 ---
-## 8) COMMANDS
+## 10) COMMANDS
 
 ```bash
 cd skills/ad-intelligence

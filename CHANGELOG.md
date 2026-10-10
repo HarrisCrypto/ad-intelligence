@@ -1,5 +1,23 @@
 # Changelog
 
+## 3.14.0 — 2026-10-10
+
+**Studies OS** — any LM / any harness can one-shot from archetypal viral, performance, and award-film structures: when to emulate, what to steal, how a human builds with real tools — without scraping creatives.
+
+### Added
+- `studies/corpus.json` — 10 archetypal studies (confession UGC, skit, PAS, hero film, beauty macro, food loop, local geo, voice agent, listicle, text-first X)
+- `studies/README.md` · `studies/private.example.json` · gitignored `studies/private/`
+- `references/human-build-os.md` — tool ladders + class playbooks (viral / DR / brand film)
+- `retrieve.mjs` returns matched `studies` (public + private) in full and `--compact`
+- Offline retrieve + context packs include studies / human-build
+
+### Changed
+- One-shot / SKILL / emulate / Attention Lab / INSTALL: study → emulate → human_build → finish-the-cut
+- Plugin **3.14.0**
+
+### Preserved
+- No scraped creatives in public repo; claim firewall; private competitor breakdowns stay local
+
 ## 3.13.0 — 2026-10-10
 
 **Finish the cut** — stop the Hermes failure mode: render an 8s hook, then ask the human for UI screenshots while parallel agents burn credits on rubber dashboards.

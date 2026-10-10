@@ -1,8 +1,8 @@
 {
   "name": "ad-intelligence",
   "displayName": "Ad Intelligence",
-  "version": "3.13.0",
-  "description": "One-shot agency-grade ads: finish the full cut, generate authentic UI, probe tools, craft lint.",
+  "version": "3.14.0",
+  "description": "One-shot agency-grade ads: study viral/pro/award structures, emulate, human-build, finish the cut, craft lint.",
   "author": {
     "name": "HarrisCrypto"
   },

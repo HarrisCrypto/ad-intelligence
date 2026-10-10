@@ -15,8 +15,9 @@ Any coding agent (Cursor, Claude Code, Codex, Gemini CLI, OpenClaw, Copilot, …
 ## Mandatory
 
 1. `node skills/ad-intelligence/scripts/probe-harness.mjs` — equalize tools → rung  
-2. Follow `skills/ad-intelligence/prompts/one-shot.md`  
+2. Follow `skills/ad-intelligence/prompts/one-shot.md` — retrieve **studies** + attention models, emulate structure, map `human_build`  
 3. `lint-package.mjs` until `"ok": true` — never invent lint or job ids  
+4. Finish the cut when gen tools exist (`prompts/finish-the-cut.md`)  
 
 ## Ready check
 

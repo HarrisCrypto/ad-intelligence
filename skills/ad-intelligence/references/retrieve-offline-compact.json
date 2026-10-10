@@ -1,9 +1,9 @@
 {
   "id": "retrieve-offline-compact",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "updated": "2026-10-10",
-  "purpose": "Compact retrieve slices for harnesses without shell. Prefer live retrieve.mjs when available. Never invent pattern ids.",
-  "how_to_use": "Match niche|platform key (or closest). Paste picks + attention_models into package Retrieval. Then one-shot.",
+  "purpose": "Compact retrieve slices for harnesses without shell. Prefer live retrieve.mjs when available. Never invent pattern ids or study ids.",
+  "how_to_use": "Match niche|platform key (or closest). Paste picks + attention_models + studies into package Retrieval. Then one-shot (study → emulate → human_build).",
   "by_query": {
     "beauty|tiktok": {
       "query": {
@@ -225,6 +225,178 @@
             "how": "Top ads / tips by region → watch hook velocity, caption burn-in, loopability. Emulate pacing, not brand.",
             "platforms": [
               "tiktok"
+            ]
+          }
+        ]
+      },
+      "studies": {
+        "primary": "study_beauty_macro_transform",
+        "challenger": "study_award_hero_spectacle",
+        "count": 9,
+        "human_build_os": "references/human-build-os.md",
+        "items": [
+          {
+            "id": "study_beauty_macro_transform",
+            "class": "performance_dr",
+            "title": "Beauty / hair macro + matched transform",
+            "when_to_emulate": [
+              "Shampoo, skincare, cosmetics",
+              "Texture sells"
+            ],
+            "steal": [
+              "Matched framing",
+              "True color",
+              "Pack label readable"
+            ],
+            "never_copy": [
+              "Fake clinical %",
+              "Face morph as ‘results’"
+            ],
+            "structure": {
+              "duration_s": 18,
+              "hook_0_3": "BEFORE state or macro mid-motion — no logo",
+              "beats": [
+                {
+                  "t": "0–2s",
+                  "job": "before/macro",
+                  "note": "matched light"
+                },
+                {
+                  "t": "2–8s",
+                  "job": "process/texture",
+                  "note": "true color"
+                },
+                {
+                  "t": "8–14s",
+                  "job": "after/movement",
+                  "note": "same angle"
+                },
+                {
+                  "t": "14–18s",
+                  "job": "pack lock + CTA",
+                  "note": "SKU-true"
+                }
+              ]
+            },
+            "human_build": [
+              {
+                "step": 1,
+                "action": "Shade/SKU lock on sheet; refuse mismatch",
+                "tools": [
+                  "product-sheet"
+                ]
+              },
+              {
+                "step": 2,
+                "action": "Macro stills + before/after pair → short i2v on hair/texture only",
+                "tools": [
+                  "flux",
+                  "kling"
+                ]
+              },
+              {
+                "step": 3,
+                "action": "CapCut labels BEFORE/AFTER; shop CTA endcard",
+                "tools": [
+                  "capcut"
+                ]
+              }
+            ],
+            "attention_model_ids": [
+              "am_hair_transform",
+              "am_macro_lust_loop",
+              "am_before_after_matchcut"
+            ],
+            "pattern_ids": [
+              "beauty-macro-tabletop",
+              "before-after-reveal",
+              "grwm-soft-sell"
+            ]
+          },
+          {
+            "id": "study_award_hero_spectacle",
+            "class": "award_brand_film",
+            "title": "Hero spectacle / brand film craft",
+            "when_to_emulate": [
+              "Launch memory",
+              "Luxury, auto, flagship DTC",
+              "You have dual-track budget (cinema + UGC twin)"
+            ],
+            "steal": [
+              "Motivated camera",
+              "Product hold ≥1.2s",
+              "Grade consistency",
+              "Endcard craft"
+            ],
+            "never_copy": [
+              "Their art direction verbatim",
+              "Invented awards/metrics"
+            ],
+            "structure": {
+              "duration_s": 30,
+              "hook_0_3": "Spectacle that is still the product’s physics — no logo",
+              "beats": [
+                {
+                  "t": "0–3s",
+                  "job": "spectacle/macro",
+                  "note": "no logo sting"
+                },
+                {
+                  "t": "3–18s",
+                  "job": "human + product moves",
+                  "note": "sheet lock"
+                },
+                {
+                  "t": "18–26s",
+                  "job": "one capability climax",
+                  "note": "experience not bullets"
+                },
+                {
+                  "t": "26–30s",
+                  "job": "signature endcard",
+                  "note": "logo+CTA in post"
+                }
+              ]
+            },
+            "human_build": [
+              {
+                "step": 1,
+                "action": "Lock pack/colorway sheet + capability line (one JTBD)",
+                "tools": [
+                  "product-sheet"
+                ]
+              },
+              {
+                "step": 2,
+                "action": "Keyframe stills (hero angles) → i2v clips on ladder Wan/LTX/Kling/Seedance",
+                "tools": [
+                  "flux",
+                  "kling",
+                  "seedance"
+                ]
+              },
+              {
+                "step": 3,
+                "action": "Grade + type + logo endcard in CapCut/AE; never hope model burns logo",
+                "tools": [
+                  "capcut",
+                  "figma"
+                ]
+              },
+              {
+                "step": 4,
+                "action": "Cut UGC twin same JTBD for spend efficiency",
+                "tools": [
+                  "dual-track"
+                ]
+              }
+            ],
+            "attention_model_ids": [
+              "am_hero_spectacle"
+            ],
+            "pattern_ids": [
+              "hero-product-film",
+              "cinematic-brand-spot"
             ]
           }
         ]
@@ -486,6 +658,178 @@
           }
         ]
       },
+      "studies": {
+        "primary": "study_beauty_macro_transform",
+        "challenger": "study_award_hero_spectacle",
+        "count": 9,
+        "human_build_os": "references/human-build-os.md",
+        "items": [
+          {
+            "id": "study_beauty_macro_transform",
+            "class": "performance_dr",
+            "title": "Beauty / hair macro + matched transform",
+            "when_to_emulate": [
+              "Shampoo, skincare, cosmetics",
+              "Texture sells"
+            ],
+            "steal": [
+              "Matched framing",
+              "True color",
+              "Pack label readable"
+            ],
+            "never_copy": [
+              "Fake clinical %",
+              "Face morph as ‘results’"
+            ],
+            "structure": {
+              "duration_s": 18,
+              "hook_0_3": "BEFORE state or macro mid-motion — no logo",
+              "beats": [
+                {
+                  "t": "0–2s",
+                  "job": "before/macro",
+                  "note": "matched light"
+                },
+                {
+                  "t": "2–8s",
+                  "job": "process/texture",
+                  "note": "true color"
+                },
+                {
+                  "t": "8–14s",
+                  "job": "after/movement",
+                  "note": "same angle"
+                },
+                {
+                  "t": "14–18s",
+                  "job": "pack lock + CTA",
+                  "note": "SKU-true"
+                }
+              ]
+            },
+            "human_build": [
+              {
+                "step": 1,
+                "action": "Shade/SKU lock on sheet; refuse mismatch",
+                "tools": [
+                  "product-sheet"
+                ]
+              },
+              {
+                "step": 2,
+                "action": "Macro stills + before/after pair → short i2v on hair/texture only",
+                "tools": [
+                  "flux",
+                  "kling"
+                ]
+              },
+              {
+                "step": 3,
+                "action": "CapCut labels BEFORE/AFTER; shop CTA endcard",
+                "tools": [
+                  "capcut"
+                ]
+              }
+            ],
+            "attention_model_ids": [
+              "am_hair_transform",
+              "am_macro_lust_loop",
+              "am_before_after_matchcut"
+            ],
+            "pattern_ids": [
+              "beauty-macro-tabletop",
+              "before-after-reveal",
+              "grwm-soft-sell"
+            ]
+          },
+          {
+            "id": "study_award_hero_spectacle",
+            "class": "award_brand_film",
+            "title": "Hero spectacle / brand film craft",
+            "when_to_emulate": [
+              "Launch memory",
+              "Luxury, auto, flagship DTC",
+              "You have dual-track budget (cinema + UGC twin)"
+            ],
+            "steal": [
+              "Motivated camera",
+              "Product hold ≥1.2s",
+              "Grade consistency",
+              "Endcard craft"
+            ],
+            "never_copy": [
+              "Their art direction verbatim",
+              "Invented awards/metrics"
+            ],
+            "structure": {
+              "duration_s": 30,
+              "hook_0_3": "Spectacle that is still the product’s physics — no logo",
+              "beats": [
+                {
+                  "t": "0–3s",
+                  "job": "spectacle/macro",
+                  "note": "no logo sting"
+                },
+                {
+                  "t": "3–18s",
+                  "job": "human + product moves",
+                  "note": "sheet lock"
+                },
+                {
+                  "t": "18–26s",
+                  "job": "one capability climax",
+                  "note": "experience not bullets"
+                },
+                {
+                  "t": "26–30s",
+                  "job": "signature endcard",
+                  "note": "logo+CTA in post"
+                }
+              ]
+            },
+            "human_build": [
+              {
+                "step": 1,
+                "action": "Lock pack/colorway sheet + capability line (one JTBD)",
+                "tools": [
+                  "product-sheet"
+                ]
+              },
+              {
+                "step": 2,
+                "action": "Keyframe stills (hero angles) → i2v clips on ladder Wan/LTX/Kling/Seedance",
+                "tools": [
+                  "flux",
+                  "kling",
+                  "seedance"
+                ]
+              },
+              {
+                "step": 3,
+                "action": "Grade + type + logo endcard in CapCut/AE; never hope model burns logo",
+                "tools": [
+                  "capcut",
+                  "figma"
+                ]
+              },
+              {
+                "step": 4,
+                "action": "Cut UGC twin same JTBD for spend efficiency",
+                "tools": [
+                  "dual-track"
+                ]
+              }
+            ],
+            "attention_model_ids": [
+              "am_hero_spectacle"
+            ],
+            "pattern_ids": [
+              "hero-product-film",
+              "cinematic-brand-spot"
+            ]
+          }
+        ]
+      },
       "results": [
         {
           "id": "beauty-macro-tabletop",
@@ -694,6 +1038,154 @@
               "meta",
               "facebook",
               "instagram"
+            ]
+          }
+        ]
+      },
+      "studies": {
+        "primary": "study_food_crave_loop",
+        "challenger": "study_viral_skit_punchline",
+        "count": 9,
+        "human_build_os": "references/human-build-os.md",
+        "items": [
+          {
+            "id": "study_food_crave_loop",
+            "class": "viral_native",
+            "title": "Food / bev crave ASMR loop",
+            "when_to_emulate": [
+              "CPG, restaurants, coffee, snacks"
+            ],
+            "steal": [
+              "Mid-action open",
+              "Loop seam",
+              "True food color"
+            ],
+            "never_copy": [
+              "Fake CGI steam that breaks trust"
+            ],
+            "structure": {
+              "duration_s": 12,
+              "hook_0_3": "Pour/bite/steam mid-action",
+              "beats": [
+                {
+                  "t": "0–2s",
+                  "job": "crave open",
+                  "note": "no logo"
+                },
+                {
+                  "t": "2–8s",
+                  "job": "satisfy loop",
+                  "note": "SKU truth"
+                },
+                {
+                  "t": "8–12s",
+                  "job": "pack + order CTA or seamless loop",
+                  "note": "organic may omit CTA"
+                }
+              ]
+            },
+            "human_build": [
+              {
+                "step": 1,
+                "action": "Shoot or gen macro pour/crunch still → i2v loop",
+                "tools": [
+                  "flux",
+                  "kling"
+                ]
+              },
+              {
+                "step": 2,
+                "action": "Design loop reset; CapCut captions optional",
+                "tools": [
+                  "capcut"
+                ]
+              }
+            ],
+            "attention_model_ids": [
+              "am_food_crave_asmr",
+              "am_macro_lust_loop"
+            ],
+            "pattern_ids": [
+              "product-loop-demo",
+              "unboxing-asmr",
+              "beauty-macro-tabletop"
+            ]
+          },
+          {
+            "id": "study_viral_skit_punchline",
+            "class": "viral_native",
+            "title": "Skit → product punchline",
+            "when_to_emulate": [
+              "Share/comment goals",
+              "Apps, food, fintech humor",
+              "Younger skew"
+            ],
+            "steal": [
+              "Punchline timing",
+              "Character continuity",
+              "Paid = original audio"
+            ],
+            "never_copy": [
+              "Their bit wording",
+              "Uncleared sounds in paid"
+            ],
+            "structure": {
+              "duration_s": 18,
+              "hook_0_3": "Absurd premise completes only when product appears",
+              "beats": [
+                {
+                  "t": "0–2s",
+                  "job": "cold open bit",
+                  "note": "premise line"
+                },
+                {
+                  "t": "2–10s",
+                  "job": "escalate",
+                  "note": "no hard sell"
+                },
+                {
+                  "t": "10–15s",
+                  "job": "product = punchline",
+                  "note": "mechanism = joke"
+                },
+                {
+                  "t": "15–18s",
+                  "job": "light CTA",
+                  "note": "one path"
+                }
+              ]
+            },
+            "human_build": [
+              {
+                "step": 1,
+                "action": "Write premise where product is the only logical punchline",
+                "tools": [
+                  "concept",
+                  "angle-axes"
+                ]
+              },
+              {
+                "step": 2,
+                "action": "Shoot/gen silent performance first; add VO/bed in post",
+                "tools": [
+                  "kling",
+                  "capcut"
+                ]
+              },
+              {
+                "step": 3,
+                "action": "Clear audio rights before paid boost",
+                "tools": [
+                  "rights"
+                ]
+              }
+            ],
+            "attention_model_ids": [
+              "am_skit_punchline"
+            ],
+            "pattern_ids": [
+              "skit-sketch-ad",
+              "meme-native-trend"
             ]
           }
         ]
@@ -967,6 +1459,193 @@
           }
         ]
       },
+      "studies": {
+        "primary": "study_perf_pas_meta",
+        "challenger": "study_voice_agent_missed_call",
+        "count": 10,
+        "human_build_os": "references/human-build-os.md",
+        "items": [
+          {
+            "id": "study_perf_pas_meta",
+            "class": "performance_dr",
+            "title": "Performance PAS (Meta / YouTube)",
+            "when_to_emulate": [
+              "Lead gen / trial",
+              "SaaS, B2B, fintech education",
+              "Retarget + cold"
+            ],
+            "steal": [
+              "Object-led open",
+              "Solution after ~10s",
+              "Single CTA"
+            ],
+            "never_copy": [
+              "Fake ROI",
+              "Competitor UI chrome"
+            ],
+            "structure": {
+              "duration_s": 27,
+              "hook_0_3": "Pain object before brand",
+              "beats": [
+                {
+                  "t": "0–3s",
+                  "job": "pain object",
+                  "note": "bill, inbox, missed call"
+                },
+                {
+                  "t": "3–10s",
+                  "job": "agitate once",
+                  "note": "no feature laundry"
+                },
+                {
+                  "t": "10–20s",
+                  "job": "solve via demo",
+                  "note": "real or generated UI"
+                },
+                {
+                  "t": "20–24s",
+                  "job": "objection crush",
+                  "note": "ledger-safe"
+                },
+                {
+                  "t": "24–27s",
+                  "job": "one CTA",
+                  "note": "Start free / Book demo"
+                }
+              ]
+            },
+            "human_build": [
+              {
+                "step": 1,
+                "action": "Name one JTBD + pain object from real workflow",
+                "tools": [
+                  "brief-from-url",
+                  "sheets"
+                ]
+              },
+              {
+                "step": 2,
+                "action": "Build 3 UI states (idle/solve/confirm) — capture or generate authentic flat UI",
+                "tools": [
+                  "generated-ui-authenticity",
+                  "flux"
+                ]
+              },
+              {
+                "step": 3,
+                "action": "Gen pain B-roll (phone/desk) + assemble PAS in CapCut with VO",
+                "tools": [
+                  "kling",
+                  "tts",
+                  "capcut"
+                ]
+              },
+              {
+                "step": 4,
+                "action": "Finish-the-cut across full duration; log jobs; lint",
+                "tools": [
+                  "finish-the-cut",
+                  "lint-package"
+                ]
+              }
+            ],
+            "attention_model_ids": [
+              "am_pas_pain_stack",
+              "am_ui_aha_saas"
+            ],
+            "pattern_ids": [
+              "pas-pain-stack",
+              "app-demo-ui"
+            ]
+          },
+          {
+            "id": "study_voice_agent_missed_call",
+            "class": "performance_dr",
+            "title": "Voice / AI agent missed-call → booked",
+            "when_to_emulate": [
+              "Voice AI, front-desk, after-hours SaaS",
+              "OPlyai-class products"
+            ],
+            "steal": [
+              "Void vs answered split",
+              "Calm UI not neon brain",
+              "Full cut not hook-only"
+            ],
+            "never_copy": [
+              "Fake call volume",
+              "Robot mascot as product"
+            ],
+            "structure": {
+              "duration_s": 24,
+              "hook_0_3": "Phone ringing → void (no logo)",
+              "beats": [
+                {
+                  "t": "0–8s",
+                  "job": "missed-call void",
+                  "note": "gen OK"
+                },
+                {
+                  "t": "8–14s",
+                  "job": "UI idle → answered",
+                  "note": "generate if no captures"
+                },
+                {
+                  "t": "14–20s",
+                  "job": "booking confirm",
+                  "note": "flat UI documentary"
+                },
+                {
+                  "t": "20–24s",
+                  "job": "one CTA endcard",
+                  "note": "post owns type"
+                }
+              ]
+            },
+            "human_build": [
+              {
+                "step": 1,
+                "action": "Lock UI sheet (3 states) + voice sheet",
+                "tools": [
+                  "sheets",
+                  "generated-ui-authenticity"
+                ]
+              },
+              {
+                "step": 2,
+                "action": "Render K1/C1 ring void (Kling turbo OK)",
+                "tools": [
+                  "kling"
+                ]
+              },
+              {
+                "step": 3,
+                "action": "Generate 3 UI stills; CapCut hard cuts + TTS + endcard — finish-the-cut",
+                "tools": [
+                  "flux",
+                  "capcut",
+                  "tts",
+                  "finish-the-cut"
+                ]
+              },
+              {
+                "step": 4,
+                "action": "Do not ask human for screenshots as a blocker; optional v2 upgrade",
+                "tools": [
+                  "finish-the-cut"
+                ]
+              }
+            ],
+            "attention_model_ids": [
+              "am_voice_agent_missed",
+              "am_ui_aha_saas"
+            ],
+            "pattern_ids": [
+              "pas-pain-stack",
+              "app-demo-ui"
+            ]
+          }
+        ]
+      },
       "results": [
         {
           "id": "motion-design-explainer",
@@ -1236,6 +1915,193 @@
           }
         ]
       },
+      "studies": {
+        "primary": "study_voice_agent_missed_call",
+        "challenger": "study_perf_pas_meta",
+        "count": 10,
+        "human_build_os": "references/human-build-os.md",
+        "items": [
+          {
+            "id": "study_voice_agent_missed_call",
+            "class": "performance_dr",
+            "title": "Voice / AI agent missed-call → booked",
+            "when_to_emulate": [
+              "Voice AI, front-desk, after-hours SaaS",
+              "OPlyai-class products"
+            ],
+            "steal": [
+              "Void vs answered split",
+              "Calm UI not neon brain",
+              "Full cut not hook-only"
+            ],
+            "never_copy": [
+              "Fake call volume",
+              "Robot mascot as product"
+            ],
+            "structure": {
+              "duration_s": 24,
+              "hook_0_3": "Phone ringing → void (no logo)",
+              "beats": [
+                {
+                  "t": "0–8s",
+                  "job": "missed-call void",
+                  "note": "gen OK"
+                },
+                {
+                  "t": "8–14s",
+                  "job": "UI idle → answered",
+                  "note": "generate if no captures"
+                },
+                {
+                  "t": "14–20s",
+                  "job": "booking confirm",
+                  "note": "flat UI documentary"
+                },
+                {
+                  "t": "20–24s",
+                  "job": "one CTA endcard",
+                  "note": "post owns type"
+                }
+              ]
+            },
+            "human_build": [
+              {
+                "step": 1,
+                "action": "Lock UI sheet (3 states) + voice sheet",
+                "tools": [
+                  "sheets",
+                  "generated-ui-authenticity"
+                ]
+              },
+              {
+                "step": 2,
+                "action": "Render K1/C1 ring void (Kling turbo OK)",
+                "tools": [
+                  "kling"
+                ]
+              },
+              {
+                "step": 3,
+                "action": "Generate 3 UI stills; CapCut hard cuts + TTS + endcard — finish-the-cut",
+                "tools": [
+                  "flux",
+                  "capcut",
+                  "tts",
+                  "finish-the-cut"
+                ]
+              },
+              {
+                "step": 4,
+                "action": "Do not ask human for screenshots as a blocker; optional v2 upgrade",
+                "tools": [
+                  "finish-the-cut"
+                ]
+              }
+            ],
+            "attention_model_ids": [
+              "am_voice_agent_missed",
+              "am_ui_aha_saas"
+            ],
+            "pattern_ids": [
+              "pas-pain-stack",
+              "app-demo-ui"
+            ]
+          },
+          {
+            "id": "study_perf_pas_meta",
+            "class": "performance_dr",
+            "title": "Performance PAS (Meta / YouTube)",
+            "when_to_emulate": [
+              "Lead gen / trial",
+              "SaaS, B2B, fintech education",
+              "Retarget + cold"
+            ],
+            "steal": [
+              "Object-led open",
+              "Solution after ~10s",
+              "Single CTA"
+            ],
+            "never_copy": [
+              "Fake ROI",
+              "Competitor UI chrome"
+            ],
+            "structure": {
+              "duration_s": 27,
+              "hook_0_3": "Pain object before brand",
+              "beats": [
+                {
+                  "t": "0–3s",
+                  "job": "pain object",
+                  "note": "bill, inbox, missed call"
+                },
+                {
+                  "t": "3–10s",
+                  "job": "agitate once",
+                  "note": "no feature laundry"
+                },
+                {
+                  "t": "10–20s",
+                  "job": "solve via demo",
+                  "note": "real or generated UI"
+                },
+                {
+                  "t": "20–24s",
+                  "job": "objection crush",
+                  "note": "ledger-safe"
+                },
+                {
+                  "t": "24–27s",
+                  "job": "one CTA",
+                  "note": "Start free / Book demo"
+                }
+              ]
+            },
+            "human_build": [
+              {
+                "step": 1,
+                "action": "Name one JTBD + pain object from real workflow",
+                "tools": [
+                  "brief-from-url",
+                  "sheets"
+                ]
+              },
+              {
+                "step": 2,
+                "action": "Build 3 UI states (idle/solve/confirm) — capture or generate authentic flat UI",
+                "tools": [
+                  "generated-ui-authenticity",
+                  "flux"
+                ]
+              },
+              {
+                "step": 3,
+                "action": "Gen pain B-roll (phone/desk) + assemble PAS in CapCut with VO",
+                "tools": [
+                  "kling",
+                  "tts",
+                  "capcut"
+                ]
+              },
+              {
+                "step": 4,
+                "action": "Finish-the-cut across full duration; log jobs; lint",
+                "tools": [
+                  "finish-the-cut",
+                  "lint-package"
+                ]
+              }
+            ],
+            "attention_model_ids": [
+              "am_pas_pain_stack",
+              "am_ui_aha_saas"
+            ],
+            "pattern_ids": [
+              "pas-pain-stack",
+              "app-demo-ui"
+            ]
+          }
+        ]
+      },
       "results": [
         {
           "id": "motion-design-explainer",
@@ -1456,6 +2322,169 @@
               "meta",
               "facebook",
               "instagram"
+            ]
+          }
+        ]
+      },
+      "studies": {
+        "primary": "study_local_geo_phone",
+        "challenger": "study_voice_agent_missed_call",
+        "count": 9,
+        "human_build_os": "references/human-build-os.md",
+        "items": [
+          {
+            "id": "study_local_geo_phone",
+            "class": "performance_dr",
+            "title": "Local geo trust → phone CTA",
+            "when_to_emulate": [
+              "Trades, clinics, local services",
+              "Click-to-call"
+            ],
+            "steal": [
+              "Geo in frame 0",
+              "One CTA = call",
+              "NAP consistency"
+            ],
+            "never_copy": [
+              "Unproven #1",
+              "Wrong phone"
+            ],
+            "structure": {
+              "duration_s": 20,
+              "hook_0_3": "City + specialty on real place",
+              "beats": [
+                {
+                  "t": "0–3s",
+                  "job": "geo hook",
+                  "note": "facility/van truth"
+                },
+                {
+                  "t": "3–10s",
+                  "job": "work proof",
+                  "note": "no stock skyline"
+                },
+                {
+                  "t": "10–15s",
+                  "job": "proof if ledger-backed",
+                  "note": "PLACEHOLDER OK"
+                },
+                {
+                  "t": "15–20s",
+                  "job": "phone hold ≥3s",
+                  "note": "NAP match"
+                }
+              ]
+            },
+            "human_build": [
+              {
+                "step": 1,
+                "action": "Confirm NAP + specialty; shoot facility or gen careful place plate",
+                "tools": [
+                  "brief",
+                  "phone"
+                ]
+              },
+              {
+                "step": 2,
+                "action": "Assemble geo → work → phone endcard in CapCut",
+                "tools": [
+                  "capcut",
+                  "kling"
+                ]
+              }
+            ],
+            "attention_model_ids": [
+              "am_local_geo_trust"
+            ],
+            "pattern_ids": [
+              "local-service-trust",
+              "social-proof-stack"
+            ]
+          },
+          {
+            "id": "study_voice_agent_missed_call",
+            "class": "performance_dr",
+            "title": "Voice / AI agent missed-call → booked",
+            "when_to_emulate": [
+              "Voice AI, front-desk, after-hours SaaS",
+              "OPlyai-class products"
+            ],
+            "steal": [
+              "Void vs answered split",
+              "Calm UI not neon brain",
+              "Full cut not hook-only"
+            ],
+            "never_copy": [
+              "Fake call volume",
+              "Robot mascot as product"
+            ],
+            "structure": {
+              "duration_s": 24,
+              "hook_0_3": "Phone ringing → void (no logo)",
+              "beats": [
+                {
+                  "t": "0–8s",
+                  "job": "missed-call void",
+                  "note": "gen OK"
+                },
+                {
+                  "t": "8–14s",
+                  "job": "UI idle → answered",
+                  "note": "generate if no captures"
+                },
+                {
+                  "t": "14–20s",
+                  "job": "booking confirm",
+                  "note": "flat UI documentary"
+                },
+                {
+                  "t": "20–24s",
+                  "job": "one CTA endcard",
+                  "note": "post owns type"
+                }
+              ]
+            },
+            "human_build": [
+              {
+                "step": 1,
+                "action": "Lock UI sheet (3 states) + voice sheet",
+                "tools": [
+                  "sheets",
+                  "generated-ui-authenticity"
+                ]
+              },
+              {
+                "step": 2,
+                "action": "Render K1/C1 ring void (Kling turbo OK)",
+                "tools": [
+                  "kling"
+                ]
+              },
+              {
+                "step": 3,
+                "action": "Generate 3 UI stills; CapCut hard cuts + TTS + endcard — finish-the-cut",
+                "tools": [
+                  "flux",
+                  "capcut",
+                  "tts",
+                  "finish-the-cut"
+                ]
+              },
+              {
+                "step": 4,
+                "action": "Do not ask human for screenshots as a blocker; optional v2 upgrade",
+                "tools": [
+                  "finish-the-cut"
+                ]
+              }
+            ],
+            "attention_model_ids": [
+              "am_voice_agent_missed",
+              "am_ui_aha_saas"
+            ],
+            "pattern_ids": [
+              "pas-pain-stack",
+              "app-demo-ui"
             ]
           }
         ]
@@ -1715,6 +2744,176 @@
           }
         ]
       },
+      "studies": {
+        "primary": "study_viral_confession_ugc",
+        "challenger": "study_food_crave_loop",
+        "count": 9,
+        "human_build_os": "references/human-build-os.md",
+        "items": [
+          {
+            "id": "study_viral_confession_ugc",
+            "class": "viral_native",
+            "title": "Viral confession UGC (TikTok / Reels native)",
+            "when_to_emulate": [
+              "Cold social, need trust fast",
+              "Beauty, health-adjacent lifestyle, consumer apps",
+              "Budget favors phone + captions over cinema"
+            ],
+            "steal": [
+              "Mid-thought open",
+              "Text density ≤8 words",
+              "Jump cuts on breath",
+              "Brand late"
+            ],
+            "never_copy": [
+              "Their confession lines",
+              "Fake review counts",
+              "Studio ‘UGC’ polish"
+            ],
+            "structure": {
+              "duration_s": 21,
+              "hook_0_3": "Specific costly mistake in burned text before brand",
+              "beats": [
+                {
+                  "t": "0–1.5s",
+                  "job": "confession text + imperfect face",
+                  "note": "no logo"
+                },
+                {
+                  "t": "1.5–6s",
+                  "job": "name failure mode",
+                  "note": "one mechanism noun"
+                },
+                {
+                  "t": "6–14s",
+                  "job": "demo insert",
+                  "note": "product/UI as proof"
+                },
+                {
+                  "t": "14–18s",
+                  "job": "outcome in plain words",
+                  "note": "ledger-safe"
+                },
+                {
+                  "t": "18–21s",
+                  "job": "one CTA endcard",
+                  "note": "post owns type"
+                }
+              ]
+            },
+            "human_build": [
+              {
+                "step": 1,
+                "action": "Write confession hook from customer language (reviews/support), not vibes",
+                "tools": [
+                  "brief",
+                  "claim-ledger"
+                ]
+              },
+              {
+                "step": 2,
+                "action": "Shoot or gen talking-head still → short i2v; keep imperfect light",
+                "tools": [
+                  "phone",
+                  "kling",
+                  "flux"
+                ]
+              },
+              {
+                "step": 3,
+                "action": "Insert product/UI demo unit locked to sheet",
+                "tools": [
+                  "screen_record",
+                  "generated-ui-authenticity"
+                ]
+              },
+              {
+                "step": 4,
+                "action": "CapCut: captions, jump cuts, one CTA endcard, loudness",
+                "tools": [
+                  "capcut"
+                ]
+              },
+              {
+                "step": 5,
+                "action": "Export 9:16 (+1:1 if paid Meta); re-lint package with job ids",
+                "tools": [
+                  "lint-package"
+                ]
+              }
+            ],
+            "attention_model_ids": [
+              "am_muted_confession"
+            ],
+            "pattern_ids": [
+              "ugc-talking-head-scroll-stop"
+            ]
+          },
+          {
+            "id": "study_food_crave_loop",
+            "class": "viral_native",
+            "title": "Food / bev crave ASMR loop",
+            "when_to_emulate": [
+              "CPG, restaurants, coffee, snacks"
+            ],
+            "steal": [
+              "Mid-action open",
+              "Loop seam",
+              "True food color"
+            ],
+            "never_copy": [
+              "Fake CGI steam that breaks trust"
+            ],
+            "structure": {
+              "duration_s": 12,
+              "hook_0_3": "Pour/bite/steam mid-action",
+              "beats": [
+                {
+                  "t": "0–2s",
+                  "job": "crave open",
+                  "note": "no logo"
+                },
+                {
+                  "t": "2–8s",
+                  "job": "satisfy loop",
+                  "note": "SKU truth"
+                },
+                {
+                  "t": "8–12s",
+                  "job": "pack + order CTA or seamless loop",
+                  "note": "organic may omit CTA"
+                }
+              ]
+            },
+            "human_build": [
+              {
+                "step": 1,
+                "action": "Shoot or gen macro pour/crunch still → i2v loop",
+                "tools": [
+                  "flux",
+                  "kling"
+                ]
+              },
+              {
+                "step": 2,
+                "action": "Design loop reset; CapCut captions optional",
+                "tools": [
+                  "capcut"
+                ]
+              }
+            ],
+            "attention_model_ids": [
+              "am_food_crave_asmr",
+              "am_macro_lust_loop"
+            ],
+            "pattern_ids": [
+              "product-loop-demo",
+              "unboxing-asmr",
+              "beauty-macro-tabletop"
+            ]
+          }
+        ]
+      },
       "results": [
         {
           "id": "product-loop-demo",
@@ -1930,6 +3129,191 @@
             "how": "Top ads / tips by region → watch hook velocity, caption burn-in, loopability. Emulate pacing, not brand.",
             "platforms": [
               "tiktok"
+            ]
+          }
+        ]
+      },
+      "studies": {
+        "primary": "study_viral_confession_ugc",
+        "challenger": "study_beauty_macro_transform",
+        "count": 9,
+        "human_build_os": "references/human-build-os.md",
+        "items": [
+          {
+            "id": "study_viral_confession_ugc",
+            "class": "viral_native",
+            "title": "Viral confession UGC (TikTok / Reels native)",
+            "when_to_emulate": [
+              "Cold social, need trust fast",
+              "Beauty, health-adjacent lifestyle, consumer apps",
+              "Budget favors phone + captions over cinema"
+            ],
+            "steal": [
+              "Mid-thought open",
+              "Text density ≤8 words",
+              "Jump cuts on breath",
+              "Brand late"
+            ],
+            "never_copy": [
+              "Their confession lines",
+              "Fake review counts",
+              "Studio ‘UGC’ polish"
+            ],
+            "structure": {
+              "duration_s": 21,
+              "hook_0_3": "Specific costly mistake in burned text before brand",
+              "beats": [
+                {
+                  "t": "0–1.5s",
+                  "job": "confession text + imperfect face",
+                  "note": "no logo"
+                },
+                {
+                  "t": "1.5–6s",
+                  "job": "name failure mode",
+                  "note": "one mechanism noun"
+                },
+                {
+                  "t": "6–14s",
+                  "job": "demo insert",
+                  "note": "product/UI as proof"
+                },
+                {
+                  "t": "14–18s",
+                  "job": "outcome in plain words",
+                  "note": "ledger-safe"
+                },
+                {
+                  "t": "18–21s",
+                  "job": "one CTA endcard",
+                  "note": "post owns type"
+                }
+              ]
+            },
+            "human_build": [
+              {
+                "step": 1,
+                "action": "Write confession hook from customer language (reviews/support), not vibes",
+                "tools": [
+                  "brief",
+                  "claim-ledger"
+                ]
+              },
+              {
+                "step": 2,
+                "action": "Shoot or gen talking-head still → short i2v; keep imperfect light",
+                "tools": [
+                  "phone",
+                  "kling",
+                  "flux"
+                ]
+              },
+              {
+                "step": 3,
+                "action": "Insert product/UI demo unit locked to sheet",
+                "tools": [
+                  "screen_record",
+                  "generated-ui-authenticity"
+                ]
+              },
+              {
+                "step": 4,
+                "action": "CapCut: captions, jump cuts, one CTA endcard, loudness",
+                "tools": [
+                  "capcut"
+                ]
+              },
+              {
+                "step": 5,
+                "action": "Export 9:16 (+1:1 if paid Meta); re-lint package with job ids",
+                "tools": [
+                  "lint-package"
+                ]
+              }
+            ],
+            "attention_model_ids": [
+              "am_muted_confession"
+            ],
+            "pattern_ids": [
+              "ugc-talking-head-scroll-stop"
+            ]
+          },
+          {
+            "id": "study_beauty_macro_transform",
+            "class": "performance_dr",
+            "title": "Beauty / hair macro + matched transform",
+            "when_to_emulate": [
+              "Shampoo, skincare, cosmetics",
+              "Texture sells"
+            ],
+            "steal": [
+              "Matched framing",
+              "True color",
+              "Pack label readable"
+            ],
+            "never_copy": [
+              "Fake clinical %",
+              "Face morph as ‘results’"
+            ],
+            "structure": {
+              "duration_s": 18,
+              "hook_0_3": "BEFORE state or macro mid-motion — no logo",
+              "beats": [
+                {
+                  "t": "0–2s",
+                  "job": "before/macro",
+                  "note": "matched light"
+                },
+                {
+                  "t": "2–8s",
+                  "job": "process/texture",
+                  "note": "true color"
+                },
+                {
+                  "t": "8–14s",
+                  "job": "after/movement",
+                  "note": "same angle"
+                },
+                {
+                  "t": "14–18s",
+                  "job": "pack lock + CTA",
+                  "note": "SKU-true"
+                }
+              ]
+            },
+            "human_build": [
+              {
+                "step": 1,
+                "action": "Shade/SKU lock on sheet; refuse mismatch",
+                "tools": [
+                  "product-sheet"
+                ]
+              },
+              {
+                "step": 2,
+                "action": "Macro stills + before/after pair → short i2v on hair/texture only",
+                "tools": [
+                  "flux",
+                  "kling"
+                ]
+              },
+              {
+                "step": 3,
+                "action": "CapCut labels BEFORE/AFTER; shop CTA endcard",
+                "tools": [
+                  "capcut"
+                ]
+              }
+            ],
+            "attention_model_ids": [
+              "am_hair_transform",
+              "am_macro_lust_loop",
+              "am_before_after_matchcut"
+            ],
+            "pattern_ids": [
+              "beauty-macro-tabletop",
+              "before-after-reveal",
+              "grwm-soft-sell"
             ]
           }
         ]
@@ -2197,6 +3581,174 @@
           }
         ]
       },
+      "studies": {
+        "primary": "study_perf_pas_meta",
+        "challenger": "study_text_first_x",
+        "count": 10,
+        "human_build_os": "references/human-build-os.md",
+        "items": [
+          {
+            "id": "study_perf_pas_meta",
+            "class": "performance_dr",
+            "title": "Performance PAS (Meta / YouTube)",
+            "when_to_emulate": [
+              "Lead gen / trial",
+              "SaaS, B2B, fintech education",
+              "Retarget + cold"
+            ],
+            "steal": [
+              "Object-led open",
+              "Solution after ~10s",
+              "Single CTA"
+            ],
+            "never_copy": [
+              "Fake ROI",
+              "Competitor UI chrome"
+            ],
+            "structure": {
+              "duration_s": 27,
+              "hook_0_3": "Pain object before brand",
+              "beats": [
+                {
+                  "t": "0–3s",
+                  "job": "pain object",
+                  "note": "bill, inbox, missed call"
+                },
+                {
+                  "t": "3–10s",
+                  "job": "agitate once",
+                  "note": "no feature laundry"
+                },
+                {
+                  "t": "10–20s",
+                  "job": "solve via demo",
+                  "note": "real or generated UI"
+                },
+                {
+                  "t": "20–24s",
+                  "job": "objection crush",
+                  "note": "ledger-safe"
+                },
+                {
+                  "t": "24–27s",
+                  "job": "one CTA",
+                  "note": "Start free / Book demo"
+                }
+              ]
+            },
+            "human_build": [
+              {
+                "step": 1,
+                "action": "Name one JTBD + pain object from real workflow",
+                "tools": [
+                  "brief-from-url",
+                  "sheets"
+                ]
+              },
+              {
+                "step": 2,
+                "action": "Build 3 UI states (idle/solve/confirm) — capture or generate authentic flat UI",
+                "tools": [
+                  "generated-ui-authenticity",
+                  "flux"
+                ]
+              },
+              {
+                "step": 3,
+                "action": "Gen pain B-roll (phone/desk) + assemble PAS in CapCut with VO",
+                "tools": [
+                  "kling",
+                  "tts",
+                  "capcut"
+                ]
+              },
+              {
+                "step": 4,
+                "action": "Finish-the-cut across full duration; log jobs; lint",
+                "tools": [
+                  "finish-the-cut",
+                  "lint-package"
+                ]
+              }
+            ],
+            "attention_model_ids": [
+              "am_pas_pain_stack",
+              "am_ui_aha_saas"
+            ],
+            "pattern_ids": [
+              "pas-pain-stack",
+              "app-demo-ui"
+            ]
+          },
+          {
+            "id": "study_text_first_x",
+            "class": "performance_dr",
+            "title": "Text-first punch (X / LinkedIn)",
+            "when_to_emulate": [
+              "B2B, founder POV, hot take with mechanism"
+            ],
+            "steal": [
+              "Readable at 1× muted",
+              "Short lines",
+              "Opinion + mechanism"
+            ],
+            "never_copy": [
+              "Guaranteed returns",
+              "Wall of hashtags"
+            ],
+            "structure": {
+              "duration_s": 15,
+              "hook_0_3": "First line alone stops the feed",
+              "beats": [
+                {
+                  "t": "0–1s",
+                  "job": "bold first line",
+                  "note": "high contrast"
+                },
+                {
+                  "t": "1–8s",
+                  "job": "proof visual/UI",
+                  "note": "support"
+                },
+                {
+                  "t": "8–12s",
+                  "job": "mechanism",
+                  "note": "how"
+                },
+                {
+                  "t": "12–15s",
+                  "job": "one link CTA",
+                  "note": "single path"
+                }
+              ]
+            },
+            "human_build": [
+              {
+                "step": 1,
+                "action": "Write first line that states a costly belief",
+                "tools": [
+                  "concept"
+                ]
+              },
+              {
+                "step": 2,
+                "action": "Pair with one UI/product still; kinetic type in CapCut",
+                "tools": [
+                  "capcut",
+                  "flux"
+                ]
+              }
+            ],
+            "attention_model_ids": [
+              "am_text_first_x"
+            ],
+            "pattern_ids": [
+              "hot-take-controversy",
+              "pas-pain-stack"
+            ]
+          }
+        ]
+      },
       "results": [
         {
           "id": "kinetic-type-explainer",
@@ -2460,6 +4012,193 @@
             "how": "Top ads / tips by region → watch hook velocity, caption burn-in, loopability. Emulate pacing, not brand.",
             "platforms": [
               "tiktok"
+            ]
+          }
+        ]
+      },
+      "studies": {
+        "primary": "study_perf_pas_meta",
+        "challenger": "study_voice_agent_missed_call",
+        "count": 9,
+        "human_build_os": "references/human-build-os.md",
+        "items": [
+          {
+            "id": "study_perf_pas_meta",
+            "class": "performance_dr",
+            "title": "Performance PAS (Meta / YouTube)",
+            "when_to_emulate": [
+              "Lead gen / trial",
+              "SaaS, B2B, fintech education",
+              "Retarget + cold"
+            ],
+            "steal": [
+              "Object-led open",
+              "Solution after ~10s",
+              "Single CTA"
+            ],
+            "never_copy": [
+              "Fake ROI",
+              "Competitor UI chrome"
+            ],
+            "structure": {
+              "duration_s": 27,
+              "hook_0_3": "Pain object before brand",
+              "beats": [
+                {
+                  "t": "0–3s",
+                  "job": "pain object",
+                  "note": "bill, inbox, missed call"
+                },
+                {
+                  "t": "3–10s",
+                  "job": "agitate once",
+                  "note": "no feature laundry"
+                },
+                {
+                  "t": "10–20s",
+                  "job": "solve via demo",
+                  "note": "real or generated UI"
+                },
+                {
+                  "t": "20–24s",
+                  "job": "objection crush",
+                  "note": "ledger-safe"
+                },
+                {
+                  "t": "24–27s",
+                  "job": "one CTA",
+                  "note": "Start free / Book demo"
+                }
+              ]
+            },
+            "human_build": [
+              {
+                "step": 1,
+                "action": "Name one JTBD + pain object from real workflow",
+                "tools": [
+                  "brief-from-url",
+                  "sheets"
+                ]
+              },
+              {
+                "step": 2,
+                "action": "Build 3 UI states (idle/solve/confirm) — capture or generate authentic flat UI",
+                "tools": [
+                  "generated-ui-authenticity",
+                  "flux"
+                ]
+              },
+              {
+                "step": 3,
+                "action": "Gen pain B-roll (phone/desk) + assemble PAS in CapCut with VO",
+                "tools": [
+                  "kling",
+                  "tts",
+                  "capcut"
+                ]
+              },
+              {
+                "step": 4,
+                "action": "Finish-the-cut across full duration; log jobs; lint",
+                "tools": [
+                  "finish-the-cut",
+                  "lint-package"
+                ]
+              }
+            ],
+            "attention_model_ids": [
+              "am_pas_pain_stack",
+              "am_ui_aha_saas"
+            ],
+            "pattern_ids": [
+              "pas-pain-stack",
+              "app-demo-ui"
+            ]
+          },
+          {
+            "id": "study_voice_agent_missed_call",
+            "class": "performance_dr",
+            "title": "Voice / AI agent missed-call → booked",
+            "when_to_emulate": [
+              "Voice AI, front-desk, after-hours SaaS",
+              "OPlyai-class products"
+            ],
+            "steal": [
+              "Void vs answered split",
+              "Calm UI not neon brain",
+              "Full cut not hook-only"
+            ],
+            "never_copy": [
+              "Fake call volume",
+              "Robot mascot as product"
+            ],
+            "structure": {
+              "duration_s": 24,
+              "hook_0_3": "Phone ringing → void (no logo)",
+              "beats": [
+                {
+                  "t": "0–8s",
+                  "job": "missed-call void",
+                  "note": "gen OK"
+                },
+                {
+                  "t": "8–14s",
+                  "job": "UI idle → answered",
+                  "note": "generate if no captures"
+                },
+                {
+                  "t": "14–20s",
+                  "job": "booking confirm",
+                  "note": "flat UI documentary"
+                },
+                {
+                  "t": "20–24s",
+                  "job": "one CTA endcard",
+                  "note": "post owns type"
+                }
+              ]
+            },
+            "human_build": [
+              {
+                "step": 1,
+                "action": "Lock UI sheet (3 states) + voice sheet",
+                "tools": [
+                  "sheets",
+                  "generated-ui-authenticity"
+                ]
+              },
+              {
+                "step": 2,
+                "action": "Render K1/C1 ring void (Kling turbo OK)",
+                "tools": [
+                  "kling"
+                ]
+              },
+              {
+                "step": 3,
+                "action": "Generate 3 UI stills; CapCut hard cuts + TTS + endcard — finish-the-cut",
+                "tools": [
+                  "flux",
+                  "capcut",
+                  "tts",
+                  "finish-the-cut"
+                ]
+              },
+              {
+                "step": 4,
+                "action": "Do not ask human for screenshots as a blocker; optional v2 upgrade",
+                "tools": [
+                  "finish-the-cut"
+                ]
+              }
+            ],
+            "attention_model_ids": [
+              "am_voice_agent_missed",
+              "am_ui_aha_saas"
+            ],
+            "pattern_ids": [
+              "pas-pain-stack",
+              "app-demo-ui"
             ]
           }
         ]

@@ -105,11 +105,15 @@ for (const [niche, platform, expectNicheSub, expectAmSub] of matrix) {
   const amOk = am.startsWith("am_") && (expectAmSub === "am_" || am.includes(expectAmSub.replace("am_", "")) || am.startsWith(expectAmSub));
   const picksOk = !!json.picks?.primary && json.picks.dual_track_twin !== json.picks.primary;
   const timingOk = (json.attention_models?.models?.[0]?.timing || []).length >= 3;
+  const studiesOk =
+    !!json.studies?.primary &&
+    (json.studies?.items || []).length >= 1 &&
+    Array.isArray(json.studies.items[0]?.human_build);
   liveSlices[`${niche}|${platform}`] = json;
   ok(
     `retrieve ${niche}|${platform}`,
-    nicheOk && amOk && picksOk && timingOk,
-    `niche=${json.resolved?.niche_id} am=${am} primary=${json.picks?.primary} timing=${json.attention_models?.models?.[0]?.timing?.length || 0}`
+    nicheOk && amOk && picksOk && timingOk && studiesOk,
+    `niche=${json.resolved?.niche_id} am=${am} study=${json.studies?.primary} primary=${json.picks?.primary} timing=${json.attention_models?.models?.[0]?.timing?.length || 0}`
   );
 }
 
@@ -190,6 +194,33 @@ if (fs.existsSync(data)) {
   const am = JSON.parse(fs.readFileSync(path.join(ROOT, "references", "attention-models.json"), "utf8"));
   ok("attention models ≥12", (am.models || []).length >= 12, String(am.models.length));
   ok("public libraries ≥4", (am.public_libraries || []).length >= 4);
+}
+
+// 9b) Studies corpus + human-build OS
+console.log("\nSTUDIES OS");
+const studiesPath = path.join(ROOT, "studies", "corpus.json");
+const humanBuildPath = path.join(ROOT, "references", "human-build-os.md");
+ok("studies/corpus.json", fs.existsSync(studiesPath));
+ok("human-build-os.md", fs.existsSync(humanBuildPath));
+if (fs.existsSync(studiesPath)) {
+  const corpus = JSON.parse(fs.readFileSync(studiesPath, "utf8"));
+  ok("studies ≥8", (corpus.studies || []).length >= 8, String((corpus.studies || []).length));
+  const withBuild = (corpus.studies || []).filter(
+    (s) => Array.isArray(s.human_build) && s.human_build.length >= 2
+  );
+  ok("studies have human_build", withBuild.length === (corpus.studies || []).length);
+  const voice = retrieveCompact("voice ai", "meta").json;
+  ok(
+    "voice ai study = missed-call",
+    voice?.studies?.primary === "study_voice_agent_missed_call",
+    voice?.studies?.primary
+  );
+  const shampooStudy = retrieveCompact("shampoo", "tiktok").json;
+  ok(
+    "shampoo study = beauty macro",
+    shampooStudy?.studies?.primary === "study_beauty_macro_transform",
+    shampooStudy?.studies?.primary
+  );
 }
 
 // 10) Ranking sanity (query affinity)

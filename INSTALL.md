@@ -2,13 +2,13 @@
 
 **Repo:** https://github.com/HarrisCrypto/ad-intelligence  
 **Skill root:** `skills/ad-intelligence/`  
-**Version:** **3.13.0** — see [CHANGELOG.md](./CHANGELOG.md)
+**Version:** **3.14.0** — see [CHANGELOG.md](./CHANGELOG.md)
 
 ---
 
 ## Why agents fail (and the fix)
 
-Agents miss the skill path, ignore their real tools, fill ledgers before ideas, or slap images + slogans. This skill forces: **probe harness → equalize rung → attention model → Concept → dense beats → craft → lint**.
+Agents miss the skill path, ignore their real tools, fill ledgers before ideas, or slap images + slogans. This skill forces: **probe harness → equalize rung → study → emulate → human_build → Concept → dense beats → craft → finish-the-cut → lint**.
 
 ---
 
@@ -35,12 +35,12 @@ node skills/ad-intelligence/scripts/agent-ready.mjs
 ## Paste this to your agent (one-shot)
 
 ```text
-Use Ad Intelligence v3.13 from https://github.com/HarrisCrypto/ad-intelligence
-Follow skills/ad-intelligence/prompts/one-shot.md EXACTLY — including finish-the-cut.md.
+Use Ad Intelligence v3.14 from https://github.com/HarrisCrypto/ad-intelligence
+Follow skills/ad-intelligence/prompts/one-shot.md EXACTLY — including studies + human-build-os + finish-the-cut.md.
 First: node skills/ad-intelligence/scripts/probe-harness.mjs — fill the tool card and pick a rung.
 If I give a website: node skills/ad-intelligence/scripts/brief-from-url.mjs <url>
-Open examples/visual/attention-lab.html and emulate an attention model.
-If UI screenshots are missing: generate authentic flat UI (generated-ui-authenticity.md) — do not stall.
+Retrieve studies + attention models; open Attention Lab; emulate structure (never copy).
+Build with real tools per human-build-os.md. If UI screenshots are missing: generate authentic flat UI — do not stall.
 
 Brief:
 - Company / product / URL:
@@ -54,9 +54,9 @@ Commands (from skills/ad-intelligence/):
 1) node scripts/probe-harness.mjs
 2) node scripts/start-package.mjs --out packages/<brand>-ad.md
 3) node scripts/retrieve.mjs --niche <niche> --platform <platform> --limit 5 --compact
-4) Attention model → Concept → ≥6 exact-VO rows → Craft → fill [[BRACKETS]]
+4) Study + attention model → emulate → human_build → Concept → ≥6 exact-VO rows → Craft → fill [[BRACKETS]]
 5) node scripts/lint-package.mjs packages/<brand>-ad.md until ok:true
-6) Deliver the file + lint JSON — never invent job ids or lint
+6) Finish the cut; deliver the file + lint JSON — never invent job ids or lint
 ```
 
 ---

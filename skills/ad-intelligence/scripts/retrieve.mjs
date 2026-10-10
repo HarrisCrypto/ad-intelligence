@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Retrieve ad blueprints by platform / style / funnel / niche / tier / virality / job.
+ * Retrieve ad blueprints + studies by platform / style / funnel / niche / tier / virality / job.
  *
  * Usage:
  *   node retrieve.mjs --niche beauty --tag viral --limit 5
@@ -10,6 +10,8 @@
  *   node retrieve.mjs --list
  *   node retrieve.mjs --list-niches
  *   node retrieve.mjs --niche beauty --platform tiktok --compact
+ *
+ * Compact payload includes studies (public corpus + optional studies/private/).
  */
 
 import fs from "node:fs";
@@ -210,6 +212,156 @@ function resolvePlatform(raw) {
     };
   }
   return { platform: key, warnings: [] };
+}
+
+function normToken(s) {
+  return String(s || "")
+    .toLowerCase()
+    .replace(/_/g, "-");
+}
+
+function loadStudies() {
+  const out = [];
+  const corpusPath = path.join(DB_ROOT, "studies", "corpus.json");
+  if (fs.existsSync(corpusPath)) {
+    try {
+      const corpus = loadJson(corpusPath);
+      for (const s of corpus.studies || []) {
+        if (s?.id) out.push({ ...s, private: false, source: "public" });
+      }
+    } catch {
+      /* ignore corrupt public corpus */
+    }
+  }
+  const privDir = path.join(DB_ROOT, "studies", "private");
+  if (fs.existsSync(privDir)) {
+    for (const f of fs.readdirSync(privDir)) {
+      if (!f.endsWith(".json")) continue;
+      try {
+        const s = loadJson(path.join(privDir, f));
+        if (s?.id)
+          out.push({ ...s, private: true, source: `private/${f}` });
+      } catch {
+        /* skip bad private files */
+      }
+    }
+  }
+  return out;
+}
+
+function scoreStudy(study, q, pickIds, amIds) {
+  let score = 0;
+  const nicheNorm = normToken(q.nicheResolved || q.niche);
+  const plat = (q.platform || "").toLowerCase();
+
+  if (nicheNorm) {
+    const nicheHit = (study.niches || []).some((n) => {
+      const nn = normToken(n);
+      return (
+        nn === nicheNorm ||
+        nn.includes(nicheNorm) ||
+        nicheNorm.includes(nn)
+      );
+    });
+    if (nicheHit) score += 8;
+    else score -= 1;
+  }
+
+  if (plat) {
+    if (
+      (study.platforms || []).some(
+        (p) => p === plat || p.includes(plat) || plat.includes(p)
+      )
+    )
+      score += 5;
+    else score -= 1;
+  }
+
+  for (const pid of study.pattern_ids || []) {
+    if (pickIds.has(pid)) score += 6;
+  }
+  for (const aid of study.attention_model_ids || []) {
+    if (amIds.has(aid)) score += 5;
+  }
+
+  if (q.tag) {
+    const t = q.tag.toLowerCase();
+    const hay = `${study.class || ""} ${study.title || ""}`.toLowerCase();
+    if (hay.includes(t)) score += 3;
+    if (t === "viral" && study.class === "viral_native") score += 4;
+    if (t === "award" && study.class === "award_brand_film") score += 4;
+  }
+
+  if (q.job) {
+    const hay = [
+      study.title,
+      study.class,
+      ...(study.when_to_emulate || []),
+      ...(study.steal || []),
+    ]
+      .join(" ")
+      .toLowerCase();
+    for (const token of q.job.toLowerCase().split(/\s+/).filter(Boolean)) {
+      if (hay.includes(token)) score += 2;
+    }
+  }
+
+  // Query-token affinity (voice/hair/food) — same spirit as attention ranking
+  const qRaw = `${q.niche || ""} ${nicheNorm} ${q.job || ""}`.toLowerCase();
+  const mid = `${study.id} ${study.title}`.toLowerCase();
+  if (/voice|missed.?call|front.?desk|after.?hours|oply/.test(qRaw)) {
+    if (/voice_agent|missed_call/.test(study.id)) score += 10;
+    else if (/pas_meta|ui_aha/.test(study.id)) score += 2;
+  } else if (/saas|software|b2b/.test(qRaw) && /pas|ui|voice|listicle|text_first/.test(mid)) {
+    score += 3;
+  }
+  if (/hair|shampoo|conditioner/.test(qRaw) && /beauty_macro|hair/.test(mid)) score += 8;
+  else if (/beauty|skincare|makeup/.test(qRaw) && /beauty|macro|confession|hero/.test(mid))
+    score += 4;
+  if (/food|snack|coffee|beverage|restaurant/.test(qRaw) && /food|crave|asmr/.test(mid))
+    score += 6;
+  else if (
+    nicheNorm === "ecommerce" &&
+    /food_crave|food \//.test(mid) &&
+    !/food|snack|coffee|beverage/.test(qRaw)
+  )
+    score -= 5;
+  if (/local|plumb|hvac|dentist|clinic/.test(qRaw) && /local|geo/.test(mid))
+    score += 6;
+  if (
+    nicheNorm === "ecommerce" &&
+    !/food|snack|coffee/.test(qRaw) &&
+    /hero_spectacle|macro_transform|confession/.test(study.id)
+  )
+    score += 3;
+
+  if (study.private) score += 2;
+  return score;
+}
+
+function compactStudy(study) {
+  return {
+    id: study.id,
+    class: study.class,
+    title: study.title,
+    private: !!study.private,
+    when_to_emulate: (study.when_to_emulate || []).slice(0, 4),
+    when_not: (study.when_not || []).slice(0, 3),
+    steal: study.steal || [],
+    never_copy: study.never_copy || [],
+    attention_model_ids: study.attention_model_ids || [],
+    pattern_ids: study.pattern_ids || [],
+    structure: study.structure
+      ? {
+          duration_s: study.structure.duration_s,
+          hook_0_3: study.structure.hook_0_3,
+          beats: (study.structure.beats || []).slice(0, 8),
+        }
+      : null,
+    human_build: study.human_build || [],
+    research_where: study.research_where || null,
+    gold_fixture: study.gold_fixture || null,
+  };
 }
 
 function scoreEntry(entry, q, recommendedIds) {
@@ -613,6 +765,38 @@ function main() {
     path.join(DATABASE, "trends/viral-operating-system.json")
   );
 
+  const pickIds = new Set(
+    [primary, challenger, dualTwin].filter(Boolean)
+  );
+  const amIds = new Set(
+    (attentionModels?.models || []).map((m) => m.id).filter(Boolean)
+  );
+  if (attentionModels?.primary) amIds.add(attentionModels.primary);
+  if (attentionModels?.challenger) amIds.add(attentionModels.challenger);
+
+  const rankedStudies = loadStudies()
+    .map((s) => ({ study: s, score: scoreStudy(s, q, pickIds, amIds) }))
+    .filter((x) => x.score > 0)
+    .sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score;
+      return a.study.id.localeCompare(b.study.id);
+    });
+
+  const studiesPayload = {
+    file: "studies/corpus.json",
+    docs: "studies/README.md",
+    human_build_os: "references/human-build-os.md",
+    emulate: "prompts/emulate-attention-model.md",
+    note: "Archetypal viral/pro/award structures — emulate timing & craft; never copy brand facts. Private studies load from studies/private/ when present.",
+    primary: rankedStudies[0]?.study?.id || null,
+    challenger: rankedStudies[1]?.study?.id || null,
+    count: rankedStudies.length,
+    items: rankedStudies.slice(0, 5).map((x) => ({
+      score: x.score,
+      ...compactStudy(x.study),
+    })),
+  };
+
   const payload = {
     query: q,
     resolved: {
@@ -632,6 +816,7 @@ function main() {
     niche: nichePack,
     swipe_signals: swipeSignals,
     attention_models: attentionModels,
+    studies: studiesPayload,
     viral_os_summary: {
       id: viralOs.id,
       trend_classes: viralOs.trend_classes.map((t) => t.id),
@@ -648,6 +833,7 @@ function main() {
     anti_patterns_file: "database/anti-patterns.json",
     hooks_file: "database/hooks/library.json",
     flows_file: "database/flows/library.json",
+    human_build_os: "references/human-build-os.md",
   };
 
   if (q.compact) {
@@ -673,6 +859,25 @@ function main() {
             emulate: attentionModels.emulate,
           }
         : null,
+      studies: {
+        primary: studiesPayload.primary,
+        challenger: studiesPayload.challenger,
+        count: studiesPayload.count,
+        human_build_os: studiesPayload.human_build_os,
+        items: studiesPayload.items.slice(0, 3).map((s) => ({
+          id: s.id,
+          class: s.class,
+          title: s.title,
+          when_to_emulate: s.when_to_emulate,
+          steal: s.steal,
+          never_copy: s.never_copy,
+          structure: s.structure,
+          human_build: s.human_build,
+          attention_model_ids: s.attention_model_ids,
+          pattern_ids: s.pattern_ids,
+          private: s.private,
+        })),
+      },
       results: results.map((r) => ({
         id: r.blueprint?.id,
         score: r.score,
@@ -686,7 +891,7 @@ function main() {
           .slice(0, 2),
         beats: (r.blueprint?.beats || []).slice(0, 6),
       })),
-      next: "Pick attention model → emulate timing → Concept + ≥6-row script → lint (prompts/one-shot.md)",
+      next: "Pick study + attention model → emulate structure → human_build → Concept + ≥6-row script → finish-the-cut → lint (prompts/one-shot.md)",
     };
     console.log(JSON.stringify(compact, null, 2));
   } else {

@@ -38,24 +38,25 @@ Packages that do **not** invent proof, drift product identity, or burn three red
 | **Ship gate demo** | `node skills/ad-intelligence/scripts/demo-quality-gates.mjs` |
 | **Contribute** | [CONTRIBUTING.md](./CONTRIBUTING.md) |
 
-**Version 3.13.0** — [CHANGELOG.md](./CHANGELOG.md)
+**Version 3.14.0** — [CHANGELOG.md](./CHANGELOG.md)
 
 ---
 
 ## What you get
 
 1. Pattern retrieve (47 blueprints, niche aliases)  
-2. Product + character sheets with provenance tags  
-3. Claim ledger — user proof or `[PLACEHOLDER]`, never vibes  
-4. Timed script (muted-first, one CTA) + dual-track default  
-5. MCP-correct **render plan** — connected-run, handoff, or **assembler** units  
-6. **Craft system** — palette, type, motion, sound, endcard (custom-template finish)  
-7. Self-critique + A/B/C against real failure modes  
-8. **Mechanical lint** + **render-QA** + intentional fail corpus  
-9. **Visual storyboard gallery** paired to gold fixtures  
-10. Stress briefs for messy / regulated prompts  
-11. Service-niche **voice / front-desk** phone-call gold fixture  
-12. GitHub bootstrap so any LLM can clone, retrieve, and lint 
+2. **Studies corpus** — viral / performance / award archetypes with when-to-emulate + human_build  
+3. Product + character sheets with provenance tags  
+4. Claim ledger — user proof or `[PLACEHOLDER]`, never vibes  
+5. Timed script (muted-first, one CTA) + dual-track default  
+6. MCP-correct **render plan** — connected-run, handoff, or **assembler** units  
+7. **Craft system** — palette, type, motion, sound, endcard (custom-template finish)  
+8. Self-critique + A/B/C against real failure modes  
+9. **Mechanical lint** + **render-QA** + intentional fail corpus  
+10. **Visual storyboard gallery** + Attention Lab  
+11. Stress briefs for messy / regulated prompts  
+12. Service-niche **voice / front-desk** phone-call gold fixture  
+13. GitHub bootstrap so any LLM can clone, retrieve, study, and lint 
 
 ---
 

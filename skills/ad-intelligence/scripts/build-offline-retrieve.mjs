@@ -68,6 +68,26 @@ for (const q of QUERIES) {
           research: j.attention_models.research,
         }
       : null,
+    studies: j.studies
+      ? {
+          primary: j.studies.primary,
+          challenger: j.studies.challenger,
+          count: j.studies.count,
+          human_build_os: j.studies.human_build_os,
+          items: (j.studies.items || []).slice(0, 2).map((s) => ({
+            id: s.id,
+            class: s.class,
+            title: s.title,
+            when_to_emulate: s.when_to_emulate,
+            steal: s.steal,
+            never_copy: s.never_copy,
+            structure: s.structure,
+            human_build: s.human_build,
+            attention_model_ids: s.attention_model_ids,
+            pattern_ids: s.pattern_ids,
+          })),
+        }
+      : null,
     results: (j.results || []).slice(0, 5).map((r) => ({
       id: r.id,
       name: r.name,
@@ -79,12 +99,12 @@ for (const q of QUERIES) {
 
 const out = {
   id: "retrieve-offline-compact",
-  version: "1.0.0",
+  version: "1.1.0",
   updated: new Date().toISOString().slice(0, 10),
   purpose:
-    "Compact retrieve slices for harnesses without shell. Prefer live retrieve.mjs when available. Never invent pattern ids.",
+    "Compact retrieve slices for harnesses without shell. Prefer live retrieve.mjs when available. Never invent pattern ids or study ids.",
   how_to_use:
-    "Match niche|platform key (or closest). Paste picks + attention_models into package Retrieval. Then one-shot.",
+    "Match niche|platform key (or closest). Paste picks + attention_models + studies into package Retrieval. Then one-shot (study → emulate → human_build).",
   by_query,
 };
 
