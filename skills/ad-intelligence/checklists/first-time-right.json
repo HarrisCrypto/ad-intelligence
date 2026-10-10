@@ -102,8 +102,8 @@
     },
     {
       "id": "craft-bar",
-      "ask": "Craft system filled (palette, grade, typography, motion grammar, sound, endcard, aspects) per elite-creative-os.md — package reads like a custom motion template?",
-      "fail_if": "Vague ‘cinematic’ only; missing type/endcard/aspect specs; hopes model draws logo/CTA text"
+      "ask": "Craft system specific enough to pass lint craft-* rules (≥2 HEX, named type, motion, E1 endcard, aspects) — not adjectives?",
+      "fail_if": "Vague ‘cinematic/stunning/nice colors/bold font’; missing type/endcard/aspect; compliance language in paid primary/captions; hopes model draws logo/CTA text"
     },
     {
       "id": "pipeline-rung",

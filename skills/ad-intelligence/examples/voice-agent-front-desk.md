@@ -98,7 +98,7 @@ Documentary clinic light → product UI sharp and flat (no neon cockpit) → end
 - Style id + production_tier + virality_posture: service phone / front-desk · production_tier assembler_hybrid · virality_posture b2b_local_trust
 - Palette: calm clinic blue `#4A6FA5` · soft gray `#E8EEF4` · accent missed-call red sparingly `#C45C5C` [ASSUMED]
 - Grade name: flat UI documentary — readable screens, no neon AI cockpit, no patient PHI
-- Typography: hook “Missed call?” ≤4 words · UI labels post · CTA “Book a demo” one only · no invented lift %
+- Typography: hook “Missed call?” ≤4 words Inter-like sans · UI labels post · CTA “Book a demo” one only
 - Motion grammar: K1 still ring/miss → C1 short i2v 3–5s → screen-record UI aha → E1 demo CTA ≥3s
 - Sound plan: muted UI + VO in CapCut; optional soft ring SFX; paid-safe bed
 - Endcard module E1: logo · Book a demo · no multi-CTA · 9:16 Meta + 1:1 LinkedIn
@@ -177,7 +177,7 @@ Book a demo
 ```
 
 ### Paid social copy
-- Primary text (148): After-hours callers shouldn’t hit a dead line. Deskline AI answers and books routine visits — then you review. Book a demo. No invented call stats.
+- Primary text (118): After-hours callers shouldn’t hit a dead line. Deskline AI answers and books routine visits — then you review. Book a demo.
 - Headline (24): After-hours front desk
 - Description (32): Deskline AI · Demo
 

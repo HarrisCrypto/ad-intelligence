@@ -172,7 +172,28 @@ The finisher should feel they received a **branded motion template**, not a chat
 
 ---
 
-## 11) Self-critique craft pass (add to rubric evidence)
+## 11) Strategy spine (before patterns)
+
+Write these in the package (Brief / JTBD area or a short Creative strategy note):
+
+- **Insight** — human truth + tension (one sentence)  
+- **Proposition** — ≤12 words, single-minded  
+- **Tone** — 3 “is” / 3 “never” words  
+- **Brand cue ≤3s** — product color/shape/asset on screen (not a logo sting)
+
+Three hook options as a **stack** each: frame 0 + motion 0–1s + ≤7 words text + first sound. Rank; ship the top one.
+
+## 12) Lint will reject vague craft
+
+`lint-package.mjs` now fails packages that only *have* a Craft system heading:
+
+- <2 HEX colors (unless USER_SUPPLIED brand tokens)  
+- Typography = “bold font” / missing type roles  
+- Missing Endcard E1 or aspect matrix  
+- Adjectives: cinematic, stunning, 8k/4k, sleek, epic, dynamic, vibrant, nice…  
+- Compliance leaks in **paid primary** or **captions** (“only when supplied”, “no invented”, ASSUMED, fixture)
+
+## 13) Self-critique craft pass (add to rubric evidence)
 
 Before shipping, answer YES or fix:
 
@@ -182,6 +203,7 @@ Before shipping, answer YES or fix:
 - [ ] Is there one clear visual hierarchy per beat (not equal competing elements)?  
 - [ ] Does the endcard look designed (margins, logo, one CTA)?  
 - [ ] Are tool names real for this session’s access?  
+- [ ] Would lint pass craft-hex / craft-vague / copy-leak?  
 
 ---
 

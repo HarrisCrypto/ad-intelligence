@@ -387,17 +387,28 @@ function main() {
   const challenger = results[1]?.blueprint?.id || null;
   let dualTwin = null;
   if (results.length) {
-    const cine = results.find((r) =>
-      ["brand_film", "premium_cinema", "high_production"].some(
-        (t) =>
-          r.blueprint.virality_posture === t ||
-          (r.blueprint.tags || []).includes("high-production") ||
-          (r.blueprint.production_tier || "").includes("high") ||
-          (r.blueprint.production_tier || "").includes("premium") ||
-          (r.blueprint.production_tier || "").includes("cinema")
-      )
+    // Never let dual-track twin equal the primary (cinema search used to include results[0])
+    const cine = results.find(
+      (r) =>
+        r.blueprint?.id !== primary &&
+        ["brand_film", "premium_cinema", "high_production"].some(
+          (t) =>
+            r.blueprint.virality_posture === t ||
+            (r.blueprint.tags || []).includes("high-production") ||
+            (r.blueprint.production_tier || "").includes("high") ||
+            (r.blueprint.production_tier || "").includes("premium") ||
+            (r.blueprint.production_tier || "").includes("cinema")
+        )
     );
-    dualTwin = cine?.blueprint?.id || results[2]?.blueprint?.id || null;
+    const fallback = results.find((r) => r.blueprint?.id !== primary)?.blueprint
+      ?.id;
+    dualTwin =
+      cine?.blueprint?.id ||
+      (results[2]?.blueprint?.id !== primary
+        ? results[2]?.blueprint?.id
+        : null) ||
+      (fallback !== challenger ? fallback : null) ||
+      null;
   }
 
   const pickRoutes = {};

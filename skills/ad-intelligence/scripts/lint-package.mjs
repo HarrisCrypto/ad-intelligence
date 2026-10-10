@@ -43,8 +43,53 @@ const SLOP = [
   /\bsay goodbye to\b/i,
 ];
 
+/** Vague “AI director” adjectives — fail in craft / shot list / unit prompts */
+const CRAFT_VAGUE = [
+  /\bcinematic\b/i,
+  /\bstunning\b/i,
+  /\bsleek\b/i,
+  /\bepic\b/i,
+  /\bdynamic\b/i,
+  /\bvibrant\b/i,
+  /\bbeautiful\b/i,
+  /\bgorgeous\b/i,
+  /\bnice\b/i,
+  /\b8k\b/i,
+  /\b4k\b/i,
+  /\bpremium look\b/i,
+];
+
+const COPY_LEAK = [
+  /only when (you )?suppl/i,
+  /no invented\b/i,
+  /reviews shown only/i,
+  /specs appear only/i,
+  /case numbers only/i,
+];
+
 const METRICISH =
   /(\d+\s*%|\d+\s*\/\s*\d+|ROAS|CTR|CPA|[\d,]+\s*(customers|reviews|stars|users))/i;
+
+function sectionBlock(text, headingRe) {
+  const lines = text.split(/\r?\n/);
+  const headTest = new RegExp(`^#{2,4}\\s+.*${headingRe.source}`, "i");
+  let start = -1;
+  for (let i = 0; i < lines.length; i++) {
+    if (headTest.test(lines[i])) {
+      start = i;
+      break;
+    }
+  }
+  if (start < 0) return "";
+  let end = lines.length;
+  for (let i = start + 1; i < lines.length; i++) {
+    if (/^#{2,4}\s+/.test(lines[i])) {
+      end = i;
+      break;
+    }
+  }
+  return lines.slice(start, end).join("\n");
+}
 
 function fail(issues, id, msg, line) {
   issues.push({ id, msg, line: line || null });
@@ -188,6 +233,94 @@ function lint(text, filePath) {
       "freshness-unchecked",
       "No LAST-VERIFIED / freshness check noted in package"
     );
+  }
+
+  // --- Craft specificity (heading alone is not enough) ---
+  const craftBlock = sectionBlock(text, /Craft system/i);
+  if (craftBlock) {
+    const hexes = craftBlock.match(/#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6})\b/g) || [];
+    const brandTokens =
+      /brand tokens?.*USER_SUPPLIED|USER_SUPPLIED.*brand (color|token|palette)/i.test(
+        craftBlock
+      );
+    if (hexes.length < 2 && !brandTokens) {
+      fail(
+        issues,
+        "craft-hex",
+        "Craft system needs ≥2 HEX colors (or USER_SUPPLIED brand tokens) — not ‘nice brand colors’"
+      );
+    }
+    if (!/Typography|type roles|font/i.test(craftBlock)) {
+      fail(issues, "craft-type", "Craft system missing Typography / type roles");
+    } else if (
+      /Typography:[^\n]*(bold font|nice font|cool font|modern font)\b/i.test(
+        craftBlock
+      )
+    ) {
+      fail(
+        issues,
+        "craft-font-generic",
+        "Typography must name a face/role (e.g. condensed display + neutral sans), not ‘bold font’"
+      );
+    }
+    if (!/Endcard|\bE1\b/i.test(craftBlock)) {
+      fail(
+        issues,
+        "craft-endcard",
+        "Craft system missing Endcard / E1 module (logo SVG, one CTA, hold)"
+      );
+    }
+    if (!/9:16|aspect matrix|aspects?:/i.test(craftBlock)) {
+      fail(
+        issues,
+        "craft-aspect",
+        "Craft system missing aspect matrix (e.g. 9:16 + 1:1, not center-crop)"
+      );
+    }
+    if (!/Motion grammar|camera|hold/i.test(craftBlock)) {
+      fail(
+        issues,
+        "craft-motion",
+        "Craft system missing Motion grammar (camera verbs + holds)"
+      );
+    }
+  }
+
+  // Vague craft lexicon in Craft system, Shot list, and unit prompts
+  const craftHot = [
+    craftBlock,
+    sectionBlock(text, /Shot list/i),
+    ...(text.match(/#### Unit[\s\S]*?(?=#### |\n### |\n## |$)/gi) || []),
+  ].join("\n");
+  for (const re of CRAFT_VAGUE) {
+    if (re.test(craftHot)) {
+      fail(
+        issues,
+        "craft-vague-lexicon",
+        `Vague craft adjective matched ${re}: use concrete camera/light/grade nouns`
+      );
+      break;
+    }
+  }
+
+  // Compliance language must not leak into consumer-facing caption / paid copy
+  const consumer = [
+    sectionBlock(text, /Caption track|Caption\b/i),
+    sectionBlock(text, /Paid social copy/i),
+  ].join("\n");
+  // Only scan primary/headline lines for paid; full caption block
+  const paidPrimary = (consumer.match(/Primary text[^\n]*/gi) || []).join("\n");
+  const captionBody = sectionBlock(text, /Caption track|Caption\b/i);
+  const leakScan = `${paidPrimary}\n${captionBody}`;
+  for (const re of COPY_LEAK) {
+    if (re.test(leakScan)) {
+      fail(
+        issues,
+        "copy-leak",
+        `Compliance/meta language in caption or paid primary text matched ${re} — keep PLACEHOLDER/ASSUMED in the ledger only`
+      );
+      break;
+    }
   }
 
   // Shape-only examples must not claim ship PASS in QA

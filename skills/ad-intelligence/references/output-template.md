@@ -80,11 +80,15 @@ Use four-backtick outer fences in your reply if you nest code blocks, so Seedanc
 (Beat → camera/lens → light — one line each; no vague “cinematic.”)
 
 ### Craft system (required — see elite-creative-os.md + production-finish-spec.md)
+Lint rejects vague craft. Need ≥2 HEX (or USER_SUPPLIED brand tokens), named type roles,
+motion verbs, Endcard E1, aspect matrix. Ban: cinematic / stunning / 8k / sleek / nice…
+Keep PLACEHOLDER / ASSUMED / “only when supplied” in the **ledger** — never in caption or paid primary text.
+
 - Style id + production_tier + virality_posture:
-- Palette (dominant / support / accent + HEX or brand tokens):
-- Grade name (e.g. clean daylight / cool clinical / warm tungsten / flat UI doc):
-- Typography: hook display · captions · CTA · legal (family/weight/max words/safe zones):
-- Motion grammar per beat (camera verbs + hold times):
+- Palette (dominant / support / accent + **#HEX** ×2+ or USER_SUPPLIED tokens):
+- Grade name (e.g. clean daylight / cool clinical / warm tungsten / flat UI doc) — parameters, not “cinematic”:
+- Typography: hook display · captions · CTA · legal (**named** family/role + weight + max words + safe zones):
+- Motion grammar per beat (camera verbs + hold times; product ≥1.2s, CTA ≥2.5s):
 - Sound plan (captions / VO / bed / SFX + paid-safe path):
 - Endcard module E1 (logo SVG, one CTA, legal, hold ≥2.5s, layouts per aspect):
 - Aspect matrix (9:16 / 1:1 / 16:9 as separate comps — not center-crop):

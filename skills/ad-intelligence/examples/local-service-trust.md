@@ -88,13 +88,13 @@ Get high-intent Austin leak calls with city + specialty on screen and the phone 
 | 14–20s | Endcard: phone held large 3s+ | Call [PLACEHOLDER: NAP phone] | One CTA | PLACEHOLDER |
 
 ### Shot list / visual system
-Exterior locked-off → WIP handheld → static review card (CapCut) → NAP endcard. Grade: documentary daylight. No teal cinematic gloom. Lower third clear for phone burn-in.
+Exterior locked-off → WIP handheld → static review card (CapCut) → NAP endcard. Grade: documentary daylight. No teal-orange film grade. Lower third clear for phone burn-in.
 
 ### Craft system (required)
 - Style id + production_tier + virality_posture: `local_service_trust` · production_tier documentary_trust · virality_posture local_performance
-- Palette: dominant work-van white/brand blue from sheet · support concrete gray · accent safety orange sparingly [ASSUMED from sheet]
+- Palette: dominant van white `#F5F5F5` · support brand navy `#1B3A5F` · accent safety orange `#E86A17` [ASSUMED from sheet]
 - Grade name: flat UI documentary daylight — honest, not teal-orange cinema
-- Typography: hook ≤6 words bold sans · NAP phone burn-in ≥3s large · CTA = phone only · legal small if licensed claim
+- Typography: hook ≤6 words DIN-like bold sans · NAP phone burn-in ≥3s large · CTA = phone only · legal small if licensed claim
 - Motion grammar: locked-off exterior 0–3s → handheld WIP 3–10s → static review card 10–16s → NAP endcard hold ≥3s
 - Sound plan: muted-first; optional light tool SFX; VO optional; paid-safe bed only
 - Endcard module E1: logo SVG · phone CTA only · service area line USER_SUPPLIED or PLACEHOLDER · 9:16 + 1:1 / 4:5
@@ -167,7 +167,7 @@ Call [PLACEHOLDER: NAP phone]
 ```
 
 ### Paid social copy
-- Primary text (118): Leak in Austin? Northside Plumbing — diagnosis-focused, real bay work. Tap Call. Reviews shown only when supplied.
+- Primary text (98): Leak in Austin? Northside Plumbing — diagnosis-focused, real bay work. Tap Call.
 - Headline (24): Austin leak diagnosis
 - Description (28): Northside Plumbing · Call
 
