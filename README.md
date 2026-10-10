@@ -12,6 +12,7 @@ Packages that do **not** invent proof, drift product identity, or burn three red
 
 | Start here | Link |
 | --- | --- |
+| **Classroom + Hub status (unified track)** | [HUB.md](./HUB.md) · [AUDIT.md](./AUDIT.md) · [classroom/](./classroom/) |
 | **Why it exists (before/after)** | [PROOF.md](./PROOF.md) |
 | **ONE-SHOT playbook (agents start here)** | [one-shot.md](./skills/ad-intelligence/prompts/one-shot.md) |
 | **Package skeleton (copy & fill)** | [package-skeleton.md](./skills/ad-intelligence/references/package-skeleton.md) |

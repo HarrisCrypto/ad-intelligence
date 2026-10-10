@@ -263,6 +263,6 @@ Seed from plan §0 + PART B0.1 / B0.2 (not implemented this phase):
 - [x] Plan-target gaps listed  
 - [x] PART B defects reproduced where testable (gold_fixture drop, finish fail-open)  
 - [x] No product code changed in this phase  
-- [ ] **User has seen this file** ← exit condition for Gate 0  
+- [x] **User has seen this file** — ack 2026-10-10 (“make sure it’s all together”)  
 
-**Stop.** Do not start Phase 1 until Gate 0 is acknowledged.
+**Gate 0 closed.** Unified track: [`HUB.md`](./HUB.md). Phase 1 rules: [`classroom/README.md`](./classroom/README.md).

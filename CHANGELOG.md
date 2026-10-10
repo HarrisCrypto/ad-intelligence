@@ -1,5 +1,19 @@
 # Changelog
 
+## Unreleased — Classroom + Production Hub
+
+**Gate 0–1 on the unified hub track** — audit + legal floor before render QA.
+
+### Added
+- `AUDIT.md` — Phase 0 inventory, script runs, keep/replace/gaps (Gate 0)
+- `HUB.md` — single-track status board
+- `classroom/README.md` — legal & sourcing rules (Gate 1)
+- `classroom/known-failure-modes.md` — Oply + process failure seeds
+- `classroom/private-cache/` gitignored for local reference media
+
+### Note
+v3.19 finish-cut quality lands in the same PR branch as this hub work.
+
 ## 3.19.0 — 2026-10-10
 
 **Finish-the-cut quality bar** — silent 8s hooks cannot count as finished ads; shape-claims-pass no longer punishes honest synthesis labels.
