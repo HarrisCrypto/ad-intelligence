@@ -10,8 +10,8 @@
     {
       "name": "ad-intelligence",
       "source": ".",
-      "description": "One-shot agency-grade ads — Attention Lab, any niche, public library research, craft lint.",
-      "version": "3.11.0",
+      "description": "One-shot agency-grade ads — multi-harness probe, Attention Lab, craft lint.",
+      "version": "3.12.0",
       "keywords": [
         "ads",
         "viral",

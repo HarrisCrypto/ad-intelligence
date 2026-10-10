@@ -17,7 +17,7 @@ Read this in under a minute, then open a gold fixture:
 | **Stress briefs (messy prompts)** | [`examples/stress-briefs/`](./skills/ad-intelligence/examples/stress-briefs/) |
 | Shape-only skeleton (structure, not quality) | [`entertainment-creator-series.md`](./skills/ad-intelligence/examples/entertainment-creator-series.md) |
 
-**v3.11:** Attention Lab + public ad-library research + any-niche URL briefs (hair/food/AI…) with emulate-the-model timing. **v3.10:** concept-first density + Cursor discovery + lint vs empty skeletons. **v3.9:** skeleton→retrieve→lint. Plus craft OS / assembler routing.
+**v3.12:** Multi-harness Agent OS — probe/equalize tools, `.claude`/`.agents`/`.github` skill paths, `AGENTS.md`, angle axes. **v3.11:** Attention Lab + public libraries + URL briefs. **v3.10:** concept-first lint. Plus craft OS / assembler routing.
 
 **v3.6–3.7:** triple-path / assembler / voice / Wan–LTX–Grok (+ peers) routing + render-QA.
 

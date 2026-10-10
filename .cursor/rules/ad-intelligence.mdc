@@ -6,12 +6,8 @@ alwaysApply: false
 When the user asks for ads, creatives, hooks, UGC, TikTok/Meta/YouTube spots,
 launch films, storyboards, or “make ads that don’t look like AI slop”:
 
-1. Use the **ad-intelligence** skill (`.cursor/skills/ad-intelligence` → `skills/ad-intelligence/SKILL.md`).
-2. URL/site briefs → `prompts/brief-from-url.md`. Then `prompts/one-shot.md`: attention model → Concept → dense beats → craft → lint.
-3. Run:
-   - `node skills/ad-intelligence/scripts/start-package.mjs --out packages/<brand>-ad.md`
-   - `node skills/ad-intelligence/scripts/retrieve.mjs --niche <n> --platform <p> --limit 5 --compact`
-   - Open `examples/visual/attention-lab.html` / public library URLs from retrieve
-   - `node skills/ad-intelligence/scripts/lint-package.mjs packages/<brand>-ad.md`
-4. Emulate attention-model timing (design/cut/shots/words) — not image collage + slogan.
-5. Do not deliver chat-only brainstorms or unfilled `[[BRACKETS]]`. Never invent proof or job ids.
+1. Use the **ad-intelligence** skill (`.cursor/skills/ad-intelligence` → `SKILL.md`).
+2. `node skills/ad-intelligence/scripts/probe-harness.mjs` → fill tool card → choose rung.
+3. URL/site → `brief-from-url.mjs`. Then one-shot: attention model → Concept → dense beats → craft → lint.
+4. Run start-package → retrieve `--compact` → Attention Lab → lint until ok.
+5. Equalize missing MCP (handoff/assembler) — never invent job ids or lint JSON.

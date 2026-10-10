@@ -5,37 +5,40 @@ Agents fail when they fill ledgers before having an idea. **Research → attenti
 ## Hard sequence
 
 ```text
-0. BRIEF
-   - If user gave a URL/site: `node scripts/brief-from-url.mjs <url>` (or prompts/brief-from-url.md).
-     Keep ASSET_VERIFIED vs PLACEHOLDER tags; list Assumptions.
-   - OPEN closest gold fixture (beauty / local / saas / physical / voice) — steal DENSITY, not brand facts.
+0. PROBE + EQUALIZE
+   node scripts/probe-harness.mjs
+   Fill tool card (prompts/harness-equalization.md) → rung:
+   connected | handoff | assembler | package-only
+   Optional: read references/brand-context.md or .agents/brand-context.md if present
 
-1. START FILE:
+1. BRIEF
+   - URL/site: node scripts/brief-from-url.mjs <url> (or prompts/brief-from-url.md)
+   - OPEN closest gold fixture — steal DENSITY, not brand facts
+
+2. START FILE:
    node scripts/start-package.mjs --out packages/<brand>-ad.md
 
-2. RETRIEVE (prefer compact):
+3. RETRIEVE (prefer compact):
    node scripts/retrieve.mjs --niche <niche> --platform <platform> --limit 5 --compact
    Paste primary / challenger / dual_track_twin (twin ≠ primary).
-   Paste attention_models.primary + challenger (timing sheets).
-   Open attention_models.research[] URLs (Meta Ad Library, TikTok Creative Center, X, YouTube) —
-   10-minute look: steal STRUCTURE only. Lab: examples/visual/attention-lab.html
+   Paste attention_models.primary + challenger.
+   Open research URLs + examples/visual/attention-lab.html — STRUCTURE only.
 
-3. EMULATE + WRITE CREATIVE FIRST (before polishing ledger):
-   a) Attention model id + “why this stops scroll for THIS brief”
+4. EMULATE + WRITE CREATIVE FIRST:
+   a) Attention model id + angle axis (references/angle-axes.md)
    b) Concept: 3 one-liners → pick ONE → "Not the default because…"
       (ban: smiling hold-to-camera, floating product+particles, drone #1, neon SaaS cockpit, invented %)
-   c) Timed script: ≥6 rows matching model timing (±). VO/text = EXACT words in quotes (not “sparse”).
+   c) Timed script: ≥6 rows matching model timing (±). EXACT quoted VO/text.
    d) Captions cover the cut. One CTA. Muted-first 0–3s (no logo).
-   e) Craft system: ≥2 #HEX, real font names (no -style/-like), motion, E1, 9:16+1:1
-      Design/layout/cut/shots/animation called out — not “nice images + caption.”
+   e) Craft: ≥2 #HEX, real fonts, motion, E1, 9:16+1:1 — cut/shots/animation named
    f) One paste-ready prompt PER unit (CAMERA/LIGHT/MOTION/GRADE/NEGATIVES)
 
-4. FILL remaining [[BRACKETS]] (sheets, ledger, rights). Never invent proof.
+5. FILL remaining [[BRACKETS]]. Never invent proof.
 
-5. LINT LOOP:
+6. LINT LOOP:
    node scripts/lint-package.mjs packages/<brand>-ad.md
    Fix until ok:true. Paste real lint JSON (never invent it).
-   No shell → write "LINT: not run (no shell)" + tick self-check; do not fake JSON.
+   No shell → "LINT: not run (no shell)" + self-check; do not fake JSON.
 ```
 
 ## Niche cheat sheet

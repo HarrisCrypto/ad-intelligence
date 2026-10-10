@@ -6,7 +6,7 @@ Packages that do **not** invent proof, drift product identity, or burn three red
 
 **Triple-path (pick one rung):** connected MCP → call tools; Seedance/Higgsfield exist for the user but not in-session → same-quality handoffs; only image gen + short clips + CapCut → **assembler** (same sheets, ledger, lint, render-QA). Index: [creative-stack/README.md](./skills/ad-intelligence/references/creative-stack/README.md).
 
-**One-shot path:** Research public libraries → pick an [attention model](./skills/ad-intelligence/examples/visual/attention-lab.html) → Concept → dense beats → Craft → lint. Cursor discovers the skill via `.cursor/skills/ad-intelligence`. Empty skeletons and sparse VO fail lint.
+**One-shot path:** Probe harness → equalize tools → research libraries → [attention model](./skills/ad-intelligence/examples/visual/attention-lab.html) → Concept → dense beats → Craft → lint. Works across Cursor / Claude / Codex / Copilot (see [AGENTS.md](./AGENTS.md)). Empty skeletons fail lint.
 
 **Elite craft bar:** every package ships a **Craft system** (palette, type, motion, sound, endcard). [elite-creative-os.md](./skills/ad-intelligence/references/elite-creative-os.md).
 
@@ -32,10 +32,12 @@ Packages that do **not** invent proof, drift product identity, or burn three red
 | **Full-depth gold fixtures** | beauty · local · SaaS · physical · voice/front-desk — see [PROOF.md](./PROOF.md) |
 | **Post-render QA** | [render-qa.json](./skills/ad-intelligence/checklists/render-qa.json) |
 | **Stress briefs** | [examples/stress-briefs/](./skills/ad-intelligence/examples/stress-briefs/) |
+| **Harness probe / ready** | `node skills/ad-intelligence/scripts/agent-ready.mjs` |
+| **Multi-harness entry** | [AGENTS.md](./AGENTS.md) · [harness-equalization](./skills/ad-intelligence/prompts/harness-equalization.md) |
 | **Ship gate demo** | `node skills/ad-intelligence/scripts/demo-quality-gates.mjs` |
 | **Contribute** | [CONTRIBUTING.md](./CONTRIBUTING.md) |
 
-**Version 3.11.0** — [CHANGELOG.md](./CHANGELOG.md)
+**Version 3.12.0** — [CHANGELOG.md](./CHANGELOG.md)
 
 ---
 

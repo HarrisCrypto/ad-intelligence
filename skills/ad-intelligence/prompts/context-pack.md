@@ -1,4 +1,4 @@
-# Ad Intelligence — CONTEXT PACK (v3.11)
+# Ad Intelligence — CONTEXT PACK (v3.12)
 
 _Paste into system context. Then follow the one-shot sequence._
 _Repo: https://github.com/HarrisCrypto/ad-intelligence_
@@ -13,37 +13,40 @@ Agents fail when they fill ledgers before having an idea. **Research → attenti
 ## Hard sequence
 
 ```text
-0. BRIEF
-   - If user gave a URL/site: `node scripts/brief-from-url.mjs <url>` (or prompts/brief-from-url.md).
-     Keep ASSET_VERIFIED vs PLACEHOLDER tags; list Assumptions.
-   - OPEN closest gold fixture (beauty / local / saas / physical / voice) — steal DENSITY, not brand facts.
+0. PROBE + EQUALIZE
+   node scripts/probe-harness.mjs
+   Fill tool card (prompts/harness-equalization.md) → rung:
+   connected | handoff | assembler | package-only
+   Optional: read references/brand-context.md or .agents/brand-context.md if present
 
-1. START FILE:
+1. BRIEF
+   - URL/site: node scripts/brief-from-url.mjs <url> (or prompts/brief-from-url.md)
+   - OPEN closest gold fixture — steal DENSITY, not brand facts
+
+2. START FILE:
    node scripts/start-package.mjs --out packages/<brand>-ad.md
 
-2. RETRIEVE (prefer compact):
+3. RETRIEVE (prefer compact):
    node scripts/retrieve.mjs --niche <niche> --platform <platform> --limit 5 --compact
    Paste primary / challenger / dual_track_twin (twin ≠ primary).
-   Paste attention_models.primary + challenger (timing sheets).
-   Open attention_models.research[] URLs (Meta Ad Library, TikTok Creative Center, X, YouTube) —
-   10-minute look: steal STRUCTURE only. Lab: examples/visual/attention-lab.html
+   Paste attention_models.primary + challenger.
+   Open research URLs + examples/visual/attention-lab.html — STRUCTURE only.
 
-3. EMULATE + WRITE CREATIVE FIRST (before polishing ledger):
-   a) Attention model id + “why this stops scroll for THIS brief”
+4. EMULATE + WRITE CREATIVE FIRST:
+   a) Attention model id + angle axis (references/angle-axes.md)
    b) Concept: 3 one-liners → pick ONE → "Not the default because…"
       (ban: smiling hold-to-camera, floating product+particles, drone #1, neon SaaS cockpit, invented %)
-   c) Timed script: ≥6 rows matching model timing (±). VO/text = EXACT words in quotes (not “sparse”).
+   c) Timed script: ≥6 rows matching model timing (±). EXACT quoted VO/text.
    d) Captions cover the cut. One CTA. Muted-first 0–3s (no logo).
-   e) Craft system: ≥2 #HEX, real font names (no -style/-like), motion, E1, 9:16+1:1
-      Design/layout/cut/shots/animation called out — not “nice images + caption.”
+   e) Craft: ≥2 #HEX, real fonts, motion, E1, 9:16+1:1 — cut/shots/animation named
    f) One paste-ready prompt PER unit (CAMERA/LIGHT/MOTION/GRADE/NEGATIVES)
 
-4. FILL remaining [[BRACKETS]] (sheets, ledger, rights). Never invent proof.
+5. FILL remaining [[BRACKETS]]. Never invent proof.
 
-5. LINT LOOP:
+6. LINT LOOP:
    node scripts/lint-package.mjs packages/<brand>-ad.md
    Fix until ok:true. Paste real lint JSON (never invent it).
-   No shell → write "LINT: not run (no shell)" + tick self-check; do not fake JSON.
+   No shell → "LINT: not run (no shell)" + self-check; do not fake JSON.
 ```
 
 ## Niche cheat sheet
@@ -82,19 +85,76 @@ Rung = assembler. Name Wan / LTX / Grok / Kling / Hailuo / stills+CapCut. Same s
 Lint `"ok": true` **and** a stranger can mute-watch 0–3s and know the situation.
 
 ---
-## 2) ATTENTION + ANY NICHE
+## 2) HARNESS EQUALIZATION
 
-# Attention + any niche
+# Harness equalization — make any LLM’s tools good enough
 
+Different agents see different tools. **Equalize before you invent missing capabilities.**
+
+Run (preferred):
+
+```bash
+node scripts/probe-harness.mjs
+# or: node scripts/probe-harness.mjs --fill   # interactive checklist → JSON
+```
+
+## Capability → pipeline rung
+
+| You have | Rung | Do this |
+| --- | --- | --- |
+| Seedance / Higgsfield / peer **MCP live in session** | **connected** | Call tools per `connected-run-protocol.md`. Log real job ids. |
+| Those tools exist for the **user** but not here | **handoff** | Write paste-ready prompts + refs; user runs elsewhere. |
+| Image gen and/or short video + editor (CapCut etc.) | **assembler** | Keyframes → short clips → edit. Same sheets/lint. |
+| Text-only / no gen tools | **package-only** | Still ship lint-clean package + unit prompts. Say `NOT_RENDERED`. |
+| Browser / web fetch | Use for URL briefs + public ad libraries | `brief-from-url.mjs` · `ad-libraries.md` |
+| Shell + Node | Use mechanical loop | start → retrieve → lint until ok |
+| No shell | Paste `prompts/context-pack.md`; write `"LINT: not run (no shell)"` — **never invent lint JSON** |
+
+## Equalization rules (non-negotiable)
+
+1. **Name your tools** in the package Brief (`Tool access:`).  
+2. **Pick one rung** — don’t pretend connected if you only have ChatGPT images.  
+3. **Quality does not drop with rung** — density of Concept / beats / Craft stays gold-level.  
+4. **Swap models, not standards** — Wan/LTX/Grok/Kling/Hailuo/stills per `alternative-model-routing.md`.  
+5. **Never invent** Seedance/Higgsfield job ids, exports, or `"ok": true` lint.  
+6. If a harness has a **native skill path**, load this skill from it (see INSTALL harness matrix).
+
+## Tool card (paste into package or chat)
+
+```text
+HARNESS TOOL CARD
+- Harness: [[Cursor|Claude Code|Codex|Gemini|OpenClaw|ChatGPT|other]]
+- Shell/node: [[yes|no]]
+- Network/fetch: [[yes|no]]
+- Image gen: [[tool names or none]]
+- Video gen: [[tool names or none]]
+- MCP ads/video: [[Seedance|Higgsfield|none]]
+- Browser: [[yes|no]]
+- Chosen rung: [[connected|handoff|assembler|package-only]]
+- Equalization note: [[what you substituted]]
+```
+
+## Done means
+
+Rung chosen + tool card filled + lint-clean package (or honest no-shell self-check).
+
+---
+## 3) ATTENTION + ANY NICHE
+
+# Attention + any niche + harness
+
+- Probe: node scripts/probe-harness.mjs → prompts/harness-equalization.md
 - View models: examples/visual/attention-lab.html
 - Public libraries: references/ad-libraries.md (Meta, TikTok, X, YouTube, LinkedIn)
 - URL briefs: prompts/brief-from-url.md
 - Emulate: prompts/emulate-attention-model.md
+- Angles: references/angle-axes.md
 - Hair/shampoo → beauty · Food → food_bev · AI/voice agent → saas + voice gold
 - retrieve.mjs returns attention_models + research URLs — use them
+- Equalize tools: connected | handoff | assembler | package-only — never fake MCP jobs
 
 ---
-## 3) CRAFT DEFAULTS
+## 4) CRAFT DEFAULTS
 
 # Craft defaults (compressed)
 
@@ -122,7 +182,7 @@ Lint `"ok": true` **and** a stranger can mute-watch 0–3s and know the situatio
 - No leftover [[BRACKETS]]
 
 ---
-## 4) PACKAGE SKELETON
+## 5) PACKAGE SKELETON
 
 # Package skeleton — COPY THIS FILE, fill [[BRACKETS]], do not delete sections
 
@@ -145,7 +205,9 @@ Replace every `[[LIKE_THIS]]`. Tags must be USER_SUPPLIED | ASSET_VERIFIED | PLA
 - Production tier: [[hybrid_polished|premium_cinema|documentary_trust|clean_product|…]]
 - Virality posture: [[trend_reactive|evergreen_dr|brand_film|local_performance|…]]
 - Proof available: [[list or [PLACEHOLDER: …]]]
-- Tool access: [[connected MCP|prompt-handoff|assembler]]
+- Tool access: [[connected MCP|prompt-handoff|assembler|package-only]]
+- Harness: [[Cursor|Claude|Codex|Gemini|OpenClaw|ChatGPT|other]]
+- Tools declared: [[image/video/MCP/browser — from probe + tool card]]
 - Assumptions: [[from brief-defaults if any]]
 
 ### Retrieval
@@ -347,7 +409,7 @@ NEGATIVES: melted type, wrong label, logo redraw, extra fingers, watermark, iden
 - Self-critique completed: yes
 
 ---
-## 5) GOLD DENSITY EXCERPT (beauty — match this specificity)
+## 6) GOLD DENSITY EXCERPT (beauty — match this specificity)
 
 ### Concept (chosen)
 - Three options: (1) smiling hold-to-camera serum (2) “4:07pm” base-fail clock (3) ASMR drop only  
@@ -397,10 +459,12 @@ AUDIO PATH: muted gen + captions (VO optional in post)
 NEGATIVES: melted type, wrong label, identity drift, extra fingers, watermark, clinical claims on screen
 ```
 ---
-## 6) COMMANDS
+## 7) COMMANDS
 
 ```bash
 cd skills/ad-intelligence
+node scripts/probe-harness.mjs
+node scripts/agent-ready.mjs
 node scripts/start-package.mjs --out packages/<brand>-ad.md
 node scripts/retrieve.mjs --niche <n> --platform <p> --limit 5 --compact
 node scripts/lint-package.mjs packages/<brand>-ad.md

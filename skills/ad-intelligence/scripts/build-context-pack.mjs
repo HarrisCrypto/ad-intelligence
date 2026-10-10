@@ -55,33 +55,40 @@ const craftRules = `# Craft defaults (compressed)
 - No leftover [[BRACKETS]]
 `;
 
-const attentionBrief = `# Attention + any niche
+const attentionBrief = `# Attention + any niche + harness
 
+- Probe: node scripts/probe-harness.mjs → prompts/harness-equalization.md
 - View models: examples/visual/attention-lab.html
 - Public libraries: references/ad-libraries.md (Meta, TikTok, X, YouTube, LinkedIn)
 - URL briefs: prompts/brief-from-url.md
 - Emulate: prompts/emulate-attention-model.md
+- Angles: references/angle-axes.md
 - Hair/shampoo → beauty · Food → food_bev · AI/voice agent → saas + voice gold
 - retrieve.mjs returns attention_models + research URLs — use them
+- Equalize tools: connected | handoff | assembler | package-only — never fake MCP jobs
 `;
 
 const parts = [
-  "# Ad Intelligence — CONTEXT PACK (v3.11)\n\n",
+  "# Ad Intelligence — CONTEXT PACK (v3.12)\n\n",
   "_Paste into system context. Then follow the one-shot sequence._\n",
   "_Repo: https://github.com/HarrisCrypto/ad-intelligence_\n",
   "\n---\n## 1) ONE-SHOT\n\n",
   read("prompts/one-shot.md"),
-  "\n---\n## 2) ATTENTION + ANY NICHE\n\n",
+  "\n---\n## 2) HARNESS EQUALIZATION\n\n",
+  read("prompts/harness-equalization.md"),
+  "\n---\n## 3) ATTENTION + ANY NICHE\n\n",
   attentionBrief,
-  "\n---\n## 3) CRAFT DEFAULTS\n\n",
+  "\n---\n## 4) CRAFT DEFAULTS\n\n",
   craftRules,
-  "\n---\n## 4) PACKAGE SKELETON\n\n",
+  "\n---\n## 5) PACKAGE SKELETON\n\n",
   read("references/package-skeleton.md"),
-  "\n---\n## 5) GOLD DENSITY EXCERPT (beauty — match this specificity)\n\n",
+  "\n---\n## 6) GOLD DENSITY EXCERPT (beauty — match this specificity)\n\n",
   craftExcerpt,
-  "\n---\n## 6) COMMANDS\n\n",
+  "\n---\n## 7) COMMANDS\n\n",
   "```bash\n",
   "cd skills/ad-intelligence\n",
+  "node scripts/probe-harness.mjs\n",
+  "node scripts/agent-ready.mjs\n",
   "node scripts/start-package.mjs --out packages/<brand>-ad.md\n",
   "node scripts/retrieve.mjs --niche <n> --platform <p> --limit 5 --compact\n",
   "node scripts/lint-package.mjs packages/<brand>-ad.md\n",

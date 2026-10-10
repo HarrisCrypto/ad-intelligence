@@ -2,34 +2,43 @@
 
 **Repo:** https://github.com/HarrisCrypto/ad-intelligence  
 **Skill root:** `skills/ad-intelligence/`  
-**Version:** **3.11.0** — see [CHANGELOG.md](./CHANGELOG.md)
+**Version:** **3.12.0** — see [CHANGELOG.md](./CHANGELOG.md)
 
 ---
 
 ## Why agents fail (and the fix)
 
-Agents fill ledgers before having an idea — or slap images + slogans — or never load the skill. This skill forces: **public-library research → attention model → Concept → dense beats → craft → lint**, and Cursor finds it via `.cursor/skills/ad-intelligence`.
+Agents miss the skill path, ignore their real tools, fill ledgers before ideas, or slap images + slogans. This skill forces: **probe harness → equalize rung → attention model → Concept → dense beats → craft → lint**.
 
 ---
 
-## Fastest paths
+## Harness matrix (Agent Skills–compatible)
 
-| Harness | Do this |
+| Harness | Discovery path |
 | --- | --- |
-| **Cursor (plugin)** | Customize → From GitHub Repository → `https://github.com/HarrisCrypto/ad-intelligence` → install **ad-intelligence** → `/ad-intelligence` |
-| **Cursor (repo open)** | Skill auto-discovered at `.cursor/skills/ad-intelligence` — ask to make an ad; agent follows `prompts/one-shot.md` |
-| **Any other LLM** | Clone → paste committed `skills/ad-intelligence/prompts/context-pack.md` (or rebuild with `build-context-pack.mjs`) → give brief |
+| **Cursor** | `.cursor/skills/ad-intelligence` · or plugin from this GitHub repo |
+| **Claude Code** | `.claude/skills/ad-intelligence` |
+| **GitHub Copilot** | `.github/skills/ad-intelligence` |
+| **Codex / OpenClaw / generic** | `.agents/skills/ad-intelligence` · root [`AGENTS.md`](./AGENTS.md) |
+| **Any LLM (no skill loader)** | Paste `skills/ad-intelligence/prompts/context-pack.md` |
 | **Cloud Agents** | Clone this repo as the workspace |
+
+Ready check:
+
+```bash
+node skills/ad-intelligence/scripts/agent-ready.mjs
+```
 
 ---
 
 ## Paste this to your agent (one-shot)
 
 ```text
-Use Ad Intelligence v3.11 from https://github.com/HarrisCrypto/ad-intelligence
+Use Ad Intelligence v3.12 from https://github.com/HarrisCrypto/ad-intelligence
 Follow skills/ad-intelligence/prompts/one-shot.md EXACTLY.
-If I give a website, follow prompts/brief-from-url.md first.
-Open examples/visual/attention-lab.html and emulate an attention model (timing/shots/words).
+First: node skills/ad-intelligence/scripts/probe-harness.mjs — fill the tool card and pick a rung.
+If I give a website: node skills/ad-intelligence/scripts/brief-from-url.mjs <url>
+Open examples/visual/attention-lab.html and emulate an attention model.
 
 Brief:
 - Company / product / URL:
@@ -37,14 +46,15 @@ Brief:
 - Platforms (TikTok / Meta / IG / X / YouTube / LinkedIn):
 - Goal / offer:
 - Assets (stills/URL/reviews):
-- Tools: Higgsfield/Seedance connected | handoff | assembler:
+- Tools you actually have:
 
 Commands (from skills/ad-intelligence/):
-1) node scripts/start-package.mjs --out packages/<brand>-ad.md
-2) node scripts/retrieve.mjs --niche <niche> --platform <platform> --limit 5 --compact
-3) Pick attention_models.primary → emulate → Concept → ≥6 exact-VO rows → Craft → fill [[BRACKETS]]
-4) node scripts/lint-package.mjs packages/<brand>-ad.md until ok:true
-5) Deliver the file + lint JSON — no image+slogan slop
+1) node scripts/probe-harness.mjs
+2) node scripts/start-package.mjs --out packages/<brand>-ad.md
+3) node scripts/retrieve.mjs --niche <niche> --platform <platform> --limit 5 --compact
+4) Attention model → Concept → ≥6 exact-VO rows → Craft → fill [[BRACKETS]]
+5) node scripts/lint-package.mjs packages/<brand>-ad.md until ok:true
+6) Deliver the file + lint JSON — never invent job ids or lint
 ```
 
 ---
@@ -54,8 +64,6 @@ Commands (from skills/ad-intelligence/):
 ```bash
 git clone https://github.com/HarrisCrypto/ad-intelligence.git
 cd ad-intelligence
-# Prefer committed pack (or rebuild):
-# cat skills/ad-intelligence/prompts/context-pack.md
 node skills/ad-intelligence/scripts/build-context-pack.mjs > /tmp/ad-pack.md
 # Paste into the model system prompt, then send the brief.
 ```
@@ -64,15 +72,16 @@ node skills/ad-intelligence/scripts/build-context-pack.mjs > /tmp/ad-pack.md
 
 ## Verify the agent actually loaded the skill
 
-- Writes `packages/*-ad.md` from the skeleton (no leftover `[[BRACKETS]]`)  
-- Names an attention model id (`am_*`) and cites pattern ids  
-- Concept section with “Not the default because…”  
-- Timed script ≥6 rows with exact quoted VO/on-screen words (cut/timing/shots)  
-- Craft system has ≥2 HEX + real font names + E1 endcard  
-- Pastes `"ok": true` from lint  
+- Ran probe / filled harness tool card + chose a rung  
+- Writes `packages/*-ad.md` (no leftover `[[BRACKETS]]`)  
+- Names an attention model id (`am_*`)  
+- Concept with “Not the default because…”  
+- Timed script ≥6 rows with exact quoted VO  
+- Craft: ≥2 HEX + real fonts + E1  
+- Pastes `"ok": true` from lint (or honest no-shell note)  
 
-If you only get a paragraph of “hook ideas,” the one-shot path was skipped — paste `prompts/one-shot.md` and insist.
+If you only get “hook ideas,” paste `prompts/one-shot.md` and insist.
 
 ## Proof
 
-[PROOF.md](./PROOF.md) · [elite-creative-os.md](./skills/ad-intelligence/references/elite-creative-os.md) · gold fixtures in `skills/ad-intelligence/examples/`
+[PROOF.md](./PROOF.md) · [Attention Lab](./skills/ad-intelligence/examples/visual/attention-lab.html) · [multi-lens OS](./skills/ad-intelligence/references/multi-lens-os.md)

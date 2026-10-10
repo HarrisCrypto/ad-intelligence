@@ -19,7 +19,9 @@ Replace every `[[LIKE_THIS]]`. Tags must be USER_SUPPLIED | ASSET_VERIFIED | PLA
 - Production tier: [[hybrid_polished|premium_cinema|documentary_trust|clean_product|…]]
 - Virality posture: [[trend_reactive|evergreen_dr|brand_film|local_performance|…]]
 - Proof available: [[list or [PLACEHOLDER: …]]]
-- Tool access: [[connected MCP|prompt-handoff|assembler]]
+- Tool access: [[connected MCP|prompt-handoff|assembler|package-only]]
+- Harness: [[Cursor|Claude|Codex|Gemini|OpenClaw|ChatGPT|other]]
+- Tools declared: [[image/video/MCP/browser — from probe + tool card]]
 - Assumptions: [[from brief-defaults if any]]
 
 ### Retrieval

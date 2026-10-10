@@ -1,5 +1,24 @@
 # Changelog
 
+## 3.12.0 — 2026-10-10
+
+**Multi-harness Agent OS** — 35-lens pass + safe patterns from Agent Skills / awesome-agent-skills ecosystems so any LLM can discover the skill, equalize its own tools, and still hit gold density.
+
+### Added
+- Discovery symlinks: `.claude/skills`, `.agents/skills`, `.github/skills` (+ existing `.cursor/skills`)
+- Root `AGENTS.md` for Codex / OpenClaw / generic agents
+- `scripts/probe-harness.mjs` + `scripts/agent-ready.mjs`
+- `prompts/harness-equalization.md` — capability → rung (connected/handoff/assembler/package-only)
+- `references/angle-axes.md`, `brand-context.example.md`, `multi-lens-os.md`
+- SKILL.md `compatibility` + `metadata.version` (agentskills-friendly)
+
+### Changed
+- One-shot / harness system prompt / bootstrap / INSTALL / context-pack: probe-first
+- Plugin **3.12.0**
+
+### Preserved
+- Attention Lab, public libraries, claim firewall, craft lint, no scraped creatives
+
 ## 3.11.0 — 2026-10-10
 
 **Attention Lab + any-niche research** — agents can view teachable scroll-stop models, open public TikTok/Meta/IG/X/YouTube libraries, and brief from any URL (hair, food, AI/voice SaaS, …) without image+slogan slop.
