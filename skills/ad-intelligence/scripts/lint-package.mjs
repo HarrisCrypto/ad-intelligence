@@ -19,6 +19,7 @@ const REQUIRED_H3 = [
   "Brief",
   "Retrieval",
   "Job-to-be-done",
+  "Concept",
   "Consistency systems",
   "Creative stack",
   "Hooks",
@@ -32,6 +33,8 @@ const REQUIRED_H3 = [
   "Self-critique",
   "First-time-right",
 ];
+
+const DESCRIPTIVE_VO = /^\s*(sparse|—|-|n\/a|tbd|todo|≤\s*\d+\s*words|pov overlay|overlay ≤|soft vo|optional)\s*$/i;
 
 const SLOP = [
   /\bunlock\b/i,
@@ -235,6 +238,61 @@ function lint(text, filePath) {
     );
   }
 
+  // Unfilled skeleton brackets / TODOs in a "finished" package
+  if (/\[\[|\]\]/.test(text)) {
+    fail(
+      issues,
+      "unfilled-placeholder",
+      "Unfilled [[BRACKET]] markers remain — finish the skeleton or don’t claim done"
+    );
+  }
+  if (/\bTODO\b|\bTBD\b|«[^»]+»/.test(text)) {
+    fail(
+      issues,
+      "unfilled-todo",
+      "TODO/TBD/«guillemet» placeholders remain in the package"
+    );
+  }
+
+  // Concept chosen (not just pattern fill)
+  const conceptBlock = sectionBlock(text, /Concept/i);
+  if (conceptBlock && !/Not the default because|why not default|Chosen|pick:/i.test(conceptBlock)) {
+    fail(
+      issues,
+      "concept-thin",
+      "Concept section must name the chosen idea and why it’s not the AI-default (Not the default because…)"
+    );
+  }
+
+  // Timed script density + exact on-screen/VO words
+  const scriptBlock = sectionBlock(text, /Timed script/i);
+  if (scriptBlock) {
+    const beatRows = scriptBlock
+      .split("\n")
+      .filter((l) => /^\|/.test(l) && /\d+\s*[-–]\s*\d+\s*s/i.test(l));
+    if (beatRows.length > 0 && beatRows.length < 6) {
+      fail(
+        issues,
+        "script-density",
+        `Timed script has ${beatRows.length} beat rows — need ≥6 (≈ one row per ≤3–4s)`
+      );
+    }
+    let descriptive = 0;
+    for (const row of beatRows) {
+      const cells = row.split("|").map((c) => c.trim());
+      // | t | Visual | VO/text | Purpose | tags |
+      const vo = cells[3] || "";
+      if (DESCRIPTIVE_VO.test(vo) || /≤\s*\d+\s*words/i.test(vo)) descriptive++;
+    }
+    if (beatRows.length >= 4 && descriptive >= Math.ceil(beatRows.length * 0.5)) {
+      fail(
+        issues,
+        "exact-copy",
+        "VO/text cells are descriptions (sparse / ≤N words) — write EXACT on-screen or spoken words in quotes"
+      );
+    }
+  }
+
   // --- Craft specificity (heading alone is not enough) ---
   const craftBlock = sectionBlock(text, /Craft system/i);
   if (craftBlock) {
@@ -261,6 +319,12 @@ function lint(text, filePath) {
         issues,
         "craft-font-generic",
         "Typography must name a face/role (e.g. condensed display + neutral sans), not ‘bold font’"
+      );
+    } else if (/Typography:[^\n]*(-style|-like)\b/i.test(craftBlock)) {
+      fail(
+        issues,
+        "font-hedge",
+        "Typography hedges (-style/-like) banned — name a real face (e.g. Anton, Inter Tight, DIN 2014)"
       );
     }
     if (!/Endcard|\bE1\b/i.test(craftBlock)) {

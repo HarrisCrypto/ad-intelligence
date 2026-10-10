@@ -46,6 +46,11 @@ Use four-backtick outer fences in your reply if you nest code blocks, so Seedanc
 ### Job-to-be-done (one sentence)
 
 
+### Concept (chosen)
+- Options (3 one-liners):
+- **Chosen:**
+- Not the default because:
+
 ### Consistency systems (required)
 - Identity mode: pack / ui / place-service / multi-sku / n/a
 - Product sheet: **inline filled sheet or [REQUEST FROM USER] rows** (not a 3-bullet summary)

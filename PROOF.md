@@ -17,7 +17,7 @@ Read this in under a minute, then open a gold fixture:
 | **Stress briefs (messy prompts)** | [`examples/stress-briefs/`](./skills/ad-intelligence/examples/stress-briefs/) |
 | Shape-only skeleton (structure, not quality) | [`entertainment-creator-series.md`](./skills/ad-intelligence/examples/entertainment-creator-series.md) |
 
-**v3.9:** one-shot agent path — `package-skeleton` → retrieve → lint loop (not brainstorm). Plus v3.8 craft OS / Craft system / GitHub bootstrap. Assembler + alternative routing without Higgsfield.
+**v3.10:** concept-first density + Cursor `.cursor/skills` discovery + lint that rejects unfilled skeletons / sparse VO. **v3.9:** one-shot skeleton→retrieve→lint. Plus v3.8 craft OS / GitHub bootstrap. Assembler + alternative routing without Higgsfield.
 
 **v3.6–3.7:** triple-path / assembler / voice / Wan–LTX–Grok (+ peers) routing + render-QA.
 

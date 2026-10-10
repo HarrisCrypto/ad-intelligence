@@ -1,5 +1,25 @@
 # Changelog
 
+## 3.10.0 — 2026-10-10
+
+**One-shot quality that agents can’t paperwork-game** — concept-first density, Cursor discovery, and lint that rejects empty skeletons.
+
+### Added
+- `.cursor/skills/ad-intelligence` symlink so Cursor discovers the skill when the repo is open
+- Lint rules: `unfilled-placeholder`, Concept (“Not the default because…”), script-density ≥6 rows, exact-copy (no “sparse” VO), font-hedge bans
+- `examples/lint-corpus/fail-unfilled-skeleton.md`
+- Committed `prompts/context-pack.md` (pasteable for external LLMs)
+- `retrieve.mjs --compact` for pick-focused context
+
+### Changed
+- `prompts/one-shot.md` / skeleton / output template: Concept → dense beats → craft before ledger polish
+- Gold fixtures denser (Concept + ≥6 exact-VO rows + real fonts)
+- SKILL description: trigger-rich + concept-first one-shot
+- Plugin **3.10.0**
+
+### Preserved
+- Claim firewall honesty, triple-path, assembler + model routing, elite craft OS
+
 ## 3.9.0 — 2026-10-10
 
 **One-shot agent path** — stop brainstorming; copy skeleton → retrieve → fill → lint loop (how top Cursor skills keep quality reliable).

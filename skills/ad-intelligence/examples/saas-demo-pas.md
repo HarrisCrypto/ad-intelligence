@@ -36,6 +36,11 @@ Teaching fixture for lint + template compliance. Fictional product. Not a scrape
 ### Job-to-be-done (one sentence)
 Name the handoff tax, show the aha inside real UI, then one path to start free trial.
 
+### Concept (chosen)
+- Options: (1) neon holographic dashboard (2) Slack chaos → real UI aha (3) feature laundry list  
+- **Chosen:** Missed ping → tab archaeology → status chip green  
+- Not the default because: no neon cockpit; UI is screen-recorded truth
+
 ### Consistency systems (required)
 - Identity mode: ui
 - Provenance of sheet fields: ASSUMED chrome for fixture / REQUEST real screenshots for ship
@@ -77,11 +82,14 @@ Name the handoff tax, show the aha inside real UI, then one path to start free t
 ### Timed script
 | t | Visual | VO / text | Purpose | Claim tags |
 | --- | --- | --- | --- | --- |
-| 0–3s | Slack chaos / missed ping (no logo) | Consequence line ≤8 words | Pain hook | ASSUMED |
-| 3–10s | Agitate: tab archaeology | sparse | Agitate | ASSUMED |
-| 10–22s | Real UI: 3-step handoff (Images 1–2) | process labels | Reframe | ASSUMED |
-| 22–30s | Aha: status chip green (Image 3) | “Owners clear.” | Solve | ASSUMED |
-| 30–35s | Clean UI end + CTA space | Start free trial | One CTA | ASSUMED |
+| 0–3s | Slack chaos / missed ping | “Launch. No owner.” | Pain | ASSUMED |
+| 3–6s | Tab archaeology montage | “Still hunting?” | Agitate | ASSUMED |
+| 6–10s | Cut to RelayHQ sidebar | “One screen.” | Reframe | ASSUMED |
+| 10–16s | Handoff steps (Images 1–2) | “Assign. Status. Done.” | Demo | ASSUMED |
+| 16–22s | Cursor to owner field | “Who owns this?” | Tension | ASSUMED |
+| 22–28s | Status chip green (Image 3) | “Owners clear.” | Aha | ASSUMED |
+| 28–32s | Clean UI hold | “Stop the tax.” | Bridge | ASSUMED |
+| 32–35s | Endcard | “Start free trial.” | One CTA | ASSUMED |
 
 ### Shot list / visual system
 Phone/desktop screen recording preferred. Cursor moves slow. Brand teal only from sheet. No fake 3D offices with glowing dashboards. Caption safe zone clear.
@@ -90,7 +98,7 @@ Phone/desktop screen recording preferred. Cursor moves slow. Brand teal only fro
 - Style id + production_tier + virality_posture: `app_demo_ui` + `pas-pain-stack` · production_tier clean_product · virality_posture b2b_clarity
 - Palette: brand teal `#0D9488` · support near-white UI `#F7FAFC` · accent alert `#DC2626` for pain state only [ASSUMED]
 - Grade name: flat UI documentary — crisp screens, no neon cockpit, no fake 3D office
-- Typography: hook display Inter-like geometric sans ≤7 words · UI callout labels post-composited · CTA “Start free trial” one only · legal if needed
+- Typography: hook Inter Tight Bold ≤7 words · UI callout labels post-composited · CTA “Start free trial” one only · legal if needed
 - Motion grammar: pain flash 0–3s → slow cursor aha 3–12s → outcome hold 12–18s → endcard ≥3s
 - Sound plan: muted-first captions; soft UI click SFX optional; no hype whooshes
 - Endcard module E1: logo SVG · one trial CTA · URL USER_SUPPLIED or omit · LinkedIn 1:1 + 9:16

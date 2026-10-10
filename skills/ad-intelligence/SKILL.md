@@ -1,11 +1,12 @@
 ---
 name: ad-intelligence
 description: >-
-  Makes agency-grade one-shot ad packages (TikTok, Meta, YouTube, UGC, product
-  films, local service, SaaS, voice/front-desk). Use when the user asks to make
-  an ad, creative, hook, UGC, launch film, paid social, or storyboard — or says
-  ads look like slop / need first-shot quality. Copy package-skeleton → retrieve
-  → fill Craft system → lint-package until ok. Works with or without Higgsfield/Seedance.
+  Writes one shoot-ready ad package in a single pass: concept, muted-first hook,
+  dense beat sheet with exact on-screen/VO words, craft specs, and generator
+  prompts (Seedance, Higgsfield, Kling, Wan, CapCut). Use when the user asks for
+  an ad, ads, commercial, promo, TikTok, Reels, Shorts, Meta, YouTube, LinkedIn
+  ad, UGC script, hooks, storyboard, launch film, or says ads look generic/AI.
+  Concept first → ≥6 beat rows → lint until ok. Works with or without Higgsfield.
 ---
 
 # Ad Intelligence — one-shot ad maker
@@ -20,14 +21,15 @@ User wants ads, creatives, hooks, UGC, Meta/TikTok/YouTube spots, launch films, 
 
 Follow [`prompts/one-shot.md`](prompts/one-shot.md) exactly:
 
-1. `node scripts/start-package.mjs --out packages/<brand>-ad.md`  
-   (or copy [`references/package-skeleton.md`](references/package-skeleton.md))
-2. `node scripts/retrieve.mjs --niche <niche|alias> --platform <platform> --limit 5`
-3. Fill every `[[BRACKET]]` — sheets, ledger, **Craft system** (≥2 HEX, named type, motion, E1, aspects), unit prompts with CAMERA/LIGHT/MOTION/GRADE
-4. `node scripts/lint-package.mjs packages/<brand>-ad.md` → fix → re-lint until `"ok": true`
-5. Deliver the file. Never invent proof or Seedance job ids.
+1. `node scripts/start-package.mjs --out packages/<brand>-ad.md`
+2. `node scripts/retrieve.mjs --niche <n> --platform <p> --limit 5 --compact`
+3. **Creative first:** Concept (3→1 + “Not the default because…”) → timed script ≥6 rows with EXACT quoted words → Craft system → unit prompts
+4. Fill remaining `[[BRACKETS]]` (sheets/ledger). No leftover brackets.
+5. `node scripts/lint-package.mjs packages/<brand>-ad.md` until `"ok": true` (never invent lint JSON)
+6. Deliver the file.
 
-Closest gold for craft density: `examples/beauty-dtc-dual-track.md` (or local / saas / physical / voice).
+Gold density: `examples/beauty-dtc-dual-track.md` (or local / saas / physical / voice).  
+External LLMs: paste [`prompts/context-pack.md`](prompts/context-pack.md) (or `node scripts/build-context-pack.mjs`).
 
 ## Pipeline rung
 

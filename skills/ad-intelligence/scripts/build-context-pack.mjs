@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 /**
- * Build a single pasteable context pack for any LLM (no progressive-read hope).
- * Usage: node scripts/build-context-pack.mjs > /tmp/ad-intelligence-context-pack.md
+ * Build a single pasteable context pack for any LLM.
+ * Usage:
+ *   node scripts/build-context-pack.mjs                  # stdout
+ *   node scripts/build-context-pack.mjs --write           # prompts/context-pack.md
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -14,32 +16,69 @@ function read(rel) {
   return fs.readFileSync(path.join(ROOT, rel), "utf8");
 }
 
-const parts = [
-  "# Ad Intelligence — CONTEXT PACK (paste into system/user)\n",
-  "_Generated for one-shot quality. Follow prompts/one-shot.md exactly._\n",
-  "\n---\n## 1) ONE-SHOT PLAYBOOK\n\n",
-  read("prompts/one-shot.md"),
-  "\n---\n## 2) HARNESS RULES\n\n",
-  read("prompts/harness-system-prompt.md"),
-  "\n---\n## 3) PACKAGE SKELETON (copy & fill)\n\n",
-  read("references/package-skeleton.md"),
-  "\n---\n## 4) GOLD CRAFT EXCERPT (match this density)\n\n",
-  "From examples/beauty-dtc-dual-track.md — Craft system + unit prompt shape:\n\n",
-  extractCraftAndPrompt(read("examples/beauty-dtc-dual-track.md")),
-  "\n---\n## 5) COMMANDS\n\n",
-  "```bash\n",
-  "cd skills/ad-intelligence   # or repo skill root\n",
-  "node scripts/retrieve.mjs --niche <niche> --platform <platform> --limit 5\n",
-  "node scripts/start-package.mjs --out packages/my-brand-ad.md\n",
-  "node scripts/lint-package.mjs packages/my-brand-ad.md\n",
-  "```\n",
-  "\nRepo: https://github.com/HarrisCrypto/ad-intelligence\n",
-];
-
-function extractCraftAndPrompt(md) {
-  const craft = md.match(/### Craft system[\s\S]*?(?=### Render plan)/i);
-  const prompt = md.match(/#### Unit U1 — paste-ready prompt[\s\S]*?(?=#### Unit U1 — mcp|### Render log)/i);
-  return `${craft ? craft[0].trim() : ""}\n\n${prompt ? prompt[0].trim() : ""}`;
+function extract(md, re) {
+  const m = md.match(re);
+  return m ? m[0].trim() : "";
 }
 
-process.stdout.write(parts.join(""));
+const beauty = read("examples/beauty-dtc-dual-track.md");
+const craftExcerpt = [
+  extract(beauty, /### Concept[\s\S]*?(?=### Consistency)/i),
+  extract(beauty, /### Timed script[\s\S]*?(?=### Shot list)/i),
+  extract(beauty, /### Craft system[\s\S]*?(?=### Render plan)/i),
+  extract(beauty, /#### Unit U1 — paste-ready prompt[\s\S]*?(?=#### Unit U1 — mcp|### Render log)/i),
+].join("\n\n");
+
+const craftRules = `# Craft defaults (compressed)
+
+## AD-DEFAULTS to refuse (unless brief forces + you explain)
+- Smiling person holding product to camera
+- Floating product + particles / god-rays
+- Logo-first open or whoosh logo sting in 0–3s
+- “Tired of X? Meet Y.”
+- Drone skyline for local “#1”
+- Neon / holographic SaaS cockpit with invented %
+- Cream+serif+terracotta or purple-glow AI-default looks
+- Invented review counts / ROAS
+
+## Hook / edit
+- 0–3s muted-first; brand cue via product/place/color OK; logo sting only on endcard
+- ≥6 timed-script rows for ~24s; EXACT on-screen/VO words in quotes
+- Captions carry the story muted; one CTA; product hold ≥1.2s; endcard ≥2.5s
+
+## Craft lint (must pass)
+- ≥2 #HEX; real font names (no -style/-like); motion; E1; 9:16+1:1
+- No cinematic/stunning/8k/sleek/nice in craft/prompts
+- No “only when supplied” / ASSUMED in paid primary or captions
+- No leftover [[BRACKETS]]
+`;
+
+const parts = [
+  "# Ad Intelligence — CONTEXT PACK (v3.10)\n\n",
+  "_Paste into system context. Then follow the one-shot sequence._\n",
+  "_Repo: https://github.com/HarrisCrypto/ad-intelligence_\n",
+  "\n---\n## 1) ONE-SHOT\n\n",
+  read("prompts/one-shot.md"),
+  "\n---\n## 2) CRAFT DEFAULTS\n\n",
+  craftRules,
+  "\n---\n## 3) PACKAGE SKELETON\n\n",
+  read("references/package-skeleton.md"),
+  "\n---\n## 4) GOLD DENSITY EXCERPT (beauty — match this specificity)\n\n",
+  craftExcerpt,
+  "\n---\n## 5) COMMANDS\n\n",
+  "```bash\n",
+  "cd skills/ad-intelligence\n",
+  "node scripts/start-package.mjs --out packages/<brand>-ad.md\n",
+  "node scripts/retrieve.mjs --niche <n> --platform <p> --limit 5 --compact\n",
+  "node scripts/lint-package.mjs packages/<brand>-ad.md\n",
+  "```\n",
+];
+
+const out = parts.join("");
+if (process.argv.includes("--write")) {
+  const dest = path.join(ROOT, "prompts", "context-pack.md");
+  fs.writeFileSync(dest, out);
+  console.error(`Wrote ${dest} (${out.length} bytes)`);
+} else {
+  process.stdout.write(out);
+}

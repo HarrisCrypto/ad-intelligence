@@ -9,6 +9,7 @@
  *   node retrieve.mjs --production high_production --virality brand_film
  *   node retrieve.mjs --list
  *   node retrieve.mjs --list-niches
+ *   node retrieve.mjs --niche beauty --platform tiktok --compact
  */
 
 import fs from "node:fs";
@@ -71,12 +72,13 @@ const PLATFORM_ALIASES = {
 };
 
 function parseArgs(argv) {
-  const out = { limit: 5, list: false, listNiches: false };
+  const out = { limit: 5, list: false, listNiches: false, compact: false };
   for (let i = 2; i < argv.length; i++) {
     const a = argv[i];
     const next = argv[i + 1];
     if (a === "--list") out.list = true;
     else if (a === "--list-niches") out.listNiches = true;
+    else if (a === "--compact") out.compact = true;
     else if (a === "--platform" && next) {
       out.platform = next;
       i++;
@@ -522,7 +524,30 @@ function main() {
     flows_file: "database/flows/library.json",
   };
 
-  console.log(JSON.stringify(payload, null, 2));
+  if (q.compact) {
+    const compact = {
+      resolved: payload.resolved,
+      warnings,
+      picks: payload.picks,
+      results: results.map((r) => ({
+        id: r.blueprint?.id,
+        score: r.score,
+        name: r.blueprint?.name,
+        niches: r.blueprint?.niches,
+        platforms: r.blueprint?.platforms,
+        production_tier: r.blueprint?.production_tier,
+        virality_posture: r.blueprint?.virality_posture,
+        ideal_seconds: r.blueprint?.ideal_seconds || r.blueprint?.duration_s,
+        hook: (r.blueprint?.hook_examples || r.blueprint?.hooks || [])
+          .slice(0, 2),
+        beats: (r.blueprint?.beats || []).slice(0, 6),
+      })),
+      next: "Fill Concept + ≥6-row timed script; see prompts/one-shot.md",
+    };
+    console.log(JSON.stringify(compact, null, 2));
+  } else {
+    console.log(JSON.stringify(payload, null, 2));
+  }
 
   if (matchQuality === "none") process.exitCode = 2;
 }

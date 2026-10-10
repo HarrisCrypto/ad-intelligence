@@ -10,8 +10,8 @@
     {
       "name": "ad-intelligence",
       "source": ".",
-      "description": "One-shot agency-grade ads — skeleton→lint loop, elite craft, triple-path + model routing.",
-      "version": "3.9.0",
+      "description": "One-shot agency-grade ads — concept-first, Cursor discovery, lint that rejects empty skeletons.",
+      "version": "3.10.0",
       "keywords": [
         "ads",
         "viral",

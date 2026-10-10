@@ -36,6 +36,11 @@ Teaching fixture for lint + template compliance. Fictional product. Not a scrape
 ### Job-to-be-done (one sentence)
 Make “makeup that lasts a double shift” feel inevitable, then soft-shop the serum.
 
+### Concept (chosen)
+- Three options: (1) smiling hold-to-camera serum (2) “4:07pm” base-fail clock (3) ASMR drop only  
+- **Chosen:** “4:07pm” — the moment base cracks, shown as time, not a smile  
+- Not the default because: no product-to-camera grin; hook is a time-stamped failure then the ritual fix
+
 ### Consistency systems (required)
 - Identity mode: pack
 - Provenance of sheet fields: ASSUMED (fixture) / PLACEHOLDER for proof
@@ -79,10 +84,14 @@ Make “makeup that lasts a double shift” feel inevitable, then soft-shop the 
 ### Timed script
 | t | Visual | VO / text | Purpose | Claim tags |
 | --- | --- | --- | --- | --- |
-| 0–2s | Mirror selfie, AM light | POV overlay ≤7 words | Hook | ASSUMED |
-| 2–10s | Commute/desk; serum in bag | sparse | Ritual | — |
-| 10–18s | Apply + texture macro (Image 1–2 lock) | “Only step I don’t skip” as skit line not medical claim | Mechanism | ASSUMED |
-| 18–24s | End-of-day mirror | Link in bio | Soft CTA | ASSUMED |
+| 0–2s | ECU under-eye crease; watch reads 4:07 | “4:07pm.” | Hook | ASSUMED |
+| 2–4s | Same face, fluorescent break-room | “Base: gone.” | Agitate | ASSUMED |
+| 4–7s | Cut to 6:30am mirror, window light | “Start over.” | Orient | ASSUMED |
+| 7–10s | Bag zip; frosted bottle (Image 1) | “One step.” | Ritual | ASSUMED |
+| 10–14s | Macro drop (Image 2–4) | “Only step I don’t skip.” | Mechanism | ASSUMED |
+| 14–18s | Hands press serum in | “Then makeup.” | Bridge | ASSUMED |
+| 18–21s | End-of-day mirror, calm | “Still here.” | Payoff | ASSUMED |
+| 21–24s | Endcard space | “Link in bio.” | Soft CTA | ASSUMED |
 
 ### Shot list / visual system
 Front camera → bag insert → macro drop (100mm feel) → end-day mirror. Grade: clean daylight. Leave lower caption safe zone clear.
@@ -91,7 +100,7 @@ Front camera → bag insert → macro drop (100mm feel) → end-day mirror. Grad
 - Style id + production_tier + virality_posture: `pov_day_in_life` + hybrid_polished; twin `beauty_macro_tabletop` / premium_cinema; trend_reactive + brand_film
 - Palette: dominant soft sage `#8FA89A` · support frost white `#F4F7F5` · accent warm gold hoop `#C4A574` [ASSUMED]
 - Grade name: clean daylight — skin natural, label sharp, no beauty-filter plastic
-- Typography: hook display Bebas-style condensed white on soft plate ≤7 words · captions Neue Haas / Inter-like neutral sans 2-line · CTA “Link in bio” end only · legal footer last 1.5s if needed
+- Typography: hook Anton 700 white on soft plate ≤7 words · captions Inter Tight 600 2-line · CTA “Link in bio” end only · legal footer last 1.5s if needed
 - Motion grammar: 0–2s locked front-cam hold → 2–10s micro handheld sway → 10–18s 100mm macro static with drip physics → 18–24s mirror hold ≥1.2s → E1 3s
 - Sound plan: muted-first captions; optional soft bed paid-safe; light glass SFX on drip; no uncleared trend audio
 - Endcard module E1: brand wordmark SVG clear space · one soft CTA · 3s hold · comps E1_9x16 + E1_1x1

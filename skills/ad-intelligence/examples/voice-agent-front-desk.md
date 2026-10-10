@@ -38,6 +38,11 @@ Demonstrates **assembler-aware** render planning when single-pass cinema gen is 
 ### Job-to-be-done (one sentence)
 Make the after-hours missed-call feel expensive, show Deskline answering calmly, then one path to book a demo.
 
+### Concept (chosen)
+- Options: (1) robot receptionist deepfake (2) empty clinic ring → calm UI answer (3) invented “10k calls” chart  
+- **Chosen:** Missed ring → Deskline Answered chip → book demo  
+- Not the default because: no deepfake receptionist; no invented call volume
+
 ### Consistency systems (required)
 - Identity mode: ui + place-service
 - Provenance of sheet fields: ASSUMED (fixture) / PLACEHOLDER for owner quote + live phone demo number
@@ -85,11 +90,14 @@ Make the after-hours missed-call feel expensive, show Deskline answering calmly,
 ### Timed script
 | t | Visual | VO / text | Purpose | Claim tags |
 | --- | --- | --- | --- | --- |
-| 0–3s | Dim clinic desk; phone lights up (K1) | After hours. No answer. | Pain hook muted-first | ASSUMED |
-| 3–8s | Ring continues / missed UI (C1) | sparse | Agitate | ASSUMED |
-| 8–16s | Deskline phone UI Answered chip (Image 1–2) | Calm VO: “Thanks for calling — I can help book a visit.” | Solve | ASSUMED |
-| 16–22s | Calendar confirm card (Image 3) | “You’re set.” | Aha | ASSUMED |
-| 22–28s | Clean endcard space | Book a demo | One CTA | ASSUMED |
+| 0–3s | Dim clinic desk; phone lights (K1) | “After hours.” | Pain | ASSUMED |
+| 3–6s | Ring continues (C1) | “No answer.” | Agitate | ASSUMED |
+| 6–9s | Missed-call UI | “Caller gone.” | Cost | ASSUMED |
+| 9–14s | Deskline Answered chip (Image 1–2) | “Thanks for calling — I can help book a visit.” | Solve | ASSUMED |
+| 14–18s | Calendar confirm (Image 3) | “You’re set.” | Aha | ASSUMED |
+| 18–22s | Owner glance at phone (no PHI) | “You review later.” | Bridge | ASSUMED |
+| 22–25s | Clean UI hold | “After-hours covered.” | Payoff | ASSUMED |
+| 25–28s | Endcard | “Book a demo.” | One CTA | ASSUMED |
 
 ### Shot list / visual system
 Documentary clinic light → product UI sharp and flat (no neon cockpit) → endcard. Prefer screen-recorded UI. Lower caption band clear. No patient faces or charts.
@@ -98,7 +106,7 @@ Documentary clinic light → product UI sharp and flat (no neon cockpit) → end
 - Style id + production_tier + virality_posture: service phone / front-desk · production_tier assembler_hybrid · virality_posture b2b_local_trust
 - Palette: calm clinic blue `#4A6FA5` · soft gray `#E8EEF4` · accent missed-call red sparingly `#C45C5C` [ASSUMED]
 - Grade name: flat UI documentary — readable screens, no neon AI cockpit, no patient PHI
-- Typography: hook “Missed call?” ≤4 words Inter-like sans · UI labels post · CTA “Book a demo” one only
+- Typography: hook Inter Tight Bold “Missed call?” ≤4 words · UI labels post · CTA “Book a demo” one only
 - Motion grammar: K1 still ring/miss → C1 short i2v 3–5s → screen-record UI aha → E1 demo CTA ≥3s
 - Sound plan: muted UI + VO in CapCut; optional soft ring SFX; paid-safe bed
 - Endcard module E1: logo · Book a demo · no multi-CTA · 9:16 Meta + 1:1 LinkedIn

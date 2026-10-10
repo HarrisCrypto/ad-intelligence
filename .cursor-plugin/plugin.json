@@ -1,8 +1,8 @@
 {
   "name": "ad-intelligence",
   "displayName": "Ad Intelligence",
-  "version": "3.9.0",
-  "description": "One-shot agency-grade ads: skeleton→retrieve→lint loop, elite craft OS, triple-path + model routing.",
+  "version": "3.10.0",
+  "description": "One-shot agency-grade ads: concept-first density, Cursor skill discovery, craft lint that rejects empty skeletons.",
   "author": {
     "name": "HarrisCrypto"
   },

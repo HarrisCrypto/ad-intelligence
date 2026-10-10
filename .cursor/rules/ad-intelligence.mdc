@@ -6,11 +6,11 @@ alwaysApply: false
 When the user asks for ads, creatives, hooks, UGC, TikTok/Meta/YouTube spots,
 launch films, storyboards, or “make ads that don’t look like AI slop”:
 
-1. Use the **ad-intelligence** skill (`skills/ad-intelligence/SKILL.md`).
-2. Follow `skills/ad-intelligence/prompts/one-shot.md` — copy skeleton, retrieve, fill, lint.
+1. Use the **ad-intelligence** skill (`.cursor/skills/ad-intelligence` → `skills/ad-intelligence/SKILL.md`).
+2. Follow `prompts/one-shot.md` — Concept first, then dense beats, craft, lint.
 3. Run:
    - `node skills/ad-intelligence/scripts/start-package.mjs --out packages/<brand>-ad.md`
-   - `node skills/ad-intelligence/scripts/retrieve.mjs --niche <n> --platform <p> --limit 5`
+   - `node skills/ad-intelligence/scripts/retrieve.mjs --niche <n> --platform <p> --limit 5 --compact`
    - `node skills/ad-intelligence/scripts/lint-package.mjs packages/<brand>-ad.md`
-4. Do not deliver chat-only brainstorms. Ship a lint-clean package file.
+4. Do not deliver chat-only brainstorms or unfilled `[[BRACKETS]]`. Ship a lint-clean package file.
 5. Never invent proof or Seedance/Higgsfield job ids.
