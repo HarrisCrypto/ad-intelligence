@@ -1,0 +1,48 @@
+{
+  "id": "b2b-services",
+  "niche": "b2b_services",
+  "aliases": [
+    "agency",
+    "consulting",
+    "professional_services"
+  ],
+  "audience": "Buyers of expertise; case proof matters.",
+  "jobs_to_be_done": [
+    "Point at expensive problem",
+    "Show method",
+    "Book call"
+  ],
+  "recommended_pattern_ids": [
+    "pas-pain-stack",
+    "founder-story-origin",
+    "documentary-cutdown",
+    "hot-take-controversy",
+    "lead-magnet-value",
+    "testimonial-montage-cine"
+  ],
+  "angles": [
+    {
+      "id": "costly-process",
+      "hook_seed": "The meeting that wastes budget",
+      "pattern": "pas-pain-stack"
+    }
+  ],
+  "lexicon": {
+    "use": [
+      "process",
+      "retainer clarity",
+      "outcomes"
+    ],
+    "avoid_unless_true": [
+      "guaranteed ROI"
+    ]
+  },
+  "proof_types": [
+    "case studies",
+    "named logos with rights"
+  ],
+  "cta_defaults": [
+    "Book a call"
+  ],
+  "landing_notes": "Case study depth."
+}

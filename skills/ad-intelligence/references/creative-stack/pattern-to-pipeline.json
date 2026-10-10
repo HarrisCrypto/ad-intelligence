@@ -1,0 +1,120 @@
+{
+  "id": "pattern-to-pipeline",
+  "version": "3.0.0",
+  "instruction": "After selecting a pattern id, attach the default pipeline. Override only if user constraints require it. Always emit prompts for the primary generator even if tools are disconnected.",
+  "defaults_by_posture": {
+    "trend_reactive": {
+      "primary": ["capcut_symphony", "higgsfield.ugc-video", "seedance.omni_reference_short"],
+      "audio": ["trend_organic_only_or_suno_paid_twin"],
+      "distribute": ["tiktok_ads", "meta_ads"]
+    },
+    "share_engineered": {
+      "primary": ["higgsfield.ugc-video", "seedance", "kling", "midjourney_flux_sd"],
+      "audio": ["suno_udio", "elevenlabs_whisper"],
+      "distribute": ["organic_short", "meta_ads", "tiktok_ads"]
+    },
+    "brand_film": {
+      "primary": ["seedance_2_5", "sora_veo", "runway", "higgsfield.katana"],
+      "stills": ["product-photoshoot", "midjourney_flux_sd"],
+      "audio": ["suno_udio", "elevenlabs_whisper"],
+      "distribute": ["youtube", "ctv_ott", "meta_ads"]
+    },
+    "evergreen_dr": {
+      "primary": ["higgsfield.ugc-video", "higgsfield.ads-studio", "seedance", "live_production"],
+      "scale": ["higgsfield.ad-multiplier"],
+      "distribute": ["meta_ads", "tiktok_ads", "google_youtube"]
+    }
+  },
+  "by_pattern": {
+    "pov-day-in-life": {
+      "stack": ["higgsfield.ugc-video", "seedance.omni_reference", "capcut_captions"],
+      "seedance_mode": "omni_reference",
+      "duration_s": 20
+    },
+    "skit-sketch-ad": {
+      "stack": ["higgsfield.ugc-video", "kling", "seedance", "capcut"],
+      "notes": "Comedy timing — generate silent first, add VO"
+    },
+    "ugc-talking-head-scroll-stop": {
+      "stack": ["live_production_or_higgsfield.ugc-video", "elevenlabs_optional", "capcut"],
+      "notes": "Prefer real creator for trust"
+    },
+    "before-after-reveal": {
+      "stack": ["product-photoshoot_or_owned_stills", "seedance_or_runway", "capcut"],
+      "duration_s": 12
+    },
+    "hero-product-film": {
+      "stack": ["product-photoshoot", "seedance_2_5", "sora_veo_optional", "davinci_grade"],
+      "duration_s": 30,
+      "aspects": ["16:9", "9:16"]
+    },
+    "beauty-macro-tabletop": {
+      "stack": ["midjourney_flux_macro_keyframes", "seedance_or_kling_i2v", "capcut"],
+      "duration_s": 10
+    },
+    "cgi-3d-product": {
+      "stack": ["higgsfield_or_specialty_3d", "seedance", "after_effects_optional"],
+      "duration_s": 12
+    },
+    "fashion-editorial-film": {
+      "stack": ["character-sheet", "seedance_2_5", "runway", "capcut"],
+      "duration_s": 20
+    },
+    "performance-sports-cine": {
+      "stack": ["seedance_2_5", "runway", "sora_veo", "suno"],
+      "duration_s": 30
+    },
+    "vfx-transformation": {
+      "stack": ["runway", "kling", "seedance.video_edit", "capcut"],
+      "duration_s": 10
+    },
+    "product-loop-demo": {
+      "stack": ["product-photoshoot", "seedance_or_kling_loop", "capcut"],
+      "duration_s": 8
+    },
+    "offer-urgency": {
+      "stack": ["higgsfield.ads-studio", "capcut_text", "meta_ads"],
+      "notes": "Static+video twins"
+    },
+    "social-proof-stack": {
+      "stack": ["owned_reviews", "capcut_montage", "higgsfield.video-montage"],
+      "notes": "No invented reviews"
+    },
+    "launch-teaser": {
+      "stack": ["seedance_2_5", "suno_motif", "youtube_teaser"],
+      "duration_s": 10
+    },
+    "influencer-collab-brief": {
+      "stack": ["creator_brief_only", "spark_ads", "ad-multiplier_after_winner"],
+      "notes": "Do not over-script"
+    },
+    "meme-native-trend": {
+      "stack": ["capcut_template", "organic_post", "paid_twin_with_cleared_audio"],
+      "notes": "Format ride"
+    },
+    "app-demo-ui": {
+      "stack": ["screen_record", "seedance_broll_optional", "capcut"],
+      "notes": "UI truth > AI fantasy UI"
+    },
+    "listicle-text-overlay": {
+      "stack": ["canva_figma_or_capcut", "elevenlabs", "meta_ads"],
+      "duration_s": 30
+    },
+    "static-carousel-dr": {
+      "stack": ["higgsfield.ads-studio", "product-photoshoot", "canva_figma"],
+      "notes": "No video required"
+    },
+    "challenge-participation": {
+      "stack": ["capcut", "creator_seeding", "tiktok_spark"],
+      "duration_s": 12
+    }
+  },
+  "universal_finishing": [
+    "Burned captions (muted-first)",
+    "Endcard with one CTA",
+    "Export 9:16 master + 4:5 + 1:1 or 16:9 as needed",
+    "UTM + pixel / events checklist",
+    "A/B matrix of 3 variants",
+    "Rights log (audio, faces, footage)"
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "founder-story-origin",
+  "name": "Founder / craftsperson origin story",
+  "platforms": [
+    "meta",
+    "youtube",
+    "linkedin",
+    "organic_short"
+  ],
+  "style": "founder_story",
+  "funnel_stage": "tof_awareness",
+  "niches": [
+    "local_services",
+    "luxury",
+    "craft",
+    "saas",
+    "food"
+  ],
+  "duration_seconds": {
+    "min": 30,
+    "max": 90,
+    "ideal": 45
+  },
+  "aspect_ratios": [
+    "9:16",
+    "16:9",
+    "1:1"
+  ],
+  "hook": {
+    "window_seconds": "0-5",
+    "visual": "Founder in the place of work, mid-action — not desk TED talk",
+    "audio_or_vo": "The year / the bet / the non-obvious reason they started",
+    "text_overlay": "Since [year] · [place] — sparse",
+    "pattern_interrupt": "A surprising constraint or unpopular belief"
+  },
+  "body": {
+    "beats": [
+      {
+        "t": "5-15s",
+        "purpose": "The problem they couldn’t ignore",
+        "visual": "Archive photos, early shop, failed attempts",
+        "vo_or_copy": "Personal stake, not corporate mission statement"
+      },
+      {
+        "t": "15-30s",
+        "purpose": "The craft standard they refused to drop",
+        "visual": "Close-ups of process that competitors skip",
+        "vo_or_copy": "One non-negotiable that explains the price or wait"
+      },
+      {
+        "t": "30-40s",
+        "purpose": "Who they serve now",
+        "visual": "Customer handoff or finished work in the world",
+        "vo_or_copy": "Specific customer type + outcome"
+      }
+    ]
+  },
+  "cta": {
+    "type": "soft_curiosity",
+    "on_screen": "Watch the full story / Visit the shop / Start a project",
+    "spoken_or_caption": "If that standard matters to you, here’s how we begin",
+    "landing_promise": "About/process page that continues the same story"
+  },
+  "audio_design": {
+    "music_energy": "Sparse score; space for VO",
+    "vo_pace": "Measured, first person",
+    "captions": "Key belief lines as captions"
+  },
+  "visual_system": {
+    "camera": "Observational documentary; shallow depth on craft details",
+    "lighting": "Practical lights of the shop/studio",
+    "color": "Film-adjacent but honest",
+    "editing_pace": "Patient; let craft breathe",
+    "text_style": "Minimal typography; brand at end"
+  },
+  "why_it_works": [
+    "Trust transfers from person to brand",
+    "Explains premium pricing without apologizing",
+    "Performs well as organic content that can be boosted"
+  ],
+  "anti_patterns": [
+    "Generic ‘passionate about excellence’",
+    "Scripted corporate speak",
+    "No craft shown — only talking"
+  ],
+  "metrics_signals": [
+    "High average watch time",
+    "Profile follows",
+    "Inbound messages mentioning the story"
+  ],
+  "prompt_seeds": {
+    "script": "45s first-person origin. Hook = unpopular craft belief. Show process they won’t skip. End with who it’s for.",
+    "shot_list": "Founder action → archive → process close-ups → customer outcome → soft CTA"
+  },
+  "output_contract": {
+    "deliverables": [
+      "script",
+      "shot_list",
+      "primary_text",
+      "video_gen_prompt"
+    ]
+  },
+  "source_notes": "Brand-building pattern for craft and local service businesses.",
+  "production_tier": "high_production",
+  "virality_posture": "brand_film"
+}

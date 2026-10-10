@@ -1,0 +1,167 @@
+{
+  "id": "mistakes-library",
+  "name": "Common LLM ad mistakes → exact fixes",
+  "instruction": "Before delivery, scan the draft against every item. If a mistake matches, rewrite using the fix and good_example pattern.",
+  "mistakes": [
+    {
+      "id": "m01",
+      "mistake": "Opens with brand name or ‘Hey guys welcome back’",
+      "why": "Burns the thumb-stop on identity the viewer doesn’t care about.",
+      "fix": "Open on problem, format signal, spectacle, or confession. Brand after 8–12s.",
+      "bad": "Hi, we’re GlowLab — the future of skincare!",
+      "good": "POV: your makeup finally stays put through a double shift…"
+    },
+    {
+      "id": "m02",
+      "mistake": "Feature laundry list as the script",
+      "why": "No single job; nothing memorable.",
+      "fix": "State one JTBD. Features only as proof of the mechanism.",
+      "bad": "We have 12 vitamins, vegan, cruelty-free, recyclable, fast shipping…",
+      "good": "Stop midday crash — one scoop, 20 minutes, back in the zone. (Here’s what’s in it if you care…)"
+    },
+    {
+      "id": "m03",
+      "mistake": "Invented reviews, CTR, ROAS, or celebrity use",
+      "why": "Hallucination + legal risk.",
+      "fix": "Use only user-supplied proof or [PLACEHOLDER: review].",
+      "bad": "9.8/10 on Trustpilot from 12,044 moms!",
+      "good": "[PLACEHOLDER: paste 1–2 real reviews] — or omit social proof this cut."
+    },
+    {
+      "id": "m04",
+      "mistake": "Fake UGC that looks like a studio commercial",
+      "why": "Native audiences punish teleprompter polish.",
+      "fix": "Either commit to native_ugc (handheld, imperfect) or premium_cinema (honestly cinematic).",
+      "bad": "Ring light, perfect script, logo lower-third, stock smile",
+      "good": "Front camera, messy desk, jump cuts, one honest stumble left in"
+    },
+    {
+      "id": "m05",
+      "mistake": "Trend used with no product truth punchline",
+      "why": "Views without memory or conversion.",
+      "fix": "Format = vehicle. Punchline must equal the offer’s wedge.",
+      "bad": "Random dance + logo endcard",
+      "good": "Same dance timing, lyric beat replaced with ‘when the app actually…’ then 2s demo"
+    },
+    {
+      "id": "m06",
+      "mistake": "Multiple CTAs in one cut",
+      "why": "Splits action; kills measurement.",
+      "fix": "One primary CTA. Put alts in A/B matrix only.",
+      "bad": "Like, follow, comment SALE, tap cart, link in bio, shop now!",
+      "good": "Comment SALE — I’ll DM the link."
+    },
+    {
+      "id": "m07",
+      "mistake": "Script without timecodes / beats",
+      "why": "Agents write essays; editors can’t shoot it.",
+      "fix": "Always emit timed beats from a flow id.",
+      "bad": "A paragraph of VO",
+      "good": "0–2s visual hook / 2–8s pain / 8–18s mechanism / 18–25s proof / 25–28s CTA"
+    },
+    {
+      "id": "m08",
+      "mistake": "Ignores muted viewing",
+      "why": "Most feed starts muted.",
+      "fix": "Hook must read as text overlay or pure visual.",
+      "bad": "All meaning only in VO whisper",
+      "good": "Huge on-screen ‘BEFORE’ + visual; VO optional"
+    },
+    {
+      "id": "m09",
+      "mistake": "Landing page promise mismatch",
+      "why": "CTR without conversion.",
+      "fix": "Mirror hook language above the fold; same SKU/offer/geo.",
+      "bad": "Ad: 50% off serum. Landing: brand homepage carousel",
+      "good": "Ad and landing both: ‘50% off Barrier Serum — today only’"
+    },
+    {
+      "id": "m10",
+      "mistake": "Assumes trending audio is free for paid",
+      "why": "Ads get rejected; accounts risked.",
+      "fix": "Flag rights. Use licensed/original for paid; trend audio organic-only unless cleared.",
+      "bad": "Just use that viral song in Spark Ads",
+      "good": "Organic: trend sound. Paid twin: original bed + same cadence."
+    },
+    {
+      "id": "m11",
+      "mistake": "Pretty cinema with no job-to-be-done",
+      "why": "Brand film vanity without commercial lift.",
+      "fix": "Spectacle → desire → capability → signature. Pair with DR twin.",
+      "bad": "30s moody b-roll, logo, silence",
+      "good": "Same grade, but product does one undeniable thing by 0:18; endcard explores"
+    },
+    {
+      "id": "m12",
+      "mistake": "Over-scripted influencer brief",
+      "why": "Kills the authenticity you bought.",
+      "fix": "Must-say / do-not-say / optional hooks; let delivery stay theirs + FTC disclose.",
+      "bad": "Word-for-word 90s teleprompter",
+      "good": "3 must-say truths, 2 banned claims, 5 hook options, required demo shot"
+    },
+    {
+      "id": "m13",
+      "mistake": "Wrong aspect ratio / length for platform",
+      "why": "Looks foreign; loses distribution.",
+      "fix": "TikTok/Reels/Shorts: 9:16. Meta feed often 4:5. YouTube/CTV: 16:9 + vertical cutdowns.",
+      "bad": "16:9 letterboxed TikTok",
+      "good": "Shoot vertical master; crop horizontal from center or second framing"
+    },
+    {
+      "id": "m14",
+      "mistake": "Cliffhanger Part 1 with no Part 2 outlined",
+      "why": "Burns follow trust.",
+      "fix": "Outline all parts before publishing.",
+      "bad": "Part 1 end… (no plan)",
+      "good": "Part1 hook → Part2 mechanism → Part3 offer/proof scheduled"
+    },
+    {
+      "id": "m15",
+      "mistake": "Medical/finance absolute claims",
+      "why": "Compliance risk.",
+      "fix": "Use approved language; defer to professionals; no guarantees.",
+      "bad": "Cures anxiety / guaranteed 10% returns",
+      "good": "Supports calm routines / invest knowing risk — talk to an advisor"
+    },
+    {
+      "id": "m16",
+      "mistake": "Comparison that illegally smears a trademark",
+      "why": "Legal risk.",
+      "fix": "Compare to ‘old way’ / category, not fake competitor claims.",
+      "bad": "Better than [BrandX] which scams you",
+      "good": "OLD: three apps and a spreadsheet. NEW: one flow."
+    },
+    {
+      "id": "m17",
+      "mistake": "Empty ‘comment if you agree’ bait",
+      "why": "Spammy; weak commercial memory.",
+      "fix": "Comment keyword unlocks a real asset, or pose a real debate.",
+      "bad": "Comment YES!!!",
+      "good": "Comment CHECKLIST and I’ll send the 1-pager"
+    },
+    {
+      "id": "m18",
+      "mistake": "No A/B matrix — single fragile idea",
+      "why": "First cut rarely wins; agents should propose tests.",
+      "fix": "Always include 3-variant matrix: hook, proof, CTA, or posture.",
+      "bad": "One script only",
+      "good": "A silent spectacle / B UGC confession / C offer-first"
+    },
+    {
+      "id": "m19",
+      "mistake": "Writing ‘viral’ without choosing a trend class",
+      "why": "Vague aspiration ≠ method.",
+      "fix": "Pick a class from viral-operating-system.json and name it.",
+      "bad": "Make it viral lol",
+      "good": "Trend class: format_meme (POV). Payload: [identity state]."
+    },
+    {
+      "id": "m20",
+      "mistake": "Mixing production tiers in one confused cut",
+      "why": "Uncanny; neither native nor premium.",
+      "fix": "Pick a tier. Or deliver two separate twins.",
+      "bad": "Handheld confession + orchestral trailer grade mid-sentence",
+      "good": "Cut A native_ugc. Cut B premium_cinema. Same JTBD."
+    }
+  ]
+}

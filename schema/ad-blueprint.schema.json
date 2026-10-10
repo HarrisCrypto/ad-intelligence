@@ -1,0 +1,245 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local/ad-intelligence/ad-blueprint.schema.json",
+  "title": "AdBlueprint",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "platforms",
+    "style",
+    "funnel_stage",
+    "duration_seconds",
+    "hook",
+    "body",
+    "cta",
+    "why_it_works",
+    "output_contract"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "name": { "type": "string" },
+    "platforms": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "meta",
+          "tiktok",
+          "youtube",
+          "youtube_shorts",
+          "google_display",
+          "linkedin",
+          "snapchat",
+          "pinterest",
+          "x_twitter",
+          "organic_short",
+          "ctv_ott",
+          "influencer_seed"
+        ]
+      },
+      "minItems": 1
+    },
+    "production_tier": {
+      "type": "string",
+      "enum": ["native_ugc", "hybrid_polished", "high_production", "premium_cinema"],
+      "description": "Expected craft/budget level of the creative."
+    },
+    "virality_posture": {
+      "type": "string",
+      "enum": ["evergreen_dr", "trend_reactive", "share_engineered", "brand_film"],
+      "description": "How the piece is meant to spread or convert."
+    },
+    "style": {
+      "type": "string",
+      "enum": [
+        "ugc_talking_head",
+        "ugc_demo",
+        "before_after",
+        "founder_story",
+        "social_proof_stack",
+        "problem_agitate_solve",
+        "cinematic_brand",
+        "product_loop",
+        "meme_native",
+        "listicle_text_overlay",
+        "testimonial_cutdown",
+        "local_service_trust",
+        "pov_day_in_life",
+        "duet_stitch_react",
+        "green_screen_rant",
+        "skit_sketch",
+        "grwm_soft_sell",
+        "street_interview",
+        "unboxing_asmr",
+        "challenge_participation",
+        "series_cliffhanger",
+        "hot_take_controversy",
+        "text_story_slideshow",
+        "save_share_bait",
+        "hero_product_film",
+        "fashion_editorial",
+        "beauty_macro_tabletop",
+        "cgi_3d_product",
+        "motion_design_explainer",
+        "documentary_cutdown",
+        "music_video_brand",
+        "vfx_transformation",
+        "performance_sports_cine",
+        "launch_teaser",
+        "offer_urgency",
+        "comparison_vs",
+        "objection_faq",
+        "lead_magnet_value",
+        "app_demo_ui",
+        "influencer_collab_brief",
+        "kinetic_type_explainer",
+        "testimonial_montage_cine",
+        "bts_making_of",
+        "cultural_moment",
+        "podcast_clip_ad"
+      ]
+    },
+    "funnel_stage": {
+      "type": "string",
+      "enum": ["tof_awareness", "mof_consideration", "bof_conversion", "retargeting"]
+    },
+    "niches": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "duration_seconds": {
+      "type": "object",
+      "required": ["min", "max", "ideal"],
+      "properties": {
+        "min": { "type": "number" },
+        "max": { "type": "number" },
+        "ideal": { "type": "number" }
+      }
+    },
+    "aspect_ratios": {
+      "type": "array",
+      "items": { "type": "string", "enum": ["9:16", "1:1", "4:5", "16:9"] }
+    },
+    "hook": {
+      "type": "object",
+      "required": ["window_seconds", "visual", "audio_or_vo", "text_overlay", "pattern_interrupt"],
+      "properties": {
+        "window_seconds": { "type": "string" },
+        "visual": { "type": "string" },
+        "audio_or_vo": { "type": "string" },
+        "text_overlay": { "type": "string" },
+        "pattern_interrupt": { "type": "string" }
+      }
+    },
+    "body": {
+      "type": "object",
+      "required": ["beats"],
+      "properties": {
+        "beats": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": ["t", "purpose", "visual", "vo_or_copy"],
+            "properties": {
+              "t": { "type": "string" },
+              "purpose": { "type": "string" },
+              "visual": { "type": "string" },
+              "vo_or_copy": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "cta": {
+      "type": "object",
+      "required": ["type", "on_screen", "spoken_or_caption", "landing_promise"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "soft_curiosity",
+            "direct_offer",
+            "book_call",
+            "shop_now",
+            "learn_more",
+            "dm_keyword",
+            "waitlist"
+          ]
+        },
+        "on_screen": { "type": "string" },
+        "spoken_or_caption": { "type": "string" },
+        "landing_promise": { "type": "string" }
+      }
+    },
+    "audio_design": {
+      "type": "object",
+      "properties": {
+        "music_energy": { "type": "string" },
+        "vo_pace": { "type": "string" },
+        "captions": { "type": "string" }
+      }
+    },
+    "visual_system": {
+      "type": "object",
+      "properties": {
+        "camera": { "type": "string" },
+        "lighting": { "type": "string" },
+        "color": { "type": "string" },
+        "editing_pace": { "type": "string" },
+        "text_style": { "type": "string" }
+      }
+    },
+    "why_it_works": {
+      "type": "array",
+      "minItems": 2,
+      "items": { "type": "string" }
+    },
+    "anti_patterns": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "metrics_signals": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Observable signals of performance — never invent platform CTR numbers."
+    },
+    "prompt_seeds": {
+      "type": "object",
+      "properties": {
+        "script": { "type": "string" },
+        "shot_list": { "type": "string" },
+        "image_gen": { "type": "string" },
+        "video_gen": { "type": "string" }
+      }
+    },
+    "output_contract": {
+      "type": "object",
+      "required": ["deliverables"],
+      "properties": {
+        "deliverables": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "primary_text",
+              "headline",
+              "script",
+              "shot_list",
+              "caption_track",
+              "cta_variants",
+              "thumbnail_prompt",
+              "video_gen_prompt",
+              "ab_test_matrix"
+            ]
+          }
+        }
+      }
+    },
+    "source_notes": {
+      "type": "string",
+      "description": "How this pattern was derived. Never paste copyrighted creative."
+    }
+  }
+}

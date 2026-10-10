@@ -1,0 +1,25 @@
+{
+  "title": "Example dual-track output shape (any brand)",
+  "brief": {
+    "brand": "[BRAND]",
+    "offer": "[OFFER]",
+    "niche": "beauty",
+    "platforms": ["tiktok", "meta", "youtube"]
+  },
+  "stack": {
+    "viral_primary": "pov-day-in-life",
+    "viral_challenger": "skit-sketch-ad",
+    "cinema_primary": "beauty-macro-tabletop",
+    "cinema_challenger": "hero-product-film"
+  },
+  "shared_job_to_be_done": "Make [benefit] feel inevitable in under 3 seconds, then give one clear next step.",
+  "deliverables_expected": [
+    "5 hooks",
+    "15–35s viral script + captions",
+    "10–20s macro/cinema shot list",
+    "A/B matrix across posture (trend vs cinema)",
+    "Rights notes for audio",
+    "Landing mirror lines"
+  ],
+  "notes": "Generic example for agents — replace placeholders; never invent reviews or metrics."
+}

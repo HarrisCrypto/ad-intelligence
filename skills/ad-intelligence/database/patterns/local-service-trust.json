@@ -1,0 +1,108 @@
+{
+  "id": "local-service-trust",
+  "name": "Local service trust ad (geo + proof + call)",
+  "platforms": [
+    "meta",
+    "google_display",
+    "youtube"
+  ],
+  "style": "local_service_trust",
+  "funnel_stage": "bof_conversion",
+  "niches": [
+    "home_services",
+    "medical",
+    "legal",
+    "trades",
+    "auto_repair",
+    "beauty_local",
+    "fitness_local"
+  ],
+  "duration_seconds": {
+    "min": 15,
+    "max": 30,
+    "ideal": 20
+  },
+  "aspect_ratios": [
+    "4:5",
+    "1:1",
+    "9:16"
+  ],
+  "hook": {
+    "window_seconds": "0-3",
+    "visual": "Recognizable local cue (shop exterior, city/landmark-adjacent, marque in bay) OR the exact service problem",
+    "audio_or_vo": "[City/region] + [specific service] in one breath",
+    "text_overlay": "City · Service · Years in business",
+    "pattern_interrupt": "Hyper-specific geo + job type beats generic ‘best in town’"
+  },
+  "body": {
+    "beats": [
+      {
+        "t": "3-8s",
+        "purpose": "Show real facility / team / work in progress",
+        "visual": "Walk-through or bay shot with real cars/jobs — no stock",
+        "vo_or_copy": "What you actually do that neighbors search for"
+      },
+      {
+        "t": "8-14s",
+        "purpose": "Trust stack",
+        "visual": "Review stars, years badge, association logos you may use, finished job",
+        "vo_or_copy": "One review line + years + service area"
+      },
+      {
+        "t": "14-20s",
+        "purpose": "Clear next step",
+        "visual": "Phone number / tap-to-call end card",
+        "vo_or_copy": "Call / text / form — pick the one you answer fastest"
+      }
+    ]
+  },
+  "cta": {
+    "type": "book_call",
+    "on_screen": "Call now · (xxx) xxx-xxxx · Get a quote",
+    "spoken_or_caption": "Call [name] shop at [number] — [hours]",
+    "landing_promise": "Click-to-call and quote form; NAP consistent with GBP"
+  },
+  "audio_design": {
+    "music_energy": "Light, confident; never cheesy local jingle unless on-brand",
+    "vo_pace": "Clear enough for car speakers",
+    "captions": "Phone number on screen for 3+ seconds"
+  },
+  "visual_system": {
+    "camera": "Phone or simple cinema; stable shop tour",
+    "lighting": "Real shop light",
+    "color": "Brand colors on end card only",
+    "editing_pace": "Simple; prioritize clarity",
+    "text_style": "Large phone number; high contrast"
+  },
+  "why_it_works": [
+    "Search intent and geo ads need specificity and trust, not cleverness",
+    "Real facility footage outperforms stock for local leads",
+    "Phone-on-screen converts high-intent viewers"
+  ],
+  "anti_patterns": [
+    "Stock footage of unrelated cities",
+    "No NAP / wrong phone number",
+    "Vague ‘full service excellence’ without job types"
+  ],
+  "metrics_signals": [
+    "Call clicks and form fills",
+    "Direction requests / GBP correlation",
+    "Cost per qualified lead"
+  ],
+  "prompt_seeds": {
+    "script": "20s local trust ad for [shop] in [city]. Hook = city + specialty. Show real bay. Trust stack. End with phone number held 3s.",
+    "shot_list": "Exterior → bay specialty → review overlay → end card with phone"
+  },
+  "output_contract": {
+    "deliverables": [
+      "script",
+      "shot_list",
+      "primary_text",
+      "headline",
+      "cta_variants"
+    ]
+  },
+  "source_notes": "Built for geo-intent and local lead gen across service businesses.",
+  "production_tier": "native_ugc",
+  "virality_posture": "evergreen_dr"
+}

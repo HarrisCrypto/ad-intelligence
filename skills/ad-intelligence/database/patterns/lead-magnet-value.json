@@ -1,0 +1,96 @@
+{
+  "id": "lead-magnet-value",
+  "name": "Lead magnet / free value ad",
+  "platforms": [
+    "meta",
+    "linkedin",
+    "youtube",
+    "tiktok",
+    "organic_short"
+  ],
+  "style": "lead_magnet_value",
+  "funnel_stage": "mof_consideration",
+  "niches": [
+    "education",
+    "saas",
+    "fintech",
+    "fitness",
+    "b2b_services",
+    "real_estate",
+    "health"
+  ],
+  "production_tier": "hybrid_polished",
+  "virality_posture": "evergreen_dr",
+  "duration_seconds": {
+    "min": 15,
+    "max": 45,
+    "ideal": 30
+  },
+  "aspect_ratios": [
+    "9:16"
+  ],
+  "hook": {
+    "window_seconds": "0-3",
+    "visual": "Preview of the free asset",
+    "audio_or_vo": "Free [asset] that helps you [outcome]",
+    "text_overlay": "FREE: [asset name]",
+    "pattern_interrupt": "Clear free value"
+  },
+  "body": {
+    "beats": [
+      {
+        "t": "3-18s",
+        "purpose": "Show what’s inside",
+        "visual": "Flip through pages / UI",
+        "vo_or_copy": "3 contents highlights"
+      },
+      {
+        "t": "18-30s",
+        "purpose": "Email/SMS CTA",
+        "visual": "Form mock",
+        "vo_or_copy": "Comment KEYWORD / grab link"
+      }
+    ]
+  },
+  "cta": {
+    "type": "waitlist",
+    "on_screen": "Get the free [asset]",
+    "spoken_or_caption": "Comment GUIDE",
+    "landing_promise": "Instant delivery of promised asset"
+  },
+  "audio_design": {
+    "music_energy": "Match platform native expectations",
+    "vo_pace": "Clear; pause after hook",
+    "captions": "Muted-first, large, high contrast"
+  },
+  "visual_system": {
+    "camera": "Platform-native",
+    "lighting": "Honest to the tier",
+    "color": "Consistent within the cut",
+    "editing_pace": "Match style",
+    "text_style": "Readable on mobile"
+  },
+  "why_it_works": [
+    "List growth",
+    "Lower friction than buy",
+    "Nurture fuel"
+  ],
+  "anti_patterns": [],
+  "metrics_signals": [
+    "Completion",
+    "Shares/saves",
+    "Qualified CTR — never invent numbers"
+  ],
+  "prompt_seeds": {},
+  "output_contract": {
+    "deliverables": [
+      "script",
+      "shot_list",
+      "caption_track",
+      "primary_text",
+      "cta_variants",
+      "ab_test_matrix"
+    ]
+  },
+  "source_notes": "Pattern distilled from common high-performing structures — no scraped creative."
+}

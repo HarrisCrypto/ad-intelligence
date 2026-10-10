@@ -1,0 +1,94 @@
+{
+  "id": "app-demo-ui",
+  "name": "App / UI demo ad",
+  "platforms": [
+    "meta",
+    "tiktok",
+    "youtube",
+    "snapchat",
+    "organic_short"
+  ],
+  "style": "app_demo_ui",
+  "funnel_stage": "mof_consideration",
+  "niches": [
+    "apps",
+    "saas",
+    "fintech",
+    "gaming",
+    "health",
+    "education"
+  ],
+  "production_tier": "high_production",
+  "virality_posture": "evergreen_dr",
+  "duration_seconds": {
+    "min": 10,
+    "max": 30,
+    "ideal": 18
+  },
+  "aspect_ratios": [
+    "9:16"
+  ],
+  "hook": {
+    "window_seconds": "0-2",
+    "visual": "Finger completes the aha action in-UI",
+    "audio_or_vo": "See how fast you can…",
+    "text_overlay": "Outcome in UI chrome",
+    "pattern_interrupt": "Aha in first tap"
+  },
+  "body": {
+    "beats": [
+      {
+        "t": "2-12s",
+        "purpose": "Core loop demo",
+        "visual": "Clean screen record with cursor/finger",
+        "vo_or_copy": "Narrate outcome not features"
+      },
+      {
+        "t": "12-18s",
+        "purpose": "Install CTA",
+        "visual": "Store badge / endcard",
+        "vo_or_copy": "Download"
+      }
+    ]
+  },
+  "cta": {
+    "type": "shop_now",
+    "on_screen": "Download",
+    "spoken_or_caption": "",
+    "landing_promise": "Store listing matches demo"
+  },
+  "audio_design": {
+    "music_energy": "Match platform native expectations",
+    "vo_pace": "Clear; pause after hook",
+    "captions": "Muted-first, large, high contrast"
+  },
+  "visual_system": {
+    "camera": "Device frame or raw UI",
+    "lighting": "n/a",
+    "color": "True UI",
+    "editing_pace": "Snappy taps",
+    "text_style": "Floating benefit labels"
+  },
+  "why_it_works": [
+    "Shows time-to-value",
+    "Reduces skepticism for software"
+  ],
+  "anti_patterns": [],
+  "metrics_signals": [
+    "Completion",
+    "Shares/saves",
+    "Qualified CTR — never invent numbers"
+  ],
+  "prompt_seeds": {},
+  "output_contract": {
+    "deliverables": [
+      "script",
+      "shot_list",
+      "caption_track",
+      "primary_text",
+      "cta_variants",
+      "ab_test_matrix"
+    ]
+  },
+  "source_notes": "Pattern distilled from common high-performing structures — no scraped creative."
+}

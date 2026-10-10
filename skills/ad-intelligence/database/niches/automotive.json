@@ -1,0 +1,48 @@
+{
+  "id": "automotive",
+  "niche": "automotive",
+  "aliases": [
+    "auto",
+    "ev",
+    "dealer"
+  ],
+  "audience": "Aspirational + practical shoppers.",
+  "jobs_to_be_done": [
+    "Motion lust",
+    "Spec clarity",
+    "Test drive"
+  ],
+  "recommended_pattern_ids": [
+    "performance-sports-cine",
+    "hero-product-film",
+    "cgi-3d-product",
+    "cinematic-brand-spot",
+    "local-service-trust",
+    "offer-urgency"
+  ],
+  "angles": [
+    {
+      "id": "motion-open",
+      "hook_seed": "Speed / light streak open",
+      "pattern": "performance-sports-cine"
+    }
+  ],
+  "lexicon": {
+    "use": [
+      "range/power only if accurate",
+      "trim"
+    ],
+    "avoid_unless_true": [
+      "misleading MPG/range"
+    ]
+  },
+  "proof_types": [
+    "owned footage",
+    "owner stories"
+  ],
+  "cta_defaults": [
+    "Build yours",
+    "Test drive"
+  ],
+  "landing_notes": "Trim accuracy."
+}

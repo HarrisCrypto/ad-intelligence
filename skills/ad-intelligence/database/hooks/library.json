@@ -1,0 +1,43 @@
+{
+  "id": "hook-library",
+  "name": "Hook templates (fill with niche specifics)",
+  "rules": [
+    "Never open cold traffic with the brand name unless the brand IS the spectacle.",
+    "Replace bracket tokens with concrete nouns from the brief.",
+    "Prefer scenes, formats, and sensations over abstractions.",
+    "For viral: signal the format in the first line or frame.",
+    "For high-production: signal craft/world in the first frame — no logo spam."
+  ],
+  "hooks": [
+    { "id": "confession", "template": "I wasted [time/money] on [failed approach] before I learned [mechanism].", "best_styles": ["ugc_talking_head", "founder_story"], "posture": "evergreen_dr" },
+    { "id": "costly-mistake", "template": "If your [asset] has [symptom], don’t [common wrong fix] — that usually causes [worse outcome].", "best_styles": ["problem_agitate_solve", "listicle_text_overlay"], "posture": "evergreen_dr" },
+    { "id": "pattern-interrupt-visual", "template": "[Unexpected visual of problem or craft] + on-screen: [3–5 word label]", "best_styles": ["before_after", "product_loop", "cinematic_brand"], "posture": "share_engineered" },
+    { "id": "geo-specific", "template": "[City/region] [specialty] that actually [specific proof].", "best_styles": ["local_service_trust"], "posture": "evergreen_dr" },
+    { "id": "open-loop", "template": "The [N]-step way to fix [problem] without [painful tradeoff]…", "best_styles": ["listicle_text_overlay", "problem_agitate_solve"], "posture": "evergreen_dr" },
+    { "id": "customer-voice", "template": "‘[Exact customer sentence].’ — then smash cut to the result.", "best_styles": ["social_proof_stack", "testimonial_cutdown", "testimonial_montage_cine"], "posture": "evergreen_dr" },
+    { "id": "unpopular-belief", "template": "Unpopular opinion: [belief that explains your wedge].", "best_styles": ["hot_take_controversy", "founder_story", "ugc_talking_head"], "posture": "share_engineered" },
+    { "id": "before-label", "template": "BEFORE: [blunt problem state]. (No VO needed.)", "best_styles": ["before_after"], "posture": "share_engineered" },
+    { "id": "satisfying-mid-action", "template": "Start on the satisfying motion already happening — [action].", "best_styles": ["product_loop", "beauty_macro_tabletop", "unboxing_asmr"], "posture": "evergreen_dr" },
+    { "id": "trend-payload", "template": "Use [trend format], punchline = [product truth in one line].", "best_styles": ["meme_native", "skit_sketch"], "posture": "trend_reactive" },
+    { "id": "pov-identity", "template": "POV: you finally [desired identity state]…", "best_styles": ["pov_day_in_life", "grwm_soft_sell"], "posture": "trend_reactive" },
+    { "id": "stitch-disagree", "template": "Wait — that’s not how [domain] works…", "best_styles": ["duet_stitch_react", "green_screen_rant"], "posture": "trend_reactive" },
+    { "id": "myth-bust", "template": "Myth: [common belief]. Here’s what actually happens…", "best_styles": ["green_screen_rant", "kinetic_type_explainer"], "posture": "share_engineered" },
+    { "id": "skit-cold-open", "template": "Character already in the absurd situation: [setup line].", "best_styles": ["skit_sketch"], "posture": "share_engineered" },
+    { "id": "grwm", "template": "GRWM for [occasion] — and the one product I won’t skip.", "best_styles": ["grwm_soft_sell"], "posture": "trend_reactive" },
+    { "id": "street-prompt", "template": "How much would you pay for [outcome]?", "best_styles": ["street_interview"], "posture": "share_engineered" },
+    { "id": "challenge-rules", "template": "[ChallengeName]: [rule in one line]. Duet this.", "best_styles": ["challenge_participation"], "posture": "share_engineered" },
+    { "id": "part-one", "template": "Part 1 — I didn’t expect this…", "best_styles": ["series_cliffhanger"], "posture": "share_engineered" },
+    { "id": "save-this", "template": "Save this before you [action].", "best_styles": ["save_share_bait", "listicle_text_overlay"], "posture": "share_engineered" },
+    { "id": "spectacle-open", "template": "Silent first frame of [impossible craft / material / motion].", "best_styles": ["hero_product_film", "cinematic_brand", "vfx_transformation", "performance_sports_cine"], "posture": "brand_film" },
+    { "id": "macro-lust", "template": "Extreme close-up of [texture] already moving.", "best_styles": ["beauty_macro_tabletop", "cgi_3d_product"], "posture": "brand_film" },
+    { "id": "launch-silhouette", "template": "You haven’t seen this yet. [Date].", "best_styles": ["launch_teaser"], "posture": "share_engineered" },
+    { "id": "old-vs-new", "template": "OLD way vs NEW way — same goal, different pain.", "best_styles": ["comparison_vs"], "posture": "evergreen_dr" },
+    { "id": "objection-first", "template": "“But what about [objection]?”", "best_styles": ["objection_faq"], "posture": "evergreen_dr" },
+    { "id": "free-asset", "template": "Free [asset] that helps you [outcome] — here’s what’s inside.", "best_styles": ["lead_magnet_value"], "posture": "evergreen_dr" },
+    { "id": "ui-aha", "template": "Watch what happens when I tap [core action]…", "best_styles": ["app_demo_ui"], "posture": "evergreen_dr" },
+    { "id": "offer-first", "template": "[Offer] — ends [time]. Here’s everything included.", "best_styles": ["offer_urgency"], "posture": "evergreen_dr" },
+    { "id": "bts-access", "template": "You’re not supposed to see this part…", "best_styles": ["bts_making_of", "documentary_cutdown"], "posture": "share_engineered" },
+    { "id": "lyric-energy", "template": "Beat drop = smash cut to [world]. Brand later.", "best_styles": ["music_video_brand"], "posture": "share_engineered" },
+    { "id": "moment-bridge", "template": "Everyone’s talking about [moment]. The useful take for [niche] is…", "best_styles": ["cultural_moment"], "posture": "trend_reactive" }
+  ]
+}

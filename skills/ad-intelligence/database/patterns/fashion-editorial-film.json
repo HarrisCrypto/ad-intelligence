@@ -1,0 +1,94 @@
+{
+  "id": "fashion-editorial-film",
+  "name": "Fashion editorial film",
+  "platforms": [
+    "meta",
+    "youtube",
+    "tiktok",
+    "pinterest",
+    "organic_short"
+  ],
+  "style": "fashion_editorial",
+  "funnel_stage": "tof_awareness",
+  "niches": [
+    "fashion",
+    "luxury",
+    "beauty"
+  ],
+  "production_tier": "premium_cinema",
+  "virality_posture": "brand_film",
+  "duration_seconds": {
+    "min": 15,
+    "max": 45,
+    "ideal": 25
+  },
+  "aspect_ratios": [
+    "9:16",
+    "4:5",
+    "16:9"
+  ],
+  "hook": {
+    "window_seconds": "0-2",
+    "visual": "Strike pose / fabric motion / casting face",
+    "audio_or_vo": "Music-forward",
+    "text_overlay": "Collection name late",
+    "pattern_interrupt": "Editorial confidence"
+  },
+  "body": {
+    "beats": [
+      {
+        "t": "2-18s",
+        "purpose": "Look book in motion",
+        "visual": "3–5 looks; location consistency",
+        "vo_or_copy": "Silence or whisper line"
+      },
+      {
+        "t": "18-25s",
+        "purpose": "Campaign land",
+        "visual": "Title card + shop CTA",
+        "vo_or_copy": "Collection name"
+      }
+    ]
+  },
+  "cta": {
+    "type": "shop_now",
+    "on_screen": "Shop the edit",
+    "spoken_or_caption": "",
+    "landing_promise": "Collection page matching looks"
+  },
+  "audio_design": {
+    "music_energy": "Match platform native expectations",
+    "vo_pace": "Clear; pause after hook",
+    "captions": "Muted-first, large, high contrast"
+  },
+  "visual_system": {
+    "camera": "Prime lenses; intentional framing",
+    "lighting": "Editorial",
+    "color": "Campaign grade",
+    "editing_pace": "Music-led",
+    "text_style": "Fashion typography"
+  },
+  "why_it_works": [
+    "Desire and aspiration",
+    "Pinterest/IG save behavior",
+    "Creator cutdowns for seeding"
+  ],
+  "anti_patterns": [],
+  "metrics_signals": [
+    "Completion",
+    "Shares/saves",
+    "Qualified CTR — never invent numbers"
+  ],
+  "prompt_seeds": {},
+  "output_contract": {
+    "deliverables": [
+      "script",
+      "shot_list",
+      "caption_track",
+      "primary_text",
+      "cta_variants",
+      "ab_test_matrix"
+    ]
+  },
+  "source_notes": "Pattern distilled from common high-performing structures — no scraped creative."
+}

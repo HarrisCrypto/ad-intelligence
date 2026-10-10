@@ -1,0 +1,106 @@
+{
+  "id": "hot-take-controversy",
+  "name": "Hot take / polite controversy",
+  "platforms": [
+    "tiktok",
+    "linkedin",
+    "meta",
+    "youtube_shorts",
+    "x_twitter",
+    "organic_short"
+  ],
+  "style": "hot_take_controversy",
+  "funnel_stage": "tof_awareness",
+  "niches": [
+    "saas",
+    "fintech",
+    "education",
+    "fitness",
+    "beauty",
+    "b2b_services",
+    "creator"
+  ],
+  "production_tier": "native_ugc",
+  "virality_posture": "share_engineered",
+  "duration_seconds": {
+    "min": 15,
+    "max": 45,
+    "ideal": 28
+  },
+  "aspect_ratios": [
+    "9:16"
+  ],
+  "hook": {
+    "window_seconds": "0-3",
+    "visual": "Talking head, slight lean-in",
+    "audio_or_vo": "Unpopular opinion: [belief]",
+    "text_overlay": "Unpopular opinion",
+    "pattern_interrupt": "Status-challenging claim"
+  },
+  "body": {
+    "beats": [
+      {
+        "t": "3-15s",
+        "purpose": "Defend with logic",
+        "visual": "1–2 proof inserts",
+        "vo_or_copy": "Why most people get this wrong"
+      },
+      {
+        "t": "15-24s",
+        "purpose": "Nuance",
+        "visual": "Acknowledge edge cases",
+        "vo_or_copy": "When it IS true…"
+      },
+      {
+        "t": "24-28s",
+        "purpose": "Brand bridge",
+        "visual": "Soft product/mission land",
+        "vo_or_copy": "That’s why we…"
+      }
+    ]
+  },
+  "cta": {
+    "type": "dm_keyword",
+    "on_screen": "Agree or fight me in the comments",
+    "spoken_or_caption": "Tell me I’m wrong",
+    "landing_promise": "Longer essay or product that embodies the take"
+  },
+  "audio_design": {
+    "music_energy": "Match platform native expectations",
+    "vo_pace": "Clear; pause after hook",
+    "captions": "Muted-first, large, high contrast"
+  },
+  "visual_system": {
+    "camera": "Platform-native",
+    "lighting": "Honest to the tier",
+    "color": "Consistent within the cut",
+    "editing_pace": "Match style",
+    "text_style": "Readable on mobile"
+  },
+  "why_it_works": [
+    "Comment velocity",
+    "Shares from agreement tribes",
+    "Thought-leadership positioning"
+  ],
+  "anti_patterns": [
+    "Hate engagement",
+    "Claims that create legal risk"
+  ],
+  "metrics_signals": [
+    "Completion",
+    "Shares/saves",
+    "Qualified CTR — never invent numbers"
+  ],
+  "prompt_seeds": {},
+  "output_contract": {
+    "deliverables": [
+      "script",
+      "shot_list",
+      "caption_track",
+      "primary_text",
+      "cta_variants",
+      "ab_test_matrix"
+    ]
+  },
+  "source_notes": "Pattern distilled from common high-performing structures — no scraped creative."
+}

@@ -1,0 +1,51 @@
+{
+  "id": "fashion",
+  "niche": "fashion",
+  "aliases": [
+    "apparel",
+    "streetwear",
+    "luxury_fashion"
+  ],
+  "audience": "Style-driven browsers; aspiration + fit/identity.",
+  "jobs_to_be_done": [
+    "Make the fit/world desirable",
+    "Drop energy",
+    "Editorial authority"
+  ],
+  "recommended_pattern_ids": [
+    "fashion-editorial-film",
+    "hero-product-film",
+    "grwm-soft-sell",
+    "music-video-brand",
+    "challenge-participation",
+    "launch-teaser"
+  ],
+  "angles": [
+    {
+      "id": "drop-tease",
+      "hook_seed": "Silhouette reveal + date",
+      "pattern": "launch-teaser"
+    }
+  ],
+  "lexicon": {
+    "use": [
+      "fit",
+      "fabric",
+      "edit",
+      "drop"
+    ],
+    "avoid_unless_true": [
+      "celebrity worn without rights"
+    ]
+  },
+  "proof_types": [
+    "lookbook motion",
+    "fit UGC",
+    "sold-out social proof"
+  ],
+  "cta_defaults": [
+    "Shop the edit",
+    "Notify me"
+  ],
+  "landing_notes": "Collection consistency."
+}

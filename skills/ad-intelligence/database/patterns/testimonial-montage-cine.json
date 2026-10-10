@@ -1,0 +1,99 @@
+{
+  "id": "testimonial-montage-cine",
+  "name": "Cinematic testimonial montage",
+  "platforms": [
+    "meta",
+    "youtube",
+    "ctv_ott",
+    "linkedin"
+  ],
+  "style": "testimonial_montage_cine",
+  "funnel_stage": "bof_conversion",
+  "niches": [
+    "saas",
+    "health",
+    "education",
+    "finance",
+    "ecommerce",
+    "b2b_services",
+    "nonprofit"
+  ],
+  "production_tier": "high_production",
+  "virality_posture": "evergreen_dr",
+  "duration_seconds": {
+    "min": 20,
+    "max": 60,
+    "ideal": 30
+  },
+  "aspect_ratios": [
+    "16:9",
+    "1:1",
+    "9:16"
+  ],
+  "hook": {
+    "window_seconds": "0-3",
+    "visual": "Customer in beautiful but real environment",
+    "audio_or_vo": "Strongest emotional line first",
+    "text_overlay": "Real customer · first name",
+    "pattern_interrupt": "Proof with cinema craft"
+  },
+  "body": {
+    "beats": [
+      {
+        "t": "3-20s",
+        "purpose": "3 customer arcs",
+        "visual": "Intercut interviews + life B-roll",
+        "vo_or_copy": "Outcome-specific quotes only"
+      },
+      {
+        "t": "20-30s",
+        "purpose": "Offer + risk reversal",
+        "visual": "Product + guarantee",
+        "vo_or_copy": "CTA"
+      }
+    ]
+  },
+  "cta": {
+    "type": "direct_offer",
+    "on_screen": "Start now",
+    "spoken_or_caption": "Join them",
+    "landing_promise": "Reviews near form"
+  },
+  "audio_design": {
+    "music_energy": "Match platform native expectations",
+    "vo_pace": "Clear; pause after hook",
+    "captions": "Muted-first, large, high contrast"
+  },
+  "visual_system": {
+    "camera": "Platform-native",
+    "lighting": "Honest to the tier",
+    "color": "Consistent within the cut",
+    "editing_pace": "Match style",
+    "text_style": "Readable on mobile"
+  },
+  "why_it_works": [
+    "Proof + polish for skeptical buyers",
+    "Retargeting workhorse"
+  ],
+  "anti_patterns": [
+    "Actors pretending to be customers",
+    "Vague praise without outcomes"
+  ],
+  "metrics_signals": [
+    "Completion",
+    "Shares/saves",
+    "Qualified CTR — never invent numbers"
+  ],
+  "prompt_seeds": {},
+  "output_contract": {
+    "deliverables": [
+      "script",
+      "shot_list",
+      "caption_track",
+      "primary_text",
+      "cta_variants",
+      "ab_test_matrix"
+    ]
+  },
+  "source_notes": "Pattern distilled from common high-performing structures — no scraped creative."
+}

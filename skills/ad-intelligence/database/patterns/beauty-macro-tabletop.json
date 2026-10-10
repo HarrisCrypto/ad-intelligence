@@ -1,0 +1,93 @@
+{
+  "id": "beauty-macro-tabletop",
+  "name": "Beauty / tabletop macro film",
+  "platforms": [
+    "meta",
+    "tiktok",
+    "youtube",
+    "pinterest",
+    "organic_short"
+  ],
+  "style": "beauty_macro_tabletop",
+  "funnel_stage": "tof_awareness",
+  "niches": [
+    "beauty",
+    "food_bev",
+    "luxury",
+    "ecommerce"
+  ],
+  "production_tier": "high_production",
+  "virality_posture": "brand_film",
+  "duration_seconds": {
+    "min": 6,
+    "max": 20,
+    "ideal": 12
+  },
+  "aspect_ratios": [
+    "9:16"
+  ],
+  "hook": {
+    "window_seconds": "0-1",
+    "visual": "Macro texture already moving (serum, glaze, crumb, pour)",
+    "audio_or_vo": "Designed SFX",
+    "text_overlay": "Benefit ≤4 words optional",
+    "pattern_interrupt": "Tactile lust"
+  },
+  "body": {
+    "beats": [
+      {
+        "t": "1-8s",
+        "purpose": "Sensory proof",
+        "visual": "Pour/spread/shine/steam macros",
+        "vo_or_copy": ""
+      },
+      {
+        "t": "8-12s",
+        "purpose": "Pack + claim",
+        "visual": "Pack hero with ingredient or finish",
+        "vo_or_copy": "One claim"
+      }
+    ]
+  },
+  "cta": {
+    "type": "shop_now",
+    "on_screen": "Shop",
+    "spoken_or_caption": "",
+    "landing_promise": "PDP with matching macros"
+  },
+  "audio_design": {
+    "music_energy": "Match platform native expectations",
+    "vo_pace": "Clear; pause after hook",
+    "captions": "Muted-first, large, high contrast"
+  },
+  "visual_system": {
+    "camera": "100mm macro / probe",
+    "lighting": "Soft beauty / food",
+    "color": "True product color",
+    "editing_pace": "Hypnotic",
+    "text_style": "Minimal"
+  },
+  "why_it_works": [
+    "Stops scroll via texture",
+    "Loops well",
+    "Premium signal without VO"
+  ],
+  "anti_patterns": [],
+  "metrics_signals": [
+    "Completion",
+    "Shares/saves",
+    "Qualified CTR — never invent numbers"
+  ],
+  "prompt_seeds": {},
+  "output_contract": {
+    "deliverables": [
+      "script",
+      "shot_list",
+      "caption_track",
+      "primary_text",
+      "cta_variants",
+      "ab_test_matrix"
+    ]
+  },
+  "source_notes": "Pattern distilled from common high-performing structures — no scraped creative."
+}

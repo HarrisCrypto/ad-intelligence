@@ -1,0 +1,113 @@
+{
+  "id": "series-cliffhanger",
+  "name": "Series / Part-1 cliffhanger",
+  "platforms": [
+    "tiktok",
+    "meta",
+    "youtube_shorts",
+    "organic_short"
+  ],
+  "style": "series_cliffhanger",
+  "funnel_stage": "tof_awareness",
+  "niches": [
+    "beauty",
+    "fashion",
+    "fitness",
+    "food_bev",
+    "ecommerce",
+    "saas",
+    "fintech",
+    "gaming",
+    "education",
+    "travel",
+    "real_estate",
+    "health",
+    "pets",
+    "home",
+    "apps",
+    "b2b_services",
+    "creator",
+    "entertainment",
+    "luxury",
+    "automotive",
+    "nonprofit",
+    "kids"
+  ],
+  "production_tier": "hybrid_polished",
+  "virality_posture": "share_engineered",
+  "duration_seconds": {
+    "min": 20,
+    "max": 60,
+    "ideal": 35
+  },
+  "aspect_ratios": [
+    "9:16"
+  ],
+  "hook": {
+    "window_seconds": "0-3",
+    "visual": "Cold open on the most dramatic beat",
+    "audio_or_vo": "Part 1 — I didn’t expect this…",
+    "text_overlay": "Part 1/3",
+    "pattern_interrupt": "Promise of unfinished story"
+  },
+  "body": {
+    "beats": [
+      {
+        "t": "3-25s",
+        "purpose": "Story rise",
+        "visual": "Narrative shots toward a decision point",
+        "vo_or_copy": "Build stakes"
+      },
+      {
+        "t": "25-35s",
+        "purpose": "Cliffhanger freeze",
+        "visual": "Hard cut on unresolved moment",
+        "vo_or_copy": "Part 2 tomorrow / follow"
+      }
+    ]
+  },
+  "cta": {
+    "type": "soft_curiosity",
+    "on_screen": "Follow for Part 2",
+    "spoken_or_caption": "Follow so you don’t miss it",
+    "landing_promise": "Profile pinned series; product reveal in later part"
+  },
+  "audio_design": {
+    "music_energy": "Match platform native expectations",
+    "vo_pace": "Clear; pause after hook",
+    "captions": "Muted-first, large, high contrast"
+  },
+  "visual_system": {
+    "camera": "Platform-native",
+    "lighting": "Honest to the tier",
+    "color": "Consistent within the cut",
+    "editing_pace": "Match style",
+    "text_style": "Readable on mobile"
+  },
+  "why_it_works": [
+    "Follows and notification returns",
+    "Algorithmic session depth",
+    "Lets brand earn pitch in Part 2–3"
+  ],
+  "anti_patterns": [
+    "Cliffhanger with no payoff planned",
+    "Hard sell in Part 1"
+  ],
+  "metrics_signals": [
+    "Completion",
+    "Shares/saves",
+    "Qualified CTR — never invent numbers"
+  ],
+  "prompt_seeds": {},
+  "output_contract": {
+    "deliverables": [
+      "script",
+      "shot_list",
+      "caption_track",
+      "primary_text",
+      "cta_variants",
+      "ab_test_matrix"
+    ]
+  },
+  "source_notes": "Pattern distilled from common high-performing structures — no scraped creative."
+}

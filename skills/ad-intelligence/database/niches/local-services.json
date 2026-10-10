@@ -1,0 +1,50 @@
+{
+  "id": "local-services",
+  "niche": "local_services",
+  "aliases": [
+    "home_services",
+    "clinics_local",
+    "trades"
+  ],
+  "audience": "Geo-intent; trust and phone.",
+  "jobs_to_be_done": [
+    "Prove nearby competence",
+    "Generate calls",
+    "Show real facility"
+  ],
+  "recommended_pattern_ids": [
+    "local-service-trust",
+    "before-after-reveal",
+    "social-proof-stack",
+    "pas-pain-stack",
+    "founder-story-origin",
+    "offer-urgency"
+  ],
+  "angles": [
+    {
+      "id": "geo-specialty",
+      "hook_seed": "City + specialty in one breath",
+      "pattern": "local-service-trust"
+    }
+  ],
+  "lexicon": {
+    "use": [
+      "service area",
+      "years",
+      "license"
+    ],
+    "avoid_unless_true": [
+      "best in city without basis"
+    ]
+  },
+  "proof_types": [
+    "reviews",
+    "bay/facility",
+    "before/after"
+  ],
+  "cta_defaults": [
+    "Call",
+    "Get quote"
+  ],
+  "landing_notes": "NAP consistency."
+}

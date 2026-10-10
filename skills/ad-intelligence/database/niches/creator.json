@@ -1,0 +1,49 @@
+{
+  "id": "creator",
+  "niche": "creator",
+  "aliases": [
+    "influencer",
+    "personal_brand"
+  ],
+  "audience": "Followers who buy identity and tools.",
+  "jobs_to_be_done": [
+    "Grow follows via series",
+    "Monetize offers",
+    "Brand collabs"
+  ],
+  "recommended_pattern_ids": [
+    "series-cliffhanger",
+    "hot-take-controversy",
+    "bts-making-of",
+    "podcast-clip-ad",
+    "save-share-bait",
+    "grwm-soft-sell"
+  ],
+  "angles": [
+    {
+      "id": "part-one",
+      "hook_seed": "Part 1 — I almost quit",
+      "pattern": "series-cliffhanger"
+    }
+  ],
+  "lexicon": {
+    "use": [
+      "series",
+      "community",
+      "behind the scenes"
+    ],
+    "avoid_unless_true": [
+      "fake milestone counts"
+    ]
+  },
+  "proof_types": [
+    "audience UGC",
+    "process"
+  ],
+  "cta_defaults": [
+    "Follow",
+    "Join",
+    "Shop"
+  ],
+  "landing_notes": "Link-in-bio consistency."
+}

@@ -1,0 +1,104 @@
+{
+  "id": "green-screen-rant",
+  "name": "Green-screen rant / myth-bust",
+  "platforms": [
+    "tiktok",
+    "youtube_shorts",
+    "meta",
+    "organic_short"
+  ],
+  "style": "green_screen_rant",
+  "funnel_stage": "mof_consideration",
+  "niches": [
+    "saas",
+    "fintech",
+    "health",
+    "beauty",
+    "education",
+    "fitness",
+    "b2b_services"
+  ],
+  "production_tier": "native_ugc",
+  "virality_posture": "share_engineered",
+  "duration_seconds": {
+    "min": 20,
+    "max": 60,
+    "ideal": 40
+  },
+  "aspect_ratios": [
+    "9:16"
+  ],
+  "hook": {
+    "window_seconds": "0-3",
+    "visual": "Creator in front of screenshot, headline, or chart",
+    "audio_or_vo": "This advice is costing you [outcome]…",
+    "text_overlay": "Myth: [common belief]",
+    "pattern_interrupt": "Named myth + visible evidence behind them"
+  },
+  "body": {
+    "beats": [
+      {
+        "t": "3-15s",
+        "purpose": "Destroy the myth",
+        "visual": "Swipe through 2–3 evidence screens",
+        "vo_or_copy": "Why the common advice fails"
+      },
+      {
+        "t": "15-30s",
+        "purpose": "Replacement framework",
+        "visual": "Simple 3-step overlay",
+        "vo_or_copy": "Do this instead"
+      },
+      {
+        "t": "30-40s",
+        "purpose": "Product as tool",
+        "visual": "UI or product as the easier path",
+        "vo_or_copy": "We built X so you don’t have to Y"
+      }
+    ]
+  },
+  "cta": {
+    "type": "learn_more",
+    "on_screen": "Save this · Free guide",
+    "spoken_or_caption": "Comment MYTH and I’ll send the checklist",
+    "landing_promise": "Checklist matching the rant framework"
+  },
+  "audio_design": {
+    "music_energy": "Match platform native expectations",
+    "vo_pace": "Clear; pause after hook",
+    "captions": "Muted-first, large, high contrast"
+  },
+  "visual_system": {
+    "camera": "Platform-native",
+    "lighting": "Honest to the tier",
+    "color": "Consistent within the cut",
+    "editing_pace": "Match style",
+    "text_style": "Readable on mobile"
+  },
+  "why_it_works": [
+    "Saves from educational anger",
+    "Comments from disagreement",
+    "Authority before pitch"
+  ],
+  "anti_patterns": [
+    "Rant with no replacement",
+    "Medical/financial claims without substantiation"
+  ],
+  "metrics_signals": [
+    "Completion",
+    "Shares/saves",
+    "Qualified CTR — never invent numbers"
+  ],
+  "prompt_seeds": {},
+  "output_contract": {
+    "deliverables": [
+      "script",
+      "shot_list",
+      "caption_track",
+      "primary_text",
+      "cta_variants",
+      "ab_test_matrix"
+    ]
+  },
+  "source_notes": "Pattern distilled from common high-performing structures — no scraped creative."
+}

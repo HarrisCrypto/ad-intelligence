@@ -1,0 +1,102 @@
+{
+  "id": "unboxing-asmr",
+  "name": "Unboxing / ASMR first impression",
+  "platforms": [
+    "tiktok",
+    "meta",
+    "youtube",
+    "youtube_shorts",
+    "organic_short"
+  ],
+  "style": "unboxing_asmr",
+  "funnel_stage": "mof_consideration",
+  "niches": [
+    "beauty",
+    "ecommerce",
+    "fashion",
+    "gaming",
+    "apps",
+    "food_bev",
+    "luxury"
+  ],
+  "production_tier": "hybrid_polished",
+  "virality_posture": "evergreen_dr",
+  "duration_seconds": {
+    "min": 15,
+    "max": 60,
+    "ideal": 30
+  },
+  "aspect_ratios": [
+    "9:16"
+  ],
+  "hook": {
+    "window_seconds": "0-2",
+    "visual": "Pristine pack on desk; hands enter",
+    "audio_or_vo": "ASMR peel / soft VO “first look at…”",
+    "text_overlay": "Unboxing [product]",
+    "pattern_interrupt": "Satisfying sound + clean pack shot"
+  },
+  "body": {
+    "beats": [
+      {
+        "t": "2-18s",
+        "purpose": "Layer reveal",
+        "visual": "Sleeve, tray, product, accessories",
+        "vo_or_copy": "Texture comments"
+      },
+      {
+        "t": "18-26s",
+        "purpose": "First use",
+        "visual": "Immediate demo",
+        "vo_or_copy": "Honest first impression"
+      },
+      {
+        "t": "26-30s",
+        "purpose": "CTA",
+        "visual": "Product hero",
+        "vo_or_copy": "Shop / waitlist"
+      }
+    ]
+  },
+  "cta": {
+    "type": "shop_now",
+    "on_screen": "Shop the drop",
+    "spoken_or_caption": "Linked",
+    "landing_promise": "PDP with same pack imagery"
+  },
+  "audio_design": {
+    "music_energy": "Match platform native expectations",
+    "vo_pace": "Clear; pause after hook",
+    "captions": "Muted-first, large, high contrast"
+  },
+  "visual_system": {
+    "camera": "Top-down + 45° hero",
+    "lighting": "Softbox clean ecommerce",
+    "color": "True whites",
+    "editing_pace": "Slow satisfying",
+    "text_style": "Minimal"
+  },
+  "why_it_works": [
+    "Desire via tactile detail",
+    "High completion ASMR",
+    "Launch-friendly"
+  ],
+  "anti_patterns": [],
+  "metrics_signals": [
+    "Completion",
+    "Shares/saves",
+    "Qualified CTR — never invent numbers"
+  ],
+  "prompt_seeds": {},
+  "output_contract": {
+    "deliverables": [
+      "script",
+      "shot_list",
+      "caption_track",
+      "primary_text",
+      "cta_variants",
+      "ab_test_matrix"
+    ]
+  },
+  "source_notes": "Pattern distilled from common high-performing structures — no scraped creative."
+}

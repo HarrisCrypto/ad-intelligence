@@ -1,0 +1,214 @@
+{
+  "id": "creative-tool-catalog",
+  "version": "3.0.0",
+  "purpose": "One-stop knowledge of the tools and systems a perfect ad-making agent should know — even when those tools are not connected. Emit ready-to-run prompts, pipelines, and handoff briefs so humans or connected MCPs can execute at Seedance / Higgsfield quality.",
+  "rule": "Never pretend a render finished if no tool was called. Always deliver: pattern + shot list + tool route + copy-paste prompts + QA. If a connected tool exists (e.g. Higgsfield MCP), prefer calling it; otherwise ship executable briefs.",
+  "tiers": {
+    "connected_generation": "MCP/API available — call tools",
+    "prompt_handoff": "No tool connected — write production-grade prompts + settings",
+    "human_production": "Shoot live / hire creators — emit briefs + shot lists"
+  },
+  "systems": [
+    {
+      "id": "seedance",
+      "name": "ByteDance Seedance (2.0 / 2.5)",
+      "category": "video_gen",
+      "quality_bar": "higgsfield_peer",
+      "where": ["BytePlus / Lumina", "CapCut / Dreamina", "TikTok Symphony", "Higgsfield (seedance_2_0, seedance_2_5)"],
+      "best_for": [
+        "15–30s single-pass ad spots",
+        "Product identity lock via multi-reference",
+        "Native audio + video",
+        "Timestamp / region edits for hooks & CTAs",
+        "Commercial advertising motion quality"
+      ],
+      "modes": {
+        "t2v": "Text-only generation",
+        "omni_reference": "Image + video + audio references (preferred for ads)",
+        "video_edit": "Edit one reference video",
+        "video_extension": "Extend forward/backward"
+      },
+      "settings_defaults_ads": {
+        "duration_s": "15–30 for full spot; 5–10 for hook tests",
+        "resolution": "1080p (4k when available for hero)",
+        "aspect": "9:16 social; 16:9 hero/CTV; generate both",
+        "generate_audio": true,
+        "bitrate_mode": "high when available",
+        "references": "Product pack + logo-safe still + 1 style/ref talent + optional audio bed ref"
+      },
+      "prompt_contract": "seedance-prompt-contract.md",
+      "anti_patterns": [
+        "Text-only with no product reference for ecommerce",
+        "Asking for logo-perfect text overlays inside the model — add captions in post",
+        "Regenerating whole spot to change CTA — use region/timestamp edit when available"
+      ]
+    },
+    {
+      "id": "higgsfield",
+      "name": "Higgsfield (platform + MCP)",
+      "category": "full_stack_creative",
+      "quality_bar": "platform",
+      "where": ["higgsfield.app", "Cursor Higgsfield MCP"],
+      "workflows": [
+        {
+          "id": "ads-studio",
+          "use": "Static Meta/social ads with copy + images from brand/URL/product"
+        },
+        {
+          "id": "ugc-video",
+          "use": "Creator review, unboxing, try-on, tutorial, product-only VO, website tour"
+        },
+        {
+          "id": "ad-multiplier",
+          "use": "Multiply one 4–30s ad: swap people/products OR recreate for new market/language"
+        },
+        {
+          "id": "product-photoshoot",
+          "use": "Packshots, lifestyle, try-on stills, carousels, hero banners"
+        },
+        {
+          "id": "marketing-studio",
+          "use": "One-click product ads / TikTok-Reels ready video presets (hooks+settings)"
+        },
+        {
+          "id": "katana",
+          "use": "Reference-based remix / edit supplied footage into finished video"
+        },
+        {
+          "id": "brand-asset-creation",
+          "use": "Logo, kit, mockups, decks, social graphics"
+        },
+        {
+          "id": "thumbnail-generation",
+          "use": "YouTube/IG covers"
+        },
+        {
+          "id": "faceless-video",
+          "use": "Narrated explainer/faceless channel (not classic product UGC)"
+        },
+        {
+          "id": "video-montage",
+          "use": "Assemble clips, soundtrack, burn captions"
+        },
+        {
+          "id": "video-editing",
+          "use": "Higgsedit motion graphics / native edits"
+        }
+      ],
+      "models_to_know": [
+        "marketing_studio_video",
+        "seedance_2_5",
+        "seedance_2_0",
+        "ad_multiplier_v2",
+        "grok_video_v15",
+        "gemini_omni / gemini_omni_flash_1_1",
+        "minimax_h3_max",
+        "nano_banana_pro / seedream (stills/thumbs)"
+      ],
+      "mcp_entrypoints": [
+        "get_workflow_instructions",
+        "models_explore(action:'recommend')",
+        "generate_video / generate_image",
+        "show_marketing_studio_v2",
+        "ads_studio_*",
+        "get_preset_instructions"
+      ]
+    },
+    {
+      "id": "kling",
+      "name": "Kling AI",
+      "category": "video_gen",
+      "best_for": ["Motion control / character performance", "Image-to-video product moves", "Longer cinematic B-roll"],
+      "prompt_tips": ["Lock start frame from product still", "Specify camera move + physics", "Keep product label readable in prompt"]
+    },
+    {
+      "id": "runway",
+      "name": "Runway Gen-3 / Aleph",
+      "category": "video_gen",
+      "best_for": ["Director-style camera language", "VFX-ish transformations", "Editorial motion"],
+      "prompt_tips": ["Shot size + lens + move", "Avoid overcrowding prompt", "Use image reference for product lock"]
+    },
+    {
+      "id": "sora_veo",
+      "name": "OpenAI Sora / Google Veo",
+      "category": "video_gen",
+      "best_for": ["High cinematic world-building", "Brand films", "Complex scenes"],
+      "prompt_tips": ["Scene blocks with timecodes", "Lighting + lens language", "Separate VO/captions in post"]
+    },
+    {
+      "id": "luma_minimax_hailuo",
+      "name": "Luma / MiniMax Hailuo / equivalents",
+      "category": "video_gen",
+      "best_for": ["Fast ideation clips", "Keyframed start-end", "Batch exploration"]
+    },
+    {
+      "id": "midjourney_flux_sd",
+      "name": "Midjourney / FLUX / SDXL / Ideogram",
+      "category": "image_gen",
+      "best_for": ["Keyframes", "Thumbnails", "Static ads", "Storyboards", "Pack hero stills"],
+      "prompt_tips": ["Product reference image when possible", "Ideogram/GPT-Image for text-in-image", "Consistent seed/character sheet for talent"]
+    },
+    {
+      "id": "capcut_symphony",
+      "name": "CapCut + TikTok Symphony",
+      "category": "edit_distribute",
+      "best_for": ["Captions", "Trend templates", "Seedance inside Symphony", "Spark Ads prep"],
+      "notes": "Organic trend audio ≠ cleared for paid. Export captioned masters."
+    },
+    {
+      "id": "meta_ads",
+      "name": "Meta Ads Manager / Advantage+",
+      "category": "media_buy",
+      "best_for": ["Paid distribution", "ASC creative diversity", "Placement aspect variants"],
+      "deliverables_needed": ["primary_text", "headline", "9:16 + 4:5 + 1:1 cuts", "UTMs"]
+    },
+    {
+      "id": "tiktok_ads",
+      "name": "TikTok Ads + Spark",
+      "category": "media_buy",
+      "best_for": ["Spark whitelisting", "Symphony generation", "Spark code from creators"]
+    },
+    {
+      "id": "google_youtube",
+      "name": "Google Ads / YouTube / Demand Gen",
+      "category": "media_buy",
+      "best_for": ["16:9 + bumper 6s", "Shorts", "Search companion"]
+    },
+    {
+      "id": "elevenlabs_whisper",
+      "name": "ElevenLabs + Whisper",
+      "category": "audio",
+      "best_for": ["VO", "Voice clones with consent", "Transcripts for captions"]
+    },
+    {
+      "id": "suno_udio",
+      "name": "Suno / Udio",
+      "category": "audio",
+      "best_for": ["Original beds for paid (avoid uncleared trends)", "Jingle / vibe tracks"]
+    },
+    {
+      "id": "descript_premiere_davinci",
+      "name": "Descript / Premiere / DaVinci",
+      "category": "edit",
+      "best_for": ["Final conform", "Color", "Multi-aspect exports", "Caption polish"]
+    },
+    {
+      "id": "canva_figma_adobe",
+      "name": "Canva / Figma / Adobe Express / Photoshop",
+      "category": "static_design",
+      "best_for": ["Carousels", "Stories frames", "Endcards", "Display"]
+    },
+    {
+      "id": "foreplay_magicbrief",
+      "name": "Foreplay / MagicBrief / ad libraries",
+      "category": "research",
+      "best_for": ["Swipe research", "Competitor breakdowns (private ingest only)"]
+    },
+    {
+      "id": "live_production",
+      "name": "Live shoot / UGC creators / studios",
+      "category": "human_production",
+      "best_for": ["Highest trust UGC", "Complex product truth", "Regulated categories"]
+    }
+  ]
+}

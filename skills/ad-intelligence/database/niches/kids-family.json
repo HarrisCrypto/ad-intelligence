@@ -1,0 +1,48 @@
+{
+  "id": "kids-family",
+  "niche": "kids",
+  "aliases": [
+    "family",
+    "parenting",
+    "toys"
+  ],
+  "audience": "Parents; safety + delight.",
+  "jobs_to_be_done": [
+    "Show joy safely",
+    "Solve parent pain",
+    "Gift moments"
+  ],
+  "recommended_pattern_ids": [
+    "ugc-talking-head-scroll-stop",
+    "product-loop-demo",
+    "skit-sketch-ad",
+    "save-share-bait",
+    "social-proof-stack",
+    "unboxing-asmr"
+  ],
+  "angles": [
+    {
+      "id": "parent-confession",
+      "hook_seed": "The bedtime struggle is real…",
+      "pattern": "ugc-talking-head-scroll-stop"
+    }
+  ],
+  "lexicon": {
+    "use": [
+      "age range",
+      "safety standards if true"
+    ],
+    "avoid_unless_true": [
+      "makes kids smarter guaranteed"
+    ]
+  },
+  "proof_types": [
+    "parent UGC",
+    "demo with kids with consent"
+  ],
+  "cta_defaults": [
+    "Shop",
+    "Gift guide"
+  ],
+  "landing_notes": "Age-appropriate claims."
+}

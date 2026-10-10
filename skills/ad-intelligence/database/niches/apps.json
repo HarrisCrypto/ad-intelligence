@@ -1,0 +1,47 @@
+{
+  "id": "apps",
+  "niche": "apps",
+  "aliases": [
+    "mobile_app",
+    "consumer_software"
+  ],
+  "audience": "Need aha-in-seconds.",
+  "jobs_to_be_done": [
+    "Show core loop",
+    "Trend seed",
+    "Install"
+  ],
+  "recommended_pattern_ids": [
+    "app-demo-ui",
+    "meme-native-trend",
+    "vfx-transformation",
+    "skit-sketch-ad",
+    "series-cliffhanger",
+    "influencer-collab-brief"
+  ],
+  "angles": [
+    {
+      "id": "aha-tap",
+      "hook_seed": "First tap completes the fantasy",
+      "pattern": "app-demo-ui"
+    }
+  ],
+  "lexicon": {
+    "use": [
+      "in seconds",
+      "core action verb"
+    ],
+    "avoid_unless_true": [
+      "#1 app without evidence"
+    ]
+  },
+  "proof_types": [
+    "UI demos",
+    "creator gameplay",
+    "ratings you own"
+  ],
+  "cta_defaults": [
+    "Download"
+  ],
+  "landing_notes": "Store creative match."
+}

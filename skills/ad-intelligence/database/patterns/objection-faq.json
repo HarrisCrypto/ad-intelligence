@@ -1,0 +1,111 @@
+{
+  "id": "objection-faq",
+  "name": "Objection-handling FAQ ad",
+  "platforms": [
+    "meta",
+    "youtube",
+    "linkedin",
+    "tiktok"
+  ],
+  "style": "objection_faq",
+  "funnel_stage": "retargeting",
+  "niches": [
+    "beauty",
+    "fashion",
+    "fitness",
+    "food_bev",
+    "ecommerce",
+    "saas",
+    "fintech",
+    "gaming",
+    "education",
+    "travel",
+    "real_estate",
+    "health",
+    "pets",
+    "home",
+    "apps",
+    "b2b_services",
+    "creator",
+    "entertainment",
+    "luxury",
+    "automotive",
+    "nonprofit",
+    "kids"
+  ],
+  "production_tier": "native_ugc",
+  "virality_posture": "evergreen_dr",
+  "duration_seconds": {
+    "min": 20,
+    "max": 60,
+    "ideal": 35
+  },
+  "aspect_ratios": [
+    "9:16"
+  ],
+  "hook": {
+    "window_seconds": "0-3",
+    "visual": "Creator addressing camera",
+    "audio_or_vo": "“But what about [objection]?”",
+    "text_overlay": "FAQ: [objection]",
+    "pattern_interrupt": "Says the fear out loud"
+  },
+  "body": {
+    "beats": [
+      {
+        "t": "3-20s",
+        "purpose": "Answer 2–3 objections",
+        "visual": "Proof inserts per objection",
+        "vo_or_copy": "Honest answers"
+      },
+      {
+        "t": "20-35s",
+        "purpose": "CTA with risk reversal",
+        "visual": "Guarantee / trial",
+        "vo_or_copy": "Try risk-free"
+      }
+    ]
+  },
+  "cta": {
+    "type": "direct_offer",
+    "on_screen": "Start trial",
+    "spoken_or_caption": "",
+    "landing_promise": "FAQ visible near checkout"
+  },
+  "audio_design": {
+    "music_energy": "Match platform native expectations",
+    "vo_pace": "Clear; pause after hook",
+    "captions": "Muted-first, large, high contrast"
+  },
+  "visual_system": {
+    "camera": "Platform-native",
+    "lighting": "Honest to the tier",
+    "color": "Consistent within the cut",
+    "editing_pace": "Match style",
+    "text_style": "Readable on mobile"
+  },
+  "why_it_works": [
+    "Retargeting converter",
+    "Builds trust"
+  ],
+  "anti_patterns": [
+    "Dodging the real objection"
+  ],
+  "metrics_signals": [
+    "Completion",
+    "Shares/saves",
+    "Qualified CTR — never invent numbers"
+  ],
+  "prompt_seeds": {},
+  "output_contract": {
+    "deliverables": [
+      "script",
+      "shot_list",
+      "caption_track",
+      "primary_text",
+      "cta_variants",
+      "ab_test_matrix"
+    ]
+  },
+  "source_notes": "Pattern distilled from common high-performing structures — no scraped creative."
+}

@@ -1,0 +1,50 @@
+{
+  "id": "gaming",
+  "niche": "gaming",
+  "aliases": [
+    "games",
+    "esports"
+  ],
+  "audience": "Entertainment-first; trailers and clips.",
+  "jobs_to_be_done": [
+    "Show fantasy/power fantasy",
+    "Clip bait",
+    "Install/wishlists"
+  ],
+  "recommended_pattern_ids": [
+    "hero-product-film",
+    "vfx-transformation",
+    "music-video-brand",
+    "series-cliffhanger",
+    "challenge-participation",
+    "cgi-3d-product"
+  ],
+  "angles": [
+    {
+      "id": "gameplay-hook",
+      "hook_seed": "Best 3s of gameplay cold open",
+      "pattern": "hero-product-film"
+    }
+  ],
+  "lexicon": {
+    "use": [
+      "season",
+      "drop",
+      "mode",
+      "clip"
+    ],
+    "avoid_unless_true": [
+      "best game ever"
+    ]
+  },
+  "proof_types": [
+    "gameplay",
+    "creator clips",
+    "wishlist spikes"
+  ],
+  "cta_defaults": [
+    "Play now",
+    "Wishlist"
+  ],
+  "landing_notes": "Store page trailer match."
+}

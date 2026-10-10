@@ -1,0 +1,100 @@
+{
+  "id": "ugc-demo-hands",
+  "name": "UGC hands-on demo (show the fix)",
+  "platforms": [
+    "meta",
+    "tiktok",
+    "youtube_shorts",
+    "organic_short"
+  ],
+  "style": "ugc_demo",
+  "funnel_stage": "mof_consideration",
+  "niches": [
+    "ecommerce",
+    "beauty",
+    "home",
+    "apps",
+    "fitness",
+    "food_bev",
+    "pets"
+  ],
+  "production_tier": "native_ugc",
+  "virality_posture": "evergreen_dr",
+  "duration_seconds": {
+    "min": 10,
+    "max": 35,
+    "ideal": 20
+  },
+  "aspect_ratios": [
+    "9:16"
+  ],
+  "hook": {
+    "window_seconds": "0-2",
+    "visual": "Hands already using the product mid-problem",
+    "audio_or_vo": "Watch what happens when…",
+    "text_overlay": "The fix:",
+    "pattern_interrupt": "Demo before face pitch"
+  },
+  "body": {
+    "beats": [
+      {
+        "t": "2-10s",
+        "purpose": "Problem setup in action",
+        "visual": "Fail state with old way",
+        "vo_or_copy": "Short"
+      },
+      {
+        "t": "10-16s",
+        "purpose": "Product demo",
+        "visual": "Clear hands demo",
+        "vo_or_copy": "Mechanism"
+      },
+      {
+        "t": "16-20s",
+        "purpose": "Result + CTA",
+        "visual": "Success state",
+        "vo_or_copy": "Shop / try"
+      }
+    ]
+  },
+  "cta": {
+    "type": "shop_now",
+    "on_screen": "Shop",
+    "spoken_or_caption": "Link in bio",
+    "landing_promise": "Same SKU demo’d"
+  },
+  "audio_design": {
+    "music_energy": "Match tier",
+    "vo_pace": "Clear",
+    "captions": "Muted-first"
+  },
+  "visual_system": {
+    "camera": "Native to tier",
+    "lighting": "Honest",
+    "color": "Consistent",
+    "editing_pace": "Match style",
+    "text_style": "Mobile-readable"
+  },
+  "why_it_works": [
+    "Seeing beats hearing",
+    "High intent mid-funnel",
+    "Easy creator replication"
+  ],
+  "anti_patterns": [],
+  "metrics_signals": [
+    "Completion",
+    "Saves/shares or CTR — never invent numbers"
+  ],
+  "prompt_seeds": {},
+  "output_contract": {
+    "deliverables": [
+      "script",
+      "shot_list",
+      "caption_track",
+      "primary_text",
+      "cta_variants",
+      "ab_test_matrix"
+    ]
+  },
+  "source_notes": "Pattern only — no scraped creative."
+}

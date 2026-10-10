@@ -1,0 +1,52 @@
+{
+  "id": "food-bev",
+  "niche": "food_bev",
+  "aliases": [
+    "cpg",
+    "beverage",
+    "restaurant",
+    "dtc_food"
+  ],
+  "audience": "Craving + culture; ASMR and skits convert.",
+  "jobs_to_be_done": [
+    "Trigger craving",
+    "Own a cultural bit",
+    "Drive trial"
+  ],
+  "recommended_pattern_ids": [
+    "beauty-macro-tabletop",
+    "skit-sketch-ad",
+    "street-interview",
+    "product-loop-demo",
+    "meme-native-trend",
+    "cultural-moment"
+  ],
+  "angles": [
+    {
+      "id": "first-sip",
+      "hook_seed": "Cold open on pour/crunch",
+      "pattern": "unboxing-asmr"
+    }
+  ],
+  "lexicon": {
+    "use": [
+      "crave",
+      "batch",
+      "recipe",
+      "limited drop"
+    ],
+    "avoid_unless_true": [
+      "healthy halo without substantiation"
+    ]
+  },
+  "proof_types": [
+    "macro food",
+    "taste tests",
+    "sold-out drops"
+  ],
+  "cta_defaults": [
+    "Order",
+    "Find near you"
+  ],
+  "landing_notes": "Same SKU/flavor."
+}

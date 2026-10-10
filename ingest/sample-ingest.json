@@ -1,0 +1,57 @@
+{
+  "id": "private-example-2026-001",
+  "name": "Private breakdown example — replace with your own",
+  "platforms": ["meta"],
+  "style": "before_after",
+  "funnel_stage": "tof_awareness",
+  "niches": ["auto_restoration"],
+  "duration_seconds": { "min": 12, "max": 18, "ideal": 15 },
+  "aspect_ratios": ["9:16"],
+  "hook": {
+    "window_seconds": "0-2",
+    "visual": "[Describe the opening frame you observed]",
+    "audio_or_vo": "[Transcript of first line or ‘silent’]",
+    "text_overlay": "[Exact overlay text if any]",
+    "pattern_interrupt": "[What stops the scroll]"
+  },
+  "body": {
+    "beats": [
+      {
+        "t": "2-8s",
+        "purpose": "process",
+        "visual": "[What you see]",
+        "vo_or_copy": "[What you hear / read]"
+      },
+      {
+        "t": "8-12s",
+        "purpose": "reveal",
+        "visual": "[After state]",
+        "vo_or_copy": "[Line or silence]"
+      },
+      {
+        "t": "12-15s",
+        "purpose": "cta",
+        "visual": "[End card]",
+        "vo_or_copy": "[CTA]"
+      }
+    ]
+  },
+  "cta": {
+    "type": "learn_more",
+    "on_screen": "[CTA text]",
+    "spoken_or_caption": "[Spoken CTA]",
+    "landing_promise": "[What the destination must say]"
+  },
+  "why_it_works": [
+    "[Lesson 1 in your own words]",
+    "[Lesson 2 in your own words]"
+  ],
+  "anti_patterns": [],
+  "metrics_signals": [
+    "Long-running active status in ad library (qualitative only — do not invent CTR)"
+  ],
+  "output_contract": {
+    "deliverables": ["script", "shot_list", "primary_text"]
+  },
+  "source_notes": "Private research note. Do not redistribute original creative."
+}

@@ -1,0 +1,106 @@
+{
+  "id": "pov-day-in-life",
+  "name": "POV / day-in-the-life soft sell",
+  "platforms": [
+    "tiktok",
+    "meta",
+    "youtube_shorts",
+    "organic_short"
+  ],
+  "style": "pov_day_in_life",
+  "funnel_stage": "tof_awareness",
+  "niches": [
+    "beauty",
+    "fitness",
+    "food_bev",
+    "creator",
+    "apps",
+    "fashion",
+    "pets"
+  ],
+  "production_tier": "native_ugc",
+  "virality_posture": "trend_reactive",
+  "duration_seconds": {
+    "min": 15,
+    "max": 60,
+    "ideal": 35
+  },
+  "aspect_ratios": [
+    "9:16"
+  ],
+  "hook": {
+    "window_seconds": "0-2",
+    "visual": "POV framing — hands/eyes enter a relatable morning or work ritual",
+    "audio_or_vo": "POV: you finally [desired state]…",
+    "text_overlay": "POV: [specific desirable identity]",
+    "pattern_interrupt": "Identity fantasy in first line — product appears as a prop, not a pitch"
+  },
+  "body": {
+    "beats": [
+      {
+        "t": "2-15s",
+        "purpose": "Ritual montage",
+        "visual": "3–6 lifestyle beats with product naturally present",
+        "vo_or_copy": "Sparse; let captions carry identity"
+      },
+      {
+        "t": "15-28s",
+        "purpose": "Soft benefit land",
+        "visual": "One clear use moment",
+        "vo_or_copy": "Optional one-line benefit"
+      },
+      {
+        "t": "28-35s",
+        "purpose": "Social CTA",
+        "visual": "Face or product end",
+        "vo_or_copy": "Follow for part 2 / link in bio"
+      }
+    ]
+  },
+  "cta": {
+    "type": "soft_curiosity",
+    "on_screen": "Follow · Link in bio",
+    "spoken_or_caption": "Part of my non-negotiables",
+    "landing_promise": "Same lifestyle promise, not a hard form first"
+  },
+  "audio_design": {
+    "music_energy": "Match platform native expectations",
+    "vo_pace": "Clear; pause after hook",
+    "captions": "Muted-first, large, high contrast"
+  },
+  "visual_system": {
+    "camera": "Platform-native",
+    "lighting": "Honest to the tier",
+    "color": "Consistent within the cut",
+    "editing_pace": "Match style",
+    "text_style": "Readable on mobile"
+  },
+  "why_it_works": [
+    "Identity > features on cold short-form",
+    "Product-as-prop lowers ad resistance",
+    "Series-friendly for algorithmic return"
+  ],
+  "anti_patterns": [
+    "Hard price dump mid-ritual",
+    "Fake luxury lifestyle with bad continuity"
+  ],
+  "metrics_signals": [
+    "Completion",
+    "Shares/saves",
+    "Qualified CTR — never invent numbers"
+  ],
+  "prompt_seeds": {
+    "script": "35s POV day-in-life. Product is a prop until second 20. Identity-led captions.",
+    "video_gen": "Vertical POV lifestyle montage, natural light, product appears casually"
+  },
+  "output_contract": {
+    "deliverables": [
+      "script",
+      "shot_list",
+      "caption_track",
+      "primary_text",
+      "ab_test_matrix"
+    ]
+  },
+  "source_notes": "Pattern distilled from common high-performing structures — no scraped creative."
+}

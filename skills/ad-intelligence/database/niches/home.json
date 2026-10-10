@@ -1,0 +1,48 @@
+{
+  "id": "home",
+  "niche": "home",
+  "aliases": [
+    "diy",
+    "furniture",
+    "home_services_product"
+  ],
+  "audience": "Project and upgrade shoppers.",
+  "jobs_to_be_done": [
+    "Show install/result",
+    "Satisfy demo",
+    "Local service trust if service"
+  ],
+  "recommended_pattern_ids": [
+    "before-after-reveal",
+    "product-loop-demo",
+    "listicle-text-overlay",
+    "save-share-bait",
+    "pas-pain-stack",
+    "local-service-trust"
+  ],
+  "angles": [
+    {
+      "id": "weekend-project",
+      "hook_seed": "Before the weekend / after",
+      "pattern": "before-after-reveal"
+    }
+  ],
+  "lexicon": {
+    "use": [
+      "install time",
+      "tools needed"
+    ],
+    "avoid_unless_true": [
+      "forever warranty fluff"
+    ]
+  },
+  "proof_types": [
+    "timelapse",
+    "customer installs"
+  ],
+  "cta_defaults": [
+    "Shop",
+    "Book install"
+  ],
+  "landing_notes": "Specs match."
+}

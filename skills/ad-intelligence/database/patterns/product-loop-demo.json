@@ -1,0 +1,97 @@
+{
+  "id": "product-loop-demo",
+  "name": "Product loop / satisfying demo",
+  "platforms": [
+    "meta",
+    "tiktok",
+    "organic_short"
+  ],
+  "style": "product_loop",
+  "funnel_stage": "tof_awareness",
+  "niches": [
+    "ecommerce",
+    "beauty",
+    "kitchen",
+    "tools",
+    "gadgets"
+  ],
+  "duration_seconds": {
+    "min": 6,
+    "max": 15,
+    "ideal": 10
+  },
+  "aspect_ratios": [
+    "9:16",
+    "1:1"
+  ],
+  "hook": {
+    "window_seconds": "0-1",
+    "visual": "The satisfying action already mid-motion (pour, peel, click, transform)",
+    "audio_or_vo": "ASMR/satisfy SFX or silent loop",
+    "text_overlay": "Optional benefit in ≤5 words",
+    "pattern_interrupt": "Motion in frame 1 — never a static pack shot"
+  },
+  "body": {
+    "beats": [
+      {
+        "t": "1-7s",
+        "purpose": "Repeat or escalate the satisfying action",
+        "visual": "Loop-friendly action; clean background; product hero",
+        "vo_or_copy": "Sparse benefit lines timed to action peaks"
+      },
+      {
+        "t": "7-10s",
+        "purpose": "Price/offer or assortment flash",
+        "visual": "Pack + price or colorways",
+        "vo_or_copy": "One offer line"
+      }
+    ]
+  },
+  "cta": {
+    "type": "shop_now",
+    "on_screen": "Shop now",
+    "spoken_or_caption": "Optional",
+    "landing_promise": "PDP matches the demo’d SKU and color"
+  },
+  "audio_design": {
+    "music_energy": "Loopable bed or SFX-led",
+    "vo_pace": "Minimal",
+    "captions": "Benefit words only"
+  },
+  "visual_system": {
+    "camera": "Macro / top-down / locked tripod",
+    "lighting": "Bright, even, ecommerce-clean",
+    "color": "Product-true whites",
+    "editing_pace": "Seamless loop preferred",
+    "text_style": "Minimal chrome"
+  },
+  "why_it_works": [
+    "Loops inflate watch time and replays",
+    "Demo proves the benefit without argument",
+    "Cheap creative testing unit"
+  ],
+  "anti_patterns": [
+    "Talking head over a product that should demo itself",
+    "Non-loopable ending hard cuts",
+    "Wrong SKU on landing"
+  ],
+  "metrics_signals": [
+    "Replay rate",
+    "Thumbstop + ATC correlation on prospecting"
+  ],
+  "prompt_seeds": {
+    "script": "10s silent-capable product loop. Mid-action open. Seamless loop. Shop CTA.",
+    "video_gen": "Seamless looping vertical product demo, macro, bright even light, satisfying motion"
+  },
+  "output_contract": {
+    "deliverables": [
+      "shot_list",
+      "video_gen_prompt",
+      "primary_text",
+      "headline"
+    ]
+  },
+  "source_notes": "Ecommerce staple; pattern only.",
+  "production_tier": "hybrid_polished",
+  "virality_posture": "evergreen_dr"
+}

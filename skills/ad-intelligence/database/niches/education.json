@@ -1,0 +1,49 @@
+{
+  "id": "education",
+  "niche": "education",
+  "aliases": [
+    "info_products",
+    "edtech",
+    "courses"
+  ],
+  "audience": "Outcome learners; frameworks and proof.",
+  "jobs_to_be_done": [
+    "Teach a useful slice",
+    "Sell course/community",
+    "Lead magnet"
+  ],
+  "recommended_pattern_ids": [
+    "listicle-text-overlay",
+    "save-share-bait",
+    "lead-magnet-value",
+    "hot-take-controversy",
+    "podcast-clip-ad",
+    "series-cliffhanger"
+  ],
+  "angles": [
+    {
+      "id": "checklist",
+      "hook_seed": "Save this checklist before…",
+      "pattern": "save-share-bait"
+    }
+  ],
+  "lexicon": {
+    "use": [
+      "framework",
+      "worksheet",
+      "cohort"
+    ],
+    "avoid_unless_true": [
+      "make $X guaranteed"
+    ]
+  },
+  "proof_types": [
+    "student outcomes with permission",
+    "curriculum previews"
+  ],
+  "cta_defaults": [
+    "Enroll",
+    "Free lesson"
+  ],
+  "landing_notes": "Syllabus clarity."
+}

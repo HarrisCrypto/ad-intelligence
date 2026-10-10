@@ -1,0 +1,108 @@
+{
+  "id": "ugc-talking-head-scroll-stop",
+  "name": "UGC talking head — scroll-stop confession",
+  "platforms": [
+    "meta",
+    "tiktok",
+    "organic_short"
+  ],
+  "style": "ugc_talking_head",
+  "funnel_stage": "tof_awareness",
+  "niches": [
+    "consumer",
+    "local_services",
+    "saas",
+    "health",
+    "ecommerce"
+  ],
+  "duration_seconds": {
+    "min": 15,
+    "max": 45,
+    "ideal": 28
+  },
+  "aspect_ratios": [
+    "9:16",
+    "4:5"
+  ],
+  "hook": {
+    "window_seconds": "0-3",
+    "visual": "Face fills frame; slight lean-in; phone selfie angle; busy-but-real background",
+    "audio_or_vo": "Cold open with a specific, slightly uncomfortable truth — no brand name yet",
+    "text_overlay": "3–7 words mirroring the spoken hook; large, centered, high contrast",
+    "pattern_interrupt": "Start mid-thought / mid-emotion; never with logo sting or ‘hey guys’"
+  },
+  "body": {
+    "beats": [
+      {
+        "t": "3-8s",
+        "purpose": "Name the pain with a concrete scene",
+        "visual": "Hold face; cut to one B-roll of the pain moment if needed",
+        "vo_or_copy": "Describe the failed workaround the audience already tried"
+      },
+      {
+        "t": "8-18s",
+        "purpose": "Introduce the mechanism, not the brand pitch",
+        "visual": "Demo or point-to-product / shop floor / screen; keep handheld",
+        "vo_or_copy": "One clear mechanism: what changed and why it works differently"
+      },
+      {
+        "t": "18-24s",
+        "purpose": "Micro proof",
+        "visual": "Result shot, review screenshot crop, or before→after still",
+        "vo_or_copy": "One specific outcome with a number, time, or named constraint"
+      }
+    ]
+  },
+  "cta": {
+    "type": "soft_curiosity",
+    "on_screen": "Comment / link in bio / Learn more — one path only",
+    "spoken_or_caption": "If that’s you, [soft next step]",
+    "landing_promise": "Match the hook’s promise on the landing page above the fold"
+  },
+  "audio_design": {
+    "music_energy": "Low or none under VO; trending bed only if it doesn’t fight speech",
+    "vo_pace": "Conversational, 140–160 wpm; pause after the hook",
+    "captions": "Burned-in, word-by-word or phrase chunks; never tiny subtitles"
+  },
+  "visual_system": {
+    "camera": "Front camera / selfie stick; eye-level; occasional snap zoom",
+    "lighting": "Natural window or ring light; avoid cinematic grade",
+    "color": "Native phone color; slight warmth OK",
+    "editing_pace": "Jump cuts every 1.5–3s on talking head; match cuts on demo",
+    "text_style": "Bold sans, 2 lines max, safe margins for UI chrome"
+  },
+  "why_it_works": [
+    "Native feed texture beats polished brand film for cold traffic",
+    "Specific confession creates identification faster than feature lists",
+    "Mechanism before brand reduces skepticism"
+  ],
+  "anti_patterns": [
+    "Opening with company name or logo",
+    "Reading a script with dead eyes",
+    "Multiple CTAs in one cut",
+    "Stock music louder than voice"
+  ],
+  "metrics_signals": [
+    "Strong 3-second hold relative to account baseline",
+    "Comments that restate the pain in the viewer’s words",
+    "Saves/shares on TikTok or organic short"
+  ],
+  "prompt_seeds": {
+    "script": "Write a 28s UGC confession ad. Hook = specific painful scene. No brand until second 12. End with one soft CTA.",
+    "shot_list": "1) Face hook 2) Pain B-roll 3) Mechanism demo 4) Proof still 5) CTA face",
+    "video_gen": "Handheld vertical UGC selfie of a real person mid-confession, natural light, no logos, candid energy"
+  },
+  "output_contract": {
+    "deliverables": [
+      "script",
+      "shot_list",
+      "caption_track",
+      "primary_text",
+      "cta_variants",
+      "ab_test_matrix"
+    ]
+  },
+  "source_notes": "Distilled from common Meta/TikTok UGC winners across consumer and local-service accounts — pattern only, no scraped creative.",
+  "production_tier": "native_ugc",
+  "virality_posture": "evergreen_dr"
+}

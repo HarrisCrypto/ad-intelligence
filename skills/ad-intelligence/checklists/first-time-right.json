@@ -1,0 +1,121 @@
+{
+  "id": "first-time-right-checklist",
+  "name": "First-time-right creative QA (run before delivering)",
+  "rule": "Do not deliver an ad package until every applicable item is PASS or N/A with reason.",
+  "gates": [
+    {
+      "id": "brief-locked",
+      "ask": "Platform, niche, offer, funnel, production tier, and CTA are explicit?",
+      "fail_if": "Any of those are guessed without stating assumptions"
+    },
+    {
+      "id": "pattern-cited",
+      "ask": "Primary pattern id + challenger id retrieved from the database?",
+      "fail_if": "Freewheeled style with no pattern id"
+    },
+    {
+      "id": "single-job",
+      "ask": "One job-to-be-done stated in one sentence?",
+      "fail_if": "Multiple jobs or feature laundry"
+    },
+    {
+      "id": "hook-window",
+      "ask": "0–3s works muted (text or pure visual) and does not open on logo?",
+      "fail_if": "Logo-first or abstract brand talk in first 3s"
+    },
+    {
+      "id": "format-signal",
+      "ask": "If viral/trend: format recognizable in ≤1.5s?",
+      "fail_if": "Trend claimed but format not signaled",
+      "when": "virality_posture in trend_reactive|share_engineered"
+    },
+    {
+      "id": "beats-timed",
+      "ask": "Script has timecodes matching a flow from flows/library.json?",
+      "fail_if": "Wall of undated copy"
+    },
+    {
+      "id": "proof-honest",
+      "ask": "All proof is user-provided or marked [PLACEHOLDER]?",
+      "fail_if": "Invented reviews, metrics, celebs, awards"
+    },
+    {
+      "id": "one-cta",
+      "ask": "Exactly one primary CTA in the cut?",
+      "fail_if": "Shop + follow + comment keyword + link spam together"
+    },
+    {
+      "id": "landing-mirror",
+      "ask": "Landing/bio/store promise mirrors the hook?",
+      "fail_if": "Offer/SKU/geo mismatch"
+    },
+    {
+      "id": "rights",
+      "ask": "Audio, faces, footage rights called out for paid use?",
+      "fail_if": "Assumes trending sound is free for ads"
+    },
+    {
+      "id": "anti-pattern-scan",
+      "ask": "Checked against anti-patterns.json + mistakes library?",
+      "fail_if": "Skipped QA"
+    },
+    {
+      "id": "output-contract",
+      "ask": "All deliverables in the pattern output_contract present?",
+      "fail_if": "Missing shot list/captions/matrix when required"
+    },
+    {
+      "id": "dual-track",
+      "ask": "If user asked viral AND quality: both postures delivered with same JTBD?",
+      "fail_if": "Only one track when both requested",
+      "when": "user asked for viral + cinematic/high-production"
+    },
+    {
+      "id": "platform-native",
+      "ask": "Aspect ratio, caption style, and length fit the platform?",
+      "fail_if": "16:9 letterbox dumped into TikTok without vertical cut"
+    }
+  ],
+  "score_rubric": {
+    "scale": "1-5 per dimension",
+    "dimensions": [
+      {
+        "id": "thumbstop",
+        "name": "Thumb-stop (0–1.5s)",
+        "5": "Instant format/scene/spectacle; impossible to scroll past casually",
+        "1": "Logo, greeting, or vague claim"
+      },
+      {
+        "id": "clarity",
+        "name": "Message clarity by 8s",
+        "5": "Viewer can repeat the job-to-be-done",
+        "1": "Still unclear what is being sold"
+      },
+      {
+        "id": "native_fit",
+        "name": "Platform native fit",
+        "5": "Indistinguishable from top organic in that format OR clearly intentional cinema",
+        "1": "TV spot awkwardly cropped / fake UGC"
+      },
+      {
+        "id": "desire_or_proof",
+        "name": "Desire or proof",
+        "5": "Strong sensory desire OR credible proof beat",
+        "1": "Claims without evidence or feeling"
+      },
+      {
+        "id": "cta_hygiene",
+        "name": "CTA hygiene",
+        "5": "One clear next step matching funnel",
+        "1": "No CTA or conflicting CTAs"
+      },
+      {
+        "id": "production_truth",
+        "name": "Production truth",
+        "5": "Tier matches brief; craft choices intentional",
+        "1": "Wrong tier (cheap CGI, over-polished fake UGC, etc.)"
+      }
+    ],
+    "ship_rule": "Ship only if all dimensions ≥4, or user explicitly accepts a draft with listed risks."
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "id": "remix-duet-bait",
+  "name": "Remix / duet bait seed",
+  "platforms": [
+    "tiktok",
+    "organic_short",
+    "meta"
+  ],
+  "style": "duet_stitch_react",
+  "funnel_stage": "tof_awareness",
+  "niches": [
+    "creator",
+    "entertainment",
+    "apps",
+    "food_bev",
+    "fashion",
+    "gaming"
+  ],
+  "production_tier": "native_ugc",
+  "virality_posture": "share_engineered",
+  "duration_seconds": {
+    "min": 5,
+    "max": 15,
+    "ideal": 9
+  },
+  "aspect_ratios": [
+    "9:16"
+  ],
+  "hook": {
+    "window_seconds": "0-1",
+    "visual": "Left/right empty space designed for duet",
+    "audio_or_vo": "Prompt line inviting response",
+    "text_overlay": "Duet this with your…",
+    "pattern_interrupt": "Participation affordance visible"
+  },
+  "body": {
+    "beats": [
+      {
+        "t": "1-6s",
+        "purpose": "Prompt",
+        "visual": "Clear instruction",
+        "vo_or_copy": "Show me X"
+      },
+      {
+        "t": "6-9s",
+        "purpose": "Brand seed",
+        "visual": "Subtle product/logo",
+        "vo_or_copy": "Optional"
+      }
+    ]
+  },
+  "cta": {
+    "type": "dm_keyword",
+    "on_screen": "Duet this",
+    "spoken_or_caption": "Your turn",
+    "landing_promise": "Hashtag hub"
+  },
+  "audio_design": {
+    "music_energy": "Match tier",
+    "vo_pace": "Clear",
+    "captions": "Muted-first"
+  },
+  "visual_system": {
+    "camera": "Native to tier",
+    "lighting": "Honest",
+    "color": "Consistent",
+    "editing_pace": "Match style",
+    "text_style": "Mobile-readable"
+  },
+  "why_it_works": [
+    "Graph effects",
+    "Free UGC supply"
+  ],
+  "anti_patterns": [
+    "No clear remake instruction"
+  ],
+  "metrics_signals": [
+    "Completion",
+    "Saves/shares or CTR — never invent numbers"
+  ],
+  "prompt_seeds": {},
+  "output_contract": {
+    "deliverables": [
+      "script",
+      "shot_list",
+      "caption_track",
+      "primary_text",
+      "cta_variants",
+      "ab_test_matrix"
+    ]
+  },
+  "source_notes": "Pattern only — no scraped creative."
+}

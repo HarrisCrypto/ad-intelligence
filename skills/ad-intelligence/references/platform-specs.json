@@ -1,0 +1,76 @@
+{
+  "id": "platform-specs",
+  "name": "Platform-native defaults (first-time-right)",
+  "platforms": {
+    "tiktok": {
+      "aspect": ["9:16"],
+      "ideal_seconds": [9, 15, 21, 34],
+      "captions": "Burned-in or native captions; huge hook text",
+      "hook_max_s": 1.5,
+      "notes": "Native > polished. Sound-on optional but muted must work. Spark Ads for creator whitelisting."
+    },
+    "meta": {
+      "aspect": ["4:5", "9:16", "1:1"],
+      "ideal_seconds": [15, 30],
+      "captions": "Assume muted; text safe zones for UI",
+      "hook_max_s": 3,
+      "notes": "Primary text + headline matter. Advantage+ still needs creative diversity."
+    },
+    "youtube": {
+      "aspect": ["16:9"],
+      "ideal_seconds": [15, 30, 60],
+      "captions": "Optional but good for accessibility",
+      "hook_max_s": 5,
+      "notes": "Skippable needs hook before skip; bumpers 6s non-skip."
+    },
+    "youtube_shorts": {
+      "aspect": ["9:16"],
+      "ideal_seconds": [15, 30, 45],
+      "captions": "Required energy",
+      "hook_max_s": 1.5,
+      "notes": "Treat like TikTok; stronger for search + series."
+    },
+    "linkedin": {
+      "aspect": ["1:1", "4:5", "16:9"],
+      "ideal_seconds": [15, 30],
+      "captions": "Captions on; professional tone unless skit intentionally",
+      "hook_max_s": 3,
+      "notes": "Hot takes + explainers + documentary travel well."
+    },
+    "ctv_ott": {
+      "aspect": ["16:9"],
+      "ideal_seconds": [15, 30],
+      "captions": "Broadcast-safe",
+      "hook_max_s": 3,
+      "notes": "Premium cinema; clear endcard; audio-forward OK."
+    },
+    "snapchat": {
+      "aspect": ["9:16"],
+      "ideal_seconds": [6, 10, 15],
+      "captions": "Big, playful",
+      "hook_max_s": 1,
+      "notes": "Full-bleed vertical; fast."
+    },
+    "pinterest": {
+      "aspect": ["2:3", "1:1", "9:16"],
+      "ideal_seconds": [6, 15],
+      "captions": "Text-led ideas perform",
+      "hook_max_s": 2,
+      "notes": "Idea pins / video; utility and aesthetic."
+    },
+    "organic_short": {
+      "aspect": ["9:16"],
+      "ideal_seconds": [15, 45, 60],
+      "captions": "Native",
+      "hook_max_s": 1.5,
+      "notes": "Series and saves > hard sell."
+    },
+    "influencer_seed": {
+      "aspect": ["9:16"],
+      "ideal_seconds": [20, 60],
+      "captions": "Creator’s style",
+      "hook_max_s": 3,
+      "notes": "Brief not teleprompter; FTC disclosure; whitelisting plan."
+    }
+  }
+}

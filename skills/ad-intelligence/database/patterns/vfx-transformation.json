@@ -1,0 +1,97 @@
+{
+  "id": "vfx-transformation",
+  "name": "VFX transformation spot",
+  "platforms": [
+    "tiktok",
+    "meta",
+    "youtube",
+    "youtube_shorts",
+    "organic_short"
+  ],
+  "style": "vfx_transformation",
+  "funnel_stage": "tof_awareness",
+  "niches": [
+    "beauty",
+    "gaming",
+    "apps",
+    "ecommerce",
+    "entertainment",
+    "fitness"
+  ],
+  "production_tier": "high_production",
+  "virality_posture": "share_engineered",
+  "duration_seconds": {
+    "min": 6,
+    "max": 20,
+    "ideal": 12
+  },
+  "aspect_ratios": [
+    "9:16"
+  ],
+  "hook": {
+    "window_seconds": "0-1",
+    "visual": "Pre-transform state",
+    "audio_or_vo": "Riser into effect",
+    "text_overlay": "Optional",
+    "pattern_interrupt": "Impossible morph/transition"
+  },
+  "body": {
+    "beats": [
+      {
+        "t": "1-8s",
+        "purpose": "VFX peak",
+        "visual": "Morph, face app, world shift, product assemble",
+        "vo_or_copy": ""
+      },
+      {
+        "t": "8-12s",
+        "purpose": "Payoff + CTA",
+        "visual": "Final beautiful state + brand",
+        "vo_or_copy": "Try the filter / product"
+      }
+    ]
+  },
+  "cta": {
+    "type": "learn_more",
+    "on_screen": "Try it",
+    "spoken_or_caption": "",
+    "landing_promise": "Filter, AR, or product trial"
+  },
+  "audio_design": {
+    "music_energy": "Match platform native expectations",
+    "vo_pace": "Clear; pause after hook",
+    "captions": "Muted-first, large, high contrast"
+  },
+  "visual_system": {
+    "camera": "Platform-native",
+    "lighting": "Honest to the tier",
+    "color": "Consistent within the cut",
+    "editing_pace": "Match style",
+    "text_style": "Readable on mobile"
+  },
+  "why_it_works": [
+    "Replay bait",
+    "Trend-adjacent even when evergreen FX",
+    "Strong thumbstop"
+  ],
+  "anti_patterns": [
+    "Effect without brand payoff"
+  ],
+  "metrics_signals": [
+    "Completion",
+    "Shares/saves",
+    "Qualified CTR — never invent numbers"
+  ],
+  "prompt_seeds": {},
+  "output_contract": {
+    "deliverables": [
+      "script",
+      "shot_list",
+      "caption_track",
+      "primary_text",
+      "cta_variants",
+      "ab_test_matrix"
+    ]
+  },
+  "source_notes": "Pattern distilled from common high-performing structures — no scraped creative."
+}

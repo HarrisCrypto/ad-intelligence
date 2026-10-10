@@ -1,0 +1,47 @@
+{
+  "id": "real-estate",
+  "niche": "real_estate",
+  "aliases": [
+    "property",
+    "homes"
+  ],
+  "audience": "High consideration; trust + walkthrough desire.",
+  "jobs_to_be_done": [
+    "Tour desire",
+    "Agent trust",
+    "Lead forms"
+  ],
+  "recommended_pattern_ids": [
+    "cinematic-brand-spot",
+    "listicle-text-overlay",
+    "local-service-trust",
+    "lead-magnet-value",
+    "founder-story-origin",
+    "text-story-slideshow"
+  ],
+  "angles": [
+    {
+      "id": "open-house-film",
+      "hook_seed": "Walk-in hero shot",
+      "pattern": "cinematic-brand-spot"
+    }
+  ],
+  "lexicon": {
+    "use": [
+      "beds/baths truth",
+      "neighborhood"
+    ],
+    "avoid_unless_true": [
+      "investment guarantees"
+    ]
+  },
+  "proof_types": [
+    "tours",
+    "sold testimonials"
+  ],
+  "cta_defaults": [
+    "Book tour",
+    "Get list"
+  ],
+  "landing_notes": "MLS-accurate facts."
+}

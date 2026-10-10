@@ -1,0 +1,50 @@
+{
+  "id": "saas",
+  "niche": "saas",
+  "aliases": [
+    "b2b_software",
+    "software"
+  ],
+  "audience": "Operators skeptical of feature dumps.",
+  "jobs_to_be_done": [
+    "Name workflow pain",
+    "Show mechanism",
+    "Book demo/trial"
+  ],
+  "recommended_pattern_ids": [
+    "pas-pain-stack",
+    "motion-design-explainer",
+    "app-demo-ui",
+    "listicle-text-overlay",
+    "green-screen-rant",
+    "objection-faq"
+  ],
+  "angles": [
+    {
+      "id": "workflow-tax",
+      "hook_seed": "Hours lost to handoffs",
+      "pattern": "pas-pain-stack"
+    }
+  ],
+  "lexicon": {
+    "use": [
+      "workflow",
+      "time-to-value",
+      "source of truth"
+    ],
+    "avoid_unless_true": [
+      "AI-powered without mechanism",
+      "10x"
+    ]
+  },
+  "proof_types": [
+    "UI demo",
+    "case metrics you own",
+    "logo rights"
+  ],
+  "cta_defaults": [
+    "Start free",
+    "Book demo"
+  ],
+  "landing_notes": "Same workflow demo."
+}

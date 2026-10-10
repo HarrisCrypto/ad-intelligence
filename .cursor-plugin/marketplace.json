@@ -1,0 +1,28 @@
+{
+  "name": "ad-intelligence-marketplace",
+  "owner": {
+    "name": "HarrisCrypto"
+  },
+  "metadata": {
+    "description": "Pattern-first ad intelligence skills for LLM agents."
+  },
+  "plugins": [
+    {
+      "name": "ad-intelligence",
+      "source": ".",
+      "description": "One-stop ad maker: patterns + Seedance/Higgsfield creative stack for any niche.",
+      "version": "3.0.0",
+      "keywords": [
+        "ads",
+        "viral",
+        "tiktok",
+        "cinematic",
+        "ugc",
+        "high-production",
+        "meta",
+        "youtube",
+        "creative"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "id": "hero-product-film",
+  "name": "Hero product film (premium launch)",
+  "platforms": [
+    "youtube",
+    "meta",
+    "ctv_ott",
+    "tiktok",
+    "organic_short"
+  ],
+  "style": "hero_product_film",
+  "funnel_stage": "tof_awareness",
+  "niches": [
+    "ecommerce",
+    "luxury",
+    "apps",
+    "automotive",
+    "beauty",
+    "fashion",
+    "gaming"
+  ],
+  "production_tier": "premium_cinema",
+  "virality_posture": "brand_film",
+  "duration_seconds": {
+    "min": 15,
+    "max": 60,
+    "ideal": 30
+  },
+  "aspect_ratios": [
+    "16:9",
+    "9:16",
+    "1:1"
+  ],
+  "hook": {
+    "window_seconds": "0-3",
+    "visual": "One unforgettable material/light/motion image of the product world",
+    "audio_or_vo": "Score-led; VO optional and late",
+    "text_overlay": "None early",
+    "pattern_interrupt": "Cinema craft that doesn’t look like a feed template"
+  },
+  "body": {
+    "beats": [
+      {
+        "t": "3-18s",
+        "purpose": "World + desire",
+        "visual": "Macro details, human context, kinetic product moves",
+        "vo_or_copy": "Sparse brand line"
+      },
+      {
+        "t": "18-26s",
+        "purpose": "Capability proof",
+        "visual": "Feature shown as experience not bullet",
+        "vo_or_copy": "One claim max"
+      },
+      {
+        "t": "26-30s",
+        "purpose": "Signature endcard",
+        "visual": "Designed plate + product hero",
+        "vo_or_copy": "Name + line"
+      }
+    ]
+  },
+  "cta": {
+    "type": "soft_curiosity",
+    "on_screen": "Explore",
+    "spoken_or_caption": "Optional",
+    "landing_promise": "Brand experience / flagship PDP"
+  },
+  "audio_design": {
+    "music_energy": "Custom score with designed silence",
+    "vo_pace": "Measured",
+    "captions": "Minimal"
+  },
+  "visual_system": {
+    "camera": "Controlled moves; anamorphic optional; macro + wide contrast",
+    "lighting": "Motivated cinematic",
+    "color": "Unified show LUT",
+    "editing_pace": "Breathing; match cuts on motion",
+    "text_style": "Editorial end only"
+  },
+  "why_it_works": [
+    "Brand memory for premium auctions",
+    "Cuts down into shorts/whitelisting",
+    "Signals quality matching price"
+  ],
+  "anti_patterns": [
+    "Feature laundry over images",
+    "Stocky “cinematic” LUTs without craft"
+  ],
+  "metrics_signals": [
+    "Completion",
+    "Shares/saves",
+    "Qualified CTR — never invent numbers"
+  ],
+  "prompt_seeds": {
+    "shot_list": "Hero open → macro → human context → capability → endcard",
+    "video_gen": "Premium product cinema, shallow DOF, controlled lighting, no early text UI"
+  },
+  "output_contract": {
+    "deliverables": [
+      "shot_list",
+      "video_gen_prompt",
+      "primary_text",
+      "thumbnail_prompt",
+      "ab_test_matrix"
+    ]
+  },
+  "source_notes": "Pattern distilled from common high-performing structures — no scraped creative."
+}

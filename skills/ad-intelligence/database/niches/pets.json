@@ -1,0 +1,48 @@
+{
+  "id": "pets",
+  "niche": "pets",
+  "aliases": [
+    "petcare",
+    "petfood"
+  ],
+  "audience": "Emotional pet parents; cute + problem solve.",
+  "jobs_to_be_done": [
+    "Cute thumbstop",
+    "Solve a pet pain",
+    "Subscribe"
+  ],
+  "recommended_pattern_ids": [
+    "product-loop-demo",
+    "skit-sketch-ad",
+    "ugc-talking-head-scroll-stop",
+    "before-after-reveal",
+    "meme-native-trend",
+    "offer-urgency"
+  ],
+  "angles": [
+    {
+      "id": "pet-pov",
+      "hook_seed": "POV of your dog when…",
+      "pattern": "pov-day-in-life"
+    }
+  ],
+  "lexicon": {
+    "use": [
+      "vet-formulated only if true",
+      "coat/energy specifics"
+    ],
+    "avoid_unless_true": [
+      "human-grade misuse",
+      "medical cures"
+    ]
+  },
+  "proof_types": [
+    "pet UGC",
+    "feeding demos"
+  ],
+  "cta_defaults": [
+    "Subscribe",
+    "Shop"
+  ],
+  "landing_notes": "Same product."
+}

@@ -1,0 +1,32 @@
+# Ad Intelligence — License
+
+## Pattern library (this package)
+
+Copyright (c) 2026 HarrisCrypto.
+
+You may use, modify, and redistribute the **pattern blueprints, schemas,
+retrieval scripts, and skill instructions** in this package under the terms
+you choose when you publish your own fork (MIT recommended for open sale,
+or a commercial license for paid distribution).
+
+## Important — what this package does NOT include
+
+This package does **not** redistribute third-party ad creatives, video files,
+brand assets, or verbatim competitor copy scraped from Meta Ad Library,
+TikTok Creative Center, Google Ads Transparency Center, Foreplay, MagicBrief,
+or similar services.
+
+If you ingest live ads into your private vector store:
+
+1. Follow each platform’s Terms of Service and robots/API rules.
+2. Prefer official APIs or licensed swipe-file vendors.
+3. Do not ship scraped creatives inside a public GitHub skill unless you own
+   the rights or have a redistribution license.
+4. Store **your own structured breakdowns** (hooks, angles, schemas) — not
+   the original media — when packaging for sale.
+
+## Trademark notice
+
+Meta, Facebook, Instagram, TikTok, Google, YouTube, OpenAI, Whisper, and
+related names are trademarks of their respective owners. This package is not
+affiliated with or endorsed by them.

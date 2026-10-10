@@ -1,0 +1,50 @@
+{
+  "id": "fitness",
+  "niche": "fitness",
+  "aliases": [
+    "gym",
+    "wellness_training"
+  ],
+  "audience": "Goal-oriented; responds to struggle→win and programs.",
+  "jobs_to_be_done": [
+    "Motivate identity shift",
+    "Sell program/app",
+    "Challenge flywheel"
+  ],
+  "recommended_pattern_ids": [
+    "performance-sports-cine",
+    "challenge-participation",
+    "before-after-reveal",
+    "pov-day-in-life",
+    "offer-urgency",
+    "hot-take-controversy"
+  ],
+  "angles": [
+    {
+      "id": "unpopular-training",
+      "hook_seed": "Unpopular opinion about recovery/volume",
+      "pattern": "hot-take-controversy"
+    }
+  ],
+  "lexicon": {
+    "use": [
+      "program",
+      "consistency",
+      "form",
+      "PR"
+    ],
+    "avoid_unless_true": [
+      "lose X lbs guaranteed"
+    ]
+  },
+  "proof_types": [
+    "transformation with disclaimer",
+    "workout clips",
+    "app streaks"
+  ],
+  "cta_defaults": [
+    "Start free",
+    "Join challenge"
+  ],
+  "landing_notes": "Program match."
+}

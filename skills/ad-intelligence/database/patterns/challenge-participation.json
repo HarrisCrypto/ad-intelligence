@@ -1,0 +1,99 @@
+{
+  "id": "challenge-participation",
+  "name": "Challenge / participation loop",
+  "platforms": [
+    "tiktok",
+    "meta",
+    "organic_short",
+    "snapchat",
+    "youtube_shorts"
+  ],
+  "style": "challenge_participation",
+  "funnel_stage": "tof_awareness",
+  "niches": [
+    "fitness",
+    "food_bev",
+    "beauty",
+    "apps",
+    "gaming",
+    "entertainment",
+    "nonprofit"
+  ],
+  "production_tier": "native_ugc",
+  "virality_posture": "share_engineered",
+  "duration_seconds": {
+    "min": 8,
+    "max": 25,
+    "ideal": 15
+  },
+  "aspect_ratios": [
+    "9:16"
+  ],
+  "hook": {
+    "window_seconds": "0-2",
+    "visual": "Challenge action already happening",
+    "audio_or_vo": "Named challenge sound",
+    "text_overlay": "#ChallengeName rules in 1 line",
+    "pattern_interrupt": "Clear participate instruction"
+  },
+  "body": {
+    "beats": [
+      {
+        "t": "2-10s",
+        "purpose": "Demo the challenge",
+        "visual": "Clean example performance",
+        "vo_or_copy": "Rules"
+      },
+      {
+        "t": "10-15s",
+        "purpose": "Invite + brand land",
+        "visual": "Logo sting subtle + duet reminder",
+        "vo_or_copy": "Duet this / tag us"
+      }
+    ]
+  },
+  "cta": {
+    "type": "dm_keyword",
+    "on_screen": "Duet · Tag us · Use the sound",
+    "spoken_or_caption": "Show me yours",
+    "landing_promise": "Hashtag hub or spark ads seeding"
+  },
+  "audio_design": {
+    "music_energy": "Match platform native expectations",
+    "vo_pace": "Clear; pause after hook",
+    "captions": "Muted-first, large, high contrast"
+  },
+  "visual_system": {
+    "camera": "Platform-native",
+    "lighting": "Honest to the tier",
+    "color": "Consistent within the cut",
+    "editing_pace": "Match style",
+    "text_style": "Readable on mobile"
+  },
+  "why_it_works": [
+    "UGC flywheel",
+    "Sound/page growth",
+    "Cheap scaled variants"
+  ],
+  "anti_patterns": [
+    "Unsafe challenges",
+    "Rules too complex to copy"
+  ],
+  "metrics_signals": [
+    "Completion",
+    "Shares/saves",
+    "Qualified CTR — never invent numbers"
+  ],
+  "prompt_seeds": {},
+  "output_contract": {
+    "deliverables": [
+      "script",
+      "shot_list",
+      "caption_track",
+      "primary_text",
+      "cta_variants",
+      "ab_test_matrix"
+    ]
+  },
+  "source_notes": "Pattern distilled from common high-performing structures — no scraped creative."
+}

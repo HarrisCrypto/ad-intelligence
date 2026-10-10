@@ -1,0 +1,49 @@
+{
+  "id": "fintech",
+  "niche": "fintech",
+  "aliases": [
+    "finance",
+    "banking",
+    "crypto_app"
+  ],
+  "audience": "Trust-sensitive; clarity and compliance matter.",
+  "jobs_to_be_done": [
+    "Demystify money task",
+    "Build trust",
+    "Drive app install"
+  ],
+  "recommended_pattern_ids": [
+    "kinetic-type-explainer",
+    "app-demo-ui",
+    "green-screen-rant",
+    "social-proof-stack",
+    "skit-sketch-ad",
+    "objection-faq"
+  ],
+  "angles": [
+    {
+      "id": "money-myth",
+      "hook_seed": "Myth about fees/credit/investing",
+      "pattern": "green-screen-rant"
+    }
+  ],
+  "lexicon": {
+    "use": [
+      "clear fees language",
+      "time-to-funded"
+    ],
+    "avoid_unless_true": [
+      "guaranteed returns",
+      "get rich"
+    ]
+  },
+  "proof_types": [
+    "regulated disclosures",
+    "UI clarity",
+    "real support stories"
+  ],
+  "cta_defaults": [
+    "Get started"
+  ],
+  "landing_notes": "Compliant disclosures."
+}
