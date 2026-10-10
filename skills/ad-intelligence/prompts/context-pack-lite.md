@@ -1,7 +1,7 @@
 # Ad Intelligence — CONTEXT PACK LITE (v3.15)
 
 _Small-window paste. Prefer full pack if context allows._
-_Repo: https://github.com/HarrisCrypto/ad-intelligence_ _(PR branch until main merges)_
+_Repo: https://github.com/HarrisCrypto/ad-intelligence_
 
 ## Sequence
 1. Tool card → rung (connected|handoff|assembler|package-only)

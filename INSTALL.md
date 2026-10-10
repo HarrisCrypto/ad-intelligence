@@ -3,7 +3,7 @@
 **Repo:** https://github.com/HarrisCrypto/ad-intelligence  
 **Skill root:** `skills/ad-intelligence/`  
 **Version:** **3.15.0** — see [CHANGELOG.md](./CHANGELOG.md)  
-**Clone the PR branch until merged:** `git clone -b cursor/multi-harness-agent-os-08cd https://github.com/HarrisCrypto/ad-intelligence.git` then `node skills/ad-intelligence/scripts/fresh-clone-prove.mjs`
+**Verify any harness:** `git clone https://github.com/HarrisCrypto/ad-intelligence.git && node skills/ad-intelligence/scripts/fresh-clone-prove.mjs`
 
 ---
 
@@ -36,8 +36,7 @@ node skills/ad-intelligence/scripts/agent-ready.mjs
 ## Paste this to your agent (one-shot)
 
 ```text
-Use Ad Intelligence v3.15 from branch cursor/multi-harness-agent-os-08cd
-(https://github.com/HarrisCrypto/ad-intelligence) — main may lag until PR #15 merges.
+Use Ad Intelligence v3.15 from https://github.com/HarrisCrypto/ad-intelligence
 Follow skills/ad-intelligence/prompts/one-shot.md EXACTLY — studies provenance + human-build LOG + finish-the-cut.md.
 First: node skills/ad-intelligence/scripts/probe-harness.mjs — fill the tool card and pick a rung.
 If I give a website: node skills/ad-intelligence/scripts/brief-from-url.mjs <url>

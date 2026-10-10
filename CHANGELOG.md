@@ -17,7 +17,7 @@
 - Plugin **3.15.0**
 
 ### Note
-Until this PR merges, default `main` clone is still older — use branch `cursor/multi-harness-agent-os-08cd` or wait for merge. CI proves the PR ref.
+Shipped on `main` (merged from multi-harness PR). Default clone includes studies + gates.
 
 ## 3.14.0 — 2026-10-10
 

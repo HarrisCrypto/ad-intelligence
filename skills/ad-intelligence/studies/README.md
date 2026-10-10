@@ -66,10 +66,10 @@ node scripts/retrieve.mjs --niche saas --platform tiktok --compact
 
 ## Prove any harness (not only Cursor)
 
-Work lives on PR branch until merged to `main`. Fresh clone:
+On `main`:
 
 ```bash
-git clone -b cursor/multi-harness-agent-os-08cd https://github.com/HarrisCrypto/ad-intelligence.git
+git clone https://github.com/HarrisCrypto/ad-intelligence.git
 cd ad-intelligence/skills/ad-intelligence
 node scripts/fresh-clone-prove.mjs
 node scripts/demo-quality-gates.mjs

@@ -49,7 +49,7 @@ const craftRules = `# Craft defaults (compressed)
 const liteParts = [
   "# Ad Intelligence — CONTEXT PACK LITE (v3.15)\n\n",
   "_Small-window paste. Prefer full pack if context allows._\n",
-  "_Repo: https://github.com/HarrisCrypto/ad-intelligence_ _(PR branch until main merges)_\n\n",
+  "_Repo: https://github.com/HarrisCrypto/ad-intelligence_\n\n",
   "## Sequence\n",
   "1. Tool card → rung (connected|handoff|assembler|package-only)\n",
   "2. Offline retrieve: references/retrieve-offline-compact.json (or live retrieve if shell)\n",
