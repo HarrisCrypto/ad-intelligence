@@ -1,8 +1,8 @@
 {
   "name": "ad-intelligence",
   "displayName": "Ad Intelligence",
-  "version": "3.2.0",
-  "description": "First-shot ad maker: lint + provenance + MCP-correct render plans + patterns.",
+  "version": "3.3.0",
+  "description": "First-shot non-slop ads: proof, lint, provenance, sheets, MCP-correct render plans.",
   "author": {
     "name": "HarrisCrypto"
   },
