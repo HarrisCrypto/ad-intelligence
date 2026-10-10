@@ -33,15 +33,17 @@ consistency, and mechanical lint are the leverage** — not vibes.
 
 ## When to use
 
-Any ads/creatives for **any** niche — especially after prior AI slop or redos.
+Any ads/creatives for **any** niche — especially after prior AI slop or redos.  
+Human proof of value: `../../PROOF.md`. Install: `../../INSTALL.md`.
 
 ## Master workflow
 
 ### 0) Orient
 - Pipeline, creative-stack (render-plan, connected-run, sheets, Seedance, Higgsfield)
 - `claim-firewall.json`, `brief-defaults.json`, `policy-precheck.json`
-- `examples/beauty-dtc-dual-track.md` (**quality bar** — other examples are shape-only)
-- swipe-signals, style catalog, viral OS
+- `examples/beauty-dtc-dual-track.md` or `demo/` (**quality bar** — other examples are shape-only)
+- `swipe-signals.md` / `.json` (+ optional local `private-signals.json`)
+- style catalog, viral OS
 
 ### 1) Brief
 ≤3 blocking questions. Else assume via `brief-defaults.json` and list Assumptions.
@@ -73,9 +75,11 @@ Rubric with evidence + caps → failures → A/B/C.
 | `references/creative-stack/render-plan.md` | Generation units |
 | `references/output-template.md` | Required deliverable |
 | `examples/beauty-dtc-dual-track.md` | Full gold fixture |
+| `demo/` | Canonical quality-target pointer |
 | `checklists/first-time-right.json` | Ship gates |
+| `../../PROOF.md` | Before/after vs slop |
 | `../../CHANGELOG.md` | Versions |
 
 ## Install
 
-`../../INSTALL.md`
+`../../INSTALL.md` · Contribute: `../../CONTRIBUTING.md`

@@ -1,114 +1,116 @@
-# How to get your agent to use Ad Intelligence
+# Install Ad Intelligence (low friction)
 
-**Own GitHub repo (recommended):** `https://github.com/HarrisCrypto/ad-intelligence`  
-(Create that empty repo if it does not exist yet — see [`PUBLISH.md`](./PUBLISH.md).)
+**Repo:** https://github.com/HarrisCrypto/ad-intelligence  
+**Skill root:** `skills/ad-intelligence/`  
+**Version:** see [CHANGELOG.md](./CHANGELOG.md)
 
-Until it is published there, the package also lives temporarily under
-`HarrisCrypto/Union-Jack-Rebuild-/ad-intelligence/` on branch
-`cursor/ad-intelligence-skill-3683` and will be removed from Union Jack once
-the standalone repo is live.
+---
 
-## Creative stack (Seedance / Higgsfield / peers)
+## One-line paths
 
-The skill is a **one-stop ad maker**: it routes Seedance 2.0/2.5, Higgsfield
-(Ads Studio, UGC, Marketing Studio, Ad Multiplier, Katana, product photoshoot),
-Kling, Runway, CapCut, Meta/TikTok, ElevenLabs, Suno, and more.
+| Harness | Fastest install |
+| --- | --- |
+| **Cursor (plugin)** | Customize → From GitHub Repository → paste `https://github.com/HarrisCrypto/ad-intelligence` → install **ad-intelligence** |
+| **Cursor (this repo open)** | Already available — ask `/ad-intelligence` or “use the ad-intelligence skill” |
+| **Claude / Grok / Hermes / other** | Clone repo → prepend [`skills/ad-intelligence/prompts/harness-system-prompt.md`](./skills/ad-intelligence/prompts/harness-system-prompt.md) → point the model at `SKILL.md` |
+| **Cloud Agents** | Keep this repo as the workspace **or** copy `skills/ad-intelligence` into `.cursor/skills/` |
 
-- Connected tools → agent should call them  
-- Not connected → agent still emits Seedance/Higgsfield-grade prompts & briefs  
+Plugin metadata lives at `.cursor-plugin/` (`plugin.json` + `marketplace.json`) so Cursor can install and version the skill as a plugin.
 
-Docs: `skills/ad-intelligence/references/creative-stack/` ·  
-`skills/ad-intelligence/pipelines/one-stop-ad-maker.md`
+---
 
-## Fastest path (this repo)
+## Quick start for agents
 
-The skill is linked at:
+Copy this block when you need the agent to self-orient with no extra explanation:
 
 ```text
-.cursor/skills/ad-intelligence  →  ad-intelligence/skills/ad-intelligence
+You are using Ad Intelligence (skills/ad-intelligence/).
+1. Read SKILL.md and pipelines/one-stop-ad-maker.md
+2. Quality bar: examples/beauty-dtc-dual-track.md (also demo/)
+3. Retrieve: node scripts/retrieve.mjs --niche <niche|alias> --platform <platform> --limit 5
+4. Fill output-template.md: sheets, claim ledger, timed script, render plan, self-critique
+5. If generators connected → call them (connected-run-protocol.md). Else → MCP-correct handoffs.
+6. Ship only if: node scripts/lint-package.mjs <package.md> exits 0
+Never invent proof. Dual-track default for serious brands. One CTA. Muted-first.
 ```
 
-**Any Cursor agent working in this repo** can discover it automatically.
+One-shot user prompt:
 
-### Use it in chat
+```text
+/ad-intelligence
+Make first-shot dual-track ads for:
+- Company / product:
+- Niche:
+- Platforms:
+- Goal:
+- Assets on hand (stills, URL, reviews):
+- Tools connected (Higgsfield / Seedance / none — handoff OK):
 
-1. Open Agent chat in this project.
-2. Type `/ad-intelligence` **or** just ask:  
-   `Using the ad-intelligence skill, create a viral TikTok + premium hero film for …`
-3. For a whole session, turn the skill into a **Custom Mode** (Option/Alt+Enter on the skill) so it stays on.
+Retrieve → sheets → render plan → full output template → lint before delivery.
+```
 
-### Force it every time (optional rule)
+---
 
-Add a project rule, e.g. `.cursor/rules/ads.mdc`:
+## Discoverable commands
+
+From skill root (`skills/ad-intelligence/`):
+
+```bash
+# Patterns for a niche / platform (aliases work: skincare, plumbing, …)
+node scripts/retrieve.mjs --niche beauty --platform tiktok --limit 5
+node scripts/retrieve.mjs --list
+node scripts/retrieve.mjs --list-niches
+
+# Mechanical ship gate (required)
+node scripts/lint-package.mjs examples/beauty-dtc-dual-track.md
+node scripts/lint-package.mjs path/to/your-package.md
+```
+
+---
+
+## Cursor details
+
+1. **Plugin install:** Customize → From GitHub Repository → this URL → Skills should list **ad-intelligence**.
+2. **In-chat:** `/ad-intelligence` or “follow the ad-intelligence skill.”
+3. **Sticky session:** Option/Alt+Enter on the skill → Custom Mode.
+4. **Optional rule** (`.cursor/rules/ads.mdc`):
 
 ```markdown
 ---
-description: Always use Ad Intelligence for creative work
+description: Ads and creatives use Ad Intelligence
 alwaysApply: false
 ---
-When the user asks for ads, creatives, hooks, scripts, UGC, TikTok/Meta/YouTube
-ads, or launch films: read and follow `.cursor/skills/ad-intelligence/SKILL.md`,
-run `node scripts/retrieve.mjs` from that skill directory, and pass the
-first-time-right checklist before delivering.
+When the user asks for ads, creatives, hooks, UGC, or launch films: follow
+skills/ad-intelligence/SKILL.md, run retrieve.mjs, deliver the output template,
+and pass lint-package.mjs before claiming done.
 ```
 
-## Install from GitHub (point any Cursor at it)
+5. **Cloud:** Prefer cloning this repo so Cloud Agents get the skill; or sync `~/.cursor/skills/ad-intelligence`.
 
-Cursor installs **plugins** from GitHub (not bare skill folders). The package
-root already has `.cursor-plugin/marketplace.json`.
+---
 
-1. In Cursor: **Customize → From GitHub Repository**
-2. Paste: `https://github.com/HarrisCrypto/ad-intelligence`  
-   (or the Union Jack path only while waiting for publish)
-3. Install the **ad-intelligence** plugin
-4. Confirm it appears under **Customize → Skills**
-
-## Use with Cloud Agents
-
-- **Project skill (recommended):** keep `.cursor/skills/ad-intelligence` in the
-  repo so every Cloud Agent clone gets it.
-- **Personal skill sync:** copy the skill into `~/.cursor/skills/ad-intelligence`
-  and enable **Settings → Agents → Sync Skills for Cloud Agents**.
-
-## Use with Hermes / Manus / custom harnesses
-
-Skills are files. Mount or clone the skill directory into the agent’s workspace,
-then prepend the system prompt in
-[`skills/ad-intelligence/prompts/harness-system-prompt.md`](./skills/ad-intelligence/prompts/harness-system-prompt.md).
-
-Minimal harness loop:
+## Non-Cursor harnesses
 
 ```bash
-git clone https://github.com/HarrisCrypto/Union-Jack-Rebuild-.git
-cd Union-Jack-Rebuild-/ad-intelligence/skills/ad-intelligence
-node scripts/retrieve.mjs --niche <niche> --tag viral --limit 5
-# feed JSON + SKILL.md into the model; require output-template.md
-```
-
-## Creative stack
-
-This skill routes **Seedance**, **Higgsfield**, Kling, Runway, CapCut, Meta/TikTok, ElevenLabs, Suno, and peers — see `skills/ad-intelligence/references/creative-stack/` and `pipelines/one-stop-ad-maker.md`.
-
-## Verify it’s loaded
-
-```bash
+git clone https://github.com/HarrisCrypto/ad-intelligence.git
 cd ad-intelligence/skills/ad-intelligence
-node scripts/retrieve.mjs --list | head
-node scripts/retrieve.mjs --niche beauty --tag viral --limit 3
+# Prepend prompts/harness-system-prompt.md to the system prompt
+node scripts/retrieve.mjs --niche <niche> --limit 5
+# Require references/output-template.md + lint-package.mjs exit 0
 ```
 
-In Cursor chat: `/ad-intelligence` should resolve. Ask for an ad and confirm the
-reply cites **pattern ids** and a **QA checklist** — if it doesn’t, tell the
-agent explicitly: *Follow the ad-intelligence skill and output template.*
+No hosted database required. Optional private longevity notes: see [CONTRIBUTING.md](./CONTRIBUTING.md) / `references/swipe-signals.md`.
 
-## What “point my agent at it” means in practice
+---
 
-| Setup | What you do |
-| --- | --- |
-| Working in this repo | Nothing extra — skill is already linked |
-| Other Cursor projects | Install plugin from this GitHub repo (or a dedicated fork) |
-| Cloud Agents | Keep skill in repo **or** sync personal skills |
-| Non-Cursor LLM harness | Clone path + paste harness system prompt + run retrieve CLI |
+## Verify
 
-You do **not** need a separate hosted database for the pattern skill to work.
-Optional later: private vector DB of live ad breakdowns (see `ingest/README.md`).
+- Chat cites **pattern ids**, a **claim ledger**, a **render plan**, and **lint**.
+- `lint-package.mjs` on the beauty gold fixture returns `"ok": true`.
+- If not: say explicitly *Follow ad-intelligence SKILL.md and lint before delivery.*
+
+## Proof & quality bar
+
+- [PROOF.md](./PROOF.md) — before/after vs generic slop  
+- [demo/](./skills/ad-intelligence/demo/) — canonical quality target pointer  
+- Full fixture: `skills/ad-intelligence/examples/beauty-dtc-dual-track.md`

@@ -1,0 +1,11 @@
+# Local-only longevity / winning notes (never commit advertiser data)
+skills/ad-intelligence/references/private-signals.json
+
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Node
+node_modules/

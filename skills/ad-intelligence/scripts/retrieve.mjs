@@ -416,17 +416,41 @@ function main() {
   if (fs.existsSync(swipePath)) {
     const swipe = loadJson(swipePath);
     const nicheKey = (nicheId || q.niche || "").toLowerCase();
+    const nicheMatch = (n) =>
+      n.niche.includes(nicheKey.replace(/-/g, "_")) ||
+      n.niche.includes(nicheKey.replace(/_/g, "-")) ||
+      nicheKey.includes(n.niche);
+
     let nicheHints = [];
     if (nicheKey) {
-      nicheHints = (swipe.by_niche_hints || []).filter(
-        (n) =>
-          n.niche.includes(nicheKey.replace(/-/g, "_")) ||
-          n.niche.includes(nicheKey.replace(/_/g, "-")) ||
-          nicheKey.includes(n.niche)
-      );
+      nicheHints = (swipe.by_niche_hints || []).filter(nicheMatch);
     }
+
+    // Optional local overlay (gitignored). See references/swipe-signals.md
+    let privateMeta = { loaded: false, path: null };
+    const privatePath =
+      process.env.AD_INTEL_PRIVATE_SIGNALS ||
+      path.join(DB_ROOT, "references", "private-signals.json");
+    let privateFormats = [];
+    let privateFailures = [];
+    if (fs.existsSync(privatePath)) {
+      try {
+        const priv = loadJson(privatePath);
+        privateMeta = { loaded: true, path: privatePath };
+        if (nicheKey) {
+          const privHints = (priv.by_niche_hints || []).filter(nicheMatch);
+          nicheHints = [...privHints, ...nicheHints];
+        }
+        privateFormats = priv.by_format || [];
+        privateFailures = priv.failure_mode_index || [];
+      } catch {
+        privateMeta = { loaded: false, path: privatePath, error: "parse_failed" };
+      }
+    }
+
     swipeSignals = {
       file: "references/swipe-signals.json",
+      docs: "references/swipe-signals.md",
       note: "Anonymized longevity signals — optional; never invent metrics",
       niche_hints: nicheHints,
       niche_hints_status: nicheHints.length
@@ -439,6 +463,12 @@ function main() {
             .filter((f) => f.longevity === "high")
             .map((f) => f.format)
         : [],
+      failure_mode_index: [
+        ...(swipe.failure_mode_index || []),
+        ...privateFailures,
+      ],
+      private: privateMeta,
+      private_formats_count: privateFormats.length,
     };
   }
 
