@@ -4,21 +4,24 @@
 
 Packages that do **not** invent proof, drift product identity, or burn three redo cycles — from any LLM harness (Cursor, Claude, Grok, OpenClaw, Hermes, …).
 
-**Dual-path:** generators connected → call them; not connected → emit the same-quality Seedance/Higgsfield handoffs, sheets, render plans, and CapCut finishing.
+**Triple-path (pick one rung):** connected MCP → call tools; Seedance/Higgsfield exist for the user but not in-session → same-quality handoffs; only image gen + short clips + CapCut → **assembler** (same sheets, ledger, lint, render-QA). Index: [creative-stack/README.md](./skills/ad-intelligence/references/creative-stack/README.md).
 
 | Start here | Link |
 | --- | --- |
 | **Why it exists (before/after)** | [PROOF.md](./PROOF.md) |
+| **Pipeline rungs (connected / handoff / assembler)** | [creative-stack/README.md](./skills/ad-intelligence/references/creative-stack/README.md) |
+| **Assembler (third rung)** | [assembler-pipeline.md](./skills/ad-intelligence/references/creative-stack/assembler-pipeline.md) |
+| **Voice / front-desk gold fixture** | [voice-agent-front-desk.md](./skills/ad-intelligence/examples/voice-agent-front-desk.md) |
 | **Visual design examples** | [examples/visual/index.html](./skills/ad-intelligence/examples/visual/index.html) |
 | **Install in minutes** | [INSTALL.md](./INSTALL.md) |
 | **Canonical quality targets** | [skills/ad-intelligence/demo/](./skills/ad-intelligence/demo/) |
 | **Full-depth gold fixtures** | beauty · local · SaaS · physical · voice/front-desk — see [PROOF.md](./PROOF.md) |
-| **No Seedance/Higgsfield?** | [assembler-pipeline.md](./skills/ad-intelligence/references/creative-stack/assembler-pipeline.md) |
+| **Post-render QA** | [render-qa.json](./skills/ad-intelligence/checklists/render-qa.json) |
 | **Stress briefs** | [examples/stress-briefs/](./skills/ad-intelligence/examples/stress-briefs/) |
 | **Ship gate demo** | `node skills/ad-intelligence/scripts/demo-quality-gates.mjs` |
 | **Contribute** | [CONTRIBUTING.md](./CONTRIBUTING.md) |
 
-**Version 3.6.0** — [CHANGELOG.md](./CHANGELOG.md)
+**Version 3.6.1** — [CHANGELOG.md](./CHANGELOG.md)
 
 ---
 
@@ -28,11 +31,12 @@ Packages that do **not** invent proof, drift product identity, or burn three red
 2. Product + character sheets with provenance tags  
 3. Claim ledger — user proof or `[PLACEHOLDER]`, never vibes  
 4. Timed script (muted-first, one CTA) + dual-track default  
-5. MCP-correct **render plan** (or connected-run when tools are live)  
+5. MCP-correct **render plan** — connected-run, handoff, or **assembler** units  
 6. Self-critique + A/B/C against real failure modes  
-7. **Mechanical lint** + intentional fail corpus  
+7. **Mechanical lint** + **render-QA** + intentional fail corpus  
 8. **Visual storyboard gallery** paired to gold fixtures  
 9. Stress briefs for messy / regulated prompts  
+10. Service-niche **voice / front-desk** phone-call gold fixture
 
 ---
 
@@ -59,10 +63,10 @@ Agent quick-start: [INSTALL.md](./INSTALL.md#quick-start-for-agents)
 | Layer | Role |
 | --- | --- |
 | Patterns + niches | Strategy memory |
-| Creative stack | Seedance / Higgsfield / peers — call or handoff |
+| Creative stack | Three rungs: connected · handoff · **assembler** |
 | Consistency sheets | Product + Soul-ID lock |
 | Claim firewall + policy precheck | Anti-hallucination + regulated verticals |
-| Render plan + connected-run | Production-shaped generation |
+| Render plan + connected-run / assembler | Production-shaped generation |
 | Swipe signals (+ private overlay) | Longevity notes |
 | Lint + corpus + stress briefs | Ship gate + drills |
 | Visual gallery + gold fixtures | Design + markdown quality bar |

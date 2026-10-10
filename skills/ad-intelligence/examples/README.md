@@ -1,12 +1,15 @@
 # Examples
 
+Five full-depth gold fixtures (lint-clean). Service / phone niche: **`voice-agent-front-desk.md`**.  
+No Seedance/Higgsfield? → [`../references/creative-stack/assembler-pipeline.md`](../references/creative-stack/assembler-pipeline.md).
+
 | Path | Depth | Notes |
 | --- | --- | --- |
 | `beauty-dtc-dual-track.md` | **Full-depth** | lint `"ok": true` |
 | `local-service-trust.md` | **Full-depth** | lint `"ok": true` |
 | `saas-demo-pas.md` | **Full-depth** | lint `"ok": true` |
 | `physical-product-hero.md` | **Full-depth** | lint `"ok": true` |
-| `voice-agent-front-desk.md` | **Full-depth** | lint `"ok": true` · assembler-aware |
+| `voice-agent-front-desk.md` | **Full-depth** | lint `"ok": true` · assembler-aware phone/front-desk |
 | `visual/` | Design frames | Open `visual/index.html` |
 | `stress-briefs/` | Drill prompts | Expected traps listed |
 | `lint-corpus/` | Must **fail** lint | Used by demo-quality-gates |

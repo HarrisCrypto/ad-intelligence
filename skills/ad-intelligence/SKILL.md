@@ -84,7 +84,9 @@ Rubric with evidence + caps → failures → A/B/C.
 | `scripts/retrieve.mjs` | Niche aliases + recommended boost |
 | `scripts/lint-package.mjs` | Mechanical ship gate |
 | `references/creative-stack/render-plan.md` | Generation units |
+| `references/creative-stack/README.md` | Three-rung index (connected / handoff / assembler) |
 | `references/creative-stack/assembler-pipeline.md` | Third rung — no single-pass gen |
+| `examples/voice-agent-front-desk.md` | Phone / front-desk service gold (assembler-aware) |
 | `checklists/render-qa.json` | Post-render / export checks |
 | `references/output-template.md` | Required deliverable |
 | `examples/` | Full-depth gold fixtures (5+) |

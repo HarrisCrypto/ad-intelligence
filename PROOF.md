@@ -2,19 +2,22 @@
 
 **Outcome:** first-shot ad packages that do not invent proof, drift product identity, or burn three redo cycles.
 
-**Dual-path in one line:** if Higgsfield/Seedance (or peers) are connected → call them; if not → emit the same-quality MCP-correct handoffs, sheets, render plans, and CapCut finishing.
+**Triple-path in one line:** Higgsfield/Seedance connected → call them; those tools exist for the user but not in-session → MCP-correct handoffs; only stills / short clips / CapCut → **assembler** — same sheets, claim ledger, lint, and render-QA. Rung index: [`creative-stack/README.md`](./skills/ad-intelligence/references/creative-stack/README.md).
 
 Read this in under a minute, then open a gold fixture:
 
 | Depth | File |
 | --- | --- |
 | **Full-depth fixtures (lint-clean quality bar)** | [`beauty-dtc-dual-track.md`](./skills/ad-intelligence/examples/beauty-dtc-dual-track.md) · [`local-service-trust.md`](./skills/ad-intelligence/examples/local-service-trust.md) · [`saas-demo-pas.md`](./skills/ad-intelligence/examples/saas-demo-pas.md) · [`physical-product-hero.md`](./skills/ad-intelligence/examples/physical-product-hero.md) · [`voice-agent-front-desk.md`](./skills/ad-intelligence/examples/voice-agent-front-desk.md) |
+| **Assembler pipeline (third rung)** | [`assembler-pipeline.md`](./skills/ad-intelligence/references/creative-stack/assembler-pipeline.md) |
+| **Voice / front-desk (phone-call service niche)** | [`voice-agent-front-desk.md`](./skills/ad-intelligence/examples/voice-agent-front-desk.md) |
+| **Post-render / export QA** | [`render-qa.json`](./skills/ad-intelligence/checklists/render-qa.json) |
 | **Visual design examples** | [`examples/visual/index.html`](./skills/ad-intelligence/examples/visual/index.html) |
 | **Canonical demo pointer** | [`skills/ad-intelligence/demo/`](./skills/ad-intelligence/demo/) |
 | **Stress briefs (messy prompts)** | [`examples/stress-briefs/`](./skills/ad-intelligence/examples/stress-briefs/) |
 | Shape-only skeleton (structure, not quality) | [`entertainment-creator-series.md`](./skills/ad-intelligence/examples/entertainment-creator-series.md) |
 
-**v3.6:** five full-depth fixtures (adds voice/front-desk), plus an **assembler pipeline** for agents without Seedance/Higgsfield, and **render-QA** checks before calling exports done. Visual gallery + stress briefs from v3.5 remain.
+**v3.6.1:** discoverability pass — triple-path / assembler / voice cannot be missed from README · PROOF · creative-stack index. Content from v3.6.0 unchanged: five full-depth fixtures (incl. voice/front-desk), assembler pipeline, render-QA.
 
 ---
 

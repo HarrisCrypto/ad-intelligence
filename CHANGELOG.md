@@ -1,5 +1,20 @@
 # Changelog
 
+## 3.6.1 — 2026-10-10
+
+Discoverability: make the **assembler** rung and **voice/front-desk** fixture impossible to miss. No new gates; content from 3.6.0 unchanged.
+
+### Added
+- `references/creative-stack/README.md` — three-rung index (connected · handoff · assembler) + voice fixture pointer
+
+### Changed
+- Root README / PROOF: **triple-path** wording; assembler + voice + render-QA in Start here tables
+- INSTALL / one-stop pipeline: rung index + assembler tool option in agent prompts
+- Plugin **3.6.1**
+
+### Preserved
+- Assembler pipeline, render-QA checklist, voice gold fixture, five full-depth fixtures, lint gates
+
 ## 3.6.0 — 2026-10-10
 
 Three targeted upgrades for agents **without** Seedance/Higgsfield, plus post-render QA and a voice/front-desk gold fixture.
