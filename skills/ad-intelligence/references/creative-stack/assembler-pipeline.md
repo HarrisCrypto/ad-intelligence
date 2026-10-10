@@ -19,8 +19,9 @@ When Seedance / Higgsfield are unavailable, **do not** default straight to silen
 | Priority | Route |
 | --- | --- |
 | Best available | **Seedance / Higgsfield** when connected |
-| Strong alternative | **Wan 2.2** (open weights) → **LTX-2.5** (local A/V) → **Grok Imagine** (`grok-imagine-video-1.5`) when API/product available |
-| Peers | Kling · Runway · Veo/Sora if that is what the user has |
+| Strong alternative | **Wan 2.2** → **LTX-2.5** → **Grok Imagine** (`grok-imagine-video-1.5`) |
+| Other open-weight | **HunyuanVideo** · **CogVideoX** · **SkyReels** (when those are installed/licensed) |
+| Hosted peers | Kling · Runway · Veo/Sora · **Hailuo** · **Luma** · **Pika** if that is the user’s stack |
 | Fallback | Stills + CapCut only when no usable video model exists |
 
 Name the real tool in every render-plan unit. **Never invent a Seedance job** if the tool was not called.

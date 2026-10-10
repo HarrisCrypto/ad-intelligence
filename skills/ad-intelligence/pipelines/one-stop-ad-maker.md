@@ -32,7 +32,7 @@ Index: [`../references/creative-stack/README.md`](../references/creative-stack/R
 | Handoff | Those tools exist for the user but not in-session | Seedance contract + Higgsfield briefs (unchanged) |
 | **Assembler** | No Seedance/Higgsfield — keyframes + short clips + CapCut | [`assembler-pipeline.md`](../references/creative-stack/assembler-pipeline.md) |
 
-On the assembler rung, pick video tools via [`alternative-model-routing.md`](../references/creative-stack/alternative-model-routing.md): **Wan 2.2 → LTX-2.5 → Grok Imagine → peers → stills+CapCut**. Never invent Seedance jobs.
+On the assembler rung, pick video tools via [`alternative-model-routing.md`](../references/creative-stack/alternative-model-routing.md): **Wan → LTX → Grok → Hunyuan/Cog/SkyReels → Kling/Hailuo/Luma/Pika/Runway/Veo-Sora → stills+CapCut**. Never invent Seedance jobs.
 
 Service-niche phone / front-desk gold: [`../examples/voice-agent-front-desk.md`](../examples/voice-agent-front-desk.md).
 

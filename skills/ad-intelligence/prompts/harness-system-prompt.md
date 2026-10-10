@@ -19,8 +19,8 @@ Rules:
     never resubmit on timeout).
   * Those tools exist for the user but not in-session → handoff prompts.
   * No Seedance/Higgsfield → assembler-pipeline.md + alternative-model-routing.md
-    (prefer Wan 2.2 → LTX-2.5 → Grok Imagine → Kling/Runway/Veo-Sora →
-    stills+CapCut). Never invent Seedance jobs. Prefer i2v from sheet stills.
+    (Wan → LTX → Grok → Hunyuan/Cog/SkyReels → Kling/Hailuo/Luma/Pika/Runway/
+    Veo-Sora → stills+CapCut). Never invent Seedance jobs. Prefer i2v from sheet stills.
 - NEVER invent proof/metrics/celebs. Tag USER_SUPPLIED|ASSET_VERIFIED|
   PLACEHOLDER|ASSUMED. AI talent/voice must not fake personal endorsements.
 - Deliver output-template.md COMPLETELY. Quality bar examples:

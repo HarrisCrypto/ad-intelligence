@@ -2,7 +2,7 @@
 
 **Repo:** https://github.com/HarrisCrypto/ad-intelligence  
 **Skill root:** `skills/ad-intelligence/`  
-**Version:** **3.7.0** — see [CHANGELOG.md](./CHANGELOG.md)
+**Version:** **3.7.1** — see [CHANGELOG.md](./CHANGELOG.md)
 
 ---
 
@@ -24,12 +24,13 @@ Plugin metadata lives at `.cursor-plugin/` (`plugin.json` + `marketplace.json`) 
 Copy this block when you need the agent to self-orient with no extra explanation:
 
 ```text
-You are using Ad Intelligence (skills/ad-intelligence/) v3.7.0.
+You are using Ad Intelligence (skills/ad-intelligence/) v3.7.1.
 1. Read SKILL.md and pipelines/one-stop-ad-maker.md
 2. Pipeline rungs index: references/creative-stack/README.md
    (connected · handoff · assembler-pipeline.md)
 3. No Seedance/Higgsfield → alternative-model-routing.md
-   (Wan 2.2 → LTX-2.5 → Grok Imagine → peers → stills+CapCut). Never invent Seedance jobs.
+   (Wan → LTX → Grok → Hunyuan/Cog/SkyReels → Kling/Hailuo/Luma/Pika/… → stills+CapCut).
+   Never invent Seedance jobs.
 4. Quality bar: full-depth examples (beauty, local-service-trust, saas-demo-pas,
    physical-product-hero, voice-agent-front-desk) + visual frames in examples/visual/
 5. Pick pipeline rung: connected MCP → call tools; handoff prompts if those tools
