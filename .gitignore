@@ -15,6 +15,7 @@ regression/**/*.mov
 regression/**/*.wav
 regression/**/*.mp3
 regression/**/.qa-frame0-*.png
+regression/**/last-qa.json
 *.cube
 
 # OS / editor

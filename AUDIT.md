@@ -200,8 +200,8 @@ Already **82 lines** (under ~150). Content still encodes the old ritual: brainst
 | `library/` transitions/camera/captions/lighting/grades/type/sound/ui-kits/templates | **Done** (Gate 3 catalogs + voice UI kit + template; Remotion optional later) |
 | Remotion / deterministic compose | **Partial** (compose plan demo; full Remotion = later) |
 | `pipeline/qa` render instruments | **Done** (Phase 5 early) |
-| `pipeline/critic` vision loop | **Missing** (Phase 6) |
-| `specs/ad-spec.schema.json` | **Missing** (Phase 4) |
+| `pipeline/critic` vision loop | **Done** (offline critic; vision model optional) |
+| `specs/ad-spec.schema.json` | **Done** (Gate 4 + 2 example specs / templates) |
 | `regression/fail/oply-v1` + pass corpus + false-positive corpus | **Done** (oply-v1 + false-positive stub) |
 | Brand harvest Phase 2.5 | **Done** |
 | Hardware in probe | **Done** |

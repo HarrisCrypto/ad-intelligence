@@ -1,0 +1,9 @@
+{
+  "product_type": "voice",
+  "product_demo_present": true,
+  "aspect": "9:16",
+  "declared_font": "Anton",
+  "intentional_hold": false,
+  "intentional_silence": false,
+  "note": "Synthetic v2 pass fixture — proves QA can green; client delivery uses uikit stills"
+}

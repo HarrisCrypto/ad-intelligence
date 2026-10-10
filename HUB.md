@@ -1,6 +1,6 @@
 # Ad Classroom + Production Hub — status
 
-**Single track:** branch `cursor/classroom-hub-audit-08cd` · PR consolidates v3.19 + Gate 0 + Gate 1.
+**Single track:** branch `cursor/classroom-hub-audit-08cd` · PR consolidates v3.19 + Gates 0–6 + E2E package path.
 
 | Gate | Deliverable | Status |
 | --- | --- | --- |
@@ -8,11 +8,21 @@
 | **1** | [`classroom/README.md`](./classroom/README.md) legal/sourcing | ✅ Done |
 | **5 (early)** | [`pipeline/qa`](./pipeline/qa/) + [`regression/fail/oply-v1`](./regression/fail/oply-v1/) | ✅ Done — prove-qa catches measured fails; B7.3 lint fixed |
 | **2.5** | Brand harvest + typography/sound provision | ✅ Done — `brand-harvest.mjs`, `library/typography`, `library/sound`, probe hardware |
-| **2** | Study cards (home-services / AI phone first) | ✅ Done — 16 confirmed; `retrieve-cards.mjs --niche home-services` ≥5 |
-| **3** | Executable `library/` + demos | ✅ Done — catalogs, voice UI kit, missed-call template, resolve/demo scripts |
-| **4** | `specs/ad-spec.schema.json` + 2 templates | ⏳ Next |
-| **6** | Vision critic loop | Pending |
-| **E2E** | One-paragraph brief → finished ad; Oply rebuild | Pending |
+| **2** | Study cards (home-services / AI phone first) | ✅ Done — 16 confirmed; retrieve ≥5 |
+| **3** | Executable `library/` + demos | ✅ Done — catalogs, voice UI kit, templates, resolve/demo |
+| **4** | `specs/ad-spec.schema.json` + 2 templates | ✅ Done — missed-call + local-geo specs/templates |
+| **6** | Vision critic loop | ✅ Done — offline critic + QA handoff |
+| **E2E** | One-paragraph brief → finished ad; Oply rebuild | ✅ Package path + synthetic v2 PASS vs v1 FAIL |
+
+## Prove locally
+
+```bash
+node classroom/scripts/retrieve-cards.mjs --niche home-services --platform meta --limit 5
+node library/scripts/demo-compose-plan.mjs --brand Oply
+node specs/validate-ad-spec.mjs specs/examples/oply-missed-call.ad-spec.json
+node pipeline/qa/prove-qa.mjs
+node pipeline/scripts/e2e-brief-to-plan.mjs --render
+```
 
 ## Also in this track
 

@@ -1,0 +1,98 @@
+{
+  "id": "local-geo-phone-v1-spec",
+  "version": 1,
+  "template_id": "tpl_home_services_local_geo",
+  "brief": {
+    "brand": "LOCAL_TRADE_BRAND",
+    "niche": "home-services",
+    "platforms": ["meta"],
+    "offer": "Same-day HVAC — tap to call",
+    "jtbd": "Qualify local intent and make calling the only next step",
+    "funnel": "bof_conversion"
+  },
+  "structure": {
+    "format": "video_timed",
+    "timing_observable": true,
+    "duration_s": 20,
+    "aspect": "9:16"
+  },
+  "retrieval": {
+    "study_card_ids": [
+      "local-geo-phone-02",
+      "van-bay-geo-trust-08",
+      "tech-phone-hold-cta-05"
+    ],
+    "study_id": "study_local_geo_phone",
+    "attention_model_id": "am_local_geo_trust",
+    "niche_pack": "classroom/niche-packs/home-services.md"
+  },
+  "library": {
+    "transition_default": "tr_hard_cut",
+    "grade": "grade_clean_daylight",
+    "camera_hook": "cam_phone_native",
+    "lighting_hook": "lit_bay_daylight",
+    "captions": {
+      "hook": "cap_hook_anton",
+      "cta": "cap_cta_poppins"
+    },
+    "typography_provision": "library/typography",
+    "voice_tier": "V1"
+  },
+  "timeline": [
+    {
+      "id": "C1",
+      "t": [0, 3],
+      "job": "geo hook",
+      "on_screen_text": "[[CITY]] HVAC",
+      "spoken": "[[CITY]] homeowners — when the AC dies…"
+    },
+    {
+      "id": "C2",
+      "t": [3, 10],
+      "job": "work proof",
+      "on_screen_text": "Same-day"
+    },
+    {
+      "id": "C3",
+      "t": [10, 15],
+      "job": "proof if ledger-backed",
+      "on_screen_text": "[PLACEHOLDER: proof]"
+    },
+    {
+      "id": "E1",
+      "t": [15, 20],
+      "job": "phone hold",
+      "on_screen_text": "Call [[NAP_PHONE]]",
+      "spoken": "Call now."
+    }
+  ],
+  "claim_ledger": [
+    {
+      "claim_or_asset": "NAP phone",
+      "where": "E1",
+      "tag": "USER_SUPPLIED",
+      "source": "landing page NAP"
+    },
+    {
+      "claim_or_asset": "#1 in city",
+      "where": "none",
+      "tag": "PLACEHOLDER",
+      "source": "do not claim without proof"
+    }
+  ],
+  "cta": {
+    "primary": "Tap to call",
+    "on_screen_min_s": 3,
+    "nap_match": true,
+    "jargon_ban": ["access call"]
+  },
+  "render_status": "NOT_RENDERED",
+  "what_not_to_copy": [
+    "Wrong phone",
+    "Stock skyline as local proof",
+    "Unproven #1"
+  ],
+  "qa": {
+    "expect_instruments": ["cta", "safe-zone", "cut-rate"]
+  }
+}

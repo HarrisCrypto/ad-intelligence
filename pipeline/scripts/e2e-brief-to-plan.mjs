@@ -1,0 +1,146 @@
+#!/usr/bin/env node
+/**
+ * E2E (package path): one-paragraph brief → retrieve → ad-spec validate →
+ * compose plan → optional synthetic v2 render + QA + critic.
+ *
+ *   node pipeline/scripts/e2e-brief-to-plan.mjs
+ *   node pipeline/scripts/e2e-brief-to-plan.mjs --render
+ */
+import { spawnSync } from "node:child_process";
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const ROOT = path.join(__dirname, "..", "..");
+const doRender = process.argv.includes("--render");
+
+function run(rel, args = []) {
+  const r = spawnSync(process.execPath, [path.join(ROOT, rel), ...args], {
+    encoding: "utf8",
+    cwd: ROOT,
+    maxBuffer: 20 * 1024 * 1024,
+  });
+  return r;
+}
+
+const brief =
+  "Oply: after-hours AI phone agent for HVAC / home-services. " +
+  "Make missed calls expensive, show the agent answer and book, one CTA.";
+
+const steps = [];
+
+// 1) retrieve study cards
+let r = run("classroom/scripts/retrieve-cards.mjs", [
+  "--niche",
+  "home-services",
+  "--platform",
+  "meta",
+  "--limit",
+  "5",
+]);
+if (r.status !== 0) {
+  console.error(r.stderr || r.stdout);
+  process.exit(1);
+}
+const cards = JSON.parse(r.stdout);
+steps.push({ step: "retrieve", ok: cards.count >= 5, count: cards.count });
+
+// 2) validate ad-spec
+r = run("specs/validate-ad-spec.mjs", [
+  "specs/examples/oply-missed-call.ad-spec.json",
+]);
+if (r.status !== 0) {
+  console.error(r.stderr || r.stdout);
+  process.exit(1);
+}
+steps.push({ step: "validate_spec", ok: true, ...(JSON.parse(r.stdout)) });
+
+// 3) compose plan from toolbox
+r = run("library/scripts/demo-compose-plan.mjs", ["--brand", "Oply"]);
+if (r.status !== 0) {
+  console.error(r.stderr || r.stdout);
+  process.exit(1);
+}
+const plan = JSON.parse(r.stdout);
+steps.push({
+  step: "compose_plan",
+  ok: plan.ok && plan.beats?.length >= 4,
+  beats: plan.beats?.map((b) => b.id),
+});
+
+// 4) offline critic on spec
+r = run("pipeline/critic/critique-frames.mjs", [
+  "--spec",
+  "specs/examples/oply-missed-call.ad-spec.json",
+]);
+const criticSpec = (() => {
+  try {
+    return JSON.parse(r.stdout);
+  } catch {
+    return { ok: false };
+  }
+})();
+steps.push({ step: "critic_spec", ok: criticSpec.ok, findings: criticSpec.findings?.length });
+
+let qa = null;
+let criticRender = null;
+if (doRender) {
+  r = run("pipeline/qa/synthesize-oply-v2.mjs");
+  if (r.status !== 0) {
+    console.error(r.stderr || r.stdout);
+    process.exit(1);
+  }
+  const syn = JSON.parse(r.stdout);
+  steps.push({ step: "synthesize_v2", ok: syn.ok, out: syn.out });
+
+  r = run("pipeline/qa/run-qa.mjs", [syn.out, "--spec", syn.qa_spec]);
+  try {
+    qa = JSON.parse(r.stdout);
+  } catch {
+    qa = { ok: false };
+  }
+  steps.push({
+    step: "qa_v2",
+    ok: qa.ok,
+    hard_fails: qa.hard_fails || [],
+  });
+
+  const tmpQa = path.join(ROOT, "regression", "pass", "oply-v2", "last-qa.json");
+  fs.mkdirSync(path.dirname(tmpQa), { recursive: true });
+  fs.writeFileSync(tmpQa, JSON.stringify(qa, null, 2));
+
+  r = run("pipeline/critic/critique-frames.mjs", [
+    "--spec",
+    "specs/examples/oply-missed-call.ad-spec.json",
+    "--qa-report",
+    tmpQa,
+  ]);
+  try {
+    criticRender = JSON.parse(r.stdout);
+  } catch {
+    criticRender = { ok: false };
+  }
+  steps.push({
+    step: "critic_render",
+    ok: criticRender.ok,
+    top_fixes: criticRender.top_fixes || [],
+  });
+}
+
+const ok = steps.every((s) => s.ok);
+const report = {
+  ok,
+  brief,
+  steps,
+  vs_v1: doRender
+    ? "v2 synthetic targets PASS where regression/fail/oply-v1 must FAIL"
+    : "pass --render to synthesize v2 + QA",
+  next_human: [
+    "Merge PR when CI green",
+    "brand-harvest.mjs https://oplyai.com",
+    "Replace synthetic panels with uikit stills + licensed bed for client delivery",
+  ],
+};
+console.log(JSON.stringify(report, null, 2));
+process.exit(ok ? 0 : 1);

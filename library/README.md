@@ -13,6 +13,7 @@ Prose in `skills/.../references` teaches; **this tree ships files agents can exe
 | [`grades/`](./grades/) | ✅ locks (flat UI doc default for voice) |
 | [`ui-kits/voice-agent-flat/`](./ui-kits/voice-agent-flat/) | ✅ 3-state kit + `preview.html` |
 | [`templates/home-services-missed-call/`](./templates/home-services-missed-call/) | ✅ binds study cards → library ids |
+| [`templates/home-services-local-geo/`](./templates/home-services-local-geo/) | ✅ geo → phone CTA template |
 | [`scripts/`](./scripts/) | ✅ `resolve-toolbox.mjs` · `demo-compose-plan.mjs` |
 
 ## Prove (Gate 3)

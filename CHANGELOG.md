@@ -33,6 +33,16 @@
 - `library/templates/home-services-missed-call/` — study-card → library binding
 - `library/scripts/resolve-toolbox.mjs` + `demo-compose-plan.mjs`
 
+### Added (Gate 4)
+- `specs/ad-spec.schema.json` + `validate-ad-spec.mjs`
+- Example specs: `oply-missed-call`, `local-geo-phone`
+- Second template: `library/templates/home-services-local-geo/`
+
+### Added (Gate 6 + E2E)
+- `pipeline/critic/critique-frames.mjs` — offline package critic + QA handoff
+- `pipeline/qa/synthesize-oply-v2.mjs` + `regression/pass/oply-v2/` — PASS inverse of oply-v1
+- `pipeline/scripts/e2e-brief-to-plan.mjs` — brief → retrieve → spec → plan → optional v2 QA
+
 ### Fixed
 - Finish completeness is evidence-derived: `render-status-contradicts-log` when `NOT_RENDERED` contradicts job receipts (B7.3)
 - Compact retrieve keeps `gold_fixture` + `gold_fixtures[]` (B1.1)
