@@ -1,5 +1,21 @@
 # Changelog
 
+## 3.13.0 — 2026-10-10
+
+**Finish the cut** — stop the Hermes failure mode: render an 8s hook, then ask the human for UI screenshots while parallel agents burn credits on rubber dashboards.
+
+### Added
+- `prompts/finish-the-cut.md` — full-duration completion contract; one agent owns budget
+- `references/generated-ui-authenticity.md` — generate calm flat UI states when no captures exist
+
+### Changed
+- One-shot / SKILL / assembler / brief-defaults / voice gold: generate UI instead of stalling; user assets are v2 upgrades
+- Harness equalization: no parallel credit burn; finish-the-cut duty when gen tools exist
+- Plugin **3.13.0**
+
+### Preserved
+- Prefer real screen records when supplied; never invent metrics; post owns tiny type/logo
+
 ## 3.12.2 — 2026-10-10
 
 Backtest hardening: compact retrieve keeps timing sheets; attention ranking respects query affinity (shampoo≠generic beauty); `scripts/backtest.mjs` mechanical suite.

@@ -30,4 +30,6 @@ Simulate: user pastes a site and says “make me TikTok + Meta ads that don’t 
 - Attention model id present  
 - No leftover `[[BRACKETS]]`  
 - `lint-package.mjs` → ok:true  
-- Muted 0–3s = missed-call situation, not logo
+- Muted 0–3s = missed-call situation, not logo  
+- If gen tools exist: **full timed cut** planned/rendered — not hook-only + “send screenshots”  
+- UI path uses `generated-ui-authenticity.md` when captures missing (no neon rubber dashboard)

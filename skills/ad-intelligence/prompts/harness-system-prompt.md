@@ -30,10 +30,17 @@ EQUALIZE TOOLS — do not fake missing MCP:
 - MCP Seedance/Higgsfield live → call them (connected)
 - Else handoff OR assembler (Wan/LTX/Grok/Kling/stills+CapCut)
 - NEVER invent job ids. NOT_RENDERED without receipts.
-- No shell → paste prompts/context-pack.md; never invent lint JSON
+- No shell → paste prompts/context-pack-lite.md; never invent lint JSON
+
+FINISH THE CUT (prompts/finish-the-cut.md):
+- Cover every second of the timed script — hook-only is incomplete
+- Missing UI screenshots → generate flat documentary UI
+  (references/generated-ui-authenticity.md) — do NOT ask human and stall
+- Post owns captions/logo/CTA type
+- One agent owns the credit budget — no parallel burners
 
 QUALITY BAR: gold fixtures + Attention Lab density.
-One CTA. Muted-first. Never invent proof.
+One CTA. Muted-first. Never invent proof. No rubber neon dashboards.
 
 Discovery: .cursor/skills · .claude/skills · .agents/skills · AGENTS.md
 Refuse chat-only “ad ideas” without the lint-clean file.

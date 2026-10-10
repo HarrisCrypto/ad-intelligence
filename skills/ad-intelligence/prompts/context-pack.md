@@ -7,9 +7,9 @@ _Lite pack: node scripts/build-context-pack.mjs --lite_
 ---
 ## 1) ONE-SHOT
 
-# ONE-SHOT playbook — creative first, then paperwork
+# ONE-SHOT playbook — creative first, then finish the cut
 
-Agents fail when they fill ledgers before having an idea. **Research → attention model → Concept → dense beat sheet → craft → lint.**
+Agents fail when they fill ledgers before having an idea — or render a hook and stall asking for screenshots. **Research → attention model → Concept → dense beats → craft → lint → finish the full cut.**
 
 ## Hard sequence
 
@@ -30,7 +30,7 @@ Agents fail when they fill ledgers before having an idea. **Research → attenti
 3. RETRIEVE (prefer compact):
    node scripts/retrieve.mjs --niche <niche> --platform <platform> --limit 5 --compact
    Paste primary / challenger / dual_track_twin (twin ≠ primary).
-   Paste attention_models.primary + challenger.
+   Paste attention_models.primary + challenger (timing included).
    Open research URLs + examples/visual/attention-lab.html — STRUCTURE only.
 
 4. EMULATE + WRITE CREATIVE FIRST:
@@ -47,9 +47,14 @@ Agents fail when they fill ledgers before having an idea. **Research → attenti
 6. LINT LOOP:
    node scripts/lint-package.mjs packages/<brand>-ad.md
    Fix until ok:true. Paste real lint JSON (never invent it).
-   No shell → prompts/no-shell-lint-checklist.md (every box) + footer;
-   use references/retrieve-offline-compact.json for pattern ids;
+   No shell → prompts/no-shell-lint-checklist.md; offline retrieve JSON;
    never invent ok:true JSON.
+
+7. FINISH THE CUT (if image/video tools exist):
+   Follow prompts/finish-the-cut.md — cover EVERY second of the timed script.
+   Missing UI/screenshots? → references/generated-ui-authenticity.md (generate 3 states).
+   Post owns captions/logo/CTA type. Log real job ids. No parallel agents.
+   Do NOT deliver “send me screenshots to finish” when you can generate.
 ```
 
 ## Niche cheat sheet
@@ -75,17 +80,22 @@ Do **not** deliver if:
 - Invented metrics without `[PLACEHOLDER…]`  
 - Multi-CTA or logo-first 0–3s  
 - Chat-only brainstorm with no package file  
-- Image collage + crappy slogan (no cut/timing/shots)
+- Image collage + crappy slogan (no cut/timing/shots)  
+- **Hook-only render + “send screenshots”** while gen tools were available  
+- Neon/rubber AI dashboard as the product UI  
 
-Thin brief → assume via brief-defaults, list Assumptions, ask ≤3 questions, **still ship**.
+Thin brief → assume via brief-defaults, list Assumptions, ask ≤3 questions, **still ship** (and still finish the cut if tools exist).
 
 ## No Seedance / Higgsfield
 
-Rung = assembler. Name Wan / LTX / Grok / Kling / Hailuo / stills+CapCut. Same skeleton. Same lint.
+Rung = assembler. Name Wan / LTX / Grok / Kling / Hailuo / stills+CapCut. Same skeleton. Same lint. Same finish-the-cut duty.
 
 ## Done means
 
-Lint `"ok": true` **and** a stranger can mute-watch 0–3s and know the situation.
+1. Lint `"ok": true`  
+2. Full timed duration covered (finish-the-cut contract)  
+3. Stranger can mute-watch 0–3s and know the situation  
+4. UI/product looks authentic — generated flat documentary chrome OK; rubber AI UI not OK  
 
 ---
 ## 2) HARNESS EQUALIZATION
@@ -120,7 +130,9 @@ node scripts/probe-harness.mjs
 3. **Quality does not drop with rung** — density of Concept / beats / Craft stays gold-level.  
 4. **Swap models, not standards** — Wan/LTX/Grok/Kling/Hailuo/stills per `alternative-model-routing.md`.  
 5. **Never invent** Seedance/Higgsfield job ids, exports, or `"ok": true` lint.  
-6. If a harness has a **native skill path**, load this skill from it (see INSTALL harness matrix).
+6. If a harness has a **native skill path**, load this skill from it (see INSTALL harness matrix).  
+7. **Finish the cut** — if you can gen video/images, cover the full timed duration (`finish-the-cut.md`). Missing UI → generate authentic stills, don’t stall.  
+8. **One agent owns the budget** — no parallel agents on the same package burning credits.
 
 ## Tool card (paste into package or chat)
 

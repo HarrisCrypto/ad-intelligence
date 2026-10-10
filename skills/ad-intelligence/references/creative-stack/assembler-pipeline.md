@@ -66,9 +66,11 @@ Pipeline rung: assembler
 | E1 | endcard still | last 3s | CapCut / design tool |
 
 3. **Prefer real stills or controlled image-to-video** when product/place/UI identity matters. Pure text-to-video is last resort for identity-critical frames.  
-4. **Bind sheets:** every product/talent frame references Image-N from the sheet (even if generated locally).  
-5. **Assemble in post:** captions, endcard, logo, legal, music, loudness, aspect exports — **do not** ask models to render perfect tiny text or logo kerning.  
-6. **Render log:** list each still/clip/export id or mark `NOT_RENDERED` with clear handoff steps for the human editor.
+4. **No user screenshots?** Generate flat documentary UI/product stills (`../generated-ui-authenticity.md`) — do **not** stop the cut. Real captures are a v2 upgrade.  
+5. **Bind sheets:** every product/talent frame references Image-N from the sheet (even if generated locally).  
+6. **Assemble in post:** captions, endcard, logo, legal, music, loudness, aspect exports — **do not** ask models to render perfect tiny text or logo kerning.  
+7. **Finish the cut:** cover every second of the timed script (`../../prompts/finish-the-cut.md`). Hook-only is incomplete.  
+8. **Render log:** list each still/clip/export id or mark `NOT_RENDERED` with clear handoff steps — but if gen tools exist, generate the missing units first.
 
 ## Render plan shape (assembler)
 

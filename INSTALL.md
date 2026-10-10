@@ -2,7 +2,7 @@
 
 **Repo:** https://github.com/HarrisCrypto/ad-intelligence  
 **Skill root:** `skills/ad-intelligence/`  
-**Version:** **3.12.2** — see [CHANGELOG.md](./CHANGELOG.md)
+**Version:** **3.13.0** — see [CHANGELOG.md](./CHANGELOG.md)
 
 ---
 
@@ -35,11 +35,12 @@ node skills/ad-intelligence/scripts/agent-ready.mjs
 ## Paste this to your agent (one-shot)
 
 ```text
-Use Ad Intelligence v3.12.2 from https://github.com/HarrisCrypto/ad-intelligence
-Follow skills/ad-intelligence/prompts/one-shot.md EXACTLY.
+Use Ad Intelligence v3.13 from https://github.com/HarrisCrypto/ad-intelligence
+Follow skills/ad-intelligence/prompts/one-shot.md EXACTLY — including finish-the-cut.md.
 First: node skills/ad-intelligence/scripts/probe-harness.mjs — fill the tool card and pick a rung.
 If I give a website: node skills/ad-intelligence/scripts/brief-from-url.mjs <url>
 Open examples/visual/attention-lab.html and emulate an attention model.
+If UI screenshots are missing: generate authentic flat UI (generated-ui-authenticity.md) — do not stall.
 
 Brief:
 - Company / product / URL:

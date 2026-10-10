@@ -28,7 +28,9 @@ node scripts/probe-harness.mjs
 3. **Quality does not drop with rung** — density of Concept / beats / Craft stays gold-level.  
 4. **Swap models, not standards** — Wan/LTX/Grok/Kling/Hailuo/stills per `alternative-model-routing.md`.  
 5. **Never invent** Seedance/Higgsfield job ids, exports, or `"ok": true` lint.  
-6. If a harness has a **native skill path**, load this skill from it (see INSTALL harness matrix).
+6. If a harness has a **native skill path**, load this skill from it (see INSTALL harness matrix).  
+7. **Finish the cut** — if you can gen video/images, cover the full timed duration (`finish-the-cut.md`). Missing UI → generate authentic stills, don’t stall.  
+8. **One agent owns the budget** — no parallel agents on the same package burning credits.
 
 ## Tool card (paste into package or chat)
 

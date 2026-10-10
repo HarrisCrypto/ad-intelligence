@@ -11,7 +11,7 @@ description: >-
   Higgsfield. Probe → equalize → concept → ≥6 beats → lint until ok.
 compatibility: Requires Node 18+ for scripts. Optional network for URL brief + libraries. MCP video tools optional (connected rung).
 metadata:
-  version: "3.12.2"
+  version: "3.13.0"
   open_standard: agentskills
 ---
 
@@ -33,7 +33,8 @@ Ads, creatives, hooks, UGC, Meta/TikTok/Instagram/X/YouTube, “ads for my site,
 6. Open [`examples/visual/attention-lab.html`](examples/visual/attention-lab.html) + research URLs — emulate structure
 7. **Creative:** attention model + [angle axes](references/angle-axes.md) → Concept → ≥6 exact-VO rows → Craft → unit prompts
 8. Fill `[[BRACKETS]]` → `node scripts/lint-package.mjs …` until `"ok": true`
-9. Deliver the file
+9. **Finish the cut** ([`prompts/finish-the-cut.md`](prompts/finish-the-cut.md)) — full duration; generate UI if needed ([`generated-ui-authenticity.md`](references/generated-ui-authenticity.md)); no “send screenshots” stall
+10. Deliver the file + real job ids
 
 Ready check: `node scripts/agent-ready.mjs`  
 No shell: paste [`prompts/context-pack-lite.md`](prompts/context-pack-lite.md) · offline [`retrieve-offline-compact.json`](references/retrieve-offline-compact.json) · [`no-shell-lint-checklist.md`](prompts/no-shell-lint-checklist.md).
@@ -54,6 +55,8 @@ No shell: paste [`prompts/context-pack-lite.md`](prompts/context-pack-lite.md) �
 | Full playbook | `prompts/one-shot.md` |
 | Tool equalization | `prompts/harness-equalization.md` |
 | Attention lab | `examples/visual/attention-lab.html` |
+| Finish full cut (no stall) | `prompts/finish-the-cut.md` |
+| Generated UI (no screenshots) | `references/generated-ui-authenticity.md` |
 | Public libraries | `references/ad-libraries.md` |
 | Multi-lens OS | `references/multi-lens-os.md` |
 | Style catalog | `references/style-catalog.md` |
