@@ -11,6 +11,7 @@ Packages that do **not** invent proof, drift product identity, or burn three red
 | **Why it exists (before/after)** | [PROOF.md](./PROOF.md) |
 | **Pipeline rungs (connected / handoff / assembler)** | [creative-stack/README.md](./skills/ad-intelligence/references/creative-stack/README.md) |
 | **Assembler (third rung)** | [assembler-pipeline.md](./skills/ad-intelligence/references/creative-stack/assembler-pipeline.md) |
+| **No Seedance? Model routing** | [alternative-model-routing.md](./skills/ad-intelligence/references/creative-stack/alternative-model-routing.md) (Wan 2.2 → LTX-2.5 → Grok Imagine) |
 | **Voice / front-desk gold fixture** | [voice-agent-front-desk.md](./skills/ad-intelligence/examples/voice-agent-front-desk.md) |
 | **Visual design examples** | [examples/visual/index.html](./skills/ad-intelligence/examples/visual/index.html) |
 | **Install in minutes** | [INSTALL.md](./INSTALL.md) |
@@ -21,7 +22,7 @@ Packages that do **not** invent proof, drift product identity, or burn three red
 | **Ship gate demo** | `node skills/ad-intelligence/scripts/demo-quality-gates.mjs` |
 | **Contribute** | [CONTRIBUTING.md](./CONTRIBUTING.md) |
 
-**Version 3.6.1** — [CHANGELOG.md](./CHANGELOG.md)
+**Version 3.7.0** — [CHANGELOG.md](./CHANGELOG.md)
 
 ---
 

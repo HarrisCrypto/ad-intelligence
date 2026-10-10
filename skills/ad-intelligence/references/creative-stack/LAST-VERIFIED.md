@@ -16,6 +16,9 @@
 | Ad Multiplier | 2026-10-10 | doc | Source 4–30s; one variable; not for testimonials impersonation |
 | CapCut finishing | 2026-10-10 | skill | Captions, endcard, safe margins, aspect exports — always after gen |
 | Kling / Runway / peers | 2026-10-10 | doc | Image-to-video product moves; see `prompt-recipes.md` |
+| Wan 2.2 | 2026-10-10 | public docs | Apache 2.0 open weights; T2V/I2V/TI2V; prefer I2V assembler units — see `alternative-model-routing.md` |
+| LTX-2.5 | 2026-10-10 | public docs | Native A/V; Community License free under ~$10M revenue — confirm LICENSE |
+| Grok Imagine video 1.5 | 2026-10-10 | xAI public docs | `grok-imagine-video-1.5` T2V/I2V; API/product handoff — never invent request ids |
 | Render plan contract | 2026-10-10 | skill | `render-plan.md` + `connected-run-protocol.md` |
 | Meta / TikTok / YT policy flags | 2026-10-10 | editorial | See `policy-precheck.json` v1.1 — not legal advice |
 
@@ -32,6 +35,7 @@
 | Visual design gallery | 2026-10-10 | `examples/visual/index.html` + 7 frames |
 | Stress briefs | 2026-10-10 | `examples/stress-briefs/` messy prompts |
 | Assembler pipeline | 2026-10-10 | Third rung when no single-pass video gen |
+| Alternative model routing | 2026-10-10 | Wan → LTX → Grok → peers → stills |
 | Render QA checklist | 2026-10-10 | `checklists/render-qa.json` |
 | Voice / front-desk gold | 2026-10-10 | `examples/voice-agent-front-desk.md` |
 
@@ -41,3 +45,5 @@
 - 2026-10-10 — v3.4: three more full-depth gold fixtures.  
 - 2026-10-10 — v3.5: visual storyboard gallery; stress briefs; lint corpus demo; policy-precheck depth.  
 - 2026-10-10 — v3.6: assembler path; render-QA; voice/front-desk gold fixture.  
+- 2026-10-10 — v3.7: alternative-model-routing (Wan 2.2 / LTX-2.5 / Grok Imagine ladder).  
+

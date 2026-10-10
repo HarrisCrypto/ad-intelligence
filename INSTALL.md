@@ -2,7 +2,7 @@
 
 **Repo:** https://github.com/HarrisCrypto/ad-intelligence  
 **Skill root:** `skills/ad-intelligence/`  
-**Version:** **3.6.1** — see [CHANGELOG.md](./CHANGELOG.md)
+**Version:** **3.7.0** — see [CHANGELOG.md](./CHANGELOG.md)
 
 ---
 
@@ -24,19 +24,21 @@ Plugin metadata lives at `.cursor-plugin/` (`plugin.json` + `marketplace.json`) 
 Copy this block when you need the agent to self-orient with no extra explanation:
 
 ```text
-You are using Ad Intelligence (skills/ad-intelligence/) v3.6.1.
+You are using Ad Intelligence (skills/ad-intelligence/) v3.7.0.
 1. Read SKILL.md and pipelines/one-stop-ad-maker.md
 2. Pipeline rungs index: references/creative-stack/README.md
    (connected · handoff · assembler-pipeline.md)
-3. Quality bar: full-depth examples (beauty, local-service-trust, saas-demo-pas,
+3. No Seedance/Higgsfield → alternative-model-routing.md
+   (Wan 2.2 → LTX-2.5 → Grok Imagine → peers → stills+CapCut). Never invent Seedance jobs.
+4. Quality bar: full-depth examples (beauty, local-service-trust, saas-demo-pas,
    physical-product-hero, voice-agent-front-desk) + visual frames in examples/visual/
-4. Pick pipeline rung: connected MCP → call tools; handoff prompts if those tools
-   exist for the user; assembler-pipeline.md if you only have stills/short clips/CapCut
-5. For messy/regulated briefs, read examples/stress-briefs/ + policy-precheck.json
-6. Retrieve: node scripts/retrieve.mjs --niche <niche|alias> --platform <platform> --limit 5
-7. Fill output-template.md: sheets, claim ledger, timed script, render plan + log,
+5. Pick pipeline rung: connected MCP → call tools; handoff prompts if those tools
+   exist for the user; assembler + alternative routing otherwise
+6. For messy/regulated briefs, read examples/stress-briefs/ + policy-precheck.json
+7. Retrieve: node scripts/retrieve.mjs --niche <niche|alias> --platform <platform> --limit 5
+8. Fill output-template.md: sheets, claim ledger, timed script, render plan + log,
    render-qa, self-critique, AI disclosure
-8. Ship only if: lint-package.mjs exits 0 AND render-qa.json run or emitted
+9. Ship only if: lint-package.mjs exits 0 AND render-qa.json run or emitted
    (optional: node scripts/demo-quality-gates.mjs)
 Never invent proof. Never claim rendered without job/export ids. One CTA. Muted-first.
 ```

@@ -18,8 +18,9 @@ Rules:
     (real roles: start_image/end_image/image_references; media UUIDs; get_cost;
     never resubmit on timeout).
   * Those tools exist for the user but not in-session → handoff prompts.
-  * No single-pass video gen → assembler-pipeline.md (keyframes + short clips +
-    CapCut finishing). Prefer real stills / screen record / i2v for identity.
+  * No Seedance/Higgsfield → assembler-pipeline.md + alternative-model-routing.md
+    (prefer Wan 2.2 → LTX-2.5 → Grok Imagine → Kling/Runway/Veo-Sora →
+    stills+CapCut). Never invent Seedance jobs. Prefer i2v from sheet stills.
 - NEVER invent proof/metrics/celebs. Tag USER_SUPPLIED|ASSET_VERIFIED|
   PLACEHOLDER|ASSUMED. AI talent/voice must not fake personal endorsements.
 - Deliver output-template.md COMPLETELY. Quality bar examples:

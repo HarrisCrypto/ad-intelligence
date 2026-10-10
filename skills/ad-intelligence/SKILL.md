@@ -25,7 +25,9 @@ consistency, and mechanical lint are the leverage** — not vibes.
 5. **Choose a pipeline rung:**
    - Connected MCP (Seedance/Higgsfield/peers) → `connected-run-protocol.md` and **call tools**
    - Those tools exist for the user but not in-session → handoff prompts (unchanged)
-   - **No single-pass generator** → `creative-stack/assembler-pipeline.md` (keyframes + short clips + post)
+   - **No Seedance/Higgsfield** → `creative-stack/assembler-pipeline.md` +
+     `creative-stack/alternative-model-routing.md` (prefer Wan 2.2 → LTX-2.5 → Grok Imagine →
+     Kling/Runway/Veo-Sora → stills+CapCut). **Never invent Seedance jobs.**
    Never claim rendered without job/export ids (`NOT_RENDERED` if none).
 6. Deliver `references/output-template.md` fully — Claim ledger, Render plan,
    Self-critique & variants, Render QA.
@@ -43,7 +45,8 @@ Human proof of value: `../../PROOF.md`. Install: `../../INSTALL.md`.
 ## Master workflow
 
 ### 0) Orient
-- Pipeline, creative-stack (render-plan, connected-run, **assembler-pipeline**, sheets, Seedance, Higgsfield)
+- Pipeline, creative-stack (render-plan, connected-run, **assembler-pipeline**,
+  **alternative-model-routing**, sheets, Seedance, Higgsfield)
 - `claim-firewall.json`, `brief-defaults.json`, `policy-precheck.json`
 - Full-depth quality bar: `examples/beauty-dtc-dual-track.md`,
   `local-service-trust.md`, `saas-demo-pas.md`, `physical-product-hero.md`,
@@ -86,6 +89,7 @@ Rubric with evidence + caps → failures → A/B/C.
 | `references/creative-stack/render-plan.md` | Generation units |
 | `references/creative-stack/README.md` | Three-rung index (connected / handoff / assembler) |
 | `references/creative-stack/assembler-pipeline.md` | Third rung — no single-pass gen |
+| `references/creative-stack/alternative-model-routing.md` | Wan 2.2 / LTX-2.5 / Grok Imagine ladder |
 | `examples/voice-agent-front-desk.md` | Phone / front-desk service gold (assembler-aware) |
 | `checklists/render-qa.json` | Post-render / export checks |
 | `references/output-template.md` | Required deliverable |
