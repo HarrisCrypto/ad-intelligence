@@ -1,5 +1,22 @@
 # Changelog
 
+## 3.19.0 — 2026-10-10
+
+**Finish-the-cut quality bar** — silent 8s hooks cannot count as finished ads; shape-claims-pass no longer punishes honest synthesis labels.
+
+### Fixed
+- `shape-claims-pass` scoped to real fixture markers (`shape-only`, `not a length or quality target`, `SHAPE FIXTURE`) and `examples/` paths — bare `structure only` (retrieve join / synthesis honesty) no longer false-positives when lint reports PASS
+
+### Added
+- Lint: `incomplete-hook-only` — RENDERED packages that only cover the ~8s hook while the timed script continues
+- Lint: `silent-cut-incomplete` — RENDERED packages with no VO/SFX/bed audio path
+- Fail corpus: `fail-incomplete-hook-only.md`, `fail-silent-cut-incomplete.md`, `fail-shape-claims-pass.md`
+- Finish-the-cut contract: `Audio laid in post` line; Done means requires full duration + audio + quality bar
+
+### Changed
+- One-shot / SKILL / context packs / harness prompt: full cut + audio is mandatory for RENDERED
+- Plugin **3.19.0**
+
 ## 3.18.0 — 2026-10-10
 
 **Library access when TikTok / Meta gate you** — agents still see styles across platforms.

@@ -388,9 +388,23 @@ function lint(text, filePath) {
     }
   }
 
-  // Shape-only examples must not claim ship PASS in QA
-  if (/structure only|shape-only|not a length or quality target/i.test(text)) {
-    if (/Checklist gates:\s*PASS\b|lint-package\.mjs:\s*PASS\b/i.test(text)) {
+  // Shape-only examples must not claim ship PASS in QA.
+  // Trigger ONLY on real fixture markers — never bare "structure only"
+  // (retrieve join / synthesis honesty uses that phrase correctly).
+  // Path-scoped to examples/ — production packages/ are not shape fixtures.
+  {
+    const shapeMarker =
+      /\bshape-only\b|not a length or quality target|SHAPE FIXTURE/i.test(
+        text
+      );
+    const underExamples =
+      typeof filePath === "string" &&
+      /(^|[/\\])examples([/\\]|$)/i.test(path.normalize(filePath));
+    if (
+      shapeMarker &&
+      underExamples &&
+      /Checklist gates:\s*PASS\b|lint-package\.mjs:\s*PASS\b/i.test(text)
+    ) {
       fail(
         issues,
         "shape-claims-pass",
@@ -402,7 +416,132 @@ function lint(text, filePath) {
   // Study honesty — synthesis cannot be laundered into observed proof
   lintStudyCitationHonesty(text, lines, issues);
 
+  // Finished renders must cover full duration + audio (not silent hook-only)
+  lintFinishCutComplete(text, issues);
+
   return issues;
+}
+
+/** True when the package claims a finished/rendered delivery (not NOT_RENDERED). */
+function claimsFinishedRender(text) {
+  if (/Render status:\s*NOT_RENDERED/i.test(text)) return false;
+  if (/Render status:\s*RENDERED/i.test(text)) return true;
+
+  const finish =
+    text.match(/FINISH-THE-CUT[\s\S]{0,1200}/i)?.[0] || "";
+  const unitsRendered = finish.match(
+    /Units rendered this session:\s*([^\n]+)/i
+  )?.[1];
+  if (unitsRendered) {
+    const v = unitsRendered.trim();
+    if (
+      v &&
+      !/^(\[\[|—|-|n\/a|none|not[ _-]?rendered|todo|tbd)\b/i.test(v) &&
+      !/awaiting|not yet/i.test(v)
+    ) {
+      return true;
+    }
+  }
+
+  const log = sectionBlock(text, /Render log/i);
+  if (
+    log &&
+    /\|[ \t]*[a-f0-9]{8,}[ \t]*\|/i.test(log) &&
+    !/\bNOT_RENDERED\b/i.test(log)
+  ) {
+    return true;
+  }
+  return false;
+}
+
+/**
+ * Hook-only silent clips must not count as finished ads.
+ * Skips honest NOT_RENDERED handoff packages.
+ */
+function lintFinishCutComplete(text, issues) {
+  if (!claimsFinishedRender(text)) return;
+
+  const scriptBlock = sectionBlock(text, /Timed script/i);
+  const ends = [...scriptBlock.matchAll(/\d+\s*[-–]\s*(\d+)\s*s/gi)].map((m) =>
+    Number(m[1])
+  );
+  const scriptEnd = ends.length ? Math.max(...ends) : 0;
+
+  const finish = text.match(/FINISH-THE-CUT[\s\S]{0,1200}/i)?.[0] || "";
+  const log = sectionBlock(text, /Render log/i);
+
+  // --- incomplete-hook-only ---
+  if (scriptEnd > 10) {
+    const timedDur = finish.match(/Timed duration:\s*(\d+)\s*s/i);
+    const shortClaim =
+      timedDur && Number(timedDur[1]) <= 8 && scriptEnd > 10;
+
+    const unitsLine =
+      finish.match(/Units rendered this session:\s*([^\n]+)/i)?.[1] || "";
+    const planned =
+      finish.match(/Units planned:\s*([^\n]+)/i)?.[1] || "";
+    const onlyHookUnits =
+      /\b(U1|K1)\b/i.test(unitsLine) &&
+      !/\b(U2|U3|C1|E1|A1)\b/i.test(unitsLine) &&
+      (/\b(U2|U3|E1|A1|C1)\b/i.test(planned) || scriptEnd > 10);
+
+    const jobRows = log
+      .split("\n")
+      .filter(
+        (l) =>
+          /^\|/.test(l) &&
+          /[a-f0-9]{8,}/i.test(l) &&
+          !/job_id/i.test(l) &&
+          !/\bNOT_RENDERED\b/i.test(l)
+      );
+    const unitIds = new Set();
+    for (const row of jobRows) {
+      const cells = row.split("|").map((c) => c.trim());
+      // | job_id | unit_id | status | ...
+      if (cells[2] && !/^-+$/.test(cells[2])) unitIds.add(cells[2]);
+    }
+    const logOnlyHook =
+      unitIds.size === 1 &&
+      [...unitIds].every((u) => /^(U1|K1)$/i.test(u));
+
+    if (shortClaim || onlyHookUnits || logOnlyHook) {
+      fail(
+        issues,
+        "incomplete-hook-only",
+        `Rendered delivery covers only the hook (~8s) while the timed script ends at ${scriptEnd}s — finish-the-cut requires every second + assemble`
+      );
+    }
+  }
+
+  // --- silent-cut-incomplete ---
+  const craft = sectionBlock(text, /Craft system/i);
+  const soundLine = (craft.match(/Sound plan:[^\n]*/i) || [""])[0];
+  const post = (finish.match(/Post assemble:[^\n]*/i) || [""])[0];
+  const audioLaid = (finish.match(/Audio laid in post:[^\n]*/i) || [""])[0];
+  const audioZone = `${soundLine}\n${post}\n${audioLaid}\n${finish}`;
+
+  const explicitSilent =
+    /Sound plan:\s*(silent|none|no audio|muted only)\b/i.test(soundLine) ||
+    /\b(no sound|silent cut|silent export|audio not (added|laid|mixed))\b/i.test(
+      text
+    ) ||
+    /Audio laid in post:\s*(none|silent|n\/a|—|no)\b/i.test(audioLaid) ||
+    /Post assemble:[^\n]*(no (?:VO|SFX|bed|audio)|silent only)/i.test(post);
+
+  const hasAudioPath =
+    /\b(VO|TTS|SFX|diegetic|ring SFX|paid-safe bed|audio bed|soft bed|music bed|A1\b.*\b(VO|TTS|bed|audio))/i.test(
+      audioZone
+    ) ||
+    (/\bA1\b/i.test(finish) &&
+      /\b(audio|VO|TTS|bed|SFX)\b/i.test(finish));
+
+  if (explicitSilent || !hasAudioPath) {
+    fail(
+      issues,
+      "silent-cut-incomplete",
+      "Rendered delivery has no audio path (VO/SFX/bed). Silent model exports are not finished ads — lay audio in CapCut/post and log it in FINISH-THE-CUT"
+    );
+  }
 }
 
 /** Load public (+ optional private) studies for provenance lookup. */

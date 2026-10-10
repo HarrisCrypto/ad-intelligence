@@ -12,13 +12,13 @@ description: >-
   Higgsfield. Probe → study → emulate → human_build → ≥6 beats → finish-the-cut → lint.
 compatibility: Requires Node 18+ for scripts. Optional network for URL brief + libraries. MCP video tools optional (connected rung).
 metadata:
-  version: "3.18.0"
+  version: "3.19.0"
   open_standard: agentskills
 ---
 
 # Ad Intelligence — one-shot ad maker
 
-**Do not brainstorm.** Top agents: **probe tools → equalize rung → study → emulate → human_build → skeleton → finish-the-cut → lint green.**
+**Do not brainstorm.** Top agents: **probe tools → equalize rung → study → emulate → human_build → skeleton → finish-the-cut (full duration + audio) → lint green.**
 
 ## When to use
 
@@ -34,8 +34,8 @@ Ads, creatives, hooks, UGC, Meta/TikTok/Instagram/X/YouTube, “ads for my site,
 6. Research access: `node scripts/library-access.mjs --niche <n> --platform <p> --keyword …` — if TikTok/Meta wall, walk login-free fallbacks (Google Transparency + Meta deep links + Attention Lab). Emulate structure ([`ad-libraries.md`](references/ad-libraries.md) · [`studies/README.md`](studies/README.md))
 7. **Creative:** study + attention model + [angle axes](references/angle-axes.md) → Concept → ≥6 exact-VO rows → Craft → unit prompts via [`human-build-os.md`](references/human-build-os.md)
 8. Fill `[[BRACKETS]]` → `node scripts/lint-package.mjs …` until `"ok": true`
-9. **Finish the cut** ([`prompts/finish-the-cut.md`](prompts/finish-the-cut.md)) — full duration; generate UI if needed ([`generated-ui-authenticity.md`](references/generated-ui-authenticity.md)); no “send screenshots” stall
-10. Deliver the file + real job ids
+9. **Finish the cut** ([`prompts/finish-the-cut.md`](prompts/finish-the-cut.md)) — **every second** of the timed script + **audio in CapCut** (VO/SFX/bed); generate UI if needed ([`generated-ui-authenticity.md`](references/generated-ui-authenticity.md)); no “send screenshots” stall; an 8s silent hook is **not** done
+10. Deliver the file + real job ids (full cut, not hook-only)
 
 Ready check: `node scripts/agent-ready.mjs`  
 No shell: paste [`prompts/context-pack-lite.md`](prompts/context-pack-lite.md) · offline [`retrieve-offline-compact.json`](references/retrieve-offline-compact.json) · [`no-shell-lint-checklist.md`](prompts/no-shell-lint-checklist.md).

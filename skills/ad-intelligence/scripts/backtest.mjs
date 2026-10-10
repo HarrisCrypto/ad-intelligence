@@ -290,6 +290,65 @@ if (fs.existsSync(studiesPath)) {
       (synJ?.issues || []).some((i) => i.id === "study-synthesis-cited-as-proof"),
     (synJ?.issues || []).map((i) => i.id).join(",")
   );
+
+  // shape-claims-pass must NOT fire on honest synthesis "structure only" labels
+  const synLabelPkg = path.join(ROOT, "packages", "_backtest-structure-only.md");
+  fs.writeFileSync(
+    synLabelPkg,
+    fs
+      .readFileSync(
+        path.join(ROOT, "examples", "voice-agent-front-desk.md"),
+        "utf8"
+      )
+      .replace(
+        /Study provenance:[^\n]*/i,
+        "Study provenance: observed:false · basis:synthesis — structure only — not proof"
+      )
+      .replace(
+        /Checklist gates:[^\n]*/i,
+        "Checklist gates: PASS (assembler handoff; NOT_RENDERED explicit)"
+      )
+      .replace(
+        /lint-package\.mjs:[^\n]*/i,
+        "lint-package.mjs: PASS"
+      )
+  );
+  const synLabelLint = runNode("lint-package.mjs", [synLabelPkg]);
+  let synLabelJ = null;
+  try {
+    synLabelJ = JSON.parse(synLabelLint.stdout || "{}");
+  } catch {
+    /* ignore */
+  }
+  ok(
+    "structure-only synthesis label does not trip shape-claims-pass",
+    !(synLabelJ?.issues || []).some((i) => i.id === "shape-claims-pass"),
+    (synLabelJ?.issues || []).map((i) => i.id).join(",")
+  );
+  try {
+    fs.unlinkSync(synLabelPkg);
+  } catch {
+    /* ignore */
+  }
+
+  for (const [rel, ruleId] of [
+    ["examples/lint-corpus/fail-incomplete-hook-only.md", "incomplete-hook-only"],
+    ["examples/lint-corpus/fail-silent-cut-incomplete.md", "silent-cut-incomplete"],
+    ["examples/lint-corpus/fail-shape-claims-pass.md", "shape-claims-pass"],
+  ]) {
+    const r = runNode("lint-package.mjs", [rel]);
+    let j = null;
+    try {
+      j = JSON.parse(r.stdout || "{}");
+    } catch {
+      /* ignore */
+    }
+    ok(
+      `lint catches ${ruleId}`,
+      r.status !== 0 && (j?.issues || []).some((i) => i.id === ruleId),
+      (j?.issues || []).map((i) => i.id).join(",")
+    );
+  }
   const voice = retrieveCompact("voice ai", "meta").json;
   ok(
     "voice ai study = missed-call",

@@ -17,7 +17,7 @@ Read this in under a minute, then open a gold fixture:
 | **Stress briefs (messy prompts)** | [`examples/stress-briefs/`](./skills/ad-intelligence/examples/stress-briefs/) |
 | Shape-only skeleton (structure, not quality) | [`entertainment-creator-series.md`](./skills/ad-intelligence/examples/entertainment-creator-series.md) |
 
-**v3.18:** Library access ladder when TikTok/Meta login-gate (deep links + Google Transparency + Lab). **v3.17:** Study format projection. **v3.16:** Synthesis-as-proof lint. **v3.15–3.11:** studies OS, finish-the-cut, multi-harness, Attention Lab.
+**v3.19:** Finish-the-cut requires full duration + audio (lint catches silent hook-only); shape-claims-pass scoped so honest `structure only` synthesis labels pass. **v3.18:** Library access ladder when TikTok/Meta login-gate. **v3.17–3.11:** study format, synthesis-as-proof lint, studies OS, finish-the-cut, multi-harness, Attention Lab.
 
 **v3.6–3.7:** triple-path / assembler / voice / Wan–LTX–Grok (+ peers) routing + render-QA.
 

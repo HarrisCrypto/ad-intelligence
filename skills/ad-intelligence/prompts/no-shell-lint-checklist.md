@@ -31,6 +31,8 @@ Tick every box. Any fail → rewrite before delivery.
 - [ ] Muted-first 0–3s (no logo sting)  
 - [ ] Craft free of: cinematic, stunning, 8k, sleek, epic, nice…  
 - [ ] No invented Seedance/Higgsfield job ids (`NOT_RENDERED` OK)  
+- [ ] If RENDERED: full timed duration covered — not hook-only (~8s)  
+- [ ] If RENDERED: audio laid in post (VO and/or SFX and/or paid-safe bed) — not silent export  
 - [ ] Offline retrieve used only if no shell — ids must exist in offline JSON  
 
 ## Offline retrieve

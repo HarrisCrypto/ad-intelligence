@@ -11,7 +11,7 @@
       "name": "ad-intelligence",
       "source": ".",
       "description": "One-shot agency-grade ads — provenanced studies, ingest, human-build logs, craft lint.",
-      "version": "3.18.0",
+      "version": "3.19.0",
       "keywords": [
         "ads",
         "viral",

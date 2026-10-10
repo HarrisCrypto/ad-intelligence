@@ -47,7 +47,7 @@ Probe first (`probe-harness.mjs`). Do not invent MCP job ids. Missing UI capture
 2. Solution after ~8–12s via demo (real or generated UI).  
 3. Objection crush only with ledger-safe lines.  
 4. Single CTA path (Start free / Book / Call).  
-5. Finish every second of the timed sheet — hook-only is incomplete.
+5. Finish every second of the timed sheet — hook-only is incomplete; lay audio (VO/SFX/bed) in post — silent exports are incomplete.
 
 ### `award_brand_film` (hero spectacle)
 
