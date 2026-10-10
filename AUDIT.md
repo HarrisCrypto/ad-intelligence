@@ -51,8 +51,8 @@ Lint, study provenance, finish-the-cut *document* rules, claim ledger, and backt
 | `studies/` | `corpus.json` (10 studies, all `synthesis` / `video_timed`), private gitignored, fixtures | Archetype studies + provenance |
 | `references/` | Craft OS, sheets, firewall, policy, attention models, offline retrieve (~179KB), creative-stack | Prose + JSON toolbox (not executable render components) |
 | `prompts/` | one-shot, finish-the-cut, context-pack (**684** / lite **615** lines), harness | Rituals; context packs duplicate finish-the-cut / human-build |
-| `examples/` | 5 full-depth golds + voice gold, 1 shape-only, 9 lint-corpus fails, stress briefs, Attention Lab HTML | Teaching fixtures |
-| `checklists/` | `first-time-right.json`, `render-qa.json` | **Self-filled** checklists — not video instruments |
+| `examples/` | 5 full-depth golds, shape-only `entertainment-creator-series.md`, stub `viral-plus-cinema-brief.json`, 9 lint-corpus fails, 6 stress briefs, Attention Lab + **tracked** `visual/frames/*.jpg` | Teaching fixtures |
+| `checklists/` | `first-time-right.json` (25 gates), `render-qa.json` (12 checks) | **Self-filled** checklists — not video instruments |
 | `demo/` | Pointers to gold quality targets | |
 | `packages/` | gitignored scratch | |
 
@@ -214,10 +214,13 @@ Already **82 lines** (under ~150). Content still encodes the old ritual: brainst
 ## 5. Access & legal (current)
 
 - LICENSE / CONTRIBUTING: do not commit scraped creatives — **aligned** with plan Phase 1.
-- `.gitignore`: `studies/private/**`, `packages/`, private-signals — **good**.
+- `.gitignore`: `studies/private/**`, skill `packages/`, private-signals — **good**.
+- **Gap:** no explicit `*.mp4` / media-blob ignore; fictional storyboard JPGs under `examples/visual/frames/` are tracked (OK as owned teaching frames — Phase 1 must still ban competitor media / private-cache commits).
 - No `classroom/private-cache/` yet (should be gitignored when added).
 - Media rejection in validate-study — **keep / harden** (B3.2).
 - Access tiers lack `verified_via` (B3.1).
+
+Inventory cross-check: [Audit skill file inventory](bc-1637eb83-f53d-5844-bdb8-cb4081f4ef67) — line counts, symlink map, and script headers agree with §1; no additional KEEP/REPLACE conflicts.
 
 ---
 
