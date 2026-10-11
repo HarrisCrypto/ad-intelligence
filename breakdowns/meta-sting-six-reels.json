@@ -1,0 +1,63 @@
+{
+  "text_overlays": [
+    {
+      "wording": "It Must Be Sting",
+      "size": "Not stated on the official page.",
+      "placement": "Named on the page as the line",
+      "timing": "end of the 6 seconds"
+    }
+  ],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "The page says the films make the energy clear without saying a word, and names the line It Must Be Sting.",
+  "cta": "The page presents It Must Be Sting as the line that explains the speed.",
+  "emotional_angle": "Fast and funny, not a serious performance claim.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "Show one ordinary job at an impossible speed in about 6 seconds.",
+    "Start on the action. Do not add a setup scene.",
+    "Use your own product name as the punchline.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "meta-sting-six-reels",
+  "brand": "Sting",
+  "advertiser": "Suntory PepsiCo Beverage (Thailand)",
+  "platform": "instagram_reels",
+  "format": "6-second social film",
+  "aspect_ratio": "9:16",
+  "length_s": 6,
+  "year": null,
+  "award": null,
+  "niche": "cpg",
+  "goal": "awareness",
+  "official_url": "https://www.oneclub.org/awards/oneasia/-award/60462/it-must-be-sting/",
+  "hook_0_3s": "The page says there is no build-up and that fast energy starts from the very first frame.",
+  "story_beats": [
+    "The page says Thai rules limit before-and-after energy claims, and many people think Sting is only a soda.",
+    "The idea is 6 seconds of fast energy, the time it takes to scroll past.",
+    "Examples named on the page: a massage therapist at blur speed, a factory worker lifting boxes, and Nang Kwak waving.",
+    "The page says six creatives were tested and that the films ran on TikTok, YouTube Shorts, and Instagram Reels."
+  ],
+  "shot_list": [
+    {
+      "t": "0-6s",
+      "shot": "One real job performed at an impossible speed, as the page's examples describe.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "end",
+      "shot": "The page says the only explanation is the line It Must Be Sting.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The page says the films are 6 seconds, with no build-up and fast beats.",
+  "why_it_worked": "The ONE Asia page says a 6-second scroll film let Sting show energy without a banned before-and-after, by putting one impossible action in the first frame and a short line at the end.",
+  "cinematic_qualities": [
+    "Stated 6-second length",
+    "One exaggerated real-world job per film"
+  ],
+  "safe_zone_notes": "The page does not print pixels. It says the films launched on Instagram Reels, TikTok, and YouTube Shorts. This file uses 9:16 because those are vertical placements. The page lists a Bronze Award and does not print an award year, so award is null."
+}

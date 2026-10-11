@@ -1,0 +1,60 @@
+{
+  "text_overlays": [],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "Not stated on the official page.",
+  "cta": "Not stated on the official page.",
+  "emotional_angle": "The official page does not name an emotional angle.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "Condense one story you have rights to into about 15 seconds.",
+    "Give each episode its own visual system.",
+    "Do not copy a living author's text or this campaign's frames.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "meta-hemingway-fifteen",
+  "brand": "Ernest Hemingway Foundation",
+  "advertiser": "The Ernest Hemingway Foundation",
+  "platform": "instagram_reels",
+  "format": "15-second Instagram film",
+  "aspect_ratio": "1:1",
+  "length_s": 15,
+  "year": 2016,
+  "award": {
+    "name": "The One Show",
+    "year": 2016,
+    "category": "Merit, Non-Profit - Branded Social Campaign",
+    "evidence_url": "https://www.oneclub.org/awards/theoneshow/-award/24606/hemingway-in-15-seconds/"
+  },
+  "niche": "nonprofit",
+  "goal": "awareness",
+  "official_url": "https://www.oneclub.org/awards/theoneshow/-award/24606/hemingway-in-15-seconds/",
+  "hook_0_3s": "The official page does not describe the first three seconds. The page says the novels were condensed into :15 films.",
+  "story_beats": [
+    "The 2016 One Show page says famous works were condensed into :15 films.",
+    "It says they launched on Instagram, the medium blamed for short attention.",
+    "Each film had a distinct animation style for a social feed."
+  ],
+  "shot_list": [
+    {
+      "t": "0-15s",
+      "shot": "One animated condensation of a public-domain story.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "series",
+      "shot": "The page says each film had its own animation style.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The page states :15 films and does not describe cuts inside them.",
+  "why_it_worked": "The page turns the attention complaint into the format: a :15 animated film on Instagram, one story at a time.",
+  "cinematic_qualities": [
+    "Stated :15 length",
+    "A different animation style per film"
+  ],
+  "safe_zone_notes": "The page says Instagram social feed and does not print pixels. This file uses 1:1 because a 2016 feed film is not described as vertical. Check the placement before you lock a ratio."
+}
