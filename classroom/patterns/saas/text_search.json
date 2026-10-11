@@ -1,0 +1,69 @@
+{
+  "id": "pat_saas_text_search",
+  "niche": "saas",
+  "format": "text_search",
+  "n_cards": 12,
+  "cites": [
+    "gat_cr01885390870853713921",
+    "gat_cr02859271896313102337",
+    "gat_cr03144552248407752705",
+    "gat_cr03226090063628599297",
+    "gat_cr05314653572145610753",
+    "gat_cr05994468314380763137",
+    "gat_cr06455390151454490625",
+    "gat_cr06671403092065386497",
+    "gat_cr09156938754030567425",
+    "gat_cr09896172702358568961",
+    "gat_cr12066934995793477633",
+    "gat_cr13321554179144024065"
+  ],
+  "source_ids": [
+    "https://adstransparency.google.com/advertiser/AR11925330061483311105/creative/CR01885390870853713921?region=US",
+    "https://adstransparency.google.com/advertiser/AR11925330061483311105/creative/CR02859271896313102337?region=US",
+    "https://adstransparency.google.com/advertiser/AR11925330061483311105/creative/CR03144552248407752705?region=US",
+    "https://adstransparency.google.com/advertiser/AR11925330061483311105/creative/CR03226090063628599297?region=US",
+    "https://adstransparency.google.com/advertiser/AR11925330061483311105/creative/CR05314653572145610753?region=US",
+    "https://adstransparency.google.com/advertiser/AR11925330061483311105/creative/CR05994468314380763137?region=US",
+    "https://adstransparency.google.com/advertiser/AR11925330061483311105/creative/CR06455390151454490625?region=US",
+    "https://adstransparency.google.com/advertiser/AR11925330061483311105/creative/CR06671403092065386497?region=US",
+    "https://adstransparency.google.com/advertiser/AR11925330061483311105/creative/CR09156938754030567425?region=US",
+    "https://adstransparency.google.com/advertiser/AR11925330061483311105/creative/CR09896172702358568961?region=US",
+    "https://adstransparency.google.com/advertiser/AR11925330061483311105/creative/CR12066934995793477633?region=US",
+    "https://adstransparency.google.com/advertiser/AR11925330061483311105/creative/CR13321554179144024065?region=US"
+  ],
+  "cuts": {
+    "mean_cuts_per_10s": null,
+    "mean_avg_shot_s": null,
+    "mean_first_cut_at_s": null,
+    "mean_longest_hold_s": null,
+    "samples": [],
+    "source": "measured_aggregate"
+  },
+  "content": {
+    "hook_frequency": {
+      "headline qualification": 12
+    },
+    "beat_order_frequency": {},
+    "proof_placement": {
+      "The information about this ad may vary by location": 12
+    },
+    "cta_wording": {
+      "learn more": 12
+    },
+    "cta_timing_s": []
+  },
+  "fonts_craft": {
+    "font_class_frequency": {
+      "serif-display": 12
+    },
+    "font_guess_frequency": {
+      "serif-display": 12
+    },
+    "caption_style_frequency": {},
+    "palette_samples": [],
+    "grade_notes": {},
+    "sfx_density": {}
+  },
+  "floor_note": "enough cards for directional norms",
+  "honest_limit": "Patterns teach assembly from real ads; they do not supply the brand's own material."
+}

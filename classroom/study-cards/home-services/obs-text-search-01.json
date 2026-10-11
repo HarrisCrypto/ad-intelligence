@@ -1,6 +1,6 @@
 {
   "id": "obs-text-search-01",
-  "status": "confirmed",
+  "status": "draft",
   "source": {
     "platform": "google",
     "url_or_library_id": "owned:teaching-rsa-hvac-01",
@@ -18,10 +18,11 @@
   "duration_s": null,
   "aspect": "n/a",
   "provenance": {
-    "observed": true,
-    "basis": "text fields measured: char counts, headline/description/CTA parse (no video)",
+    "observed": false,
+    "basis": "text fields measured: char counts, headline/description/CTA parse (no video) | REFLAGGED: teaching placeholder with digital silence / not a real ad library creative",
     "measured_at": "2026-10-11T01:33:17.334Z",
-    "media_committed": false
+    "media_committed": false,
+    "reflagged_reason": "loudness_lufs<=-60 or teaching sine bed — not a genuine ad ingest"
   },
   "hook": {
     "mechanism": "vertical-first headline qualification",
@@ -123,10 +124,10 @@
   "tags": [
     "home-services",
     "text_search",
-    "observed",
     "ingest",
     "no-video",
-    "confirmed"
+    "draft",
+    "placeholder-reflagged"
   ],
   "materials_ceiling": "Copy/offer craft only — no footage implied"
 }

@@ -1,0 +1,192 @@
+{
+  "id": "gat_cr16196899131568947201",
+  "status": "confirmed",
+  "source": {
+    "platform": "google",
+    "url_or_library_id": "https://adstransparency.google.com/advertiser/AR05483700358179979265/creative/CR16196899131568947201?region=US",
+    "accessed": "2026-10-11",
+    "rights": "annotation-only",
+    "verified_via": "agent_runtime"
+  },
+  "niche": "dental",
+  "format": "static_image",
+  "structure": {
+    "format": "display_static",
+    "timing_observable": false,
+    "format_note": "No-video format (static_image) — do NOT invent 0–3s video beats"
+  },
+  "duration_s": null,
+  "aspect": "16:9",
+  "provenance": {
+    "observed": true,
+    "basis": "tesseract OCR + ffmpeg palettegen + signalstats contrast; composition bands; font heuristic",
+    "measured_at": "2026-10-11T02:45:03.513Z",
+    "media_path_local": "classroom/private-cache/gat_cr16196899131568947201.jpg",
+    "media_committed": false
+  },
+  "measured_by": {
+    "tooling": [
+      "tesseract",
+      "ffmpeg:palettegen",
+      "ffmpeg:signalstats",
+      "font-heuristic"
+    ],
+    "honesty_errors": []
+  },
+  "hook": {
+    "mechanism": "[FILL — static hook device: offer/face/stat]",
+    "first_second_description": "n/a — static; first glance = primary text/visual",
+    "on_screen_text": "CS] Smile Brilliant"
+  },
+  "shots": [
+    {
+      "t_start": null,
+      "t_end": null,
+      "purpose": "headline",
+      "on_screen_text": "CS] Smile Brilliant",
+      "source": "measured"
+    },
+    {
+      "t_start": null,
+      "t_end": null,
+      "purpose": "body",
+      "on_screen_text": "www.smilebrilliant.com/",
+      "source": "measured"
+    },
+    {
+      "t_start": null,
+      "t_end": null,
+      "purpose": "body",
+      "on_screen_text": "smilebrilliant.com - Teeth Whitening",
+      "source": "measured"
+    },
+    {
+      "t_start": null,
+      "t_end": null,
+      "purpose": "body",
+      "on_screen_text": "Gel - 2-Year Shelf Life",
+      "source": "measured"
+    },
+    {
+      "t_start": null,
+      "t_end": null,
+      "purpose": "body",
+      "on_screen_text": "Keep your whitening routine going 5",
+      "source": "measured"
+    },
+    {
+      "t_start": null,
+      "t_end": null,
+      "purpose": "body",
+      "on_screen_text": "with 3, 6 or 9 syringe refill kits. 7 any J",
+      "source": "measured"
+    },
+    {
+      "t_start": null,
+      "t_end": null,
+      "purpose": "body",
+      "on_screen_text": "jx. Zz",
+      "source": "measured"
+    },
+    {
+      "t_start": null,
+      "t_end": null,
+      "purpose": "cta",
+      "on_screen_text": "Nj",
+      "source": "measured"
+    }
+  ],
+  "recipe": {
+    "hook": "CS] Smile Brilliant",
+    "beats": [],
+    "pacing_curve": null,
+    "proof": "[FILL from OCR/offer]",
+    "cta": "[FILL]"
+  },
+  "stats": {
+    "shot_count": 0,
+    "avg_shot_s": null,
+    "cuts_per_10s": null,
+    "longest_hold_s": null,
+    "first_cut_at_s": null,
+    "text_density": "8 ocr_lines",
+    "loudness_lufs": null,
+    "contrast": {
+      "ratio_approx": null,
+      "source": "unavailable"
+    },
+    "layout": {
+      "nine_box_text_density": {
+        "top": 3,
+        "mid": 3,
+        "bottom": 2
+      },
+      "note": "approx 3-band vertical split from OCR line order (not pixel boxes)",
+      "source": "measured"
+    },
+    "ocr_line_count": 8,
+    "probe": {
+      "width": 696,
+      "height": 448
+    },
+    "stats_source": "measured"
+  },
+  "audio": {
+    "note": "none — static/no-video",
+    "loudness_lufs": null
+  },
+  "look": {
+    "palette": [
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "palette_source": "measured",
+    "contrast": {
+      "ratio_approx": null,
+      "source": "unavailable"
+    },
+    "layout": {
+      "nine_box_text_density": {
+        "top": 3,
+        "mid": 3,
+        "bottom": 2
+      },
+      "note": "approx 3-band vertical split from OCR line order (not pixel boxes)",
+      "source": "measured"
+    },
+    "type": "[FILL]",
+    "ocr_sample": "CS] Smile Brilliant\n\nwww.smilebrilliant.com/\n\nsmilebrilliant.com - Teeth Whitening\n\nGel - 2-Year Shelf Life\n\nKeep your whitening routine going 5\n\nwith 3, 6 or 9 syringe refill kits. 7 any J\njx. Zz\n\nNj",
+    "font_guess": "serif-display",
+    "font_class": "serif-display",
+    "font_source": "heuristic-ocr"
+  },
+  "cta": {
+    "primary": "[FILL]"
+  },
+  "offer_and_proof": {
+    "offer": "CS] Smile Brilliant | www.smilebrilliant.com/ | smilebrilliant.com - Teeth Whitening",
+    "proof": "[PLACEHOLDER]"
+  },
+  "why_it_works": "Measured from Google Ads Transparency creative CR16196899131568947201 (smilebrilliant.com). Stats from ingest tooling; emulate structure only.",
+  "steal": [
+    "Structure/pacing/copy pattern only",
+    "Never copy pixels or trademarks"
+  ],
+  "what_not_to_copy": [
+    "Competitor brand marks / product photography you do not own",
+    "Invented proof or testimonials"
+  ],
+  "tags": [
+    "dental",
+    "static_image",
+    "ingest",
+    "no-video",
+    "observed",
+    "confirmed"
+  ],
+  "materials_ceiling": "No-video craft (offer/copy/composition) is learnable here; brand photos still USER_SUPPLIED"
+}

@@ -1,6 +1,6 @@
 {
   "id": "obs-static-offer-01",
-  "status": "confirmed",
+  "status": "draft",
   "source": {
     "platform": "owned",
     "url_or_library_id": "owned:teaching-static-offer-01",
@@ -18,11 +18,12 @@
   "duration_s": null,
   "aspect": "1:1",
   "provenance": {
-    "observed": true,
-    "basis": "tesseract OCR + ffmpeg palettegen + signalstats contrast; composition bands",
+    "observed": false,
+    "basis": "tesseract OCR + ffmpeg palettegen + signalstats contrast; composition bands | REFLAGGED: teaching placeholder with digital silence / not a real ad library creative",
     "measured_at": "2026-10-11T01:33:17.309Z",
     "media_path_local": "classroom/private-cache/obs-static-offer-01.png",
-    "media_committed": false
+    "media_committed": false,
+    "reflagged_reason": "loudness_lufs<=-60 or teaching sine bed — not a genuine ad ingest"
   },
   "hook": {
     "mechanism": "offer noun + benefit + single CTA",
@@ -137,10 +138,10 @@
   "tags": [
     "home-services",
     "static_image",
-    "observed",
     "ingest",
     "no-video",
-    "confirmed"
+    "draft",
+    "placeholder-reflagged"
   ],
   "materials_ceiling": "No-video craft (offer/copy/composition) is learnable here; brand photos still USER_SUPPLIED"
 }

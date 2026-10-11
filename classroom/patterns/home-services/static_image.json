@@ -4,21 +4,50 @@
   "format": "static_image",
   "n_cards": 1,
   "cites": [
-    "obs-static-offer-01"
+    "gat_cr10549384949738242049"
   ],
-  "hook_frequency": {
-    "offer noun + benefit + single CTA": 1
-  },
-  "pacing": {
-    "n": 0,
+  "source_ids": [
+    "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR10549384949738242049?region=US"
+  ],
+  "cuts": {
     "mean_cuts_per_10s": null,
+    "mean_avg_shot_s": null,
+    "mean_first_cut_at_s": null,
+    "mean_longest_hold_s": null,
     "samples": [],
     "source": "measured_aggregate"
   },
-  "cta_norms": {
-    "After-hours calls answered": 1
+  "content": {
+    "hook_frequency": {},
+    "beat_order_frequency": {},
+    "proof_placement": {},
+    "cta_wording": {},
+    "cta_timing_s": []
   },
-  "caption_conventions": [],
+  "fonts_craft": {
+    "font_class_frequency": {
+      "serif-display": 1
+    },
+    "font_guess_frequency": {
+      "serif-display": 1
+    },
+    "caption_style_frequency": {},
+    "palette_samples": [
+      {
+        "id": "gat_cr10549384949738242049",
+        "palette": [
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff"
+        ]
+      }
+    ],
+    "grade_notes": {},
+    "sfx_density": {}
+  },
   "floor_note": "thin — treat as directional, not normative",
   "honest_limit": "Patterns teach assembly from real ads; they do not supply the brand's own material."
 }

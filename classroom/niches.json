@@ -39,7 +39,7 @@
         "text_search",
         "carousel"
       ],
-      "live": false
+      "live": true
     },
     {
       "id": "dental",
@@ -54,7 +54,7 @@
         "carousel",
         "text_search"
       ],
-      "live": false
+      "live": true
     },
     {
       "id": "skincare",
@@ -70,7 +70,7 @@
         "text_search",
         "talking_head"
       ],
-      "live": false
+      "live": true
     }
   ]
 }

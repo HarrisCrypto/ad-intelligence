@@ -1,0 +1,133 @@
+{
+  "id": "gat_cr02859271896313102337",
+  "status": "confirmed",
+  "source": {
+    "platform": "google",
+    "url_or_library_id": "https://adstransparency.google.com/advertiser/AR11925330061483311105/creative/CR02859271896313102337?region=US",
+    "accessed": "2026-10-11",
+    "rights": "annotation-only",
+    "verified_via": "agent_runtime"
+  },
+  "niche": "saas",
+  "format": "text_search",
+  "structure": {
+    "format": "search_text",
+    "timing_observable": false,
+    "format_note": "RSA/search — do NOT invent 0–3s video beats from this card"
+  },
+  "duration_s": null,
+  "aspect": "n/a",
+  "provenance": {
+    "observed": true,
+    "basis": "text fields measured: char counts, headline/description/CTA parse (no video)",
+    "measured_at": "2026-10-11T02:45:01.313Z",
+    "media_committed": false
+  },
+  "measured_by": {
+    "tooling": [
+      "text-parse",
+      "font-heuristic"
+    ],
+    "honesty_errors": []
+  },
+  "hook": {
+    "mechanism": "headline qualification",
+    "first_second_description": "n/a — search text; first glance = primary headline",
+    "on_screen_text": "keyboard_arrow_right"
+  },
+  "shots": [
+    {
+      "t_start": null,
+      "t_end": null,
+      "purpose": "headline_1",
+      "on_screen_text": "keyboard_arrow_right",
+      "source": "measured",
+      "char_count": 20
+    },
+    {
+      "t_start": null,
+      "t_end": null,
+      "purpose": "headline_2",
+      "on_screen_text": "NM Five Group Limited",
+      "source": "measured",
+      "char_count": 21
+    },
+    {
+      "t_start": null,
+      "t_end": null,
+      "purpose": "headline_3",
+      "on_screen_text": "keyboard_arrow_right",
+      "source": "measured",
+      "char_count": 20
+    },
+    {
+      "t_start": null,
+      "t_end": null,
+      "purpose": "description_1",
+      "on_screen_text": "The information about this ad may vary by location",
+      "source": "measured",
+      "char_count": 50
+    }
+  ],
+  "recipe": {
+    "hook": "keyboard_arrow_right",
+    "beats": [],
+    "pacing_curve": null,
+    "proof": "The information about this ad may vary by location",
+    "cta": "learn more"
+  },
+  "stats": {
+    "shot_count": 0,
+    "avg_shot_s": null,
+    "cuts_per_10s": null,
+    "longest_hold_s": null,
+    "first_cut_at_s": null,
+    "text_density": "headlines=3;descriptions=1",
+    "loudness_lufs": null,
+    "headline_chars": [
+      20,
+      21,
+      20
+    ],
+    "description_chars": [
+      50
+    ],
+    "stats_source": "measured"
+  },
+  "audio": {
+    "note": "none — search text",
+    "loudness_lufs": null
+  },
+  "look": {
+    "note": "platform RSA typography",
+    "font_guess": "serif-display",
+    "font_class": "serif-display",
+    "font_source": "heuristic-ocr",
+    "ocr_sample": "keyboard_arrow_right | NM Five Group Limited | keyboard_arrow_right | The information about this ad may vary by location"
+  },
+  "cta": {
+    "primary": "learn more"
+  },
+  "offer_and_proof": {
+    "offer": "keyboard_arrow_right",
+    "proof": "[PLACEHOLDER]"
+  },
+  "why_it_works": "Measured from Google Ads Transparency creative CR02859271896313102337 (hubspot.com). Stats from ingest tooling; emulate structure only.",
+  "steal": [
+    "Structure/pacing/copy pattern only",
+    "Never copy pixels or trademarks"
+  ],
+  "what_not_to_copy": [
+    "Competitor trademarked claims",
+    "Invented proof"
+  ],
+  "tags": [
+    "saas",
+    "text_search",
+    "ingest",
+    "no-video",
+    "observed",
+    "confirmed"
+  ],
+  "materials_ceiling": "Copy/offer craft only — no footage implied"
+}

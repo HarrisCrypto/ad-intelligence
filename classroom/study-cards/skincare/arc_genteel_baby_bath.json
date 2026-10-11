@@ -1,0 +1,272 @@
+{
+  "id": "arc_genteel_baby_bath",
+  "status": "confirmed",
+  "source": {
+    "platform": "archive.org",
+    "url_or_library_id": "archive.org:genteel_baby_bath",
+    "accessed": "2026-10-11",
+    "rights": "annotation-only",
+    "verified_via": "agent_runtime"
+  },
+  "niche": "skincare",
+  "format": "polished_video",
+  "structure": {
+    "format": "video_timed",
+    "timing_observable": true,
+    "format_note": "Measured ingest (polished_video); cuts from ffmpeg scdet"
+  },
+  "duration_s": 60.561,
+  "aspect": "16:9",
+  "provenance": {
+    "observed": true,
+    "basis": "ffmpeg:scdet+ebur128+silencedetect+tblend/signalstats+palettegen; tesseract OCR frame; font heuristic",
+    "measured_at": "2026-10-11T02:46:09.596Z",
+    "media_path_local": "classroom/private-cache/arc_genteel_baby_bath.mp4",
+    "media_committed": false
+  },
+  "measured_by": {
+    "tooling": [
+      "ffmpeg:scdet",
+      "ffmpeg:ebur128",
+      "ffmpeg:silencedetect",
+      "ffmpeg:tblend+signalstats",
+      "ffmpeg:palettegen",
+      "tesseract",
+      "font-heuristic"
+    ],
+    "honesty_errors": []
+  },
+  "hook": {
+    "mechanism": "[FILL from watch — first 1–2s device]",
+    "first_second_description": "[FILL — photographed moment, not a card]",
+    "on_screen_text": "»",
+    "spoken": null
+  },
+  "shots": [
+    {
+      "t_start": 0,
+      "t_end": 60.561,
+      "purpose": "hook",
+      "on_screen_text": "»",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 1/1 from arc_genteel_baby_bath.mp4"
+    }
+  ],
+  "recipe": {
+    "hook": "[FILL]",
+    "beats": [
+      {
+        "t_start": 0,
+        "t_end": 60.561,
+        "purpose": "hook"
+      }
+    ],
+    "pacing_curve": {
+      "cuts_per_10s": 0,
+      "first_cut_at_s": null,
+      "longest_hold_s": 60.561,
+      "source": "measured"
+    },
+    "proof": "[FILL]",
+    "cta": "[FILL]"
+  },
+  "stats": {
+    "shot_count": 1,
+    "avg_shot_s": 60.561,
+    "cuts_per_10s": 0,
+    "longest_hold_s": 60.561,
+    "first_cut_at_s": null,
+    "text_density": "ocr_hit",
+    "loudness_lufs": -29,
+    "true_peak_dbfs": -7.8,
+    "silence_gaps": [
+      {
+        "t_start": 0.0213333,
+        "t_end": 1.1114
+      },
+      {
+        "t_start": 1.14225,
+        "t_end": 9.80946
+      },
+      {
+        "t_start": 9.81281,
+        "t_end": 10.3916
+      },
+      {
+        "t_start": 12.2965,
+        "t_end": 12.9052
+      },
+      {
+        "t_start": 18.9974,
+        "t_end": 19.7811
+      },
+      {
+        "t_start": 22.4451,
+        "t_end": 22.8679
+      },
+      {
+        "t_start": 25.6882,
+        "t_end": 26.1158
+      },
+      {
+        "t_start": 31.4887,
+        "t_end": 32.178
+      },
+      {
+        "t_start": 35.9711,
+        "t_end": 36.5146
+      },
+      {
+        "t_start": 42.2365,
+        "t_end": 42.819
+      },
+      {
+        "t_start": 47.1862,
+        "t_end": 47.5648
+      },
+      {
+        "t_start": 47.8467,
+        "t_end": 48.2175
+      },
+      {
+        "t_start": 52.5905,
+        "t_end": 53.2326
+      },
+      {
+        "t_start": 57.2593,
+        "t_end": 57.6633
+      },
+      {
+        "t_start": 59.6656,
+        "t_end": 60.48
+      }
+    ],
+    "motion": {
+      "samples_per_s": 0,
+      "mean_yavg": null,
+      "motion_ratio": 0.985,
+      "freeze_s": 0.901,
+      "curve": [],
+      "source": "measured"
+    },
+    "probe": {
+      "width": 320,
+      "height": 240,
+      "duration_s": 60.560561,
+      "has_audio": true
+    },
+    "stats_source": "measured"
+  },
+  "audio": {
+    "loudness_lufs": -29,
+    "true_peak_dbfs": -7.8,
+    "silence_gaps": [
+      {
+        "t_start": 0.0213333,
+        "t_end": 1.1114
+      },
+      {
+        "t_start": 1.14225,
+        "t_end": 9.80946
+      },
+      {
+        "t_start": 9.81281,
+        "t_end": 10.3916
+      },
+      {
+        "t_start": 12.2965,
+        "t_end": 12.9052
+      },
+      {
+        "t_start": 18.9974,
+        "t_end": 19.7811
+      },
+      {
+        "t_start": 22.4451,
+        "t_end": 22.8679
+      },
+      {
+        "t_start": 25.6882,
+        "t_end": 26.1158
+      },
+      {
+        "t_start": 31.4887,
+        "t_end": 32.178
+      },
+      {
+        "t_start": 35.9711,
+        "t_end": 36.5146
+      },
+      {
+        "t_start": 42.2365,
+        "t_end": 42.819
+      },
+      {
+        "t_start": 47.1862,
+        "t_end": 47.5648
+      },
+      {
+        "t_start": 47.8467,
+        "t_end": 48.2175
+      },
+      {
+        "t_start": 52.5905,
+        "t_end": 53.2326
+      },
+      {
+        "t_start": 57.2593,
+        "t_end": 57.6633
+      },
+      {
+        "t_start": 59.6656,
+        "t_end": 60.48
+      }
+    ],
+    "source": "measured"
+  },
+  "look": {
+    "palette": [
+      "#010001",
+      "#010001",
+      "#010001",
+      "#010001",
+      "#010001",
+      "#010001"
+    ],
+    "palette_source": "measured",
+    "caption_style": "[FILL]",
+    "grade": "[FILL]",
+    "ocr_sample": "»",
+    "font_guess": "grotesk-sans",
+    "font_class": "grotesk-sans",
+    "font_source": "heuristic-ocr"
+  },
+  "cta": {
+    "primary": "[FILL]",
+    "timing_s": null
+  },
+  "offer_and_proof": {
+    "offer": "[FILL]",
+    "proof": "[PLACEHOLDER]"
+  },
+  "why_it_works": "Measured from public Prelinger/archive.org commercial (archive.org:genteel_baby_bath). Real audio+cuts; study assembly only — never copy talent, marks, or claims.",
+  "steal": [
+    "Pacing/cut rhythm from measured stats",
+    "On-screen offer framing",
+    "Caption/endcard timing"
+  ],
+  "what_not_to_copy": [
+    "Competitor pixels / logos / talent likeness",
+    "Verbatim scripts or uncleared audio",
+    "Invented proof"
+  ],
+  "tags": [
+    "skincare",
+    "polished_video",
+    "ingest",
+    "observed",
+    "confirmed"
+  ],
+  "materials_ceiling": "Corpus teaches assembly; brand material still needs USER_SUPPLIED → i2v → vetted stock"
+}

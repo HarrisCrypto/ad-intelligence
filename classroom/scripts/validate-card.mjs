@@ -3,6 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { isNoVideoFormat, resolveFormat, FORMATS } from "./lib-corpus.mjs";
+import { observedHonestyErrors } from "./observed-honesty.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
@@ -41,13 +42,9 @@ const known =
   (schema.properties.format.enum || []).includes(card.format);
 if (!known) fail(`${file}: unknown format ${card.format}`);
 
-if (card.provenance?.observed === true) {
-  if (card.stats?.stats_source !== "measured") {
-    fail(`${file}: observed:true requires stats.stats_source:"measured"`);
-  }
-  if (card.provenance.media_committed === true) {
-    fail(`${file}: media must never be committed (media_committed must be false/absent)`);
-  }
+const honesty = observedHonestyErrors(card);
+if (honesty.length) {
+  fail(`${file}: observed honesty failed — ${honesty.join("; ")}`);
 }
 
 // media rejection

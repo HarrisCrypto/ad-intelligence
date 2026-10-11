@@ -1,7 +1,11 @@
 # Study-card ingest — format-general, niche-agnostic
 
+**Spec:** [`MASS-INGEST.md`](./MASS-INGEST.md) — mass ingestion, honesty gate, fonts, volume targets.
+
 **Job:** any real ad (file or text) → card with **measured** stats and `provenance.observed:true`.  
 Studying ≠ storing. Extract the assembly recipe; media never enters git.
+
+**Honesty:** `observed:true` is refused when video loudness is null/≤−60 LUFS or `shot_count:0` (kills digital-silence placeholders). No-video formats require measured OCR/text instead.
 
 ## Legal floor
 
@@ -43,6 +47,18 @@ node classroom/ingest/ingest-ad.mjs --confirm classroom/study-cards/home-service
 | Video | ffmpeg `scdet` cuts, `ebur128`, `silencedetect`, `tblend`+`signalstats` motion, `palettegen`, tesseract OCR frame |
 | Static / carousel | tesseract OCR + zones, palette, contrast, 3-band layout |
 | Text text | headline/description/CTA char counts (timing fields null, not absent) |
+
+## Mass ingest
+
+```bash
+# Needs: npm install in classroom/ingest (playwright) + npx playwright install chromium
+node classroom/ingest/enumerate-ads.mjs --niche home-services --limit 30
+node classroom/ingest/mass-ingest.mjs --confirm --limit 40
+node classroom/scripts/derive-patterns.mjs
+node classroom/scripts/prove-corpus-ingest.mjs
+```
+
+Run log: `classroom/ingest/logs/last-mass-ingest.json` (attempted vs accepted per source).
 
 ## Access matrix (honest)
 

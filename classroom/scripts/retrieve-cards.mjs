@@ -14,6 +14,7 @@ import {
   resolveFormat,
   NICHES,
 } from "./lib-corpus.mjs";
+import { isGenuinelyObserved } from "./observed-honesty.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -47,7 +48,7 @@ const coverage = q.niche
       floor_ok: true,
       ceiling: "no niche filter",
       achieved_rung: "unscoped",
-      observed_count: all.filter((c) => c.provenance?.observed).length,
+      observed_count: all.filter((c) => isGenuinelyObserved(c)).length,
       formats: [],
       missing: [],
     };
@@ -82,7 +83,7 @@ function score(c) {
   if (nicheCanon && (c.niche === nicheCanon || (c.tags || []).includes(nicheCanon))) s += 5;
   if (q.platform && c.source?.platform === q.platform) s += 3;
   if (q.format && resolveFormat(c.format) === resolveFormat(q.format)) s += 4;
-  if (c.provenance?.observed === true) s += 6;
+  if (isGenuinelyObserved(c)) s += 6;
   if ((c.tags || []).includes("technique")) s += 1;
   if (c.gold_fixture) s += 2;
   return s;
@@ -94,14 +95,14 @@ const ranked = cards
   .sort((a, b) => {
     if (b.s !== a.s) return b.s - a.s;
     // Prefer observed over synthesis when tied
-    const ao = a.c.provenance?.observed ? 1 : 0;
-    const bo = b.c.provenance?.observed ? 1 : 0;
+    const ao = isGenuinelyObserved(a.c) ? 1 : 0;
+    const bo = isGenuinelyObserved(b.c) ? 1 : 0;
     return bo - ao;
   })
   .slice(0, q.limit)
   .map((x) => x.c);
 
-const observedInResult = ranked.filter((c) => c.provenance?.observed === true).length;
+const observedInResult = ranked.filter((c) => isGenuinelyObserved(c)).length;
 
 console.log(
   JSON.stringify(

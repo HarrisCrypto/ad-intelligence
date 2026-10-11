@@ -1,0 +1,61 @@
+{
+  "id": "pat_skincare_text_search",
+  "niche": "skincare",
+  "format": "text_search",
+  "n_cards": 8,
+  "cites": [
+    "gat_cr02226543421709877249",
+    "gat_cr03898826184363868161",
+    "gat_cr05714656099899015169",
+    "gat_cr09011009552157507585",
+    "gat_cr12946511166636556289",
+    "gat_cr12949051184525606913",
+    "gat_cr14989181815724441601",
+    "gat_cr18375325785553633281"
+  ],
+  "source_ids": [
+    "https://adstransparency.google.com/advertiser/AR13853587849867165697/creative/CR02226543421709877249?region=US",
+    "https://adstransparency.google.com/advertiser/AR04370670630077464577/creative/CR03898826184363868161?region=US",
+    "https://adstransparency.google.com/advertiser/AR13853587849867165697/creative/CR05714656099899015169?region=US",
+    "https://adstransparency.google.com/advertiser/AR13853587849867165697/creative/CR09011009552157507585?region=US",
+    "https://adstransparency.google.com/advertiser/AR13853587849867165697/creative/CR12946511166636556289?region=US",
+    "https://adstransparency.google.com/advertiser/AR13853587849867165697/creative/CR12949051184525606913?region=US",
+    "https://adstransparency.google.com/advertiser/AR13853587849867165697/creative/CR14989181815724441601?region=US",
+    "https://adstransparency.google.com/advertiser/AR13853587849867165697/creative/CR18375325785553633281?region=US"
+  ],
+  "cuts": {
+    "mean_cuts_per_10s": null,
+    "mean_avg_shot_s": null,
+    "mean_first_cut_at_s": null,
+    "mean_longest_hold_s": null,
+    "samples": [],
+    "source": "measured_aggregate"
+  },
+  "content": {
+    "hook_frequency": {
+      "headline qualification": 8
+    },
+    "beat_order_frequency": {},
+    "proof_placement": {
+      "The information about this ad may vary by location": 8
+    },
+    "cta_wording": {
+      "learn more": 8
+    },
+    "cta_timing_s": []
+  },
+  "fonts_craft": {
+    "font_class_frequency": {
+      "rounded-sans": 8
+    },
+    "font_guess_frequency": {
+      "rounded-sans": 8
+    },
+    "caption_style_frequency": {},
+    "palette_samples": [],
+    "grade_notes": {},
+    "sfx_density": {}
+  },
+  "floor_note": "enough cards for directional norms",
+  "honest_limit": "Patterns teach assembly from real ads; they do not supply the brand's own material."
+}

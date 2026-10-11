@@ -1,0 +1,278 @@
+{
+  "id": "arc_chevrolet_spot",
+  "status": "confirmed",
+  "source": {
+    "platform": "archive.org",
+    "url_or_library_id": "archive.org:chevrolet",
+    "accessed": "2026-10-11",
+    "rights": "annotation-only",
+    "verified_via": "agent_runtime"
+  },
+  "niche": "home-services",
+  "format": "polished_video",
+  "structure": {
+    "format": "video_timed",
+    "timing_observable": true,
+    "format_note": "Measured ingest (polished_video); cuts from ffmpeg scdet"
+  },
+  "duration_s": 61.061,
+  "aspect": "16:9",
+  "provenance": {
+    "observed": true,
+    "basis": "ffmpeg:scdet+ebur128+silencedetect+tblend/signalstats+palettegen; tesseract OCR frame; font heuristic",
+    "measured_at": "2026-10-11T02:46:07.912Z",
+    "media_path_local": "classroom/private-cache/arc_chevrolet_spot.mp4",
+    "media_committed": false
+  },
+  "measured_by": {
+    "tooling": [
+      "ffmpeg:scdet",
+      "ffmpeg:ebur128",
+      "ffmpeg:silencedetect",
+      "ffmpeg:tblend+signalstats",
+      "ffmpeg:palettegen",
+      "tesseract",
+      "font-heuristic"
+    ],
+    "honesty_errors": []
+  },
+  "hook": {
+    "mechanism": "[FILL from watch — first 1–2s device]",
+    "first_second_description": "[FILL — photographed moment, not a card]",
+    "on_screen_text": "Q",
+    "spoken": null
+  },
+  "shots": [
+    {
+      "t_start": 0,
+      "t_end": 0.1,
+      "purpose": "hook",
+      "on_screen_text": "Q",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 1/2 from arc_chevrolet_spot.mp4"
+    },
+    {
+      "t_start": 0.1,
+      "t_end": 61.061,
+      "purpose": "cta_or_hold",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 2/2 from arc_chevrolet_spot.mp4"
+    }
+  ],
+  "recipe": {
+    "hook": "[FILL]",
+    "beats": [
+      {
+        "t_start": 0,
+        "t_end": 0.1,
+        "purpose": "hook"
+      },
+      {
+        "t_start": 0.1,
+        "t_end": 61.061,
+        "purpose": "cta_or_hold"
+      }
+    ],
+    "pacing_curve": {
+      "cuts_per_10s": 0.16,
+      "first_cut_at_s": 0.1,
+      "longest_hold_s": 60.961,
+      "source": "measured"
+    },
+    "proof": "[FILL]",
+    "cta": "[FILL]"
+  },
+  "stats": {
+    "shot_count": 2,
+    "avg_shot_s": 30.53,
+    "cuts_per_10s": 0.16,
+    "longest_hold_s": 60.961,
+    "first_cut_at_s": 0.1,
+    "text_density": "ocr_hit",
+    "loudness_lufs": -24.8,
+    "true_peak_dbfs": -10.2,
+    "silence_gaps": [
+      {
+        "t_start": 0.402729,
+        "t_end": 1.62256
+      },
+      {
+        "t_start": 2.006,
+        "t_end": 2.64842
+      },
+      {
+        "t_start": 9.57983,
+        "t_end": 10.27
+      },
+      {
+        "t_start": 14.6944,
+        "t_end": 15.2536
+      },
+      {
+        "t_start": 16.077,
+        "t_end": 16.4286
+      },
+      {
+        "t_start": 17.5727,
+        "t_end": 18.1862
+      },
+      {
+        "t_start": 24.68,
+        "t_end": 25.3102
+      },
+      {
+        "t_start": 26.3105,
+        "t_end": 26.7084
+      },
+      {
+        "t_start": 27.6582,
+        "t_end": 28.5631
+      },
+      {
+        "t_start": 30.5555,
+        "t_end": 31.2665
+      },
+      {
+        "t_start": 39.4361,
+        "t_end": 40.1899
+      },
+      {
+        "t_start": 54.4898,
+        "t_end": 55.3494
+      },
+      {
+        "t_start": 57.1841,
+        "t_end": 57.6671
+      },
+      {
+        "t_start": 59.4446,
+        "t_end": 60.9186
+      }
+    ],
+    "motion": {
+      "samples_per_s": 0,
+      "mean_yavg": null,
+      "motion_ratio": 1,
+      "freeze_s": 0,
+      "curve": [],
+      "source": "measured"
+    },
+    "probe": {
+      "width": 320,
+      "height": 240,
+      "duration_s": 61.061061,
+      "has_audio": true
+    },
+    "stats_source": "measured"
+  },
+  "audio": {
+    "loudness_lufs": -24.8,
+    "true_peak_dbfs": -10.2,
+    "silence_gaps": [
+      {
+        "t_start": 0.402729,
+        "t_end": 1.62256
+      },
+      {
+        "t_start": 2.006,
+        "t_end": 2.64842
+      },
+      {
+        "t_start": 9.57983,
+        "t_end": 10.27
+      },
+      {
+        "t_start": 14.6944,
+        "t_end": 15.2536
+      },
+      {
+        "t_start": 16.077,
+        "t_end": 16.4286
+      },
+      {
+        "t_start": 17.5727,
+        "t_end": 18.1862
+      },
+      {
+        "t_start": 24.68,
+        "t_end": 25.3102
+      },
+      {
+        "t_start": 26.3105,
+        "t_end": 26.7084
+      },
+      {
+        "t_start": 27.6582,
+        "t_end": 28.5631
+      },
+      {
+        "t_start": 30.5555,
+        "t_end": 31.2665
+      },
+      {
+        "t_start": 39.4361,
+        "t_end": 40.1899
+      },
+      {
+        "t_start": 54.4898,
+        "t_end": 55.3494
+      },
+      {
+        "t_start": 57.1841,
+        "t_end": 57.6671
+      },
+      {
+        "t_start": 59.4446,
+        "t_end": 60.9186
+      }
+    ],
+    "source": "measured"
+  },
+  "look": {
+    "palette": [
+      "#eeeeeb",
+      "#eeeeeb",
+      "#eeeeeb",
+      "#eeeeeb",
+      "#eeeeeb",
+      "#eeeeeb"
+    ],
+    "palette_source": "measured",
+    "caption_style": "[FILL]",
+    "grade": "[FILL]",
+    "ocr_sample": "Q",
+    "font_guess": "gothic-caps",
+    "font_class": "gothic-caps",
+    "font_source": "heuristic-ocr"
+  },
+  "cta": {
+    "primary": "[FILL]",
+    "timing_s": null
+  },
+  "offer_and_proof": {
+    "offer": "[FILL]",
+    "proof": "[PLACEHOLDER]"
+  },
+  "why_it_works": "Measured from public Prelinger/archive.org commercial (archive.org:chevrolet). Real audio+cuts; study assembly only — never copy talent, marks, or claims.",
+  "steal": [
+    "Pacing/cut rhythm from measured stats",
+    "On-screen offer framing",
+    "Caption/endcard timing"
+  ],
+  "what_not_to_copy": [
+    "Competitor pixels / logos / talent likeness",
+    "Verbatim scripts or uncleared audio",
+    "Invented proof"
+  ],
+  "tags": [
+    "home-services",
+    "polished_video",
+    "ingest",
+    "observed",
+    "confirmed"
+  ],
+  "materials_ceiling": "Corpus teaches assembly; brand material still needs USER_SUPPLIED → i2v → vetted stock"
+}

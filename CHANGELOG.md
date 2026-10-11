@@ -1,5 +1,23 @@
 # Changelog
 
+## Unreleased — Mass real-ad corpus (honesty + volume)
+
+**Diagnosis:** Four "observed" cards measured `lufs:-70` (digital silence) — placeholders wearing an observed flag.
+
+### Added
+- `classroom/ingest/MASS-INGEST.md` — mass ingestion spec (sources, enumeration, fonts, acceptance)
+- `enumerate-ads.mjs` + `seeds.json` + `mass-ingest.mjs` — Google Ads Transparency walker (Playwright)
+- `observed-honesty.mjs` — video must have loudness > −60 and shot_count ≥ 1; no-video needs OCR/text
+- Font fields: `look.font_guess` + `look.font_class` on ingest
+- 50+ genuinely observed cards across home-services / saas / skincare / dental (GAT text/static + Prelinger commercials)
+- Patterns answer **cuts / content / fonts_craft** with ad-ID citations
+- `ingest/logs/last-mass-ingest.json` run log
+
+### Changed
+- Reflagged silence placeholders → `observed:false` / `draft`
+- ebur128 parser uses Summary integrated loudness (not progressive −70 lines)
+- Retrieve floor counts only honesty-passing observed cards
+
 ## Unreleased — Universal corpus (niche-agnostic, format-general)
 
 **Correction:** Sub-shop across all brands — niches are data rows, not code paths; must study **no-video** ads too (offer/copy/CTA). Studying = assembly recipes aggregated as counted patterns, not media storage.
