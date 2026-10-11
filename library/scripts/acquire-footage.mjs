@@ -163,18 +163,81 @@ function hammingHex(a, b) {
   return d;
 }
 
-async function searchCoverr(query, limit) {
+function titleFromCoverrId(id) {
+  return id.replace(/^coverr-?(premium-)?/, "").replace(/-/g, " ");
+}
+
+/** Pre-filter Coverr/Mixkit ids by bucket strong tokens before download */
+function titleLikelyForBucket(title, bucketId) {
+  const blob = title.toLowerCase();
+  const rules = {
+    hook_vehicle: {
+      any: ["van", "truck", "pickup", "cargo", "freight"],
+      none: [
+        "bike",
+        "bicycle",
+        "cyclist",
+        "scooter",
+        "workout",
+        "photographer",
+        "barista",
+        "surf",
+        "camper",
+        "couple",
+        "kiss",
+        "beach",
+        "romance",
+        "combi",
+      ],
+    },
+    hook_phone_ring: {
+      any: ["phone", "smartphone", "mobile", "call", "cellphone"],
+      none: [],
+    },
+    problem_hands_tools: {
+      any: ["tool", "wrench", "drill", "repair", "plumber", "hands", "hammer", "pipe", "technician"],
+      none: ["weed", "makeup", "cooking", "jewelry", "ring"],
+    },
+    person_face: {
+      any: ["worker", "technician", "plumber", "construction", "builder", "contractor", "electrician"],
+      none: ["runway", "fashion"],
+    },
+    product_screen: {
+      any: ["app", "phone", "smartphone", "calendar", "screen", "tablet", "booking"],
+      none: ["crypto"],
+    },
+    place_job_site: {
+      any: ["house", "home", "residential", "suburban", "driveway", "cottage", "garage"],
+      none: ["skyline", "map"],
+    },
+    result_booking: {
+      any: ["calendar", "booking", "appointment", "schedule", "confirm"],
+      none: ["crypto"],
+    },
+    money_or_cost: {
+      any: ["bill", "invoice", "closed", "worried", "receipt", "empty", "dark"],
+      none: ["casino", "crypto"],
+    },
+  };
+  const r = rules[bucketId];
+  if (!r) return true;
+  if (r.none.some((n) => blob.includes(n))) return false;
+  return r.any.some((a) => blob.includes(a));
+}
+
+async function searchCoverr(query, limit, bucketId) {
   const html = await fetchText(`https://coverr.co/s?q=${encodeURIComponent(query)}`);
   const urls = [...html.matchAll(/https:\/\/cdn\.coverr\.co\/videos\/([^"'\\s]+)\/360p\.mp4/g)].map(
     (m) => m[1]
   );
   const uniq = [...new Set(urls)].filter((id) => !id.startsWith("user-ai-generation"));
-  return uniq.slice(0, limit).map((id) => ({
+  const filtered = uniq.filter((id) => titleLikelyForBucket(titleFromCoverrId(id), bucketId));
+  const pick = (filtered.length ? filtered : []).slice(0, limit);
+  return pick.map((id) => ({
     source: "coverr",
     id,
-    title: id.replace(/^coverr-?(premium-)?/, "").replace(/-/g, " "),
+    title: titleFromCoverrId(id),
     pageUrl: `https://coverr.co/videos/${id}`,
-    // Prefer 1080p download; falls back in download step
     urls: [
       `https://cdn.coverr.co/videos/${id}/1080p.mp4?download=true`,
       `https://cdn.coverr.co/videos/${id}/720p.mp4?download=true`,
@@ -184,24 +247,51 @@ async function searchCoverr(query, limit) {
   }));
 }
 
-async function searchMixkit(category, limit) {
-  const html = await fetchText(`https://mixkit.co/free-stock-video/${encodeURIComponent(category)}/`);
+async function searchMixkit(category, limit, bucketId) {
+  // Prefer search pages when category is a free-text query
+  const urlsTry = [
+    `https://mixkit.co/free-stock-video/${encodeURIComponent(category)}/`,
+    `https://mixkit.co/free-stock-video/search/?q=${encodeURIComponent(category)}`,
+  ];
+  let html = "";
+  for (const u of urlsTry) {
+    try {
+      html = await fetchText(u);
+      if (html.includes("assets.mixkit.co/videos")) break;
+    } catch {
+      /* try next */
+    }
+  }
   const ids = [...html.matchAll(/https:\/\/assets\.mixkit\.co\/videos\/(\d+)\/\1-360\.mp4/g)].map(
     (m) => m[1]
   );
-  const uniq = [...new Set(ids)];
-  return uniq.slice(0, limit).map((id) => ({
-    source: "mixkit",
-    id,
-    title: `mixkit ${category} ${id}`,
-    pageUrl: `https://mixkit.co/free-stock-video/`,
-    urls: [
-      `https://assets.mixkit.co/videos/${id}/${id}-1080.mp4`,
-      `https://assets.mixkit.co/videos/${id}/${id}-720.mp4`,
-      `https://assets.mixkit.co/videos/${id}/${id}-360.mp4`,
-    ],
-    license: "Mixkit-License",
-  }));
+  // Pull nearby slug/title hints from hrefs
+  const titled = [];
+  for (const id of [...new Set(ids)]) {
+    const m = html.match(
+      new RegExp(`free-stock-video/([a-z0-9-]+)-${id}/`, "i")
+    );
+    const title = m ? m[1].replace(/-/g, " ") : `mixkit ${category} ${id}`;
+    if (!titleLikelyForBucket(title, bucketId) && !titleLikelyForBucket(category, bucketId)) {
+      continue;
+    }
+    titled.push({
+      source: "mixkit",
+      id,
+      title,
+      pageUrl: m
+        ? `https://mixkit.co/free-stock-video/${m[1]}-${id}/`
+        : `https://mixkit.co/free-stock-video/`,
+      urls: [
+        `https://assets.mixkit.co/videos/${id}/${id}-720.mp4`,
+        `https://assets.mixkit.co/videos/${id}/${id}-1080.mp4`,
+        `https://assets.mixkit.co/videos/${id}/${id}-360.mp4`,
+      ],
+      license: "Mixkit-License",
+    });
+    if (titled.length >= limit) break;
+  }
+  return titled;
 }
 
 async function searchWikimediaVideo(query, limit) {
@@ -326,19 +416,45 @@ async function harvestBucket({ niche, bucket, keep, harvest }) {
   const qWiki = bucket.queries?.wikimedia_video || [];
   const qPex = bucket.queries?.pexels || [];
 
-  for (const q of qCoverr.slice(0, 4)) {
+  // Curated seeds first (verified Mixkit ids) — search relevance is weak for trades
+  for (const s of bucket.seed_clips || []) {
+    if (s.source === "mixkit" && s.id) {
+      candidates.push({
+        source: "mixkit",
+        id: String(s.id),
+        title: s.title || `mixkit ${s.id}`,
+        pageUrl: `https://mixkit.co/free-stock-video/`,
+        urls: [
+          // Prefer 720p for repo size; 1080p available if 720 missing
+          `https://assets.mixkit.co/videos/${s.id}/${s.id}-720.mp4`,
+          `https://assets.mixkit.co/videos/${s.id}/${s.id}-1080.mp4`,
+          `https://assets.mixkit.co/videos/${s.id}/${s.id}-360.mp4`,
+        ],
+        license: "Mixkit-License",
+        query: "seed_clip",
+      });
+    }
+  }
+
+  for (const q of qCoverr.slice(0, 5)) {
     try {
       candidates.push(
-        ...(await searchCoverr(q, Math.ceil(harvest / 3))).map((c) => ({ ...c, query: q }))
+        ...(await searchCoverr(q, Math.ceil(harvest / 2), bucket.id)).map((c) => ({
+          ...c,
+          query: q,
+        }))
       );
     } catch (e) {
       console.error("coverr", q, e.message);
     }
   }
-  for (const q of qMix.slice(0, 3)) {
+  for (const q of qMix.slice(0, 4)) {
     try {
       candidates.push(
-        ...(await searchMixkit(q, Math.ceil(harvest / 4))).map((c) => ({ ...c, query: q }))
+        ...(await searchMixkit(q, Math.ceil(harvest / 3), bucket.id)).map((c) => ({
+          ...c,
+          query: q,
+        }))
       );
     } catch (e) {
       console.error("mixkit", q, e.message);

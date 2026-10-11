@@ -140,8 +140,9 @@ for (let i = 1; i < nFrames; i++) {
 meanDiff = diffs ? meanDiff / diffs : 0;
 
 // Thresholds: near-static stock "Ken Burns of a still" fails both
-const FAIL_MEAN = 1.8; // mean abs pixel delta on 0–255 grey
-const FAIL_FREEZE_RATIO = 0.72;
+// Subtle hand/tool motion often lands 1.2–2.0; Ken-Burns stills are <<1.0
+const FAIL_MEAN = 1.15;
+const FAIL_FREEZE_RATIO = 0.78;
 
 const staticFail = meanDiff < FAIL_MEAN || freezeRatio >= FAIL_FREEZE_RATIO;
 const motion =

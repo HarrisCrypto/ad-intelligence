@@ -1,8 +1,8 @@
 {
   "niche": "home-services",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "updated": "2026-10-11",
-  "rule": "Every bucket needs real moving clips. Stills never fill a footage slot. Eligible = kind:video + reject:false + motion_confirmed:true + niche_fit high|med.",
+  "rule": "Every bucket needs real moving clips. Stills never fill a footage slot. Eligible = kind:video + reject:false + motion_confirmed:true + niche_fit high|med. Prefer seed_clips (verified Mixkit ids) then search.",
   "keep_per_bucket": { "min": 3, "max": 5 },
   "harvest_candidates_per_bucket": 16,
   "buckets": [
@@ -10,144 +10,184 @@
       "id": "hook_vehicle",
       "priority": "P0",
       "must_depict": [
-        "work van or trade truck",
-        "on a real street or driveway",
+        "work van or trade/freight truck",
+        "on a real road or lot",
         "not a diagram",
-        "not a random passenger car without trade context"
+        "not a beach camper / romance van"
       ],
       "subject": "trade_vehicle",
       "shot_type": ["exterior", "establishing"],
+      "seed_clips": [
+        { "source": "mixkit", "id": "28787", "title": "cargo truck driving on the highway" },
+        { "source": "mixkit", "id": "44621", "title": "white van crossing a desert aerial" },
+        { "source": "mixkit", "id": "23011", "title": "freight truck arriving at the warehouse" },
+        { "source": "mixkit", "id": "45488", "title": "large truck driving along a rural highway" },
+        { "source": "mixkit", "id": "23174", "title": "worker leading a freight truck in the parking" }
+      ],
       "queries": {
-        "coverr": ["work van street", "delivery van city", "service truck driveway", "plumber van"],
-        "mixkit": ["van", "truck", "delivery"],
-        "wikimedia_video": ["work van", "service truck"],
-        "pexels": ["work van street daylight", "white cargo van parked street"]
+        "coverr": ["cargo van", "delivery van", "work truck"],
+        "mixkit": ["truck", "van"],
+        "wikimedia_video": ["cargo truck"],
+        "pexels": ["cargo van street", "freight truck warehouse"]
       },
-      "reject_hints": ["diagram", "schematic", "sedan only", "illustration"]
+      "reject_hints": ["diagram", "camper", "surf", "couple kiss", "sedan"]
     },
     {
       "id": "hook_phone_ring",
       "priority": "P0",
       "must_depict": [
         "real phone device",
-        "ringing or missed-call / notification moment",
-        "hands or desk context preferred"
+        "call / answer / messaging moment",
+        "hands or person context preferred"
       ],
       "subject": "phone_call",
       "shot_type": ["insert", "closeup"],
+      "seed_clips": [
+        { "source": "mixkit", "id": "41165", "title": "man answering a whatsapp call" },
+        { "source": "mixkit", "id": "24328", "title": "man calling car insurance for a broken car" },
+        { "source": "mixkit", "id": "100853", "title": "worried woman calling from a telephone booth" },
+        { "source": "mixkit", "id": "14669", "title": "hands texting on a mobile phone at night" },
+        { "source": "mixkit", "id": "1442", "title": "man on the phone near a construction site" }
+      ],
       "queries": {
-        "coverr": ["phone ringing", "smartphone notification", "missed call phone", "person answering phone"],
+        "coverr": ["phone call", "answering phone", "smartphone call"],
         "mixkit": ["phone", "smartphone", "calling"],
-        "wikimedia_video": ["smartphone ringing"],
-        "pexels": ["phone ringing on desk", "person looking at ringing phone"]
+        "pexels": ["person answering phone call"]
       },
-      "reject_hints": ["diagram", "app icon only", "stock logo splash"]
+      "reject_hints": ["diagram", "selfie hollywood"]
     },
     {
       "id": "problem_hands_tools",
       "priority": "P0",
       "must_depict": [
         "real human hands",
-        "real tools or repair work",
-        "trades / maintenance context"
+        "real tools or trade repair work"
       ],
       "subject": "hands_tools",
       "shot_type": ["closeup", "detail"],
+      "seed_clips": [
+        { "source": "mixkit", "id": "49024", "title": "plumber checking installations during house construction" },
+        { "source": "mixkit", "id": "773", "title": "carpenter cleaning his tools" },
+        { "source": "mixkit", "id": "771", "title": "carpenter working at his workshop" },
+        { "source": "mixkit", "id": "23533", "title": "worker with tools on the workshop" },
+        { "source": "mixkit", "id": "23601", "title": "construction worker shows a cutting tool" }
+      ],
       "queries": {
-        "coverr": ["hands tools repair", "technician working hands", "plumber hands wrench", "electrician hands"],
-        "mixkit": ["tools", "repair", "hands"],
-        "wikimedia_video": ["hands tools repair"],
-        "pexels": ["technician hands tools", "plumber wrench close up"]
+        "coverr": ["carpenter tools", "plumber repair", "construction tools hands"],
+        "mixkit": ["tools", "repair", "carpenter"],
+        "pexels": ["plumber hands wrench", "carpenter tools workshop"]
       },
-      "reject_hints": ["illustration", "3d render tools", "empty toolbox still life only"]
+      "reject_hints": ["weed", "makeup", "jewelry"]
     },
     {
       "id": "person_face",
       "priority": "P0",
       "must_depict": [
-        "real tradesperson or small-business owner",
-        "recognizable face or upper body",
-        "natural light preferred"
+        "real tradesperson or construction worker",
+        "recognizable face or upper body"
       ],
       "subject": "person",
       "shot_type": ["portrait", "medium"],
+      "seed_clips": [
+        { "source": "mixkit", "id": "1459", "title": "construction workers at a house under construction" },
+        { "source": "mixkit", "id": "31473", "title": "builders working at the construction site" },
+        { "source": "mixkit", "id": "1436", "title": "two construction workers" },
+        { "source": "mixkit", "id": "32296", "title": "builders at construction site taking a rest" },
+        { "source": "mixkit", "id": "1457", "title": "two workers at a construction site" }
+      ],
       "queries": {
-        "coverr": ["construction worker portrait", "plumber talking", "technician face", "small business owner"],
-        "mixkit": ["worker", "construction", "portrait"],
-        "wikimedia_video": ["construction worker"],
-        "pexels": ["HVAC technician portrait", "plumber talking customer"]
+        "coverr": ["construction worker", "builder portrait"],
+        "mixkit": ["construction", "worker"],
+        "pexels": ["construction worker portrait"]
       },
-      "reject_hints": ["crowd only", "back of head only", "celebrity", "illustration"]
+      "reject_hints": ["runway", "fashion model"]
     },
     {
       "id": "product_screen",
       "priority": "P0",
       "must_depict": [
-        "real product UI in use",
-        "screen recording or phone UI readable",
-        "not a neon fake dashboard"
+        "phone/tablet UI in use",
+        "booking or app interaction preferred",
+        "prefer USER_SUPPLIED real product screen record for ship"
       ],
       "subject": "product_ui",
       "shot_type": ["screen", "insert"],
+      "seed_clips": [
+        { "source": "mixkit", "id": "34197", "title": "scheduling an appointment on a smartphone" },
+        { "source": "mixkit", "id": "42629", "title": "checking the calendar on a tablet" },
+        { "source": "mixkit", "id": "144", "title": "hands shown texting on a smartphone" },
+        { "source": "mixkit", "id": "4915", "title": "hands typing on a cell phone" }
+      ],
       "queries": {
-        "coverr": ["smartphone app scrolling", "mobile app interface hands", "calendar booking phone"],
-        "mixkit": ["smartphone", "app", "typing"],
-        "wikimedia_video": ["smartphone app"],
-        "pexels": ["hands using phone app booking", "calendar on phone screen"]
+        "coverr": ["smartphone app", "calendar phone"],
+        "mixkit": ["smartphone", "calendar"],
+        "pexels": ["scheduling appointment smartphone"]
       },
-      "reject_hints": ["neon cockpit", "invented metrics HUD", "competitor branded UI"],
-      "notes": "Prefer USER_SUPPLIED screen record of the real product. Stock UI is niche_fit med at best."
+      "reject_hints": ["neon cockpit", "crypto chart"],
+      "notes": "Stock UI = niche_fit med. Real product screen record = high."
     },
     {
       "id": "place_job_site",
       "priority": "P1",
       "must_depict": [
-        "real home or facility a trade visits",
-        "exterior or interior job context"
+        "real home / residential / job-site place a trade visits"
       ],
       "subject": "place",
       "shot_type": ["establishing", "wide"],
+      "seed_clips": [
+        { "source": "mixkit", "id": "48394", "title": "flying over suburban houses with quiet streets" },
+        { "source": "mixkit", "id": "27396", "title": "cars driving down residential streets" },
+        { "source": "mixkit", "id": "1459", "title": "construction workers at a house under construction" },
+        { "source": "mixkit", "id": "25480", "title": "building frames in a construction site" }
+      ],
       "queries": {
-        "coverr": ["suburban house exterior", "home driveway daytime", "residential street house"],
-        "mixkit": ["house", "home", "residential"],
-        "wikimedia_video": ["suburban house"],
-        "pexels": ["American suburban house exterior", "home HVAC outdoor unit"]
+        "coverr": ["suburban house", "residential street"],
+        "mixkit": ["house", "residential", "suburban"],
+        "pexels": ["suburban house exterior daytime"]
       },
-      "reject_hints": ["skyline stock as geo", "map", "floorplan diagram"]
+      "reject_hints": ["skyline only", "map", "floorplan"]
     },
     {
       "id": "result_booking",
       "priority": "P1",
       "must_depict": [
-        "booking / calendar / confirmation outcome",
-        "relief or done state"
+        "booking / calendar / schedule confirmation outcome"
       ],
       "subject": "booking_outcome",
       "shot_type": ["insert", "reaction"],
+      "seed_clips": [
+        { "source": "mixkit", "id": "34197", "title": "scheduling an appointment on a smartphone" },
+        { "source": "mixkit", "id": "42629", "title": "checking the calendar on a tablet" },
+        { "source": "mixkit", "id": "16105", "title": "lawyer checks schedule and smiles" },
+        { "source": "mixkit", "id": "17412", "title": "marking a calendar" }
+      ],
       "queries": {
-        "coverr": ["calendar phone confirmation", "appointment booked phone", "checkmark phone success"],
-        "mixkit": ["calendar", "success", "phone"],
-        "wikimedia_video": ["calendar smartphone"],
-        "pexels": ["phone calendar appointment", "confirmation on smartphone"]
+        "coverr": ["calendar phone", "appointment smartphone"],
+        "mixkit": ["calendar", "booking"],
+        "pexels": ["marking calendar appointment"]
       },
-      "reject_hints": ["invented ROI chart", "fake analytics"]
+      "reject_hints": ["crypto", "roi dashboard"]
     },
     {
       "id": "money_or_cost",
       "priority": "P2",
       "must_depict": [
-        "real cost signal",
-        "invoice, empty calendar, dark closed shop, or missed-work consequence"
+        "real cost signal — bills, invoice, worried call, empty/dark home stress"
       ],
       "subject": "cost_signal",
       "shot_type": ["insert", "mood"],
+      "seed_clips": [
+        { "source": "mixkit", "id": "18296", "title": "man counting a wad of bills close up" },
+        { "source": "mixkit", "id": "24328", "title": "man calling car insurance for a broken car" },
+        { "source": "mixkit", "id": "51404", "title": "worried woman walking through apartment at night" },
+        { "source": "mixkit", "id": "18297", "title": "man searching for a banknote in his wallet" }
+      ],
       "queries": {
-        "coverr": ["closed shop night", "empty office dark", "invoice paper desk", "worried looking at phone bills"],
-        "mixkit": ["night", "office", "bills"],
-        "wikimedia_video": ["closed shop"],
-        "pexels": ["dark closed storefront night", "person stressed looking at bills phone"]
+        "coverr": ["worried phone bills", "counting money bills"],
+        "mixkit": ["bills", "worried"],
+        "pexels": ["person stressed looking at bills"]
       },
-      "reject_hints": ["stock money rain", "crypto charts", "fake dollar overlays"]
+      "reject_hints": ["money rain", "casino", "crypto"]
     }
   ]
 }
