@@ -87,10 +87,12 @@
       "name": "Coverr",
       "kind": ["footage"],
       "cost": "free",
-      "auth": "none / site download",
-      "quality": "high vertical/horizontal stock video",
+      "auth": "none",
+      "license": "CC0",
+      "quality": "high stock video — primary free-motion source",
       "safe": true,
-      "notes": "Manual or site API if available — check license page"
+      "acquire": "node library/scripts/acquire-footage.mjs",
+      "notes": "CDN mp4 via search HTML; prefer 1080p?download=true"
     },
     {
       "id": "incompetech",

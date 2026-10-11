@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 /**
- * Per-niche asset-gap report — makes the materials ceiling visible.
+ * Per-niche asset-gap report — bucket-aware motion coverage (not filename matches).
  *
  *   node library/scripts/asset-gap-report.mjs --niche home-services
  */
+import { spawnSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -22,29 +23,12 @@ const ledger = JSON.parse(
   fs.readFileSync(path.join(LIB, "assets/license-ledger.json"), "utf8")
 );
 
-const REQUIRED = {
-  "home-services": {
-    music_bed: 1,
-    sfx_phone: 1,
-    sfx_ui: 1,
-    ambience: 1,
-    footage_tags: [
-      "after-hours phone on desk",
-      "tradesperson hands / tools",
-      "work van or bay",
-      "real facility exterior",
-      "owner/talking-head UGC",
-    ],
-  },
-  saas: {
-    music_bed: 1,
-    sfx_ui: 1,
-    ambience: 1,
-    footage_tags: ["real hands on laptop", "office desk practical light", "phone notification moment"],
-  },
+const AUDIO_NEED = {
+  "home-services": { music_bed: 1, sfx_phone: 1, sfx_ui: 1, ambience: 1 },
+  saas: { music_bed: 1, sfx_ui: 1, ambience: 1 },
 };
 
-const need = REQUIRED[niche] || REQUIRED["home-services"];
+const need = AUDIO_NEED[niche] || AUDIO_NEED["home-services"];
 const assets = ledger.assets || [];
 
 function exists(a) {
@@ -54,10 +38,21 @@ function exists(a) {
 const beds = assets.filter((a) => a.kind === "music_bed" && exists(a));
 const sfx = assets.filter((a) => a.kind === "sfx" && exists(a));
 const amb = assets.filter((a) => a.kind === "ambience" && exists(a));
-const footage = assets.filter((a) => a.kind === "footage" && exists(a));
+const videos = assets.filter(
+  (a) =>
+    exists(a) &&
+    a.reject !== true &&
+    a.motion_confirmed === true &&
+    (a.kind === "video" || (a.kind === "footage" && a.media === "video")) &&
+    ["high", "med"].includes(a.niche_fit)
+);
 
-const phoneSfx = sfx.filter((a) => (a.tags || []).includes("phone") || (a.niches || []).includes(niche));
-const uiSfx = sfx.filter((a) => (a.tags || []).some((t) => ["ui", "click", "notification"].includes(t)));
+const phoneSfx = sfx.filter(
+  (a) => (a.tags || []).includes("phone") || (a.niches || []).includes(niche)
+);
+const uiSfx = sfx.filter((a) =>
+  (a.tags || []).some((t) => ["ui", "click", "notification"].includes(t))
+);
 
 const gaps = [];
 if (beds.length < need.music_bed) {
@@ -77,48 +72,44 @@ if (phoneSfx.length < (need.sfx_phone || 0)) {
   });
 }
 if (uiSfx.length < (need.sfx_ui || 0)) {
-  gaps.push({
-    bucket: "sfx_ui",
-    have: uiSfx.length,
-    need: need.sfx_ui,
-  });
+  gaps.push({ bucket: "sfx_ui", have: uiSfx.length, need: need.sfx_ui });
 }
 if (amb.length < need.ambience) {
   gaps.push({ bucket: "ambience", have: amb.length, need: need.ambience });
 }
 
-const TAG_ALIASES = {
-  "after-hours phone on desk": ["desk-phone", "phone", "smartphone", "desk"],
-  "tradesperson hands / tools": ["trades-hands", "hands", "tools", "technician", "wrench"],
-  "work van or bay": ["work-van", "van", "bay", "hvac-bay", "truck"],
-  "real facility exterior": ["facility", "hvac-tech", "hvac-bay", "outdoor unit", "building"],
-  "owner/talking-head UGC": ["owner-ugc", "portrait", "talking", "person"],
-  "real hands on laptop": ["laptop-hands", "laptop", "typing"],
-  "office desk practical light": ["office-desk", "office", "desk"],
-  "phone notification moment": ["desk-phone", "notification", "smartphone"],
-};
-
-const footageGaps = [];
-for (const tag of need.footage_tags || []) {
-  const aliases = TAG_ALIASES[tag] || tag.toLowerCase().split(/[\s/]+/).filter(Boolean);
-  const hit = footage.some((a) => {
-    const blob = `${(a.tags || []).join(" ")} ${a.id} ${a.path} ${a.query || ""}`.toLowerCase();
-    return aliases.some((al) => blob.includes(String(al).toLowerCase()));
-  });
-  if (!hit) {
-    footageGaps.push({
-      missing: tag,
-      note: "No ledgered footage — run fill-niche-gaps.mjs or USER_SUPPLIED shoot",
-    });
-  }
+// Bucket report via select-footage (source of truth)
+const sel = spawnSync(
+  process.execPath,
+  [path.join(__dirname, "select-footage.mjs"), "--niche", niche, "--report"],
+  { encoding: "utf8" }
+);
+let selection = {};
+try {
+  selection = JSON.parse(sel.stdout || "{}");
+} catch {
+  selection = {};
 }
 
+const footageGaps = (selection.gaps || []).map((id) => {
+  const pick = (selection.picks || []).find((p) => p.bucket === id);
+  return {
+    missing: id,
+    priority: pick?.priority || "?",
+    note:
+      pick?.why ||
+      "No eligible moving clip (kind:video + motion_confirmed + niche_fit). Never substitute a still.",
+  };
+});
+
+const p0Gaps = (selection.p0_gaps || []).length;
 const ceiling =
-  footageGaps.length >= 3
-    ? "designed_cards_on_void — NOT elite FB/TikTok native; disclose materials ceiling before generate"
+  selection.quality_ceiling ||
+  (p0Gaps >= 3
+    ? "designed_cards_on_void — P0 motion buckets missing; disclose before generate"
     : footageGaps.length > 0
-      ? "hybrid_gen_plus_stock — photographable moments incomplete; lower virality posture"
-      : "full_native_eligible — footage buckets covered (still prefer real shoot)";
+      ? "hybrid_gen_plus_stock — motion coverage incomplete"
+      : "full_native_motion — eligible video per bucket");
 
 const report = {
   niche,
@@ -129,22 +120,23 @@ const report = {
     sfx: sfx.length,
     phone_sfx: phoneSfx.length,
     ambience: amb.length,
-    footage: footage.length,
+    eligible_videos: videos.length,
   },
   audio_gaps: gaps,
   footage_gaps: footageGaps,
+  bucket_picks: selection.picks || [],
   have_audio_ids: [...beds, ...sfx, ...amb].map((a) => a.id),
   next_actions: [
     ...(footageGaps.length
       ? [
-          "Seed library/footage/ from Pexels/Pixabay/Mixkit with license-ledger rows",
-          "Or shoot 30s phone clip: ringing phone + van/bay + hands — highest leverage",
+          "node library/scripts/acquire-footage.mjs --niche " + niche,
+          "Or USER_SUPPLIED phone shoot for missing P0 buckets",
         ]
       : []),
-    "Run assert-assets.mjs before compose for this niche",
-    "See docs/PHASE-2.6-ASSET-REALISM.md",
+    "node library/scripts/assert-assets.mjs --niche " + niche,
+    "See library/footage/RULE.md",
   ],
-  rule: "Studying more ads will not fill footage_gaps. Materials unlock the look.",
+  rule: "Stills never fill footage slots. Counting files ≠ correctness — select by bucket.",
 };
 
 console.log(JSON.stringify(report, null, 2));

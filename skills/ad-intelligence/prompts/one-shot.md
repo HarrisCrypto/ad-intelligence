@@ -43,7 +43,11 @@ Agents fail when they fill ledgers before having an idea — or render a hook an
    a) Study id + provenance (observed/basis) + attention model + angle axis
       Steal study.steal; obey study.never_copy; follow when_to_emulate.
       NEVER cite basis:synthesis as observed proof or metrics.
-   b) Map study.human_build playbook + references/human-build-os.md to YOUR rung
+   b) HUMAN ASSEMBLY (before gen fluff):
+      node library/scripts/assemble-plan.mjs --card <closest-study-card> --niche …
+      Read references/human-assembly-playbook.md — select footage by bucket,
+      hard-cut between setups, lay audio, CapCut owns type.
+      Map study.human_build + human-build-os.md to YOUR rung.
    c) Concept: 3 one-liners → pick ONE → "Not the default because…"
       (ban: smiling hold-to-camera, floating product+particles, drone #1, neon SaaS cockpit, invented %)
    d) Timed script: ≥6 rows matching study/model timing (±). EXACT quoted VO/text.
@@ -51,6 +55,7 @@ Agents fail when they fill ledgers before having an idea — or render a hook an
    f) Craft: ≥2 #HEX, real fonts, motion, E1, 9:16+1:1 — cut/shots/animation named
    g) One paste-ready prompt PER unit (CAMERA/LIGHT/MOTION/GRADE/NEGATIVES)
    h) Start human-build LOG artifact (references/human-build-log.template.md)
+      Seed shape: examples/human-build-logs/home-services-motion-assembly.md
 
 5. FILL remaining [[BRACKETS]]. Never invent proof.
 

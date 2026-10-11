@@ -1,5 +1,27 @@
 # Changelog
 
+## Unreleased — Real moving footage + human assembly
+
+**Diagnosis:** `library/footage/` held stills (including off-subject diagram/market/car) and `assert-assets` counted files, not correctness → slideshow ads. Agents also skipped how humans actually assemble (bucket B-roll → audio → CapCut type).
+
+### Added
+- `library/footage/RULE.md` + `buckets/home-services.json` — P0–P2 must_depict coverage sets + Mixkit seed_clips
+- `library/scripts/qa/vet-motion.mjs` — freezedetect + mean frame-diff (fail static/near-static)
+- `library/scripts/qa/vet-asset.mjs` — subject/reject classes (diagram, wrong industry, still-in-slot, …)
+- `library/scripts/acquire-footage.mjs` — Coverr → Mixkit → Wikimedia video → Pexels/Pixabay; harvest wide / keep narrow; phash dedupe
+- `library/scripts/select-footage.mjs` — select by bucket; never filename; gaps downgrade
+- `library/scripts/assemble-plan.mjs` — study-card shots → bucket picks → CapCut timeline
+- `references/human-assembly-playbook.md` — practitioner assembly order
+- `examples/human-build-logs/home-services-motion-assembly.md` — worked log
+- Vetted home-services `.mp4` clips (bucket coverage → `full_native_motion`)
+
+### Changed
+- Footage path is **video-only**; stills move to `library/stills/` as i2v seeds (`reject: still_in_footage_slot`)
+- `asset-gap-report` / `assert-assets` / `fill-niche-gaps` / compose plan use bucket eligibility
+- Study card `hvac-missed-call-void-01` carries `footage_bucket` per shot; schema allows the field
+- SKILL / one-shot: assemble-plan before gen fluff
+- Manifest schema facets: `bucket`, `motion_confirmed`, `depicts_verified`, `niche_fit`, `reject_classes`, …
+
 ## 3.20.0 — 2026-10-11
 
 **Degradation ladder · style-selection engine · expanded gold fixtures · curated external resources.**

@@ -29,12 +29,13 @@ Ads, creatives, hooks, UGC, Meta/TikTok/Instagram/X/YouTube, “ads for my site,
 1. `node scripts/probe-harness.mjs` → tool card + **hardware/ceiling** ([`harness-equalization.md`](prompts/harness-equalization.md)) → pick rung via [`degradation-ladder.md`](references/creative-stack/degradation-ladder.md) (**never default to stills if any video tool is available**)
 2. URL/site? → `brief-from-url.mjs` then **`brand-harvest.mjs <url>`** (Gate 2.5 — lock palette/mascot/CTA from the site; never invent)
 3. **Style selection** — [`style-selection-engine.md`](references/creative-stack/style-selection-engine.md): clarifying questions (tone / proof / platform / funnel / tier) → niche → pattern → visual system → prompt contract **before** retrieve
-4. **Materials** — [`library/assets/TOOL-ROUTING.md`](../../library/assets/TOOL-ROUTING.md): `assert-assets.mjs --niche …`; if footage gaps → `fill-niche-gaps.mjs` (Pexels/Pixabay keys if set, else Wikimedia) or gen via recipes + [`alternative-model-routing.md`](references/creative-stack/alternative-model-routing.md) · [`external-resources.md`](references/external-resources.md). Disclose ceiling before designing cards on a void.
+4. **Materials** — [`library/footage/RULE.md`](../../library/footage/RULE.md): `assert-assets.mjs --niche …` (bucket-eligible **video** only). Gaps → `acquire-footage.mjs` / `fill-niche-gaps.mjs` (Coverr/Mixkit + motion/subject gates). Stills never fill footage slots. Then gen/i2v via [`alternative-model-routing.md`](references/creative-stack/alternative-model-routing.md) · [`external-resources.md`](references/external-resources.md). Disclose ceiling before designing cards on a void.
 5. Provision fonts from [`library/typography/`](../../library/typography/); beds/SFX from [`library/sound/`](../../library/sound/) + [`license-ledger.json`](../../library/assets/license-ledger.json)
-6. `start-package.mjs` → `retrieve.mjs --compact` — open **`gold_fixtures`** + study-card **shot recipes / asset_ids** (retrieval always follows style selection)
-7. Emulate study structure → Concept → ≥6 exact-VO rows → Craft with **photographed/ledgered setups** ([`human-build-os.md`](references/human-build-os.md))
-8. Lint until `"ok": true` → **finish-the-cut** (full duration + licensed audio) → `pipeline/qa/run-qa.mjs` on the export
-9. Deliver package + real job ids + QA JSON + attributions (not hook-only, not silent)
+6. `start-package.mjs` → `retrieve.mjs --compact` — open **`gold_fixtures`** + study-card **shot recipes / `footage_bucket` / asset_ids** (retrieval always follows style selection)
+7. **Assemble like a human** — [`human-assembly-playbook.md`](references/human-assembly-playbook.md): `assemble-plan.mjs --card …` → place bucket clips + UI + audio on the timeline **before** optional gen ([`human-build-os.md`](references/human-build-os.md))
+8. Emulate study structure → Concept → ≥6 exact-VO rows → Craft with **photographed/ledgered setups** (hard cuts between setups)
+9. Lint until `"ok": true` → **finish-the-cut** (full duration + licensed audio) → `pipeline/qa/run-qa.mjs` on the export
+10. Deliver package + human-build log + real job ids + QA JSON + attributions (not hook-only, not silent)
 
 Ready check: `node scripts/agent-ready.mjs`  
 No shell: paste [`prompts/context-pack-lite.md`](prompts/context-pack-lite.md) · offline [`retrieve-offline-compact.json`](references/retrieve-offline-compact.json) · [`no-shell-lint-checklist.md`](prompts/no-shell-lint-checklist.md).
@@ -60,7 +61,8 @@ Full ladder: [`degradation-ladder.md`](references/creative-stack/degradation-lad
 | Style → pattern → prompt | `references/creative-stack/style-selection-engine.md` |
 | External models / libraries | `references/external-resources.md` |
 | Studies (viral / pro / award) | `studies/corpus.json` · `studies/README.md` |
-| How a human builds | `references/human-build-os.md` · **log:** `human-build-log.template.md` |
+| How a human builds | `references/human-build-os.md` · **assembly:** `references/human-assembly-playbook.md` · **log:** `human-build-log.template.md` |
+| Shot→footage plan | `../../library/scripts/assemble-plan.mjs` |
 | Ingest private studies | `scripts/ingest-blueprint.mjs` |
 | Prove fresh clone | `scripts/fresh-clone-prove.mjs` |
 | Tool equalization | `prompts/harness-equalization.md` |

@@ -1,41 +1,32 @@
-# Footage library
+# Footage library — real moving clips only
 
-Usable stills/video for timelines — **not** competitor ads. Every file must appear in [`../assets/license-ledger.json`](../assets/license-ledger.json).
+See **[RULE.md](./RULE.md)**. Stills never fill a footage slot.
 
-## Acquire (free first)
+## Acquire
 
 ```bash
-# Auto-fill niche gaps (Pexels if PEXELS_API_KEY set, else Wikimedia)
-node library/scripts/fill-niche-gaps.mjs --niche home-services --limit 2
+# Bucket harvest (Coverr CC0 → Mixkit → Wikimedia video → Pexels/Pixabay if keyed)
+node library/scripts/acquire-footage.mjs --niche home-services
 
-# Explicit
-node library/scripts/acquire-assets.mjs --source wikimedia \
-  --query "HVAC technician working" --tag hvac-tech --niche home-services
+# One bucket
+node library/scripts/acquire-footage.mjs --niche home-services --bucket hook_vehicle --keep 3
 
-PEXELS_API_KEY=… node library/scripts/acquire-assets.mjs --source pexels \
-  --query "phone on desk night" --tag desk-phone --niche home-services --video
+# Select by bucket (composer)
+node library/scripts/select-footage.mjs --niche home-services --bucket hook_phone_ring
+node library/scripts/select-footage.mjs --niche home-services --report
 ```
 
-Routing ladder + API key links: [`../assets/TOOL-ROUTING.md`](../assets/TOOL-ROUTING.md).
+Hard gates (nothing enters `library/footage/` unvetted):
 
-## home-services (seeded)
+- `library/scripts/qa/vet-motion.mjs` — freezedetect + mean frame-diff
+- `library/scripts/qa/vet-asset.mjs` — subject / reject classes
 
-Stills from Wikimedia (Public domain / CC BY / CC BY-SA). Prefer PD/CC-BY for paid ads; BY-SA requires share-alike compliance — check before ship or replace with Pexels.
-
-| Tag | Role |
-| --- | --- |
-| `desk-phone` | Missed-call / after-hours object |
-| `trades-hands` | Work proof |
-| `work-van` | Geo trust |
-| `hvac-tech` / `hvac-bay` | Facility / tech |
-| `owner-ugc` | Talking-head energy |
-
-Turn stills into motion with i2v per [`../realism/gen-recipes.json`](../realism/gen-recipes.json) + [`alternative-model-routing.md`](../../skills/ad-intelligence/references/creative-stack/alternative-model-routing.md).
+Bucket defs: [`buckets/home-services.json`](./buckets/home-services.json).
 
 ## Ceiling
 
 ```bash
-node library/scripts/asset-gap-report.mjs --niche home-services
+node library/scripts/assert-assets.mjs --niche home-services --strict-footage
 ```
 
-Empty buckets → compose discloses `designed_cards_on_void`. Full buckets → still prefer a real 30s phone shoot for elite native look.
+Gaps → disclose + i2v on a *vetted* still (`library/stills/`) or USER_SUPPLIED shoot — **never** substitute an off-subject still.

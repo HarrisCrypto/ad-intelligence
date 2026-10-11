@@ -29,3 +29,6 @@ node_modules/
 
 # Generated local packages (start-package / backtest scratch)
 skills/ad-intelligence/packages/
+
+# Footage acquire staging
+library/footage/_staging/

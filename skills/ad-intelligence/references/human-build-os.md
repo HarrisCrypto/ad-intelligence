@@ -2,9 +2,11 @@
 
 **Mission:** Studies teach *what* to emulate. This file teaches *how* a human builds it with real tools — so any LM finishes a cut instead of stopping at a concept slide.
 
-Pair with: `studies/corpus.json` (`human_build` **playbook** steps) · **`human-build-log.template.md` (the auditable artifact)** · `prompts/finish-the-cut.md` · `references/generated-ui-authenticity.md` · retrieve `payload.studies` (always copy `provenance`).
+Pair with: `studies/corpus.json` (`human_build` **playbook** steps) · **[`human-assembly-playbook.md`](./human-assembly-playbook.md) (hands on the timeline)** · **`human-build-log.template.md` (the auditable artifact)** · `prompts/finish-the-cut.md` · `references/generated-ui-authenticity.md` · retrieve `payload.studies` (always copy `provenance`).
 
-`human_build` in a study is a checklist. The **log** is the filled artifact (decisions, job ids, retries, cost, lint). Seed: `examples/human-build-logs/voice-agent-assembler-seed.md`.
+`human_build` in a study is a checklist. The **log** is the filled artifact (decisions, job ids, retries, cost, lint). Seeds: `examples/human-build-logs/voice-agent-assembler-seed.md` · `examples/human-build-logs/home-services-motion-assembly.md`.
+
+**Materials before gen:** `node library/scripts/assemble-plan.mjs --card <study-card-id>` — selects moving footage by bucket, then CapCut. Stills never fill footage slots (`library/footage/RULE.md`).
 
 ## Rule
 
