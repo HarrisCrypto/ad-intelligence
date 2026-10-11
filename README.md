@@ -37,7 +37,8 @@ Packages that do **not** invent proof, drift product identity, or burn three red
 | **Visual storyboard frames** | [examples/visual/index.html](./skills/ad-intelligence/examples/visual/index.html) |
 | **Install in minutes** | [INSTALL.md](./INSTALL.md) |
 | **Canonical quality targets** | [skills/ad-intelligence/demo/](./skills/ad-intelligence/demo/) |
-| **Full-depth gold fixtures** | beauty · local · SaaS · physical · voice/front-desk — see [PROOF.md](./PROOF.md) |
+| **Full-depth gold fixtures** | beauty · local · SaaS · physical · voice · fashion · food · real-estate · fitness — see [examples/](./skills/ad-intelligence/examples/) |
+| **Degradation ladder / style engine** | [degradation-ladder.md](./skills/ad-intelligence/references/creative-stack/degradation-ladder.md) · [style-selection-engine.md](./skills/ad-intelligence/references/creative-stack/style-selection-engine.md) · [external-resources.md](./skills/ad-intelligence/references/external-resources.md) |
 | **Post-render QA** | [render-qa.json](./skills/ad-intelligence/checklists/render-qa.json) |
 | **Stress briefs** | [examples/stress-briefs/](./skills/ad-intelligence/examples/stress-briefs/) |
 | **Harness probe / ready** | `node skills/ad-intelligence/scripts/agent-ready.mjs` |
@@ -46,7 +47,7 @@ Packages that do **not** invent proof, drift product identity, or burn three red
 | **Ship gate demo** | `node skills/ad-intelligence/scripts/demo-quality-gates.mjs` |
 | **Contribute** | [CONTRIBUTING.md](./CONTRIBUTING.md) |
 
-**Version 3.19.0** — [CHANGELOG.md](./CHANGELOG.md)
+**Version 3.20.0** — [CHANGELOG.md](./CHANGELOG.md)
 
 ---
 

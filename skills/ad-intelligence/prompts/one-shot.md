@@ -5,20 +5,30 @@ Agents fail when they fill ledgers before having an idea — or render a hook an
 ## Hard sequence
 
 ```text
-0. PROBE + EQUALIZE
+0. PROBE + EQUALIZE + DEGRADATION RUNG
    node scripts/probe-harness.mjs
-   Fill tool card (prompts/harness-equalization.md) → rung:
-   connected | handoff | assembler | package-only
+   Fill tool card (prompts/harness-equalization.md)
+   Read references/creative-stack/degradation-ladder.md → pick rung:
+     Rung 1 connected (Seedance/Higgsfield MCP live — name the tool)
+     Rung 2 i2v (Kling/Wan/Grok/LTX/Veo/Runway…) → keyframes → short clips → post
+     Rung 3 motion storyboard (NO video tool — director pre-viz, NOT a slideshow)
+     handoff | package-only as needed
+   HARD: never default to stills/storyboard if any video tool is available.
+   Model notes: references/external-resources.md (prefer Wan 2.2 → LTX-2.5 → Grok without Seedance)
    Optional: read references/brand-context.md or .agents/brand-context.md if present
 
-1. BRIEF
+1. BRIEF + STYLE SELECTION
    - URL/site: node scripts/brief-from-url.mjs <url> (or prompts/brief-from-url.md)
+   - Run references/creative-stack/style-selection-engine.md FIRST:
+     ask ≤5 clarifying Qs (tone / proof / platform / funnel / tier) → niche row →
+     pattern + visual system + prompt contract
    - OPEN closest gold fixture — steal DENSITY, not brand facts
+     (fashion/food/real-estate/fitness/voice/… in examples/)
 
 2. START FILE:
    node scripts/start-package.mjs --out packages/<brand>-ad.md
 
-3. RETRIEVE (prefer compact):
+3. RETRIEVE (prefer compact) — always after style selection:
    node scripts/retrieve.mjs --niche <niche> --platform <platform> --limit 5 --compact
    Paste studies.primary (+ human_build steps) — viral / performance / award archetypes.
    Paste primary / challenger / dual_track_twin (twin ≠ primary).
@@ -27,6 +37,7 @@ Agents fail when they fill ledgers before having an idea — or render a hook an
    node scripts/library-access.mjs --niche <niche> --platform <platform> --keyword <kw>
    Open entry_url / deep_link. If TikTok/Meta login-wall → fallbacks (Google Transparency is login_free).
    Attention Lab always works offline. Note STRUCTURE only (+ format: video_timed vs search_text).
+   Curated libs / models: references/external-resources.md
 
 4. EMULATE + HUMAN BUILD + WRITE CREATIVE FIRST:
    a) Study id + provenance (observed/basis) + attention model + angle axis
@@ -61,13 +72,17 @@ Agents fail when they fill ledgers before having an idea — or render a hook an
 
 | Ask | Niche | Study / model / gold |
 | --- | --- | --- |
-| Hair, shampoo, skincare | beauty | `study_beauty_macro_transform` · `am_hair_transform` |
-| Food, coffee, snacks | food_bev | `study_food_crave_loop` · `am_food_crave_asmr` |
+| Hair, shampoo, skincare | beauty | `study_beauty_macro_transform` · `am_hair_transform` · `beauty-dtc-dual-track.md` |
+| Food, coffee, snacks | food_bev | `study_food_crave_loop` · `am_food_crave_asmr` · **`food-appetite.md`** |
 | AI agent / voice / SaaS site | saas | `study_voice_agent_missed_call` · voice + saas gold |
 | Local service | local_services | `study_local_geo_phone` · `am_local_geo_trust` |
+| Fashion / apparel | fashion | `am_hero_spectacle` · **`fashion-editorial.md`** |
+| Real estate | real_estate | walkthrough · **`real-estate-walkthrough.md`** |
+| Fitness / athletic | fitness | effort-first · **`fitness-performance.md`** |
 | Any DTC product | ecommerce | `study_award_hero_spectacle` / macro · dual-track |
 | Cold UGC trust | many | `study_viral_confession_ugc` |
 
+Style map: `references/creative-stack/style-selection-engine.md`.  
 Full map: `studies/corpus.json` · `references/ad-libraries.md`. Emulate: `prompts/emulate-attention-model.md`. Build: `references/human-build-os.md`.
 
 ## Refusal / rewrite
@@ -91,7 +106,9 @@ Thin brief → assume via brief-defaults, list Assumptions, ask ≤3 questions, 
 
 ## No Seedance / Higgsfield
 
-Rung = assembler. Name Wan / LTX / Grok / Kling / Hailuo / stills+CapCut. Same skeleton. Same lint. Same finish-the-cut duty. Same `human_build` mapping.
+**Rung 2** (if any i2v/T2V exists): name **Wan 2.2 / LTX-2.5 / Grok Imagine / Kling / Veo / Runway** in the render plan — see `external-resources.md`.  
+**Rung 3** only when **no** video tool exists: motion storyboard (camera moves, lighting shifts, timing, continuity) — not a slideshow.  
+Same skeleton. Same sheets, claim ledger, one CTA, lint. Same finish-the-cut duty. Same `human_build` mapping.
 
 ## Done means
 

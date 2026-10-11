@@ -2,7 +2,7 @@
 
 **Repo:** https://github.com/HarrisCrypto/ad-intelligence  
 **Skill root:** `skills/ad-intelligence/`  
-**Version:** **3.19.0** — see [CHANGELOG.md](./CHANGELOG.md)  
+**Version:** **3.20.0** — see [CHANGELOG.md](./CHANGELOG.md)  
 **Verify any harness:** `git clone https://github.com/HarrisCrypto/ad-intelligence.git && node skills/ad-intelligence/scripts/fresh-clone-prove.mjs`
 
 ---

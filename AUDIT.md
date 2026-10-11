@@ -26,8 +26,8 @@ Lint, study provenance, finish-the-cut *document* rules, claim ledger, and backt
 | `skills/ad-intelligence/` | Canonical skill (Agent Skills) |
 | `.cursor/skills/ad-intelligence` → symlink | Same tree (also `.claude`, `.agents`, `.github`) |
 | `AGENTS.md`, `INSTALL.md`, `README.md`, `PROOF.md`, `CONTRIBUTING.md`, `PUBLISH.md`, `LICENSE` | Discovery / proof / legal |
-| `CHANGELOG.md` | Version history (top = **3.19.0** on this tip) |
-| `.cursor-plugin/plugin.json` | Plugin **3.19.0** |
+| `CHANGELOG.md` | Version history (top = **3.20.0** on this tip) |
+| `.cursor-plugin/plugin.json` | Plugin **3.20.0** |
 | `schema/` | `ad-blueprint`, `study`, `query` JSON schemas |
 | `ingest/` | Sample private-study ingest JSON + README |
 | `scripts/rebuild-index.mjs` | Rebuilds `database/index.json` from patterns |

@@ -1,5 +1,23 @@
 # Changelog
 
+## 3.20.0 — 2026-10-11
+
+**Degradation ladder · style-selection engine · expanded gold fixtures · curated external resources.**
+
+### Added
+- `skills/ad-intelligence/references/creative-stack/degradation-ladder.md` — Rung 1 connected → Rung 2 i2v → Rung 3 motion storyboard (director’s pre-viz; never default to stills if video tools exist)
+- `skills/ad-intelligence/references/creative-stack/style-selection-engine.md` — niche → pattern → visual system → prompt contract + clarifying questions; wire before retrieve
+- `skills/ad-intelligence/references/external-resources.md` — Oct 2026 video-model routing (Seedance 2.5, Veo 3.1, Kling 3.0, Wan 2.2, LTX-2.5, MiniMax H3 geo flag, Hunyuan) + ad libraries + prompt craft
+- Full-depth examples: `fashion-editorial.md`, `food-appetite.md`, `real-estate-walkthrough.md`, `fitness-performance.md`
+
+### Changed
+- `SKILL.md` + `prompts/one-shot.md` — probe → degradation rung → style selection → retrieve; prefer Wan / LTX / Grok without Seedance
+- Creative-stack + examples READMEs index the new ladder, style engine, and fixtures
+- Plugin / marketplace / INSTALL / README → **3.20.0**
+
+### Unchanged gates
+Sheets · claim ledger · lint · one CTA · never invent proof or rendered · finish-the-cut
+
 ## Unreleased — Asset library + realism (Phase 2.6 / 3.5)
 
 **Diagnosis:** FB/TikTok look fails from missing photographed materials, not missing timing knowledge.
