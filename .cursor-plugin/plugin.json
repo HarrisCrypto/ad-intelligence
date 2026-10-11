@@ -1,25 +1,17 @@
 {
   "name": "ad-intelligence",
-  "displayName": "Ad Intelligence",
-  "version": "3.20.0",
-  "description": "One-shot agency-grade ads: full-duration cut + audio bar, study honesty, library access ladder.",
+  "displayName": "Ad example library",
+  "version": "4.0.0",
+  "description": "Searchable breakdowns of public ads. Query the index, read 3–5 matches, then hand off to the user's own storyboard and render tools.",
   "author": {
     "name": "HarrisCrypto"
   },
   "license": "SEE LICENSE IN LICENSE",
   "keywords": [
     "ads",
-    "seedance",
-    "higgsfield",
-    "viral",
-    "ugc",
     "tiktok",
     "meta",
     "youtube",
-    "creative-stack",
-    "one-shot"
-  ],
-  "skills": [
-    "./skills/ad-intelligence/SKILL.md"
+    "breakdowns"
   ]
 }

@@ -1,1387 +1,246 @@
 {
   "id": "ad-intelligence-license-ledger",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "updated": "2026-10-11",
-  "rule": "No ledger row \u2192 asset does not ship. Sine drones are never beds.",
+  "rule": "Source links only. This repo does not ship footage, music, or fonts. Mixkit and Coverr do not allow redistribution as a library. Use the source URL under that source license.",
   "assets": [
     {
       "id": "bed_carefree_km",
-      "path": "library/sound/beds/bed_carefree_km.mp3",
       "kind": "music_bed",
       "license": "CC-BY-4.0",
-      "attribution": "Carefree \u2014 Kevin MacLeod (incompetech.com). Licensed under Creative Commons By Attribution 4.0.",
-      "source_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Carefree.mp3",
-      "composer": "Kevin MacLeod",
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "bpm": null,
-      "mood": [
-        "light",
-        "optimistic",
-        "carefree"
-      ],
-      "duration_s": 205.14,
-      "loop_points_s": {
-        "in": 0,
-        "out": 205
-      },
-      "niches": [
-        "home-services",
-        "saas",
-        "local"
-      ],
-      "verified_via": "agent_runtime"
+      "attribution": "Carefree — Kevin MacLeod (incompetech.com). Licensed under Creative Commons By Attribution 4.0.",
+      "source_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Carefree.mp3"
     },
     {
       "id": "bed_wallpaper_km",
-      "path": "library/sound/beds/bed_wallpaper_km.mp3",
       "kind": "music_bed",
       "license": "CC-BY-4.0",
-      "attribution": "Wallpaper \u2014 Kevin MacLeod (incompetech.com). Licensed under Creative Commons By Attribution 4.0.",
-      "source_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Wallpaper.mp3",
-      "composer": "Kevin MacLeod",
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "bpm": null,
-      "mood": [
-        "calm",
-        "ambient",
-        "documentary"
-      ],
-      "duration_s": 220.06,
-      "loop_points_s": {
-        "in": 0,
-        "out": 220
-      },
-      "niches": [
-        "home-services",
-        "saas",
-        "brand"
-      ],
-      "verified_via": "agent_runtime"
+      "attribution": "Wallpaper — Kevin MacLeod (incompetech.com). Licensed under Creative Commons By Attribution 4.0.",
+      "source_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Wallpaper.mp3"
     },
     {
       "id": "bed_enthusiast_tours",
-      "path": "library/sound/beds/bed_enthusiast_tours.mp3",
       "kind": "music_bed",
       "license": "CC-BY-3.0",
-      "attribution": "Enthusiast \u2014 Tours. Free Music Archive. CC BY 3.0.",
-      "source_url": "https://freemusicarchive.org/",
-      "composer": "Tours",
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "bpm": null,
-      "mood": [
-        "upbeat",
-        "indie",
-        "energy"
-      ],
-      "duration_s": 171.05,
-      "loop_points_s": {
-        "in": 0,
-        "out": 171
-      },
-      "niches": [
-        "apps",
-        "saas",
-        "creator"
-      ],
-      "verified_via": "agent_runtime"
+      "attribution": "Enthusiast — Tours. Free Music Archive. CC BY 3.0.",
+      "source_url": "https://freemusicarchive.org/"
     },
     {
       "id": "sfx_ui_click",
-      "path": "library/sound/sfx/sfx_ui_click.mp3",
       "kind": "sfx",
       "license": "Mixkit-License",
-      "attribution": "Mixkit \u2014 free sound effect (mixkit.co). See https://mixkit.co/license/#sfxFree",
-      "source_url": "https://mixkit.co/free-sound-effects/click/",
-      "mixkit_id": 1109,
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "tags": [
-        "ui",
-        "click"
-      ],
-      "verified_via": "agent_runtime"
+      "attribution": "Mixkit — free sound effect (mixkit.co). See https://mixkit.co/license/#sfxFree",
+      "source_url": "https://mixkit.co/free-sound-effects/click/"
     },
     {
       "id": "sfx_notification",
-      "path": "library/sound/sfx/sfx_notification.mp3",
       "kind": "sfx",
       "license": "Mixkit-License",
       "attribution": "Mixkit free SFX",
-      "source_url": "https://mixkit.co/free-sound-effects/notification/",
-      "mixkit_id": 2310,
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "tags": [
-        "notification",
-        "alert"
-      ],
-      "verified_via": "agent_runtime"
+      "source_url": "https://mixkit.co/free-sound-effects/notification/"
     },
     {
       "id": "sfx_whoosh",
-      "path": "library/sound/sfx/sfx_whoosh.mp3",
       "kind": "sfx",
       "license": "Mixkit-License",
       "attribution": "Mixkit free SFX",
-      "source_url": "https://mixkit.co/free-sound-effects/whoosh/",
-      "mixkit_id": 1485,
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "tags": [
-        "whoosh",
-        "transition"
-      ],
-      "verified_via": "agent_runtime"
+      "source_url": "https://mixkit.co/free-sound-effects/whoosh/"
     },
     {
       "id": "sfx_whoosh_soft",
-      "path": "library/sound/sfx/sfx_whoosh_soft.mp3",
       "kind": "sfx",
       "license": "Mixkit-License",
       "attribution": "Mixkit free SFX",
-      "source_url": "https://mixkit.co/free-sound-effects/whoosh/",
-      "mixkit_id": 1490,
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "tags": [
-        "whoosh",
-        "soft"
-      ],
-      "verified_via": "agent_runtime"
+      "source_url": "https://mixkit.co/free-sound-effects/whoosh/"
     },
     {
       "id": "sfx_phone_ring",
-      "path": "library/sound/sfx/sfx_phone_ring.mp3",
       "kind": "sfx",
       "license": "Mixkit-License",
       "attribution": "Mixkit free SFX",
-      "source_url": "https://mixkit.co/free-sound-effects/phone/",
-      "mixkit_id": 1350,
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "tags": [
-        "phone",
-        "ring",
-        "home-services"
-      ],
-      "niches": [
-        "home-services"
-      ],
-      "verified_via": "agent_runtime"
+      "source_url": "https://mixkit.co/free-sound-effects/phone/"
     },
     {
       "id": "sfx_phone_busy",
-      "path": "library/sound/sfx/sfx_phone_busy.mp3",
       "kind": "sfx",
       "license": "Mixkit-License",
       "attribution": "Mixkit free SFX",
-      "source_url": "https://mixkit.co/free-sound-effects/phone/",
-      "mixkit_id": 1352,
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "tags": [
-        "phone",
-        "busy"
-      ],
-      "niches": [
-        "home-services"
-      ],
-      "verified_via": "agent_runtime"
+      "source_url": "https://mixkit.co/free-sound-effects/phone/"
     },
     {
       "id": "sfx_typing",
-      "path": "library/sound/sfx/sfx_typing.mp3",
       "kind": "sfx",
       "license": "Mixkit-License",
       "attribution": "Mixkit free SFX",
-      "source_url": "https://mixkit.co/free-sound-effects/typing/",
-      "mixkit_id": 1372,
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "tags": [
-        "typing",
-        "ui"
-      ],
-      "verified_via": "agent_runtime"
+      "source_url": "https://mixkit.co/free-sound-effects/typing/"
     },
     {
       "id": "sfx_impact",
-      "path": "library/sound/sfx/sfx_impact.mp3",
       "kind": "sfx",
       "license": "Mixkit-License",
       "attribution": "Mixkit free SFX",
-      "source_url": "https://mixkit.co/free-sound-effects/",
-      "mixkit_id": 2000,
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "tags": [
-        "impact",
-        "hit"
-      ],
-      "verified_via": "agent_runtime"
+      "source_url": "https://mixkit.co/free-sound-effects/"
     },
     {
       "id": "amb_room_tone_owned",
-      "path": "library/sound/ambience/amb_room_tone_owned.mp3",
       "kind": "ambience",
       "license": "OWNED",
       "attribution": "Owned pink-noise room tone seed generated for this repo (not a music bed).",
-      "source_url": "owned:ffmpeg-anoisesrc",
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "tags": [
-        "room-tone",
-        "under-vo"
-      ],
-      "duration_s": 8,
-      "verified_via": "owned"
+      "source_url": "owned:ffmpeg-anoisesrc"
     },
     {
       "id": "ft_hvac-tech_154193063",
-      "path": "library/stills/home-services/ft_hvac-tech_154193063.jpg",
       "kind": "still",
-      "media": "still",
       "license": "Public domain",
-      "attribution": "File:HVAC- Bringing the Heat (8198789).jpg \u2014 U.S. Air force photo by Senior Airman Thomas Karol (Public domain). Via Wikimedia Commons.",
-      "source_url": "https://commons.wikimedia.org/wiki/File:HVAC-_Bringing_the_Heat_(8198789).jpg",
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "niches": [
-        "home-services"
-      ],
-      "tags": [
-        "hvac-tech",
-        "wikimedia",
-        "still",
-        "i2v_seed_only"
-      ],
-      "bytes": 368002,
-      "width": 1280,
-      "height": 1086,
-      "verified_via": "agent_runtime",
-      "query": "HVAC Bringing the Heat",
-      "reject": true,
-      "reject_classes": [
-        "still_in_footage_slot"
-      ],
-      "motion_confirmed": false,
-      "motion": "none",
-      "niche_fit": "low"
+      "attribution": "File:HVAC- Bringing the Heat (8198789).jpg — U.S. Air force photo by Senior Airman Thomas Karol (Public domain). Via Wikimedia Commons.",
+      "source_url": "https://commons.wikimedia.org/wiki/File:HVAC-_Bringing_the_Heat_(8198789).jpg"
     },
     {
       "id": "ft_hvac-tech_154193064",
-      "path": "library/stills/home-services/ft_hvac-tech_154193064.jpg",
       "kind": "still",
-      "media": "still",
       "license": "Public domain",
-      "attribution": "File:HVAC- Bringing the Heat (8198790).jpg \u2014 U.S. Air force photo by Senior Airman Thomas Karol (Public domain). Via Wikimedia Commons.",
-      "source_url": "https://commons.wikimedia.org/wiki/File:HVAC-_Bringing_the_Heat_(8198790).jpg",
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "niches": [
-        "home-services"
-      ],
-      "tags": [
-        "hvac-tech",
-        "wikimedia",
-        "still",
-        "i2v_seed_only"
-      ],
-      "bytes": 219333,
-      "width": 1280,
-      "height": 886,
-      "verified_via": "agent_runtime",
-      "query": "HVAC Bringing the Heat",
-      "reject": true,
-      "reject_classes": [
-        "still_in_footage_slot"
-      ],
-      "motion_confirmed": false,
-      "motion": "none",
-      "niche_fit": "low"
+      "attribution": "File:HVAC- Bringing the Heat (8198790).jpg — U.S. Air force photo by Senior Airman Thomas Karol (Public domain). Via Wikimedia Commons.",
+      "source_url": "https://commons.wikimedia.org/wiki/File:HVAC-_Bringing_the_Heat_(8198790).jpg"
     },
     {
       "id": "ft_desk-phone_89035911",
-      "path": "library/stills/home-services/ft_desk-phone_89035911.jpg",
       "kind": "still",
-      "media": "still",
       "license": "Public domain",
-      "attribution": "File:WE554wallphone.jpg \u2014 User:Mcheath (Public domain). Via Wikimedia Commons.",
-      "source_url": "https://commons.wikimedia.org/wiki/File:WE554wallphone.jpg",
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "niches": [
-        "home-services"
-      ],
-      "tags": [
-        "desk-phone",
-        "wikimedia",
-        "still",
-        "i2v_seed_only"
-      ],
-      "bytes": 139657,
-      "width": 1280,
-      "height": 960,
-      "verified_via": "agent_runtime",
-      "query": "rotary phone on desk",
-      "reject": true,
-      "reject_classes": [
-        "still_in_footage_slot"
-      ],
-      "motion_confirmed": false,
-      "motion": "none",
-      "niche_fit": "low"
+      "attribution": "File:WE554wallphone.jpg — User:Mcheath (Public domain). Via Wikimedia Commons.",
+      "source_url": "https://commons.wikimedia.org/wiki/File:WE554wallphone.jpg"
     },
     {
       "id": "ft_desk-phone_141514186",
-      "path": "library/stills/home-services/ft_desk-phone_141514186.jpg",
       "kind": "still",
-      "media": "still",
       "license": "CC BY-SA 4.0",
-      "attribution": "File:Bardufoss Lufthavn Airport Norway UTSTILLING Avinor teknisk utstyr kommunikasjon NORSK MANUELL TELEFONAPPARAT AUTOMATTELEFON nummerskive Norwegian desk telephones rotary dial 1950s - 2022-05-13 - 2022-05-13 IMG 9538.jpg \u2014 Wolfmann (CC BY-SA 4.0). Via Wikimedia Commons.",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Bardufoss_Lufthavn_Airport_Norway_UTSTILLING_Avinor_teknisk_utstyr_kommunikasjon_NORSK_MANUELL_TELEFONAPPARAT_AUTOMATTELEFON_nummerskive_Norwegian_desk_telephones_rotary_dial_1950s_-_2022-05-13_-_2022-05-13_IMG_9538.jpg",
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "niches": [
-        "home-services"
-      ],
-      "tags": [
-        "desk-phone",
-        "wikimedia",
-        "still",
-        "i2v_seed_only"
-      ],
-      "bytes": 268928,
-      "width": 1280,
-      "height": 815,
-      "verified_via": "agent_runtime",
-      "query": "rotary phone on desk",
-      "reject": true,
-      "reject_classes": [
-        "still_in_footage_slot"
-      ],
-      "motion_confirmed": false,
-      "motion": "none",
-      "niche_fit": "low"
+      "attribution": "File:Bardufoss Lufthavn Airport Norway UTSTILLING Avinor teknisk utstyr kommunikasjon NORSK MANUELL TELEFONAPPARAT AUTOMATTELEFON nummerskive Norwegian desk telephones rotary dial 1950s - 2022-05-13 - 2022-05-13 IMG 9538.jpg — Wolfmann (CC BY-SA 4.0). Via Wikimedia Commons.",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bardufoss_Lufthavn_Airport_Norway_UTSTILLING_Avinor_teknisk_utstyr_kommunikasjon_NORSK_MANUELL_TELEFONAPPARAT_AUTOMATTELEFON_nummerskive_Norwegian_desk_telephones_rotary_dial_1950s_-_2022-05-13_-_2022-05-13_IMG_9538.jpg"
     },
     {
       "id": "ft_trades-hands_88813120",
-      "path": "library/stills/home-services/ft_trades-hands_88813120.jpg",
       "kind": "still",
-      "media": "still",
       "license": "CC BY-SA 4.0",
-      "attribution": "File:A mechanic at work 2.jpg \u2014 Edward Middleton (CC BY-SA 4.0). Via Wikimedia Commons.",
-      "source_url": "https://commons.wikimedia.org/wiki/File:A_mechanic_at_work_2.jpg",
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "niches": [
-        "home-services"
-      ],
-      "tags": [
-        "trades-hands",
-        "wikimedia",
-        "still",
-        "i2v_seed_only"
-      ],
-      "bytes": 517392,
-      "width": 1280,
-      "height": 1280,
-      "verified_via": "agent_runtime",
-      "query": "mechanic hands tools",
-      "reject": true,
-      "reject_classes": [
-        "still_in_footage_slot"
-      ],
-      "motion_confirmed": false,
-      "motion": "none",
-      "niche_fit": "low"
+      "attribution": "File:A mechanic at work 2.jpg — Edward Middleton (CC BY-SA 4.0). Via Wikimedia Commons.",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_mechanic_at_work_2.jpg"
     },
     {
       "id": "ft_trades-hands_88813122",
-      "path": "library/stills/home-services/ft_trades-hands_88813122.jpg",
       "kind": "still",
-      "media": "still",
       "license": "CC BY-SA 4.0",
-      "attribution": "File:A mechanic at work 3.jpg \u2014 Edward Middleton (CC BY-SA 4.0). Via Wikimedia Commons.",
-      "source_url": "https://commons.wikimedia.org/wiki/File:A_mechanic_at_work_3.jpg",
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "niches": [
-        "home-services"
-      ],
-      "tags": [
-        "trades-hands",
-        "wikimedia",
-        "still",
-        "i2v_seed_only"
-      ],
-      "bytes": 273696,
-      "width": 1280,
-      "height": 525,
-      "verified_via": "agent_runtime",
-      "query": "mechanic hands tools",
-      "reject": true,
-      "reject_classes": [
-        "still_in_footage_slot"
-      ],
-      "motion_confirmed": false,
-      "motion": "none",
-      "niche_fit": "low"
+      "attribution": "File:A mechanic at work 3.jpg — Edward Middleton (CC BY-SA 4.0). Via Wikimedia Commons.",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_mechanic_at_work_3.jpg"
     },
     {
       "id": "vid_homeservices_hook_vehicle_coverr_coverr-driving-behind-a-van-1393",
-      "path": "library/footage/home-services/vid_homeservices_hook_vehicle_coverr_coverr-driving-behind-a-van-1393.mp4",
       "kind": "video",
-      "media": "video",
-      "bucket": "hook_vehicle",
-      "subject": "trade_vehicle",
-      "shot_type": [
-        "exterior",
-        "establishing"
-      ],
-      "motion": "high",
-      "motion_confirmed": true,
-      "must_depict": [
-        "work van or trade/freight truck",
-        "on a real road or lot",
-        "not a diagram",
-        "not a beach camper / romance van"
-      ],
-      "depicts_verified": {
-        "ok": true,
-        "labels": [],
-        "confidence": 0.75,
-        "method": "strong_token_metadata_frame",
-        "notes": "positive=true; white=0.00; var=4223"
-      },
-      "people": "none",
-      "niche_fit": "high",
-      "orientation": "landscape",
-      "reject": false,
-      "reject_classes": [],
       "license": "CC0",
-      "attribution": "driving behind a van 1393 \u2014 via coverr (CC0). https://coverr.co/videos/coverr-driving-behind-a-van-1393",
-      "source_url": "https://coverr.co/videos/coverr-driving-behind-a-van-1393",
-      "source": "coverr",
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "niches": [
-        "home-services"
-      ],
-      "tags": [
-        "hook_vehicle",
-        "P0",
-        "coverr",
-        "video",
-        "motion_confirmed"
-      ],
-      "phash": "f91b9078bb4f0f97",
-      "width": 1920,
-      "height": 1080,
-      "duration_s": 18.852214,
-      "query": "cargo van",
-      "select_why": "score=90; motion=high; fit=high; landscape",
-      "verified_via": "agent_runtime"
+      "attribution": "driving behind a van 1393 — via coverr (CC0). https://coverr.co/videos/coverr-driving-behind-a-van-1393",
+      "source_url": "https://coverr.co/videos/coverr-driving-behind-a-van-1393"
     },
     {
       "id": "vid_homeservices_hook_vehicle_mixkit_23174",
-      "path": "library/footage/home-services/vid_homeservices_hook_vehicle_mixkit_23174.mp4",
       "kind": "video",
-      "media": "video",
-      "bucket": "hook_vehicle",
-      "subject": "trade_vehicle",
-      "shot_type": [
-        "exterior",
-        "establishing"
-      ],
-      "motion": "medium",
-      "motion_confirmed": true,
-      "must_depict": [
-        "work van or trade/freight truck",
-        "on a real road or lot",
-        "not a diagram",
-        "not a beach camper / romance van"
-      ],
-      "depicts_verified": {
-        "ok": true,
-        "labels": [],
-        "confidence": 0.75,
-        "method": "strong_token_metadata_frame",
-        "notes": "positive=true; white=0.00; var=3128"
-      },
-      "people": "none",
-      "niche_fit": "high",
-      "orientation": "landscape",
-      "reject": false,
-      "reject_classes": [],
       "license": "Mixkit-License",
-      "attribution": "worker leading a freight truck in the parking \u2014 via mixkit (Mixkit-License). https://mixkit.co/free-stock-video/",
-      "source_url": "https://mixkit.co/free-stock-video/",
-      "source": "mixkit",
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "niches": [
-        "home-services"
-      ],
-      "tags": [
-        "hook_vehicle",
-        "P0",
-        "mixkit",
-        "video",
-        "motion_confirmed"
-      ],
-      "phash": "54611c72477339e3",
-      "width": 1280,
-      "height": 720,
-      "duration_s": 17.76,
-      "query": "seed_clip",
-      "select_why": "score=72; motion=medium; fit=high; landscape",
-      "verified_via": "agent_runtime"
+      "attribution": "worker leading a freight truck in the parking — via mixkit (Mixkit-License). https://mixkit.co/free-stock-video/",
+      "source_url": "https://mixkit.co/free-stock-video/"
     },
     {
       "id": "vid_homeservices_hook_phone_ring_coverr_coverr-worried-woman-talking-on-phone-in",
-      "path": "library/footage/home-services/vid_homeservices_hook_phone_ring_coverr_coverr-worried-woman-talking-on-phone-in.mp4",
       "kind": "video",
-      "media": "video",
-      "bucket": "hook_phone_ring",
-      "subject": "phone_call",
-      "shot_type": [
-        "insert",
-        "closeup"
-      ],
-      "motion": "medium",
-      "motion_confirmed": true,
-      "must_depict": [
-        "real phone device",
-        "call / answer / messaging moment",
-        "hands or person context preferred"
-      ],
-      "depicts_verified": {
-        "ok": true,
-        "labels": [],
-        "confidence": 0.75,
-        "method": "strong_token_metadata_frame",
-        "notes": "positive=true; white=0.00; var=2061"
-      },
-      "people": "unknown",
-      "niche_fit": "high",
-      "orientation": "landscape",
-      "reject": false,
-      "reject_classes": [],
       "license": "CC0",
-      "attribution": "worried woman talking on phone in city \u2014 via coverr (CC0). https://coverr.co/videos/coverr-worried-woman-talking-on-phone-in-city",
-      "source_url": "https://coverr.co/videos/coverr-worried-woman-talking-on-phone-in-city",
-      "source": "coverr",
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "niches": [
-        "home-services"
-      ],
-      "tags": [
-        "hook_phone_ring",
-        "P0",
-        "coverr",
-        "video",
-        "motion_confirmed"
-      ],
-      "phash": "76c750c96ec42aa8",
-      "width": 1920,
-      "height": 1080,
-      "duration_s": 18.479948,
-      "query": "phone call",
-      "select_why": "score=80; motion=medium; fit=high; landscape",
-      "verified_via": "agent_runtime"
+      "attribution": "worried woman talking on phone in city — via coverr (CC0). https://coverr.co/videos/coverr-worried-woman-talking-on-phone-in-city",
+      "source_url": "https://coverr.co/videos/coverr-worried-woman-talking-on-phone-in-city"
     },
     {
       "id": "vid_homeservices_hook_phone_ring_coverr_coverr-urban-call-woman-on-the-phone",
-      "path": "library/footage/home-services/vid_homeservices_hook_phone_ring_coverr_coverr-urban-call-woman-on-the-phone.mp4",
       "kind": "video",
-      "media": "video",
-      "bucket": "hook_phone_ring",
-      "subject": "phone_call",
-      "shot_type": [
-        "insert",
-        "closeup"
-      ],
-      "motion": "medium",
-      "motion_confirmed": true,
-      "must_depict": [
-        "real phone device",
-        "call / answer / messaging moment",
-        "hands or person context preferred"
-      ],
-      "depicts_verified": {
-        "ok": true,
-        "labels": [],
-        "confidence": 0.75,
-        "method": "strong_token_metadata_frame",
-        "notes": "positive=true; white=0.00; var=1701"
-      },
-      "people": "unknown",
-      "niche_fit": "high",
-      "orientation": "landscape",
-      "reject": false,
-      "reject_classes": [],
       "license": "CC0",
-      "attribution": "urban call woman on the phone \u2014 via coverr (CC0). https://coverr.co/videos/coverr-urban-call-woman-on-the-phone",
-      "source_url": "https://coverr.co/videos/coverr-urban-call-woman-on-the-phone",
-      "source": "coverr",
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "niches": [
-        "home-services"
-      ],
-      "tags": [
-        "hook_phone_ring",
-        "P0",
-        "coverr",
-        "video",
-        "motion_confirmed"
-      ],
-      "phash": "b700eb26bda27210",
-      "width": 1920,
-      "height": 1080,
-      "duration_s": 21.279948,
-      "query": "phone call",
-      "select_why": "score=75; motion=medium; fit=high; landscape",
-      "verified_via": "agent_runtime"
+      "attribution": "urban call woman on the phone — via coverr (CC0). https://coverr.co/videos/coverr-urban-call-woman-on-the-phone",
+      "source_url": "https://coverr.co/videos/coverr-urban-call-woman-on-the-phone"
     },
     {
       "id": "vid_homeservices_person_face_mixkit_31473",
-      "path": "library/footage/home-services/vid_homeservices_person_face_mixkit_31473.mp4",
       "kind": "video",
-      "media": "video",
-      "bucket": "person_face",
-      "subject": "person",
-      "shot_type": [
-        "portrait",
-        "medium"
-      ],
-      "motion": "medium",
-      "motion_confirmed": true,
-      "must_depict": [
-        "real tradesperson or construction worker",
-        "recognizable face or upper body"
-      ],
-      "depicts_verified": {
-        "ok": true,
-        "labels": [],
-        "confidence": 0.5,
-        "method": "strong_token_metadata_frame",
-        "notes": "positive=true; white=0.00; var=1278"
-      },
-      "people": "face",
-      "niche_fit": "med",
-      "orientation": "landscape",
-      "reject": false,
-      "reject_classes": [],
       "license": "Mixkit-License",
-      "attribution": "builders working at the construction site \u2014 via mixkit (Mixkit-License). https://mixkit.co/free-stock-video/",
-      "source_url": "https://mixkit.co/free-stock-video/",
-      "source": "mixkit",
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "niches": [
-        "home-services"
-      ],
-      "tags": [
-        "person_face",
-        "P0",
-        "mixkit",
-        "video",
-        "motion_confirmed"
-      ],
-      "phash": "57b36d81d4bdd5e0",
-      "width": 1280,
-      "height": 720,
-      "duration_s": 10.1101,
-      "query": "seed_clip",
-      "select_why": "score=62; motion=medium; fit=med; landscape",
-      "verified_via": "agent_runtime"
+      "attribution": "builders working at the construction site — via mixkit (Mixkit-License). https://mixkit.co/free-stock-video/",
+      "source_url": "https://mixkit.co/free-stock-video/"
     },
     {
       "id": "vid_homeservices_person_face_mixkit_1457",
-      "path": "library/footage/home-services/vid_homeservices_person_face_mixkit_1457.mp4",
       "kind": "video",
-      "media": "video",
-      "bucket": "person_face",
-      "subject": "person",
-      "shot_type": [
-        "portrait",
-        "medium"
-      ],
-      "motion": "medium",
-      "motion_confirmed": true,
-      "must_depict": [
-        "real tradesperson or construction worker",
-        "recognizable face or upper body"
-      ],
-      "depicts_verified": {
-        "ok": true,
-        "labels": [],
-        "confidence": 0.5,
-        "method": "strong_token_metadata_frame",
-        "notes": "positive=true; white=0.00; var=1022"
-      },
-      "people": "face",
-      "niche_fit": "med",
-      "orientation": "landscape",
-      "reject": false,
-      "reject_classes": [],
       "license": "Mixkit-License",
-      "attribution": "two workers at a construction site \u2014 via mixkit (Mixkit-License). https://mixkit.co/free-stock-video/",
-      "source_url": "https://mixkit.co/free-stock-video/",
-      "source": "mixkit",
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "niches": [
-        "home-services"
-      ],
-      "tags": [
-        "person_face",
-        "P0",
-        "mixkit",
-        "video",
-        "motion_confirmed"
-      ],
-      "phash": "41077d6ae3f41ca6",
-      "width": 1280,
-      "height": 720,
-      "duration_s": 6.583333,
-      "query": "seed_clip",
-      "select_why": "score=60; motion=medium; fit=med; landscape",
-      "verified_via": "agent_runtime"
+      "attribution": "two workers at a construction site — via mixkit (Mixkit-License). https://mixkit.co/free-stock-video/",
+      "source_url": "https://mixkit.co/free-stock-video/"
     },
     {
       "id": "vid_homeservices_product_screen_mixkit_34197",
-      "path": "library/footage/home-services/vid_homeservices_product_screen_mixkit_34197.mp4",
       "kind": "video",
-      "media": "video",
-      "bucket": "product_screen",
-      "subject": "product_ui",
-      "shot_type": [
-        "screen",
-        "insert"
-      ],
-      "motion": "high",
-      "motion_confirmed": true,
-      "must_depict": [
-        "phone/tablet UI in use",
-        "booking or app interaction preferred",
-        "prefer USER_SUPPLIED real product screen record for ship"
-      ],
-      "depicts_verified": {
-        "ok": true,
-        "labels": [],
-        "confidence": 0.75,
-        "method": "strong_token_metadata_frame",
-        "notes": "positive=true; white=0.00; var=5279"
-      },
-      "people": "hands_only",
-      "niche_fit": "high",
-      "orientation": "landscape",
-      "reject": false,
-      "reject_classes": [],
       "license": "Mixkit-License",
-      "attribution": "scheduling an appointment on a smartphone \u2014 via mixkit (Mixkit-License). https://mixkit.co/free-stock-video/",
-      "source_url": "https://mixkit.co/free-stock-video/",
-      "source": "mixkit",
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "niches": [
-        "home-services"
-      ],
-      "tags": [
-        "product_screen",
-        "P0",
-        "mixkit",
-        "video",
-        "motion_confirmed"
-      ],
-      "phash": "0afc904593bae419",
-      "width": 1280,
-      "height": 720,
-      "duration_s": 15.92,
-      "query": "seed_clip",
-      "select_why": "score=90; motion=high; fit=high; landscape",
-      "verified_via": "agent_runtime"
+      "attribution": "scheduling an appointment on a smartphone — via mixkit (Mixkit-License). https://mixkit.co/free-stock-video/",
+      "source_url": "https://mixkit.co/free-stock-video/"
     },
     {
       "id": "vid_homeservices_product_screen_mixkit_42629",
-      "path": "library/footage/home-services/vid_homeservices_product_screen_mixkit_42629.mp4",
       "kind": "video",
-      "media": "video",
-      "bucket": "product_screen",
-      "subject": "product_ui",
-      "shot_type": [
-        "screen",
-        "insert"
-      ],
-      "motion": "medium",
-      "motion_confirmed": true,
-      "must_depict": [
-        "phone/tablet UI in use",
-        "booking or app interaction preferred",
-        "prefer USER_SUPPLIED real product screen record for ship"
-      ],
-      "depicts_verified": {
-        "ok": true,
-        "labels": [],
-        "confidence": 0.75,
-        "method": "strong_token_metadata_frame",
-        "notes": "positive=true; white=0.00; var=598"
-      },
-      "people": "hands_only",
-      "niche_fit": "high",
-      "orientation": "landscape",
-      "reject": false,
-      "reject_classes": [],
       "license": "Mixkit-License",
-      "attribution": "checking the calendar on a tablet \u2014 via mixkit (Mixkit-License). https://mixkit.co/free-stock-video/",
-      "source_url": "https://mixkit.co/free-stock-video/",
-      "source": "mixkit",
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "niches": [
-        "home-services"
-      ],
-      "tags": [
-        "product_screen",
-        "P0",
-        "mixkit",
-        "video",
-        "motion_confirmed"
-      ],
-      "phash": "3cec128f567b21b5",
-      "width": 1280,
-      "height": 720,
-      "duration_s": 11.5115,
-      "query": "seed_clip",
-      "select_why": "score=77; motion=medium; fit=high; landscape",
-      "verified_via": "agent_runtime"
+      "attribution": "checking the calendar on a tablet — via mixkit (Mixkit-License). https://mixkit.co/free-stock-video/",
+      "source_url": "https://mixkit.co/free-stock-video/"
     },
     {
       "id": "vid_homeservices_place_job_site_mixkit_48394",
-      "path": "library/footage/home-services/vid_homeservices_place_job_site_mixkit_48394.mp4",
       "kind": "video",
-      "media": "video",
-      "bucket": "place_job_site",
-      "subject": "place",
-      "shot_type": [
-        "establishing",
-        "wide"
-      ],
-      "motion": "high",
-      "motion_confirmed": true,
-      "must_depict": [
-        "real home / residential / job-site place a trade visits"
-      ],
-      "depicts_verified": {
-        "ok": true,
-        "labels": [],
-        "confidence": 0.75,
-        "method": "strong_token_metadata_frame",
-        "notes": "positive=true; white=0.01; var=2251"
-      },
-      "people": "none",
-      "niche_fit": "high",
-      "orientation": "landscape",
-      "reject": false,
-      "reject_classes": [],
       "license": "Mixkit-License",
-      "attribution": "flying over suburban houses with quiet streets \u2014 via mixkit (Mixkit-License). https://mixkit.co/free-stock-video/",
-      "source_url": "https://mixkit.co/free-stock-video/",
-      "source": "mixkit",
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "niches": [
-        "home-services"
-      ],
-      "tags": [
-        "place_job_site",
-        "P1",
-        "mixkit",
-        "video",
-        "motion_confirmed"
-      ],
-      "phash": "84c45051f73bfb1e",
-      "width": 1280,
-      "height": 720,
-      "duration_s": 23.04,
-      "query": "seed_clip",
-      "select_why": "score=77; motion=high; fit=high; landscape",
-      "verified_via": "agent_runtime"
+      "attribution": "flying over suburban houses with quiet streets — via mixkit (Mixkit-License). https://mixkit.co/free-stock-video/",
+      "source_url": "https://mixkit.co/free-stock-video/"
     },
     {
       "id": "vid_homeservices_place_job_site_mixkit_25001",
-      "path": "library/footage/home-services/vid_homeservices_place_job_site_mixkit_25001.mp4",
       "kind": "video",
-      "media": "video",
-      "bucket": "place_job_site",
-      "subject": "place",
-      "shot_type": [
-        "establishing",
-        "wide"
-      ],
-      "motion": "medium",
-      "motion_confirmed": true,
-      "must_depict": [
-        "real home / residential / job-site place a trade visits"
-      ],
-      "depicts_verified": {
-        "ok": true,
-        "labels": [],
-        "confidence": 0.5,
-        "method": "strong_token_metadata_frame",
-        "notes": "positive=true; white=0.17; var=7183"
-      },
-      "people": "none",
-      "niche_fit": "med",
-      "orientation": "landscape",
-      "reject": false,
-      "reject_classes": [],
       "license": "Mixkit-License",
-      "attribution": "going through a small town street \u2014 via mixkit (Mixkit-License). https://mixkit.co/free-stock-video/going-through-a-small-town-street-25001/",
-      "source_url": "https://mixkit.co/free-stock-video/going-through-a-small-town-street-25001/",
-      "source": "mixkit",
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "niches": [
-        "home-services"
-      ],
-      "tags": [
-        "place_job_site",
-        "P1",
-        "mixkit",
-        "video",
-        "motion_confirmed"
-      ],
-      "phash": "5c31af8a7dc0c4a8",
-      "width": 1280,
-      "height": 720,
-      "duration_s": 18,
-      "query": "house",
-      "select_why": "score=59; motion=medium; fit=med; landscape",
-      "verified_via": "agent_runtime"
+      "attribution": "going through a small town street — via mixkit (Mixkit-License). https://mixkit.co/free-stock-video/going-through-a-small-town-street-25001/",
+      "source_url": "https://mixkit.co/free-stock-video/going-through-a-small-town-street-25001/"
     },
     {
       "id": "vid_homeservices_result_booking_mixkit_34197",
-      "path": "library/footage/home-services/vid_homeservices_product_screen_mixkit_34197.mp4",
       "kind": "video",
-      "media": "video",
-      "bucket": "result_booking",
-      "subject": "booking_outcome",
-      "shot_type": [
-        "insert",
-        "reaction"
-      ],
-      "motion": "high",
-      "motion_confirmed": true,
-      "must_depict": [
-        "booking / calendar / schedule confirmation outcome"
-      ],
-      "depicts_verified": {
-        "ok": true,
-        "labels": [],
-        "confidence": 0.5,
-        "method": "strong_token_metadata_frame",
-        "notes": "positive=true; white=0.00; var=5279"
-      },
-      "people": "unknown",
-      "niche_fit": "med",
-      "orientation": "landscape",
-      "reject": false,
-      "reject_classes": [],
       "license": "Mixkit-License",
-      "attribution": "scheduling an appointment on a smartphone \u2014 via mixkit (Mixkit-License). https://mixkit.co/free-stock-video/",
-      "source_url": "https://mixkit.co/free-stock-video/",
-      "source": "mixkit",
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "niches": [
-        "home-services"
-      ],
-      "tags": [
-        "result_booking",
-        "P1",
-        "mixkit",
-        "video",
-        "motion_confirmed"
-      ],
-      "phash": "0afc904593bae419",
-      "width": 1280,
-      "height": 720,
-      "duration_s": 15.92,
-      "query": "seed_clip",
-      "select_why": "score=69; motion=high; fit=med; landscape",
-      "verified_via": "agent_runtime"
+      "attribution": "scheduling an appointment on a smartphone — via mixkit (Mixkit-License). https://mixkit.co/free-stock-video/",
+      "source_url": "https://mixkit.co/free-stock-video/"
     },
     {
       "id": "vid_homeservices_result_booking_mixkit_42629",
-      "path": "library/footage/home-services/vid_homeservices_product_screen_mixkit_42629.mp4",
       "kind": "video",
-      "media": "video",
-      "bucket": "result_booking",
-      "subject": "booking_outcome",
-      "shot_type": [
-        "insert",
-        "reaction"
-      ],
-      "motion": "medium",
-      "motion_confirmed": true,
-      "must_depict": [
-        "booking / calendar / schedule confirmation outcome"
-      ],
-      "depicts_verified": {
-        "ok": true,
-        "labels": [],
-        "confidence": 0.5,
-        "method": "strong_token_metadata_frame",
-        "notes": "positive=true; white=0.00; var=598"
-      },
-      "people": "unknown",
-      "niche_fit": "med",
-      "orientation": "landscape",
-      "reject": false,
-      "reject_classes": [],
       "license": "Mixkit-License",
-      "attribution": "checking the calendar on a tablet \u2014 via mixkit (Mixkit-License). https://mixkit.co/free-stock-video/",
-      "source_url": "https://mixkit.co/free-stock-video/",
-      "source": "mixkit",
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "niches": [
-        "home-services"
-      ],
-      "tags": [
-        "result_booking",
-        "P1",
-        "mixkit",
-        "video",
-        "motion_confirmed"
-      ],
-      "phash": "3cec128f567b21b5",
-      "width": 1280,
-      "height": 720,
-      "duration_s": 11.5115,
-      "query": "seed_clip",
-      "select_why": "score=56; motion=medium; fit=med; landscape",
-      "verified_via": "agent_runtime"
+      "attribution": "checking the calendar on a tablet — via mixkit (Mixkit-License). https://mixkit.co/free-stock-video/",
+      "source_url": "https://mixkit.co/free-stock-video/"
     },
     {
       "id": "vid_homeservices_money_or_cost_mixkit_18296",
-      "path": "library/footage/home-services/vid_homeservices_money_or_cost_mixkit_18296.mp4",
       "kind": "video",
-      "media": "video",
-      "bucket": "money_or_cost",
-      "subject": "cost_signal",
-      "shot_type": [
-        "insert",
-        "mood"
-      ],
-      "motion": "high",
-      "motion_confirmed": true,
-      "must_depict": [
-        "real cost signal \u2014 bills, invoice, worried call, empty/dark home stress"
-      ],
-      "depicts_verified": {
-        "ok": true,
-        "labels": [],
-        "confidence": 0.75,
-        "method": "strong_token_metadata_frame",
-        "notes": "positive=true; white=0.00; var=3652"
-      },
-      "people": "unknown",
-      "niche_fit": "high",
-      "orientation": "landscape",
-      "reject": false,
-      "reject_classes": [],
       "license": "Mixkit-License",
-      "attribution": "man counting a wad of bills close up \u2014 via mixkit (Mixkit-License). https://mixkit.co/free-stock-video/",
-      "source_url": "https://mixkit.co/free-stock-video/",
-      "source": "mixkit",
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "niches": [
-        "home-services"
-      ],
-      "tags": [
-        "money_or_cost",
-        "P2",
-        "mixkit",
-        "video",
-        "motion_confirmed"
-      ],
-      "phash": "61a4dd6313b68d90",
-      "width": 1280,
-      "height": 720,
-      "duration_s": 10.333333,
-      "query": "seed_clip",
-      "select_why": "score=79; motion=high; fit=high; landscape",
-      "verified_via": "agent_runtime"
+      "attribution": "man counting a wad of bills close up — via mixkit (Mixkit-License). https://mixkit.co/free-stock-video/",
+      "source_url": "https://mixkit.co/free-stock-video/"
     },
     {
       "id": "vid_homeservices_money_or_cost_coverr_coverr-worried-woman-talking-on-phone-in-c",
-      "path": "library/footage/home-services/vid_homeservices_hook_phone_ring_coverr_coverr-worried-woman-talking-on-phone-in.mp4",
       "kind": "video",
-      "media": "video",
-      "bucket": "money_or_cost",
-      "subject": "cost_signal",
-      "shot_type": [
-        "insert",
-        "mood"
-      ],
-      "motion": "medium",
-      "motion_confirmed": true,
-      "must_depict": [
-        "real cost signal \u2014 bills, invoice, worried call, empty/dark home stress"
-      ],
-      "depicts_verified": {
-        "ok": true,
-        "labels": [],
-        "confidence": 0.75,
-        "method": "strong_token_metadata_frame",
-        "notes": "positive=true; white=0.00; var=2061"
-      },
-      "people": "unknown",
-      "niche_fit": "high",
-      "orientation": "landscape",
-      "reject": false,
-      "reject_classes": [],
       "license": "CC0",
-      "attribution": "worried woman talking on phone in city \u2014 via coverr (CC0). https://coverr.co/videos/coverr-worried-woman-talking-on-phone-in-city",
-      "source_url": "https://coverr.co/videos/coverr-worried-woman-talking-on-phone-in-city",
-      "source": "coverr",
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "niches": [
-        "home-services"
-      ],
-      "tags": [
-        "money_or_cost",
-        "P2",
-        "coverr",
-        "video",
-        "motion_confirmed"
-      ],
-      "phash": "76c750c96ec42aa8",
-      "width": 1920,
-      "height": 1080,
-      "duration_s": 18.479948,
-      "query": "worried phone bills",
-      "select_why": "score=80; motion=medium; fit=high; landscape",
-      "verified_via": "agent_runtime"
+      "attribution": "worried woman talking on phone in city — via coverr (CC0). https://coverr.co/videos/coverr-worried-woman-talking-on-phone-in-city",
+      "source_url": "https://coverr.co/videos/coverr-worried-woman-talking-on-phone-in-city"
     },
     {
       "id": "vid_homeservices_problem_hands_tools_mixkit_23601",
-      "path": "library/footage/home-services/vid_homeservices_problem_hands_tools_mixkit_23601.mp4",
       "kind": "video",
-      "media": "video",
-      "bucket": "problem_hands_tools",
-      "subject": "hands_tools",
-      "shot_type": [
-        "closeup",
-        "detail"
-      ],
-      "motion": "high",
-      "motion_confirmed": true,
-      "must_depict": [
-        "real human hands",
-        "real tools or trade repair work"
-      ],
-      "depicts_verified": {
-        "ok": true,
-        "labels": [],
-        "confidence": 0.5,
-        "method": "strong_token_metadata_frame",
-        "notes": "positive=true; white=0.00; var=4380"
-      },
-      "people": "hands_only",
-      "niche_fit": "med",
-      "orientation": "landscape",
-      "reject": false,
-      "reject_classes": [],
       "license": "Mixkit-License",
-      "attribution": "construction worker shows a cutting tool \u2014 via mixkit (Mixkit-License). https://mixkit.co/free-stock-video/",
-      "source_url": "https://mixkit.co/free-stock-video/",
-      "source": "mixkit",
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "niches": [
-        "home-services"
-      ],
-      "tags": [
-        "problem_hands_tools",
-        "P0",
-        "mixkit",
-        "video",
-        "motion_confirmed"
-      ],
-      "phash": "0a43123571e649fb",
-      "width": 1280,
-      "height": 720,
-      "duration_s": 9.48,
-      "query": "seed_clip",
-      "select_why": "score=72; motion=high; fit=med; landscape",
-      "verified_via": "agent_runtime"
+      "attribution": "construction worker shows a cutting tool — via mixkit (Mixkit-License). https://mixkit.co/free-stock-video/",
+      "source_url": "https://mixkit.co/free-stock-video/"
     },
     {
       "id": "vid_homeservices_problem_hands_tools_mixkit_14063",
-      "path": "library/footage/home-services/vid_homeservices_problem_hands_tools_mixkit_14063.mp4",
       "kind": "video",
-      "media": "video",
-      "bucket": "problem_hands_tools",
-      "subject": "hands_tools",
-      "shot_type": [
-        "closeup",
-        "detail"
-      ],
-      "motion": "high",
-      "motion_confirmed": true,
-      "must_depict": [
-        "real human hands",
-        "real tools or trade repair work"
-      ],
-      "depicts_verified": {
-        "ok": true,
-        "labels": [],
-        "confidence": 0.5,
-        "method": "strong_token_metadata_frame",
-        "notes": "positive=true; white=0.04; var=4956"
-      },
-      "people": "hands_only",
-      "niche_fit": "med",
-      "orientation": "landscape",
-      "reject": false,
-      "reject_classes": [],
       "license": "Mixkit-License",
-      "attribution": "engine repair close up \u2014 via mixkit (Mixkit-License). https://mixkit.co/free-stock-video/engine-repair-close-up-14063/",
-      "source_url": "https://mixkit.co/free-stock-video/engine-repair-close-up-14063/",
-      "source": "mixkit",
-      "allowed_use": [
-        "commercial",
-        "paid_social",
-        "organic"
-      ],
-      "niches": [
-        "home-services"
-      ],
-      "tags": [
-        "problem_hands_tools",
-        "P0",
-        "mixkit",
-        "video",
-        "motion_confirmed"
-      ],
-      "phash": "18208dd6439c5789",
-      "width": 1280,
-      "height": 720,
-      "duration_s": 10.84,
-      "query": "repair",
-      "select_why": "score=74; motion=high; fit=med; landscape",
-      "verified_via": "agent_runtime"
+      "attribution": "engine repair close up — via mixkit (Mixkit-License). https://mixkit.co/free-stock-video/engine-repair-close-up-14063/",
+      "source_url": "https://mixkit.co/free-stock-video/engine-repair-close-up-14063/"
     }
   ]
 }

@@ -1,0 +1,170 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/HarrisCrypto/ad-intelligence/schema/ad-breakdown.schema.json",
+  "title": "AdBreakdown",
+  "description": "Original analysis of a public ad. Store the official link and this breakdown only. Do not attach media.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "brand",
+    "advertiser",
+    "platform",
+    "format",
+    "aspect_ratio",
+    "length_s",
+    "year",
+    "award",
+    "niche",
+    "goal",
+    "official_url",
+    "hook_0_3s",
+    "story_beats",
+    "shot_list",
+    "pacing",
+    "text_overlays",
+    "typography_ui",
+    "color_grade",
+    "music_sound",
+    "voiceover",
+    "cta",
+    "emotional_angle",
+    "why_it_worked",
+    "cinematic_qualities",
+    "rebuild_recipe",
+    "safe_zone_notes",
+    "last_verified"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]{2,80}$"
+    },
+    "brand": { "type": "string", "minLength": 1 },
+    "advertiser": { "type": "string", "minLength": 1 },
+    "platform": {
+      "type": "string",
+      "enum": [
+        "tiktok",
+        "instagram_reels",
+        "meta_feed",
+        "meta_stories",
+        "youtube_instream",
+        "youtube_bumper",
+        "youtube_shorts",
+        "x",
+        "pinterest"
+      ]
+    },
+    "format": { "type": "string", "minLength": 2 },
+    "aspect_ratio": {
+      "type": "string",
+      "pattern": "^[0-9.]+:[0-9.]+$"
+    },
+    "length_s": { "type": "number", "exclusiveMinimum": 0 },
+    "year": { "type": "integer", "minimum": 1990, "maximum": 2026 },
+    "award": {
+      "description": "Null unless a public page names the award. evidence_url is required when name/year/category are set.",
+      "oneOf": [
+        { "type": "null" },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["name", "year", "category", "evidence_url"],
+          "properties": {
+            "name": { "type": "string", "minLength": 2 },
+            "year": { "type": "integer", "minimum": 1990, "maximum": 2026 },
+            "category": { "type": "string", "minLength": 2 },
+            "evidence_url": { "type": "string", "pattern": "^https://" }
+          }
+        }
+      ]
+    },
+    "niche": {
+      "type": "string",
+      "enum": [
+        "home-services",
+        "local-service",
+        "ai-saas",
+        "etsy-printables",
+        "ecommerce",
+        "cpg",
+        "food",
+        "apparel",
+        "finance",
+        "auto",
+        "entertainment",
+        "nonprofit",
+        "other"
+      ]
+    },
+    "goal": {
+      "type": "string",
+      "enum": ["awareness", "consideration", "conversion", "retention"]
+    },
+    "official_url": {
+      "type": "string",
+      "pattern": "^https://",
+      "description": "Official page for this ad only: brand YouTube, Meta Ad Library, Google Ads Transparency, a free public award page, a brand case-study page, or TikTok Top Ads viewable without login."
+    },
+    "hook_0_3s": { "type": "string", "minLength": 20 },
+    "story_beats": {
+      "type": "array",
+      "minItems": 3,
+      "items": { "type": "string", "minLength": 8 }
+    },
+    "shot_list": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["t", "shot", "framing", "motion"],
+        "properties": {
+          "t": { "type": "string", "minLength": 1 },
+          "shot": { "type": "string", "minLength": 4 },
+          "framing": { "type": "string", "minLength": 2 },
+          "motion": { "type": "string", "minLength": 2 }
+        }
+      }
+    },
+    "pacing": { "type": "string", "minLength": 12 },
+    "text_overlays": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["wording", "size", "placement", "timing"],
+        "properties": {
+          "wording": { "type": "string", "minLength": 1, "maxLength": 140 },
+          "size": { "type": "string", "minLength": 2 },
+          "placement": { "type": "string", "minLength": 2 },
+          "timing": { "type": "string", "minLength": 2 }
+        }
+      }
+    },
+    "typography_ui": { "type": "string", "minLength": 12 },
+    "color_grade": { "type": "string", "minLength": 12 },
+    "music_sound": { "type": "string", "minLength": 8 },
+    "voiceover": { "type": "string", "minLength": 4 },
+    "cta": { "type": "string", "minLength": 4 },
+    "emotional_angle": { "type": "string", "minLength": 12 },
+    "why_it_worked": { "type": "string", "minLength": 40 },
+    "cinematic_qualities": {
+      "type": "array",
+      "minItems": 2,
+      "items": { "type": "string", "minLength": 8 }
+    },
+    "rebuild_recipe": {
+      "type": "array",
+      "minItems": 4,
+      "description": "Tool-agnostic steps. Must tell the next agent not to copy the brand's art, logos, characters, or exact copy.",
+      "items": { "type": "string", "minLength": 12 }
+    },
+    "safe_zone_notes": { "type": "string", "minLength": 12 },
+    "last_verified": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    }
+  }
+}

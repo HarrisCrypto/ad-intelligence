@@ -1,14 +1,3 @@
-# Local-only longevity / winning notes (never commit advertiser data)
-skills/ad-intelligence/references/private-signals.json
-
-# Private ad studies / competitor breakdowns (never commit media or named scrapes)
-skills/ad-intelligence/studies/private/**
-!skills/ad-intelligence/studies/private/.gitkeep
-
-# Classroom local reference media (annotation-only in git — never commit competitor creatives)
-classroom/private-cache/**
-!classroom/private-cache/.gitkeep
-
 # Render / regression media (synthesized in CI; default deny blobs)
 regression/**/*.mp4
 regression/**/*.mov
@@ -26,11 +15,3 @@ regression/**/last-qa.json
 
 # Node
 node_modules/
-
-# Generated local packages (start-package / backtest scratch)
-skills/ad-intelligence/packages/
-
-# Footage acquire staging
-library/footage/_staging/
-
-library/scripts/qa/fixtures/
