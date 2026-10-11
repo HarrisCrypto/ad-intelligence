@@ -24,6 +24,11 @@ if (probe.status && probe.status !== 0 && !probe.stdout) {
 }
 const p = JSON.parse(probe.stdout);
 const gates = run("demo-quality-gates.mjs");
+const recipes = spawnSync(
+  process.execPath,
+  [path.join(ROOT, "../../library/scripts/lint-gen-recipes.mjs")],
+  { encoding: "utf8", cwd: path.join(ROOT, "../..") }
+);
 const backtest = process.argv.includes("--backtest")
   ? run("backtest.mjs")
   : null;
@@ -31,9 +36,12 @@ const backtest = process.argv.includes("--backtest")
 console.log("Ad Intelligence — agent ready\n");
 console.log(`Skill root: ${ROOT}`);
 console.log(`Probe rung hint: ${p.recommended_rung_hint}`);
+console.log(`Must ask user (gen tools)?: ${p.must_ask_user_gen_tools ? "YES" : "no"}`);
 console.log(`Network: ${p.runtime.network_fetch ? "yes" : "no"}`);
 console.log(`Gates: ${gates.status === 0 ? "PASS" : "FAIL"}`);
+console.log(`Gen recipes: ${recipes.status === 0 ? "PASS" : "FAIL"}`);
 if (gates.status !== 0) console.log(gates.stdout || gates.stderr);
+if (recipes.status !== 0) console.log(recipes.stdout || recipes.stderr);
 if (backtest) {
   console.log(`Backtest: ${backtest.status === 0 ? "PASS" : "FAIL"}`);
   if (backtest.status !== 0) console.log(backtest.stdout || backtest.stderr);
@@ -41,10 +49,12 @@ if (backtest) {
 console.log(`
 ANY HARNESS PATH
 1) node scripts/probe-harness.mjs          # equalize tools → rung
-2) Read prompts/harness-equalization.md   # fill tool card
-3) URL? node scripts/brief-from-url.mjs <url>
-4) Follow prompts/one-shot.md             # concept → beats → craft → lint
-5) Open examples/visual/attention-lab.html
+2) ASK user if mcp/video undeclared → --fill --mcp … --video-gen … --rung …
+3) Read prompts/harness-equalization.md   # fill tool card
+4) Handoff? node scripts/write-gen-pack.mjs --out packages/<b>/gen-pack.md --niche …
+5) URL? node scripts/brief-from-url.mjs <url>
+6) Follow prompts/one-shot.md             # concept → beats → craft → lint
+7) Open examples/visual/attention-lab.html
 
 NO SHELL? Paste prompts/context-pack-lite.md + use references/retrieve-offline-compact.json
          + prompts/no-shell-lint-checklist.md (never fake ok:true).
@@ -54,6 +64,7 @@ Discovery: .cursor/skills · .claude/skills · .agents/skills · .github/skills 
 
 process.exitCode =
   gates.status === 0 &&
+  recipes.status === 0 &&
   p.files_missing.length === 0 &&
   (!backtest || backtest.status === 0)
     ? 0

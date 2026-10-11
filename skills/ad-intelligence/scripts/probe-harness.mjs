@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 /**
  * Probe what THIS runtime can do and recommend a pipeline rung.
- * Agents should still fill the Tool card for MCP/image/video they see in-session.
+ * Agents must declare MCP/image/video (cannot auto-detect) — use --fill.
  *
  * Usage:
  *   node scripts/probe-harness.mjs
  *   node scripts/probe-harness.mjs --json
+ *   node scripts/probe-harness.mjs --fill --mcp no --video-gen higgsfield --rung handoff
  */
 import fs from "node:fs";
 import os from "node:os";
@@ -16,6 +17,12 @@ import { spawnSync } from "node:child_process";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
 const jsonMode = process.argv.includes("--json");
+const fillMode = process.argv.includes("--fill");
+
+function arg(n, d = null) {
+  const i = process.argv.indexOf(n);
+  return i >= 0 ? process.argv[i + 1] : d;
+}
 
 function exists(rel) {
   return fs.existsSync(path.join(ROOT, rel));
@@ -83,6 +90,7 @@ const files = {
   retrieve: exists("scripts/retrieve.mjs"),
   brief_from_url: exists("scripts/brief-from-url.mjs"),
   brand_harvest: exists("scripts/brand-harvest.mjs"),
+  write_gen_pack: exists("scripts/write-gen-pack.mjs"),
 };
 
 const network = canFetch();
@@ -99,13 +107,69 @@ const agentMustDeclare = [
   "voice_tier_selected",
 ];
 
+// --fill declarations (ask user if unknown)
+const declaredMcp = (arg("--mcp") || "unknown").toLowerCase(); // yes|no|unknown
+const declaredVideo = arg("--video-gen") || "unknown"; // higgsfield,kling|none|unknown
+const declaredImage = arg("--image-gen") || "unknown";
+const declaredRung = arg("--rung") || null; // connected|handoff|assembler|package-only
+const declaredHarness = arg("--harness") || null;
+
+function normalizeList(v) {
+  if (!v || v === "unknown") return null;
+  if (v === "none" || v === "no") return [];
+  return String(v)
+    .split(/[,|]/)
+    .map((s) => s.trim())
+    .filter(Boolean);
+}
+
+const videoList = normalizeList(declaredVideo);
+const imageList = normalizeList(declaredImage);
+const mcpLive =
+  declaredMcp === "yes" ||
+  declaredMcp === "true" ||
+  declaredMcp === "connected";
+const mcpNo = declaredMcp === "no" || declaredMcp === "false";
+const userOwnsGen =
+  (videoList && videoList.length > 0) ||
+  /higgsfield|seedance|kling|wan|veo|runway|luma|hailuo|pika/i.test(
+    String(declaredVideo)
+  );
+
 let rung = "package-only";
 let rationale = "Shell/node present; declare gen tools to upgrade rung";
+let mustAskUser = false;
+
 if (shell && files.lint && files.retrieve) {
-  rung = "assembler_or_handoff_candidate";
-  rationale =
-    "Mechanical loop available. If MCP Seedance/Higgsfield live → connected; else if user has those tools → handoff; else assembler / package-only. " +
-    hardware.quality_ceiling;
+  if (mcpLive) {
+    rung = "connected";
+    rationale =
+      "MCP Seedance/Higgsfield declared live — Rung 1 connected. Call tools; log real job ids.";
+  } else if (userOwnsGen && !mcpLive) {
+    rung = "handoff";
+    rationale =
+      "User owns video gen (Higgsfield/Seedance/Kling/…) but MCP not live here → handoff. Write gen-pack.md; do not drop to stock.";
+  } else if (mcpNo && (!videoList || videoList.length === 0) && declaredVideo !== "unknown") {
+    rung = "assembler_or_package";
+    rationale =
+      "User declared no hosted gen MCP/tools — assembler from ledgered assets or package-only. " +
+      hardware.quality_ceiling;
+  } else {
+    rung = "assembler_or_handoff_candidate";
+    rationale =
+      "Mechanical loop available. If MCP Seedance/Higgsfield live → connected; else if user has those tools → handoff; else assembler / package-only. " +
+      hardware.quality_ceiling;
+    if (declaredMcp === "unknown" || declaredVideo === "unknown") {
+      mustAskUser = true;
+      rationale +=
+        " ASK USER: do you have Higgsfield / Seedance / Kling / any video gen? Declare before choosing assembler.";
+    }
+  }
+}
+
+if (declaredRung) {
+  rung = declaredRung;
+  rationale = `Rung locked via --rung ${declaredRung}. ${rationale}`;
 }
 
 const discovery = {
@@ -118,18 +182,25 @@ const discovery = {
   context_pack_lite: "skills/ad-intelligence/prompts/context-pack-lite.md",
   offline_retrieve: "skills/ad-intelligence/references/retrieve-offline-compact.json",
   no_shell_lint: "skills/ad-intelligence/prompts/no-shell-lint-checklist.md",
+  gen_pack: "skills/ad-intelligence/scripts/write-gen-pack.mjs",
+  gen_recipes: "library/realism/gen-recipes.json",
 };
 
 const next = [
+  mustAskUser
+    ? "ASK USER: Do you have Higgsfield / Seedance / Kling / any video gen? Then re-run: probe-harness.mjs --fill --mcp … --video-gen … --rung …"
+    : "Tool card declared — proceed with chosen rung",
   "Fill HARNESS TOOL CARD (prompts/harness-equalization.md) — include hardware + ceiling",
-  "Pick rung: connected | handoff | assembler | package-only",
+  rung === "handoff" || rung === "assembler_or_handoff_candidate"
+    ? "If handoff: node scripts/write-gen-pack.mjs --out packages/<brand>/gen-pack.md --niche <n>  (required artifact)"
+    : "Pick rung: connected | handoff | assembler | package-only",
   files.brief_from_url && network
     ? "URL brief? node scripts/brief-from-url.mjs <url>"
     : "URL brief? gather via prompts/brief-from-url.md",
   files.brand_harvest && network
     ? "Brand harvest (Gate 2.5): node scripts/brand-harvest.mjs <url> — lock consistency from ASSET_VERIFIED"
     : "Brand harvest: paste site facts; never invent palette/mascot",
-  "Materials: node library/scripts/assert-assets.mjs --niche <n> — fill gaps via fill-niche-gaps.mjs (Pexels/Pixabay/Wikimedia) per library/assets/TOOL-ROUTING.md",
+  "Materials: node library/scripts/assert-assets.mjs --niche <n> — fill gaps via fill-niche-gaps.mjs (Pexels/Pixabay/Wikimedia) per library/assets/TOOL-ROUTING.md — stock is NOT a substitute for handoff gen-pack",
   "Provision fonts: library/typography (Anton/Poppins/Inter Tight OFL) + ledgered beds/SFX",
   "node scripts/start-package.mjs --out packages/<brand>-ad.md",
   "node scripts/retrieve.mjs --niche <n> --platform <p> --limit 5 --compact — open gold_fixtures + shot recipes",
@@ -137,6 +208,27 @@ const next = [
   "Fill Concept ≥6 beats Craft with ledgered footage/gen recipes → lint until ok:true",
   "Finish-the-cut + pipeline/qa/run-qa.mjs on the export",
 ];
+
+const toolCard = {
+  harness: declaredHarness,
+  shell_node: shell,
+  network_fetch: network,
+  hardware,
+  image_gen: imageList,
+  video_gen: videoList,
+  mcp_ads_video: mcpLive ? "Seedance|Higgsfield" : mcpNo ? "none" : null,
+  mcp_declared: declaredMcp,
+  video_gen_declared: declaredVideo,
+  browser: null,
+  voice_tier: hardware.voice_tier_default,
+  chosen_rung: declaredRung || (mustAskUser ? null : rung),
+  quality_ceiling: hardware.quality_ceiling,
+  must_ask_user_gen_tools: mustAskUser,
+  equalization_note: mustAskUser
+    ? "Do not choose assembler until user answers gen-tool question"
+    : null,
+  gen_pack_required: (declaredRung || rung) === "handoff",
+};
 
 const payload = {
   skill_root: ROOT,
@@ -152,31 +244,29 @@ const payload = {
     .map(([k]) => k),
   recommended_rung_hint: rung,
   rationale,
+  must_ask_user_gen_tools: mustAskUser,
   agent_must_declare: agentMustDeclare,
   discovery_paths: discovery,
   equalization_doc: "prompts/harness-equalization.md",
   library: {
     typography: "library/typography/",
     sound: "library/sound/",
+    gen_recipes: "library/realism/gen-recipes.json",
   },
   next,
-  tool_card_template: {
-    harness: null,
-    shell_node: shell,
-    network_fetch: network,
-    hardware,
-    image_gen: null,
-    video_gen: null,
-    mcp_ads_video: null,
-    browser: null,
-    voice_tier: hardware.voice_tier_default,
-    chosen_rung: null,
-    quality_ceiling: hardware.quality_ceiling,
-    equalization_note: null,
-  },
+  tool_card_template: toolCard,
+  fill_mode: fillMode,
+  fm_guard: "fm_skipped_handoff — never silently drop handoff → stock",
 };
 
-if (jsonMode) {
+if (fillMode) {
+  const outCard =
+    arg("--card-out") || path.join(os.tmpdir(), "ad-intelligence-tool-card.json");
+  fs.writeFileSync(outCard, JSON.stringify(toolCard, null, 2));
+  payload.tool_card_wrote = outCard;
+}
+
+if (jsonMode || fillMode) {
   console.log(JSON.stringify(payload, null, 2));
 } else {
   console.log("Ad Intelligence — harness probe\n");
@@ -190,6 +280,14 @@ if (jsonMode) {
   console.log(`Files missing: ${payload.files_missing.length ? payload.files_missing.join(", ") : "none"}`);
   console.log(`\nRung hint: ${rung}`);
   console.log(`Why: ${rationale}`);
+  if (mustAskUser) {
+    console.log(
+      "\n⚠ ASK THE USER before assembler: Do you have Higgsfield / Seedance / Kling / any video gen?"
+    );
+    console.log(
+      "  Then: node scripts/probe-harness.mjs --fill --mcp no --video-gen higgsfield --rung handoff"
+    );
+  }
   console.log("\nDeclare in-session tools (cannot auto-detect):");
   for (const k of agentMustDeclare) console.log(`  - ${k}`);
   console.log("\nDiscovery paths:");
@@ -198,6 +296,8 @@ if (jsonMode) {
   next.forEach((n, i) => console.log(`  ${i + 1}. ${n}`));
   console.log("\nDoc: prompts/harness-equalization.md");
   console.log("JSON: node scripts/probe-harness.mjs --json");
+  console.log("Fill: node scripts/probe-harness.mjs --fill --mcp … --video-gen … --rung …");
 }
 
 if (payload.files_missing.length) process.exitCode = 1;
+if (fillMode && mustAskUser && !declaredRung) process.exitCode = 2;

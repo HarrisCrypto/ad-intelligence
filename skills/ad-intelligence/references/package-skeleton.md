@@ -7,8 +7,9 @@ Replace every `[[LIKE_THIS]]`. Tags must be USER_SUPPLIED | ASSET_VERIFIED | PLA
 - Asset ladder state: [[S0|S1|S2|S3]]
 - Generation readiness: GENERATION_READY
 - Connected tools?: [[yes|no]]
-- Pipeline rung: [[connected|handoff|assembler]]
+- Pipeline rung: [[connected|handoff|assembler|package-only]]
 - Render status: NOT_RENDERED
+- Gen pack (handoff required): [[path/to/gen-pack.md or n/a]]
 - Creative-stack last verified date checked?: yes — LAST-VERIFIED.md
 
 ### Brief (locked or assumed)
@@ -21,7 +22,8 @@ Replace every `[[LIKE_THIS]]`. Tags must be USER_SUPPLIED | ASSET_VERIFIED | PLA
 - Proof available: [[list or [PLACEHOLDER: …]]]
 - Tool access: [[connected MCP|prompt-handoff|assembler|package-only]]
 - Harness: [[Cursor|Claude|Codex|Gemini|OpenClaw|ChatGPT|other]]
-- Tools declared: [[image/video/MCP/browser — from probe + tool card]]
+- Tools declared: [[image/video/MCP/browser — from probe + tool card; ASK user if mcp_seedance_or_higgsfield unknown]]
+- User gen tools (asked): [[Higgsfield|Seedance|Kling|none — required before assembler]]
 - Assumptions: [[from brief-defaults if any]]
 
 ### Retrieval

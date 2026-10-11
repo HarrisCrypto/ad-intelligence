@@ -33,6 +33,7 @@ Seeded from the Oply teardown (plan §0 + PART B). Every future bad output shoul
 | `fm_dangling_pointer` | `gold_fixture` not surfaced by retrieve | Pointers must resolve or the corpus entry is a bug |
 | `fm_design_not_source` | Invented palette/mascot while live brand existed | Brand harvest gate (Phase 2.5) before craft |
 | `fm_mascot_wrong_category` | Real mascot reads as kids’ app on cold DR | Suitability judgement; demote playful brand to endcard when needed |
+| `fm_skipped_handoff` | Probe/user indicated a gen tool (Higgsfield/Seedance/Kling) but agent silently dropped to assembler/stock; ads look like stock because they are | Rung must be **declared by the user** (ask if undeclared) — never inferred as “no tools.” Handoff is incomplete without `<package>/gen-pack.md` from `write-gen-pack.mjs`. `finish-the-cut` “blocked” only when user declared **no** gen tools AND no assets — MCP-not-connected ≠ no tools |
 
 ## Regression mapping
 

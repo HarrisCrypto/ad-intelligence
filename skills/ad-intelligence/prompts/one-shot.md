@@ -7,13 +7,17 @@ Agents fail when they fill ledgers before having an idea — or render a hook an
 ```text
 0. PROBE + EQUALIZE + DEGRADATION RUNG
    node scripts/probe-harness.mjs
-   Fill tool card (prompts/harness-equalization.md)
+   If mcp_seedance_or_higgsfield / video_gen undeclared → ASK USER:
+     "Do you have Higgsfield / Seedance / Kling / any video gen?"
+   Lock: node scripts/probe-harness.mjs --fill --mcp … --video-gen … --rung …
+   Fill tool card (prompts/harness-equalization.md) BEFORE choosing assembler.
    Read references/creative-stack/degradation-ladder.md → pick rung:
      Rung 1 connected (Seedance/Higgsfield MCP live — name the tool)
-     Rung 2 i2v (Kling/Wan/Grok/LTX/Veo/Runway…) → keyframes → short clips → post
-     Rung 3 motion storyboard (NO video tool — director pre-viz, NOT a slideshow)
-     handoff | package-only as needed
-   HARD: never default to stills/storyboard if any video tool is available.
+     handoff (user owns those tools, not here) → write-gen-pack.mjs → gen-pack.md REQUIRED
+     Rung 2 i2v (Kling/Wan/Grok/LTX/Veo/Runway… in-session) → keyframes → short clips → post
+     Rung 3 / assembler (user declared NO video tool — director pre-viz / ledgered assets)
+     package-only as needed
+   HARD: never default to stills/stock if user has a gen tool (that is handoff, not blocked).
    Model notes: references/external-resources.md (prefer Wan 2.2 → LTX-2.5 → Grok without Seedance)
    Optional: read references/brand-context.md or .agents/brand-context.md if present
 

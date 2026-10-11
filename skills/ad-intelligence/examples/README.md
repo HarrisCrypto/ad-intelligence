@@ -2,10 +2,12 @@
 
 Full-depth gold fixtures (lint-clean). Service / phone niche: **`voice-agent-front-desk.md`**.  
 Style map: [`../references/creative-stack/style-selection-engine.md`](../references/creative-stack/style-selection-engine.md).  
-No Seedance/Higgsfield? → [`../references/creative-stack/degradation-ladder.md`](../references/creative-stack/degradation-ladder.md) · [`assembler-pipeline.md`](../references/creative-stack/assembler-pipeline.md) · [`../references/external-resources.md`](../references/external-resources.md).
+Have Higgsfield/Seedance but MCP not live? → **handoff** + [`gen-packs/home-services-hvac.md`](./gen-packs/home-services-hvac.md) (`write-gen-pack.mjs`).  
+No gen tools (user declared)? → [`../references/creative-stack/degradation-ladder.md`](../references/creative-stack/degradation-ladder.md) · [`assembler-pipeline.md`](../references/creative-stack/assembler-pipeline.md) · [`../references/external-resources.md`](../references/external-resources.md).
 
 | Path | Depth | Notes |
 | --- | --- | --- |
+| `gen-packs/home-services-hvac.md` | **handoff** | Paste-ready Higgsfield prompts per shot |
 | `beauty-dtc-dual-track.md` | **Full-depth** | lint `"ok": true` |
 | `local-service-trust.md` | **Full-depth** | lint `"ok": true` |
 | `saas-demo-pas.md` | **Full-depth** | lint `"ok": true` |

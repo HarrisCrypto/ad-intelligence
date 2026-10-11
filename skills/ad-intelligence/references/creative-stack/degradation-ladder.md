@@ -54,18 +54,30 @@ Label the package: `Pipeline rung: motion_storyboard` · `Render status: NOT_REN
 
 ---
 
+## Handoff (user owns gen tools; not connected here)
+
+| | |
+| --- | --- |
+| **When** | User declared Higgsfield / Seedance / Kling / peers exist, but MCP is **not** live in this session |
+| **Do** | Write `<package>/gen-pack.md` with `scripts/write-gen-pack.mjs` — one paste-ready prompt per shot (tool, aspect, duration, camera, ref image). Recipes from `library/realism/gen-recipes.json` (linted: no empty tool/prompt). User runs gens; agent finishes cut with returned clips. |
+| **Forbidden** | Silently dropping to assembler/stock (`fm_skipped_handoff`). Calling handoff “blocked.” |
+
+---
+
 ## Hard rules
 
-1. **Probe before choosing a rung.**  
-2. **Never default to stills/storyboard if any video tool is available.**  
+1. **Probe before choosing a rung** — and **ask the user** when `mcp_seedance_or_higgsfield` is undeclared.  
+2. **Never default to stills/storyboard if any video tool is available** (in-session **or** user-owned → handoff).  
 3. **Never invent rendered.** Sheets, claim ledger, one CTA, lint, finish-the-cut (for the chosen rung) stay mandatory.  
 4. **Name the real tool** in every render-plan row.  
-5. If tools appear mid-session, **upgrade the rung** and continue — do not stay on storyboard out of habit.
+5. If tools appear mid-session, **upgrade the rung** and continue — do not stay on storyboard out of habit.  
+6. **Handoff without `gen-pack.md` is incomplete.**
 
 ## Quick decision
 
 ```text
-Seedance/Higgsfield MCP live?     → Rung 1
-Else any i2v/T2V available?       → Rung 2 (name Wan/LTX/Grok/Kling/…)
-Else                              → Rung 3 motion storyboard (pre-viz density)
+Seedance/Higgsfield MCP live?           → Rung 1 connected
+Else user owns those / Kling / peers?   → handoff (+ gen-pack.md)  ← ASK if unknown
+Else any i2v/T2V available in-session?  → Rung 2 (name Wan/LTX/Grok/Kling/…)
+Else user declared no gen tools         → Rung 3 motion storyboard / assembler assets
 ```
