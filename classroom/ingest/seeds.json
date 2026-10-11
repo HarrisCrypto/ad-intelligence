@@ -1,5 +1,5 @@
 {
-  "$comment": "Domain/keyword seeds for Google Ads Transparency + archive.org video supplements when YouTube media is bot-gated.",
+  "$comment": "Domain/keyword seeds for Google Ads Transparency. archive_video lists are FOOTAGE only (private-cache) — never reference ads / video_coverage.",
   "region": "US",
   "video_floor_per_niche": 5,
   "formats": ["VIDEO", "IMAGE", "TEXT", "CAROUSEL"],
