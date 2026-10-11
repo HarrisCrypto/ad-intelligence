@@ -33,10 +33,13 @@
 | Private signals overlay | 2026-10-10 | `private-signals.example.json` → local file |
 | Policy precheck | 2026-10-10 | v1.1.0 — housing/credit/health decision tree |
 | Lint package gate | 2026-10-10 | Gold pass + lint-corpus must fail |
-| Full-depth gold fixtures | 2026-10-10 | beauty, local, saas, physical |
+| Full-depth gold fixtures | 2026-10-11 | beauty, local, saas, physical, voice, fashion, food, real-estate, fitness |
 | Visual design gallery | 2026-10-10 | `examples/visual/index.html` + 7 frames |
 | Stress briefs | 2026-10-10 | `examples/stress-briefs/` messy prompts |
 | Assembler pipeline | 2026-10-10 | Third rung when no single-pass video gen |
+| Degradation ladder | 2026-10-11 | Rung 1 connected → Rung 2 i2v → Rung 3 motion storyboard |
+| Style-selection engine | 2026-10-11 | Niche → pattern → visual → prompt; before retrieve |
+| External resources | 2026-10-11 | Oct 2026 model routing + ad libraries |
 | Alternative model routing | 2026-10-10 | Wan → LTX → Grok → peers → stills |
 | Render QA checklist | 2026-10-10 | `checklists/render-qa.json` |
 | Voice / front-desk gold | 2026-10-10 | `examples/voice-agent-front-desk.md` |

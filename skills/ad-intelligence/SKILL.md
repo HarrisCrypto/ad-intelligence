@@ -12,13 +12,13 @@ description: >-
   Higgsfield. Probe → study → emulate → human_build → ≥6 beats → finish-the-cut → lint.
 compatibility: Requires Node 18+ for scripts. Optional network for URL brief + libraries. MCP video tools optional (connected rung).
 metadata:
-  version: "3.19.0"
+  version: "3.20.0"
   open_standard: agentskills
 ---
 
 # Ad Intelligence — one-shot ad maker
 
-**Do not brainstorm.** Top agents: **probe tools → equalize rung → study → emulate → human_build → skeleton → finish-the-cut (full duration + audio) → lint green.**
+**Do not brainstorm.** Top agents: **probe tools → degradation rung → style selection → study → emulate → human_build → skeleton → finish-the-cut (full duration + audio) → lint green.**
 
 ## When to use
 
@@ -26,32 +26,39 @@ Ads, creatives, hooks, UGC, Meta/TikTok/Instagram/X/YouTube, “ads for my site,
 
 ## ONE-SHOT (mandatory)
 
-1. `node scripts/probe-harness.mjs` → tool card + **hardware/ceiling** ([`harness-equalization.md`](prompts/harness-equalization.md))
+1. `node scripts/probe-harness.mjs` → tool card + **hardware/ceiling** ([`harness-equalization.md`](prompts/harness-equalization.md)) → pick rung via [`degradation-ladder.md`](references/creative-stack/degradation-ladder.md) (**never default to stills if any video tool is available**)
 2. URL/site? → `brief-from-url.mjs` then **`brand-harvest.mjs <url>`** (Gate 2.5 — lock palette/mascot/CTA from the site; never invent)
-3. **Materials** — [`library/assets/TOOL-ROUTING.md`](../../library/assets/TOOL-ROUTING.md): `assert-assets.mjs --niche …`; if footage gaps → `fill-niche-gaps.mjs` (Pexels/Pixabay keys if set, else Wikimedia) or gen via recipes + [`alternative-model-routing.md`](references/creative-stack/alternative-model-routing.md). Disclose ceiling before designing cards on a void.
-4. Provision fonts from [`library/typography/`](../../library/typography/); beds/SFX from [`library/sound/`](../../library/sound/) + [`license-ledger.json`](../../library/assets/license-ledger.json)
-5. `start-package.mjs` → `retrieve.mjs --compact` — open **`gold_fixtures`** + study-card **shot recipes / asset_ids**
-6. Emulate study structure → Concept → ≥6 exact-VO rows → Craft with **photographed/ledgered setups** ([`human-build-os.md`](references/human-build-os.md))
-7. Lint until `"ok": true` → **finish-the-cut** (full duration + licensed audio) → `pipeline/qa/run-qa.mjs` on the export
-8. Deliver package + real job ids + QA JSON + attributions (not hook-only, not silent)
+3. **Style selection** — [`style-selection-engine.md`](references/creative-stack/style-selection-engine.md): clarifying questions (tone / proof / platform / funnel / tier) → niche → pattern → visual system → prompt contract **before** retrieve
+4. **Materials** — [`library/assets/TOOL-ROUTING.md`](../../library/assets/TOOL-ROUTING.md): `assert-assets.mjs --niche …`; if footage gaps → `fill-niche-gaps.mjs` (Pexels/Pixabay keys if set, else Wikimedia) or gen via recipes + [`alternative-model-routing.md`](references/creative-stack/alternative-model-routing.md) · [`external-resources.md`](references/external-resources.md). Disclose ceiling before designing cards on a void.
+5. Provision fonts from [`library/typography/`](../../library/typography/); beds/SFX from [`library/sound/`](../../library/sound/) + [`license-ledger.json`](../../library/assets/license-ledger.json)
+6. `start-package.mjs` → `retrieve.mjs --compact` — open **`gold_fixtures`** + study-card **shot recipes / asset_ids** (retrieval always follows style selection)
+7. Emulate study structure → Concept → ≥6 exact-VO rows → Craft with **photographed/ledgered setups** ([`human-build-os.md`](references/human-build-os.md))
+8. Lint until `"ok": true` → **finish-the-cut** (full duration + licensed audio) → `pipeline/qa/run-qa.mjs` on the export
+9. Deliver package + real job ids + QA JSON + attributions (not hook-only, not silent)
 
 Ready check: `node scripts/agent-ready.mjs`  
 No shell: paste [`prompts/context-pack-lite.md`](prompts/context-pack-lite.md) · offline [`retrieve-offline-compact.json`](references/retrieve-offline-compact.json) · [`no-shell-lint-checklist.md`](prompts/no-shell-lint-checklist.md).
 
-## Pipeline rung (after probe)
+## Pipeline rung (after probe) — degradation ladder
 
 | If | Then |
 | --- | --- |
-| Seedance/Higgsfield MCP live | connected — **call tools** |
-| Those tools exist for user, not here | handoff prompts |
-| Image/short video + editor | assembler + `alternative-model-routing.md` |
+| Seedance/Higgsfield MCP live | **Rung 1** connected — **call tools**; name tool in render plan |
+| Image-to-video available (Kling, Wan, Grok, LTX, Veo, Runway, …) | **Rung 2** keyframes → short i2v → post — prefer Wan 2.2 / LTX-2.5 / Grok when no Seedance |
+| Those tools exist for user, not here | handoff prompts (same density) |
+| No video model at all | **Rung 3** motion storyboard (director’s pre-viz — **not** a slideshow) |
 | Text-only | package-only — still gold density, `NOT_RENDERED` |
+
+Full ladder: [`degradation-ladder.md`](references/creative-stack/degradation-ladder.md) · model notes: [`external-resources.md`](references/external-resources.md).
 
 ## Progressive disclosure (read only if needed)
 
 | Need | File |
 | --- | --- |
 | Full playbook | `prompts/one-shot.md` |
+| Degradation ladder | `references/creative-stack/degradation-ladder.md` |
+| Style → pattern → prompt | `references/creative-stack/style-selection-engine.md` |
+| External models / libraries | `references/external-resources.md` |
 | Studies (viral / pro / award) | `studies/corpus.json` · `studies/README.md` |
 | How a human builds | `references/human-build-os.md` · **log:** `human-build-log.template.md` |
 | Ingest private studies | `scripts/ingest-blueprint.mjs` |
@@ -70,7 +77,8 @@ No shell: paste [`prompts/context-pack-lite.md`](prompts/context-pack-lite.md) �
 
 - One JTBD · muted-first · one CTA · dual-track when serious  
 - Design + cut + timing + shots + animation — not collage + slogan  
-- Never invent proof or job ids · never invent lint JSON  
+- Sheets · claim ledger · lint · never invent proof or job ids · never invent lint JSON  
+- Never invent rendered · never default to stills when video tools exist  
 
 ## Verify
 
