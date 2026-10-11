@@ -1,0 +1,218 @@
+{
+  "id": "arc_beauty_cresttoothpa_4",
+  "status": "confirmed",
+  "source": {
+    "platform": "archive.org",
+    "url_or_library_id": "archive.org:CrestToothpa_4",
+    "accessed": "2026-10-11",
+    "rights": "annotation-only",
+    "verified_via": "agent_runtime"
+  },
+  "niche": "beauty",
+  "format": "polished_video",
+  "structure": {
+    "format": "video_timed",
+    "timing_observable": true,
+    "format_note": "Measured ingest (polished_video); cuts from ffmpeg scdet"
+  },
+  "duration_s": 29.997,
+  "aspect": "16:9",
+  "provenance": {
+    "observed": true,
+    "basis": "ffmpeg:scdet+ebur128+silencedetect+tblend/signalstats+palettegen; tesseract OCR frame; font heuristic",
+    "measured_at": "2026-10-11T03:31:15.321Z",
+    "media_path_local": "classroom/private-cache/arc_beauty_cresttoothpa_4.mp4",
+    "media_committed": false
+  },
+  "measured_by": {
+    "tooling": [
+      "ffmpeg:scdet",
+      "ffmpeg:ebur128",
+      "ffmpeg:silencedetect",
+      "ffmpeg:tblend+signalstats",
+      "ffmpeg:palettegen",
+      "tesseract",
+      "font-heuristic"
+    ],
+    "honesty_errors": []
+  },
+  "hook": {
+    "mechanism": "[FILL from watch — first 1–2s device]",
+    "first_second_description": "[FILL — photographed moment, not a card]",
+    "on_screen_text": "Att fae 4",
+    "spoken": null
+  },
+  "shots": [
+    {
+      "t_start": 0,
+      "t_end": 1.368,
+      "purpose": "hook",
+      "on_screen_text": "Att fae 4",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 1/4 from arc_beauty_cresttoothpa_4.mp4"
+    },
+    {
+      "t_start": 1.368,
+      "t_end": 3.203,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 2/4 from arc_beauty_cresttoothpa_4.mp4"
+    },
+    {
+      "t_start": 3.203,
+      "t_end": 3.67,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 3/4 from arc_beauty_cresttoothpa_4.mp4"
+    },
+    {
+      "t_start": 3.67,
+      "t_end": 29.997,
+      "purpose": "cta_or_hold",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 4/4 from arc_beauty_cresttoothpa_4.mp4"
+    }
+  ],
+  "recipe": {
+    "hook": "[FILL]",
+    "beats": [
+      {
+        "t_start": 0,
+        "t_end": 1.368,
+        "purpose": "hook"
+      },
+      {
+        "t_start": 1.368,
+        "t_end": 3.203,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 3.203,
+        "t_end": 3.67,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 3.67,
+        "t_end": 29.997,
+        "purpose": "cta_or_hold"
+      }
+    ],
+    "pacing_curve": {
+      "cuts_per_10s": 1,
+      "first_cut_at_s": 1.368,
+      "longest_hold_s": 26.327,
+      "source": "measured"
+    },
+    "proof": "[FILL]",
+    "cta": "[FILL]"
+  },
+  "stats": {
+    "shot_count": 4,
+    "avg_shot_s": 7.499,
+    "cuts_per_10s": 1,
+    "longest_hold_s": 26.327,
+    "first_cut_at_s": 1.368,
+    "text_density": "ocr_hit",
+    "loudness_lufs": -21.4,
+    "true_peak_dbfs": -7.5,
+    "silence_gaps": [
+      {
+        "t_start": 0.246188,
+        "t_end": 1.79352
+      },
+      {
+        "t_start": 3.51437,
+        "t_end": 3.92677
+      },
+      {
+        "t_start": 4.86073,
+        "t_end": 5.32129
+      }
+    ],
+    "motion": {
+      "samples_per_s": 0,
+      "mean_yavg": null,
+      "motion_ratio": 1,
+      "freeze_s": 0,
+      "curve": [],
+      "source": "measured"
+    },
+    "probe": {
+      "width": 320,
+      "height": 240,
+      "duration_s": 29.996663,
+      "has_audio": true
+    },
+    "stats_source": "measured"
+  },
+  "audio": {
+    "loudness_lufs": -21.4,
+    "true_peak_dbfs": -7.5,
+    "silence_gaps": [
+      {
+        "t_start": 0.246188,
+        "t_end": 1.79352
+      },
+      {
+        "t_start": 3.51437,
+        "t_end": 3.92677
+      },
+      {
+        "t_start": 4.86073,
+        "t_end": 5.32129
+      }
+    ],
+    "source": "measured"
+  },
+  "look": {
+    "palette": [
+      "#8a8a87",
+      "#8a8a87",
+      "#8a8a87",
+      "#8a8a87",
+      "#8a8a87",
+      "#8a8a87"
+    ],
+    "palette_source": "measured",
+    "caption_style": "[FILL]",
+    "grade": "[FILL]",
+    "ocr_sample": "Att fae 4\nye ae.\nANN Fae. sO We\npais sala Ras: Sa\n; :\nket] r Bar ce ie sa\nRy\nbx\n5) ERS ae coat Fe -",
+    "font_guess": "rounded-sans",
+    "font_class": "rounded-sans",
+    "font_source": "heuristic-ocr"
+  },
+  "cta": {
+    "primary": "[FILL]",
+    "timing_s": null
+  },
+  "offer_and_proof": {
+    "offer": "[FILL]",
+    "proof": "[PLACEHOLDER]"
+  },
+  "why_it_works": "Measured public commercial from archive.org/Prelinger (archive.org:CrestToothpa_4). Real audio+cuts; study assembly only.",
+  "steal": [
+    "Cut rhythm from measured stats",
+    "Offer/endcard framing",
+    "Never copy marks or claims"
+  ],
+  "what_not_to_copy": [
+    "Competitor pixels / logos / talent likeness",
+    "Verbatim scripts or uncleared audio",
+    "Invented proof"
+  ],
+  "tags": [
+    "beauty",
+    "polished_video",
+    "ingest",
+    "observed",
+    "confirmed"
+  ],
+  "materials_ceiling": "Corpus teaches assembly; brand material still needs USER_SUPPLIED → i2v → vetted stock"
+}

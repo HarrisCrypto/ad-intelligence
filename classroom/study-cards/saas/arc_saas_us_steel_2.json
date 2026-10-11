@@ -1,0 +1,330 @@
+{
+  "id": "arc_saas_us_steel_2",
+  "status": "confirmed",
+  "source": {
+    "platform": "archive.org",
+    "url_or_library_id": "archive.org:us_steel_2",
+    "accessed": "2026-10-11",
+    "rights": "annotation-only",
+    "verified_via": "agent_runtime"
+  },
+  "niche": "saas",
+  "format": "polished_video",
+  "structure": {
+    "format": "video_timed",
+    "timing_observable": true,
+    "format_note": "Measured ingest (polished_video); cuts from ffmpeg scdet"
+  },
+  "duration_s": 91.091,
+  "aspect": "16:9",
+  "provenance": {
+    "observed": true,
+    "basis": "ffmpeg:scdet+ebur128+silencedetect+tblend/signalstats+palettegen; tesseract OCR frame; font heuristic",
+    "measured_at": "2026-10-11T03:29:59.400Z",
+    "media_path_local": "classroom/private-cache/arc_saas_us_steel_2.mp4",
+    "media_committed": false
+  },
+  "measured_by": {
+    "tooling": [
+      "ffmpeg:scdet",
+      "ffmpeg:ebur128",
+      "ffmpeg:silencedetect",
+      "ffmpeg:tblend+signalstats",
+      "ffmpeg:palettegen",
+      "tesseract",
+      "font-heuristic"
+    ],
+    "honesty_errors": []
+  },
+  "hook": {
+    "mechanism": "[FILL from watch — first 1–2s device]",
+    "first_second_description": "[FILL — photographed moment, not a card]",
+    "on_screen_text": "",
+    "spoken": null
+  },
+  "shots": [
+    {
+      "t_start": 0,
+      "t_end": 9.61,
+      "purpose": "hook",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 1/12 from arc_saas_us_steel_2.mp4"
+    },
+    {
+      "t_start": 9.61,
+      "t_end": 17.05,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 2/12 from arc_saas_us_steel_2.mp4"
+    },
+    {
+      "t_start": 17.05,
+      "t_end": 30.964,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 3/12 from arc_saas_us_steel_2.mp4"
+    },
+    {
+      "t_start": 30.964,
+      "t_end": 41.141,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 4/12 from arc_saas_us_steel_2.mp4"
+    },
+    {
+      "t_start": 41.141,
+      "t_end": 43.477,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 5/12 from arc_saas_us_steel_2.mp4"
+    },
+    {
+      "t_start": 43.477,
+      "t_end": 47.815,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 6/12 from arc_saas_us_steel_2.mp4"
+    },
+    {
+      "t_start": 47.815,
+      "t_end": 49.983,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 7/12 from arc_saas_us_steel_2.mp4"
+    },
+    {
+      "t_start": 49.983,
+      "t_end": 51.418,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 8/12 from arc_saas_us_steel_2.mp4"
+    },
+    {
+      "t_start": 51.418,
+      "t_end": 54.488,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 9/12 from arc_saas_us_steel_2.mp4"
+    },
+    {
+      "t_start": 54.488,
+      "t_end": 56.89,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 10/12 from arc_saas_us_steel_2.mp4"
+    },
+    {
+      "t_start": 56.89,
+      "t_end": 68.602,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 11/12 from arc_saas_us_steel_2.mp4"
+    },
+    {
+      "t_start": 68.602,
+      "t_end": 91.091,
+      "purpose": "cta_or_hold",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 12/12 from arc_saas_us_steel_2.mp4"
+    }
+  ],
+  "recipe": {
+    "hook": "[FILL]",
+    "beats": [
+      {
+        "t_start": 0,
+        "t_end": 9.61,
+        "purpose": "hook"
+      },
+      {
+        "t_start": 9.61,
+        "t_end": 17.05,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 17.05,
+        "t_end": 30.964,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 30.964,
+        "t_end": 41.141,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 41.141,
+        "t_end": 43.477,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 43.477,
+        "t_end": 47.815,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 47.815,
+        "t_end": 49.983,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 49.983,
+        "t_end": 51.418,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 51.418,
+        "t_end": 54.488,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 54.488,
+        "t_end": 56.89,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 56.89,
+        "t_end": 68.602,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 68.602,
+        "t_end": 91.091,
+        "purpose": "cta_or_hold"
+      }
+    ],
+    "pacing_curve": {
+      "cuts_per_10s": 1.21,
+      "first_cut_at_s": 9.61,
+      "longest_hold_s": 22.489,
+      "source": "measured"
+    },
+    "proof": "[FILL]",
+    "cta": "[FILL]"
+  },
+  "stats": {
+    "shot_count": 12,
+    "avg_shot_s": 7.591,
+    "cuts_per_10s": 1.21,
+    "longest_hold_s": 22.489,
+    "first_cut_at_s": 9.61,
+    "text_density": "low",
+    "loudness_lufs": -27.3,
+    "true_peak_dbfs": -9,
+    "silence_gaps": [
+      {
+        "t_start": 0.0213333,
+        "t_end": 0.520646
+      },
+      {
+        "t_start": 0.92825,
+        "t_end": 2.22235
+      },
+      {
+        "t_start": 90.2701,
+        "t_end": 91.008
+      }
+    ],
+    "motion": {
+      "samples_per_s": 0,
+      "mean_yavg": null,
+      "motion_ratio": 1,
+      "freeze_s": 0,
+      "curve": [],
+      "source": "measured"
+    },
+    "probe": {
+      "width": 320,
+      "height": 240,
+      "duration_s": 91.091091,
+      "has_audio": true
+    },
+    "stats_source": "measured"
+  },
+  "audio": {
+    "loudness_lufs": -27.3,
+    "true_peak_dbfs": -9,
+    "silence_gaps": [
+      {
+        "t_start": 0.0213333,
+        "t_end": 0.520646
+      },
+      {
+        "t_start": 0.92825,
+        "t_end": 2.22235
+      },
+      {
+        "t_start": 90.2701,
+        "t_end": 91.008
+      }
+    ],
+    "source": "measured"
+  },
+  "look": {
+    "palette": [
+      "#242828",
+      "#242828",
+      "#242828",
+      "#242828",
+      "#242828",
+      "#242828"
+    ],
+    "palette_source": "measured",
+    "caption_style": "[FILL]",
+    "grade": "[FILL]",
+    "ocr_sample": "",
+    "font_guess": "unknown",
+    "font_class": "unknown",
+    "font_source": "unavailable"
+  },
+  "cta": {
+    "primary": "[FILL]",
+    "timing_s": null
+  },
+  "offer_and_proof": {
+    "offer": "[FILL]",
+    "proof": "[PLACEHOLDER]"
+  },
+  "why_it_works": "Measured public commercial from archive.org/Prelinger (archive.org:us_steel_2). Real audio+cuts; study assembly only.",
+  "steal": [
+    "Cut rhythm from measured stats",
+    "Offer/endcard framing",
+    "Never copy marks or claims"
+  ],
+  "what_not_to_copy": [
+    "Competitor pixels / logos / talent likeness",
+    "Verbatim scripts or uncleared audio",
+    "Invented proof"
+  ],
+  "tags": [
+    "saas",
+    "polished_video",
+    "ingest",
+    "observed",
+    "confirmed"
+  ],
+  "materials_ceiling": "Corpus teaches assembly; brand material still needs USER_SUPPLIED → i2v → vetted stock"
+}

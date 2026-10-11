@@ -71,6 +71,42 @@
         "talking_head"
       ],
       "live": true
+    },
+    {
+      "id": "ecom",
+      "aliases": ["ecommerce", "shopify"],
+      "skill_niche": null,
+      "pack": null,
+      "footage_buckets": null,
+      "formats_target": ["ugc_video", "static_image", "carousel", "text_search"],
+      "live": false
+    },
+    {
+      "id": "beauty",
+      "aliases": ["makeup", "cosmetics"],
+      "skill_niche": "beauty-dtc",
+      "pack": null,
+      "footage_buckets": null,
+      "formats_target": ["ugc_video", "polished_video", "static_image", "text_search"],
+      "live": false
+    },
+    {
+      "id": "legal",
+      "aliases": ["law", "attorney"],
+      "skill_niche": null,
+      "pack": null,
+      "footage_buckets": null,
+      "formats_target": ["talking_head", "static_image", "text_search"],
+      "live": false
+    },
+    {
+      "id": "local",
+      "aliases": ["local-business", "yelp"],
+      "skill_niche": "local-services",
+      "pack": null,
+      "footage_buckets": null,
+      "formats_target": ["ugc_video", "static_image", "text_search"],
+      "live": false
     }
   ]
 }

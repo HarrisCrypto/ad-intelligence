@@ -1,0 +1,2938 @@
+{
+  "id": "arc_legal_letter_from_an_airline_pilot_1",
+  "status": "confirmed",
+  "source": {
+    "platform": "archive.org",
+    "url_or_library_id": "archive.org:letter_from_an_airline_pilot_1",
+    "accessed": "2026-10-11",
+    "rights": "annotation-only",
+    "verified_via": "agent_runtime"
+  },
+  "niche": "legal",
+  "format": "polished_video",
+  "structure": {
+    "format": "video_timed",
+    "timing_observable": true,
+    "format_note": "Measured ingest (polished_video); cuts from ffmpeg scdet"
+  },
+  "duration_s": 1020.187,
+  "aspect": "16:9",
+  "provenance": {
+    "observed": true,
+    "basis": "ffmpeg:scdet+ebur128+silencedetect+tblend/signalstats+palettegen; tesseract OCR frame; font heuristic",
+    "measured_at": "2026-10-11T03:35:15.553Z",
+    "media_path_local": "classroom/private-cache/arc_legal_letter_from_an_airline_pilot_1.mp4",
+    "media_committed": false
+  },
+  "measured_by": {
+    "tooling": [
+      "ffmpeg:scdet",
+      "ffmpeg:ebur128",
+      "ffmpeg:silencedetect",
+      "ffmpeg:tblend+signalstats",
+      "ffmpeg:palettegen",
+      "tesseract",
+      "font-heuristic"
+    ],
+    "honesty_errors": []
+  },
+  "hook": {
+    "mechanism": "[FILL from watch — first 1–2s device]",
+    "first_second_description": "[FILL — photographed moment, not a card]",
+    "on_screen_text": "—— Sa",
+    "spoken": null
+  },
+  "shots": [
+    {
+      "t_start": 0,
+      "t_end": 0.434,
+      "purpose": "hook",
+      "on_screen_text": "—— Sa",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 1/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 0.434,
+      "t_end": 6.073,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 2/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 6.073,
+      "t_end": 17.384,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 3/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 17.384,
+      "t_end": 21.455,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 4/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 21.455,
+      "t_end": 28.929,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 5/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 28.929,
+      "t_end": 34.067,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 6/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 34.067,
+      "t_end": 48.282,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 7/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 48.282,
+      "t_end": 71.338,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 8/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 71.338,
+      "t_end": 78.345,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 9/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 78.345,
+      "t_end": 81.682,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 10/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 81.682,
+      "t_end": 84.251,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 11/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 84.251,
+      "t_end": 84.351,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 12/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 84.351,
+      "t_end": 105.439,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 13/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 105.439,
+      "t_end": 107.674,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 14/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 107.674,
+      "t_end": 110.21,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 15/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 110.21,
+      "t_end": 113.847,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 16/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 113.847,
+      "t_end": 118.385,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 17/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 118.385,
+      "t_end": 123.957,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 18/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 123.957,
+      "t_end": 127.294,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 19/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 127.294,
+      "t_end": 135.235,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 20/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 135.235,
+      "t_end": 144.344,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 21/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 144.344,
+      "t_end": 152.052,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 22/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 152.052,
+      "t_end": 180.681,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 23/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 180.681,
+      "t_end": 181.748,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 24/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 181.748,
+      "t_end": 188.856,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 25/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 188.856,
+      "t_end": 202.369,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 26/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 202.369,
+      "t_end": 204.304,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 27/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 204.304,
+      "t_end": 227.227,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 28/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 227.227,
+      "t_end": 231.732,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 29/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 231.732,
+      "t_end": 236.937,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 30/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 236.937,
+      "t_end": 256.69,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 31/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 256.69,
+      "t_end": 266.8,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 32/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 266.8,
+      "t_end": 270.037,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 33/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 270.037,
+      "t_end": 274.141,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 34/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 274.141,
+      "t_end": 276.777,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 35/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 276.777,
+      "t_end": 284.151,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 36/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 284.151,
+      "t_end": 313.981,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 37/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 313.981,
+      "t_end": 320.687,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 38/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 320.687,
+      "t_end": 320.721,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 39/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 320.721,
+      "t_end": 326.76,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 40/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 326.76,
+      "t_end": 332.332,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 41/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 332.332,
+      "t_end": 336.87,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 42/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 336.87,
+      "t_end": 365.766,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 43/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 365.766,
+      "t_end": 385.085,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 44/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 385.085,
+      "t_end": 388.055,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 45/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 388.055,
+      "t_end": 393.994,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 46/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 393.994,
+      "t_end": 400.567,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 47/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 400.567,
+      "t_end": 402.436,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 48/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 402.436,
+      "t_end": 404.771,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 49/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 404.771,
+      "t_end": 430.264,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 50/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 430.264,
+      "t_end": 433.867,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 51/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 433.867,
+      "t_end": 440.841,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 52/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 440.841,
+      "t_end": 449.449,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 53/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 449.449,
+      "t_end": 457.057,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 54/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 457.057,
+      "t_end": 472.539,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 55/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 472.539,
+      "t_end": 485.853,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 56/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 485.853,
+      "t_end": 496.73,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 57/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 496.73,
+      "t_end": 501.068,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 58/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 501.068,
+      "t_end": 502.703,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 59/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 502.703,
+      "t_end": 504.771,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 60/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 504.771,
+      "t_end": 506.573,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 61/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 506.573,
+      "t_end": 508.709,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 62/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 508.709,
+      "t_end": 513.714,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 63/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 513.714,
+      "t_end": 526.26,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 64/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 526.26,
+      "t_end": 530.13,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 65/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 530.13,
+      "t_end": 533.7,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 66/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 533.7,
+      "t_end": 535.769,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 67/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 535.769,
+      "t_end": 538.872,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 68/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 538.872,
+      "t_end": 547.581,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 69/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 547.581,
+      "t_end": 550.317,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 70/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 550.317,
+      "t_end": 560.427,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 71/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 560.427,
+      "t_end": 567.234,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 72/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 567.234,
+      "t_end": 570.137,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 73/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 570.137,
+      "t_end": 574.441,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 74/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 574.441,
+      "t_end": 578.612,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 75/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 578.612,
+      "t_end": 596.63,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 76/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 596.63,
+      "t_end": 599.7,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 77/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 599.7,
+      "t_end": 602.703,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 78/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 602.703,
+      "t_end": 607.541,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 79/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 607.541,
+      "t_end": 616.617,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 80/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 616.617,
+      "t_end": 620.687,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 81/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 620.687,
+      "t_end": 627.694,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 82/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 627.694,
+      "t_end": 631.865,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 83/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 631.865,
+      "t_end": 645.913,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 84/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 645.913,
+      "t_end": 650.417,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 85/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 650.417,
+      "t_end": 654.154,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 86/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 654.154,
+      "t_end": 656.757,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 87/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 656.757,
+      "t_end": 670.304,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 88/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 670.304,
+      "t_end": 680.814,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 89/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 680.814,
+      "t_end": 684.418,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 90/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 684.418,
+      "t_end": 695.329,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 91/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 695.329,
+      "t_end": 701.301,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 92/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 701.301,
+      "t_end": 722.222,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 93/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 722.222,
+      "t_end": 731.965,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 94/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 731.965,
+      "t_end": 738.405,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 95/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 738.405,
+      "t_end": 744.545,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 96/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 744.545,
+      "t_end": 746.647,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 97/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 746.647,
+      "t_end": 749.349,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 98/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 749.349,
+      "t_end": 764.898,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 99/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 764.898,
+      "t_end": 767.501,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 100/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 767.501,
+      "t_end": 775.609,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 101/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 775.609,
+      "t_end": 782.216,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 102/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 782.216,
+      "t_end": 784.251,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 103/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 784.251,
+      "t_end": 789.89,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 104/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 789.89,
+      "t_end": 793.36,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 105/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 793.36,
+      "t_end": 803.036,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 106/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 803.036,
+      "t_end": 821.255,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 107/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 821.255,
+      "t_end": 838.839,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 108/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 838.839,
+      "t_end": 842.676,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 109/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 842.676,
+      "t_end": 845.746,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 110/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 845.746,
+      "t_end": 847.514,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 111/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 847.514,
+      "t_end": 849.416,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 112/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 849.416,
+      "t_end": 852.152,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 113/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 852.152,
+      "t_end": 855.155,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 114/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 855.155,
+      "t_end": 858.759,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 115/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 858.759,
+      "t_end": 861.495,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 116/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 861.495,
+      "t_end": 864.531,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 117/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 864.531,
+      "t_end": 868.602,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 118/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 868.602,
+      "t_end": 870.637,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 119/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 870.637,
+      "t_end": 872.539,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 120/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 872.539,
+      "t_end": 875.542,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 121/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 875.542,
+      "t_end": 883.116,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 122/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 883.116,
+      "t_end": 886.119,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 123/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 886.119,
+      "t_end": 890.624,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 124/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 890.624,
+      "t_end": 905.038,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 125/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 905.038,
+      "t_end": 911.678,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 126/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 911.678,
+      "t_end": 914.982,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 127/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 914.982,
+      "t_end": 920.988,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 128/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 920.988,
+      "t_end": 922.556,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 129/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 922.556,
+      "t_end": 923.991,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 130/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 923.991,
+      "t_end": 927.828,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 131/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 927.828,
+      "t_end": 929.062,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 132/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 929.062,
+      "t_end": 938.772,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 133/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 938.772,
+      "t_end": 944.378,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 134/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 944.378,
+      "t_end": 948.081,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 135/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 948.081,
+      "t_end": 953.554,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 136/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 953.554,
+      "t_end": 954.888,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 137/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 954.888,
+      "t_end": 958.292,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 138/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 958.292,
+      "t_end": 961.361,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 139/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 961.361,
+      "t_end": 967.434,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 140/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 967.434,
+      "t_end": 968.936,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 141/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 968.936,
+      "t_end": 976.31,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 142/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 976.31,
+      "t_end": 978.145,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 143/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 978.145,
+      "t_end": 979.746,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 144/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 979.746,
+      "t_end": 981.548,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 145/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 981.548,
+      "t_end": 984.718,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 146/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 984.718,
+      "t_end": 985.786,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 147/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 985.786,
+      "t_end": 1006.34,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 148/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 1006.34,
+      "t_end": 1008.41,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 149/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 1008.41,
+      "t_end": 1010.18,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 150/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 1010.18,
+      "t_end": 1014.28,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 151/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    },
+    {
+      "t_start": 1014.28,
+      "t_end": 1020.187,
+      "purpose": "cta_or_hold",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 152/152 from arc_legal_letter_from_an_airline_pilot_1.mp4"
+    }
+  ],
+  "recipe": {
+    "hook": "[FILL]",
+    "beats": [
+      {
+        "t_start": 0,
+        "t_end": 0.434,
+        "purpose": "hook"
+      },
+      {
+        "t_start": 0.434,
+        "t_end": 6.073,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 6.073,
+        "t_end": 17.384,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 17.384,
+        "t_end": 21.455,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 21.455,
+        "t_end": 28.929,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 28.929,
+        "t_end": 34.067,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 34.067,
+        "t_end": 48.282,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 48.282,
+        "t_end": 71.338,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 71.338,
+        "t_end": 78.345,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 78.345,
+        "t_end": 81.682,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 81.682,
+        "t_end": 84.251,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 84.251,
+        "t_end": 84.351,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 84.351,
+        "t_end": 105.439,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 105.439,
+        "t_end": 107.674,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 107.674,
+        "t_end": 110.21,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 110.21,
+        "t_end": 113.847,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 113.847,
+        "t_end": 118.385,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 118.385,
+        "t_end": 123.957,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 123.957,
+        "t_end": 127.294,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 127.294,
+        "t_end": 135.235,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 135.235,
+        "t_end": 144.344,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 144.344,
+        "t_end": 152.052,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 152.052,
+        "t_end": 180.681,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 180.681,
+        "t_end": 181.748,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 181.748,
+        "t_end": 188.856,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 188.856,
+        "t_end": 202.369,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 202.369,
+        "t_end": 204.304,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 204.304,
+        "t_end": 227.227,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 227.227,
+        "t_end": 231.732,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 231.732,
+        "t_end": 236.937,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 236.937,
+        "t_end": 256.69,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 256.69,
+        "t_end": 266.8,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 266.8,
+        "t_end": 270.037,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 270.037,
+        "t_end": 274.141,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 274.141,
+        "t_end": 276.777,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 276.777,
+        "t_end": 284.151,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 284.151,
+        "t_end": 313.981,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 313.981,
+        "t_end": 320.687,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 320.687,
+        "t_end": 320.721,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 320.721,
+        "t_end": 326.76,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 326.76,
+        "t_end": 332.332,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 332.332,
+        "t_end": 336.87,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 336.87,
+        "t_end": 365.766,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 365.766,
+        "t_end": 385.085,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 385.085,
+        "t_end": 388.055,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 388.055,
+        "t_end": 393.994,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 393.994,
+        "t_end": 400.567,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 400.567,
+        "t_end": 402.436,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 402.436,
+        "t_end": 404.771,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 404.771,
+        "t_end": 430.264,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 430.264,
+        "t_end": 433.867,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 433.867,
+        "t_end": 440.841,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 440.841,
+        "t_end": 449.449,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 449.449,
+        "t_end": 457.057,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 457.057,
+        "t_end": 472.539,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 472.539,
+        "t_end": 485.853,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 485.853,
+        "t_end": 496.73,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 496.73,
+        "t_end": 501.068,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 501.068,
+        "t_end": 502.703,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 502.703,
+        "t_end": 504.771,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 504.771,
+        "t_end": 506.573,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 506.573,
+        "t_end": 508.709,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 508.709,
+        "t_end": 513.714,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 513.714,
+        "t_end": 526.26,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 526.26,
+        "t_end": 530.13,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 530.13,
+        "t_end": 533.7,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 533.7,
+        "t_end": 535.769,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 535.769,
+        "t_end": 538.872,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 538.872,
+        "t_end": 547.581,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 547.581,
+        "t_end": 550.317,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 550.317,
+        "t_end": 560.427,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 560.427,
+        "t_end": 567.234,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 567.234,
+        "t_end": 570.137,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 570.137,
+        "t_end": 574.441,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 574.441,
+        "t_end": 578.612,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 578.612,
+        "t_end": 596.63,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 596.63,
+        "t_end": 599.7,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 599.7,
+        "t_end": 602.703,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 602.703,
+        "t_end": 607.541,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 607.541,
+        "t_end": 616.617,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 616.617,
+        "t_end": 620.687,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 620.687,
+        "t_end": 627.694,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 627.694,
+        "t_end": 631.865,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 631.865,
+        "t_end": 645.913,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 645.913,
+        "t_end": 650.417,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 650.417,
+        "t_end": 654.154,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 654.154,
+        "t_end": 656.757,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 656.757,
+        "t_end": 670.304,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 670.304,
+        "t_end": 680.814,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 680.814,
+        "t_end": 684.418,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 684.418,
+        "t_end": 695.329,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 695.329,
+        "t_end": 701.301,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 701.301,
+        "t_end": 722.222,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 722.222,
+        "t_end": 731.965,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 731.965,
+        "t_end": 738.405,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 738.405,
+        "t_end": 744.545,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 744.545,
+        "t_end": 746.647,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 746.647,
+        "t_end": 749.349,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 749.349,
+        "t_end": 764.898,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 764.898,
+        "t_end": 767.501,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 767.501,
+        "t_end": 775.609,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 775.609,
+        "t_end": 782.216,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 782.216,
+        "t_end": 784.251,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 784.251,
+        "t_end": 789.89,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 789.89,
+        "t_end": 793.36,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 793.36,
+        "t_end": 803.036,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 803.036,
+        "t_end": 821.255,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 821.255,
+        "t_end": 838.839,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 838.839,
+        "t_end": 842.676,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 842.676,
+        "t_end": 845.746,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 845.746,
+        "t_end": 847.514,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 847.514,
+        "t_end": 849.416,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 849.416,
+        "t_end": 852.152,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 852.152,
+        "t_end": 855.155,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 855.155,
+        "t_end": 858.759,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 858.759,
+        "t_end": 861.495,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 861.495,
+        "t_end": 864.531,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 864.531,
+        "t_end": 868.602,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 868.602,
+        "t_end": 870.637,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 870.637,
+        "t_end": 872.539,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 872.539,
+        "t_end": 875.542,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 875.542,
+        "t_end": 883.116,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 883.116,
+        "t_end": 886.119,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 886.119,
+        "t_end": 890.624,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 890.624,
+        "t_end": 905.038,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 905.038,
+        "t_end": 911.678,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 911.678,
+        "t_end": 914.982,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 914.982,
+        "t_end": 920.988,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 920.988,
+        "t_end": 922.556,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 922.556,
+        "t_end": 923.991,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 923.991,
+        "t_end": 927.828,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 927.828,
+        "t_end": 929.062,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 929.062,
+        "t_end": 938.772,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 938.772,
+        "t_end": 944.378,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 944.378,
+        "t_end": 948.081,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 948.081,
+        "t_end": 953.554,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 953.554,
+        "t_end": 954.888,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 954.888,
+        "t_end": 958.292,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 958.292,
+        "t_end": 961.361,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 961.361,
+        "t_end": 967.434,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 967.434,
+        "t_end": 968.936,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 968.936,
+        "t_end": 976.31,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 976.31,
+        "t_end": 978.145,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 978.145,
+        "t_end": 979.746,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 979.746,
+        "t_end": 981.548,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 981.548,
+        "t_end": 984.718,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 984.718,
+        "t_end": 985.786,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 985.786,
+        "t_end": 1006.34,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 1006.34,
+        "t_end": 1008.41,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 1008.41,
+        "t_end": 1010.18,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 1010.18,
+        "t_end": 1014.28,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 1014.28,
+        "t_end": 1020.187,
+        "purpose": "cta_or_hold"
+      }
+    ],
+    "pacing_curve": {
+      "cuts_per_10s": 1.48,
+      "first_cut_at_s": 0.434,
+      "longest_hold_s": 29.83,
+      "source": "measured"
+    },
+    "proof": "[FILL]",
+    "cta": "[FILL]"
+  },
+  "stats": {
+    "shot_count": 152,
+    "avg_shot_s": 6.712,
+    "cuts_per_10s": 1.48,
+    "longest_hold_s": 29.83,
+    "first_cut_at_s": 0.434,
+    "text_density": "ocr_hit",
+    "loudness_lufs": -27.7,
+    "true_peak_dbfs": -8.6,
+    "silence_gaps": [
+      {
+        "t_start": 0.0213333,
+        "t_end": 1.5261
+      },
+      {
+        "t_start": 8.94404,
+        "t_end": 9.50012
+      },
+      {
+        "t_start": 9.50021,
+        "t_end": 10.0294
+      },
+      {
+        "t_start": 10.0422,
+        "t_end": 10.6022
+      },
+      {
+        "t_start": 18.6775,
+        "t_end": 19.1964
+      },
+      {
+        "t_start": 23.0581,
+        "t_end": 23.5915
+      },
+      {
+        "t_start": 23.5917,
+        "t_end": 24.0475
+      },
+      {
+        "t_start": 24.0478,
+        "t_end": 24.444
+      },
+      {
+        "t_start": 35.4111,
+        "t_end": 36.1952
+      },
+      {
+        "t_start": 41.0975,
+        "t_end": 41.6241
+      },
+      {
+        "t_start": 41.6242,
+        "t_end": 42.0505
+      },
+      {
+        "t_start": 44.3068,
+        "t_end": 44.6994
+      },
+      {
+        "t_start": 51.1558,
+        "t_end": 51.5074
+      },
+      {
+        "t_start": 51.5081,
+        "t_end": 53.7216
+      },
+      {
+        "t_start": 53.7609,
+        "t_end": 55.2928
+      },
+      {
+        "t_start": 61.5054,
+        "t_end": 62.3093
+      },
+      {
+        "t_start": 65.2317,
+        "t_end": 65.6113
+      },
+      {
+        "t_start": 67.6553,
+        "t_end": 69.8694
+      },
+      {
+        "t_start": 70.9318,
+        "t_end": 71.8832
+      },
+      {
+        "t_start": 74.5738,
+        "t_end": 75.1693
+      },
+      {
+        "t_start": 77.0117,
+        "t_end": 78.7472
+      },
+      {
+        "t_start": 80.4319,
+        "t_end": 80.9124
+      },
+      {
+        "t_start": 99.1661,
+        "t_end": 99.5981
+      },
+      {
+        "t_start": 101.474,
+        "t_end": 102.168
+      },
+      {
+        "t_start": 103.352,
+        "t_end": 104.057
+      },
+      {
+        "t_start": 104.058,
+        "t_end": 105.963
+      },
+      {
+        "t_start": 108.747,
+        "t_end": 109.263
+      },
+      {
+        "t_start": 113.338,
+        "t_end": 114.055
+      },
+      {
+        "t_start": 116.539,
+        "t_end": 117.28
+      },
+      {
+        "t_start": 126.462,
+        "t_end": 126.962
+      },
+      {
+        "t_start": 128.64,
+        "t_end": 129.139
+      },
+      {
+        "t_start": 131.365,
+        "t_end": 131.951
+      },
+      {
+        "t_start": 135.278,
+        "t_end": 135.665
+      },
+      {
+        "t_start": 141.793,
+        "t_end": 142.523
+      },
+      {
+        "t_start": 147.712,
+        "t_end": 148.141
+      },
+      {
+        "t_start": 151.207,
+        "t_end": 152.702
+      },
+      {
+        "t_start": 165.852,
+        "t_end": 166.232
+      },
+      {
+        "t_start": 168.827,
+        "t_end": 169.646
+      },
+      {
+        "t_start": 180.253,
+        "t_end": 180.619
+      },
+      {
+        "t_start": 182.422,
+        "t_end": 182.899
+      },
+      {
+        "t_start": 194.199,
+        "t_end": 194.645
+      },
+      {
+        "t_start": 205.028,
+        "t_end": 205.405
+      },
+      {
+        "t_start": 208.998,
+        "t_end": 209.502
+      },
+      {
+        "t_start": 211.377,
+        "t_end": 212.13
+      },
+      {
+        "t_start": 212.267,
+        "t_end": 212.98
+      },
+      {
+        "t_start": 213.061,
+        "t_end": 213.432
+      },
+      {
+        "t_start": 213.432,
+        "t_end": 213.813
+      },
+      {
+        "t_start": 249.081,
+        "t_end": 249.502
+      },
+      {
+        "t_start": 254.46,
+        "t_end": 255.092
+      },
+      {
+        "t_start": 257.969,
+        "t_end": 258.403
+      },
+      {
+        "t_start": 267.917,
+        "t_end": 268.638
+      },
+      {
+        "t_start": 273.415,
+        "t_end": 274.134
+      },
+      {
+        "t_start": 278.161,
+        "t_end": 278.907
+      },
+      {
+        "t_start": 280.249,
+        "t_end": 280.978
+      },
+      {
+        "t_start": 283.197,
+        "t_end": 283.903
+      },
+      {
+        "t_start": 285.33,
+        "t_end": 285.778
+      },
+      {
+        "t_start": 286.348,
+        "t_end": 286.758
+      },
+      {
+        "t_start": 291.405,
+        "t_end": 291.795
+      },
+      {
+        "t_start": 296.864,
+        "t_end": 297.669
+      },
+      {
+        "t_start": 313.209,
+        "t_end": 313.877
+      },
+      {
+        "t_start": 327.937,
+        "t_end": 328.305
+      },
+      {
+        "t_start": 330.018,
+        "t_end": 330.435
+      },
+      {
+        "t_start": 331.092,
+        "t_end": 331.55
+      },
+      {
+        "t_start": 332.325,
+        "t_end": 333.952
+      },
+      {
+        "t_start": 347.575,
+        "t_end": 348.527
+      },
+      {
+        "t_start": 365.004,
+        "t_end": 365.462
+      },
+      {
+        "t_start": 424.784,
+        "t_end": 425.446
+      },
+      {
+        "t_start": 495.123,
+        "t_end": 495.525
+      },
+      {
+        "t_start": 502.83,
+        "t_end": 504.724
+      },
+      {
+        "t_start": 514.593,
+        "t_end": 515.071
+      },
+      {
+        "t_start": 544.256,
+        "t_end": 544.657
+      },
+      {
+        "t_start": 545.431,
+        "t_end": 545.783
+      },
+      {
+        "t_start": 551.726,
+        "t_end": 552.085
+      },
+      {
+        "t_start": 562.615,
+        "t_end": 562.985
+      },
+      {
+        "t_start": 565.654,
+        "t_end": 566.264
+      },
+      {
+        "t_start": 663.737,
+        "t_end": 664.15
+      },
+      {
+        "t_start": 672.911,
+        "t_end": 673.285
+      },
+      {
+        "t_start": 750.319,
+        "t_end": 750.915
+      },
+      {
+        "t_start": 771.172,
+        "t_end": 771.563
+      },
+      {
+        "t_start": 777.362,
+        "t_end": 777.764
+      },
+      {
+        "t_start": 854.562,
+        "t_end": 854.946
+      },
+      {
+        "t_start": 870.351,
+        "t_end": 870.725
+      },
+      {
+        "t_start": 889.673,
+        "t_end": 890.068
+      },
+      {
+        "t_start": 907.557,
+        "t_end": 908.049
+      }
+    ],
+    "motion": {
+      "samples_per_s": 0,
+      "mean_yavg": null,
+      "motion_ratio": 1,
+      "freeze_s": 0,
+      "curve": [],
+      "source": "measured"
+    },
+    "probe": {
+      "width": 320,
+      "height": 240,
+      "duration_s": 1020.186854,
+      "has_audio": true
+    },
+    "stats_source": "measured"
+  },
+  "audio": {
+    "loudness_lufs": -27.7,
+    "true_peak_dbfs": -8.6,
+    "silence_gaps": [
+      {
+        "t_start": 0.0213333,
+        "t_end": 1.5261
+      },
+      {
+        "t_start": 8.94404,
+        "t_end": 9.50012
+      },
+      {
+        "t_start": 9.50021,
+        "t_end": 10.0294
+      },
+      {
+        "t_start": 10.0422,
+        "t_end": 10.6022
+      },
+      {
+        "t_start": 18.6775,
+        "t_end": 19.1964
+      },
+      {
+        "t_start": 23.0581,
+        "t_end": 23.5915
+      },
+      {
+        "t_start": 23.5917,
+        "t_end": 24.0475
+      },
+      {
+        "t_start": 24.0478,
+        "t_end": 24.444
+      },
+      {
+        "t_start": 35.4111,
+        "t_end": 36.1952
+      },
+      {
+        "t_start": 41.0975,
+        "t_end": 41.6241
+      },
+      {
+        "t_start": 41.6242,
+        "t_end": 42.0505
+      },
+      {
+        "t_start": 44.3068,
+        "t_end": 44.6994
+      },
+      {
+        "t_start": 51.1558,
+        "t_end": 51.5074
+      },
+      {
+        "t_start": 51.5081,
+        "t_end": 53.7216
+      },
+      {
+        "t_start": 53.7609,
+        "t_end": 55.2928
+      },
+      {
+        "t_start": 61.5054,
+        "t_end": 62.3093
+      },
+      {
+        "t_start": 65.2317,
+        "t_end": 65.6113
+      },
+      {
+        "t_start": 67.6553,
+        "t_end": 69.8694
+      },
+      {
+        "t_start": 70.9318,
+        "t_end": 71.8832
+      },
+      {
+        "t_start": 74.5738,
+        "t_end": 75.1693
+      },
+      {
+        "t_start": 77.0117,
+        "t_end": 78.7472
+      },
+      {
+        "t_start": 80.4319,
+        "t_end": 80.9124
+      },
+      {
+        "t_start": 99.1661,
+        "t_end": 99.5981
+      },
+      {
+        "t_start": 101.474,
+        "t_end": 102.168
+      },
+      {
+        "t_start": 103.352,
+        "t_end": 104.057
+      },
+      {
+        "t_start": 104.058,
+        "t_end": 105.963
+      },
+      {
+        "t_start": 108.747,
+        "t_end": 109.263
+      },
+      {
+        "t_start": 113.338,
+        "t_end": 114.055
+      },
+      {
+        "t_start": 116.539,
+        "t_end": 117.28
+      },
+      {
+        "t_start": 126.462,
+        "t_end": 126.962
+      },
+      {
+        "t_start": 128.64,
+        "t_end": 129.139
+      },
+      {
+        "t_start": 131.365,
+        "t_end": 131.951
+      },
+      {
+        "t_start": 135.278,
+        "t_end": 135.665
+      },
+      {
+        "t_start": 141.793,
+        "t_end": 142.523
+      },
+      {
+        "t_start": 147.712,
+        "t_end": 148.141
+      },
+      {
+        "t_start": 151.207,
+        "t_end": 152.702
+      },
+      {
+        "t_start": 165.852,
+        "t_end": 166.232
+      },
+      {
+        "t_start": 168.827,
+        "t_end": 169.646
+      },
+      {
+        "t_start": 180.253,
+        "t_end": 180.619
+      },
+      {
+        "t_start": 182.422,
+        "t_end": 182.899
+      },
+      {
+        "t_start": 194.199,
+        "t_end": 194.645
+      },
+      {
+        "t_start": 205.028,
+        "t_end": 205.405
+      },
+      {
+        "t_start": 208.998,
+        "t_end": 209.502
+      },
+      {
+        "t_start": 211.377,
+        "t_end": 212.13
+      },
+      {
+        "t_start": 212.267,
+        "t_end": 212.98
+      },
+      {
+        "t_start": 213.061,
+        "t_end": 213.432
+      },
+      {
+        "t_start": 213.432,
+        "t_end": 213.813
+      },
+      {
+        "t_start": 249.081,
+        "t_end": 249.502
+      },
+      {
+        "t_start": 254.46,
+        "t_end": 255.092
+      },
+      {
+        "t_start": 257.969,
+        "t_end": 258.403
+      },
+      {
+        "t_start": 267.917,
+        "t_end": 268.638
+      },
+      {
+        "t_start": 273.415,
+        "t_end": 274.134
+      },
+      {
+        "t_start": 278.161,
+        "t_end": 278.907
+      },
+      {
+        "t_start": 280.249,
+        "t_end": 280.978
+      },
+      {
+        "t_start": 283.197,
+        "t_end": 283.903
+      },
+      {
+        "t_start": 285.33,
+        "t_end": 285.778
+      },
+      {
+        "t_start": 286.348,
+        "t_end": 286.758
+      },
+      {
+        "t_start": 291.405,
+        "t_end": 291.795
+      },
+      {
+        "t_start": 296.864,
+        "t_end": 297.669
+      },
+      {
+        "t_start": 313.209,
+        "t_end": 313.877
+      },
+      {
+        "t_start": 327.937,
+        "t_end": 328.305
+      },
+      {
+        "t_start": 330.018,
+        "t_end": 330.435
+      },
+      {
+        "t_start": 331.092,
+        "t_end": 331.55
+      },
+      {
+        "t_start": 332.325,
+        "t_end": 333.952
+      },
+      {
+        "t_start": 347.575,
+        "t_end": 348.527
+      },
+      {
+        "t_start": 365.004,
+        "t_end": 365.462
+      },
+      {
+        "t_start": 424.784,
+        "t_end": 425.446
+      },
+      {
+        "t_start": 495.123,
+        "t_end": 495.525
+      },
+      {
+        "t_start": 502.83,
+        "t_end": 504.724
+      },
+      {
+        "t_start": 514.593,
+        "t_end": 515.071
+      },
+      {
+        "t_start": 544.256,
+        "t_end": 544.657
+      },
+      {
+        "t_start": 545.431,
+        "t_end": 545.783
+      },
+      {
+        "t_start": 551.726,
+        "t_end": 552.085
+      },
+      {
+        "t_start": 562.615,
+        "t_end": 562.985
+      },
+      {
+        "t_start": 565.654,
+        "t_end": 566.264
+      },
+      {
+        "t_start": 663.737,
+        "t_end": 664.15
+      },
+      {
+        "t_start": 672.911,
+        "t_end": 673.285
+      },
+      {
+        "t_start": 750.319,
+        "t_end": 750.915
+      },
+      {
+        "t_start": 771.172,
+        "t_end": 771.563
+      },
+      {
+        "t_start": 777.362,
+        "t_end": 777.764
+      },
+      {
+        "t_start": 854.562,
+        "t_end": 854.946
+      },
+      {
+        "t_start": 870.351,
+        "t_end": 870.725
+      },
+      {
+        "t_start": 889.673,
+        "t_end": 890.068
+      },
+      {
+        "t_start": 907.557,
+        "t_end": 908.049
+      }
+    ],
+    "source": "measured"
+  },
+  "look": {
+    "palette": [
+      "#e2e2de",
+      "#e2e2de",
+      "#e2e2de",
+      "#e2e2de",
+      "#e2e2de",
+      "#e2e2de"
+    ],
+    "palette_source": "measured",
+    "caption_style": "[FILL]",
+    "grade": "[FILL]",
+    "ocr_sample": "—— Sa\n————— —\n— _—_—< = |\n=ab. —— “} ~\nSS ee ae\n—=S aa ee\n—=—s lee\ni Se cg\na\n\na SS Sa 7",
+    "font_guess": "rounded-sans",
+    "font_class": "rounded-sans",
+    "font_source": "heuristic-ocr"
+  },
+  "cta": {
+    "primary": "[FILL]",
+    "timing_s": null
+  },
+  "offer_and_proof": {
+    "offer": "[FILL]",
+    "proof": "[PLACEHOLDER]"
+  },
+  "why_it_works": "Measured public commercial from archive.org/Prelinger (archive.org:letter_from_an_airline_pilot_1). Real audio+cuts; study assembly only.",
+  "steal": [
+    "Cut rhythm from measured stats",
+    "Offer/endcard framing",
+    "Never copy marks or claims"
+  ],
+  "what_not_to_copy": [
+    "Competitor pixels / logos / talent likeness",
+    "Verbatim scripts or uncleared audio",
+    "Invented proof"
+  ],
+  "tags": [
+    "legal",
+    "polished_video",
+    "ingest",
+    "observed",
+    "confirmed"
+  ],
+  "materials_ceiling": "Corpus teaches assembly; brand material still needs USER_SUPPLIED → i2v → vetted stock"
+}

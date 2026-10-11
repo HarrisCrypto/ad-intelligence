@@ -1,0 +1,368 @@
+{
+  "id": "arc_beauty_your_hit_parade",
+  "status": "confirmed",
+  "source": {
+    "platform": "archive.org",
+    "url_or_library_id": "archive.org:your_hit_parade",
+    "accessed": "2026-10-11",
+    "rights": "annotation-only",
+    "verified_via": "agent_runtime"
+  },
+  "niche": "beauty",
+  "format": "polished_video",
+  "structure": {
+    "format": "video_timed",
+    "timing_observable": true,
+    "format_note": "Measured ingest (polished_video); cuts from ffmpeg scdet"
+  },
+  "duration_s": 67.534,
+  "aspect": "16:9",
+  "provenance": {
+    "observed": true,
+    "basis": "ffmpeg:scdet+ebur128+silencedetect+tblend/signalstats+palettegen; tesseract OCR frame; font heuristic",
+    "measured_at": "2026-10-11T03:31:28.374Z",
+    "media_path_local": "classroom/private-cache/arc_beauty_your_hit_parade.mp4",
+    "media_committed": false
+  },
+  "measured_by": {
+    "tooling": [
+      "ffmpeg:scdet",
+      "ffmpeg:ebur128",
+      "ffmpeg:silencedetect",
+      "ffmpeg:tblend+signalstats",
+      "ffmpeg:palettegen",
+      "tesseract",
+      "font-heuristic"
+    ],
+    "honesty_errors": []
+  },
+  "hook": {
+    "mechanism": "[FILL from watch — first 1–2s device]",
+    "first_second_description": "[FILL — photographed moment, not a card]",
+    "on_screen_text": "|",
+    "spoken": null
+  },
+  "shots": [
+    {
+      "t_start": 0,
+      "t_end": 0.2,
+      "purpose": "hook",
+      "on_screen_text": "|",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 1/13 from arc_beauty_your_hit_parade.mp4"
+    },
+    {
+      "t_start": 0.2,
+      "t_end": 27.527,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 2/13 from arc_beauty_your_hit_parade.mp4"
+    },
+    {
+      "t_start": 27.527,
+      "t_end": 28.428,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 3/13 from arc_beauty_your_hit_parade.mp4"
+    },
+    {
+      "t_start": 28.428,
+      "t_end": 29.296,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 4/13 from arc_beauty_your_hit_parade.mp4"
+    },
+    {
+      "t_start": 29.296,
+      "t_end": 30.03,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 5/13 from arc_beauty_your_hit_parade.mp4"
+    },
+    {
+      "t_start": 30.03,
+      "t_end": 34.301,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 6/13 from arc_beauty_your_hit_parade.mp4"
+    },
+    {
+      "t_start": 34.301,
+      "t_end": 54.655,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 7/13 from arc_beauty_your_hit_parade.mp4"
+    },
+    {
+      "t_start": 54.655,
+      "t_end": 55.122,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 8/13 from arc_beauty_your_hit_parade.mp4"
+    },
+    {
+      "t_start": 55.122,
+      "t_end": 55.622,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 9/13 from arc_beauty_your_hit_parade.mp4"
+    },
+    {
+      "t_start": 55.622,
+      "t_end": 56.123,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 10/13 from arc_beauty_your_hit_parade.mp4"
+    },
+    {
+      "t_start": 56.123,
+      "t_end": 56.824,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 11/13 from arc_beauty_your_hit_parade.mp4"
+    },
+    {
+      "t_start": 56.824,
+      "t_end": 67.301,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 12/13 from arc_beauty_your_hit_parade.mp4"
+    },
+    {
+      "t_start": 67.301,
+      "t_end": 67.534,
+      "purpose": "cta_or_hold",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 13/13 from arc_beauty_your_hit_parade.mp4"
+    }
+  ],
+  "recipe": {
+    "hook": "[FILL]",
+    "beats": [
+      {
+        "t_start": 0,
+        "t_end": 0.2,
+        "purpose": "hook"
+      },
+      {
+        "t_start": 0.2,
+        "t_end": 27.527,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 27.527,
+        "t_end": 28.428,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 28.428,
+        "t_end": 29.296,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 29.296,
+        "t_end": 30.03,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 30.03,
+        "t_end": 34.301,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 34.301,
+        "t_end": 54.655,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 54.655,
+        "t_end": 55.122,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 55.122,
+        "t_end": 55.622,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 55.622,
+        "t_end": 56.123,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 56.123,
+        "t_end": 56.824,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 56.824,
+        "t_end": 67.301,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 67.301,
+        "t_end": 67.534,
+        "purpose": "cta_or_hold"
+      }
+    ],
+    "pacing_curve": {
+      "cuts_per_10s": 1.78,
+      "first_cut_at_s": 0.2,
+      "longest_hold_s": 27.327,
+      "source": "measured"
+    },
+    "proof": "[FILL]",
+    "cta": "[FILL]"
+  },
+  "stats": {
+    "shot_count": 13,
+    "avg_shot_s": 5.195,
+    "cuts_per_10s": 1.78,
+    "longest_hold_s": 27.327,
+    "first_cut_at_s": 0.2,
+    "text_density": "ocr_hit",
+    "loudness_lufs": -31.4,
+    "true_peak_dbfs": -15.2,
+    "silence_gaps": [
+      {
+        "t_start": 0.112833,
+        "t_end": 1.35033
+      },
+      {
+        "t_start": 1.35062,
+        "t_end": 2.07219
+      },
+      {
+        "t_start": 9.19688,
+        "t_end": 9.5775
+      },
+      {
+        "t_start": 63.6055,
+        "t_end": 65.6507
+      },
+      {
+        "t_start": 65.6535,
+        "t_end": 66.6245
+      },
+      {
+        "t_start": 66.7265,
+        "t_end": 67.3885
+      }
+    ],
+    "motion": {
+      "samples_per_s": 0,
+      "mean_yavg": null,
+      "motion_ratio": 1,
+      "freeze_s": 0,
+      "curve": [],
+      "source": "measured"
+    },
+    "probe": {
+      "width": 320,
+      "height": 240,
+      "duration_s": 67.534201,
+      "has_audio": true
+    },
+    "stats_source": "measured"
+  },
+  "audio": {
+    "loudness_lufs": -31.4,
+    "true_peak_dbfs": -15.2,
+    "silence_gaps": [
+      {
+        "t_start": 0.112833,
+        "t_end": 1.35033
+      },
+      {
+        "t_start": 1.35062,
+        "t_end": 2.07219
+      },
+      {
+        "t_start": 9.19688,
+        "t_end": 9.5775
+      },
+      {
+        "t_start": 63.6055,
+        "t_end": 65.6507
+      },
+      {
+        "t_start": 65.6535,
+        "t_end": 66.6245
+      },
+      {
+        "t_start": 66.7265,
+        "t_end": 67.3885
+      }
+    ],
+    "source": "measured"
+  },
+  "look": {
+    "palette": [
+      "#c198b1",
+      "#c198b1",
+      "#c198b1",
+      "#c198b1",
+      "#c198b1",
+      "#c198b1"
+    ],
+    "palette_source": "measured",
+    "caption_style": "[FILL]",
+    "grade": "[FILL]",
+    "ocr_sample": "|\na\nast\nOrg eee",
+    "font_guess": "rounded-sans",
+    "font_class": "rounded-sans",
+    "font_source": "heuristic-ocr"
+  },
+  "cta": {
+    "primary": "[FILL]",
+    "timing_s": null
+  },
+  "offer_and_proof": {
+    "offer": "[FILL]",
+    "proof": "[PLACEHOLDER]"
+  },
+  "why_it_works": "Measured public commercial from archive.org/Prelinger (archive.org:your_hit_parade). Real audio+cuts; study assembly only.",
+  "steal": [
+    "Cut rhythm from measured stats",
+    "Offer/endcard framing",
+    "Never copy marks or claims"
+  ],
+  "what_not_to_copy": [
+    "Competitor pixels / logos / talent likeness",
+    "Verbatim scripts or uncleared audio",
+    "Invented proof"
+  ],
+  "tags": [
+    "beauty",
+    "polished_video",
+    "ingest",
+    "observed",
+    "confirmed"
+  ],
+  "materials_ceiling": "Corpus teaches assembly; brand material still needs USER_SUPPLIED → i2v → vetted stock"
+}

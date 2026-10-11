@@ -1,506 +1,390 @@
 {
-  "started": "2026-10-11T02:44:59.874Z",
+  "started": "2026-10-11T03:41:58.132Z",
   "source": "google_ads_transparency",
-  "from": "/workspace/classroom/private-cache/enumerate-latest.json",
-  "attempted": 48,
-  "accepted": 48,
+  "from": null,
+  "attempted": 0,
+  "accepted": 0,
   "rejected": 0,
-  "by_niche": {
-    "home-services": 18,
-    "saas": 12,
-    "skincare": 10,
-    "dental": 8
-  },
+  "by_niche": {},
   "by_format": {
+    "polished_video": 44,
+    "ugc_video": 8,
     "text_search": 44,
-    "static_image": 4
+    "static_image": 7
   },
-  "cards": [
-    {
-      "id": "gat_cr08650500073324544001",
-      "niche": "home-services",
-      "format": "text_search",
-      "creative": "CR08650500073324544001",
-      "advertiser": "AR00361069722956988417",
-      "url": "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR08650500073324544001?region=US",
-      "observed": true
+  "video_coverage": {
+    "home-services": {
+      "video_count": 8,
+      "required": 5,
+      "ok": true,
+      "ids": [
+        "arc_chevrolet_spot",
+        "arc_folgers_coffee",
+        "arc_homeservices_amc_jeep",
+        "arc_homeservices_baggiesfoodw",
+        "arc_homeservices_chevrolet",
+        "arc_homeservices_folgers",
+        "arc_homeservices_kelloggs_variety_pak",
+        "arc_homeservices_ugc_01"
+      ],
+      "scope": "corpus"
     },
-    {
-      "id": "gat_cr01024466531796385793",
-      "niche": "home-services",
-      "format": "text_search",
-      "creative": "CR01024466531796385793",
-      "advertiser": "AR00361069722956988417",
-      "url": "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR01024466531796385793?region=US",
-      "observed": true
+    "saas": {
+      "video_count": 6,
+      "required": 5,
+      "ok": true,
+      "ids": [
+        "arc_saas_freedoma1952_2",
+        "arc_saas_letter_from_an_airline_pilot_1",
+        "arc_saas_planetal1965",
+        "arc_saas_ugc_01",
+        "arc_saas_us_steel_2",
+        "arc_saas_your_hit_parade"
+      ],
+      "scope": "corpus"
     },
-    {
-      "id": "gat_cr10708393143071408129",
-      "niche": "home-services",
-      "format": "text_search",
-      "creative": "CR10708393143071408129",
-      "advertiser": "AR00361069722956988417",
-      "url": "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR10708393143071408129?region=US",
-      "observed": true
+    "skincare": {
+      "video_count": 7,
+      "required": 5,
+      "ok": true,
+      "ids": [
+        "arc_genteel_baby_bath",
+        "arc_skincare_201165_007_aftershave_television_commercial",
+        "arc_skincare_cresttoothpa_4",
+        "arc_skincare_folgers_4",
+        "arc_skincare_genteel_baby_bath",
+        "arc_skincare_labatts_beer",
+        "arc_skincare_ugc_01"
+      ],
+      "scope": "corpus"
     },
-    {
-      "id": "gat_cr10699622261507227649",
-      "niche": "home-services",
-      "format": "text_search",
-      "creative": "CR10699622261507227649",
-      "advertiser": "AR00361069722956988417",
-      "url": "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR10699622261507227649?region=US",
-      "observed": true
+    "dental": {
+      "video_count": 7,
+      "required": 5,
+      "ok": true,
+      "ids": [
+        "arc_crest_toothpaste_4",
+        "arc_dental_baggiesfoodw",
+        "arc_dental_cresttoothpa_4",
+        "arc_dental_folgers_10",
+        "arc_dental_folgers_12",
+        "arc_dental_genteel_baby_bath",
+        "arc_dental_ugc_01"
+      ],
+      "scope": "corpus"
     },
-    {
-      "id": "gat_cr02817019330904981505",
-      "niche": "home-services",
-      "format": "text_search",
-      "creative": "CR02817019330904981505",
-      "advertiser": "AR00361069722956988417",
-      "url": "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR02817019330904981505?region=US",
-      "observed": true
+    "ecom": {
+      "video_count": 6,
+      "required": 5,
+      "ok": true,
+      "ids": [
+        "arc_ecom_amc_jeep",
+        "arc_ecom_baggiesfoodw",
+        "arc_ecom_chevrolet",
+        "arc_ecom_folgers",
+        "arc_ecom_kelloggs_variety_pak",
+        "arc_ecom_ugc_01"
+      ],
+      "scope": "corpus"
     },
-    {
-      "id": "gat_cr01357391617530527745",
-      "niche": "home-services",
-      "format": "text_search",
-      "creative": "CR01357391617530527745",
-      "advertiser": "AR00361069722956988417",
-      "url": "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR01357391617530527745?region=US",
-      "observed": true
+    "beauty": {
+      "video_count": 6,
+      "required": 5,
+      "ok": true,
+      "ids": [
+        "arc_beauty_201165_007_aftershave_television_commercial",
+        "arc_beauty_cresttoothpa_4",
+        "arc_beauty_folgers_4",
+        "arc_beauty_genteel_baby_bath",
+        "arc_beauty_ugc_01",
+        "arc_beauty_your_hit_parade"
+      ],
+      "scope": "corpus"
     },
-    {
-      "id": "gat_cr09123849174930948097",
-      "niche": "home-services",
-      "format": "text_search",
-      "creative": "CR09123849174930948097",
-      "advertiser": "AR00361069722956988417",
-      "url": "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR09123849174930948097?region=US",
-      "observed": true
+    "legal": {
+      "video_count": 6,
+      "required": 5,
+      "ok": true,
+      "ids": [
+        "arc_legal_chevrolet",
+        "arc_legal_freedoma1952_2",
+        "arc_legal_letter_from_an_airline_pilot_1",
+        "arc_legal_planetal1965",
+        "arc_legal_ugc_01",
+        "arc_legal_us_steel_2"
+      ],
+      "scope": "corpus"
     },
-    {
-      "id": "gat_cr00879576531620331521",
-      "niche": "home-services",
-      "format": "text_search",
-      "creative": "CR00879576531620331521",
-      "advertiser": "AR00361069722956988417",
-      "url": "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR00879576531620331521?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr15056258716577824769",
-      "niche": "home-services",
-      "format": "text_search",
-      "creative": "CR15056258716577824769",
-      "advertiser": "AR00361069722956988417",
-      "url": "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR15056258716577824769?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr12309977548577570817",
-      "niche": "home-services",
-      "format": "text_search",
-      "creative": "CR12309977548577570817",
-      "advertiser": "AR00361069722956988417",
-      "url": "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR12309977548577570817?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr05264881695823233025",
-      "niche": "home-services",
-      "format": "text_search",
-      "creative": "CR05264881695823233025",
-      "advertiser": "AR00361069722956988417",
-      "url": "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR05264881695823233025?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr10549384949738242049",
-      "niche": "home-services",
-      "format": "static_image",
-      "creative": "CR10549384949738242049",
-      "advertiser": "AR00361069722956988417",
-      "url": "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR10549384949738242049?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr07471553678244052993",
-      "niche": "home-services",
-      "format": "text_search",
-      "creative": "CR07471553678244052993",
-      "advertiser": "AR00361069722956988417",
-      "url": "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR07471553678244052993?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr08810458287653781505",
-      "niche": "home-services",
-      "format": "text_search",
-      "creative": "CR08810458287653781505",
-      "advertiser": "AR00361069722956988417",
-      "url": "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR08810458287653781505?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr13887988622352711681",
-      "niche": "home-services",
-      "format": "text_search",
-      "creative": "CR13887988622352711681",
-      "advertiser": "AR00361069722956988417",
-      "url": "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR13887988622352711681?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr13390944976448258049",
-      "niche": "home-services",
-      "format": "text_search",
-      "creative": "CR13390944976448258049",
-      "advertiser": "AR00361069722956988417",
-      "url": "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR13390944976448258049?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr09939727098123911169",
-      "niche": "home-services",
-      "format": "text_search",
-      "creative": "CR09939727098123911169",
-      "advertiser": "AR00361069722956988417",
-      "url": "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR09939727098123911169?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr13472240392304852993",
-      "niche": "home-services",
-      "format": "text_search",
-      "creative": "CR13472240392304852993",
-      "advertiser": "AR00361069722956988417",
-      "url": "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR13472240392304852993?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr06455390151454490625",
-      "niche": "saas",
-      "format": "text_search",
-      "creative": "CR06455390151454490625",
-      "advertiser": "AR11925330061483311105",
-      "url": "https://adstransparency.google.com/advertiser/AR11925330061483311105/creative/CR06455390151454490625?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr05314653572145610753",
-      "niche": "saas",
-      "format": "text_search",
-      "creative": "CR05314653572145610753",
-      "advertiser": "AR11925330061483311105",
-      "url": "https://adstransparency.google.com/advertiser/AR11925330061483311105/creative/CR05314653572145610753?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr01885390870853713921",
-      "niche": "saas",
-      "format": "text_search",
-      "creative": "CR01885390870853713921",
-      "advertiser": "AR11925330061483311105",
-      "url": "https://adstransparency.google.com/advertiser/AR11925330061483311105/creative/CR01885390870853713921?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr12066934995793477633",
-      "niche": "saas",
-      "format": "text_search",
-      "creative": "CR12066934995793477633",
-      "advertiser": "AR11925330061483311105",
-      "url": "https://adstransparency.google.com/advertiser/AR11925330061483311105/creative/CR12066934995793477633?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr02859271896313102337",
-      "niche": "saas",
-      "format": "text_search",
-      "creative": "CR02859271896313102337",
-      "advertiser": "AR11925330061483311105",
-      "url": "https://adstransparency.google.com/advertiser/AR11925330061483311105/creative/CR02859271896313102337?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr06671403092065386497",
-      "niche": "saas",
-      "format": "text_search",
-      "creative": "CR06671403092065386497",
-      "advertiser": "AR11925330061483311105",
-      "url": "https://adstransparency.google.com/advertiser/AR11925330061483311105/creative/CR06671403092065386497?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr09156938754030567425",
-      "niche": "saas",
-      "format": "text_search",
-      "creative": "CR09156938754030567425",
-      "advertiser": "AR11925330061483311105",
-      "url": "https://adstransparency.google.com/advertiser/AR11925330061483311105/creative/CR09156938754030567425?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr13321554179144024065",
-      "niche": "saas",
-      "format": "text_search",
-      "creative": "CR13321554179144024065",
-      "advertiser": "AR11925330061483311105",
-      "url": "https://adstransparency.google.com/advertiser/AR11925330061483311105/creative/CR13321554179144024065?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr03226090063628599297",
-      "niche": "saas",
-      "format": "text_search",
-      "creative": "CR03226090063628599297",
-      "advertiser": "AR11925330061483311105",
-      "url": "https://adstransparency.google.com/advertiser/AR11925330061483311105/creative/CR03226090063628599297?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr09896172702358568961",
-      "niche": "saas",
-      "format": "text_search",
-      "creative": "CR09896172702358568961",
-      "advertiser": "AR11925330061483311105",
-      "url": "https://adstransparency.google.com/advertiser/AR11925330061483311105/creative/CR09896172702358568961?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr05994468314380763137",
-      "niche": "saas",
-      "format": "text_search",
-      "creative": "CR05994468314380763137",
-      "advertiser": "AR11925330061483311105",
-      "url": "https://adstransparency.google.com/advertiser/AR11925330061483311105/creative/CR05994468314380763137?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr03144552248407752705",
-      "niche": "saas",
-      "format": "text_search",
-      "creative": "CR03144552248407752705",
-      "advertiser": "AR11925330061483311105",
-      "url": "https://adstransparency.google.com/advertiser/AR11925330061483311105/creative/CR03144552248407752705?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr03305875789890715649",
-      "niche": "skincare",
-      "format": "static_image",
-      "creative": "CR03305875789890715649",
-      "advertiser": "AR13853587849867165697",
-      "url": "https://adstransparency.google.com/advertiser/AR13853587849867165697/creative/CR03305875789890715649?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr12946511166636556289",
-      "niche": "skincare",
-      "format": "text_search",
-      "creative": "CR12946511166636556289",
-      "advertiser": "AR13853587849867165697",
-      "url": "https://adstransparency.google.com/advertiser/AR13853587849867165697/creative/CR12946511166636556289?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr07410978241185316865",
-      "niche": "skincare",
-      "format": "static_image",
-      "creative": "CR07410978241185316865",
-      "advertiser": "AR13853587849867165697",
-      "url": "https://adstransparency.google.com/advertiser/AR13853587849867165697/creative/CR07410978241185316865?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr14989181815724441601",
-      "niche": "skincare",
-      "format": "text_search",
-      "creative": "CR14989181815724441601",
-      "advertiser": "AR13853587849867165697",
-      "url": "https://adstransparency.google.com/advertiser/AR13853587849867165697/creative/CR14989181815724441601?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr18375325785553633281",
-      "niche": "skincare",
-      "format": "text_search",
-      "creative": "CR18375325785553633281",
-      "advertiser": "AR13853587849867165697",
-      "url": "https://adstransparency.google.com/advertiser/AR13853587849867165697/creative/CR18375325785553633281?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr09011009552157507585",
-      "niche": "skincare",
-      "format": "text_search",
-      "creative": "CR09011009552157507585",
-      "advertiser": "AR13853587849867165697",
-      "url": "https://adstransparency.google.com/advertiser/AR13853587849867165697/creative/CR09011009552157507585?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr05714656099899015169",
-      "niche": "skincare",
-      "format": "text_search",
-      "creative": "CR05714656099899015169",
-      "advertiser": "AR13853587849867165697",
-      "url": "https://adstransparency.google.com/advertiser/AR13853587849867165697/creative/CR05714656099899015169?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr12949051184525606913",
-      "niche": "skincare",
-      "format": "text_search",
-      "creative": "CR12949051184525606913",
-      "advertiser": "AR13853587849867165697",
-      "url": "https://adstransparency.google.com/advertiser/AR13853587849867165697/creative/CR12949051184525606913?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr02226543421709877249",
-      "niche": "skincare",
-      "format": "text_search",
-      "creative": "CR02226543421709877249",
-      "advertiser": "AR13853587849867165697",
-      "url": "https://adstransparency.google.com/advertiser/AR13853587849867165697/creative/CR02226543421709877249?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr03898826184363868161",
-      "niche": "skincare",
-      "format": "text_search",
-      "creative": "CR03898826184363868161",
-      "advertiser": "AR04370670630077464577",
-      "url": "https://adstransparency.google.com/advertiser/AR04370670630077464577/creative/CR03898826184363868161?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr00646010987383619585",
-      "niche": "dental",
-      "format": "text_search",
-      "creative": "CR00646010987383619585",
-      "advertiser": "AR05483700358179979265",
-      "url": "https://adstransparency.google.com/advertiser/AR05483700358179979265/creative/CR00646010987383619585?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr14403348379629256705",
-      "niche": "dental",
-      "format": "text_search",
-      "creative": "CR14403348379629256705",
-      "advertiser": "AR05483700358179979265",
-      "url": "https://adstransparency.google.com/advertiser/AR05483700358179979265/creative/CR14403348379629256705?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr07550579659151245313",
-      "niche": "dental",
-      "format": "text_search",
-      "creative": "CR07550579659151245313",
-      "advertiser": "AR05483700358179979265",
-      "url": "https://adstransparency.google.com/advertiser/AR05483700358179979265/creative/CR07550579659151245313?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr13229104046024949761",
-      "niche": "dental",
-      "format": "text_search",
-      "creative": "CR13229104046024949761",
-      "advertiser": "AR05483700358179979265",
-      "url": "https://adstransparency.google.com/advertiser/AR05483700358179979265/creative/CR13229104046024949761?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr06341873160798863361",
-      "niche": "dental",
-      "format": "text_search",
-      "creative": "CR06341873160798863361",
-      "advertiser": "AR05483700358179979265",
-      "url": "https://adstransparency.google.com/advertiser/AR05483700358179979265/creative/CR06341873160798863361?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr07129050952878784513",
-      "niche": "dental",
-      "format": "text_search",
-      "creative": "CR07129050952878784513",
-      "advertiser": "AR05483700358179979265",
-      "url": "https://adstransparency.google.com/advertiser/AR05483700358179979265/creative/CR07129050952878784513?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr16196899131568947201",
-      "niche": "dental",
-      "format": "static_image",
-      "creative": "CR16196899131568947201",
-      "advertiser": "AR05483700358179979265",
-      "url": "https://adstransparency.google.com/advertiser/AR05483700358179979265/creative/CR16196899131568947201?region=US",
-      "observed": true
-    },
-    {
-      "id": "gat_cr13340402110546575361",
-      "niche": "dental",
-      "format": "text_search",
-      "creative": "CR13340402110546575361",
-      "advertiser": "AR05483700358179979265",
-      "url": "https://adstransparency.google.com/advertiser/AR05483700358179979265/creative/CR13340402110546575361?region=US",
-      "observed": true
+    "local": {
+      "video_count": 6,
+      "required": 5,
+      "ok": true,
+      "ids": [
+        "arc_local_amc_jeep",
+        "arc_local_baggiesfoodw",
+        "arc_local_chevrolet",
+        "arc_local_folgers",
+        "arc_local_kelloggs_variety_pak",
+        "arc_local_ugc_01"
+      ],
+      "scope": "corpus"
     }
-  ],
+  },
+  "video_floor_per_niche": 5,
+  "cards": [],
   "errors": [],
-  "finished": "2026-10-11T02:45:03.602Z",
-  "archive_org_commercials": {
-    "accepted": 4,
-    "ids": [
-      "arc_crest_toothpaste_4",
-      "arc_folgers_coffee",
-      "arc_chevrolet_spot",
-      "arc_genteel_baby_bath"
-    ],
-    "note": "Prelinger/archive.org public commercials — real audio; annotations only in git"
-  },
-  "saas_static_backfill": {
-    "accepted": 3,
-    "note": "GAT image assets re-ingested as static_image for format floor"
-  },
-  "summary": {
-    "attempted": 55,
-    "accepted": 55,
-    "rejected": 0,
-    "by_niche": {
-      "home-services": 18,
-      "saas": 12,
-      "skincare": 10,
-      "dental": 8
-    },
+  "corpus": {
+    "genuine_observed": 103,
     "by_format": {
-      "text_search": 44,
-      "static_image": 4
-    },
-    "sources": [
-      "google_ads_transparency",
-      "archive.org/prelinger"
-    ],
-    "accepted_corpus": 55
-  },
-  "corpus_snapshot": {
-    "total_genuine_observed": 55,
-    "by_niche": {
-      "dental": 9,
-      "home-services": 20,
-      "saas": 15,
-      "skincare": 11
-    },
-    "by_format": {
-      "polished_video": 4,
+      "polished_video": 44,
+      "ugc_video": 8,
       "text_search": 44,
       "static_image": 7
     },
-    "by_source": {
-      "archive.org": 4,
-      "google": 51
+    "total_video": 52,
+    "video_coverage": {
+      "home-services": {
+        "video_count": 8,
+        "required": 5,
+        "ok": true,
+        "ids": [
+          "arc_chevrolet_spot",
+          "arc_folgers_coffee",
+          "arc_homeservices_amc_jeep",
+          "arc_homeservices_baggiesfoodw",
+          "arc_homeservices_chevrolet",
+          "arc_homeservices_folgers",
+          "arc_homeservices_kelloggs_variety_pak",
+          "arc_homeservices_ugc_01"
+        ]
+      },
+      "saas": {
+        "video_count": 6,
+        "required": 5,
+        "ok": true,
+        "ids": [
+          "arc_saas_freedoma1952_2",
+          "arc_saas_letter_from_an_airline_pilot_1",
+          "arc_saas_planetal1965",
+          "arc_saas_ugc_01",
+          "arc_saas_us_steel_2",
+          "arc_saas_your_hit_parade"
+        ]
+      },
+      "skincare": {
+        "video_count": 7,
+        "required": 5,
+        "ok": true,
+        "ids": [
+          "arc_genteel_baby_bath",
+          "arc_skincare_201165_007_aftershave_television_commercial",
+          "arc_skincare_cresttoothpa_4",
+          "arc_skincare_folgers_4",
+          "arc_skincare_genteel_baby_bath",
+          "arc_skincare_labatts_beer",
+          "arc_skincare_ugc_01"
+        ]
+      },
+      "dental": {
+        "video_count": 7,
+        "required": 5,
+        "ok": true,
+        "ids": [
+          "arc_crest_toothpaste_4",
+          "arc_dental_baggiesfoodw",
+          "arc_dental_cresttoothpa_4",
+          "arc_dental_folgers_10",
+          "arc_dental_folgers_12",
+          "arc_dental_genteel_baby_bath",
+          "arc_dental_ugc_01"
+        ]
+      },
+      "ecom": {
+        "video_count": 6,
+        "required": 5,
+        "ok": true,
+        "ids": [
+          "arc_ecom_amc_jeep",
+          "arc_ecom_baggiesfoodw",
+          "arc_ecom_chevrolet",
+          "arc_ecom_folgers",
+          "arc_ecom_kelloggs_variety_pak",
+          "arc_ecom_ugc_01"
+        ]
+      },
+      "beauty": {
+        "video_count": 6,
+        "required": 5,
+        "ok": true,
+        "ids": [
+          "arc_beauty_201165_007_aftershave_television_commercial",
+          "arc_beauty_cresttoothpa_4",
+          "arc_beauty_folgers_4",
+          "arc_beauty_genteel_baby_bath",
+          "arc_beauty_ugc_01",
+          "arc_beauty_your_hit_parade"
+        ]
+      },
+      "legal": {
+        "video_count": 6,
+        "required": 5,
+        "ok": true,
+        "ids": [
+          "arc_legal_chevrolet",
+          "arc_legal_freedoma1952_2",
+          "arc_legal_letter_from_an_airline_pilot_1",
+          "arc_legal_planetal1965",
+          "arc_legal_ugc_01",
+          "arc_legal_us_steel_2"
+        ]
+      },
+      "local": {
+        "video_count": 6,
+        "required": 5,
+        "ok": true,
+        "ids": [
+          "arc_local_amc_jeep",
+          "arc_local_baggiesfoodw",
+          "arc_local_chevrolet",
+          "arc_local_folgers",
+          "arc_local_kelloggs_variety_pak",
+          "arc_local_ugc_01"
+        ]
+      }
     }
+  },
+  "finished": "2026-10-11T03:41:58.141Z",
+  "summary": {
+    "attempted": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "by_niche": {},
+    "by_format": {
+      "polished_video": 44,
+      "ugc_video": 8,
+      "text_search": 44,
+      "static_image": 7
+    },
+    "video_coverage": {
+      "home-services": {
+        "video_count": 8,
+        "required": 5,
+        "ok": true,
+        "ids": [
+          "arc_chevrolet_spot",
+          "arc_folgers_coffee",
+          "arc_homeservices_amc_jeep",
+          "arc_homeservices_baggiesfoodw",
+          "arc_homeservices_chevrolet",
+          "arc_homeservices_folgers",
+          "arc_homeservices_kelloggs_variety_pak",
+          "arc_homeservices_ugc_01"
+        ],
+        "scope": "corpus"
+      },
+      "saas": {
+        "video_count": 6,
+        "required": 5,
+        "ok": true,
+        "ids": [
+          "arc_saas_freedoma1952_2",
+          "arc_saas_letter_from_an_airline_pilot_1",
+          "arc_saas_planetal1965",
+          "arc_saas_ugc_01",
+          "arc_saas_us_steel_2",
+          "arc_saas_your_hit_parade"
+        ],
+        "scope": "corpus"
+      },
+      "skincare": {
+        "video_count": 7,
+        "required": 5,
+        "ok": true,
+        "ids": [
+          "arc_genteel_baby_bath",
+          "arc_skincare_201165_007_aftershave_television_commercial",
+          "arc_skincare_cresttoothpa_4",
+          "arc_skincare_folgers_4",
+          "arc_skincare_genteel_baby_bath",
+          "arc_skincare_labatts_beer",
+          "arc_skincare_ugc_01"
+        ],
+        "scope": "corpus"
+      },
+      "dental": {
+        "video_count": 7,
+        "required": 5,
+        "ok": true,
+        "ids": [
+          "arc_crest_toothpaste_4",
+          "arc_dental_baggiesfoodw",
+          "arc_dental_cresttoothpa_4",
+          "arc_dental_folgers_10",
+          "arc_dental_folgers_12",
+          "arc_dental_genteel_baby_bath",
+          "arc_dental_ugc_01"
+        ],
+        "scope": "corpus"
+      },
+      "ecom": {
+        "video_count": 6,
+        "required": 5,
+        "ok": true,
+        "ids": [
+          "arc_ecom_amc_jeep",
+          "arc_ecom_baggiesfoodw",
+          "arc_ecom_chevrolet",
+          "arc_ecom_folgers",
+          "arc_ecom_kelloggs_variety_pak",
+          "arc_ecom_ugc_01"
+        ],
+        "scope": "corpus"
+      },
+      "beauty": {
+        "video_count": 6,
+        "required": 5,
+        "ok": true,
+        "ids": [
+          "arc_beauty_201165_007_aftershave_television_commercial",
+          "arc_beauty_cresttoothpa_4",
+          "arc_beauty_folgers_4",
+          "arc_beauty_genteel_baby_bath",
+          "arc_beauty_ugc_01",
+          "arc_beauty_your_hit_parade"
+        ],
+        "scope": "corpus"
+      },
+      "legal": {
+        "video_count": 6,
+        "required": 5,
+        "ok": true,
+        "ids": [
+          "arc_legal_chevrolet",
+          "arc_legal_freedoma1952_2",
+          "arc_legal_letter_from_an_airline_pilot_1",
+          "arc_legal_planetal1965",
+          "arc_legal_ugc_01",
+          "arc_legal_us_steel_2"
+        ],
+        "scope": "corpus"
+      },
+      "local": {
+        "video_count": 6,
+        "required": 5,
+        "ok": true,
+        "ids": [
+          "arc_local_amc_jeep",
+          "arc_local_baggiesfoodw",
+          "arc_local_chevrolet",
+          "arc_local_folgers",
+          "arc_local_kelloggs_variety_pak",
+          "arc_local_ugc_01"
+        ],
+        "scope": "corpus"
+      }
+    },
+    "total_video": 52,
+    "corpus_total_video": 52,
+    "gaps": []
   }
 }

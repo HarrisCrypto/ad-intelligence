@@ -1,0 +1,232 @@
+{
+  "id": "arc_skincare_labatts_beer",
+  "status": "confirmed",
+  "source": {
+    "platform": "archive.org",
+    "url_or_library_id": "archive.org:labatts_beer",
+    "accessed": "2026-10-11",
+    "rights": "annotation-only",
+    "verified_via": "agent_runtime"
+  },
+  "niche": "skincare",
+  "format": "polished_video",
+  "structure": {
+    "format": "video_timed",
+    "timing_observable": true,
+    "format_note": "Measured ingest (polished_video); cuts from ffmpeg scdet"
+  },
+  "duration_s": 20.587,
+  "aspect": "16:9",
+  "provenance": {
+    "observed": true,
+    "basis": "ffmpeg:scdet+ebur128+silencedetect+tblend/signalstats+palettegen; tesseract OCR frame; font heuristic",
+    "measured_at": "2026-10-11T03:30:29.504Z",
+    "media_path_local": "classroom/private-cache/arc_skincare_labatts_beer.mp4",
+    "media_committed": false
+  },
+  "measured_by": {
+    "tooling": [
+      "ffmpeg:scdet",
+      "ffmpeg:ebur128",
+      "ffmpeg:silencedetect",
+      "ffmpeg:tblend+signalstats",
+      "ffmpeg:palettegen",
+      "tesseract",
+      "font-heuristic"
+    ],
+    "honesty_errors": []
+  },
+  "hook": {
+    "mechanism": "[FILL from watch — first 1–2s device]",
+    "first_second_description": "[FILL — photographed moment, not a card]",
+    "on_screen_text": "i a anaes",
+    "spoken": null
+  },
+  "shots": [
+    {
+      "t_start": 0,
+      "t_end": 0.601,
+      "purpose": "hook",
+      "on_screen_text": "i a anaes",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 1/5 from arc_skincare_labatts_beer.mp4"
+    },
+    {
+      "t_start": 0.601,
+      "t_end": 10.177,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 2/5 from arc_skincare_labatts_beer.mp4"
+    },
+    {
+      "t_start": 10.177,
+      "t_end": 15.282,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 3/5 from arc_skincare_labatts_beer.mp4"
+    },
+    {
+      "t_start": 15.282,
+      "t_end": 18.952,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 4/5 from arc_skincare_labatts_beer.mp4"
+    },
+    {
+      "t_start": 18.952,
+      "t_end": 20.587,
+      "purpose": "cta_or_hold",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 5/5 from arc_skincare_labatts_beer.mp4"
+    }
+  ],
+  "recipe": {
+    "hook": "[FILL]",
+    "beats": [
+      {
+        "t_start": 0,
+        "t_end": 0.601,
+        "purpose": "hook"
+      },
+      {
+        "t_start": 0.601,
+        "t_end": 10.177,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 10.177,
+        "t_end": 15.282,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 15.282,
+        "t_end": 18.952,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 18.952,
+        "t_end": 20.587,
+        "purpose": "cta_or_hold"
+      }
+    ],
+    "pacing_curve": {
+      "cuts_per_10s": 1.94,
+      "first_cut_at_s": 0.601,
+      "longest_hold_s": 9.576,
+      "source": "measured"
+    },
+    "proof": "[FILL]",
+    "cta": "[FILL]"
+  },
+  "stats": {
+    "shot_count": 5,
+    "avg_shot_s": 4.117,
+    "cuts_per_10s": 1.94,
+    "longest_hold_s": 9.576,
+    "first_cut_at_s": 0.601,
+    "text_density": "ocr_hit",
+    "loudness_lufs": -26.7,
+    "true_peak_dbfs": -10.3,
+    "silence_gaps": [
+      {
+        "t_start": 0.110083,
+        "t_end": 0.593042
+      },
+      {
+        "t_start": 0.803979,
+        "t_end": 2.67979
+      },
+      {
+        "t_start": 19.8006,
+        "t_end": 20.48
+      }
+    ],
+    "motion": {
+      "samples_per_s": 0,
+      "mean_yavg": null,
+      "motion_ratio": 1,
+      "freeze_s": 0,
+      "curve": [],
+      "source": "measured"
+    },
+    "probe": {
+      "width": 320,
+      "height": 240,
+      "duration_s": 20.587254,
+      "has_audio": true
+    },
+    "stats_source": "measured"
+  },
+  "audio": {
+    "loudness_lufs": -26.7,
+    "true_peak_dbfs": -10.3,
+    "silence_gaps": [
+      {
+        "t_start": 0.110083,
+        "t_end": 0.593042
+      },
+      {
+        "t_start": 0.803979,
+        "t_end": 2.67979
+      },
+      {
+        "t_start": 19.8006,
+        "t_end": 20.48
+      }
+    ],
+    "source": "measured"
+  },
+  "look": {
+    "palette": [
+      "#040004",
+      "#040004",
+      "#040004",
+      "#040004",
+      "#040004",
+      "#040004"
+    ],
+    "palette_source": "measured",
+    "caption_style": "[FILL]",
+    "grade": "[FILL]",
+    "ocr_sample": "i a anaes\nMA Z ni ;\n| ne\n7, |\\|| A ed\nBM ae",
+    "font_guess": "rounded-sans",
+    "font_class": "rounded-sans",
+    "font_source": "heuristic-ocr"
+  },
+  "cta": {
+    "primary": "[FILL]",
+    "timing_s": null
+  },
+  "offer_and_proof": {
+    "offer": "[FILL]",
+    "proof": "[PLACEHOLDER]"
+  },
+  "why_it_works": "Measured public commercial from archive.org/Prelinger (archive.org:labatts_beer). Real audio+cuts; study assembly only.",
+  "steal": [
+    "Cut rhythm from measured stats",
+    "Offer/endcard framing",
+    "Never copy marks or claims"
+  ],
+  "what_not_to_copy": [
+    "Competitor pixels / logos / talent likeness",
+    "Verbatim scripts or uncleared audio",
+    "Invented proof"
+  ],
+  "tags": [
+    "skincare",
+    "polished_video",
+    "ingest",
+    "observed",
+    "confirmed"
+  ],
+  "materials_ceiling": "Corpus teaches assembly; brand material still needs USER_SUPPLIED → i2v → vetted stock"
+}

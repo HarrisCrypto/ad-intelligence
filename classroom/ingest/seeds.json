@@ -1,22 +1,99 @@
 {
-  "$comment": "Domain/keyword seeds for Google Ads Transparency enumeration. Dead seeds (0 ads) are skipped.",
+  "$comment": "Domain/keyword seeds for Google Ads Transparency + archive.org video supplements when YouTube media is bot-gated.",
   "region": "US",
+  "video_floor_per_niche": 5,
+  "formats": ["VIDEO", "IMAGE", "TEXT", "CAROUSEL"],
   "niches": {
     "home-services": {
-      "domains": ["angi.com", "thumbtack.com", "porch.com", "homeadvisor.com", "taskrabbit.com"],
-      "keywords": ["hvac", "plumber", "electrician", "garage door"]
+      "domains": ["thumbtack.com", "angi.com", "porch.com", "taskrabbit.com", "homeadvisor.com"],
+      "keywords": ["hvac", "plumber", "electrician"],
+      "archive_video": [
+        { "id": "folgers", "file": "folgers_512kb.mp4" },
+        { "id": "chevrolet", "file": "chevrolet_512kb.mp4" },
+        { "id": "Westinghouse_2", "file": "Westinghouse_2_512kb.mp4", "max_mb": 20 },
+        { "id": "amc_jeep", "file": null },
+        { "id": "BaggiesFoodW", "file": null },
+        { "id": "kelloggs_variety_pak", "file": null }
+      ]
     },
     "saas": {
       "domains": ["hubspot.com", "monday.com", "notion.so", "zapier.com", "intercom.com"],
-      "keywords": ["crm", "project management", "ai agents"]
+      "keywords": ["crm", "ai agents"],
+      "archive_video": [
+        { "id": "us_steel_2", "file": null },
+        { "id": "your_hit_parade", "file": null },
+        { "id": "folgers", "file": "folgers_512kb.mp4" },
+        { "id": "chevrolet", "file": "chevrolet_512kb.mp4" },
+        { "id": "kelloggs_variety_pak", "file": null },
+        { "id": "amc_jeep", "file": null }
+      ]
     },
     "skincare": {
       "domains": ["curology.com", "theordinary.com", "drunkelephant.com"],
-      "keywords": ["skincare", "acne", "retinol"]
+      "keywords": ["skincare", "acne"],
+      "archive_video": [
+        { "id": "genteel_baby_bath", "file": "genteel_baby_bath_512kb.mp4" },
+        { "id": "201165_007_Aftershave_Television_Commercial", "file": null },
+        { "id": "CrestToothpa_4", "file": "CrestToothpa_4_512kb.mp4" },
+        { "id": "folgers_4", "file": null },
+        { "id": "labatts_beer", "file": null }
+      ]
     },
     "dental": {
       "domains": ["smilebrilliant.com", "burstoralcare.com", "quip.com"],
-      "keywords": ["teeth whitening", "dentist", "oral care"]
+      "keywords": ["teeth whitening", "dentist"],
+      "archive_video": [
+        { "id": "CrestToothpa_4", "file": "CrestToothpa_4_512kb.mp4" },
+        { "id": "0210_Lucky_Strike_Cigarette_Commercial_Marching_Cigarettes_M01756_05_16_04_00", "file": null, "skip": true },
+        { "id": "genteel_baby_bath", "file": "genteel_baby_bath_512kb.mp4" },
+        { "id": "BaggiesFoodW", "file": null },
+        { "id": "folgers_10", "file": null },
+        { "id": "folgers_12", "file": null }
+      ]
+    },
+    "ecom": {
+      "domains": ["etsy.com", "shopify.com", "wayfair.com"],
+      "keywords": ["online shop", "ecommerce"],
+      "archive_video": [
+        { "id": "BaggiesFoodW", "file": null },
+        { "id": "kelloggs_variety_pak", "file": null },
+        { "id": "folgers", "file": "folgers_512kb.mp4" },
+        { "id": "chevrolet", "file": "chevrolet_512kb.mp4" },
+        { "id": "amc_jeep", "file": null }
+      ]
+    },
+    "beauty": {
+      "domains": ["sephora.com", "ulta.com", "glossier.com"],
+      "keywords": ["makeup", "beauty"],
+      "archive_video": [
+        { "id": "genteel_baby_bath", "file": "genteel_baby_bath_512kb.mp4" },
+        { "id": "201165_007_Aftershave_Television_Commercial", "file": null },
+        { "id": "CrestToothpa_4", "file": "CrestToothpa_4_512kb.mp4" },
+        { "id": "folgers_4", "file": null },
+        { "id": "your_hit_parade", "file": null }
+      ]
+    },
+    "legal": {
+      "domains": ["legalzoom.com", "rocketlawyer.com"],
+      "keywords": ["attorney", "lawyer"],
+      "archive_video": [
+        { "id": "us_steel_2", "file": null },
+        { "id": "chevrolet", "file": "chevrolet_512kb.mp4" },
+        { "id": "folgers", "file": "folgers_512kb.mp4" },
+        { "id": "amc_jeep", "file": null },
+        { "id": "kelloggs_variety_pak", "file": null }
+      ]
+    },
+    "local": {
+      "domains": ["yelp.com", "nextdoor.com"],
+      "keywords": ["local business"],
+      "archive_video": [
+        { "id": "folgers", "file": "folgers_512kb.mp4" },
+        { "id": "chevrolet", "file": "chevrolet_512kb.mp4" },
+        { "id": "kelloggs_variety_pak", "file": null },
+        { "id": "amc_jeep", "file": null },
+        { "id": "BaggiesFoodW", "file": null }
+      ]
     }
   },
   "skip_domains": ["servicefinance.com"]
