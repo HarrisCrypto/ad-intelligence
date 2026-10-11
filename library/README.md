@@ -23,10 +23,10 @@ Prose in `skills/.../references` teaches; **this tree ships files agents can exe
 ## Prove (Gate 3 + 2.6)
 
 ```bash
-node library/scripts/resolve-toolbox.mjs --list
-node library/scripts/demo-compose-plan.mjs --brand Oply
-node library/scripts/asset-gap-report.mjs --niche home-services
+node library/scripts/fill-niche-gaps.mjs --niche home-services
 node library/scripts/assert-assets.mjs --niche home-services
+node library/scripts/demo-compose-plan.mjs --brand Oply
+# Optional: PEXELS_API_KEY=… for higher-quality free stock/video
 ```
 
 Open `library/ui-kits/voice-agent-flat/preview.html` for the three UI states.
