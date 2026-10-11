@@ -12,9 +12,26 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const resolve = path.join(__dirname, "resolve-toolbox.mjs");
+const assertAssets = path.join(__dirname, "assert-assets.mjs");
 const brand = process.argv.includes("--brand")
   ? process.argv[process.argv.indexOf("--brand") + 1]
   : "BRAND";
+
+const gate = spawnSync(
+  process.execPath,
+  [assertAssets, "--niche", "home-services"],
+  { encoding: "utf8" }
+);
+let materials = null;
+try {
+  materials = JSON.parse(gate.stdout || "{}");
+} catch {
+  materials = { message: gate.stderr || "assert-assets failed", audio_ok: false };
+}
+if (materials.audio_ok === false) {
+  console.error(JSON.stringify(materials, null, 2));
+  process.exit(1);
+}
 
 const r = spawnSync(process.execPath, [resolve, "--template", "tpl_home_services_missed_call"], {
   encoding: "utf8",
@@ -27,11 +44,18 @@ const resolved = JSON.parse(r.stdout);
 const kit = resolved.library.ui_kit;
 const plan = {
   ok: true,
-  gate: "3",
+  gate: "3+2.6",
   brand,
   template: "tpl_home_services_missed_call",
   duration_s: 24,
   aspect: "9:16",
+  materials_ceiling: materials.quality_ceiling,
+  must_disclose_before_generate: !!materials.must_disclose_before_generate,
+  audio_ids: {
+    bed: "bed_wallpaper_km",
+    ambience: "amb_room_tone_owned",
+    sfx: ["sfx_phone_ring", "sfx_ui_click", "sfx_whoosh"],
+  },
   grade: resolved.library.grade?.id,
   transition_default: resolved.library.transition_default?.id,
   ui_kit: kit?.id,
@@ -63,12 +87,14 @@ const plan = {
         : b.job,
   })),
   next: [
+    "DISCLOSE materials_ceiling if must_disclose_before_generate",
     "brand-harvest.mjs <url> → override kit palette if ASSET_VERIFIED",
-    "retrieve-cards.mjs --niche home-services",
-    "Generate stills per beat gen_note; assemble with tr_hard_cut",
+    "retrieve-cards.mjs --niche home-services — open shot recipes + asset_ids",
+    "Prefer USER_SUPPLIED 30s phone footage over gen; else gen-recipes.json",
+    "Lay bed/sfx from audio_ids (attribution for CC-BY beds)",
     "pipeline/qa/run-qa.mjs on export",
   ],
-  rule: "Emulate structure from study cards; never copy competitor assets.",
+  rule: "Emulate structure; never copy competitor assets. Cards without materials still look like cards.",
 };
 
 console.log(JSON.stringify(plan, null, 2));

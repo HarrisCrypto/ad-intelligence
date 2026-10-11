@@ -37,7 +37,13 @@
       "subject": "phone ringing",
       "on_screen_text": "9:14 PM",
       "transition_out": "hard",
-      "sfx": "ring"
+      "sfx": "ring",
+      "recipe": "phone face-up, practical lamp depth, handheld micro-shake, real desk clutter, no logo",
+      "how_this_shot_was_made": "prefer USER_SUPPLIED or gen_after_hours_phone_desk; sfx_phone_ring",
+      "asset_ids": [
+        "sfx_phone_ring",
+        "amb_room_tone_owned"
+      ]
     },
     {
       "t_start": 3,
@@ -47,7 +53,12 @@
       "shot_type": "insert",
       "framing": "MS desk/bay empty",
       "on_screen_text": "Job walks",
-      "transition_out": "hard"
+      "transition_out": "hard",
+      "recipe": "empty bay/desk, window or practical light, different camera setup than shot 0",
+      "how_this_shot_was_made": "gen_trades_van_bay or stock tag van/bay — NOT same card with new words",
+      "asset_ids": [
+        "sfx_whoosh"
+      ]
     },
     {
       "t_start": 8,
@@ -58,7 +69,13 @@
       "framing": "flat UI",
       "subject": "call UI idle→answered",
       "on_screen_text": "Answered",
-      "transition_out": "hard"
+      "transition_out": "hard",
+      "recipe": "flat UI documentary ≥70% frame; hard cut from place setup",
+      "how_this_shot_was_made": "uikit_voice_agent_flat idle→answered stills + CapCut",
+      "asset_ids": [
+        "sfx_ui_click",
+        "uikit_voice_agent_flat"
+      ]
     },
     {
       "t_start": 14,
@@ -69,7 +86,12 @@
       "framing": "flat UI",
       "subject": "book/transfer confirm",
       "on_screen_text": "Booked",
-      "transition_out": "hard"
+      "transition_out": "hard",
+      "recipe": "UI confirm state, same ortho setup, hard cut",
+      "how_this_shot_was_made": "uikit_voice_agent_flat confirm",
+      "asset_ids": [
+        "sfx_ui_click"
+      ]
     },
     {
       "t_start": 20,
@@ -79,7 +101,13 @@
       "shot_type": "endcard",
       "framing": "safe-zone",
       "on_screen_text": "Call / Book demo",
-      "transition_out": "hold"
+      "transition_out": "hold",
+      "recipe": "endcard safe-zone; phone/CTA large; bed under",
+      "how_this_shot_was_made": "CapCut E1 + bed_wallpaper_km",
+      "asset_ids": [
+        "bed_wallpaper_km",
+        "cap_cta_poppins"
+      ]
     }
   ],
   "stats": {
@@ -96,7 +124,17 @@
     "vo": "calm operator, not hype",
     "music": "licensed bed only — no sine placeholder",
     "sfx": "real ring into silence then soft UI click",
-    "loudness_target_lufs": -14
+    "loudness_target_lufs": -14,
+    "bed_id": "bed_wallpaper_km",
+    "ambience_id": "amb_room_tone_owned",
+    "sfx_ids": [
+      "sfx_phone_ring",
+      "sfx_ui_click",
+      "sfx_whoosh"
+    ],
+    "attribution_required": [
+      "bed_wallpaper_km — Kevin MacLeod CC-BY-4.0"
+    ]
   },
   "look": {
     "grade": "cool documentary desk + flat product UI",
@@ -120,7 +158,9 @@
     "Void vs answered split with hard cuts",
     "Clock/time stamp in first 2s",
     "Flat UI documentary for the product beat",
-    "Single CTA held ≥3s in safe zone"
+    "Single CTA held ≥3s in safe zone",
+    "Cut between photographed setups — not one canvas with new words",
+    "Room tone + licensed bed under VO"
   ],
   "what_not_to_copy": [
     "Competitor scripts, logos, mascots, or UI chrome",
@@ -135,5 +175,6 @@
     "missed-call",
     "meta",
     "pas"
-  ]
+  ],
+  "materials_ceiling": "hybrid_gen_plus_stock until real phone/van/hands footage is ledgered — designed cards alone fail FB/TikTok look test"
 }

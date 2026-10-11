@@ -35,6 +35,19 @@ jobs:
         working-directory: skills/ad-intelligence
         run: node scripts/demo-quality-gates.mjs
 
+      - name: Asset gate (audio present; footage ceiling disclosed)
+        run: |
+          set +e
+          test -f library/assets/license-ledger.json
+          test -f library/sound/beds/bed_wallpaper_km.mp3
+          test -f library/sound/sfx/sfx_phone_ring.mp3
+          node library/scripts/assert-assets.mjs --niche home-services
+          code=$?
+          # 0 = full OK; 2 = footage gaps (expected); 1 = audio missing (fail)
+          if [ "$code" -eq 1 ]; then exit 1; fi
+          if [ "$code" -ne 0 ] && [ "$code" -ne 2 ]; then exit "$code"; fi
+          exit 0
+
       - name: Classroom + hub E2E (retrieve → spec → plan → v2 PASS)
         run: node pipeline/scripts/e2e-brief-to-plan.mjs --render
 

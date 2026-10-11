@@ -1,31 +1,37 @@
-# Sound — voice tiers + music bed rules (B5.1 / B5.3)
+# Sound — voice tiers + licensed beds/SFX
 
-## Voice tier ladder (quality vs hardware)
+## Voice tier ladder
 
-| Tier | Engine | Hardware | When to use |
-| --- | --- | --- | --- |
-| **V0** | Platform default TTS | any | Never ship silently — disclose “low-quality default” and upgrade if possible |
-| **V1** | Kokoro-82M (or peer open TTS) | CPU OK (~4 cores) | Default on CPU-only hosts |
-| **V2** | Higher-quality hosted TTS (ElevenLabs etc.) | network + credits | When connected and budget allows |
-| **V3** | Voice clone (Chatterbox-class) | **GPU required** | Only if probe reports GPU; otherwise state ceiling |
+| Tier | Engine | When |
+| --- | --- | --- |
+| **V0** | Platform default TTS | Disclose low quality |
+| **V1** | Kokoro-class open TTS | Default CPU |
+| **V2** | Hosted TTS | Credits available |
+| **V3** | Voice clone | GPU required |
 
-Probe must report the selected tier. A V0 export without disclosure fails the honesty bar.
+## Music beds (`beds/`)
 
-## VO layout (B5.3)
+Real licensed files only. Ledger: [`../assets/license-ledger.json`](../assets/license-ledger.json).
 
-Generate **per beat**, anchored to the timed script start times. Pad the track to full duration. A single blob that ends early (e.g. 16.9s for a 24s ad) is a **layout defect**.
+| id | License | Notes |
+| --- | --- | --- |
+| `bed_carefree_km` | CC-BY-4.0 | Kevin MacLeod — Carefree |
+| `bed_wallpaper_km` | CC-BY-4.0 | Kevin MacLeod — Wallpaper |
+| `bed_enthusiast_tours` | CC-BY-3.0 | Tours — Enthusiast (FMA) |
 
-## Music beds
+**Fails:** sine tones / drones as beds (`fm_sine_bed`). Attribution must appear in package/endcard credits when license requires it.
 
-A music bed must be a **real licensed audio asset** with an id in this index (when assets are added).  
+## SFX (`sfx/`)
 
-**Fails:** sine tones, empty tracks, generated drones passed off as beds (`fm_sine_bed`).
+Mixkit free SFX — ring, whoosh, UI click, notification, typing, impact. See ledger for ids.
 
-Until licensed beds are added under `beds/`, agents must:
+## Ambience (`ambience/`)
 
-1. Use a user-supplied / platform-cleared bed and record license, **or**  
-2. Mark `Audio laid in post: SFX-only — no bed (license pending)` and do not claim a music bed.
+`amb_room_tone_owned` — owned pink-noise room tone under VO (not a music bed).
 
-## SFX (planned)
+## Commands
 
-Whoosh, hit, riser, pop, UI click, notification, typing — each with license. Prefer diegetic SFX matching the beat sheet Audio column.
+```bash
+node library/scripts/asset-gap-report.mjs --niche home-services
+node library/scripts/assert-assets.mjs --niche home-services
+```

@@ -33,7 +33,13 @@
       "source": "synthesis",
       "shot_type": "insert",
       "subject": "missed call UI",
-      "transition_out": "hard"
+      "transition_out": "hard",
+      "recipe": "real phone notification moment — hands + desk — not icon on void",
+      "how_this_shot_was_made": "gen_after_hours_phone_desk or USER_SUPPLIED; sfx_notification",
+      "asset_ids": [
+        "sfx_notification",
+        "amb_room_tone_owned"
+      ]
     },
     {
       "t_start": 3,
@@ -54,7 +60,13 @@
       "subject": "cursor/tap answer→book",
       "on_screen_text": "Answer → Book",
       "transition_out": "hard",
-      "camera_move": "soft zoom on targets"
+      "camera_move": "soft zoom on targets",
+      "recipe": "flat UI documentary, screen-only light, hard cuts between states",
+      "how_this_shot_was_made": "uikit_voice_agent_flat + CapCut zoom on tap",
+      "asset_ids": [
+        "uikit_voice_agent_flat",
+        "sfx_ui_click"
+      ]
     },
     {
       "t_start": 18,
@@ -63,7 +75,13 @@
       "source": "synthesis",
       "shot_type": "screen",
       "subject": "confirm booked",
-      "transition_out": "hard"
+      "transition_out": "hard",
+      "recipe": "flat UI documentary, screen-only light, hard cuts between states",
+      "how_this_shot_was_made": "uikit_voice_agent_flat + CapCut zoom on tap",
+      "asset_ids": [
+        "uikit_voice_agent_flat",
+        "sfx_ui_click"
+      ]
     },
     {
       "t_start": 21,
@@ -88,7 +106,16 @@
   "audio": {
     "vo": "one mechanism sentence",
     "music": "low licensed bed",
-    "sfx": "UI clicks readable"
+    "sfx": "UI clicks readable",
+    "bed_id": "bed_wallpaper_km",
+    "sfx_ids": [
+      "sfx_notification",
+      "sfx_ui_click",
+      "sfx_typing"
+    ],
+    "attribution_required": [
+      "bed_wallpaper_km — Kevin MacLeod CC-BY-4.0"
+    ]
   },
   "look": {
     "ui": "flat documentary chrome",
@@ -121,5 +148,6 @@
     "ui-demo",
     "saas",
     "meta"
-  ]
+  ],
+  "materials_ceiling": "UI demo can ship with kit stills; hook still needs photographed phone moment for native feed look"
 }

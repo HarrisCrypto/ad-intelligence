@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/HarrisCrypto/ad-intelligence/library/assets/manifest.schema.json",
+  "title": "AssetLedgerEntry",
+  "type": "object",
+  "required": ["id", "path", "kind", "license", "attribution", "source_url", "allowed_use"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9_-]{2,80}$" },
+    "path": { "type": "string" },
+    "kind": {
+      "type": "string",
+      "enum": ["music_bed", "sfx", "ambience", "footage", "still", "lut", "font", "other"]
+    },
+    "license": { "type": "string" },
+    "attribution": { "type": "string", "minLength": 8 },
+    "source_url": { "type": "string" },
+    "allowed_use": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "bpm": { "type": ["number", "null"] },
+    "mood": { "type": "array", "items": { "type": "string" } },
+    "duration_s": { "type": "number" },
+    "loop_points_s": {
+      "type": "object",
+      "properties": { "in": { "type": "number" }, "out": { "type": "number" } }
+    },
+    "niches": { "type": "array", "items": { "type": "string" } },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "verified_via": {
+      "type": "string",
+      "enum": ["human_browser", "agent_runtime", "owned", "user_supplied"]
+    }
+  }
+}

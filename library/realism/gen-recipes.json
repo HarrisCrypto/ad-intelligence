@@ -1,0 +1,53 @@
+{
+  "id": "gen-recipes-phone-native",
+  "version": "1.0.0",
+  "purpose": "i2v / image prompts that aim for photographed moments — not glossy AI cards",
+  "global_negatives": [
+    "neon",
+    "purple glow",
+    "holographic",
+    "3D mockup floating",
+    "infinite black void",
+    "perfect studio softbox",
+    "plastic skin",
+    "melted text",
+    "drone orbit",
+    "cinematic 8k"
+  ],
+  "recipes": [
+    {
+      "id": "gen_after_hours_phone_desk",
+      "niche": "home-services",
+      "shot_job": "missed-call void",
+      "still_prompt": "Documentary photo of a real smartphone face-up on a scratched wood desk at night, warm practical lamp in background bokeh, slight clutter (keys, invoice paper), phone screen showing incoming call UI, shot on iPhone, imperfect framing, no logo text burned in, no neon",
+      "i2v_prompt": "subtle handheld drift, phone screen stays sharp, lamp flicker micro, no new objects, no typography redraw",
+      "duration_s": 3,
+      "camera": "cam_phone_native",
+      "lighting": "lit_desk_practical_night",
+      "realism": ["real_phone_handheld", "real_window_practical", "real_hands_phone"],
+      "fallback_asset_tags": ["phone", "desk", "night"],
+      "ceiling_if_no_asset": "assembler_stills_plus_sfx — disclose not photographed UGC"
+    },
+    {
+      "id": "gen_trades_van_bay",
+      "niche": "home-services",
+      "shot_job": "geo / place truth",
+      "still_prompt": "Real HVAC work van parked at suburban bay door, daylight, grease stains OK, no brand logos invented, phone photo, slight wide angle, honest dirt, person optional mid-ground walking",
+      "i2v_prompt": "gentle handheld, clouds drift, no logo morph",
+      "duration_s": 3,
+      "realism": ["real_phone_handheld", "real_multi_setup_cuts"],
+      "fallback_asset_tags": ["van", "bay", "trades"],
+      "ceiling_if_no_asset": "stock_or_user_shoot_required for elite local trust"
+    },
+    {
+      "id": "gen_trades_hands_tool",
+      "niche": "home-services",
+      "shot_job": "work proof",
+      "still_prompt": "Close-up real tradesperson hands with wrench on HVAC unit, dirty knuckles, daylight from bay, shallow depth, phone photo, no face required, no logo",
+      "i2v_prompt": "micro hand motion tightening bolt, keep tool sharp",
+      "duration_s": 2.5,
+      "realism": ["real_hands_phone", "real_deshine_grade"],
+      "fallback_asset_tags": ["hands", "tools", "hvac"]
+    }
+  ]
+}

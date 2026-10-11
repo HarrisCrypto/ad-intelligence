@@ -122,12 +122,29 @@
           "sfx": { "type": "string" },
           "music_event": { "type": "string" },
           "purpose": { "type": "string" },
+          "recipe": {
+            "type": "string",
+            "description": "How it should look: handheld, phone, window light, real hands, no logo"
+          },
+          "how_this_shot_was_made": {
+            "type": "string",
+            "description": "Gen recipe id, stock/ledger asset id, or USER_SUPPLIED shoot notes"
+          },
+          "asset_ids": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "ledger ids from library/assets/license-ledger.json"
+          },
           "source": {
             "type": "string",
             "enum": ["measured", "model-estimate", "synthesis"]
           }
         }
       }
+    },
+    "materials_ceiling": {
+      "type": "string",
+      "description": "Honest ceiling when footage/assets missing for this pattern"
     },
     "stats": {
       "type": "object",

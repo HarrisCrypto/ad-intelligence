@@ -19,6 +19,7 @@ Packages that do **not** invent proof, drift product identity, or burn three red
 | **Craft toolbox (Gate 3)** | `node library/scripts/demo-compose-plan.mjs` · [library/](./library/) |
 | **Ad spec (Gate 4)** | `node specs/validate-ad-spec.mjs specs/examples/oply-missed-call.ad-spec.json` · [specs/](./specs/) |
 | **E2E package path** | `node pipeline/scripts/e2e-brief-to-plan.mjs --render` · critic · v2 PASS vs v1 FAIL |
+| **Assets + realism (2.6)** | `node library/scripts/asset-gap-report.mjs --niche home-services` · [addendum](./docs/PHASE-2.6-ASSET-REALISM.md) · [ledger](./library/assets/license-ledger.json) |
 | **Why it exists (before/after)** | [PROOF.md](./PROOF.md) |
 | **ONE-SHOT playbook (agents start here)** | [one-shot.md](./skills/ad-intelligence/prompts/one-shot.md) |
 | **Package skeleton (copy & fill)** | [package-skeleton.md](./skills/ad-intelligence/references/package-skeleton.md) |

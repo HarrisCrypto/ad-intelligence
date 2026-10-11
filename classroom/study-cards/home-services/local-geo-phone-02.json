@@ -33,7 +33,10 @@
       "shot_type": "establishing",
       "framing": "WS van/bay",
       "on_screen_text": "City + specialty",
-      "transition_out": "hard"
+      "transition_out": "hard",
+      "recipe": "real van/bay daylight, geo text burned, phone-native handheld",
+      "how_this_shot_was_made": "USER_SUPPLIED shoot preferred; else gen_trades_van_bay",
+      "asset_ids": []
     },
     {
       "t_start": 3,
@@ -43,7 +46,10 @@
       "shot_type": "broll",
       "framing": "MS tech at work",
       "on_screen_text": "Job noun",
-      "transition_out": "hard"
+      "transition_out": "hard",
+      "recipe": "trades hands/tools, different setup than establishing",
+      "how_this_shot_was_made": "gen_trades_hands_tool or stock hands",
+      "asset_ids": []
     },
     {
       "t_start": 10,
@@ -53,7 +59,10 @@
       "shot_type": "insert",
       "framing": "CU",
       "on_screen_text": "[PLACEHOLDER: proof]",
-      "transition_out": "hard"
+      "transition_out": "hard",
+      "recipe": "proof only if ledger-backed; else skip",
+      "how_this_shot_was_made": "USER_SUPPLIED review/photo or omit",
+      "asset_ids": []
     },
     {
       "t_start": 15,
@@ -63,7 +72,13 @@
       "shot_type": "endcard",
       "framing": "safe-zone",
       "on_screen_text": "Tap to call · NAP",
-      "transition_out": "hold"
+      "transition_out": "hold",
+      "recipe": "phone number hold ≥3s safe zone, NAP match",
+      "how_this_shot_was_made": "CapCut endcard + bed_carefree_km",
+      "asset_ids": [
+        "bed_carefree_km",
+        "cap_cta_poppins"
+      ]
     }
   ],
   "stats": {
@@ -79,7 +94,15 @@
   "audio": {
     "vo": "local accent OK, clear NAP speak-once",
     "music": "licensed sparse",
-    "sfx": "optional shop ambience"
+    "sfx": "optional shop ambience",
+    "bed_id": "bed_carefree_km",
+    "ambience_id": "amb_room_tone_owned",
+    "sfx_ids": [
+      "sfx_whoosh_soft"
+    ],
+    "attribution_required": [
+      "bed_carefree_km — Kevin MacLeod CC-BY-4.0"
+    ]
   },
   "look": {
     "place_truth": "real facility/van light",
@@ -113,5 +136,6 @@
     "geo",
     "phone-cta",
     "meta"
-  ]
+  ],
+  "materials_ceiling": "elite local trust needs real van/bay/hands — stock or USER_SUPPLIED; gen is a temporary ceiling"
 }

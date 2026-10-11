@@ -1,5 +1,23 @@
 # Changelog
 
+## Unreleased — Asset library + realism (Phase 2.6 / 3.5)
+
+**Diagnosis:** FB/TikTok look fails from missing photographed materials, not missing timing knowledge.
+
+### Added
+- `docs/PHASE-2.6-ASSET-REALISM.md` — three libraries (study / assets / realism) + gates
+- `library/assets/license-ledger.json` — every shippable asset has license + attribution
+- `library/sound/beds/` — Kevin MacLeod CC-BY + FMA bed (real files, not sine)
+- `library/sound/sfx/` — Mixkit ring/whoosh/UI/typing/impact
+- `library/sound/ambience/amb_room_tone_owned.mp3`
+- `library/realism/` — phone-native presets + gen recipes
+- `library/scripts/asset-gap-report.mjs` + `assert-assets.mjs` — lower ceiling when footage missing
+- Study-card shot fields: `recipe`, `how_this_shot_was_made`, `asset_ids`
+- `classroom/ingest/` stub for private-cache → draft cards
+
+### Honest ceiling
+`assert-assets --niche home-services` → audio OK, **footage incomplete** → `designed_cards_on_void` disclosed before generate.
+
 ## Unreleased — Classroom + Production Hub
 
 **Gate 0–1 + Phase 5 early** — audit, legal floor, and render QA that fails Oply v1 for the right reasons.
