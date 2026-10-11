@@ -140,12 +140,26 @@ Each pattern file must **cite the ad IDs** it was derived from.
 
 ---
 
-## 9. ACCEPTANCE (prove it, don't claim it)
+## 9. REFERENCE SUBSTANCE (not just "is video")
+
+`video_coverage` counts a card only when **all** hold:
+
+1. `observed:true` with measured stats (lufs > -60, shot_count ≥ 1)
+2. `source.platform` is a real **ad library** — meta, tiktok, google_ads_transparency,
+   youtube_ads, award galleries — **not** archive.org / Coverr / owned footage dumps
+3. Duration in the short-form band **5–90s**
+4. Niche derived from content (OCR / advertiser / domain) with `niche_confidence` ≥ 0.55
+
+A green floor filled with Chevrolet/Folgers/US Steel vintage films is a **failure**.
+Niches without valid reference video are marked `uncovered`.
+
+## 10. ACCEPTANCE (prove it, don't claim it)
 
 1. ≥3 real ads ingested with **measured** values (video: loudness > -60, shot_count ≥ 1;
    no-video: measured OCR/text) and `observed:true` — including **≥1 no-video format**.
 2. The validator **rejects** a video card with `lufs:-70` or `shot_count:0` (test it).
-3. `look.font_guess` populated on at least the video cards.
-4. `patterns/<niche>/<format>.json` generated with ad-ID citations.
+3. `look.font_guess` populated on reference-valid video cards (when any exist).
+4. `patterns/<niche>/<format>.json` cites only substance-valid ads (never archive.org).
 5. `retrieve --niche <x>` returns observed cards; gate refuses a niche with none.
-6. A run log showing volume attempted vs accepted, per source.
+6. A run log showing volume attempted vs accepted, per source + `video_coverage`.
+7. An archive.org-only video batch exits non-zero with `video coverage: 0`.

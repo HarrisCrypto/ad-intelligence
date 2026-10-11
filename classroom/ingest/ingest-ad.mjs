@@ -19,6 +19,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import crypto from "node:crypto";
+import { applyReferenceSubstance } from "../scripts/reference-substance.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..", "..");
@@ -462,6 +463,11 @@ function applyObservedHonesty(card) {
   } else {
     card.provenance.observed = true;
     card.tags = [...new Set([...(card.tags || []), "observed"])];
+  }
+  // Substance: ad-library + duration band + niche confidence (archive.org ≠ reference).
+  applyReferenceSubstance(card);
+  if (card.provenance.reference_ok === false) {
+    card.tags = [...new Set([...(card.tags || []), "not-reference-ad"])];
   }
   return card;
 }

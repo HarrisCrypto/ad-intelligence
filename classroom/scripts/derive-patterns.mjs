@@ -16,6 +16,11 @@ import {
   NICHES,
 } from "./lib-corpus.mjs";
 import { isGenuinelyObserved } from "./observed-honesty.mjs";
+import {
+  isValidReferenceCard,
+  isVideoFormat,
+  isValidReferenceVideo,
+} from "./reference-substance.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
@@ -40,7 +45,11 @@ const cards = loadCards()
   .map((x) => x.card)
   .filter((c) => isGenuinelyObserved(c))
   .filter((c) => c.status === "confirmed" || process.argv.includes("--include-draft"))
-  .filter((c) => !onlyNiche || canonicalNiche(c.niche) === canonicalNiche(onlyNiche));
+  .filter((c) => !onlyNiche || canonicalNiche(c.niche) === canonicalNiche(onlyNiche))
+  // Video patterns must never learn pacing from archive.org films.
+  .filter((c) =>
+    isVideoFormat(c.format) ? isValidReferenceVideo(c) : isValidReferenceCard(c)
+  );
 
 const groups = new Map();
 for (const c of cards) {
@@ -51,8 +60,18 @@ for (const c of cards) {
   groups.get(key).push(c);
 }
 
-// wipe stale pattern files for regenerated niches
+// Wipe stale pattern files (incl. contaminated ugc/polished from archive films).
 fs.mkdirSync(OUT, { recursive: true });
+const wipeNiches = onlyNiche
+  ? [canonicalNiche(onlyNiche)]
+  : [...new Set(NICHES.niches.map((n) => n.id))];
+for (const niche of wipeNiches) {
+  const nicheDir = path.join(OUT, niche);
+  if (!fs.existsSync(nicheDir)) continue;
+  for (const f of fs.readdirSync(nicheDir).filter((x) => x.endsWith(".json"))) {
+    fs.unlinkSync(path.join(nicheDir, f));
+  }
+}
 const written = [];
 
 for (const [key, list] of groups) {

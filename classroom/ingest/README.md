@@ -56,14 +56,17 @@ node classroom/ingest/ingest-ad.mjs --confirm classroom/study-cards/home-service
 node classroom/ingest/enumerate-ads.mjs --format VIDEO --niche home-services --limit 20
 node classroom/ingest/mass-ingest.mjs --confirm
 
-# When GAT YouTube media is bot-gated, fill measured video floor from archive.org commercials:
-node classroom/ingest/fetch-archive-videos.mjs --confirm --floor 5
+# archive.org is FOOTAGE only — never counts toward video_coverage / patterns
+# (substance gate: ad-library platform + 5–90s + niche-verified)
 
 node classroom/scripts/derive-patterns.mjs
-node classroom/scripts/prove-real-corpus.mjs   # fails if video_coverage < floor
+node classroom/scripts/prove-real-corpus.mjs
 ```
 
-`mass-ingest` **exits non-zero** if `video_coverage` is below floor (default 5/niche). A run of 44 text + 0 video is a failure.
+`video_coverage` counts only **reference-valid** videos: `observed:true` + ad-library
+platform (meta / tiktok / google_ads_transparency / youtube_ads / awards) + duration
+5–90s + `niche_confidence` ≥ 0.55. archive.org vintage films and text-only runs
+**exit non-zero** (`video coverage: 0`). Niches below floor are marked `uncovered`.
 
 Run log: `classroom/ingest/logs/last-mass-ingest.json` includes `by_format` + `video_coverage`.
 
@@ -71,11 +74,12 @@ Run log: `classroom/ingest/logs/last-mass-ingest.json` includes `by_format` + `v
 
 | Source | Headless | Notes |
 | --- | --- | --- |
-| Coverr / Mixkit | ✅ | Footage **ingredients**, not reference ads |
+| Coverr / Mixkit / archive.org | ✅ | Footage **ingredients**, never reference ads |
 | Google Ads Transparency | browser | Creative IDs `CR…` — annotate, don't commit media |
 | Meta Ad Library | cookies | Support `--cookies` / user drop |
-| YouTube | cookies | `yt-dlp --cookies-from-browser` |
-| User-supplied | ✅ | Most reliable for owned teaching ads |
+| YouTube / YouTube ads | cookies | `yt-dlp --cookies-from-browser` |
+| Award galleries | browser | Clio / Cannes / ADC lists |
+| User-supplied | ✅ | Owned teaching — not an ad-library reference |
 
 ## Retrieve gate
 

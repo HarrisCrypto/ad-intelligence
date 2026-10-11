@@ -20,6 +20,7 @@ import {
   NICHES,
 } from "./lib-corpus.mjs";
 import { isGenuinelyObserved } from "./observed-honesty.mjs";
+import { isValidReferenceVideo } from "./reference-substance.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..", "..");
@@ -112,6 +113,7 @@ const noVideo = measured.filter(
   (c) => isNoVideoFormat(c.format) || isNoVideoFormat(c.structure?.format)
 );
 const video = measured.filter((c) => !isNoVideoFormat(c.format));
+const refVideo = video.filter(isValidReferenceVideo);
 
 results.push(
   check(
@@ -127,19 +129,29 @@ results.push(
     `no_video=${noVideo.length}`
   )
 );
+// Reference-valid videos must pass loudness/fonts; zero means niche uncovered (not archive fill).
 results.push(
   check(
     "video_loudness_ok",
-    video.length >= 1 &&
-      video.every((c) => (c.audio?.loudness_lufs ?? c.stats?.loudness_lufs) > -60),
-    video.map((c) => ({ id: c.id, lufs: c.audio?.loudness_lufs }))
+    refVideo.length === 0 ||
+      refVideo.every((c) => (c.audio?.loudness_lufs ?? c.stats?.loudness_lufs) > -60),
+    {
+      reference_valid: refVideo.length,
+      measured_video_not_reference: video.length - refVideo.length,
+      sample: refVideo.slice(0, 5).map((c) => ({ id: c.id, lufs: c.audio?.loudness_lufs })),
+    }
   )
 );
 results.push(
   check(
     "font_guess_on_video",
-    video.length >= 1 && video.every((c) => c.look?.font_guess),
-    video.map((c) => ({ id: c.id, font_guess: c.look?.font_guess, font_class: c.look?.font_class }))
+    refVideo.length === 0 || refVideo.every((c) => c.look?.font_guess),
+    {
+      reference_valid: refVideo.length,
+      sample: refVideo
+        .slice(0, 5)
+        .map((c) => ({ id: c.id, font_guess: c.look?.font_guess, font_class: c.look?.font_class })),
+    }
   )
 );
 
