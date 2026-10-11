@@ -10,10 +10,10 @@ Agents **must acquire or generate materials** before designing cards on a void. 
 | **1** | USER_SUPPLIED shoot | User has phone clips / brand UI screen records | Copy into `library/footage/`, ledger + run `qa/vet-motion` + `qa/vet-asset` |
 | **2** | Free motion stock | Always (no key) | **`acquire-footage.mjs`** — Coverr CC0 → Mixkit → Wikimedia video |
 | **3** | Free stock video API | `PEXELS_API_KEY` / `PIXABAY_API_KEY` set | `acquire-footage.mjs` or `acquire-assets.mjs --source pexels --video` |
-| **4** | Vetted still → i2v | Footage gap after harvest | Still in `library/stills/` only as i2v seed — **never** as footage substitute |
-| **5** | Connected image gen | Flux / SD / Higgsfield / etc. live | `library/realism/gen-recipes.json`; ledger as generated |
-| **6** | Connected / open video | Seedance → Wan → LTX → Grok → peers | [`alternative-model-routing.md`](../../skills/ad-intelligence/references/creative-stack/alternative-model-routing.md) + [`degradation-ladder.md`](../../skills/ad-intelligence/references/creative-stack/degradation-ladder.md) |
-| **7** | Disclose ceiling | Nothing usable | `assert-assets` → downgrade — **tell the user before generate** |
+| **4** | **i2v rung (explicit)** | P0 gap or thin stock after harvest | `--connected-i2v` (Seedance/Higgsfield) or `--i2v-available` (Wan/LTX/Grok/Kling) on vetted `library/stills/` seeds — **never** raw still on timeline. See [`footage/rungs.md`](../footage/rungs.md) |
+| **5** | Connected image gen | Flux / SD / Higgsfield image | `library/realism/gen-recipes.json`; ledger as generated |
+| **6** | Connected long-form | Seedance / Higgsfield video | [`degradation-ladder.md`](../../skills/ad-intelligence/references/creative-stack/degradation-ladder.md) Rung 1 — still select B-roll buckets for truth |
+| **7** | Disclose ceiling | Nothing usable | `assert-assets` → `achieved_rung` + `must_disclose_before_generate` — **state the rung in every brief** |
 
 **Hard rule:** stills are never eligible for a footage slot. See [`library/footage/RULE.md`](../footage/RULE.md).
 

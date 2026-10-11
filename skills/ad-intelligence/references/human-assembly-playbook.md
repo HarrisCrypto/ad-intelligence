@@ -112,6 +112,7 @@ For every beat before export:
 - Audio laid (VO and/or SFX and/or bed) — silent export ≠ finished  
 - One CTA ≥3s · muted-first readable  
 - `assemble-plan.mjs` (or equivalent) shows bucket picks + gaps honestly  
+- Brief states **`achieved_rung`** from `assert-assets` (honest ceiling — free stock ≠ top-decile)  
 - Human-build **log** filled with real receipts  
 - `render-qa.json` after export  
 

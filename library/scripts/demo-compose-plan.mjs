@@ -50,7 +50,12 @@ const plan = {
   duration_s: 24,
   aspect: "9:16",
   materials_ceiling: materials.quality_ceiling,
+  achieved_rung: materials.achieved_rung || null,
+  ad_grade_ok: materials.ad_grade_ok ?? null,
+  i2v_rung: materials.i2v_rung || null,
+  buckets: materials.buckets || null,
   must_disclose_before_generate: !!materials.must_disclose_before_generate,
+  honest_ceiling: materials.honest_ceiling || null,
   audio_ids: {
     bed: "bed_wallpaper_km",
     ambience: "amb_room_tone_owned",
