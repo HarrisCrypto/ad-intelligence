@@ -1,0 +1,61 @@
+{
+  "text_overlays": [],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "Not stated on the official page.",
+  "cta": "Not stated on the official page.",
+  "emotional_angle": "A worn slogan restored by the life of the person who wrote it.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "If the brand line has a human author, film that story long enough to follow a life.",
+    "Do not reuse a famous slogan as the hero line.",
+    "State the runtime only after you time the cut.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "awd-loreal-ilon-specht",
+  "brand": "L'Oréal Paris",
+  "advertiser": "L'Oréal Paris",
+  "platform": "youtube_instream",
+  "format": "Documentary film",
+  "aspect_ratio": "16:9",
+  "length_s": 1020,
+  "year": 2025,
+  "award": {
+    "name": "Cannes Lions",
+    "year": 2025,
+    "category": "Film Lions Grand Prix",
+    "evidence_url": "https://www.canneslions.com/news/cannes-lions-announces-2025-final-winners"
+  },
+  "niche": "cpg",
+  "goal": "awareness",
+  "official_url": "https://www.canneslions.com/news/cannes-lions-announces-2025-final-winners",
+  "hook_0_3s": "The official page does not describe the first three seconds. The Cannes page calls it a 17-minute documentary.",
+  "story_beats": [
+    "The 20 June 2025 Cannes page says the slogan's meaning had eroded fifty years on.",
+    "It says the 17-minute documentary tells the story of Ilon Specht, the 23-year-old who wrote the line in 1973.",
+    "It says that was the first beauty ad voiced by a woman.",
+    "The page does not name a media placement or a frame size."
+  ],
+  "shot_list": [
+    {
+      "t": "full film",
+      "shot": "A documentary about the copywriter, as the Cannes page describes it.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "close",
+      "shot": "The page says the film authenticates a brand purpose and does not list frames.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The page states 17 minutes and says the filmmaking holds attention to the end.",
+  "why_it_worked": "Cannes states a 17-minute Film Grand Prix built as a documentary of the person who wrote a famous line, rather than a new slogan.",
+  "cinematic_qualities": [
+    "Stated 17-minute documentary",
+    "Jury note that the film holds to the end"
+  ],
+  "safe_zone_notes": "The Cannes page does not print a frame. This file uses 16:9 as a film master and that ratio is unverified."
+}

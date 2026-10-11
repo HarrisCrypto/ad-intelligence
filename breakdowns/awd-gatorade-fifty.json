@@ -1,0 +1,68 @@
+{
+  "text_overlays": [
+    {
+      "wording": "Fifty more, let's do it again.",
+      "size": "Not stated on the official page.",
+      "placement": "Spoken by the coach, per the page",
+      "timing": "end"
+    }
+  ],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "The page quotes a coach yelling a challenge.",
+  "cta": "Not stated on the official page.",
+  "emotional_angle": "The official page does not name an emotional angle.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "Build the edit as a count the viewer can follow.",
+    "Land on a challenge, not a logo animation.",
+    "Do not reuse these teams or this line.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "awd-gatorade-fifty",
+  "brand": "Gatorade",
+  "advertiser": "Gatorade",
+  "platform": "youtube_instream",
+  "format": "TV commercial",
+  "aspect_ratio": "16:9",
+  "length_s": 60,
+  "year": 2015,
+  "award": {
+    "name": "The One Show",
+    "year": 2015,
+    "category": "Merit, Consumer Television / 60 Second - Single",
+    "evidence_url": "https://www.oneclub.org/awards/theoneshow/-award/22416/50/"
+  },
+  "niche": "food",
+  "goal": "awareness",
+  "official_url": "https://www.oneclub.org/awards/theoneshow/-award/22416/50/",
+  "hook_0_3s": "The page says the film begins with the 1965 Florida Gators doing push-ups. It does not time that image to the first three seconds.",
+  "story_beats": [
+    "The category on the page is Consumer Television / 60 Second - Single.",
+    "The count of push-ups runs to 50, and each number links to a sports moment.",
+    "At 50 the film returns to the current team.",
+    "The coach's line on the page is Fifty more, let's do it again."
+  ],
+  "shot_list": [
+    {
+      "t": "count",
+      "shot": "Push-ups counted upward, each number tied to a sports moment.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "50",
+      "shot": "The current team, and the coach's challenge to do fifty more.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The page structures the 60-second category film as a count to 50.",
+  "why_it_worked": "The page makes a 60-second film into a count: each push-up is a year, and the last line asks for fifty more.",
+  "cinematic_qualities": [
+    "A count that is the edit",
+    "60-second television category"
+  ],
+  "safe_zone_notes": "The page files it as television and does not print pixels. This file uses 16:9."
+}

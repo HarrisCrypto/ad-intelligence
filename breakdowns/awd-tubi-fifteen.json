@@ -1,0 +1,61 @@
+{
+  "text_overlays": [],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "Not stated on the official page.",
+  "cta": "Not stated on the official page.",
+  "emotional_angle": "The official page does not name an emotional angle.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "If you prank the viewer, make the trick fit in about 15 seconds.",
+    "Pair it with a separate spot that states what you actually offer.",
+    "Do not copy the prank.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "awd-tubi-fifteen",
+  "brand": "Tubi",
+  "advertiser": "Tubi",
+  "platform": "youtube_instream",
+  "format": "Super Bowl commercial",
+  "aspect_ratio": "16:9",
+  "length_s": 15,
+  "year": 2023,
+  "award": {
+    "name": "Effie Awards US",
+    "year": 2024,
+    "category": "Grand Effie",
+    "evidence_url": "https://effie.org/news/first-the-super-bowl-now-the-grand-effie-tubi-wins-top-award-at-2024-effie-awards-us/"
+  },
+  "niche": "entertainment",
+  "goal": "awareness",
+  "official_url": "https://effie.org/news/first-the-super-bowl-now-the-grand-effie-tubi-wins-top-award-at-2024-effie-awards-us/",
+  "hook_0_3s": "The official page does not describe the first three seconds. The Effie page says one spot pranked a nation in 15 seconds.",
+  "story_beats": [
+    "The 23 May 2024 Effie page says the campaign disrupted the 2023 Super Bowl.",
+    "It says one spot showed the brand's point of view and another pranked a nation in 15 seconds.",
+    "It says Tubi became the top trending brand on X and viewing time rose 38%.",
+    "The page does not describe the prank's pictures."
+  ],
+  "shot_list": [
+    {
+      "t": "0-15s",
+      "shot": "The page calls this the prank spot and does not list frames.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "campaign",
+      "shot": "A second spot exists on the page with no stated length.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The page states 15 seconds for the prank and does not describe cuts.",
+  "why_it_worked": "Effie states a 15-second Super Bowl prank inside a two-spot campaign, and ties the Grand Effie to that disruption rather than to a long brand film.",
+  "cinematic_qualities": [
+    "Stated 15-second prank",
+    "A second spot whose length is not given"
+  ],
+  "safe_zone_notes": "The Effie page does not print a frame. This file uses 16:9 for a Super Bowl television spot and that ratio is unverified."
+}

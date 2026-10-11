@@ -1,0 +1,63 @@
+{
+  "text_overlays": [
+    {
+      "wording": "It's the only time to walk in slow motion.",
+      "size": "Not stated on the official page.",
+      "placement": "Spoken, per the page",
+      "timing": "during the walk"
+    }
+  ],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "Dialogue on the page, not a separate announcer.",
+  "cta": "Not stated on the official page.",
+  "emotional_angle": "A straight action image played as a joke the characters are in on.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "Let the characters notice the feature you are selling.",
+    "Rehearse speech so it is intelligible after the speed change.",
+    "Shoot the effect on the device you are actually offering.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "awd-apple-slo-mo",
+  "brand": "Apple",
+  "advertiser": "Apple",
+  "platform": "youtube_instream",
+  "format": "TV and online film",
+  "aspect_ratio": "16:9",
+  "length_s": 60,
+  "year": null,
+  "award": null,
+  "niche": "other",
+  "goal": "consideration",
+  "official_url": "https://www.oneclub.org/awards/theoneshow/-award/64170/detectivesslo-mo/",
+  "hook_0_3s": "The page says two detectives walk away from an explosion in slow motion. It does not time that image to the first three seconds.",
+  "story_beats": [
+    "The page says the film was shot entirely on iPhone 16 Pro.",
+    "Two detectives walk from an explosion. One asks if this is the time to walk in slow motion. The other says it is the only time.",
+    "The page says they had 60 finite seconds.",
+    "Actors spoke faster during the slow-motion portion so the slowed voice would still be clear, and they walked on treadmills."
+  ],
+  "shot_list": [
+    {
+      "t": "slo-mo",
+      "shot": "Two detectives walking from an explosion while talking.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "ramp",
+      "shot": "The page says the image returns to normal speed and the actors change how fast they speak.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The page says the team had 60 finite seconds and had to rehearse the speed change.",
+  "why_it_worked": "The page demonstrates a camera feature by making the joke about the feature: the characters know they are in slow motion, inside a stated 60 seconds, shot on the phone being sold.",
+  "cinematic_qualities": [
+    "Stated 60 seconds",
+    "A speed ramp the actors perform, not only an effect"
+  ],
+  "safe_zone_notes": "The page files the film as TV, VOD, and online, 31-60 seconds, and does not print pixels. This file uses 16:9. Award year was not printed in the text that was read, so award is null."
+}

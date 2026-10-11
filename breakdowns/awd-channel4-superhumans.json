@@ -1,0 +1,61 @@
+{
+  "text_overlays": [],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The page names Public Enemy's Harder Than You Think as the track suggested in the edit.",
+  "voiceover": "Not stated on the official page.",
+  "cta": "Not stated on the official page.",
+  "emotional_angle": "Swagger and effort, not sympathy.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "Open on the skill, not the obstacle.",
+    "If you show a backstory, keep it a short jolt in the middle.",
+    "Clear any music yourself. Do not reuse this track or these athletes' footage.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "awd-channel4-superhumans",
+  "brand": "Channel 4",
+  "advertiser": "Channel 4",
+  "platform": "youtube_instream",
+  "format": "TV commercial",
+  "aspect_ratio": "16:9",
+  "length_s": 90,
+  "year": 2012,
+  "award": {
+    "name": "D&AD",
+    "year": 2013,
+    "category": "Black Pencil, Film Advertising Crafts / Direction",
+    "evidence_url": "https://www.dandad.org/insights/awards/meet-the-superhumans-case-study-insights"
+  },
+  "niche": "entertainment",
+  "goal": "awareness",
+  "official_url": "https://www.dandad.org/insights/awards/meet-the-superhumans-case-study-insights",
+  "hook_0_3s": "The official page does not describe the first three seconds. The page says the centrepiece is a 90-second TV ad.",
+  "story_beats": [
+    "The D&AD page says the centrepiece is a 90-second TV ad, Meet the Superhumans.",
+    "It shows Paralympians in hard training, with brief backstory flashes, then competition.",
+    "The page says the backstory flashes were placed in the middle so they would be felt and not dwelled on.",
+    "It says the track used in the edit is Public Enemy's Harder Than You Think, and that pace had to stay high."
+  ],
+  "shot_list": [
+    {
+      "t": "body",
+      "shot": "Training and competition footage, with up to ten cameras named on the page.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "middle",
+      "shot": "A short flash of a backstory, described as an emotional jolt.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The page says each shot had to stay high energy and that nothing slow survived the edit. Length stated as 90 seconds.",
+  "why_it_worked": "The D&AD page states a 90-second film that treats Paralympians as competitors, with a hip-hop track and a mid-film flash of backstory instead of a pity opening.",
+  "cinematic_qualities": [
+    "Stated 90-second TV ad",
+    "High-energy edit with a brief mid-film flash"
+  ],
+  "safe_zone_notes": "The page calls it a TV ad and does not print a digital safe zone. This file uses 16:9 for a 2012 television master."
+}

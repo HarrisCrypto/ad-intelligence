@@ -1,0 +1,61 @@
+{
+  "text_overlays": [],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "Not stated on the official page.",
+  "cta": "Not stated on the official page.",
+  "emotional_angle": "Fathers trying to last long enough to play with their sons.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "Film the training, not only the final match.",
+    "Keep the documentary near the length you can actually hold.",
+    "Make the goal to last, if that is the product truth.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "awd-st-hubert-six-minutes",
+  "brand": "St-Hubert",
+  "advertiser": "St-Hubert",
+  "platform": "youtube_instream",
+  "format": "Documentary film",
+  "aspect_ratio": "16:9",
+  "length_s": 360,
+  "year": 2019,
+  "award": {
+    "name": "The One Show",
+    "year": 2019,
+    "category": "Merit",
+    "evidence_url": "https://www.oneclub.org/awards/theoneshow/-award/33995/90-minutes/"
+  },
+  "niche": "food",
+  "goal": "awareness",
+  "official_url": "https://www.oneclub.org/awards/theoneshow/-award/33995/90-minutes/",
+  "hook_0_3s": "The official page does not describe the first three seconds. The page says the experience produced a 6 min documentary.",
+  "story_beats": [
+    "The page says only 1 in 3 French people have regular physical activity.",
+    "Eleven fathers trained for three months to last a 90-minute match against their sons.",
+    "The page says that experience became a 6 min documentary.",
+    "The goal on the page is to last, not to win."
+  ],
+  "shot_list": [
+    {
+      "t": "training",
+      "shot": "Fathers preparing for a match, as the page summarizes.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "6 min",
+      "shot": "The documentary length stated on the page.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The page states a 6 min documentary about a 90-minute match. The film is not 90 minutes.",
+  "why_it_worked": "The page separates the stunt, a 90-minute match, from the film, a 6-minute documentary whose goal is lasting rather than winning.",
+  "cinematic_qualities": [
+    "Stated 6 min documentary",
+    "A longer event than the film"
+  ],
+  "safe_zone_notes": "The page does not print a frame. This file uses 16:9 for a documentary master and that ratio is unverified."
+}

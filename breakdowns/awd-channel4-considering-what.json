@@ -1,0 +1,86 @@
+{
+  "text_overlays": [
+    {
+      "wording": "Sport Doesn't Care About Disability",
+      "size": "Not stated on the official page.",
+      "placement": "Flashed on screen, per the press page",
+      "timing": "before the athletes conquer the elements"
+    },
+    {
+      "wording": "Considering what?",
+      "size": "Not stated on the official page.",
+      "placement": "Spoken by a friend at a bus stop",
+      "timing": "after patronising lines"
+    }
+  ],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The page credits sound design and a composer and does not name a track.",
+  "voiceover": "The page says Nabil Shaban performs the voiceover, including They would never say He's amazing for someone in a wheelchair.",
+  "cta": "The page does not print a URL. The question Considering what? is the turn.",
+  "emotional_angle": "Irritation at being praised for the wrong reason, then respect for the sport.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "Pick the real constraints of the sport and show athletes meeting them.",
+    "Put the patronising line in a viewer's mouth, then question it.",
+    "Cut 60, 20, and 6 second versions only after the long film works.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "awd-channel4-considering-what",
+  "brand": "Channel 4",
+  "advertiser": "Channel 4",
+  "platform": "youtube_instream",
+  "format": "Broadcast film with social cutdowns",
+  "aspect_ratio": "16:9",
+  "length_s": 140,
+  "year": 2024,
+  "award": {
+    "name": "Cannes Lions",
+    "year": 2025,
+    "category": "Film Lions Grand Prix",
+    "evidence_url": "https://www.canneslions.com/news/cannes-lions-announces-2025-final-winners"
+  },
+  "niche": "entertainment",
+  "goal": "awareness",
+  "official_url": "https://www.channel4.com/press/news/channel-4s-paris-2024-paralympic-games-marketing-campaign-challenges-patronising",
+  "hook_0_3s": "The press page describes Gravity as a shirtless man with a pint taunting a wheelchair rugby player. It does not time that opening to the first three seconds.",
+  "story_beats": [
+    "The 11 July 2024 press page says the full film is 2 minutes 20 seconds, with cutdowns of 60, 40, 20, and six seconds.",
+    "It personifies gravity, friction, and time, then shows athletes dealing with those forces.",
+    "A living-room line on the page is He's incredible for someone like that, then a bus-stop line Considering what?",
+    "On-screen flashes named on the page include Sport Doesn't Care About Disability."
+  ],
+  "shot_list": [
+    {
+      "t": "gravity",
+      "shot": "A personified Gravity taunts Aaron Phipps, then the scene becomes a wheelchair rugby hit.",
+      "framing": "Not stated on the official page.",
+      "motion": "The page says items fall toward the ceiling and Phipps is pulled upward."
+    },
+    {
+      "t": "friction",
+      "shot": "Friction as a boy-racer, then Sarah Storey sliding on gravel.",
+      "framing": "Not stated on the official page.",
+      "motion": "The page says tyres squeal and momentum drags the rider."
+    },
+    {
+      "t": "time",
+      "shot": "Emmanuel Oyinbo-Coker drifts back in a race while Time holds a stopwatch.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "turn",
+      "shot": "Audience lines, then the athletes recover and win.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The page states 2 minutes 20 seconds for the full film and shorter social cuts. It describes a three-force structure plus a montage.",
+  "why_it_worked": "Channel 4's press page states a 2:20 film that shows elite athletes against gravity, friction, and time, then turns the camera on viewers who say considering. Cannes later named it a 2025 Film Grand Prix.",
+  "cinematic_qualities": [
+    "Stated 2 minute 20 second master",
+    "Three personified forces with a spoken turn"
+  ],
+  "safe_zone_notes": "The press page describes a television film and social cutdowns. It does not print a YouTube safe zone. This file uses 16:9 for the 2:20 master."
+}

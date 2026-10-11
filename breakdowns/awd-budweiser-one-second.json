@@ -1,0 +1,61 @@
+{
+  "text_overlays": [],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The page says the ads are the first notes of iconic songs.",
+  "voiceover": "Not stated on the official page.",
+  "cta": "The page says the challenge is to guess the song.",
+  "emotional_angle": "The pleasure of recognizing a song before anyone else.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "Use a sound your audience can name in a second, and clear the rights.",
+    "Make the guess the interaction.",
+    "Do not use these songs or this beer's line.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "awd-budweiser-one-second",
+  "brand": "Budweiser",
+  "advertiser": "Budweiser",
+  "platform": "instagram_reels",
+  "format": "1-second social ad",
+  "aspect_ratio": "9:16",
+  "length_s": 1,
+  "year": 2025,
+  "award": {
+    "name": "The One Show",
+    "year": 2025,
+    "category": "Gold Pencil",
+    "evidence_url": "https://www.oneclub.org/awards/theoneshow/-award/58726/one-second-ads/"
+  },
+  "niche": "cpg",
+  "goal": "awareness",
+  "official_url": "https://www.oneclub.org/awards/theoneshow/-award/58726/one-second-ads/",
+  "hook_0_3s": "The page says the ads last 1 second, so the opening is the entire ad. It features the first notes of a known song.",
+  "story_beats": [
+    "The page says fans recognize a favorite song from one note.",
+    "The ads last only 1 second and use the first notes of well-known songs.",
+    "The page says people were challenged to guess the songs on social media.",
+    "It says a traditional 30 second spot was rejected because people skip it."
+  ],
+  "shot_list": [
+    {
+      "t": "0-1s",
+      "shot": "The first note of a song, as the page describes the whole ad.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "after",
+      "shot": "The page says people rewatched to guess the song.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The page states 1 second and says the ads were too short to skip.",
+  "why_it_worked": "The page makes recognition the ad: one second of a song people already know, then a guess, instead of a 30-second beer film.",
+  "cinematic_qualities": [
+    "Stated 1-second length",
+    "Sound is the entire creative"
+  ],
+  "safe_zone_notes": "The page says social media and does not name Reels versus Feed versus TikTok, and it does not print pixels. This file uses 9:16 and instagram_reels as an unverified placement."
+}

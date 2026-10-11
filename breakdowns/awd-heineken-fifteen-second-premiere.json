@@ -1,0 +1,63 @@
+{
+  "text_overlays": [
+    {
+      "wording": "Open Your World",
+      "size": "Not stated on the official page.",
+      "placement": "Printed on the award page as the line",
+      "timing": "Not stated on the official page."
+    }
+  ],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "Not stated on the official page.",
+  "cta": "The page prints the line Open Your World.",
+  "emotional_angle": "The official page does not name an emotional angle.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "Premiere a very short film in a place people expect a long one.",
+    "Keep the film to the length you announce.",
+    "Do not copy this brand line or this festival stunt.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "awd-heineken-fifteen-second-premiere",
+  "brand": "Heineken",
+  "advertiser": "Heineken",
+  "platform": "youtube_instream",
+  "format": "15-second film premiere",
+  "aspect_ratio": "16:9",
+  "length_s": 15,
+  "year": null,
+  "award": null,
+  "niche": "cpg",
+  "goal": "awareness",
+  "official_url": "https://www.oneclub.org/awards/theoneshow/-award/21823/15secondpremiere/",
+  "hook_0_3s": "The official page does not describe the first three seconds. The page calls the work the most legendary 15-second film.",
+  "story_beats": [
+    "The page says a 15-second film premiered blindly at Tribeca by someone who had never premiered a film.",
+    "The line on the page is Open Your World.",
+    "The page lists a Merit and does not print an award year in the text that was read.",
+    "The page does not describe frames."
+  ],
+  "shot_list": [
+    {
+      "t": "0-15s",
+      "shot": "A 15-second film premiered as if it were a feature. Frames are not listed.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "event",
+      "shot": "The premiere itself is part of the idea on the page.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The page states 15 seconds and a festival premiere, without a cut list.",
+  "why_it_worked": "The page treats a 15-second film as a festival premiere, so the shortness is the event rather than a cutdown of a longer spot.",
+  "cinematic_qualities": [
+    "Stated 15-second length",
+    "A premiere used as the media idea"
+  ],
+  "safe_zone_notes": "The page does not print a frame or a platform. This file uses 16:9 as an unverified film master. Award year was not printed in the text that was read, so award is null."
+}

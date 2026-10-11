@@ -1,0 +1,61 @@
+{
+  "text_overlays": [],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "Not stated on the official page.",
+  "cta": "Not stated on the official page.",
+  "emotional_angle": "A race stopped in order to save someone.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "If a number matters, make the film last that long and say so only if you timed it.",
+    "Pick an unexpected point of view, such as the ground.",
+    "Do not recreate a real crash or these drivers.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "awd-leforte-one-minute-46",
+  "brand": "Hospital Leforte",
+  "advertiser": "Hospital Leforte",
+  "platform": "youtube_instream",
+  "format": "Animated film",
+  "aspect_ratio": "16:9",
+  "length_s": 106,
+  "year": 2020,
+  "award": {
+    "name": "The One Show",
+    "year": 2020,
+    "category": "Merit, Craft / Art Direction",
+    "evidence_url": "https://www.oneclub.org/awards/theoneshow/-award/36589/1-minute-46-seconds/"
+  },
+  "niche": "local-service",
+  "goal": "awareness",
+  "official_url": "https://www.oneclub.org/awards/theoneshow/-award/36589/1-minute-46-seconds/",
+  "hook_0_3s": "The official page does not describe the first three seconds. The page says the film's duration is 1 minute and 46 seconds.",
+  "story_beats": [
+    "The page says the title is the lap time at Spa, and that this is exactly the duration of the film.",
+    "It is animated from the point of view of the track, looking up.",
+    "The story on the page is Senna stopping to help Erik Comas and switching off an engine.",
+    "The page says the unfinished lap is still a victory, the victory of life."
+  ],
+  "shot_list": [
+    {
+      "t": "0-106s",
+      "shot": "Animation from the track's point of view, looking up, as the page describes.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "idea",
+      "shot": "The runtime equals the lap time named in the title.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The page says the film is exactly 1 minute and 46 seconds, matching a lap time.",
+  "why_it_worked": "The One Show page makes the runtime the idea: the film lasts as long as the lap it is about, told from the ground looking up.",
+  "cinematic_qualities": [
+    "Runtime equals the lap time on the page",
+    "Low angle from the track"
+  ],
+  "safe_zone_notes": "The page does not name YouTube or a pixel aspect. This file uses 16:9 as an unverified film master."
+}

@@ -1,0 +1,56 @@
+{
+  "text_overlays": [],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "Not stated on the official page.",
+  "cta": "Not stated on the official page.",
+  "emotional_angle": "A challenge to catch something almost too fast to see.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "If a spec is a time, consider making the film that long and saying why.",
+    "Do not hide a claim the viewer cannot perceive. The page's idea is the impossibility.",
+    "Name the platforms you actually buy.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "awd-audi-point-zero-three",
+  "brand": "Audi",
+  "advertiser": "SAIC Audi",
+  "platform": "tiktok",
+  "format": "0.03-second social commercial",
+  "aspect_ratio": "9:16",
+  "length_s": 0.03,
+  "year": 2023,
+  "award": null,
+  "niche": "auto",
+  "goal": "awareness",
+  "official_url": "https://www.oneclub.org/awards/theoneshow/-award/51827/audi-003-seconds-commercial/",
+  "hook_0_3s": "The page says the commercial is 0.03 seconds, matching the torque system's response time. The whole ad is shorter than three seconds.",
+  "story_beats": [
+    "The page sets the work at the 2023 Shanghai Auto Show for the Q5 e-tron.",
+    "It says the drive system distributes torque within 0.03 seconds, and the commercial is that long.",
+    "It says people on Douyin and Bilibili comment a timestamp so others can skip ads, and this spot is too short to skip.",
+    "The page does not describe a picture inside the 0.03 seconds."
+  ],
+  "shot_list": [
+    {
+      "t": "0-0.03s",
+      "shot": "The page gives the duration and not the frame.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "context",
+      "shot": "The length matches a stated mechanical response time.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The page states 0.03 seconds and says viewers who usually skip cannot skip it.",
+  "why_it_worked": "The page makes the product spec the runtime, so a skip-culture audience meets an ad that is over before a skip button matters.",
+  "cinematic_qualities": [
+    "Stated 0.03-second length",
+    "Length equals a product spec"
+  ],
+  "safe_zone_notes": "The page names Douyin and Bilibili, not a pixel size. This file uses platform tiktok and 9:16 as the closest vertical social placement, and that mapping is unverified."
+}
