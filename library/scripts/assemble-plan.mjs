@@ -131,14 +131,19 @@ for (const shot of card.shots || []) {
 }
 
 const plan = {
-  ok: gaps.length === 0 && materials.audio_ok !== false,
+  ok: gaps.length === 0 && materials.audio_ok !== false && !materials.basket_poison?.length,
   gate: "human-assembly",
   card: card.id,
   niche,
   duration_s: card.duration_s,
   aspect: card.aspect || "9:16",
   study: card.linked_study_id || null,
+  brand_note: "Oply-class void→answer uses this card — every footage slot must be moving video",
   materials_ceiling: materials.quality_ceiling || card.materials_ceiling,
+  achieved_rung: materials.achieved_rung || null,
+  ad_grade_ok: materials.ad_grade_ok ?? null,
+  i2v_rung: materials.i2v_rung || null,
+  buckets: materials.buckets || null,
   must_disclose_before_generate: !!materials.must_disclose_before_generate,
   assembly_order: [
     "0 study structure",

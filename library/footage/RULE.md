@@ -19,12 +19,19 @@ node library/scripts/acquire-footage.mjs --niche home-services
 # Select by bucket (composer)
 node library/scripts/select-footage.mjs --niche home-services --bucket hook_vehicle
 
-# Ceiling (bucket-aware)
-node library/scripts/assert-assets.mjs --niche home-services --strict-footage
+# Correctness gate → buckets / achieved_rung / ad_grade_ok
+node library/scripts/assert-assets.mjs --niche home-services
+node library/scripts/assert-assets.mjs --niche home-services --connected-i2v   # Seedance/Higgsfield
+node library/scripts/assert-assets.mjs --niche home-services --i2v-available # Wan/LTX/Grok
+
+# Acceptance proofs
+node library/scripts/prove-footage-gates.mjs
 ```
+
+Rung table + i2v wire: [`rungs.md`](./rungs.md).
 
 ## Eligible pick
 
 `kind: video` · `reject: false` · `motion_confirmed: true` · `niche_fit` in `high|med`
 
-Log chosen asset id + why, per shot. Gaps → i2v on a *vetted* still (kind:still) → or lower ceiling. **Never substitute.**
+Log chosen asset id + why, per shot. Gaps → **i2v rung** on a *vetted* still (`library/stills/`) or USER_SUPPLIED → or lower ceiling. **Never substitute.** State `achieved_rung` in every brief.

@@ -32,3 +32,5 @@ skills/ad-intelligence/packages/
 
 # Footage acquire staging
 library/footage/_staging/
+
+library/scripts/qa/fixtures/

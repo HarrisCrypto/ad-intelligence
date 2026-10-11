@@ -56,7 +56,54 @@ if (r.status !== 0) {
 }
 steps.push({ step: "validate_spec", ok: true, ...(JSON.parse(r.stdout)) });
 
-// 3) compose plan from toolbox
+// 3a) materials assert — motion + ad_grade rung
+r = run("library/scripts/assert-assets.mjs", ["--niche", "home-services"]);
+let materials = {};
+try {
+  materials = JSON.parse(r.stdout || "{}");
+} catch {
+  materials = {};
+}
+steps.push({
+  step: "assert_assets",
+  ok:
+    materials.audio_ok &&
+    materials.ad_grade_ok === true &&
+    (materials.basket_poison || []).length === 0 &&
+    (materials.buckets?.P0?.missing || []).length === 0,
+  achieved_rung: materials.achieved_rung,
+  ad_grade_ok: materials.ad_grade_ok,
+  P0: materials.buckets?.P0,
+});
+
+// 3b) human assembly — moving footage in every footage slot
+r = run("library/scripts/assemble-plan.mjs", [
+  "--card",
+  "hvac-missed-call-void-01",
+  "--niche",
+  "home-services",
+]);
+let assemble = {};
+try {
+  assemble = JSON.parse(r.stdout || "{}");
+} catch {
+  assemble = {};
+}
+const footageSlots = (assemble.timeline || []).filter((t) => t.footage_bucket);
+const movingOk =
+  footageSlots.length >= 3 &&
+  footageSlots.every((t) => t.picture?.id && !t.picture?.gap);
+steps.push({
+  step: "assemble_plan_motion",
+  ok: !!assemble.ok && movingOk,
+  achieved_rung: assemble.achieved_rung,
+  slots: footageSlots.map((t) => ({
+    bucket: t.footage_bucket,
+    id: t.picture?.id,
+  })),
+});
+
+// 3c) compose plan from toolbox
 r = run("library/scripts/demo-compose-plan.mjs", ["--brand", "Oply"]);
 if (r.status !== 0) {
   console.error(r.stderr || r.stdout);
@@ -67,6 +114,8 @@ steps.push({
   step: "compose_plan",
   ok: plan.ok && plan.beats?.length >= 4,
   beats: plan.beats?.map((b) => b.id),
+  achieved_rung: plan.achieved_rung,
+  ad_grade_ok: plan.ad_grade_ok,
 });
 
 // 4) offline critic on spec
