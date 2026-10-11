@@ -1,0 +1,55 @@
+{
+  "id": "yts-pepsi-prebiotic-cola",
+  "brand": "Pepsi",
+  "advertiser": "Pepsi",
+  "platform": "youtube_shorts",
+  "format": "YouTube Short",
+  "aspect_ratio": "9:16",
+  "length_s": 6,
+  "year": 2026,
+  "award": null,
+  "niche": "cpg",
+  "goal": "consideration",
+  "official_url": "https://www.youtube.com/shorts/GO5OcRjnXk4",
+  "hook_0_3s": "The official page does not describe the first three seconds. The page titles the Short: Is it summer without Pepsi Prebiotic Cola even?",
+  "story_beats": [
+    "The Shorts page titles the video: Is it summer without Pepsi Prebiotic Cola even?",
+    "The description opens: Pepsi Prebiotic Cola is the key ingredient to a fire summer",
+    "The page states 6 seconds, channel Pepsi, published 2026-08-12."
+  ],
+  "shot_list": [
+    {
+      "t": "0-3s",
+      "shot": "The official page does not describe the opening picture.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "0-6s",
+      "shot": "The page gives a title and a length, and does not list shots.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The page states 6 seconds and does not describe cut rhythm.",
+  "text_overlays": [],
+  "typography_ui": "The official page does not describe typeface or weight.",
+  "color_grade": "The official page does not describe a color grade.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "Not stated on the official page.",
+  "cta": "Not stated on the official page.",
+  "emotional_angle": "The official page does not name an emotional angle. The title states the premise.",
+  "why_it_worked": "The Pepsi Shorts page states a 6-second vertical video titled “Is it summer without Pepsi Prebiotic Cola even?”. That title is the only opening claim the page prints, so a rebuild can copy the structure of a one-line premise plus a short description, not the footage.",
+  "cinematic_qualities": [
+    "Official URL is a YouTube Shorts watch page",
+    "Stated length of 6 seconds"
+  ],
+  "rebuild_recipe": [
+    "Cut an original vertical Short near 6 seconds.",
+    "Lead with one original premise line the way this page leads with its title.",
+    "If you use chapters, print your own labels. Leave framing and motion to the footage you shoot.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "safe_zone_notes": "The watch page does not print a pixel size. This file uses 9:16 because the official URL is a YouTube Short. Keep type clear of the right-side buttons and the bottom caption.",
+  "last_verified": "2026-10-11"
+}

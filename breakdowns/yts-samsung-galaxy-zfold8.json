@@ -1,0 +1,55 @@
+{
+  "id": "yts-samsung-galaxy-zfold8",
+  "brand": "Samsung",
+  "advertiser": "Samsung",
+  "platform": "youtube_shorts",
+  "format": "YouTube Short",
+  "aspect_ratio": "9:16",
+  "length_s": 21,
+  "year": 2026,
+  "award": null,
+  "niche": "ecommerce",
+  "goal": "consideration",
+  "official_url": "https://www.youtube.com/shorts/Wg4HOPzeHKw",
+  "hook_0_3s": "The official page does not describe the first three seconds. The page titles the Short: Ready to Unfold? | Galaxy Z Fold8 | Samsung",
+  "story_beats": [
+    "The Shorts page titles the video: Ready to Unfold? | Galaxy Z Fold8 | Samsung",
+    "The description opens: Curious what’s coming? 👀",
+    "The page states 21 seconds, channel Samsung, published 2026-10-08."
+  ],
+  "shot_list": [
+    {
+      "t": "0-3s",
+      "shot": "The official page does not describe the opening picture.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "0-21s",
+      "shot": "The page gives a title and a length, and does not list shots.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The page states 21 seconds and does not describe cut rhythm.",
+  "text_overlays": [],
+  "typography_ui": "The official page does not describe typeface or weight.",
+  "color_grade": "The official page does not describe a color grade.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "Not stated on the official page.",
+  "cta": "Not stated on the official page.",
+  "emotional_angle": "The official page does not name an emotional angle. The title states the premise.",
+  "why_it_worked": "The Samsung Shorts page states a 21-second vertical video titled “Ready to Unfold? | Galaxy Z Fold8 | Samsung”. That title is the only opening claim the page prints, so a rebuild can copy the structure of a one-line premise plus a short description, not the footage.",
+  "cinematic_qualities": [
+    "Official URL is a YouTube Shorts watch page",
+    "Stated length of 21 seconds"
+  ],
+  "rebuild_recipe": [
+    "Cut an original vertical Short near 21 seconds.",
+    "Lead with one original premise line the way this page leads with its title.",
+    "If you use chapters, print your own labels. Leave framing and motion to the footage you shoot.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "safe_zone_notes": "The watch page does not print a pixel size. This file uses 9:16 because the official URL is a YouTube Short. Keep type clear of the right-side buttons and the bottom caption.",
+  "last_verified": "2026-10-11"
+}
