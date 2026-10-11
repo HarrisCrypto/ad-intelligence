@@ -1,0 +1,132 @@
+{
+  "id": "obs-text-search-01",
+  "status": "confirmed",
+  "source": {
+    "platform": "google",
+    "url_or_library_id": "owned:teaching-rsa-hvac-01",
+    "accessed": "2026-10-11",
+    "rights": "annotation-only",
+    "verified_via": "agent_runtime"
+  },
+  "niche": "home-services",
+  "format": "text_search",
+  "structure": {
+    "format": "search_text",
+    "timing_observable": false,
+    "format_note": "RSA/search — do NOT invent 0–3s video beats from this card"
+  },
+  "duration_s": null,
+  "aspect": "n/a",
+  "provenance": {
+    "observed": true,
+    "basis": "text fields measured: char counts, headline/description/CTA parse (no video)",
+    "measured_at": "2026-10-11T01:33:17.334Z",
+    "media_committed": false
+  },
+  "hook": {
+    "mechanism": "vertical-first headline qualification",
+    "first_second_description": "n/a — search text; first glance = primary headline",
+    "on_screen_text": "HVAC After-Hours Answering"
+  },
+  "shots": [
+    {
+      "t_start": null,
+      "t_end": null,
+      "purpose": "headline_1",
+      "on_screen_text": "HVAC After-Hours Answering",
+      "source": "measured",
+      "char_count": 26
+    },
+    {
+      "t_start": null,
+      "t_end": null,
+      "purpose": "headline_2",
+      "on_screen_text": "Never Miss Another Call",
+      "source": "measured",
+      "char_count": 23
+    },
+    {
+      "t_start": null,
+      "t_end": null,
+      "purpose": "headline_3",
+      "on_screen_text": "AI Phone Agent for HVAC",
+      "source": "measured",
+      "char_count": 23
+    },
+    {
+      "t_start": null,
+      "t_end": null,
+      "purpose": "description_1",
+      "on_screen_text": "Answers every after-hours ring and books jobs while you sleep.",
+      "source": "measured",
+      "char_count": 62
+    },
+    {
+      "t_start": null,
+      "t_end": null,
+      "purpose": "description_2",
+      "on_screen_text": "Built for home-service shops — setup in a day.",
+      "source": "measured",
+      "char_count": 46
+    }
+  ],
+  "recipe": {
+    "hook": "HVAC After-Hours Answering",
+    "beats": [],
+    "pacing_curve": null,
+    "proof": "Answers every after-hours ring and books jobs while you sleep.",
+    "cta": "call / landing NAP match"
+  },
+  "stats": {
+    "shot_count": 0,
+    "avg_shot_s": null,
+    "cuts_per_10s": null,
+    "longest_hold_s": null,
+    "first_cut_at_s": null,
+    "text_density": "headlines=3;descriptions=2",
+    "loudness_lufs": null,
+    "headline_chars": [
+      26,
+      23,
+      23
+    ],
+    "description_chars": [
+      62,
+      46
+    ],
+    "stats_source": "measured"
+  },
+  "audio": {
+    "note": "none — search text",
+    "loudness_lufs": null
+  },
+  "look": {
+    "note": "platform RSA typography"
+  },
+  "cta": {
+    "primary": "call / landing NAP match"
+  },
+  "offer_and_proof": {
+    "offer": "after-hours answering for HVAC",
+    "proof": "[PLACEHOLDER: needs user proof]"
+  },
+  "why_it_works": "Headlines lead with vertical + job (HVAC after-hours); descriptions separate mechanism from setup ease. Char counts are measured — keep primary headline short enough to qualify the clicker.",
+  "steal": [
+    "Vertical-first headline",
+    "Mechanism in description not headline",
+    "CTA matches landing NAP"
+  ],
+  "what_not_to_copy": [
+    "Competitor trademarked claims",
+    "Invented proof"
+  ],
+  "tags": [
+    "home-services",
+    "text_search",
+    "observed",
+    "ingest",
+    "no-video",
+    "confirmed"
+  ],
+  "materials_ceiling": "Copy/offer craft only — no footage implied"
+}

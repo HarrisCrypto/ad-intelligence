@@ -1,5 +1,24 @@
 # Changelog
 
+## Unreleased — Universal corpus (niche-agnostic, format-general)
+
+**Correction:** Sub-shop across all brands — niches are data rows, not code paths; must study **no-video** ads too (offer/copy/CTA). Studying = assembly recipes aggregated as counted patterns, not media storage.
+
+### Added
+- `classroom/niches.json` + `formats.json` — registry of niches + 8 formats (`ugc_video`…`talking_head`); adding dental/saas/skincare = data change
+- `classroom/ingest/ingest-ad.mjs` — format-general measured ingest (`scdet`, ebur128, silence, motion, OCR/palette/contrast, text RSA); `provenance.observed:true`; media stays in `private-cache/`
+- `classroom/scripts/derive-patterns.mjs` → `classroom/patterns/<niche>/<format>.json` citing cards
+- `classroom/scripts/prove-corpus-ingest.mjs` — ≥3 observed (incl. no-video), retrieve floor/ceiling, patterns cite
+- 4 owned teaching cards: `obs-ugc-missed-call-01`, `obs-screen-demo-01`, `obs-static-offer-01`, `obs-text-search-01`
+
+### Changed
+- `retrieve-cards.mjs` refuses niches below observed floor; prints `ceiling` + `achieved_rung`; prefers `observed:true`
+- Schema accepts canonical formats + `provenance` / `recipe`
+- E2E + CI require corpus prove + observed retrieve
+
+### Honest limit
+Corpus teaches assembly; ladder still ends at USER_SUPPLIED → i2v → vetted stock.
+
 ## Unreleased — Real moving footage + human assembly + ad_grade rung
 
 **Diagnosis:** `library/footage/` held stills (including off-subject diagram/market/car) and `assert-assets` counted files, not correctness → slideshow ads. Agents also skipped how humans actually assemble (bucket B-roll → audio → CapCut type).

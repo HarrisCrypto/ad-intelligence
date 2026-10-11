@@ -1,0 +1,146 @@
+{
+  "id": "obs-static-offer-01",
+  "status": "confirmed",
+  "source": {
+    "platform": "owned",
+    "url_or_library_id": "owned:teaching-static-offer-01",
+    "accessed": "2026-10-11",
+    "rights": "owned",
+    "verified_via": "agent_runtime"
+  },
+  "niche": "home-services",
+  "format": "static_image",
+  "structure": {
+    "format": "display_static",
+    "timing_observable": false,
+    "format_note": "No-video format (static_image) — do NOT invent 0–3s video beats"
+  },
+  "duration_s": null,
+  "aspect": "1:1",
+  "provenance": {
+    "observed": true,
+    "basis": "tesseract OCR + ffmpeg palettegen + signalstats contrast; composition bands",
+    "measured_at": "2026-10-11T01:33:17.309Z",
+    "media_path_local": "classroom/private-cache/obs-static-offer-01.png",
+    "media_committed": false
+  },
+  "hook": {
+    "mechanism": "offer noun + benefit + single CTA",
+    "first_second_description": "n/a — static; first glance = After-hours calls answered",
+    "on_screen_text": "After-hours calls answered"
+  },
+  "shots": [
+    {
+      "t_start": null,
+      "t_end": null,
+      "purpose": "headline",
+      "on_screen_text": "After-hours calls answered",
+      "source": "measured"
+    },
+    {
+      "t_start": null,
+      "t_end": null,
+      "purpose": "body",
+      "on_screen_text": "Never miss another HVAC job",
+      "source": "measured"
+    },
+    {
+      "t_start": null,
+      "t_end": null,
+      "purpose": "cta",
+      "on_screen_text": "Book a demo",
+      "source": "measured"
+    }
+  ],
+  "recipe": {
+    "hook": "After-hours calls answered",
+    "beats": [],
+    "pacing_curve": null,
+    "proof": "[FILL from OCR/offer]",
+    "cta": "After-hours calls answered"
+  },
+  "stats": {
+    "shot_count": 0,
+    "avg_shot_s": null,
+    "cuts_per_10s": null,
+    "longest_hold_s": null,
+    "first_cut_at_s": null,
+    "text_density": "3 ocr_lines",
+    "loudness_lufs": null,
+    "contrast": {
+      "ratio_approx": null,
+      "source": "unavailable"
+    },
+    "layout": {
+      "nine_box_text_density": {
+        "top": 3,
+        "mid": 0,
+        "bottom": 0
+      },
+      "note": "approx 3-band vertical split from OCR line order (not pixel boxes)",
+      "source": "measured"
+    },
+    "ocr_line_count": 3,
+    "probe": {
+      "width": 1080,
+      "height": 1080
+    },
+    "stats_source": "measured"
+  },
+  "audio": {
+    "note": "none — static/no-video",
+    "loudness_lufs": null
+  },
+  "look": {
+    "palette": [
+      "#99a6a5",
+      "#99a6a5",
+      "#99a6a5",
+      "#99a6a5",
+      "#99a6a5",
+      "#99a6a5"
+    ],
+    "palette_source": "measured",
+    "contrast": {
+      "ratio_approx": null,
+      "source": "unavailable"
+    },
+    "layout": {
+      "nine_box_text_density": {
+        "top": 3,
+        "mid": 0,
+        "bottom": 0
+      },
+      "note": "approx 3-band vertical split from OCR line order (not pixel boxes)",
+      "source": "measured"
+    },
+    "type": "[FILL]",
+    "ocr_sample": "After-hours calls answered\nNever miss another HVAC job\nBook a demo"
+  },
+  "cta": {
+    "primary": "After-hours calls answered"
+  },
+  "offer_and_proof": {
+    "offer": "After-hours calls answered | Never miss another HVAC job | Book a demo",
+    "proof": "[PLACEHOLDER]"
+  },
+  "why_it_works": "Static composition puts offer noun in the top third, benefit line mid, single CTA button lower third — OCR + band density confirm the hierarchy. No-video ads teach offer and CTA craft the video corpus misses.",
+  "steal": [
+    "3-band vertical offer hierarchy",
+    "One CTA verb",
+    "High-contrast CTA box vs dark field"
+  ],
+  "what_not_to_copy": [
+    "Competitor brand marks / product photography you do not own",
+    "Invented proof or testimonials"
+  ],
+  "tags": [
+    "home-services",
+    "static_image",
+    "observed",
+    "ingest",
+    "no-video",
+    "confirmed"
+  ],
+  "materials_ceiling": "No-video craft (offer/copy/composition) is learnable here; brand photos still USER_SUPPLIED"
+}

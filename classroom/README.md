@@ -76,6 +76,8 @@ Ingest / validators must **reject** payloads containing data-URIs, base64 blobs,
 
 `format` and `timing_observable` are first-class. Static search/display cards must not invent `0–3s` video beats. Limits must survive every projection into packages and QA.
 
+**Sub-shop rule:** niches are data (`classroom/niches.json`), formats are data (`classroom/formats.json`). The corpus is format-general — including **no-video** ads (`static_image`, `carousel`, `text_search`) — because offer/copy/CTA craft lives there. Ingest: `classroom/ingest/ingest-ad.mjs`. Retrieve refuses a niche below the observed floor and states the ceiling.
+
 ---
 
 ## Brand harvest (Phase 2.5 — preview)

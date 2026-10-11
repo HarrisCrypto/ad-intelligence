@@ -1,0 +1,30 @@
+{
+  "id": "pat_home-services_ugc_video",
+  "niche": "home-services",
+  "format": "ugc_video",
+  "n_cards": 1,
+  "cites": [
+    "obs-ugc-missed-call-01"
+  ],
+  "hook_frequency": {
+    "missed-call void into booked outcome": 1
+  },
+  "pacing": {
+    "n": 1,
+    "mean_cuts_per_10s": 1.43,
+    "samples": [
+      {
+        "id": "obs-ugc-missed-call-01",
+        "cuts_per_10s": 1.43,
+        "first_cut_at_s": 3.533,
+        "longest_hold_s": 3.533,
+        "loudness_lufs": -70
+      }
+    ],
+    "source": "measured_aggregate"
+  },
+  "cta_norms": {},
+  "caption_conventions": [],
+  "floor_note": "thin — treat as directional, not normative",
+  "honest_limit": "Patterns teach assembly from real ads; they do not supply the brand's own material."
+}

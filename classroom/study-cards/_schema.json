@@ -52,6 +52,14 @@
     "format": {
       "type": "string",
       "enum": [
+        "ugc_video",
+        "polished_video",
+        "motion_graphics",
+        "static_image",
+        "carousel",
+        "text_search",
+        "screen_recording",
+        "talking_head",
         "UGC",
         "motion-graphics",
         "product-demo",
@@ -62,7 +70,22 @@
         "search_text",
         "display_static",
         "carousel_static"
-      ]
+      ],
+      "description": "Canonical ids in classroom/formats.json; legacy aliases accepted"
+    },
+    "provenance": {
+      "type": "object",
+      "properties": {
+        "observed": { "type": "boolean" },
+        "basis": { "type": "string" },
+        "measured_at": { "type": "string" },
+        "media_path_local": { "type": "string" },
+        "media_committed": { "type": "boolean" }
+      }
+    },
+    "recipe": {
+      "type": "object",
+      "description": "Assembly recipe: hook, beats, pacing_curve, proof, cta"
     },
     "structure": {
       "type": "object",

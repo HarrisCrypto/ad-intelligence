@@ -1,0 +1,76 @@
+{
+  "$comment": "Niches are data rows, not code paths. Adding dental/saas/skincare = add a row + optional pack/buckets files.",
+  "version": 1,
+  "floor": {
+    "min_observed_cards": 3,
+    "min_formats": 2,
+    "require_no_video_format": true
+  },
+  "niches": [
+    {
+      "id": "home-services",
+      "aliases": ["home_services", "local-services", "local_services", "hvac", "plumbing"],
+      "skill_niche": "local-services",
+      "pack": "classroom/niche-packs/home-services.md",
+      "footage_buckets": "library/footage/buckets/home-services.json",
+      "formats_target": [
+        "ugc_video",
+        "polished_video",
+        "screen_recording",
+        "talking_head",
+        "static_image",
+        "text_search",
+        "carousel",
+        "motion_graphics"
+      ],
+      "live": true
+    },
+    {
+      "id": "saas",
+      "aliases": ["b2b-saas", "software"],
+      "skill_niche": "saas",
+      "pack": null,
+      "footage_buckets": null,
+      "formats_target": [
+        "screen_recording",
+        "ugc_video",
+        "motion_graphics",
+        "static_image",
+        "text_search",
+        "carousel"
+      ],
+      "live": false
+    },
+    {
+      "id": "dental",
+      "aliases": ["dentist", "oral-care"],
+      "skill_niche": null,
+      "pack": null,
+      "footage_buckets": null,
+      "formats_target": [
+        "ugc_video",
+        "talking_head",
+        "static_image",
+        "carousel",
+        "text_search"
+      ],
+      "live": false
+    },
+    {
+      "id": "skincare",
+      "aliases": ["beauty-dtc", "skin"],
+      "skill_niche": "beauty-dtc",
+      "pack": null,
+      "footage_buckets": null,
+      "formats_target": [
+        "ugc_video",
+        "polished_video",
+        "static_image",
+        "carousel",
+        "text_search",
+        "talking_head"
+      ],
+      "live": false
+    }
+  ]
+}

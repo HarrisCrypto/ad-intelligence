@@ -15,7 +15,7 @@ Packages that do **not** invent proof, drift product identity, or burn three red
 | **Classroom + Hub status (unified track)** | [HUB.md](./HUB.md) · [AUDIT.md](./AUDIT.md) · [classroom/](./classroom/) |
 | **Render QA (actual video)** | [pipeline/qa/](./pipeline/qa/) · [regression/fail/oply-v1](./regression/fail/oply-v1/) · `node pipeline/qa/prove-qa.mjs` |
 | **Brand harvest (Gate 2.5)** | `node skills/ad-intelligence/scripts/brand-harvest.mjs <url>` · [library/typography](./library/typography/) · [library/sound](./library/sound/) |
-| **Study cards (Gate 2)** | `node classroom/scripts/retrieve-cards.mjs --niche home-services --limit 5` · [classroom/study-cards/](./classroom/study-cards/) · [niche pack](./classroom/niche-packs/home-services.md) |
+| **Study cards (Gate 2)** | `retrieve-cards.mjs` (observed floor + ceiling) · `ingest-ad.mjs` · [classroom/](./classroom/) · `prove-corpus-ingest.mjs` |
 | **Craft toolbox (Gate 3)** | `node library/scripts/demo-compose-plan.mjs` · [library/](./library/) |
 | **Ad spec (Gate 4)** | `node specs/validate-ad-spec.mjs specs/examples/oply-missed-call.ad-spec.json` · [specs/](./specs/) |
 | **E2E package path** | `node pipeline/scripts/e2e-brief-to-plan.mjs --render` · critic · v2 PASS vs v1 FAIL |

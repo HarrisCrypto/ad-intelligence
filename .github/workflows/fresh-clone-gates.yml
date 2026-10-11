@@ -46,6 +46,14 @@ jobs:
           node library/scripts/assert-assets.mjs --niche home-services
           # expect exit 0 when home-services stills seeded
 
+      - name: Corpus ingest gate (observed cards + retrieve floor)
+        run: |
+          test -f classroom/niches.json
+          test -f classroom/formats.json
+          test -f classroom/ingest/ingest-ad.mjs
+          sudo apt-get install -y tesseract-ocr
+          node classroom/scripts/prove-corpus-ingest.mjs
+
       - name: Classroom + hub E2E (retrieve → spec → plan → v2 PASS)
         run: node pipeline/scripts/e2e-brief-to-plan.mjs --render
 

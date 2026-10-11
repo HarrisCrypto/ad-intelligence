@@ -2,6 +2,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { isNoVideoFormat, resolveFormat, FORMATS } from "./lib-corpus.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
@@ -25,7 +26,7 @@ if (!card.structure?.format || typeof card.structure.timing_observable !== "bool
   fail(`${file}: structure.format + timing_observable required`);
 }
 if (
-  ["search_text", "display_static", "carousel_static"].includes(card.structure.format) &&
+  isNoVideoFormat(card.structure.format) &&
   card.structure.timing_observable !== false
 ) {
   fail(`${file}: non-video format must have timing_observable:false`);
@@ -33,9 +34,37 @@ if (
 if (!Array.isArray(card.what_not_to_copy) || card.what_not_to_copy.length < 1) {
   fail(`${file}: what_not_to_copy required`);
 }
+
+const resolved = resolveFormat(card.format);
+const known =
+  FORMATS.formats.some((f) => f.id === resolved) ||
+  (schema.properties.format.enum || []).includes(card.format);
+if (!known) fail(`${file}: unknown format ${card.format}`);
+
+if (card.provenance?.observed === true) {
+  if (card.stats?.stats_source !== "measured") {
+    fail(`${file}: observed:true requires stats.stats_source:"measured"`);
+  }
+  if (card.provenance.media_committed === true) {
+    fail(`${file}: media must never be committed (media_committed must be false/absent)`);
+  }
+}
+
 // media rejection
 const blob = JSON.stringify(card);
 if (/data:(image|video|audio)\//i.test(blob) || /"base64"/i.test(blob)) {
   fail(`${file}: media payload rejected`);
 }
-console.log(JSON.stringify({ ok: true, id: card.id, status: card.status }, null, 2));
+console.log(
+  JSON.stringify(
+    {
+      ok: true,
+      id: card.id,
+      status: card.status,
+      format: card.format,
+      observed: card.provenance?.observed === true,
+    },
+    null,
+    2
+  )
+);

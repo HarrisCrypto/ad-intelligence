@@ -1,0 +1,74 @@
+{
+  "$comment": "Format-general corpus. A niche studied only in video is a blind spot — always include ≥1 no-video format.",
+  "version": 1,
+  "formats": [
+    {
+      "id": "ugc_video",
+      "structure": "video_timed",
+      "timing_observable": true,
+      "no_video": false,
+      "measured": ["cuts", "loudness", "motion", "caption_timing", "palette"]
+    },
+    {
+      "id": "polished_video",
+      "structure": "video_timed",
+      "timing_observable": true,
+      "no_video": false,
+      "measured": ["cuts", "loudness", "motion", "palette", "music"]
+    },
+    {
+      "id": "motion_graphics",
+      "structure": "video_timed",
+      "timing_observable": true,
+      "no_video": false,
+      "measured": ["cuts", "text_timing", "motion", "palette"]
+    },
+    {
+      "id": "static_image",
+      "structure": "display_static",
+      "timing_observable": false,
+      "no_video": true,
+      "measured": ["composition", "text_zones", "contrast", "palette", "offer"]
+    },
+    {
+      "id": "carousel",
+      "structure": "carousel_static",
+      "timing_observable": false,
+      "no_video": true,
+      "measured": ["per_card_hook", "sequence_order", "text_zones", "palette"]
+    },
+    {
+      "id": "text_search",
+      "structure": "search_text",
+      "timing_observable": false,
+      "no_video": true,
+      "measured": ["headline", "description", "cta", "offer"]
+    },
+    {
+      "id": "screen_recording",
+      "structure": "video_timed",
+      "timing_observable": true,
+      "no_video": false,
+      "measured": ["cuts", "ui_states", "action_sequence", "loudness"]
+    },
+    {
+      "id": "talking_head",
+      "structure": "video_timed",
+      "timing_observable": true,
+      "no_video": false,
+      "measured": ["framing", "pacing", "caption_style", "loudness", "motion"]
+    }
+  ],
+  "legacy_aliases": {
+    "UGC": "ugc_video",
+    "motion-graphics": "motion_graphics",
+    "product-demo": "screen_recording",
+    "screen-recording": "screen_recording",
+    "cinematic": "polished_video",
+    "talking-head": "talking_head",
+    "hybrid": "ugc_video",
+    "search_text": "text_search",
+    "display_static": "static_image",
+    "carousel_static": "carousel"
+  }
+}
