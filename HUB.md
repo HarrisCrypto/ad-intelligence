@@ -13,7 +13,7 @@ Top FB/TikTok DR ads are **photographed moments**. Agents must **acquire or gene
 
 | Library | Job | Status |
 | --- | --- | --- |
-| **A. Study corpus** | Knowing + shot recipes | Observed cards (`ingest-ad.mjs`) + synthesis; format-general; retrieve floor |
+| **A. Study corpus** | Knowing + shot recipes | [`MASS-INGEST.md`](./classroom/ingest/MASS-INGEST.md) — measured Ads Transparency + archive commercials; honesty gate; fonts; patterns cite ad IDs |
 | **B. Asset library** | Usable licensed media | Beds/SFX ✅ · `footage/home-services/` stills ✅ |
 | **C. Realism layer** | Phone-native how | `library/realism/` ✅ |
 | **Acquire** | Free-first fetch/gen | [`TOOL-ROUTING.md`](./library/assets/TOOL-ROUTING.md) · `fill-niche-gaps.mjs` |

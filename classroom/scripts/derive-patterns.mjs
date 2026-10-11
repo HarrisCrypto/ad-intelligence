@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * Aggregate observed cards → patterns per (niche × format).
- * Every pattern cites the card ids it came from. Counts, not opinions.
+ * Aggregate genuinely observed cards → patterns per (niche × format).
+ * Answers cuts / content / fonts-craft. Every pattern cites ad card ids.
  *
  *   node classroom/scripts/derive-patterns.mjs
  *   node classroom/scripts/derive-patterns.mjs --niche home-services
@@ -15,6 +15,7 @@ import {
   canonicalNiche,
   NICHES,
 } from "./lib-corpus.mjs";
+import { isGenuinelyObserved } from "./observed-honesty.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
@@ -25,10 +26,19 @@ function arg(n, d = null) {
   return i >= 0 ? process.argv[i + 1] : d;
 }
 
+function freq(items) {
+  const m = {};
+  for (const x of items) {
+    if (!x || /^\[FILL/i.test(x)) continue;
+    m[x] = (m[x] || 0) + 1;
+  }
+  return m;
+}
+
 const onlyNiche = arg("--niche");
 const cards = loadCards()
   .map((x) => x.card)
-  .filter((c) => c.provenance?.observed === true)
+  .filter((c) => isGenuinelyObserved(c))
   .filter((c) => c.status === "confirmed" || process.argv.includes("--include-draft"))
   .filter((c) => !onlyNiche || canonicalNiche(c.niche) === canonicalNiche(onlyNiche));
 
@@ -41,36 +51,34 @@ for (const c of cards) {
   groups.get(key).push(c);
 }
 
+// wipe stale pattern files for regenerated niches
 fs.mkdirSync(OUT, { recursive: true });
 const written = [];
 
 for (const [key, list] of groups) {
   const [niche, format] = key.split("__");
-  const hookFreq = {};
-  for (const c of list) {
-    const m = c.hook?.mechanism || "unknown";
-    if (/^\[FILL/i.test(m)) continue;
-    hookFreq[m] = (hookFreq[m] || 0) + 1;
-  }
-  const pacing = list
+  const pacingSamples = list
     .filter((c) => c.stats?.cuts_per_10s != null)
     .map((c) => ({
       id: c.id,
       cuts_per_10s: c.stats.cuts_per_10s,
+      avg_shot_s: c.stats.avg_shot_s,
       first_cut_at_s: c.stats.first_cut_at_s,
       longest_hold_s: c.stats.longest_hold_s,
-      loudness_lufs: c.stats.loudness_lufs,
+      loudness_lufs: c.stats.loudness_lufs ?? c.audio?.loudness_lufs,
     }));
-  const meanCuts =
-    pacing.length > 0
-      ? pacing.reduce((a, p) => a + p.cuts_per_10s, 0) / pacing.length
-      : null;
-  const ctas = {};
-  for (const c of list) {
-    const t = c.cta?.primary || "unknown";
-    if (/^\[FILL/i.test(t)) continue;
-    ctas[t] = (ctas[t] || 0) + 1;
-  }
+  const mean = (arr, k) => {
+    const xs = arr.map((x) => x[k]).filter((v) => v != null && !Number.isNaN(v));
+    if (!xs.length) return null;
+    return +(xs.reduce((a, b) => a + b, 0) / xs.length).toFixed(2);
+  };
+
+  const beatOrders = list.map((c) =>
+    (c.recipe?.beats || c.shots || [])
+      .map((b) => b.purpose)
+      .filter(Boolean)
+      .join("→")
+  );
 
   const pattern = {
     id: `pat_${niche}_${format}`,
@@ -78,17 +86,41 @@ for (const [key, list] of groups) {
     format,
     n_cards: list.length,
     cites: list.map((c) => c.id),
-    hook_frequency: hookFreq,
-    pacing: {
-      n: pacing.length,
-      mean_cuts_per_10s: meanCuts != null ? +meanCuts.toFixed(2) : null,
-      samples: pacing,
+    source_ids: list.map((c) => c.source?.url_or_library_id).filter(Boolean),
+    cuts: {
+      mean_cuts_per_10s: mean(pacingSamples, "cuts_per_10s"),
+      mean_avg_shot_s: mean(pacingSamples, "avg_shot_s"),
+      mean_first_cut_at_s: mean(pacingSamples, "first_cut_at_s"),
+      mean_longest_hold_s: mean(pacingSamples, "longest_hold_s"),
+      samples: pacingSamples,
       source: "measured_aggregate",
     },
-    cta_norms: ctas,
-    caption_conventions: list
-      .map((c) => c.look?.caption_style)
-      .filter((x) => x && !/^\[FILL/i.test(x)),
+    content: {
+      hook_frequency: freq(list.map((c) => c.hook?.mechanism)),
+      beat_order_frequency: freq(beatOrders),
+      proof_placement: freq(
+        list.map((c) => c.recipe?.proof || c.offer_and_proof?.proof)
+      ),
+      cta_wording: freq(list.map((c) => c.cta?.primary)),
+      cta_timing_s: list
+        .map((c) => ({ id: c.id, timing_s: c.cta?.timing_s }))
+        .filter((x) => x.timing_s != null),
+    },
+    fonts_craft: {
+      font_class_frequency: freq(list.map((c) => c.look?.font_class)),
+      font_guess_frequency: freq(list.map((c) => c.look?.font_guess)),
+      caption_style_frequency: freq(list.map((c) => c.look?.caption_style)),
+      palette_samples: list
+        .map((c) => ({ id: c.id, palette: c.look?.palette }))
+        .filter((x) => Array.isArray(x.palette) && x.palette.length),
+      grade_notes: freq(list.map((c) => c.look?.grade)),
+      sfx_density: freq(
+        list.map((c) => {
+          const n = (c.shots || []).filter((s) => s.sfx).length;
+          return n ? `sfx_shots:${n}` : null;
+        })
+      ),
+    },
     floor_note:
       list.length < (NICHES.floor?.min_observed_cards || 3)
         ? "thin — treat as directional, not normative"
@@ -110,7 +142,7 @@ console.log(
       ok: true,
       groups: written.length,
       written,
-      rule: "Every pattern cites cards. Counts, not opinions.",
+      rule: "cuts + content + fonts/craft; every pattern cites ad IDs.",
     },
     null,
     2

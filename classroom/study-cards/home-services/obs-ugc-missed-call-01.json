@@ -1,6 +1,6 @@
 {
   "id": "obs-ugc-missed-call-01",
-  "status": "confirmed",
+  "status": "draft",
   "source": {
     "platform": "owned",
     "url_or_library_id": "owned:teaching-ugc-missed-call-01",
@@ -18,11 +18,12 @@
   "duration_s": 7,
   "aspect": "9:16",
   "provenance": {
-    "observed": true,
-    "basis": "ffmpeg:scdet+ebur128+silencedetect+tblend/signalstats+palettegen; tesseract OCR frame",
+    "observed": false,
+    "basis": "ffmpeg:scdet+ebur128+silencedetect+tblend/signalstats+palettegen; tesseract OCR frame | REFLAGGED: teaching placeholder with digital silence / not a real ad library creative",
     "measured_at": "2026-10-11T01:33:16.894Z",
     "media_path_local": "classroom/private-cache/obs-ugc-missed-call-01.mp4",
-    "media_committed": false
+    "media_committed": false,
+    "reflagged_reason": "loudness_lufs<=-60 or teaching sine bed — not a genuine ad ingest"
   },
   "hook": {
     "mechanism": "missed-call void into booked outcome",
@@ -141,9 +142,9 @@
   "tags": [
     "home-services",
     "ugc_video",
-    "observed",
     "ingest",
-    "confirmed"
+    "draft",
+    "placeholder-reflagged"
   ],
   "materials_ceiling": "Corpus teaches assembly; brand material still needs USER_SUPPLIED → i2v → vetted stock"
 }

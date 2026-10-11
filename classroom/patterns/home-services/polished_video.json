@@ -1,0 +1,87 @@
+{
+  "id": "pat_home-services_polished_video",
+  "niche": "home-services",
+  "format": "polished_video",
+  "n_cards": 2,
+  "cites": [
+    "arc_chevrolet_spot",
+    "arc_folgers_coffee"
+  ],
+  "source_ids": [
+    "archive.org:chevrolet",
+    "archive.org:folgers"
+  ],
+  "cuts": {
+    "mean_cuts_per_10s": 0.17,
+    "mean_avg_shot_s": 30.4,
+    "mean_first_cut_at_s": 8.01,
+    "mean_longest_hold_s": 52.79,
+    "samples": [
+      {
+        "id": "arc_chevrolet_spot",
+        "cuts_per_10s": 0.16,
+        "avg_shot_s": 30.53,
+        "first_cut_at_s": 0.1,
+        "longest_hold_s": 60.961,
+        "loudness_lufs": -24.8
+      },
+      {
+        "id": "arc_folgers_coffee",
+        "cuts_per_10s": 0.17,
+        "avg_shot_s": 30.264,
+        "first_cut_at_s": 15.916,
+        "longest_hold_s": 44.611,
+        "loudness_lufs": -27.1
+      }
+    ],
+    "source": "measured_aggregate"
+  },
+  "content": {
+    "hook_frequency": {},
+    "beat_order_frequency": {
+      "hook→cta_or_hold": 2
+    },
+    "proof_placement": {},
+    "cta_wording": {},
+    "cta_timing_s": []
+  },
+  "fonts_craft": {
+    "font_class_frequency": {
+      "gothic-caps": 1,
+      "rounded-sans": 1
+    },
+    "font_guess_frequency": {
+      "gothic-caps": 1,
+      "rounded-sans": 1
+    },
+    "caption_style_frequency": {},
+    "palette_samples": [
+      {
+        "id": "arc_chevrolet_spot",
+        "palette": [
+          "#eeeeeb",
+          "#eeeeeb",
+          "#eeeeeb",
+          "#eeeeeb",
+          "#eeeeeb",
+          "#eeeeeb"
+        ]
+      },
+      {
+        "id": "arc_folgers_coffee",
+        "palette": [
+          "#50504b",
+          "#50504b",
+          "#50504b",
+          "#50504b",
+          "#50504b",
+          "#50504b"
+        ]
+      }
+    ],
+    "grade_notes": {},
+    "sfx_density": {}
+  },
+  "floor_note": "thin — treat as directional, not normative",
+  "honest_limit": "Patterns teach assembly from real ads; they do not supply the brand's own material."
+}

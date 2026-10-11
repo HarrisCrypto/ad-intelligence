@@ -132,10 +132,23 @@ function measureLoudness(file) {
     { stdio: ["ignore", "pipe", "pipe"] }
   );
   const blob = `${r.stderr || ""}`;
-  const lufs = blob.match(/I:\s*(-?[0-9.]+)\s*LUFS/);
-  const peak = blob.match(/Peak:\s*(-?[0-9.]+)\s*dBFS/);
+  // Prefer Summary block — progressive I: lines start at -70 before audio arrives
+  const summary = blob.match(
+    /Summary:[\s\S]*?Integrated loudness:\s*I:\s*(-?[0-9.]+)\s*LUFS/
+  );
+  const allI = [...blob.matchAll(/I:\s*(-?[0-9.]+)\s*LUFS/g)].map((m) =>
+    Number(m[1])
+  );
+  const lufs = summary
+    ? Number(summary[1])
+    : allI.length
+      ? allI[allI.length - 1]
+      : null;
+  const peak =
+    blob.match(/True peak:[\s\S]*?Peak:\s*(-?[0-9.]+)\s*dBFS/) ||
+    [...blob.matchAll(/Peak:\s*(-?[0-9.]+)\s*dBFS/g)].pop();
   return {
-    loudness_lufs: lufs ? Number(lufs[1]) : null,
+    loudness_lufs: lufs,
     true_peak_dbfs: peak ? Number(peak[1]) : null,
     source: "measured",
   };
@@ -372,6 +385,87 @@ function layoutGridNote(ocr) {
   };
 }
 
+/** Heuristic typeface class from OCR glyph shapes + drawtext cues (not a licensed font ID). */
+function classifyFont(ocrText, opts = {}) {
+  const t = (ocrText || "").trim();
+  if (!t) {
+    return {
+      font_guess: "unknown",
+      font_class: "unknown",
+      source: "unavailable",
+    };
+  }
+  const upperRatio =
+    (t.replace(/[^A-Za-z]/g, "").match(/[A-Z]/g) || []).length /
+    Math.max(1, t.replace(/[^A-Za-z]/g, "").length);
+  const hasSerifHints = /[il]{2,}|rn|ff|æ|œ/i.test(t) && upperRatio < 0.55;
+  const condensed = t.length > 28 && !/\s{2,}/.test(t);
+  const rounded = /[ocea]/i.test(t) && upperRatio < 0.4;
+  let font_class = "grotesk-sans";
+  if (hasSerifHints) font_class = "serif-display";
+  else if (condensed && upperRatio > 0.7) font_class = "grotesk-bold-condensed";
+  else if (rounded) font_class = "rounded-sans";
+  else if (upperRatio > 0.85) font_class = "gothic-caps";
+  return {
+    font_guess: opts.guess || font_class,
+    font_class,
+    source: "heuristic-ocr",
+    note: "Class only — not a foundry ID; refine with vision when available",
+  };
+}
+
+function applyObservedHonesty(card) {
+  // Inline honesty (avoid circular imports from scripts/)
+  const NO_VIDEO = new Set([
+    "search_text",
+    "display_static",
+    "carousel_static",
+    "text_search",
+    "static_image",
+    "carousel",
+  ]);
+  const noVideo = NO_VIDEO.has(card.format) || NO_VIDEO.has(card.structure?.format);
+  const errs = [];
+  if (!noVideo) {
+    const lufs = card.audio?.loudness_lufs ?? card.stats?.loudness_lufs;
+    if (lufs == null || Number(lufs) <= -60) {
+      errs.push(`loudness_lufs=${lufs}`);
+    }
+    if ((card.stats?.shot_count || 0) < 1) errs.push("shot_count<1");
+    if (!(card.duration_s > 0)) errs.push("duration_s<=0");
+  } else {
+    const hasText =
+      (card.stats?.ocr_line_count || 0) > 0 ||
+      (card.stats?.headline_chars || []).length > 0 ||
+      (card.look?.ocr_sample || "").trim().length > 0;
+    if (!hasText) errs.push("no measured OCR/text");
+  }
+  card.measured_by = {
+    tooling: Array.isArray(card.measured_by?.tooling)
+      ? card.measured_by.tooling
+      : String(card.provenance?.basis || "")
+          .split(/[;+]/)
+          .map((s) => s.trim())
+          .filter(Boolean),
+    honesty_errors: errs,
+  };
+  if (errs.length) {
+    card.provenance.observed = false;
+    card.provenance.observed_blocked_reason = errs.join("; ");
+    card.tags = [
+      ...new Set([
+        ...(card.tags || []).filter((t) => t !== "observed"),
+        "draft",
+        "honesty-blocked",
+      ]),
+    ];
+  } else {
+    card.provenance.observed = true;
+    card.tags = [...new Set([...(card.tags || []), "observed"])];
+  }
+  return card;
+}
+
 function buildVideoCard({ file, niche, id, formatId, platform, sourceId, rights }) {
   const meta = formatMeta(formatId);
   const probe = probeMedia(file);
@@ -386,6 +480,7 @@ function buildVideoCard({ file, niche, id, formatId, platform, sourceId, rights 
   const motion = measureMotionCurve(file, duration);
   const palette = samplePalette(file, true);
   const ocr = ocrVideoFrame(file);
+  const font = classifyFont(ocr.text);
 
   const shotLens = cuts.map((c) => +(c.t_end - c.t_start).toFixed(3));
   const avg =
@@ -406,7 +501,7 @@ function buildVideoCard({ file, niche, id, formatId, platform, sourceId, rights 
     how_this_shot_was_made: `scdet cut ${i + 1}/${cuts.length} from ${path.basename(file)}`,
   }));
 
-  return {
+  const card = {
     id,
     status: "draft",
     source: {
@@ -427,10 +522,21 @@ function buildVideoCard({ file, niche, id, formatId, platform, sourceId, rights 
     aspect: h > w ? "9:16" : w > h ? "16:9" : "1:1",
     provenance: {
       observed: true,
-      basis: "ffmpeg:scdet+ebur128+silencedetect+tblend/signalstats+palettegen; tesseract OCR frame",
+      basis: "ffmpeg:scdet+ebur128+silencedetect+tblend/signalstats+palettegen; tesseract OCR frame; font heuristic",
       measured_at: new Date().toISOString(),
       media_path_local: `classroom/private-cache/${path.basename(file)}`,
       media_committed: false,
+    },
+    measured_by: {
+      tooling: [
+        "ffmpeg:scdet",
+        "ffmpeg:ebur128",
+        "ffmpeg:silencedetect",
+        "ffmpeg:tblend+signalstats",
+        "ffmpeg:palettegen",
+        "tesseract",
+        "font-heuristic",
+      ],
     },
     hook: {
       mechanism: "[FILL from watch — first 1–2s device]",
@@ -477,6 +583,9 @@ function buildVideoCard({ file, niche, id, formatId, platform, sourceId, rights 
       caption_style: "[FILL]",
       grade: "[FILL]",
       ocr_sample: ocr.text.slice(0, 280),
+      font_guess: font.font_guess,
+      font_class: font.font_class,
+      font_source: font.source,
     },
     cta: { primary: "[FILL]", timing_s: null },
     offer_and_proof: { offer: "[FILL]", proof: "[PLACEHOLDER]" },
@@ -487,10 +596,11 @@ function buildVideoCard({ file, niche, id, formatId, platform, sourceId, rights 
       "Verbatim scripts or uncleared audio",
       "Invented proof",
     ],
-    tags: [niche, formatId, "observed", "ingest", "draft"],
+    tags: [niche, formatId, "ingest", "draft"],
     materials_ceiling:
       "Corpus teaches assembly; brand material still needs USER_SUPPLIED → i2v → vetted stock",
   };
+  return applyObservedHonesty(card);
 }
 
 function buildStaticCard({ file, niche, id, formatId, platform, sourceId, rights }) {
@@ -505,8 +615,9 @@ function buildStaticCard({ file, niche, id, formatId, platform, sourceId, rights
   const contrast = contrastRough(file);
   const grid = layoutGridNote(ocr);
   const lines = (ocr.text || "").split("\n").map((l) => l.trim()).filter(Boolean);
+  const font = classifyFont(ocr.text);
 
-  return {
+  const card = {
     id,
     status: "draft",
     source: {
@@ -527,10 +638,13 @@ function buildStaticCard({ file, niche, id, formatId, platform, sourceId, rights
     aspect: h > w ? "9:16" : w > h ? "16:9" : w && h ? "1:1" : "n/a",
     provenance: {
       observed: true,
-      basis: "tesseract OCR + ffmpeg palettegen + signalstats contrast; composition bands",
+      basis: "tesseract OCR + ffmpeg palettegen + signalstats contrast; composition bands; font heuristic",
       measured_at: new Date().toISOString(),
       media_path_local: `classroom/private-cache/${path.basename(file)}`,
       media_committed: false,
+    },
+    measured_by: {
+      tooling: ["tesseract", "ffmpeg:palettegen", "ffmpeg:signalstats", "font-heuristic"],
     },
     hook: {
       mechanism: "[FILL — static hook device: offer/face/stat]",
@@ -573,6 +687,9 @@ function buildStaticCard({ file, niche, id, formatId, platform, sourceId, rights
       layout: grid,
       type: "[FILL]",
       ocr_sample: ocr.text.slice(0, 400),
+      font_guess: font.font_guess,
+      font_class: font.font_class,
+      font_source: font.source,
     },
     cta: {
       primary: lines.find((l) => /book|call|try|get|start|claim/i.test(l)) || "[FILL]",
@@ -587,10 +704,11 @@ function buildStaticCard({ file, niche, id, formatId, platform, sourceId, rights
       "Competitor brand marks / product photography you do not own",
       "Invented proof or testimonials",
     ],
-    tags: [niche, formatId, "observed", "ingest", "draft", "no-video"],
+    tags: [niche, formatId, "ingest", "draft", "no-video"],
     materials_ceiling:
       "No-video craft (offer/copy/composition) is learnable here; brand photos still USER_SUPPLIED",
   };
+  return applyObservedHonesty(card);
 }
 
 function buildTextSearchCard({ textPath, niche, id, platform, sourceId, rights }) {
@@ -600,8 +718,9 @@ function buildTextSearchCard({ textPath, niche, id, platform, sourceId, rights }
   const cta = raw.cta || raw.call_to_action || "[FILL]";
   const offer = raw.offer || headlines[0] || "[FILL]";
   const meta = formatMeta("text_search");
+  const font = classifyFont(headlines.join(" "));
 
-  return {
+  const card = {
     id,
     status: "draft",
     source: {
@@ -626,6 +745,7 @@ function buildTextSearchCard({ textPath, niche, id, platform, sourceId, rights }
       measured_at: new Date().toISOString(),
       media_committed: false,
     },
+    measured_by: { tooling: ["text-parse", "font-heuristic"] },
     hook: {
       mechanism: "headline qualification",
       first_second_description: "n/a — search text; first glance = primary headline",
@@ -669,15 +789,22 @@ function buildTextSearchCard({ textPath, niche, id, platform, sourceId, rights }
       stats_source: "measured",
     },
     audio: { note: "none — search text", loudness_lufs: null },
-    look: { note: "platform RSA typography" },
+    look: {
+      note: "platform RSA typography",
+      font_guess: font.font_guess,
+      font_class: font.font_class,
+      font_source: font.source,
+      ocr_sample: headlines.concat(descriptions).join(" | ").slice(0, 400),
+    },
     cta: { primary: cta },
     offer_and_proof: { offer, proof: raw.proof || "[PLACEHOLDER]" },
     why_it_works: "[HUMAN CONFIRM REQUIRED — measured stats only until then]",
     steal: ["[FILL — headline pattern, sitelink split, offer noun]"],
     what_not_to_copy: ["Competitor trademarked claims", "Invented proof"],
-    tags: [niche, "text_search", "observed", "ingest", "draft", "no-video"],
+    tags: [niche, "text_search", "ingest", "draft", "no-video"],
     materials_ceiling: "Copy/offer craft only — no footage implied",
   };
+  return applyObservedHonesty(card);
 }
 
 function writeCard(card) {

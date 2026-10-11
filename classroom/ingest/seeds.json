@@ -1,0 +1,23 @@
+{
+  "$comment": "Domain/keyword seeds for Google Ads Transparency enumeration. Dead seeds (0 ads) are skipped.",
+  "region": "US",
+  "niches": {
+    "home-services": {
+      "domains": ["angi.com", "thumbtack.com", "porch.com", "homeadvisor.com", "taskrabbit.com"],
+      "keywords": ["hvac", "plumber", "electrician", "garage door"]
+    },
+    "saas": {
+      "domains": ["hubspot.com", "monday.com", "notion.so", "zapier.com", "intercom.com"],
+      "keywords": ["crm", "project management", "ai agents"]
+    },
+    "skincare": {
+      "domains": ["curology.com", "theordinary.com", "drunkelephant.com"],
+      "keywords": ["skincare", "acne", "retinol"]
+    },
+    "dental": {
+      "domains": ["smilebrilliant.com", "burstoralcare.com", "quip.com"],
+      "keywords": ["teeth whitening", "dentist", "oral care"]
+    }
+  },
+  "skip_domains": ["servicefinance.com"]
+}

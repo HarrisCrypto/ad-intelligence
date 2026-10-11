@@ -2,23 +2,78 @@
   "id": "pat_home-services_text_search",
   "niche": "home-services",
   "format": "text_search",
-  "n_cards": 1,
+  "n_cards": 17,
   "cites": [
-    "obs-text-search-01"
+    "gat_cr00879576531620331521",
+    "gat_cr01024466531796385793",
+    "gat_cr01357391617530527745",
+    "gat_cr02817019330904981505",
+    "gat_cr05264881695823233025",
+    "gat_cr07471553678244052993",
+    "gat_cr08650500073324544001",
+    "gat_cr08810458287653781505",
+    "gat_cr09123849174930948097",
+    "gat_cr09939727098123911169",
+    "gat_cr10699622261507227649",
+    "gat_cr10708393143071408129",
+    "gat_cr12309977548577570817",
+    "gat_cr13390944976448258049",
+    "gat_cr13472240392304852993",
+    "gat_cr13887988622352711681",
+    "gat_cr15056258716577824769"
   ],
-  "hook_frequency": {
-    "vertical-first headline qualification": 1
-  },
-  "pacing": {
-    "n": 0,
+  "source_ids": [
+    "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR00879576531620331521?region=US",
+    "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR01024466531796385793?region=US",
+    "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR01357391617530527745?region=US",
+    "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR02817019330904981505?region=US",
+    "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR05264881695823233025?region=US",
+    "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR07471553678244052993?region=US",
+    "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR08650500073324544001?region=US",
+    "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR08810458287653781505?region=US",
+    "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR09123849174930948097?region=US",
+    "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR09939727098123911169?region=US",
+    "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR10699622261507227649?region=US",
+    "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR10708393143071408129?region=US",
+    "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR12309977548577570817?region=US",
+    "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR13390944976448258049?region=US",
+    "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR13472240392304852993?region=US",
+    "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR13887988622352711681?region=US",
+    "https://adstransparency.google.com/advertiser/AR00361069722956988417/creative/CR15056258716577824769?region=US"
+  ],
+  "cuts": {
     "mean_cuts_per_10s": null,
+    "mean_avg_shot_s": null,
+    "mean_first_cut_at_s": null,
+    "mean_longest_hold_s": null,
     "samples": [],
     "source": "measured_aggregate"
   },
-  "cta_norms": {
-    "call / landing NAP match": 1
+  "content": {
+    "hook_frequency": {
+      "headline qualification": 17
+    },
+    "beat_order_frequency": {},
+    "proof_placement": {
+      "The information about this ad may vary by location": 17
+    },
+    "cta_wording": {
+      "learn more": 17
+    },
+    "cta_timing_s": []
   },
-  "caption_conventions": [],
-  "floor_note": "thin — treat as directional, not normative",
+  "fonts_craft": {
+    "font_class_frequency": {
+      "rounded-sans": 17
+    },
+    "font_guess_frequency": {
+      "rounded-sans": 17
+    },
+    "caption_style_frequency": {},
+    "palette_samples": [],
+    "grade_notes": {},
+    "sfx_density": {}
+  },
+  "floor_note": "enough cards for directional norms",
   "honest_limit": "Patterns teach assembly from real ads; they do not supply the brand's own material."
 }

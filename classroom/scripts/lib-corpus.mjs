@@ -4,6 +4,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { isGenuinelyObserved } from "./observed-honesty.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
@@ -68,7 +69,8 @@ export function nicheCoverage(nicheId, cards) {
   const forNiche = cards.filter(
     (c) => c.niche === niche || (c.tags || []).includes(niche)
   );
-  const observed = forNiche.filter((c) => c.provenance?.observed === true);
+  // Floor / ceiling count only genuinely measured observed cards
+  const observed = forNiche.filter((c) => isGenuinelyObserved(c));
   const formats = [...new Set(observed.map((c) => resolveFormat(c.format)))];
   const noVideo = observed.filter((c) => isNoVideoFormat(c.format) || isNoVideoFormat(c.structure?.format));
   const floor = NICHES.floor;
