@@ -1,0 +1,145 @@
+{
+  "id": "obs-screen-demo-01",
+  "status": "confirmed",
+  "source": {
+    "platform": "owned",
+    "url_or_library_id": "owned:teaching-screen-demo-01",
+    "accessed": "2026-10-11",
+    "rights": "owned",
+    "verified_via": "agent_runtime"
+  },
+  "niche": "home-services",
+  "format": "screen_recording",
+  "structure": {
+    "format": "video_timed",
+    "timing_observable": true,
+    "format_note": "Measured ingest (screen_recording); cuts from ffmpeg scdet"
+  },
+  "duration_s": 5.5,
+  "aspect": "9:16",
+  "provenance": {
+    "observed": true,
+    "basis": "ffmpeg:scdet+ebur128+silencedetect+tblend/signalstats+palettegen; tesseract OCR frame",
+    "measured_at": "2026-10-11T01:33:18.649Z",
+    "media_path_local": "classroom/private-cache/obs-screen-demo-01.mp4",
+    "media_committed": false
+  },
+  "hook": {
+    "mechanism": "UI demo with promise caption",
+    "first_second_description": "Product UI in motion with promise line",
+    "on_screen_text": "AI answers. Books. Texts you.",
+    "spoken": null
+  },
+  "shots": [
+    {
+      "t_start": 0,
+      "t_end": 5.5,
+      "purpose": "hook",
+      "on_screen_text": "AI answers. at Texts you.",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 1/1 from obs-screen-demo-01.mp4"
+    }
+  ],
+  "recipe": {
+    "hook": "[FILL]",
+    "beats": [
+      {
+        "t_start": 0,
+        "t_end": 5.5,
+        "purpose": "hook"
+      }
+    ],
+    "pacing_curve": {
+      "cuts_per_10s": 0,
+      "first_cut_at_s": null,
+      "longest_hold_s": 5.5,
+      "source": "measured"
+    },
+    "proof": "[FILL]",
+    "cta": "[FILL]"
+  },
+  "stats": {
+    "shot_count": 1,
+    "avg_shot_s": 5.5,
+    "cuts_per_10s": 0,
+    "longest_hold_s": 5.5,
+    "first_cut_at_s": null,
+    "text_density": "ocr_hit",
+    "loudness_lufs": -70,
+    "true_peak_dbfs": -35.9,
+    "silence_gaps": [
+      {
+        "t_start": 0,
+        "t_end": 5.50313
+      }
+    ],
+    "motion": {
+      "samples_per_s": 0,
+      "mean_yavg": null,
+      "motion_ratio": 1,
+      "freeze_s": 0,
+      "curve": [],
+      "source": "measured"
+    },
+    "probe": {
+      "width": 720,
+      "height": 1280,
+      "duration_s": 5.5,
+      "has_audio": true
+    },
+    "stats_source": "measured"
+  },
+  "audio": {
+    "loudness_lufs": -70,
+    "true_peak_dbfs": -35.9,
+    "silence_gaps": [
+      {
+        "t_start": 0,
+        "t_end": 5.50313
+      }
+    ],
+    "source": "measured"
+  },
+  "look": {
+    "palette": [
+      "#72756f",
+      "#72756f",
+      "#72756f",
+      "#72756f",
+      "#72756f",
+      "#72756f"
+    ],
+    "palette_source": "measured",
+    "caption_style": "[FILL]",
+    "grade": "[FILL]",
+    "ocr_sample": "AI answers. at Texts you."
+  },
+  "cta": {
+    "primary": "[FILL]",
+    "timing_s": null
+  },
+  "offer_and_proof": {
+    "offer": "[FILL]",
+    "proof": "[PLACEHOLDER]"
+  },
+  "why_it_works": "Screen-led demo holds UI as the subject with a single promise caption and late CTA. Measured motion_ratio shows continuous UI change rather than a pan on a still.",
+  "steal": [
+    "UI as hero subject",
+    "Promise caption early",
+    "CTA after the action is visible"
+  ],
+  "what_not_to_copy": [
+    "Competitor pixels / logos / talent likeness",
+    "Verbatim scripts or uncleared audio",
+    "Invented proof"
+  ],
+  "tags": [
+    "home-services",
+    "screen_recording",
+    "observed",
+    "ingest",
+    "confirmed"
+  ],
+  "materials_ceiling": "Corpus teaches assembly; brand material still needs USER_SUPPLIED → i2v → vetted stock"
+}

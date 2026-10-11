@@ -1,0 +1,24 @@
+{
+  "id": "pat_home-services_text_search",
+  "niche": "home-services",
+  "format": "text_search",
+  "n_cards": 1,
+  "cites": [
+    "obs-text-search-01"
+  ],
+  "hook_frequency": {
+    "vertical-first headline qualification": 1
+  },
+  "pacing": {
+    "n": 0,
+    "mean_cuts_per_10s": null,
+    "samples": [],
+    "source": "measured_aggregate"
+  },
+  "cta_norms": {
+    "call / landing NAP match": 1
+  },
+  "caption_conventions": [],
+  "floor_note": "thin — treat as directional, not normative",
+  "honest_limit": "Patterns teach assembly from real ads; they do not supply the brand's own material."
+}

@@ -1,0 +1,30 @@
+{
+  "id": "pat_home-services_screen_recording",
+  "niche": "home-services",
+  "format": "screen_recording",
+  "n_cards": 1,
+  "cites": [
+    "obs-screen-demo-01"
+  ],
+  "hook_frequency": {
+    "UI demo with promise caption": 1
+  },
+  "pacing": {
+    "n": 1,
+    "mean_cuts_per_10s": 0,
+    "samples": [
+      {
+        "id": "obs-screen-demo-01",
+        "cuts_per_10s": 0,
+        "first_cut_at_s": null,
+        "longest_hold_s": 5.5,
+        "loudness_lufs": -70
+      }
+    ],
+    "source": "measured_aggregate"
+  },
+  "cta_norms": {},
+  "caption_conventions": [],
+  "floor_note": "thin — treat as directional, not normative",
+  "honest_limit": "Patterns teach assembly from real ads; they do not supply the brand's own material."
+}

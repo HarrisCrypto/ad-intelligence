@@ -44,7 +44,19 @@ if (r.status !== 0) {
   process.exit(1);
 }
 const cards = JSON.parse(r.stdout);
-steps.push({ step: "retrieve", ok: cards.count >= 5, count: cards.count });
+steps.push({
+  step: "retrieve",
+  ok:
+    cards.ok === true &&
+    cards.count >= 5 &&
+    (cards.observed_in_result || 0) >= 1 &&
+    typeof cards.ceiling === "string" &&
+    cards.coverage?.floor_ok === true,
+  count: cards.count,
+  observed_in_result: cards.observed_in_result,
+  ceiling: cards.ceiling,
+  achieved_rung: cards.achieved_rung,
+});
 
 // 2) validate ad-spec
 r = run("specs/validate-ad-spec.mjs", [
