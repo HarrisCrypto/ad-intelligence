@@ -1,0 +1,55 @@
+{
+  "text_overlays": [],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "Not stated on the official page.",
+  "cta": "Not stated on the official page.",
+  "emotional_angle": "The official page does not name an emotional angle.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "If you use a known person, clear that use yourself.",
+    "State the product and the length in your own title.",
+    "Measure the export instead of trusting a round :30.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "yti-nerds-andy-2026",
+  "brand": "NERDS",
+  "advertiser": "NERDS Candy",
+  "platform": "youtube_instream",
+  "format": "Big Game commercial",
+  "aspect_ratio": "16:9",
+  "length_s": 31,
+  "year": 2026,
+  "award": null,
+  "niche": "food",
+  "goal": "awareness",
+  "official_url": "https://www.youtube.com/watch?v=XOIHAAuMwPI",
+  "hook_0_3s": "The official page does not describe the first three seconds. The title says Official :30 | 2026 and the public results label says 31 seconds.",
+  "story_beats": [
+    "The oEmbed title is NERDS Juicy Gummy Clusters Big Game Commercial ft. Andy Cohen | Official :30 | 2026.",
+    "YouTube's public results label states 31 seconds.",
+    "The watch page did not return a shot list when read."
+  ],
+  "shot_list": [
+    {
+      "t": "0-3s",
+      "shot": "Opening picture is not described.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "0-31s",
+      "shot": "The title names Andy Cohen and an Official :30.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The title says :30 and the results label says 31 seconds.",
+  "why_it_worked": "The official 2026 title puts the celebrity, the product, and Official :30 in one line, and YouTube labels the file at 31 seconds.",
+  "cinematic_qualities": [
+    "Title-stated Official :30",
+    "Results label of 31 seconds"
+  ],
+  "safe_zone_notes": "Pixels are not printed. Treat it as a horizontal Big Game cut until you measure the file."
+}

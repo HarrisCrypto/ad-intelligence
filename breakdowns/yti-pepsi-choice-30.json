@@ -1,0 +1,56 @@
+{
+  "text_overlays": [],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "Sung lines on the public listing.",
+  "cta": "Not stated on the official page.",
+  "emotional_angle": "The official page does not name an emotional angle.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "Build a short music cut around one choice your product represents.",
+    "Clear the music yourself.",
+    "Measure the file. A :30 master can land a second longer.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "yti-pepsi-choice-30",
+  "brand": "Pepsi",
+  "advertiser": "Pepsi",
+  "platform": "youtube_instream",
+  "format": "Super Bowl commercial",
+  "aspect_ratio": "16:9",
+  "length_s": 31,
+  "year": 2026,
+  "award": null,
+  "niche": "food",
+  "goal": "awareness",
+  "official_url": "https://www.youtube.com/watch?v=7vKCq52wWUY",
+  "hook_0_3s": "The official page does not describe the first three seconds. YouTube's public results label states 31 seconds.",
+  "story_beats": [
+    "The oEmbed title is The Choice | Pepsi | Super Bowl.",
+    "YouTube's public results label states 31 seconds, and a public listing dated the publish time 2026-02-03.",
+    "The returned lines are fragments of songs about being free.",
+    "The page does not list shots."
+  ],
+  "shot_list": [
+    {
+      "t": "0-31s",
+      "shot": "Returned audio is short sung lines about being free.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "title",
+      "shot": "The title names the spot The Choice.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The results label says 31 seconds. Cut rhythm is not described.",
+  "why_it_worked": "Pepsi's Super Bowl title is The Choice, and YouTube labels the file at 31 seconds, with the returned audio built from short claims of freedom rather than a product demo.",
+  "cinematic_qualities": [
+    "Results label of 31 seconds",
+    "Title states The Choice"
+  ],
+  "safe_zone_notes": "The results label states 31 seconds and does not print pixels."
+}

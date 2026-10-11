@@ -1,0 +1,63 @@
+{
+  "text_overlays": [
+    {
+      "wording": "Multiply what's possible",
+      "size": "Not stated on the official page.",
+      "placement": "Spoken on the watch page",
+      "timing": "close"
+    }
+  ],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "Dialogue on the watch page.",
+  "cta": "The close on the watch page is Multiply what's possible at ramp.com.",
+  "emotional_angle": "The official page does not name an emotional angle.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "Show the messy task your product removes, in one office scene.",
+    "Keep it near 30 seconds.",
+    "End on an original promise and your own URL.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "yti-ramp-multiply-30",
+  "brand": "Ramp",
+  "advertiser": "Ramp",
+  "platform": "youtube_instream",
+  "format": "Super Bowl commercial",
+  "aspect_ratio": "16:9",
+  "length_s": 30,
+  "year": 2026,
+  "award": null,
+  "niche": "finance",
+  "goal": "consideration",
+  "official_url": "https://www.youtube.com/watch?v=kOAKdpWaWcI",
+  "hook_0_3s": "The official page does not describe the first three seconds. The oEmbed title is Multiply What's Possible | Ramp Super Bowl LX Commercial | 2026.",
+  "story_beats": [
+    "The oEmbed title is Multiply What's Possible | Ramp Super Bowl LX Commercial | 2026, on the Ramp channel.",
+    "YouTube's Shorts page for this same video id states lengthSeconds 30.",
+    "The watch page lines move through a finance meeting, a policy violation, and travel, meals, and hotels.",
+    "The close on the watch page is Multiply what's possible at ramp.com."
+  ],
+  "shot_list": [
+    {
+      "t": "0-30s",
+      "shot": "An office scene about a finance meeting and expenses, as the watch page lines describe.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "close",
+      "shot": "The page ends on Multiply what's possible at ramp.com.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The Shorts page for this video id states 30 seconds. It does not describe the cut rhythm.",
+  "why_it_worked": "Ramp's 2026 listing is a 30-second office farce: the product keeps interrupting expense chaos, and the only end line is the brand promise plus a URL.",
+  "cinematic_qualities": [
+    "Listing length 00:30",
+    "Short office beats instead of a UI tour"
+  ],
+  "safe_zone_notes": "The Shorts page for this id states 30 seconds. A search result for the same id also exposed a 1080x1920 reel thumbnail. The title calls it a Super Bowl commercial, so a horizontal master may exist. Treat 16:9 as unverified."
+}

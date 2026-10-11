@@ -1,0 +1,56 @@
+{
+  "text_overlays": [],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "The page says the anthem is voiced by Doechii.",
+  "cta": "Not stated on the official page.",
+  "emotional_angle": "Defiance toward limits placed on women athletes.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "Write a list of limits your customer hears, then answer them in original words.",
+    "If you feature real athletes, clear those appearances yourself.",
+    "Keep a 60-second master and cut social extensions from it.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "yti-nike-so-win-60",
+  "brand": "Nike",
+  "advertiser": "NIKE, Inc.",
+  "platform": "youtube_instream",
+  "format": "Super Bowl brand anthem",
+  "aspect_ratio": "16:9",
+  "length_s": 60,
+  "year": 2025,
+  "award": null,
+  "niche": "apparel",
+  "goal": "awareness",
+  "official_url": "https://about.nike.com/en/newsroom/releases/nike-so-win-brand-anthem",
+  "hook_0_3s": "The official page does not describe the first three seconds. Nike's newsroom says the anthem includes a 60-second film.",
+  "story_beats": [
+    "Nike's newsroom, dated February 09, 2025, says So Win was unveiled during Super Bowl LIX.",
+    "It says the anthem includes a 60-second film, athlete extensions, stills, and social posts.",
+    "It names athletes including Jordan Chiles, Caitlin Clark, Sabrina Ionescu, Sha'Carri Richardson, A'ja Wilson, and Sophia Wilson.",
+    "It says the anthem is voiced by Doechii and answers a list of things women athletes are told they can't do."
+  ],
+  "shot_list": [
+    {
+      "t": "60s anthem",
+      "shot": "The page says elite athletes encourage people to block out the noise.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "line",
+      "shot": "The page's stance line is that there is nothing wrong with wanting to be the best.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The newsroom states a 60-second anthem and does not describe the edit.",
+  "why_it_worked": "Nike's newsroom states a 60-second Super Bowl anthem that lists limits put on women athletes and answers them with a roster and one stance: want to be the best.",
+  "cinematic_qualities": [
+    "Stated 60-second anthem",
+    "A list of can'ts answered by athletes"
+  ],
+  "safe_zone_notes": "The newsroom does not print a frame size. It calls the piece a 60-second anthem unveiled during the Super Bowl, with a separate social campaign."
+}

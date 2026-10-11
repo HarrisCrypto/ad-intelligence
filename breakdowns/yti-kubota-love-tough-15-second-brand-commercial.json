@@ -1,0 +1,56 @@
+{
+  "text_overlays": [],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "Not stated on the official page.",
+  "cta": "Not stated beyond the title.",
+  "emotional_angle": "The official page does not name an emotional angle.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "Cut an original spot near 16 seconds.",
+    "Put the offer in an original title line before you design shots.",
+    "Keep type inside a 16:9 frame only if your own export is horizontal.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "yti-kubota-love-tough-15-second-brand-commercial",
+  "brand": "Kubota Australia",
+  "advertiser": "Kubota Australia",
+  "platform": "youtube_instream",
+  "format": "YouTube watch page labeled as a commercial",
+  "aspect_ratio": "16:9",
+  "length_s": 16,
+  "year": null,
+  "award": null,
+  "niche": "auto",
+  "goal": "awareness",
+  "official_url": "https://www.youtube.com/watch?v=Xw9MSCov8wU",
+  "hook_0_3s": "The official page does not describe the first three seconds. YouTube's public result for this video titles it: Kubota Love Tough 15 Second Brand Commercial",
+  "story_beats": [
+    "The official title is: Kubota Love Tough 15 Second Brand Commercial",
+    "The channel on the oEmbed record is Kubota Australia.",
+    "YouTube's public results label for this video states 16 seconds.",
+    "The results label does not describe shots, framing, or camera motion."
+  ],
+  "shot_list": [
+    {
+      "t": "0-3s",
+      "shot": "Opening seconds are not described on the public result.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "0-16s",
+      "shot": "The result gives a title and a length, and does not list shots.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The public result states 16 seconds and does not describe cut rhythm.",
+  "why_it_worked": "YouTube lists “Kubota Love Tough 15 Second Brand Commercial” at 16 seconds on the Kubota Australia channel. The usable lesson is the labeled length and the one-line premise in the title, not an unseen picture.",
+  "cinematic_qualities": [
+    "Public result length of 16 seconds",
+    "Title states the commercial premise in one line"
+  ],
+  "safe_zone_notes": "The results label does not print pixels. This file uses 16:9 because the title presents a TV or Big Game commercial. Confirm the frame on the watch page before you match a safe zone."
+}
