@@ -151,6 +151,11 @@ if (current !== expected) {
   failed += 1;
 }
 
+if (items.length < 150) {
+  console.error(`expected at least 150 breakdowns, found ${items.length}`);
+  failed += 1;
+}
+
 if (failed) {
   console.error(JSON.stringify({ ok: false, files: items.length, failed }));
   process.exit(1);
