@@ -1,0 +1,56 @@
+{
+  "id": "tt-coursiv-ai-journey",
+  "brand": "Coursiv",
+  "advertiser": "Coursiv",
+  "platform": "tiktok",
+  "format": "TikTok Top Ad",
+  "aspect_ratio": "9:16",
+  "length_s": 41.934,
+  "year": null,
+  "award": null,
+  "niche": "ai-saas",
+  "goal": "conversion",
+  "official_url": "https://ads.tiktok.com/business/creativecenter/topads/7547297875031703568/pc/en",
+  "hook_0_3s": "The official page does not describe the first three seconds. The page titles the ad: Kickstart your AI journey with Coursiv!",
+  "story_beats": [
+    "The page titles the ad: Kickstart your AI journey with Coursiv!",
+    "The page names brand Coursiv, industry Language Training, and region US.",
+    "The page labels the objective Conversions.",
+    "The page states a length of 41.934 seconds in a 720 by 1280 frame. It does not state a year."
+  ],
+  "shot_list": [
+    {
+      "t": "0-3s",
+      "shot": "Opening seconds are not described on the official page.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "0-41.934s",
+      "shot": "The page gives the title and the duration, and does not list shots.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The page states 41.934 seconds and does not describe cut rhythm.",
+  "text_overlays": [],
+  "typography_ui": "The official page does not describe typeface, weight, or UI chrome.",
+  "color_grade": "The official page does not describe a color grade.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "The page marks voice-over as false.",
+  "cta": "The page labels the objective Conversions.",
+  "emotional_angle": "The official page does not name an emotional angle.",
+  "why_it_worked": "TikTok Creative Center lists this Top Ad for Coursiv in Language Training at 41.934 seconds and 720 by 1280. The title states the offer in one line, which is the only creative description the page prints.",
+  "cinematic_qualities": [
+    "Stated frame of 720 by 1280",
+    "Stated length of 41.934 seconds"
+  ],
+  "rebuild_recipe": [
+    "Cut a vertical 9:16 spot near 41.934 seconds for the same kind of offer.",
+    "Put the product or service premise in original words in the first line a viewer can read.",
+    "Match the page objective with an original next step, and leave the opening picture undescribed until you film it.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "safe_zone_notes": "The ad page does not publish a pixel inset. TikTok's auction in-feed spec uses downloadable safe-zone templates rather than one fixed margin.",
+  "last_verified": "2026-10-11"
+}

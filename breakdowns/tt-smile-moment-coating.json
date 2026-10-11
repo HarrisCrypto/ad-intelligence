@@ -1,0 +1,56 @@
+{
+  "id": "tt-smile-moment-coating",
+  "brand": "smile-moment",
+  "advertiser": "smile-moment",
+  "platform": "tiktok",
+  "format": "TikTok Top Ad",
+  "aspect_ratio": "9:16",
+  "length_s": 26.378,
+  "year": null,
+  "award": null,
+  "niche": "auto",
+  "goal": "conversion",
+  "official_url": "https://ads.tiktok.com/business/creativecenter/topads/7281530607841591298/pc/en",
+  "hook_0_3s": "The official page does not describe the first three seconds. The page titles the ad: No fancy tools needed. 3-in-1 car coating spray delivers high protection easily.",
+  "story_beats": [
+    "The page titles the ad: No fancy tools needed. 3-in-1 car coating spray delivers high protection easily.",
+    "The page names brand smile-moment, industry Auto Services, and region US.",
+    "The page labels the objective Conversions.",
+    "The page states a length of 26.378 seconds in a 540 by 960 frame. It does not state a year."
+  ],
+  "shot_list": [
+    {
+      "t": "0-3s",
+      "shot": "Opening seconds are not described on the official page.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "0-26.378s",
+      "shot": "The page gives the title and the duration, and does not list shots.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The page states 26.378 seconds and does not describe cut rhythm.",
+  "text_overlays": [],
+  "typography_ui": "The official page does not describe typeface, weight, or UI chrome.",
+  "color_grade": "The official page does not describe a color grade.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "The page marks voice-over as false.",
+  "cta": "The page labels the objective Conversions.",
+  "emotional_angle": "The official page does not name an emotional angle.",
+  "why_it_worked": "TikTok Creative Center lists this Top Ad for smile-moment in Auto Services at 26.378 seconds and 540 by 960. The title states the offer in one line, which is the only creative description the page prints.",
+  "cinematic_qualities": [
+    "Stated frame of 540 by 960",
+    "Stated length of 26.378 seconds"
+  ],
+  "rebuild_recipe": [
+    "Cut a vertical 9:16 spot near 26.378 seconds for the same kind of offer.",
+    "Put the product or service premise in original words in the first line a viewer can read.",
+    "Match the page objective with an original next step, and leave the opening picture undescribed until you film it.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "safe_zone_notes": "The ad page does not publish a pixel inset. TikTok's auction in-feed spec uses downloadable safe-zone templates rather than one fixed margin.",
+  "last_verified": "2026-10-11"
+}

@@ -62,7 +62,13 @@
       "pattern": "^[0-9.]+:[0-9.]+$"
     },
     "length_s": { "type": "number", "exclusiveMinimum": 0 },
-    "year": { "type": "integer", "minimum": 1990, "maximum": 2026 },
+    "year": {
+      "description": "Year printed on the official page. Null when that page does not state a year.",
+      "oneOf": [
+        { "type": "null" },
+        { "type": "integer", "minimum": 1990, "maximum": 2026 }
+      ]
+    },
     "award": {
       "description": "Null unless a public page names the award. evidence_url is required when name/year/category are set.",
       "oneOf": [

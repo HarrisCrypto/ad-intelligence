@@ -1,0 +1,56 @@
+{
+  "id": "tt-toro-steel-buildings",
+  "brand": "Toro Steel Buildings ",
+  "advertiser": "Toro Steel Buildings ",
+  "platform": "tiktok",
+  "format": "TikTok Top Ad",
+  "aspect_ratio": "9:16",
+  "length_s": 42.609,
+  "year": null,
+  "award": null,
+  "niche": "home-services",
+  "goal": "conversion",
+  "official_url": "https://ads.tiktok.com/business/creativecenter/topads/7382985273666011137/pc/en",
+  "hook_0_3s": "The official page does not describe the first three seconds. The page titles the ad: Turns out you don't need a construction crew to build something this good.",
+  "story_beats": [
+    "The page titles the ad: Turns out you don't need a construction crew to build something this good.",
+    "The page names brand Toro Steel Buildings , industry Constructional Engineering, and region US.",
+    "The page labels the objective Lead Generation.",
+    "The page states a length of 42.609 seconds in a 576 by 1024 frame. It does not state a year."
+  ],
+  "shot_list": [
+    {
+      "t": "0-3s",
+      "shot": "Opening seconds are not described on the official page.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "0-42.609s",
+      "shot": "The page gives the title and the duration, and does not list shots.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The page states 42.609 seconds and does not describe cut rhythm.",
+  "text_overlays": [],
+  "typography_ui": "The official page does not describe typeface, weight, or UI chrome.",
+  "color_grade": "The official page does not describe a color grade.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "The page marks voice-over as false.",
+  "cta": "The page labels the objective Lead Generation.",
+  "emotional_angle": "The official page does not name an emotional angle.",
+  "why_it_worked": "TikTok Creative Center lists this Top Ad for Toro Steel Buildings  in Constructional Engineering at 42.609 seconds and 576 by 1024. The title states the offer in one line, which is the only creative description the page prints.",
+  "cinematic_qualities": [
+    "Stated frame of 576 by 1024",
+    "Stated length of 42.609 seconds"
+  ],
+  "rebuild_recipe": [
+    "Cut a vertical 9:16 spot near 42.609 seconds for the same kind of offer.",
+    "Put the product or service premise in original words in the first line a viewer can read.",
+    "Match the page objective with an original next step, and leave the opening picture undescribed until you film it.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "safe_zone_notes": "The ad page does not publish a pixel inset. TikTok's auction in-feed spec uses downloadable safe-zone templates rather than one fixed margin.",
+  "last_verified": "2026-10-11"
+}

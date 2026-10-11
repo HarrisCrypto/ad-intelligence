@@ -1,0 +1,56 @@
+{
+  "id": "tt-guardian-recovery",
+  "brand": "Guardian Recovery",
+  "advertiser": "Guardian Recovery",
+  "platform": "tiktok",
+  "format": "TikTok Top Ad",
+  "aspect_ratio": "9:16",
+  "length_s": 25.241,
+  "year": null,
+  "award": null,
+  "niche": "local-service",
+  "goal": "consideration",
+  "official_url": "https://ads.tiktok.com/business/creativecenter/topads/7519627726182236176/pc/en",
+  "hook_0_3s": "The official page does not describe the first three seconds. The page titles the ad: Expert Dual Diagnosis Rehab Offers Support For Addiction And Mental Health Challenges",
+  "story_beats": [
+    "The page titles the ad: Expert Dual Diagnosis Rehab Offers Support For Addiction And Mental Health Challenges",
+    "The page names brand Guardian Recovery, industry Medical Services, and region US.",
+    "The page shows multiple objectives behind a View all control and does not print a single objective in the summary.",
+    "The page states a length of 25.241 seconds in a 720 by 1280 frame. It does not state a year."
+  ],
+  "shot_list": [
+    {
+      "t": "0-3s",
+      "shot": "Opening seconds are not described on the official page.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "0-25.241s",
+      "shot": "The page gives the title and the duration, and does not list shots.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The page states 25.241 seconds and does not describe cut rhythm.",
+  "text_overlays": [],
+  "typography_ui": "The official page does not describe typeface, weight, or UI chrome.",
+  "color_grade": "The official page does not describe a color grade.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "The page marks voice-over as false.",
+  "cta": "The page shows multiple objectives behind a View all control and does not print a single objective in the summary.",
+  "emotional_angle": "The official page does not name an emotional angle.",
+  "why_it_worked": "TikTok Creative Center lists this Top Ad for Guardian Recovery in Medical Services at 25.241 seconds and 720 by 1280. The title states the offer in one line, which is the only creative description the page prints.",
+  "cinematic_qualities": [
+    "Stated frame of 720 by 1280",
+    "Stated length of 25.241 seconds"
+  ],
+  "rebuild_recipe": [
+    "Cut a vertical 9:16 spot near 25.241 seconds for the same kind of offer.",
+    "Put the product or service premise in original words in the first line a viewer can read.",
+    "Match the page objective with an original next step, and leave the opening picture undescribed until you film it.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "safe_zone_notes": "The ad page does not publish a pixel inset. TikTok's auction in-feed spec uses downloadable safe-zone templates rather than one fixed margin.",
+  "last_verified": "2026-10-11"
+}
