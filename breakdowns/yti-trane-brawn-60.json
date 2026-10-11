@@ -1,0 +1,64 @@
+{
+  "text_overlays": [
+    {
+      "wording": "Built strong. Engineered smart.",
+      "size": "Not stated on the official page.",
+      "placement": "Spoken on the watch page, not confirmed as type",
+      "timing": "close"
+    }
+  ],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "The watch page is a continuous spoken brand statement.",
+  "cta": "Not stated on the official page.",
+  "emotional_angle": "The lines move from toughness to the feeling of comfort.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "Pair a physical trait of the product with the intelligence behind it.",
+    "Keep the film near a minute.",
+    "Write a two-beat end line in your own words.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "yti-trane-brawn-60",
+  "brand": "Trane",
+  "advertiser": "Trane",
+  "platform": "youtube_instream",
+  "format": "Brand film",
+  "aspect_ratio": "16:9",
+  "length_s": 61,
+  "year": null,
+  "award": null,
+  "niche": "home-services",
+  "goal": "awareness",
+  "official_url": "https://www.youtube.com/watch?v=lEhnRjxsM-o",
+  "hook_0_3s": "The official page does not describe the first three seconds. The title says Brawn and Brains, 60-Seconds.",
+  "story_beats": [
+    "The title states 60-Seconds.",
+    "The watch page says tough comes standard, then says real strength is knowing when to flex.",
+    "It names smarter sensors, faster feedback, and a 140-year legacy.",
+    "The close is Built strong. Engineered smart. and It's hard to stop a Trane.",
+    "YouTube's public results label for this video states 1 minute, 1 second."
+  ],
+  "shot_list": [
+    {
+      "t": "0-60s",
+      "shot": "Spoken contrast of muscle and sensors, without a listed shot order.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "close",
+      "shot": "The page ends on built strong and engineered smart.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The title states 60 seconds. The lines move from tough to tech to a short end line. The public results label states 61 seconds.",
+  "why_it_worked": "The title frames a 60-second HVAC brand film as brawn and brains, and the watch page spends the minute turning strength into sensors and comfort.",
+  "cinematic_qualities": [
+    "Title-stated 60 seconds",
+    "One metaphor carried to a short end line"
+  ],
+  "safe_zone_notes": "Pixels are not printed. The title calls the film 60-Seconds."
+}

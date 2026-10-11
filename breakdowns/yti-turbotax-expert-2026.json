@@ -1,0 +1,64 @@
+{
+  "text_overlays": [
+    {
+      "wording": "Official TV Ad :30",
+      "size": "Not stated on the official page.",
+      "placement": "In the video title, not confirmed as an on-screen overlay",
+      "timing": "title"
+    }
+  ],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "Spoken dialogue on the watch page, not described as a separate announcer.",
+  "cta": "The spoken offer is that taxes can be done on a phone or in person.",
+  "emotional_angle": "The joke is that taxes feel intense, and the coach keeps pulling the performance back to calm.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "Write one scene in which a guide corrects an over-serious expert.",
+    "Say the service outcome in the dialogue, in your own words.",
+    "Time the cut to about 30 seconds before you add a logo.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "yti-turbotax-expert-2026",
+  "brand": "TurboTax",
+  "advertiser": "Intuit TurboTax",
+  "platform": "youtube_instream",
+  "format": "Super Bowl commercial",
+  "aspect_ratio": "16:9",
+  "length_s": 31,
+  "year": 2026,
+  "award": null,
+  "niche": "finance",
+  "goal": "consideration",
+  "official_url": "https://www.youtube.com/watch?v=9FmI7quHGIM",
+  "hook_0_3s": "The official page does not describe the first three seconds. The title calls it an Official TV Ad :30.",
+  "story_beats": [
+    "The oEmbed title is The Expert feat. Adrien Brody: Dedication - TurboTax 2026 Super Bowl Commercial (Official TV Ad :30).",
+    "The watch page returns a coach telling the actor to be less intense while preparing him to play a TurboTax expert.",
+    "A spoken line says they do people's taxes on a phone or in person so people can relax.",
+    "The page argues about whether customers cry, and the coach says there is no crying.",
+    "YouTube's public results label for this video states 31 seconds."
+  ],
+  "shot_list": [
+    {
+      "t": "0-30s",
+      "shot": "Spoken scene of a coach directing an actor who is playing a tax expert.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "close",
+      "shot": "The title identifies the film as a 2026 Super Bowl :30.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The title states a :30. The returned lines play as one continuous coaching scene.",
+  "why_it_worked": "The official title locks the film at a :30 Super Bowl cut, and the watch page spends that time on one joke: an actor over-preparing to be a tax expert while the product claim is that filing can be handled for you.",
+  "cinematic_qualities": [
+    "Single coaching scene instead of a product demo",
+    "Title-stated :30 Super Bowl cut"
+  ],
+  "safe_zone_notes": "The watch page does not print a frame size. The title calls it a TV ad, so a horizontal master is the match to check."
+}

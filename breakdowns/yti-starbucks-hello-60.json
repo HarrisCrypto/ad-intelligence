@@ -1,0 +1,69 @@
+{
+  "text_overlays": [
+    {
+      "wording": "Hello again",
+      "size": "Not stated on the official page.",
+      "placement": "Spoken at the end of the watch page",
+      "timing": "close"
+    }
+  ],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The watch page marks Thunderstruck.",
+  "voiceover": "A narrator plus a barista line, Milk man, on the watch page.",
+  "cta": "Not stated on the official page.",
+  "emotional_angle": "The film treats a familiar drink as something that is ready again.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "Show the steps of your own product as a short ritual.",
+    "Count one step so the middle has a beat.",
+    "End on an original welcome back line.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "yti-starbucks-hello-60",
+  "brand": "Starbucks",
+  "advertiser": "Starbucks Coffee",
+  "platform": "youtube_instream",
+  "format": "Brand film",
+  "aspect_ratio": "16:9",
+  "length_s": 60,
+  "year": null,
+  "award": null,
+  "niche": "food",
+  "goal": "awareness",
+  "official_url": "https://www.youtube.com/watch?v=lPbsMJr5lr4",
+  "hook_0_3s": "The official page does not describe the first three seconds. The title says Hello Again :60.",
+  "story_beats": [
+    "The oEmbed title is Hello Again :60 | The Starbucks Coffee Company.",
+    "The watch page starts in darkness, then energy, then the steps of a drink: beans ground, milk frothed, shots pulled.",
+    "A spoken count says the espresso is shaken 10 times, no more, no less.",
+    "The close says the Starbucks you love is ready, and Hello again."
+  ],
+  "shot_list": [
+    {
+      "t": "open",
+      "shot": "The voice starts in darkness and then energy.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "middle",
+      "shot": "Drink-making steps, including a shake counted to 10.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "close",
+      "shot": "Hello again.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The title states a :60. The lines move from darkness to a counted ritual to a hello.",
+  "why_it_worked": "The title is a :60 hello, and the watch page fills it with a counted coffee ritual so the return of the brand is a process, not a slogan alone.",
+  "cinematic_qualities": [
+    "Title-stated :60",
+    "A counted ritual in the middle"
+  ],
+  "safe_zone_notes": "Pixels are not printed. The title says :60."
+}
