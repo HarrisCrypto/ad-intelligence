@@ -6,14 +6,16 @@ Agents **must acquire or generate materials** before designing cards on a void. 
 
 | Priority | Route | When | How |
 | --- | --- | --- | --- |
-| **0** | Ledger hit | Asset already in `license-ledger.json` | Reuse path — do not re-download |
-| **1** | USER_SUPPLIED shoot | User has phone clips / brand assets | Copy into `library/footage/` or `private-cache/`, ledger `USER_SUPPLIED` |
-| **2** | Free stock API | `PEXELS_API_KEY` / `PIXABAY_API_KEY` / `UNSPLASH_ACCESS_KEY` set | `acquire-assets.mjs --source pexels\|pixabay\|unsplash` |
-| **3** | Wikimedia Commons | No keys — always available | `acquire-assets.mjs --source wikimedia` (PD / CC BY only by default) |
-| **4** | Free GitHub packs | CC0/OFL repos | `acquire-assets.mjs --source github --repo …` |
-| **5** | Connected image gen | Flux / SD / Higgsfield / etc. live | Use `library/realism/gen-recipes.json` prompts; ledger as generated |
-| **6** | Connected / open video | Seedance → Wan → LTX → Grok → peers | [`alternative-model-routing.md`](../../skills/ad-intelligence/references/creative-stack/alternative-model-routing.md) |
-| **7** | Disclose ceiling | Nothing usable | `assert-assets` → `designed_cards_on_void` — **tell the user before generate** |
+| **0** | Ledger hit (eligible video) | `kind:video` + `motion_confirmed` + `niche_fit` high/med | `select-footage.mjs --bucket …` — **by bucket, not filename** |
+| **1** | USER_SUPPLIED shoot | User has phone clips / brand UI screen records | Copy into `library/footage/`, ledger + run `qa/vet-motion` + `qa/vet-asset` |
+| **2** | Free motion stock | Always (no key) | **`acquire-footage.mjs`** — Coverr CC0 → Mixkit → Wikimedia video |
+| **3** | Free stock video API | `PEXELS_API_KEY` / `PIXABAY_API_KEY` set | `acquire-footage.mjs` or `acquire-assets.mjs --source pexels --video` |
+| **4** | Vetted still → i2v | Footage gap after harvest | Still in `library/stills/` only as i2v seed — **never** as footage substitute |
+| **5** | Connected image gen | Flux / SD / Higgsfield / etc. live | `library/realism/gen-recipes.json`; ledger as generated |
+| **6** | Connected / open video | Seedance → Wan → LTX → Grok → peers | [`alternative-model-routing.md`](../../skills/ad-intelligence/references/creative-stack/alternative-model-routing.md) + [`degradation-ladder.md`](../../skills/ad-intelligence/references/creative-stack/degradation-ladder.md) |
+| **7** | Disclose ceiling | Nothing usable | `assert-assets` → downgrade — **tell the user before generate** |
+
+**Hard rule:** stills are never eligible for a footage slot. See [`library/footage/RULE.md`](../footage/RULE.md).
 
 ## Job → tool map
 
@@ -40,16 +42,15 @@ Agents **must acquire or generate materials** before designing cards on a void. 
 ## One command to fill gaps
 
 ```bash
-# Uses Pexels if keyed, else Wikimedia
-node library/scripts/fill-niche-gaps.mjs --niche home-services --limit 2
+# Video-first bucket harvest + motion/subject gates
+node library/scripts/fill-niche-gaps.mjs --niche home-services
 
-# Explicit free stills
-node library/scripts/acquire-assets.mjs --source wikimedia \
-  --query "HVAC technician working" --tag hvac-tech --niche home-services
+# Explicit
+node library/scripts/acquire-footage.mjs --niche home-services --bucket hook_vehicle
 
-# With Pexels (free API key)
+# Pexels video (keyed) — still goes through vet-motion
 PEXELS_API_KEY=… node library/scripts/acquire-assets.mjs --source pexels \
-  --query "phone on desk night" --tag desk-phone --niche home-services --video
+  --query "work van street" --tag hook_vehicle --niche home-services --video
 ```
 
 ## Env keys (optional, free)

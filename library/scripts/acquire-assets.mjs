@@ -8,6 +8,7 @@
  *
  * Safe by default: Public domain / CC0 / CC BY only (Wikimedia). Ledger required.
  */
+import { spawnSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -94,7 +95,13 @@ function upsertLedger(entry) {
   saveLedger(ledger);
 }
 
-async function acquireWikimedia({ query, tag, niche, limit, allowSa }) {
+async function acquireWikimedia({ query, tag, niche, limit, allowSa, video }) {
+  if (video) {
+    die(
+      "Wikimedia stills path refuses --video. Use: node library/scripts/acquire-footage.mjs --niche " +
+        (niche || "home-services")
+    );
+  }
   const params = new URLSearchParams({
     action: "query",
     generator: "search",
@@ -124,7 +131,8 @@ async function acquireWikimedia({ query, tag, niche, limit, allowSa }) {
     if (!url) continue;
     const id = `ft_${slug(tag || query)}_${p.pageid}`;
     const ext = mime.includes("png") ? "png" : "jpg";
-    const rel = `library/footage/${niche || "general"}/${id}.${ext}`;
+    // Stills never enter library/footage/ — i2v seeds only
+    const rel = `library/stills/${niche || "general"}/${id}.${ext}`;
     const abs = path.join(ROOT, rel);
     if (fs.existsSync(abs)) {
       picked.push({ id, path: rel, skipped: "exists" });
@@ -137,14 +145,19 @@ async function acquireWikimedia({ query, tag, niche, limit, allowSa }) {
     const entry = {
       id,
       path: rel,
-      kind: "footage",
+      kind: "still",
       media: "still",
+      motion: "none",
+      motion_confirmed: false,
+      reject: true,
+      reject_classes: ["still_in_footage_slot"],
+      niche_fit: "low",
       license: lic,
       attribution: `${p.title} — ${artist} (${lic}). Via Wikimedia Commons.`,
       source_url: info.descriptionurl || url,
       allowed_use: ["commercial", "paid_social", "organic"],
       niches: niche ? [niche] : [],
-      tags: [tag || slug(query), "wikimedia", "still"],
+      tags: [tag || slug(query), "wikimedia", "still", "i2v_seed_only"],
       bytes,
       width: info.thumbwidth || info.width,
       height: info.thumbheight || info.height,
@@ -158,56 +171,72 @@ async function acquireWikimedia({ query, tag, niche, limit, allowSa }) {
 }
 
 async function acquirePexels({ query, tag, niche, limit, video }) {
+  if (!video) {
+    die(
+      "Footage acquisition requires --video (stills are never eligible for footage slots). Prefer: node library/scripts/acquire-footage.mjs --niche " +
+        (niche || "home-services")
+    );
+  }
   const key = process.env.PEXELS_API_KEY;
   if (!key) {
     die(
-      "PEXELS_API_KEY not set. Get a free key at https://www.pexels.com/api/ — or use --source wikimedia"
+      "PEXELS_API_KEY not set. Get a free key at https://www.pexels.com/api/ — or use acquire-footage.mjs (Coverr/Mixkit)"
     );
   }
-  const endpoint = video
-    ? `https://api.pexels.com/videos/search?query=${encodeURIComponent(query)}&per_page=${limit}`
-    : `https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&per_page=${limit}`;
+  const endpoint = `https://api.pexels.com/videos/search?query=${encodeURIComponent(query)}&per_page=${limit}`;
   const data = await fetchJson(endpoint, { Authorization: key });
-  const items = video ? data.videos || [] : data.photos || [];
+  const items = data.videos || [];
   const picked = [];
   for (const item of items.slice(0, limit)) {
-    let url, w, h, ext, photographer, pageUrl;
-    if (video) {
-      const file = (item.video_files || [])
-        .filter((f) => f.file_type === "video/mp4")
-        .sort((a, b) => (b.height || 0) - (a.height || 0))[0];
-      if (!file) continue;
-      url = file.link;
-      w = file.width;
-      h = file.height;
-      ext = "mp4";
-      photographer = item.user?.name || "Pexels";
-      pageUrl = item.url;
-    } else {
-      url = item.src?.large2x || item.src?.large || item.src?.original;
-      w = item.width;
-      h = item.height;
-      ext = "jpg";
-      photographer = item.photographer;
-      pageUrl = item.url;
-    }
-    const id = `ft_pexels_${item.id}_${slug(tag || query)}`;
-    const rel = `library/footage/${niche || "general"}/${id}.${ext}`;
+    const file = (item.video_files || [])
+      .filter((f) => f.file_type === "video/mp4")
+      .sort((a, b) => (b.height || 0) - (a.height || 0))[0];
+    if (!file) continue;
+    const url = file.link;
+    const w = file.width;
+    const h = file.height;
+    const photographer = item.user?.name || "Pexels";
+    const pageUrl = item.url;
+    const id = `vid_pexels_${item.id}_${slug(tag || query)}`;
+    const rel = `library/footage/${niche || "general"}/${id}.mp4`;
     const abs = path.join(ROOT, rel);
     if (!fs.existsSync(abs)) await download(url, abs);
+    // Hard gates
+    const motion = JSON.parse(
+      spawnSync(
+        process.execPath,
+        [path.join(__dirname, "qa/vet-motion.mjs"), "--json", abs],
+        { encoding: "utf8" }
+      ).stdout || "{}"
+    );
+    if (!motion.ok) {
+      try {
+        fs.unlinkSync(abs);
+      } catch {
+        /* ignore */
+      }
+      continue;
+    }
     const entry = {
       id,
       path: rel,
-      kind: "footage",
-      media: video ? "video" : "still",
+      kind: "video",
+      media: "video",
+      motion: motion.motion,
+      motion_confirmed: true,
+      reject: false,
+      reject_classes: [],
+      orientation: motion.orientation,
       license: "Pexels-License",
       attribution: `${photographer} — via Pexels (${pageUrl})`,
       source_url: pageUrl,
+      source: "pexels",
       allowed_use: ["commercial", "paid_social", "organic"],
       niches: niche ? [niche] : [],
-      tags: [tag || slug(query), "pexels", video ? "video" : "still"],
+      tags: [tag || slug(query), "pexels", "video", "motion_confirmed"],
       width: w,
       height: h,
+      duration_s: motion.duration_s,
       verified_via: "agent_runtime",
       query,
     };
@@ -218,51 +247,67 @@ async function acquirePexels({ query, tag, niche, limit, video }) {
 }
 
 async function acquirePixabay({ query, tag, niche, limit, video }) {
+  if (!video) {
+    die(
+      "Footage acquisition requires --video. Prefer: node library/scripts/acquire-footage.mjs --niche " +
+        (niche || "home-services")
+    );
+  }
   const key = process.env.PIXABAY_API_KEY;
   if (!key) {
     die(
-      "PIXABAY_API_KEY not set. Free key: https://pixabay.com/api/docs/ — or --source wikimedia"
+      "PIXABAY_API_KEY not set. Free key: https://pixabay.com/api/docs/ — or acquire-footage.mjs"
     );
   }
-  const base = video
-    ? "https://pixabay.com/api/videos/"
-    : "https://pixabay.com/api/";
-  const url = `${base}?key=${key}&q=${encodeURIComponent(query)}&per_page=${limit}`;
+  const url = `https://pixabay.com/api/videos/?key=${key}&q=${encodeURIComponent(query)}&per_page=${limit}`;
   const data = await fetchJson(url);
   const hits = data.hits || [];
   const picked = [];
   for (const hit of hits.slice(0, limit)) {
-    let fileUrl, ext, w, h;
-    if (video) {
-      const v = hit.videos?.medium || hit.videos?.small || hit.videos?.tiny;
-      if (!v?.url) continue;
-      fileUrl = v.url;
-      ext = "mp4";
-      w = v.width;
-      h = v.height;
-    } else {
-      fileUrl = hit.largeImageURL || hit.webformatURL;
-      ext = "jpg";
-      w = hit.imageWidth;
-      h = hit.imageHeight;
-    }
-    const id = `ft_pixabay_${hit.id}_${slug(tag || query)}`;
-    const rel = `library/footage/${niche || "general"}/${id}.${ext}`;
+    const v = hit.videos?.large || hit.videos?.medium || hit.videos?.small;
+    if (!v?.url) continue;
+    const fileUrl = v.url;
+    const w = v.width;
+    const h = v.height;
+    const id = `vid_pixabay_${hit.id}_${slug(tag || query)}`;
+    const rel = `library/footage/${niche || "general"}/${id}.mp4`;
     const abs = path.join(ROOT, rel);
     if (!fs.existsSync(abs)) await download(fileUrl, abs);
+    const motion = JSON.parse(
+      spawnSync(
+        process.execPath,
+        [path.join(__dirname, "qa/vet-motion.mjs"), "--json", abs],
+        { encoding: "utf8" }
+      ).stdout || "{}"
+    );
+    if (!motion.ok) {
+      try {
+        fs.unlinkSync(abs);
+      } catch {
+        /* ignore */
+      }
+      continue;
+    }
     const entry = {
       id,
       path: rel,
-      kind: "footage",
-      media: video ? "video" : "still",
+      kind: "video",
+      media: "video",
+      motion: motion.motion,
+      motion_confirmed: true,
+      reject: false,
+      reject_classes: [],
+      orientation: motion.orientation,
       license: "Pixabay-License",
       attribution: `Pixabay #${hit.id} — ${hit.user || "contributor"} (${hit.pageURL})`,
       source_url: hit.pageURL,
+      source: "pixabay",
       allowed_use: ["commercial", "paid_social", "organic"],
       niches: niche ? [niche] : [],
-      tags: [tag || slug(query), "pixabay", video ? "video" : "still"],
+      tags: [tag || slug(query), "pixabay", "video", "motion_confirmed"],
       width: w,
       height: h,
+      duration_s: motion.duration_s,
       verified_via: "agent_runtime",
       query,
     };
@@ -312,24 +357,27 @@ async function main() {
   const niche = arg("--niche", "home-services");
   const limit = Number(arg("--limit", "2"));
   const allowSa = flag("--allow-sa");
-  const video = flag("--video");
+  // Video is the default for footage-capable sources; --still opt-in for i2v seeds only
+  const still = flag("--still");
+  const video = flag("--video") || (!still && (source === "pexels" || source === "pixabay"));
   const repo = arg("--repo");
   const repoPath = arg("--path", "");
   const license = arg("--license", "CC0");
 
   if (!query && source !== "github") {
     die(
-      "Usage: acquire-assets.mjs --source wikimedia|pexels|pixabay|github --query \"…\" [--tag t] [--niche home-services] [--limit 2] [--video]"
+      "Usage: acquire-assets.mjs --source wikimedia|pexels|pixabay|github --query \"…\" [--tag t] [--niche home-services] [--limit 2] [--video|--still]\n" +
+        "Prefer acquire-footage.mjs for niche bucket coverage (Coverr/Mixkit + motion/subject gates)."
     );
   }
 
   let picked = [];
   if (source === "wikimedia") {
-    picked = await acquireWikimedia({ query, tag, niche, limit, allowSa });
+    picked = await acquireWikimedia({ query, tag, niche, limit, allowSa, video: false });
   } else if (source === "pexels") {
-    picked = await acquirePexels({ query, tag, niche, limit, video });
+    picked = await acquirePexels({ query, tag, niche, limit, video: true });
   } else if (source === "pixabay") {
-    picked = await acquirePixabay({ query, tag, niche, limit, video });
+    picked = await acquirePixabay({ query, tag, niche, limit, video: true });
   } else if (source === "github") {
     picked = await acquireGithub({ repo, repoPath, license, tag, niche });
   } else {
@@ -343,17 +391,22 @@ async function main() {
         source,
         query,
         niche,
+        video: source === "wikimedia" ? false : true,
         count: picked.length,
         assets: picked.map((a) => ({
           id: a.id,
           path: a.path,
+          kind: a.kind,
           license: a.license,
+          motion_confirmed: a.motion_confirmed,
           tags: a.tags,
         })),
         next: [
+          "node library/scripts/acquire-footage.mjs --niche " + niche,
+          "node library/scripts/select-footage.mjs --niche " + niche + " --report",
           "node library/scripts/asset-gap-report.mjs --niche " + niche,
-          "Prefer i2v on stills via gen-recipes + alternative-model-routing when video needed",
         ],
+        rule: "Stills never fill footage slots. Use acquire-footage.mjs for bucket coverage.",
       },
       null,
       2

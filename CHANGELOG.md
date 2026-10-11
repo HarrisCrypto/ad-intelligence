@@ -1,5 +1,21 @@
 # Changelog
 
+## Unreleased — Real moving footage pipeline
+
+**Diagnosis:** `library/footage/` held stills (including off-subject diagram/market/car) and `assert-assets` counted files, not correctness → slideshow ads.
+
+### Added
+- `library/footage/RULE.md` + `buckets/home-services.json` — P0–P2 must_depict coverage sets
+- `library/scripts/qa/vet-motion.mjs` — freezedetect + mean frame-diff (fail static/near-static)
+- `library/scripts/qa/vet-asset.mjs` — subject/reject classes (diagram, wrong industry, still-in-slot, …)
+- `library/scripts/acquire-footage.mjs` — Coverr → Mixkit → Wikimedia video → Pexels/Pixabay; harvest wide / keep narrow; phash dedupe
+- `library/scripts/select-footage.mjs` — select by bucket; never filename; gaps downgrade
+
+### Changed
+- Footage path is **video-only**; stills move to `library/stills/` as i2v seeds (`reject: still_in_footage_slot`)
+- `asset-gap-report` / `assert-assets` / `fill-niche-gaps` / compose plan use bucket eligibility
+- Manifest schema facets: `bucket`, `motion_confirmed`, `depicts_verified`, `niche_fit`, `reject_classes`, …
+
 ## 3.20.0 — 2026-10-11
 
 **Degradation ladder · style-selection engine · expanded gold fixtures · curated external resources.**

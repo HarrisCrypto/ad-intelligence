@@ -1,0 +1,153 @@
+{
+  "niche": "home-services",
+  "version": "1.0.0",
+  "updated": "2026-10-11",
+  "rule": "Every bucket needs real moving clips. Stills never fill a footage slot. Eligible = kind:video + reject:false + motion_confirmed:true + niche_fit high|med.",
+  "keep_per_bucket": { "min": 3, "max": 5 },
+  "harvest_candidates_per_bucket": 16,
+  "buckets": [
+    {
+      "id": "hook_vehicle",
+      "priority": "P0",
+      "must_depict": [
+        "work van or trade truck",
+        "on a real street or driveway",
+        "not a diagram",
+        "not a random passenger car without trade context"
+      ],
+      "subject": "trade_vehicle",
+      "shot_type": ["exterior", "establishing"],
+      "queries": {
+        "coverr": ["work van street", "delivery van city", "service truck driveway", "plumber van"],
+        "mixkit": ["van", "truck", "delivery"],
+        "wikimedia_video": ["work van", "service truck"],
+        "pexels": ["work van street daylight", "white cargo van parked street"]
+      },
+      "reject_hints": ["diagram", "schematic", "sedan only", "illustration"]
+    },
+    {
+      "id": "hook_phone_ring",
+      "priority": "P0",
+      "must_depict": [
+        "real phone device",
+        "ringing or missed-call / notification moment",
+        "hands or desk context preferred"
+      ],
+      "subject": "phone_call",
+      "shot_type": ["insert", "closeup"],
+      "queries": {
+        "coverr": ["phone ringing", "smartphone notification", "missed call phone", "person answering phone"],
+        "mixkit": ["phone", "smartphone", "calling"],
+        "wikimedia_video": ["smartphone ringing"],
+        "pexels": ["phone ringing on desk", "person looking at ringing phone"]
+      },
+      "reject_hints": ["diagram", "app icon only", "stock logo splash"]
+    },
+    {
+      "id": "problem_hands_tools",
+      "priority": "P0",
+      "must_depict": [
+        "real human hands",
+        "real tools or repair work",
+        "trades / maintenance context"
+      ],
+      "subject": "hands_tools",
+      "shot_type": ["closeup", "detail"],
+      "queries": {
+        "coverr": ["hands tools repair", "technician working hands", "plumber hands wrench", "electrician hands"],
+        "mixkit": ["tools", "repair", "hands"],
+        "wikimedia_video": ["hands tools repair"],
+        "pexels": ["technician hands tools", "plumber wrench close up"]
+      },
+      "reject_hints": ["illustration", "3d render tools", "empty toolbox still life only"]
+    },
+    {
+      "id": "person_face",
+      "priority": "P0",
+      "must_depict": [
+        "real tradesperson or small-business owner",
+        "recognizable face or upper body",
+        "natural light preferred"
+      ],
+      "subject": "person",
+      "shot_type": ["portrait", "medium"],
+      "queries": {
+        "coverr": ["construction worker portrait", "plumber talking", "technician face", "small business owner"],
+        "mixkit": ["worker", "construction", "portrait"],
+        "wikimedia_video": ["construction worker"],
+        "pexels": ["HVAC technician portrait", "plumber talking customer"]
+      },
+      "reject_hints": ["crowd only", "back of head only", "celebrity", "illustration"]
+    },
+    {
+      "id": "product_screen",
+      "priority": "P0",
+      "must_depict": [
+        "real product UI in use",
+        "screen recording or phone UI readable",
+        "not a neon fake dashboard"
+      ],
+      "subject": "product_ui",
+      "shot_type": ["screen", "insert"],
+      "queries": {
+        "coverr": ["smartphone app scrolling", "mobile app interface hands", "calendar booking phone"],
+        "mixkit": ["smartphone", "app", "typing"],
+        "wikimedia_video": ["smartphone app"],
+        "pexels": ["hands using phone app booking", "calendar on phone screen"]
+      },
+      "reject_hints": ["neon cockpit", "invented metrics HUD", "competitor branded UI"],
+      "notes": "Prefer USER_SUPPLIED screen record of the real product. Stock UI is niche_fit med at best."
+    },
+    {
+      "id": "place_job_site",
+      "priority": "P1",
+      "must_depict": [
+        "real home or facility a trade visits",
+        "exterior or interior job context"
+      ],
+      "subject": "place",
+      "shot_type": ["establishing", "wide"],
+      "queries": {
+        "coverr": ["suburban house exterior", "home driveway daytime", "residential street house"],
+        "mixkit": ["house", "home", "residential"],
+        "wikimedia_video": ["suburban house"],
+        "pexels": ["American suburban house exterior", "home HVAC outdoor unit"]
+      },
+      "reject_hints": ["skyline stock as geo", "map", "floorplan diagram"]
+    },
+    {
+      "id": "result_booking",
+      "priority": "P1",
+      "must_depict": [
+        "booking / calendar / confirmation outcome",
+        "relief or done state"
+      ],
+      "subject": "booking_outcome",
+      "shot_type": ["insert", "reaction"],
+      "queries": {
+        "coverr": ["calendar phone confirmation", "appointment booked phone", "checkmark phone success"],
+        "mixkit": ["calendar", "success", "phone"],
+        "wikimedia_video": ["calendar smartphone"],
+        "pexels": ["phone calendar appointment", "confirmation on smartphone"]
+      },
+      "reject_hints": ["invented ROI chart", "fake analytics"]
+    },
+    {
+      "id": "money_or_cost",
+      "priority": "P2",
+      "must_depict": [
+        "real cost signal",
+        "invoice, empty calendar, dark closed shop, or missed-work consequence"
+      ],
+      "subject": "cost_signal",
+      "shot_type": ["insert", "mood"],
+      "queries": {
+        "coverr": ["closed shop night", "empty office dark", "invoice paper desk", "worried looking at phone bills"],
+        "mixkit": ["night", "office", "bills"],
+        "wikimedia_video": ["closed shop"],
+        "pexels": ["dark closed storefront night", "person stressed looking at bills phone"]
+      },
+      "reject_hints": ["stock money rain", "crypto charts", "fake dollar overlays"]
+    }
+  ]
+}
