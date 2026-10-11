@@ -4,7 +4,7 @@
   "source": {
     "platform": "meta",
     "url_or_library_id": "synthesis:study_voice_agent_missed_call+am_voice_agent_missed",
-    "accessed": "2026-10-10",
+    "accessed": "2026-10-11",
     "rights": "annotation-only",
     "verified_via": "synthesis"
   },
@@ -39,7 +39,8 @@
       "transition_out": "hard",
       "sfx": "ring",
       "recipe": "phone face-up, practical lamp depth, handheld micro-shake, real desk clutter, no logo",
-      "how_this_shot_was_made": "prefer USER_SUPPLIED or gen_after_hours_phone_desk; sfx_phone_ring",
+      "footage_bucket": "hook_phone_ring",
+      "how_this_shot_was_made": "select-footage hook_phone_ring (moving clip) + sfx_phone_ring; USER_SUPPLIED desk phone upgrades; never Ken-Burns a still",
       "asset_ids": [
         "sfx_phone_ring",
         "amb_room_tone_owned"
@@ -48,14 +49,15 @@
     {
       "t_start": 3,
       "t_end": 8,
-      "purpose": "agitate cost of void",
+      "purpose": "agitate cost of void — different setup",
       "source": "synthesis",
       "shot_type": "insert",
       "framing": "MS desk/bay empty",
       "on_screen_text": "Job walks",
       "transition_out": "hard",
-      "recipe": "empty bay/desk, window or practical light, different camera setup than shot 0",
-      "how_this_shot_was_made": "gen_trades_van_bay or stock tag van/bay — NOT same card with new words",
+      "recipe": "work van or empty bay — hard cut from phone setup; different camera",
+      "footage_bucket": "hook_vehicle",
+      "how_this_shot_was_made": "select-footage hook_vehicle; alternate problem_hands_tools if geo already shown; NOT same canvas with new words",
       "asset_ids": [
         "sfx_whoosh"
       ]
@@ -71,7 +73,8 @@
       "on_screen_text": "Answered",
       "transition_out": "hard",
       "recipe": "flat UI documentary ≥70% frame; hard cut from place setup",
-      "how_this_shot_was_made": "uikit_voice_agent_flat idle→answered stills + CapCut",
+      "footage_bucket": "product_screen",
+      "how_this_shot_was_made": "Prefer USER_SUPPLIED screen-record; else uikit_voice_agent_flat idle→answered stills + CapCut; stock product_screen = niche_fit med bridge only",
       "asset_ids": [
         "sfx_ui_click",
         "uikit_voice_agent_flat"
@@ -88,7 +91,8 @@
       "on_screen_text": "Booked",
       "transition_out": "hard",
       "recipe": "UI confirm state, same ortho setup, hard cut",
-      "how_this_shot_was_made": "uikit_voice_agent_flat confirm",
+      "footage_bucket": "result_booking",
+      "how_this_shot_was_made": "uikit_voice_agent_flat confirm or select-footage result_booking; CapCut cuts between states",
       "asset_ids": [
         "sfx_ui_click"
       ]
@@ -103,7 +107,7 @@
       "on_screen_text": "Call / Book demo",
       "transition_out": "hold",
       "recipe": "endcard safe-zone; phone/CTA large; bed under",
-      "how_this_shot_was_made": "CapCut E1 + bed_wallpaper_km",
+      "how_this_shot_was_made": "CapCut E1 + bed_wallpaper_km — post owns type; not a footage bucket",
       "asset_ids": [
         "bed_wallpaper_km",
         "cap_cta_poppins"
@@ -153,20 +157,22 @@
     "offer": "after-hours / overflow answer → book or transfer",
     "proof": "[PLACEHOLDER: needs user proof] — never invent call counts"
   },
-  "why_it_works": "Makes the missed call expensive before brand; mechanism (answer→book) is the proof. Full cut required — void alone is not the ad.",
+  "why_it_works": "Makes the missed call expensive before brand; mechanism (answer→book) is the proof. Full cut required — void alone is not the ad. Humans hard-cut between phone / vehicle / UI setups and lay audio before type.",
   "steal": [
     "Void vs answered split with hard cuts",
     "Clock/time stamp in first 2s",
     "Flat UI documentary for the product beat",
     "Single CTA held ≥3s in safe zone",
     "Cut between photographed setups — not one canvas with new words",
-    "Room tone + licensed bed under VO"
+    "Room tone + licensed bed under VO",
+    "Select B-roll by footage_bucket before generating anything"
   ],
   "what_not_to_copy": [
     "Competitor scripts, logos, mascots, or UI chrome",
     "Invented 'X calls answered' stats",
     "Silent 8s hook declared finished",
-    "Neon brain / rubber AI visuals"
+    "Neon brain / rubber AI visuals",
+    "Slideshow pans of off-subject stills as 'footage'"
   ],
   "tags": [
     "home-services",
@@ -176,5 +182,6 @@
     "meta",
     "pas"
   ],
-  "materials_ceiling": "hybrid_gen_plus_stock until real phone/van/hands footage is ledgered — designed cards alone fail FB/TikTok look test"
+  "materials_ceiling": "full_native_motion when select-footage covers P0 buckets — still prefer USER_SUPPLIED product_screen + real desk phone for elite native; designed cards alone fail FB/TikTok look test",
+  "assembly": "references/human-assembly-playbook.md · library/scripts/assemble-plan.mjs --card hvac-missed-call-void-01"
 }

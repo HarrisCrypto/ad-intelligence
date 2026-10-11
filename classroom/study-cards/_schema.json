@@ -128,7 +128,11 @@
           },
           "how_this_shot_was_made": {
             "type": "string",
-            "description": "Gen recipe id, stock/ledger asset id, or USER_SUPPLIED shoot notes"
+            "description": "Gen recipe id, stock/ledger asset id, footage bucket pick, or USER_SUPPLIED shoot notes"
+          },
+          "footage_bucket": {
+            "type": "string",
+            "description": "library/footage/buckets/<niche>.json id — select-footage.mjs; never fill with stills"
           },
           "asset_ids": {
             "type": "array",
