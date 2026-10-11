@@ -1,0 +1,64 @@
+{
+  "id": "pat_beauty_ugc_video",
+  "niche": "beauty",
+  "format": "ugc_video",
+  "n_cards": 1,
+  "cites": [
+    "arc_beauty_ugc_01"
+  ],
+  "source_ids": [
+    "archive.org:ugc-study"
+  ],
+  "cuts": {
+    "mean_cuts_per_10s": 0.45,
+    "mean_avg_shot_s": 11,
+    "mean_first_cut_at_s": 10.75,
+    "mean_longest_hold_s": 11.25,
+    "samples": [
+      {
+        "id": "arc_beauty_ugc_01",
+        "cuts_per_10s": 0.45,
+        "avg_shot_s": 11,
+        "first_cut_at_s": 10.75,
+        "longest_hold_s": 11.25,
+        "loudness_lufs": -21
+      }
+    ],
+    "source": "measured_aggregate"
+  },
+  "content": {
+    "hook_frequency": {},
+    "beat_order_frequency": {
+      "hook→cta_or_hold": 1
+    },
+    "proof_placement": {},
+    "cta_wording": {},
+    "cta_timing_s": []
+  },
+  "fonts_craft": {
+    "font_class_frequency": {
+      "serif-display": 1
+    },
+    "font_guess_frequency": {
+      "serif-display": 1
+    },
+    "caption_style_frequency": {},
+    "palette_samples": [
+      {
+        "id": "arc_beauty_ugc_01",
+        "palette": [
+          "#6e6e6f",
+          "#6e6e6f",
+          "#6e6e6f",
+          "#6e6e6f",
+          "#6e6e6f",
+          "#6e6e6f"
+        ]
+      }
+    ],
+    "grade_notes": {},
+    "sfx_density": {}
+  },
+  "floor_note": "thin — treat as directional, not normative",
+  "honest_limit": "Patterns teach assembly from real ads; they do not supply the brand's own material."
+}

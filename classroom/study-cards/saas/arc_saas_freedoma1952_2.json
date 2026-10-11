@@ -1,0 +1,220 @@
+{
+  "id": "arc_saas_freedoma1952_2",
+  "status": "confirmed",
+  "source": {
+    "platform": "archive.org",
+    "url_or_library_id": "archive.org:Freedoma1952_2",
+    "accessed": "2026-10-11",
+    "rights": "annotation-only",
+    "verified_via": "agent_runtime"
+  },
+  "niche": "saas",
+  "format": "polished_video",
+  "structure": {
+    "format": "video_timed",
+    "timing_observable": true,
+    "format_note": "Measured ingest (polished_video); cuts from ffmpeg scdet"
+  },
+  "duration_s": 784.384,
+  "aspect": "16:9",
+  "provenance": {
+    "observed": true,
+    "basis": "ffmpeg:scdet+ebur128+silencedetect+tblend/signalstats+palettegen; tesseract OCR frame; font heuristic",
+    "measured_at": "2026-10-11T03:29:54.030Z",
+    "media_path_local": "classroom/private-cache/arc_saas_freedoma1952_2.mp4",
+    "media_committed": false
+  },
+  "measured_by": {
+    "tooling": [
+      "ffmpeg:scdet",
+      "ffmpeg:ebur128",
+      "ffmpeg:silencedetect",
+      "ffmpeg:tblend+signalstats",
+      "ffmpeg:palettegen",
+      "tesseract",
+      "font-heuristic"
+    ],
+    "honesty_errors": []
+  },
+  "hook": {
+    "mechanism": "[FILL from watch — first 1–2s device]",
+    "first_second_description": "[FILL — photographed moment, not a card]",
+    "on_screen_text": "=e Coed | ti",
+    "spoken": null
+  },
+  "shots": [
+    {
+      "t_start": 0,
+      "t_end": 60.494,
+      "purpose": "hook",
+      "on_screen_text": "=e Coed | ti",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 1/3 from arc_saas_freedoma1952_2.mp4"
+    },
+    {
+      "t_start": 60.494,
+      "t_end": 503.77,
+      "purpose": "beat",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 2/3 from arc_saas_freedoma1952_2.mp4"
+    },
+    {
+      "t_start": 503.77,
+      "t_end": 784.384,
+      "purpose": "cta_or_hold",
+      "on_screen_text": "",
+      "source": "measured",
+      "recipe": "[FILL — watch private-cache; describe photographed moment]",
+      "how_this_shot_was_made": "scdet cut 3/3 from arc_saas_freedoma1952_2.mp4"
+    }
+  ],
+  "recipe": {
+    "hook": "[FILL]",
+    "beats": [
+      {
+        "t_start": 0,
+        "t_end": 60.494,
+        "purpose": "hook"
+      },
+      {
+        "t_start": 60.494,
+        "t_end": 503.77,
+        "purpose": "beat"
+      },
+      {
+        "t_start": 503.77,
+        "t_end": 784.384,
+        "purpose": "cta_or_hold"
+      }
+    ],
+    "pacing_curve": {
+      "cuts_per_10s": 0.03,
+      "first_cut_at_s": 60.494,
+      "longest_hold_s": 443.276,
+      "source": "measured"
+    },
+    "proof": "[FILL]",
+    "cta": "[FILL]"
+  },
+  "stats": {
+    "shot_count": 3,
+    "avg_shot_s": 261.461,
+    "cuts_per_10s": 0.03,
+    "longest_hold_s": 443.276,
+    "first_cut_at_s": 60.494,
+    "text_density": "ocr_hit",
+    "loudness_lufs": -20,
+    "true_peak_dbfs": -5.8,
+    "silence_gaps": [
+      {
+        "t_start": 25.2712,
+        "t_end": 25.6758
+      },
+      {
+        "t_start": 39.2292,
+        "t_end": 39.6403
+      },
+      {
+        "t_start": 59.6595,
+        "t_end": 60.0885
+      },
+      {
+        "t_start": 495.014,
+        "t_end": 495.391
+      },
+      {
+        "t_start": 495.391,
+        "t_end": 495.878
+      }
+    ],
+    "motion": {
+      "samples_per_s": 0,
+      "mean_yavg": null,
+      "motion_ratio": 1,
+      "freeze_s": 0,
+      "curve": [],
+      "source": "measured"
+    },
+    "probe": {
+      "width": 320,
+      "height": 240,
+      "duration_s": 784.384384,
+      "has_audio": true
+    },
+    "stats_source": "measured"
+  },
+  "audio": {
+    "loudness_lufs": -20,
+    "true_peak_dbfs": -5.8,
+    "silence_gaps": [
+      {
+        "t_start": 25.2712,
+        "t_end": 25.6758
+      },
+      {
+        "t_start": 39.2292,
+        "t_end": 39.6403
+      },
+      {
+        "t_start": 59.6595,
+        "t_end": 60.0885
+      },
+      {
+        "t_start": 495.014,
+        "t_end": 495.391
+      },
+      {
+        "t_start": 495.391,
+        "t_end": 495.878
+      }
+    ],
+    "source": "measured"
+  },
+  "look": {
+    "palette": [
+      "#bbb2a1",
+      "#bbb2a1",
+      "#bbb2a1",
+      "#bbb2a1",
+      "#bbb2a1",
+      "#bbb2a1"
+    ],
+    "palette_source": "measured",
+    "caption_style": "[FILL]",
+    "grade": "[FILL]",
+    "ocr_sample": "=e Coed | ti\nas ay",
+    "font_guess": "rounded-sans",
+    "font_class": "rounded-sans",
+    "font_source": "heuristic-ocr"
+  },
+  "cta": {
+    "primary": "[FILL]",
+    "timing_s": null
+  },
+  "offer_and_proof": {
+    "offer": "[FILL]",
+    "proof": "[PLACEHOLDER]"
+  },
+  "why_it_works": "Measured public commercial from archive.org/Prelinger (archive.org:Freedoma1952_2). Real audio+cuts; study assembly only.",
+  "steal": [
+    "Cut rhythm from measured stats",
+    "Offer/endcard framing",
+    "Never copy marks or claims"
+  ],
+  "what_not_to_copy": [
+    "Competitor pixels / logos / talent likeness",
+    "Verbatim scripts or uncleared audio",
+    "Invented proof"
+  ],
+  "tags": [
+    "saas",
+    "polished_video",
+    "ingest",
+    "observed",
+    "confirmed"
+  ],
+  "materials_ceiling": "Corpus teaches assembly; brand material still needs USER_SUPPLIED → i2v → vetted stock"
+}

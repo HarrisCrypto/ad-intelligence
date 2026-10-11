@@ -51,8 +51,10 @@ jobs:
           test -f classroom/niches.json
           test -f classroom/formats.json
           test -f classroom/ingest/ingest-ad.mjs
+          test -f classroom/ingest/MASS-INGEST.md
           sudo apt-get install -y tesseract-ocr
           node classroom/scripts/prove-corpus-ingest.mjs
+          node classroom/scripts/prove-real-corpus.mjs
 
       - name: Classroom + hub E2E (retrieve → spec → plan → v2 PASS)
         run: node pipeline/scripts/e2e-brief-to-plan.mjs --render

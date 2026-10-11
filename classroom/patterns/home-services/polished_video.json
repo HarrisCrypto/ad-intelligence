@@ -2,20 +2,30 @@
   "id": "pat_home-services_polished_video",
   "niche": "home-services",
   "format": "polished_video",
-  "n_cards": 2,
+  "n_cards": 7,
   "cites": [
     "arc_chevrolet_spot",
-    "arc_folgers_coffee"
+    "arc_folgers_coffee",
+    "arc_homeservices_amc_jeep",
+    "arc_homeservices_baggiesfoodw",
+    "arc_homeservices_chevrolet",
+    "arc_homeservices_folgers",
+    "arc_homeservices_kelloggs_variety_pak"
   ],
   "source_ids": [
     "archive.org:chevrolet",
-    "archive.org:folgers"
+    "archive.org:folgers",
+    "archive.org:amc_jeep",
+    "archive.org:BaggiesFoodW",
+    "archive.org:chevrolet",
+    "archive.org:folgers",
+    "archive.org:kelloggs_variety_pak"
   ],
   "cuts": {
-    "mean_cuts_per_10s": 0.17,
-    "mean_avg_shot_s": 30.4,
-    "mean_first_cut_at_s": 8.01,
-    "mean_longest_hold_s": 52.79,
+    "mean_cuts_per_10s": 0.97,
+    "mean_avg_shot_s": 22.72,
+    "mean_first_cut_at_s": 14.4,
+    "mean_longest_hold_s": 40.13,
     "samples": [
       {
         "id": "arc_chevrolet_spot",
@@ -32,6 +42,46 @@
         "first_cut_at_s": 15.916,
         "longest_hold_s": 44.611,
         "loudness_lufs": -27.1
+      },
+      {
+        "id": "arc_homeservices_amc_jeep",
+        "cuts_per_10s": 4.49,
+        "avg_shot_s": 2.169,
+        "first_cut_at_s": 20.687,
+        "longest_hold_s": 20.687,
+        "loudness_lufs": -22.7
+      },
+      {
+        "id": "arc_homeservices_baggiesfoodw",
+        "cuts_per_10s": 0.17,
+        "avg_shot_s": 30.28,
+        "first_cut_at_s": 43.777,
+        "longest_hold_s": 43.777,
+        "loudness_lufs": -22.2
+      },
+      {
+        "id": "arc_homeservices_chevrolet",
+        "cuts_per_10s": 0.16,
+        "avg_shot_s": 30.53,
+        "first_cut_at_s": 0.1,
+        "longest_hold_s": 60.961,
+        "loudness_lufs": -24.8
+      },
+      {
+        "id": "arc_homeservices_folgers",
+        "cuts_per_10s": 0.17,
+        "avg_shot_s": 30.264,
+        "first_cut_at_s": 15.916,
+        "longest_hold_s": 44.611,
+        "loudness_lufs": -27.1
+      },
+      {
+        "id": "arc_homeservices_kelloggs_variety_pak",
+        "cuts_per_10s": 1.5,
+        "avg_shot_s": 4.997,
+        "first_cut_at_s": 4.338,
+        "longest_hold_s": 5.272,
+        "loudness_lufs": -25.8
       }
     ],
     "source": "measured_aggregate"
@@ -39,7 +89,9 @@
   "content": {
     "hook_frequency": {},
     "beat_order_frequency": {
-      "hook→cta_or_hold": 2
+      "hook→cta_or_hold": 5,
+      "hook→beat→beat→beat→beat→beat→beat→beat→beat→beat→beat→beat→beat→beat→beat→beat→beat→beat→beat→beat→beat→beat→beat→beat→beat→beat→beat→beat→beat→beat→beat→beat→beat→beat→beat→beat→beat→beat→cta_or_hold": 1,
+      "hook→beat→beat→cta_or_hold": 1
     },
     "proof_placement": {},
     "cta_wording": {},
@@ -47,12 +99,14 @@
   },
   "fonts_craft": {
     "font_class_frequency": {
-      "gothic-caps": 1,
-      "rounded-sans": 1
+      "gothic-caps": 2,
+      "rounded-sans": 4,
+      "grotesk-sans": 1
     },
     "font_guess_frequency": {
-      "gothic-caps": 1,
-      "rounded-sans": 1
+      "gothic-caps": 2,
+      "rounded-sans": 4,
+      "grotesk-sans": 1
     },
     "caption_style_frequency": {},
     "palette_samples": [
@@ -77,11 +131,66 @@
           "#50504b",
           "#50504b"
         ]
+      },
+      {
+        "id": "arc_homeservices_amc_jeep",
+        "palette": [
+          "#686b55",
+          "#686b55",
+          "#686b55",
+          "#686b55",
+          "#686b55",
+          "#686b55"
+        ]
+      },
+      {
+        "id": "arc_homeservices_baggiesfoodw",
+        "palette": [
+          "#1d1d1c",
+          "#1d1d1c",
+          "#1d1d1c",
+          "#1d1d1c",
+          "#1d1d1c",
+          "#1d1d1c"
+        ]
+      },
+      {
+        "id": "arc_homeservices_chevrolet",
+        "palette": [
+          "#eeeeeb",
+          "#eeeeeb",
+          "#eeeeeb",
+          "#eeeeeb",
+          "#eeeeeb",
+          "#eeeeeb"
+        ]
+      },
+      {
+        "id": "arc_homeservices_folgers",
+        "palette": [
+          "#50504b",
+          "#50504b",
+          "#50504b",
+          "#50504b",
+          "#50504b",
+          "#50504b"
+        ]
+      },
+      {
+        "id": "arc_homeservices_kelloggs_variety_pak",
+        "palette": [
+          "#464641",
+          "#464641",
+          "#464641",
+          "#464641",
+          "#464641",
+          "#464641"
+        ]
       }
     ],
     "grade_notes": {},
     "sfx_density": {}
   },
-  "floor_note": "thin — treat as directional, not normative",
+  "floor_note": "enough cards for directional norms",
   "honest_limit": "Patterns teach assembly from real ads; they do not supply the brand's own material."
 }

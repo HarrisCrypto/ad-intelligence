@@ -48,17 +48,24 @@ node classroom/ingest/ingest-ad.mjs --confirm classroom/study-cards/home-service
 | Static / carousel | tesseract OCR + zones, palette, contrast, 3-band layout |
 | Text text | headline/description/CTA char counts (timing fields null, not absent) |
 
-## Mass ingest
+## Mass ingest (format passes — video required)
 
 ```bash
 # Needs: npm install in classroom/ingest (playwright) + npx playwright install chromium
-node classroom/ingest/enumerate-ads.mjs --niche home-services --limit 30
-node classroom/ingest/mass-ingest.mjs --confirm --limit 40
+# Enumerate VIDEO separately — never rely on All formats
+node classroom/ingest/enumerate-ads.mjs --format VIDEO --niche home-services --limit 20
+node classroom/ingest/mass-ingest.mjs --confirm
+
+# When GAT YouTube media is bot-gated, fill measured video floor from archive.org commercials:
+node classroom/ingest/fetch-archive-videos.mjs --confirm --floor 5
+
 node classroom/scripts/derive-patterns.mjs
-node classroom/scripts/prove-corpus-ingest.mjs
+node classroom/scripts/prove-real-corpus.mjs   # fails if video_coverage < floor
 ```
 
-Run log: `classroom/ingest/logs/last-mass-ingest.json` (attempted vs accepted per source).
+`mass-ingest` **exits non-zero** if `video_coverage` is below floor (default 5/niche). A run of 44 text + 0 video is a failure.
+
+Run log: `classroom/ingest/logs/last-mass-ingest.json` includes `by_format` + `video_coverage`.
 
 ## Access matrix (honest)
 
