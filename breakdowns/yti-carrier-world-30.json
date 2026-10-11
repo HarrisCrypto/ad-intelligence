@@ -1,0 +1,57 @@
+{
+  "text_overlays": [],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "The watch page returns a spoken brand statement.",
+  "cta": "Not stated on the official page.",
+  "emotional_angle": "The lines aim at togetherness and support rather than a price.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "Write a 30-second statement about the job your product does for people.",
+    "Do not show a feature list.",
+    "Keep the claim in original words.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "yti-carrier-world-30",
+  "brand": "Carrier",
+  "advertiser": "Carrier",
+  "platform": "youtube_instream",
+  "format": "Brand film",
+  "aspect_ratio": "16:9",
+  "length_s": 31,
+  "year": null,
+  "award": null,
+  "niche": "home-services",
+  "goal": "awareness",
+  "official_url": "https://www.youtube.com/watch?v=F8e0jxc90o8",
+  "hook_0_3s": "The official page does not describe the first three seconds. The title says Official :30.",
+  "story_beats": [
+    "The oEmbed title is For The World We Share | Carrier Brand (Official :30).",
+    "The watch page says needs for a fulfilled life are basically the same: togetherness, connection, support.",
+    "It says Carrier has engineered climates for more than a century and is innovating smarter ways to make life better.",
+    "The page does not list shots.",
+    "YouTube's public results label for this video states 31 seconds."
+  ],
+  "shot_list": [
+    {
+      "t": "0-30s",
+      "shot": "Spoken brand statement about shared needs and engineered climates.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "title",
+      "shot": "Official :30 is in the title.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The title states an Official :30. Cut rhythm is not described.",
+  "why_it_worked": "Carrier's official :30 title is a brand film, and the watch page uses the half-minute for one idea: the same human needs, answered by engineered climates.",
+  "cinematic_qualities": [
+    "Title-stated Official :30",
+    "One spoken idea across the whole cut"
+  ],
+  "safe_zone_notes": "The watch page does not print pixels. The title says Official :30."
+}

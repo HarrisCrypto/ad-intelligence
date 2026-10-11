@@ -1,0 +1,56 @@
+{
+  "text_overlays": [],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "Not stated on the official page.",
+  "cta": "Not stated on the official page.",
+  "emotional_angle": "The official page does not name an emotional angle.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "Cut a 15-second version that keeps one line from the longer film.",
+    "Name the setting in your own title, such as at home.",
+    "Do not reuse this brand line.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "yti-carrier-home-15",
+  "brand": "Carrier",
+  "advertiser": "Carrier",
+  "platform": "youtube_instream",
+  "format": "Brand film",
+  "aspect_ratio": "16:9",
+  "length_s": 16,
+  "year": null,
+  "award": null,
+  "niche": "home-services",
+  "goal": "awareness",
+  "official_url": "https://www.youtube.com/watch?v=gJvZMijEK6Y",
+  "hook_0_3s": "The official page does not describe the first three seconds. The title says Official :15.",
+  "story_beats": [
+    "The oEmbed title is For The World We Share At Home | Carrier Residential (Official :15).",
+    "The title places this cut at home and at 15 seconds.",
+    "The watch page was not given a separate shot list beyond that title.",
+    "YouTube's public results label for this video states 16 seconds."
+  ],
+  "shot_list": [
+    {
+      "t": "0-3s",
+      "shot": "Opening picture is not described.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "0-15s",
+      "shot": "The title identifies a residential :15.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The title states an Official :15.",
+  "why_it_worked": "The title splits the same Carrier line into a residential :15, which is a useful pattern when a :30 brand film needs a shorter in-stream cut.",
+  "cinematic_qualities": [
+    "Title-stated Official :15",
+    "Residential framing in the title"
+  ],
+  "safe_zone_notes": "Pixels are not printed. The title says Official :15."
+}

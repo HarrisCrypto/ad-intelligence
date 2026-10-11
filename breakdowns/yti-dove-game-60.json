@@ -1,0 +1,56 @@
+{
+  "text_overlays": [],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "Not stated on the official page.",
+  "cta": "The page offers a donation of five cents per item to youth organizations, with caps stated on the page.",
+  "emotional_angle": "Joy in playing is set against body criticism.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "Build a one-minute film from real participants in the activity you support.",
+    "Put one researched stat next to the film, and keep the stat sourced.",
+    "Pair the film with an original offer if you donate on purchase.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "yti-dove-game-60",
+  "brand": "Dove",
+  "advertiser": "Dove",
+  "platform": "youtube_instream",
+  "format": "Big Game commercial",
+  "aspect_ratio": "16:9",
+  "length_s": 60,
+  "year": 2026,
+  "award": null,
+  "niche": "cpg",
+  "goal": "awareness",
+  "official_url": "https://www.dove.com/us/en/campaigns/purpose/game-is-ours.html",
+  "hook_0_3s": "The official page does not describe the first three seconds. Dove's page calls it the full 60 second commercial.",
+  "story_beats": [
+    "Dove's page says the full 60 second commercial is on YouTube.",
+    "It says the film centers on more than 90 young athletes.",
+    "It names collective choreography across swimming, track and field, American football, and mixed martial arts.",
+    "The page says one in two girls who quit sports are criticized for their body type, and the film is about joy keeping them playing."
+  ],
+  "shot_list": [
+    {
+      "t": "full 60s",
+      "shot": "More than 90 young athletes in collective choreography across four sports.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "message",
+      "shot": "The page says the film focuses on what bodies can do, not how they look.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The page states a 60 second commercial and does not describe the cut count.",
+  "why_it_worked": "Dove's own page states a 60 second Big Game film built from a large group of girls playing, tied to a stat about body criticism and a joy message, with a donation offer beside the film.",
+  "cinematic_qualities": [
+    "Stated 60 second commercial",
+    "Group choreography across named sports"
+  ],
+  "safe_zone_notes": "The Dove page does not print a pixel aspect. It says the full commercial is on YouTube."
+}

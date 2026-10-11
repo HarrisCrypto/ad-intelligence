@@ -1,0 +1,56 @@
+{
+  "text_overlays": [],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "Not stated on the official page.",
+  "cta": "Not stated on the official page.",
+  "emotional_angle": "The official page does not name an emotional angle.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "If a longer sports cut is required, mark the length in the title and measure it.",
+    "Clear any real person's appearance yourself.",
+    "Do not copy this spot's talent or lines.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "yti-fanatics-kendall-90",
+  "brand": "Fanatics Sportsbook",
+  "advertiser": "Fanatics Sports & Casino",
+  "platform": "youtube_instream",
+  "format": "Sportsbook commercial",
+  "aspect_ratio": "16:9",
+  "length_s": 86,
+  "year": null,
+  "award": null,
+  "niche": "other",
+  "goal": "consideration",
+  "official_url": "https://www.youtube.com/watch?v=JfLUbLIULDw",
+  "hook_0_3s": "The official page does not describe the first three seconds. The title says Bet On Kendall :90.",
+  "story_beats": [
+    "The oEmbed title is Bet On Kendall :90 | Fanatics Sportsbook.",
+    "The title states a :90 cut.",
+    "The watch page was not given a shot list beyond that title.",
+    "YouTube's public results label for this video states 86 seconds."
+  ],
+  "shot_list": [
+    {
+      "t": "0-3s",
+      "shot": "Opening picture is not described.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "0-90s",
+      "shot": "The title names the spot Bet On Kendall and a :90 length.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The title states a :90.",
+  "why_it_worked": "The official title puts the talent and the length in one line, Bet On Kendall :90, which is the only structure the page confirms.",
+  "cinematic_qualities": [
+    "Title-stated :90",
+    "Celebrity name in the title"
+  ],
+  "safe_zone_notes": "Pixels are not printed. The title says :90."
+}

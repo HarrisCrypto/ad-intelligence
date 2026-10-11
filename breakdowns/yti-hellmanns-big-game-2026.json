@@ -1,0 +1,64 @@
+{
+  "text_overlays": [
+    {
+      "wording": "Sweet sandwich time",
+      "size": "Not stated on the official page.",
+      "placement": "Spoken or sung on the watch page, not confirmed as type",
+      "timing": "within the :30"
+    }
+  ],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "The watch page returns sung and spoken lines, including Sweet sandwich time.",
+  "cta": "Not stated on the official page.",
+  "emotional_angle": "The lines treat the sandwich as a way to make a friend.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "Pick one eating moment and give it an original name.",
+    "Keep the film near 30 seconds.",
+    "Let the product show up as the reason the moment works.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "yti-hellmanns-big-game-2026",
+  "brand": "Hellmann's",
+  "advertiser": "Hellmann's",
+  "platform": "youtube_instream",
+  "format": "Big Game commercial",
+  "aspect_ratio": "16:9",
+  "length_s": 31,
+  "year": 2026,
+  "award": null,
+  "niche": "food",
+  "goal": "awareness",
+  "official_url": "https://www.youtube.com/watch?v=5TpdUBwyL4c",
+  "hook_0_3s": "The official page does not describe the first three seconds. The title is Hellmann's 2026 Big Game :30.",
+  "story_beats": [
+    "The oEmbed title states Hellmann's 2026 Big Game :30.",
+    "The watch page opens on a deli memory and the line Sweet sandwich time.",
+    "A spoken line says Hellmann's makes it taste so good.",
+    "The returned lines end on making friends and flirting while walking by.",
+    "YouTube's public results label for this video states 31 seconds."
+  ],
+  "shot_list": [
+    {
+      "t": "0-30s",
+      "shot": "The returned audio is a deli-to-sandwich bit, without a shot list.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "title",
+      "shot": "The title itself is the length claim: 2026 Big Game :30.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The title states a :30 and the returned lines are one short comic pass.",
+  "why_it_worked": "The official title is a :30 Big Game cut, and the watch page hangs the product on one repeatable phrase, Sweet sandwich time, instead of a recipe demo.",
+  "cinematic_qualities": [
+    "One repeatable food phrase",
+    "Title-stated :30"
+  ],
+  "safe_zone_notes": "The watch page does not print pixels. The title calls it a Big Game :30, which is a horizontal TV cut until you measure your own export."
+}
