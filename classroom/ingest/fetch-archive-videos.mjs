@@ -1,7 +1,10 @@
 #!/usr/bin/env node
 /**
- * Download archive.org / Prelinger commercials into private-cache and ingest as measured video.
- * Used when GAT YouTube media is bot-gated — still real ads with real audio.
+ * Download archive.org / Prelinger media into private-cache as FOOTAGE only.
+ *
+ * Hard rule: archive.org is NOT an ad library. Cards written here get
+ * provenance.reference_ok=false and never count toward video_coverage or
+ * pacing patterns. Prefer GAT / Meta / TikTok for reference ads.
  *
  *   node classroom/ingest/fetch-archive-videos.mjs --niche home-services --confirm
  */
@@ -135,17 +138,23 @@ function ingest(file, niche, id, sourceId) {
 }
 
 async function main() {
-  const log = { started: new Date().toISOString(), niches: {}, accepted: [], errors: [] };
+  const log = {
+    started: new Date().toISOString(),
+    niches: {},
+    footage: [],
+    errors: [],
+    note: "archive.org = footage only; never counts toward video_coverage",
+  };
   const niches = onlyNiche
     ? { [onlyNiche]: SEEDS.niches[onlyNiche] }
     : SEEDS.niches;
 
   for (const [nid, conf] of Object.entries(niches || {})) {
     if (!conf) continue;
-    log.niches[nid] = { attempted: 0, accepted: 0 };
+    log.niches[nid] = { attempted: 0, footage: 0 };
     const list = (conf.archive_video || []).filter((x) => !x.skip);
     for (const item of list) {
-      if (log.niches[nid].accepted >= floor) break;
+      if (log.niches[nid].footage >= floor) break;
       log.niches[nid].attempted++;
       try {
         const resolved = await resolveMp4(item.id, item.file);
@@ -180,9 +189,23 @@ async function main() {
         const cardPath = path.join(ROOT, "classroom/study-cards", nid, `${cardId}.json`);
         if (r.ok && fs.existsSync(cardPath)) {
           const card = JSON.parse(fs.readFileSync(cardPath, "utf8"));
-          if (card.provenance?.observed) {
-            log.niches[nid].accepted++;
-            log.accepted.push({ niche: nid, id: cardId, source: item.id, lufs: card.audio?.loudness_lufs });
+          // Footage cache only — never reference_ok (substance gate).
+          if (card.provenance?.reference_ok) {
+            log.errors.push({
+              niche: nid,
+              id: item.id,
+              error: "archive_must_not_be_reference",
+            });
+          } else if (card.provenance?.observed) {
+            log.niches[nid].footage++;
+            log.footage.push({
+              niche: nid,
+              id: cardId,
+              source: item.id,
+              lufs: card.audio?.loudness_lufs,
+              reference_ok: false,
+              reason: card.provenance?.reference_blocked_reason,
+            });
           } else {
             log.errors.push({
               niche: nid,
@@ -206,7 +229,15 @@ async function main() {
   fs.writeFileSync(logPath, JSON.stringify(log, null, 2));
   console.log(
     JSON.stringify(
-      { ok: true, log: logPath, niches: log.niches, accepted: log.accepted.length, errors: log.errors.length },
+      {
+        ok: true,
+        log: logPath,
+        niches: log.niches,
+        footage: log.footage.length,
+        reference_valid: 0,
+        errors: log.errors.length,
+        rule: "archive.org footage never satisfies video_coverage",
+      },
       null,
       2
     )

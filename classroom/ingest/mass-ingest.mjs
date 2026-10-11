@@ -5,8 +5,9 @@
  *   node classroom/ingest/mass-ingest.mjs --confirm
  *   node classroom/ingest/mass-ingest.mjs --confirm --video-floor 5
  *
- * Fails (exit 2) if video_coverage is below floor — a green count of text-only ads is a failure.
- * Writes classroom/ingest/logs/last-mass-ingest.json with by_format + video_coverage.
+ * video_coverage counts only substance-valid reference videos:
+ * observed + ad-library platform + 5–90s + niche-verified.
+ * archive.org films and text-only runs → exit 2 ("video coverage: 0").
  */
 import { spawnSync } from "node:child_process";
 import fs from "node:fs";
@@ -14,6 +15,10 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { isGenuinelyObserved } from "../scripts/observed-honesty.mjs";
 import { loadCards } from "../scripts/lib-corpus.mjs";
+import {
+  applyReferenceSubstance,
+  isValidReferenceVideo,
+} from "../scripts/reference-substance.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..", "..");
@@ -145,7 +150,7 @@ if (!skipEnum) {
             "--format",
             "text_search",
             "--platform",
-            "google",
+            c.platform || "google",
             "--source-id",
             c.url || `google:${c.advertiser}/${c.creative}`,
             "--rights",
@@ -168,9 +173,9 @@ if (!skipEnum) {
             "--format",
             format,
             "--platform",
-            "google",
+            c.platform || "google",
             "--source-id",
-            c.url || `google:${c.advertiser}/${c.creative}`,
+            c.url || c.source_id || `google:${c.advertiser}/${c.creative}`,
             "--rights",
             "annotation-only",
           ],
@@ -196,6 +201,19 @@ if (!skipEnum) {
           id,
           error: "honesty_blocked",
           reason: card.provenance?.observed_blocked_reason,
+        });
+        continue;
+      }
+      // Prefer platform from enumerator (archive.org must not launder as google).
+      if (c.platform) card.source.platform = c.platform;
+      const { errors: substanceErrs } = applyReferenceSubstance(card);
+      fs.writeFileSync(j.out, JSON.stringify(card, null, 2) + "\n");
+      if (isVideoFormat(format) && substanceErrs.length) {
+        log.rejected++;
+        log.errors.push({
+          id,
+          error: "reference_substance_blocked",
+          reason: substanceErrs.join("; "),
         });
         continue;
       }
@@ -225,6 +243,8 @@ if (!skipEnum) {
         advertiser: c.advertiser,
         url: c.url,
         observed: true,
+        reference_ok: card.provenance?.reference_ok !== false,
+        niche_confidence: card.niche_confidence,
       });
     } catch (e) {
       log.rejected++;
@@ -233,13 +253,25 @@ if (!skipEnum) {
   }
 }
 
-// Corpus-wide video coverage (genuine observed video cards) — for reporting.
-const all = loadCards().map((x) => x.card).filter(isGenuinelyObserved);
+// Corpus-wide counts: observed cards for by_format; REFERENCE-VALID videos for coverage.
+const allObserved = loadCards().map((x) => x.card).filter(isGenuinelyObserved);
 const byNicheCorpus = {};
 const byFormatCorpus = {};
-for (const c of all) {
+const rejectedSubstance = [];
+for (const c of allObserved) {
   byFormatCorpus[c.format] = (byFormatCorpus[c.format] || 0) + 1;
   if (!isVideoFormat(c.format)) continue;
+  if (!isValidReferenceVideo(c)) {
+    const stamped = applyReferenceSubstance(JSON.parse(JSON.stringify(c)));
+    rejectedSubstance.push({
+      id: c.id,
+      niche: c.niche,
+      platform: c.source?.platform,
+      duration_s: c.duration_s,
+      reason: stamped.errors.join("; "),
+    });
+    continue;
+  }
   byNicheCorpus[c.niche] = byNicheCorpus[c.niche] || {
     count: 0,
     ids: [],
@@ -261,10 +293,11 @@ const corpusTotalVideo = Object.values(byNicheCorpus).reduce(
   0
 );
 
-// Run-level video coverage from THIS ingest (not laundered by prior corpus).
+// Run-level video coverage from THIS ingest (substance-valid only).
 const byNicheRun = {};
 for (const card of log.cards) {
   if (!isVideoFormat(card.format)) continue;
+  if (card.reference_ok === false) continue;
   byNicheRun[card.niche] = byNicheRun[card.niche] || { count: 0, ids: [] };
   byNicheRun[card.niche].count++;
   byNicheRun[card.niche].ids.push(card.id);
@@ -286,13 +319,23 @@ for (const n of nichesChecked) {
     video_count: v,
     required: videoFloor,
     ok: v >= videoFloor,
+    uncovered: v < videoFloor,
     ids: coverageSource[n]?.ids || [],
     scope: skipEnum ? "corpus" : "run",
+    rule: "ad-library + 5-90s + niche-verified only",
   };
   if (skipEnum) {
-    if (v < videoFloor) gaps.push(`${n}:video_coverage:${v}<${videoFloor}`);
+    if (v < videoFloor) {
+      gaps.push(
+        v === 0
+          ? `${n}:uncovered (video coverage: 0)`
+          : `${n}:video_coverage:${v}<${videoFloor}`
+      );
+    }
   }
 }
+log.substance_rejected = rejectedSubstance.slice(0, 40);
+log.substance_rejected_n = rejectedSubstance.length;
 if (!skipEnum) {
   // Text-only / video-blind ingest must fail even if the corpus already has video.
   if (totalVideo < 1) {
@@ -311,9 +354,11 @@ if (!Object.keys(log.by_format).length) {
   log.by_format = { ...byFormatCorpus };
 }
 log.corpus = {
-  genuine_observed: all.length,
+  genuine_observed: allObserved.length,
+  reference_valid_video: corpusTotalVideo,
   by_format: byFormatCorpus,
   total_video: corpusTotalVideo,
+  substance_rejected_n: rejectedSubstance.length,
   video_coverage: Object.fromEntries(
     nichesChecked.map((n) => [
       n,
@@ -321,6 +366,7 @@ log.corpus = {
         video_count: byNicheCorpus[n]?.count || 0,
         required: videoFloor,
         ok: (byNicheCorpus[n]?.count || 0) >= videoFloor,
+        uncovered: (byNicheCorpus[n]?.count || 0) < videoFloor,
         ids: byNicheCorpus[n]?.ids || [],
       },
     ])
@@ -352,7 +398,7 @@ const msg = {
   video_coverage: totalVideo,
   floor: videoFloor,
   gaps,
-  rule: "A green count that hides zero video ads is a failure, not a success.",
+  rule: "A green video_count filled with archive.org films is a failure, not a success.",
 };
 if (!ok) {
   console.error(

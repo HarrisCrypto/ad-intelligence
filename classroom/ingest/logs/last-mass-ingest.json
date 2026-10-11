@@ -1,5 +1,5 @@
 {
-  "started": "2026-10-11T03:41:58.132Z",
+  "started": "2026-10-11T04:18:51.203Z",
   "source": "google_ads_transparency",
   "from": null,
   "attempted": 0,
@@ -8,252 +8,441 @@
   "by_niche": {},
   "by_format": {
     "polished_video": 44,
-    "ugc_video": 8,
-    "text_search": 44,
+    "ugc_video": 11,
+    "text_search": 45,
     "static_image": 7
   },
   "video_coverage": {
     "home-services": {
-      "video_count": 8,
+      "video_count": 0,
       "required": 5,
-      "ok": true,
-      "ids": [
-        "arc_chevrolet_spot",
-        "arc_folgers_coffee",
-        "arc_homeservices_amc_jeep",
-        "arc_homeservices_baggiesfoodw",
-        "arc_homeservices_chevrolet",
-        "arc_homeservices_folgers",
-        "arc_homeservices_kelloggs_variety_pak",
-        "arc_homeservices_ugc_01"
-      ],
-      "scope": "corpus"
+      "ok": false,
+      "uncovered": true,
+      "ids": [],
+      "scope": "corpus",
+      "rule": "ad-library + 5-90s + niche-verified only"
     },
     "saas": {
-      "video_count": 6,
+      "video_count": 0,
       "required": 5,
-      "ok": true,
-      "ids": [
-        "arc_saas_freedoma1952_2",
-        "arc_saas_letter_from_an_airline_pilot_1",
-        "arc_saas_planetal1965",
-        "arc_saas_ugc_01",
-        "arc_saas_us_steel_2",
-        "arc_saas_your_hit_parade"
-      ],
-      "scope": "corpus"
+      "ok": false,
+      "uncovered": true,
+      "ids": [],
+      "scope": "corpus",
+      "rule": "ad-library + 5-90s + niche-verified only"
     },
     "skincare": {
-      "video_count": 7,
+      "video_count": 0,
       "required": 5,
-      "ok": true,
-      "ids": [
-        "arc_genteel_baby_bath",
-        "arc_skincare_201165_007_aftershave_television_commercial",
-        "arc_skincare_cresttoothpa_4",
-        "arc_skincare_folgers_4",
-        "arc_skincare_genteel_baby_bath",
-        "arc_skincare_labatts_beer",
-        "arc_skincare_ugc_01"
-      ],
-      "scope": "corpus"
+      "ok": false,
+      "uncovered": true,
+      "ids": [],
+      "scope": "corpus",
+      "rule": "ad-library + 5-90s + niche-verified only"
     },
     "dental": {
-      "video_count": 7,
+      "video_count": 0,
       "required": 5,
-      "ok": true,
-      "ids": [
-        "arc_crest_toothpaste_4",
-        "arc_dental_baggiesfoodw",
-        "arc_dental_cresttoothpa_4",
-        "arc_dental_folgers_10",
-        "arc_dental_folgers_12",
-        "arc_dental_genteel_baby_bath",
-        "arc_dental_ugc_01"
-      ],
-      "scope": "corpus"
+      "ok": false,
+      "uncovered": true,
+      "ids": [],
+      "scope": "corpus",
+      "rule": "ad-library + 5-90s + niche-verified only"
     },
     "ecom": {
-      "video_count": 6,
+      "video_count": 0,
       "required": 5,
-      "ok": true,
-      "ids": [
-        "arc_ecom_amc_jeep",
-        "arc_ecom_baggiesfoodw",
-        "arc_ecom_chevrolet",
-        "arc_ecom_folgers",
-        "arc_ecom_kelloggs_variety_pak",
-        "arc_ecom_ugc_01"
-      ],
-      "scope": "corpus"
+      "ok": false,
+      "uncovered": true,
+      "ids": [],
+      "scope": "corpus",
+      "rule": "ad-library + 5-90s + niche-verified only"
     },
     "beauty": {
-      "video_count": 6,
+      "video_count": 0,
       "required": 5,
-      "ok": true,
-      "ids": [
-        "arc_beauty_201165_007_aftershave_television_commercial",
-        "arc_beauty_cresttoothpa_4",
-        "arc_beauty_folgers_4",
-        "arc_beauty_genteel_baby_bath",
-        "arc_beauty_ugc_01",
-        "arc_beauty_your_hit_parade"
-      ],
-      "scope": "corpus"
+      "ok": false,
+      "uncovered": true,
+      "ids": [],
+      "scope": "corpus",
+      "rule": "ad-library + 5-90s + niche-verified only"
     },
     "legal": {
-      "video_count": 6,
+      "video_count": 0,
       "required": 5,
-      "ok": true,
-      "ids": [
-        "arc_legal_chevrolet",
-        "arc_legal_freedoma1952_2",
-        "arc_legal_letter_from_an_airline_pilot_1",
-        "arc_legal_planetal1965",
-        "arc_legal_ugc_01",
-        "arc_legal_us_steel_2"
-      ],
-      "scope": "corpus"
+      "ok": false,
+      "uncovered": true,
+      "ids": [],
+      "scope": "corpus",
+      "rule": "ad-library + 5-90s + niche-verified only"
     },
     "local": {
-      "video_count": 6,
+      "video_count": 0,
       "required": 5,
-      "ok": true,
-      "ids": [
-        "arc_local_amc_jeep",
-        "arc_local_baggiesfoodw",
-        "arc_local_chevrolet",
-        "arc_local_folgers",
-        "arc_local_kelloggs_variety_pak",
-        "arc_local_ugc_01"
-      ],
-      "scope": "corpus"
+      "ok": false,
+      "uncovered": true,
+      "ids": [],
+      "scope": "corpus",
+      "rule": "ad-library + 5-90s + niche-verified only"
     }
   },
   "video_floor_per_niche": 5,
   "cards": [],
   "errors": [],
+  "substance_rejected": [
+    {
+      "id": "arc_beauty_201165_007_aftershave_television_commercial",
+      "niche": "beauty",
+      "platform": "archive.org",
+      "duration_s": 22,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_beauty_cresttoothpa_4",
+      "niche": "beauty",
+      "platform": "archive.org",
+      "duration_s": 29.997,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_beauty_folgers_4",
+      "niche": "beauty",
+      "platform": "archive.org",
+      "duration_s": 60.527,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_beauty_genteel_baby_bath",
+      "niche": "beauty",
+      "platform": "archive.org",
+      "duration_s": 60.561,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_beauty_ugc_01",
+      "niche": "beauty",
+      "platform": "archive.org",
+      "duration_s": 22,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_beauty_your_hit_parade",
+      "niche": "beauty",
+      "platform": "archive.org",
+      "duration_s": 67.534,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_crest_toothpaste_4",
+      "niche": "dental",
+      "platform": "archive.org",
+      "duration_s": 29.997,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_dental_baggiesfoodw",
+      "niche": "dental",
+      "platform": "archive.org",
+      "duration_s": 60.561,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_dental_cresttoothpa_4",
+      "niche": "dental",
+      "platform": "archive.org",
+      "duration_s": 29.997,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_dental_folgers_10",
+      "niche": "dental",
+      "platform": "archive.org",
+      "duration_s": 64.565,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_dental_folgers_12",
+      "niche": "dental",
+      "platform": "archive.org",
+      "duration_s": 60.06,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_dental_genteel_baby_bath",
+      "niche": "dental",
+      "platform": "archive.org",
+      "duration_s": 60.561,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_dental_ugc_01",
+      "niche": "dental",
+      "platform": "archive.org",
+      "duration_s": 60.561,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_ecom_amc_jeep",
+      "niche": "ecom",
+      "platform": "archive.org",
+      "duration_s": 84.585,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_ecom_baggiesfoodw",
+      "niche": "ecom",
+      "platform": "archive.org",
+      "duration_s": 60.561,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_ecom_chevrolet",
+      "niche": "ecom",
+      "platform": "archive.org",
+      "duration_s": 61.061,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_ecom_folgers",
+      "niche": "ecom",
+      "platform": "archive.org",
+      "duration_s": 60.527,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_ecom_kelloggs_variety_pak",
+      "niche": "ecom",
+      "platform": "archive.org",
+      "duration_s": 19.987,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_ecom_ugc_01",
+      "niche": "ecom",
+      "platform": "archive.org",
+      "duration_s": 84.585,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_chevrolet_spot",
+      "niche": "home-services",
+      "platform": "archive.org",
+      "duration_s": 61.061,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_folgers_coffee",
+      "niche": "home-services",
+      "platform": "archive.org",
+      "duration_s": 60.527,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_homeservices_amc_jeep",
+      "niche": "home-services",
+      "platform": "archive.org",
+      "duration_s": 84.585,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_homeservices_baggiesfoodw",
+      "niche": "home-services",
+      "platform": "archive.org",
+      "duration_s": 60.561,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_homeservices_chevrolet",
+      "niche": "home-services",
+      "platform": "archive.org",
+      "duration_s": 61.061,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_homeservices_folgers",
+      "niche": "home-services",
+      "platform": "archive.org",
+      "duration_s": 60.527,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_homeservices_kelloggs_variety_pak",
+      "niche": "home-services",
+      "platform": "archive.org",
+      "duration_s": 19.987,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_homeservices_ugc_01",
+      "niche": "home-services",
+      "platform": "archive.org",
+      "duration_s": 84.585,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "gat_crarchiveproof0",
+      "niche": "home-services",
+      "platform": "archive.org",
+      "duration_s": 22,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "gat_crarchiveproof1",
+      "niche": "home-services",
+      "platform": "archive.org",
+      "duration_s": 29.997,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "gat_crarchiveproof2",
+      "niche": "home-services",
+      "platform": "archive.org",
+      "duration_s": 60.527,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_legal_chevrolet",
+      "niche": "legal",
+      "platform": "archive.org",
+      "duration_s": 61.061,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_legal_freedoma1952_2",
+      "niche": "legal",
+      "platform": "archive.org",
+      "duration_s": 784.384,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); duration_s:784.384 outside short-form band 5-90s; niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_legal_letter_from_an_airline_pilot_1",
+      "niche": "legal",
+      "platform": "archive.org",
+      "duration_s": 1020.187,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); duration_s:1020.187 outside short-form band 5-90s; niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_legal_planetal1965",
+      "niche": "legal",
+      "platform": "archive.org",
+      "duration_s": 1288.922,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); duration_s:1288.922 outside short-form band 5-90s; niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_legal_ugc_01",
+      "niche": "legal",
+      "platform": "archive.org",
+      "duration_s": 61.061,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_legal_us_steel_2",
+      "niche": "legal",
+      "platform": "archive.org",
+      "duration_s": 91.091,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); duration_s:91.091 outside short-form band 5-90s; niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_local_amc_jeep",
+      "niche": "local",
+      "platform": "archive.org",
+      "duration_s": 84.585,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_local_baggiesfoodw",
+      "niche": "local",
+      "platform": "archive.org",
+      "duration_s": 60.561,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_local_chevrolet",
+      "niche": "local",
+      "platform": "archive.org",
+      "duration_s": 61.061,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    },
+    {
+      "id": "arc_local_folgers",
+      "niche": "local",
+      "platform": "archive.org",
+      "duration_s": 60.527,
+      "reason": "platform:archive.org is not an ad library (archive.org/footage/owned ≠ reference ad); niche_confidence:0 < 0.55"
+    }
+  ],
+  "substance_rejected_n": 55,
   "corpus": {
-    "genuine_observed": 103,
+    "genuine_observed": 107,
+    "reference_valid_video": 0,
     "by_format": {
       "polished_video": 44,
-      "ugc_video": 8,
-      "text_search": 44,
+      "ugc_video": 11,
+      "text_search": 45,
       "static_image": 7
     },
-    "total_video": 52,
+    "total_video": 0,
+    "substance_rejected_n": 55,
     "video_coverage": {
       "home-services": {
-        "video_count": 8,
+        "video_count": 0,
         "required": 5,
-        "ok": true,
-        "ids": [
-          "arc_chevrolet_spot",
-          "arc_folgers_coffee",
-          "arc_homeservices_amc_jeep",
-          "arc_homeservices_baggiesfoodw",
-          "arc_homeservices_chevrolet",
-          "arc_homeservices_folgers",
-          "arc_homeservices_kelloggs_variety_pak",
-          "arc_homeservices_ugc_01"
-        ]
+        "ok": false,
+        "uncovered": true,
+        "ids": []
       },
       "saas": {
-        "video_count": 6,
+        "video_count": 0,
         "required": 5,
-        "ok": true,
-        "ids": [
-          "arc_saas_freedoma1952_2",
-          "arc_saas_letter_from_an_airline_pilot_1",
-          "arc_saas_planetal1965",
-          "arc_saas_ugc_01",
-          "arc_saas_us_steel_2",
-          "arc_saas_your_hit_parade"
-        ]
+        "ok": false,
+        "uncovered": true,
+        "ids": []
       },
       "skincare": {
-        "video_count": 7,
+        "video_count": 0,
         "required": 5,
-        "ok": true,
-        "ids": [
-          "arc_genteel_baby_bath",
-          "arc_skincare_201165_007_aftershave_television_commercial",
-          "arc_skincare_cresttoothpa_4",
-          "arc_skincare_folgers_4",
-          "arc_skincare_genteel_baby_bath",
-          "arc_skincare_labatts_beer",
-          "arc_skincare_ugc_01"
-        ]
+        "ok": false,
+        "uncovered": true,
+        "ids": []
       },
       "dental": {
-        "video_count": 7,
+        "video_count": 0,
         "required": 5,
-        "ok": true,
-        "ids": [
-          "arc_crest_toothpaste_4",
-          "arc_dental_baggiesfoodw",
-          "arc_dental_cresttoothpa_4",
-          "arc_dental_folgers_10",
-          "arc_dental_folgers_12",
-          "arc_dental_genteel_baby_bath",
-          "arc_dental_ugc_01"
-        ]
+        "ok": false,
+        "uncovered": true,
+        "ids": []
       },
       "ecom": {
-        "video_count": 6,
+        "video_count": 0,
         "required": 5,
-        "ok": true,
-        "ids": [
-          "arc_ecom_amc_jeep",
-          "arc_ecom_baggiesfoodw",
-          "arc_ecom_chevrolet",
-          "arc_ecom_folgers",
-          "arc_ecom_kelloggs_variety_pak",
-          "arc_ecom_ugc_01"
-        ]
+        "ok": false,
+        "uncovered": true,
+        "ids": []
       },
       "beauty": {
-        "video_count": 6,
+        "video_count": 0,
         "required": 5,
-        "ok": true,
-        "ids": [
-          "arc_beauty_201165_007_aftershave_television_commercial",
-          "arc_beauty_cresttoothpa_4",
-          "arc_beauty_folgers_4",
-          "arc_beauty_genteel_baby_bath",
-          "arc_beauty_ugc_01",
-          "arc_beauty_your_hit_parade"
-        ]
+        "ok": false,
+        "uncovered": true,
+        "ids": []
       },
       "legal": {
-        "video_count": 6,
+        "video_count": 0,
         "required": 5,
-        "ok": true,
-        "ids": [
-          "arc_legal_chevrolet",
-          "arc_legal_freedoma1952_2",
-          "arc_legal_letter_from_an_airline_pilot_1",
-          "arc_legal_planetal1965",
-          "arc_legal_ugc_01",
-          "arc_legal_us_steel_2"
-        ]
+        "ok": false,
+        "uncovered": true,
+        "ids": []
       },
       "local": {
-        "video_count": 6,
+        "video_count": 0,
         "required": 5,
-        "ok": true,
-        "ids": [
-          "arc_local_amc_jeep",
-          "arc_local_baggiesfoodw",
-          "arc_local_chevrolet",
-          "arc_local_folgers",
-          "arc_local_kelloggs_variety_pak",
-          "arc_local_ugc_01"
-        ]
+        "ok": false,
+        "uncovered": true,
+        "ids": []
       }
     }
   },
-  "finished": "2026-10-11T03:41:58.141Z",
+  "finished": "2026-10-11T04:18:51.223Z",
   "summary": {
     "attempted": 0,
     "accepted": 0,
@@ -261,130 +450,95 @@
     "by_niche": {},
     "by_format": {
       "polished_video": 44,
-      "ugc_video": 8,
-      "text_search": 44,
+      "ugc_video": 11,
+      "text_search": 45,
       "static_image": 7
     },
     "video_coverage": {
       "home-services": {
-        "video_count": 8,
+        "video_count": 0,
         "required": 5,
-        "ok": true,
-        "ids": [
-          "arc_chevrolet_spot",
-          "arc_folgers_coffee",
-          "arc_homeservices_amc_jeep",
-          "arc_homeservices_baggiesfoodw",
-          "arc_homeservices_chevrolet",
-          "arc_homeservices_folgers",
-          "arc_homeservices_kelloggs_variety_pak",
-          "arc_homeservices_ugc_01"
-        ],
-        "scope": "corpus"
+        "ok": false,
+        "uncovered": true,
+        "ids": [],
+        "scope": "corpus",
+        "rule": "ad-library + 5-90s + niche-verified only"
       },
       "saas": {
-        "video_count": 6,
+        "video_count": 0,
         "required": 5,
-        "ok": true,
-        "ids": [
-          "arc_saas_freedoma1952_2",
-          "arc_saas_letter_from_an_airline_pilot_1",
-          "arc_saas_planetal1965",
-          "arc_saas_ugc_01",
-          "arc_saas_us_steel_2",
-          "arc_saas_your_hit_parade"
-        ],
-        "scope": "corpus"
+        "ok": false,
+        "uncovered": true,
+        "ids": [],
+        "scope": "corpus",
+        "rule": "ad-library + 5-90s + niche-verified only"
       },
       "skincare": {
-        "video_count": 7,
+        "video_count": 0,
         "required": 5,
-        "ok": true,
-        "ids": [
-          "arc_genteel_baby_bath",
-          "arc_skincare_201165_007_aftershave_television_commercial",
-          "arc_skincare_cresttoothpa_4",
-          "arc_skincare_folgers_4",
-          "arc_skincare_genteel_baby_bath",
-          "arc_skincare_labatts_beer",
-          "arc_skincare_ugc_01"
-        ],
-        "scope": "corpus"
+        "ok": false,
+        "uncovered": true,
+        "ids": [],
+        "scope": "corpus",
+        "rule": "ad-library + 5-90s + niche-verified only"
       },
       "dental": {
-        "video_count": 7,
+        "video_count": 0,
         "required": 5,
-        "ok": true,
-        "ids": [
-          "arc_crest_toothpaste_4",
-          "arc_dental_baggiesfoodw",
-          "arc_dental_cresttoothpa_4",
-          "arc_dental_folgers_10",
-          "arc_dental_folgers_12",
-          "arc_dental_genteel_baby_bath",
-          "arc_dental_ugc_01"
-        ],
-        "scope": "corpus"
+        "ok": false,
+        "uncovered": true,
+        "ids": [],
+        "scope": "corpus",
+        "rule": "ad-library + 5-90s + niche-verified only"
       },
       "ecom": {
-        "video_count": 6,
+        "video_count": 0,
         "required": 5,
-        "ok": true,
-        "ids": [
-          "arc_ecom_amc_jeep",
-          "arc_ecom_baggiesfoodw",
-          "arc_ecom_chevrolet",
-          "arc_ecom_folgers",
-          "arc_ecom_kelloggs_variety_pak",
-          "arc_ecom_ugc_01"
-        ],
-        "scope": "corpus"
+        "ok": false,
+        "uncovered": true,
+        "ids": [],
+        "scope": "corpus",
+        "rule": "ad-library + 5-90s + niche-verified only"
       },
       "beauty": {
-        "video_count": 6,
+        "video_count": 0,
         "required": 5,
-        "ok": true,
-        "ids": [
-          "arc_beauty_201165_007_aftershave_television_commercial",
-          "arc_beauty_cresttoothpa_4",
-          "arc_beauty_folgers_4",
-          "arc_beauty_genteel_baby_bath",
-          "arc_beauty_ugc_01",
-          "arc_beauty_your_hit_parade"
-        ],
-        "scope": "corpus"
+        "ok": false,
+        "uncovered": true,
+        "ids": [],
+        "scope": "corpus",
+        "rule": "ad-library + 5-90s + niche-verified only"
       },
       "legal": {
-        "video_count": 6,
+        "video_count": 0,
         "required": 5,
-        "ok": true,
-        "ids": [
-          "arc_legal_chevrolet",
-          "arc_legal_freedoma1952_2",
-          "arc_legal_letter_from_an_airline_pilot_1",
-          "arc_legal_planetal1965",
-          "arc_legal_ugc_01",
-          "arc_legal_us_steel_2"
-        ],
-        "scope": "corpus"
+        "ok": false,
+        "uncovered": true,
+        "ids": [],
+        "scope": "corpus",
+        "rule": "ad-library + 5-90s + niche-verified only"
       },
       "local": {
-        "video_count": 6,
+        "video_count": 0,
         "required": 5,
-        "ok": true,
-        "ids": [
-          "arc_local_amc_jeep",
-          "arc_local_baggiesfoodw",
-          "arc_local_chevrolet",
-          "arc_local_folgers",
-          "arc_local_kelloggs_variety_pak",
-          "arc_local_ugc_01"
-        ],
-        "scope": "corpus"
+        "ok": false,
+        "uncovered": true,
+        "ids": [],
+        "scope": "corpus",
+        "rule": "ad-library + 5-90s + niche-verified only"
       }
     },
-    "total_video": 52,
-    "corpus_total_video": 52,
-    "gaps": []
+    "total_video": 0,
+    "corpus_total_video": 0,
+    "gaps": [
+      "home-services:uncovered (video coverage: 0)",
+      "saas:uncovered (video coverage: 0)",
+      "skincare:uncovered (video coverage: 0)",
+      "dental:uncovered (video coverage: 0)",
+      "ecom:uncovered (video coverage: 0)",
+      "beauty:uncovered (video coverage: 0)",
+      "legal:uncovered (video coverage: 0)",
+      "local:uncovered (video coverage: 0)"
+    ]
   }
 }
