@@ -26,7 +26,8 @@ Ads, creatives, hooks, UGC, Meta/TikTok/Instagram/X/YouTube, “ads for my site,
 
 ## ONE-SHOT (mandatory)
 
-1. `node scripts/probe-harness.mjs` → tool card + **hardware/ceiling** ([`harness-equalization.md`](prompts/harness-equalization.md)) → pick rung via [`degradation-ladder.md`](references/creative-stack/degradation-ladder.md) (**never default to stills if any video tool is available**)
+1. `node scripts/probe-harness.mjs` → tool card + **hardware/ceiling** ([`harness-equalization.md`](prompts/harness-equalization.md)).
+   **Force the rung question (cannot auto-detect):** if `mcp_seedance_or_higgsfield` / video gen is not live in this session, **ask the user** — *"Do you have Higgsfield / Seedance / Kling / any video gen tool?"* — and **declare the answer on the tool card before choosing a rung**. Never silently default to assembler/stock when the user owns a gen tool → that is **handoff**. Use `probe-harness.mjs --fill --mcp … --video-gen … --rung …` to lock the card. Then pick rung via [`degradation-ladder.md`](references/creative-stack/degradation-ladder.md) (**never default to stills if any video tool is available**).
 2. URL/site? → `brief-from-url.mjs` then **`brand-harvest.mjs <url>`** (Gate 2.5 — lock palette/mascot/CTA from the site; never invent)
 3. **Style selection** — [`style-selection-engine.md`](references/creative-stack/style-selection-engine.md): clarifying questions (tone / proof / platform / funnel / tier) → niche → pattern → visual system → prompt contract **before** retrieve
 4. **Materials** — [`library/footage/RULE.md`](../../library/footage/RULE.md) · [`rungs.md`](../../library/footage/rungs.md): `assert-assets.mjs --niche …` → `buckets` / `achieved_rung` / `ad_grade_ok`. Gaps → `acquire-footage.mjs` or **i2v rung** (`--connected-i2v` / `--i2v-available`). Stills never fill footage slots. Prove with `prove-footage-gates.mjs`. State the rung in every brief.
@@ -45,10 +46,12 @@ No shell: paste [`prompts/context-pack-lite.md`](prompts/context-pack-lite.md) �
 | If | Then |
 | --- | --- |
 | Seedance/Higgsfield MCP live | **Rung 1** connected — **call tools**; name tool in render plan |
-| Image-to-video available (Kling, Wan, Grok, LTX, Veo, Runway, …) | **Rung 2** keyframes → short i2v → post — prefer Wan 2.2 / LTX-2.5 / Grok when no Seedance |
-| Those tools exist for user, not here | handoff prompts (same density) |
-| No video model at all | **Rung 3** motion storyboard (director’s pre-viz — **not** a slideshow) |
+| Image-to-video available in-session (Kling, Wan, Grok, LTX, Veo, Runway, …) | **Rung 2** keyframes → short i2v → post — prefer Wan 2.2 / LTX-2.5 / Grok when no Seedance |
+| User owns Higgsfield/Seedance/Kling (or peers), not connected here | **handoff** — write `<package>/gen-pack.md` via [`write-gen-pack.mjs`](scripts/write-gen-pack.mjs) (one paste-ready prompt per shot: tool, aspect, duration, camera, ref). Incomplete without it. Recipes: [`library/realism/gen-recipes.json`](../../library/realism/gen-recipes.json) |
+| User declared **no** video gen tools | **Rung 3** motion storyboard / assembler from ledgered assets (director’s pre-viz — **not** a slideshow). Do not pretend this is handoff. |
 | Text-only | package-only — still gold density, `NOT_RENDERED` |
+
+**`fm_skipped_handoff`:** probe/user said gen tools exist → agent silently dropped to stock/assembler without `gen-pack.md`. Guard: rung is **declared**, not inferred; handoff without gen-pack is incomplete.
 
 Full ladder: [`degradation-ladder.md`](references/creative-stack/degradation-ladder.md) · model notes: [`external-resources.md`](references/external-resources.md).
 

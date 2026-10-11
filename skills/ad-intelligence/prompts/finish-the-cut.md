@@ -26,9 +26,12 @@ FINISH-THE-CUT
 - Units generated as stills (awaiting i2v/assemble): [[list + media ids]]
 - Audio laid in post: [[VO and/or SFX and/or paid-safe bed — NOT "none" / silent export]]
 - Post assemble: [[CapCut steps — captions, VO, SFX/bed, logo, aspects]]
-- Blocked only if: [[truly no gen tools AND no assets — else generate]]
+- Blocked only if: [[user declared NO gen tools AND no ledgered assets — else generate or handoff]]
+- User owns Higgsfield/Seedance/Kling off-session?: [[yes → rung=handoff + gen-pack.md — NOT blocked, NOT stock]]
 - User assets requested?: [[optional upgrade — NOT a blocker]]
 ```
+
+**Do not conflate:** “MCP not connected here” ≠ “no gen tools.” If the user has Higgsfield (etc.), you are on **handoff**: write `gen-pack.md`, they generate, you assemble. Substituting stock while they have a gen tool is `fm_skipped_handoff`.
 
 ## Asset ladder — generate vs ask
 
@@ -37,7 +40,8 @@ FINISH-THE-CUT
 | User gave UI screenshots / logo SVG | Bind as Image-N; screen-record preferred for UI beats |
 | URL / brand colors only (S0–S1) | **Generate** calm UI keyframes per `generated-ui-authenticity.md`; tag ASSUMED; disclose synthetic UI if platform requires |
 | Pack product, no photos | Generate pack-locked stills from sheet; don’t ask and stall |
-| Truly text-only + **no** image/video tools | Package-only + NOT_RENDERED + paste-ready prompts — still full beat sheet |
+| User has Higgsfield/Seedance/Kling (handoff) | `write-gen-pack.mjs` → paste prompts → import clips → CapCut. Do not fill with stock to “unblock.” |
+| Truly text-only + user declared **no** image/video tools | Package-only + NOT_RENDERED + paste-ready prompts — still full beat sheet |
 
 **Optional ask (≤1):** “If you have real product UI exports, send them for a v2 lock.”  
 **Forbidden ask as delivery:** “Send screenshots so I can finish” when you already have Kling/Flux/etc.

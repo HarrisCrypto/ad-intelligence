@@ -35,6 +35,17 @@ jobs:
         working-directory: skills/ad-intelligence
         run: node scripts/demo-quality-gates.mjs
 
+      - name: Gen recipes filled + handoff gen-pack writer
+        run: |
+          node library/scripts/lint-gen-recipes.mjs
+          test -f skills/ad-intelligence/scripts/write-gen-pack.mjs
+          node skills/ad-intelligence/scripts/write-gen-pack.mjs \
+            --out /tmp/gen-pack-prove.md --niche home-services --brand prove
+          grep -q 'Paste-ready prompt' /tmp/gen-pack-prove.md
+          grep -q 'higgsfield' /tmp/gen-pack-prove.md
+          node skills/ad-intelligence/scripts/probe-harness.mjs --fill --mcp no --video-gen higgsfield --rung handoff --json \
+            | node -e "let s='';process.stdin.on('data',d=>s+=d);process.stdin.on('end',()=>{const j=JSON.parse(s); if(j.recommended_rung_hint!=='handoff') process.exit(2); if(!j.tool_card_template.gen_pack_required) process.exit(3);})"
+
       - name: Asset gate (audio + footage acquire path)
         run: |
           test -f library/assets/license-ledger.json
