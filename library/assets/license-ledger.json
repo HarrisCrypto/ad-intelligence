@@ -12,12 +12,27 @@
       "attribution": "Carefree — Kevin MacLeod (incompetech.com). Licensed under Creative Commons By Attribution 4.0.",
       "source_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Carefree.mp3",
       "composer": "Kevin MacLeod",
-      "allowed_use": ["commercial", "paid_social", "organic"],
+      "allowed_use": [
+        "commercial",
+        "paid_social",
+        "organic"
+      ],
       "bpm": null,
-      "mood": ["light", "optimistic", "carefree"],
+      "mood": [
+        "light",
+        "optimistic",
+        "carefree"
+      ],
       "duration_s": 205.14,
-      "loop_points_s": { "in": 0, "out": 205 },
-      "niches": ["home-services", "saas", "local"],
+      "loop_points_s": {
+        "in": 0,
+        "out": 205
+      },
+      "niches": [
+        "home-services",
+        "saas",
+        "local"
+      ],
       "verified_via": "agent_runtime"
     },
     {
@@ -28,12 +43,27 @@
       "attribution": "Wallpaper — Kevin MacLeod (incompetech.com). Licensed under Creative Commons By Attribution 4.0.",
       "source_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Wallpaper.mp3",
       "composer": "Kevin MacLeod",
-      "allowed_use": ["commercial", "paid_social", "organic"],
+      "allowed_use": [
+        "commercial",
+        "paid_social",
+        "organic"
+      ],
       "bpm": null,
-      "mood": ["calm", "ambient", "documentary"],
+      "mood": [
+        "calm",
+        "ambient",
+        "documentary"
+      ],
       "duration_s": 220.06,
-      "loop_points_s": { "in": 0, "out": 220 },
-      "niches": ["home-services", "saas", "brand"],
+      "loop_points_s": {
+        "in": 0,
+        "out": 220
+      },
+      "niches": [
+        "home-services",
+        "saas",
+        "brand"
+      ],
       "verified_via": "agent_runtime"
     },
     {
@@ -44,12 +74,27 @@
       "attribution": "Enthusiast — Tours. Free Music Archive. CC BY 3.0.",
       "source_url": "https://freemusicarchive.org/",
       "composer": "Tours",
-      "allowed_use": ["commercial", "paid_social", "organic"],
+      "allowed_use": [
+        "commercial",
+        "paid_social",
+        "organic"
+      ],
       "bpm": null,
-      "mood": ["upbeat", "indie", "energy"],
+      "mood": [
+        "upbeat",
+        "indie",
+        "energy"
+      ],
       "duration_s": 171.05,
-      "loop_points_s": { "in": 0, "out": 171 },
-      "niches": ["apps", "saas", "creator"],
+      "loop_points_s": {
+        "in": 0,
+        "out": 171
+      },
+      "niches": [
+        "apps",
+        "saas",
+        "creator"
+      ],
       "verified_via": "agent_runtime"
     },
     {
@@ -60,8 +105,15 @@
       "attribution": "Mixkit — free sound effect (mixkit.co). See https://mixkit.co/license/#sfxFree",
       "source_url": "https://mixkit.co/free-sound-effects/click/",
       "mixkit_id": 1109,
-      "allowed_use": ["commercial", "paid_social", "organic"],
-      "tags": ["ui", "click"],
+      "allowed_use": [
+        "commercial",
+        "paid_social",
+        "organic"
+      ],
+      "tags": [
+        "ui",
+        "click"
+      ],
       "verified_via": "agent_runtime"
     },
     {
@@ -72,8 +124,15 @@
       "attribution": "Mixkit free SFX",
       "source_url": "https://mixkit.co/free-sound-effects/notification/",
       "mixkit_id": 2310,
-      "allowed_use": ["commercial", "paid_social", "organic"],
-      "tags": ["notification", "alert"],
+      "allowed_use": [
+        "commercial",
+        "paid_social",
+        "organic"
+      ],
+      "tags": [
+        "notification",
+        "alert"
+      ],
       "verified_via": "agent_runtime"
     },
     {
@@ -84,8 +143,15 @@
       "attribution": "Mixkit free SFX",
       "source_url": "https://mixkit.co/free-sound-effects/whoosh/",
       "mixkit_id": 1485,
-      "allowed_use": ["commercial", "paid_social", "organic"],
-      "tags": ["whoosh", "transition"],
+      "allowed_use": [
+        "commercial",
+        "paid_social",
+        "organic"
+      ],
+      "tags": [
+        "whoosh",
+        "transition"
+      ],
       "verified_via": "agent_runtime"
     },
     {
@@ -96,8 +162,15 @@
       "attribution": "Mixkit free SFX",
       "source_url": "https://mixkit.co/free-sound-effects/whoosh/",
       "mixkit_id": 1490,
-      "allowed_use": ["commercial", "paid_social", "organic"],
-      "tags": ["whoosh", "soft"],
+      "allowed_use": [
+        "commercial",
+        "paid_social",
+        "organic"
+      ],
+      "tags": [
+        "whoosh",
+        "soft"
+      ],
       "verified_via": "agent_runtime"
     },
     {
@@ -108,9 +181,19 @@
       "attribution": "Mixkit free SFX",
       "source_url": "https://mixkit.co/free-sound-effects/phone/",
       "mixkit_id": 1350,
-      "allowed_use": ["commercial", "paid_social", "organic"],
-      "tags": ["phone", "ring", "home-services"],
-      "niches": ["home-services"],
+      "allowed_use": [
+        "commercial",
+        "paid_social",
+        "organic"
+      ],
+      "tags": [
+        "phone",
+        "ring",
+        "home-services"
+      ],
+      "niches": [
+        "home-services"
+      ],
       "verified_via": "agent_runtime"
     },
     {
@@ -121,9 +204,18 @@
       "attribution": "Mixkit free SFX",
       "source_url": "https://mixkit.co/free-sound-effects/phone/",
       "mixkit_id": 1352,
-      "allowed_use": ["commercial", "paid_social", "organic"],
-      "tags": ["phone", "busy"],
-      "niches": ["home-services"],
+      "allowed_use": [
+        "commercial",
+        "paid_social",
+        "organic"
+      ],
+      "tags": [
+        "phone",
+        "busy"
+      ],
+      "niches": [
+        "home-services"
+      ],
       "verified_via": "agent_runtime"
     },
     {
@@ -134,8 +226,15 @@
       "attribution": "Mixkit free SFX",
       "source_url": "https://mixkit.co/free-sound-effects/typing/",
       "mixkit_id": 1372,
-      "allowed_use": ["commercial", "paid_social", "organic"],
-      "tags": ["typing", "ui"],
+      "allowed_use": [
+        "commercial",
+        "paid_social",
+        "organic"
+      ],
+      "tags": [
+        "typing",
+        "ui"
+      ],
       "verified_via": "agent_runtime"
     },
     {
@@ -146,8 +245,15 @@
       "attribution": "Mixkit free SFX",
       "source_url": "https://mixkit.co/free-sound-effects/",
       "mixkit_id": 2000,
-      "allowed_use": ["commercial", "paid_social", "organic"],
-      "tags": ["impact", "hit"],
+      "allowed_use": [
+        "commercial",
+        "paid_social",
+        "organic"
+      ],
+      "tags": [
+        "impact",
+        "hit"
+      ],
       "verified_via": "agent_runtime"
     },
     {
@@ -157,10 +263,287 @@
       "license": "OWNED",
       "attribution": "Owned pink-noise room tone seed generated for this repo (not a music bed).",
       "source_url": "owned:ffmpeg-anoisesrc",
-      "allowed_use": ["commercial", "paid_social", "organic"],
-      "tags": ["room-tone", "under-vo"],
+      "allowed_use": [
+        "commercial",
+        "paid_social",
+        "organic"
+      ],
+      "tags": [
+        "room-tone",
+        "under-vo"
+      ],
       "duration_s": 8,
       "verified_via": "owned"
+    },
+    {
+      "id": "ft_hvac-bay_5986482",
+      "path": "library/footage/home-services/ft_hvac-bay_5986482.jpg",
+      "kind": "footage",
+      "media": "still",
+      "license": "CC BY 3.0",
+      "attribution": "File:Air conditioning unit-en.svg — Pbroks13 (CC BY 3.0). Via Wikimedia Commons.",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Air_conditioning_unit-en.svg",
+      "allowed_use": [
+        "commercial",
+        "paid_social",
+        "organic"
+      ],
+      "niches": [
+        "home-services"
+      ],
+      "tags": [
+        "hvac-bay",
+        "wikimedia",
+        "still"
+      ],
+      "bytes": 448213,
+      "width": 1280,
+      "height": 1070,
+      "verified_via": "agent_runtime",
+      "query": "HVAC technician working outdoor unit"
+    },
+    {
+      "id": "ft_hvac-tech_154193063",
+      "path": "library/footage/home-services/ft_hvac-tech_154193063.jpg",
+      "kind": "footage",
+      "media": "still",
+      "license": "Public domain",
+      "attribution": "File:HVAC- Bringing the Heat (8198789).jpg — U.S. Air force photo by Senior Airman Thomas Karol (Public domain). Via Wikimedia Commons.",
+      "source_url": "https://commons.wikimedia.org/wiki/File:HVAC-_Bringing_the_Heat_(8198789).jpg",
+      "allowed_use": [
+        "commercial",
+        "paid_social",
+        "organic"
+      ],
+      "niches": [
+        "home-services"
+      ],
+      "tags": [
+        "hvac-tech",
+        "wikimedia",
+        "still"
+      ],
+      "bytes": 368002,
+      "width": 1280,
+      "height": 1086,
+      "verified_via": "agent_runtime",
+      "query": "HVAC Bringing the Heat"
+    },
+    {
+      "id": "ft_hvac-tech_154193064",
+      "path": "library/footage/home-services/ft_hvac-tech_154193064.jpg",
+      "kind": "footage",
+      "media": "still",
+      "license": "Public domain",
+      "attribution": "File:HVAC- Bringing the Heat (8198790).jpg — U.S. Air force photo by Senior Airman Thomas Karol (Public domain). Via Wikimedia Commons.",
+      "source_url": "https://commons.wikimedia.org/wiki/File:HVAC-_Bringing_the_Heat_(8198790).jpg",
+      "allowed_use": [
+        "commercial",
+        "paid_social",
+        "organic"
+      ],
+      "niches": [
+        "home-services"
+      ],
+      "tags": [
+        "hvac-tech",
+        "wikimedia",
+        "still"
+      ],
+      "bytes": 219333,
+      "width": 1280,
+      "height": 886,
+      "verified_via": "agent_runtime",
+      "query": "HVAC Bringing the Heat"
+    },
+    {
+      "id": "ft_desk-phone_89035911",
+      "path": "library/footage/home-services/ft_desk-phone_89035911.jpg",
+      "kind": "footage",
+      "media": "still",
+      "license": "Public domain",
+      "attribution": "File:WE554wallphone.jpg — User:Mcheath (Public domain). Via Wikimedia Commons.",
+      "source_url": "https://commons.wikimedia.org/wiki/File:WE554wallphone.jpg",
+      "allowed_use": [
+        "commercial",
+        "paid_social",
+        "organic"
+      ],
+      "niches": [
+        "home-services"
+      ],
+      "tags": [
+        "desk-phone",
+        "wikimedia",
+        "still"
+      ],
+      "bytes": 139657,
+      "width": 1280,
+      "height": 960,
+      "verified_via": "agent_runtime",
+      "query": "rotary phone on desk"
+    },
+    {
+      "id": "ft_desk-phone_141514186",
+      "path": "library/footage/home-services/ft_desk-phone_141514186.jpg",
+      "kind": "footage",
+      "media": "still",
+      "license": "CC BY-SA 4.0",
+      "attribution": "File:Bardufoss Lufthavn Airport Norway UTSTILLING Avinor teknisk utstyr kommunikasjon NORSK MANUELL TELEFONAPPARAT AUTOMATTELEFON nummerskive Norwegian desk telephones rotary dial 1950s - 2022-05-13 - 2022-05-13 IMG 9538.jpg — Wolfmann (CC BY-SA 4.0). Via Wikimedia Commons.",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bardufoss_Lufthavn_Airport_Norway_UTSTILLING_Avinor_teknisk_utstyr_kommunikasjon_NORSK_MANUELL_TELEFONAPPARAT_AUTOMATTELEFON_nummerskive_Norwegian_desk_telephones_rotary_dial_1950s_-_2022-05-13_-_2022-05-13_IMG_9538.jpg",
+      "allowed_use": [
+        "commercial",
+        "paid_social",
+        "organic"
+      ],
+      "niches": [
+        "home-services"
+      ],
+      "tags": [
+        "desk-phone",
+        "wikimedia",
+        "still"
+      ],
+      "bytes": 268928,
+      "width": 1280,
+      "height": 815,
+      "verified_via": "agent_runtime",
+      "query": "rotary phone on desk"
+    },
+    {
+      "id": "ft_trades-hands_88813120",
+      "path": "library/footage/home-services/ft_trades-hands_88813120.jpg",
+      "kind": "footage",
+      "media": "still",
+      "license": "CC BY-SA 4.0",
+      "attribution": "File:A mechanic at work 2.jpg — Edward Middleton (CC BY-SA 4.0). Via Wikimedia Commons.",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_mechanic_at_work_2.jpg",
+      "allowed_use": [
+        "commercial",
+        "paid_social",
+        "organic"
+      ],
+      "niches": [
+        "home-services"
+      ],
+      "tags": [
+        "trades-hands",
+        "wikimedia",
+        "still"
+      ],
+      "bytes": 517392,
+      "width": 1280,
+      "height": 1280,
+      "verified_via": "agent_runtime",
+      "query": "mechanic hands tools"
+    },
+    {
+      "id": "ft_trades-hands_88813122",
+      "path": "library/footage/home-services/ft_trades-hands_88813122.jpg",
+      "kind": "footage",
+      "media": "still",
+      "license": "CC BY-SA 4.0",
+      "attribution": "File:A mechanic at work 3.jpg — Edward Middleton (CC BY-SA 4.0). Via Wikimedia Commons.",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_mechanic_at_work_3.jpg",
+      "allowed_use": [
+        "commercial",
+        "paid_social",
+        "organic"
+      ],
+      "niches": [
+        "home-services"
+      ],
+      "tags": [
+        "trades-hands",
+        "wikimedia",
+        "still"
+      ],
+      "bytes": 273696,
+      "width": 1280,
+      "height": 525,
+      "verified_via": "agent_runtime",
+      "query": "mechanic hands tools"
+    },
+    {
+      "id": "ft_work-van_26730610",
+      "path": "library/footage/home-services/ft_work-van_26730610.jpg",
+      "kind": "footage",
+      "media": "still",
+      "license": "CC BY-SA 3.0",
+      "attribution": "File:1935 American Austin Panel Van white.jpg — Mr.choppers (CC BY-SA 3.0). Via Wikimedia Commons.",
+      "source_url": "https://commons.wikimedia.org/wiki/File:1935_American_Austin_Panel_Van_white.jpg",
+      "allowed_use": [
+        "commercial",
+        "paid_social",
+        "organic"
+      ],
+      "niches": [
+        "home-services"
+      ],
+      "tags": [
+        "work-van",
+        "wikimedia",
+        "still"
+      ],
+      "bytes": 283869,
+      "width": 1280,
+      "height": 999,
+      "verified_via": "agent_runtime",
+      "query": "white panel van street"
+    },
+    {
+      "id": "ft_work-van_40739440",
+      "path": "library/footage/home-services/ft_work-van_40739440.jpg",
+      "kind": "footage",
+      "media": "still",
+      "license": "Public domain",
+      "attribution": "File:1995 Ford Falcon (XG) Longreach GLi panel van (2015-06-03) 01.jpg — OSX (Public domain). Via Wikimedia Commons.",
+      "source_url": "https://commons.wikimedia.org/wiki/File:1995_Ford_Falcon_(XG)_Longreach_GLi_panel_van_(2015-06-03)_01.jpg",
+      "allowed_use": [
+        "commercial",
+        "paid_social",
+        "organic"
+      ],
+      "niches": [
+        "home-services"
+      ],
+      "tags": [
+        "work-van",
+        "wikimedia",
+        "still"
+      ],
+      "bytes": 235094,
+      "width": 1280,
+      "height": 820,
+      "verified_via": "agent_runtime",
+      "query": "white panel van street"
+    },
+    {
+      "id": "ft_owner-ugc_119788762",
+      "path": "library/footage/home-services/ft_owner-ugc_119788762.jpg",
+      "kind": "footage",
+      "media": "still",
+      "license": "CC BY-SA 4.0",
+      "attribution": "File:Strawberry vendor in Drottningtorget, Trollhättan.jpg — W.carter (CC BY-SA 4.0). Via Wikimedia Commons.",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Strawberry_vendor_in_Drottningtorget,_Trollh%C3%A4ttan.jpg",
+      "allowed_use": [
+        "commercial",
+        "paid_social",
+        "organic"
+      ],
+      "niches": [
+        "home-services"
+      ],
+      "tags": [
+        "owner-ugc",
+        "wikimedia",
+        "still"
+      ],
+      "bytes": 393964,
+      "width": 1280,
+      "height": 853,
+      "verified_via": "agent_runtime",
+      "query": "man talking smartphone outdoor"
     }
   ]
 }

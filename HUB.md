@@ -5,26 +5,26 @@
 | Gate | Deliverable | Status |
 | --- | --- | --- |
 | **0–6 + E2E** | Classroom + QA + specs + critic | ✅ On main ([PR #21](https://github.com/HarrisCrypto/ad-intelligence/pull/21)) |
-| **2.6 / 3.5** | Asset library + realism layer | ⏳ In progress — audio seeded; **footage gap is the ceiling** |
+| **2.6 / 3.5** | Asset library + realism + **free acquire** | ✅ Audio + home-services stills seeded; tool routing for Pexels/Pixabay/Wikimedia/gen |
 
-## The real gap (named)
+## Materials (the unlock)
 
-Top FB/TikTok DR ads are **photographed moments**. Our path still produces **designed cards on a void**. Studying more ads will not fix that — the unlock is materials.
+Top FB/TikTok DR ads are **photographed moments**. Agents must **acquire or generate** materials — not invent cards on a void.
 
 | Library | Job | Status |
 | --- | --- | --- |
-| **A. Study corpus** | Knowing + shot recipes | 16 cards; recipes on key home-services cards |
-| **B. Asset library** | Usable licensed media | Beds + SFX + ambience ✅ · **footage ❌** |
-| **C. Realism layer** | Phone-native how | `library/realism/` presets ✅ |
-
-See [`docs/PHASE-2.6-ASSET-REALISM.md`](./docs/PHASE-2.6-ASSET-REALISM.md).
+| **A. Study corpus** | Knowing + shot recipes | 16 cards + recipes |
+| **B. Asset library** | Usable licensed media | Beds/SFX ✅ · `footage/home-services/` stills ✅ |
+| **C. Realism layer** | Phone-native how | `library/realism/` ✅ |
+| **Acquire** | Free-first fetch/gen | [`TOOL-ROUTING.md`](./library/assets/TOOL-ROUTING.md) · `fill-niche-gaps.mjs` |
 
 ```bash
+node library/scripts/fill-niche-gaps.mjs --niche home-services   # Pexels if keyed, else Wikimedia
 node library/scripts/asset-gap-report.mjs --niche home-services
-# → quality_ceiling: designed_cards_on_void … footage_gaps: 5
+# → full_native_eligible (stock stills) — still prefer real 30s phone shoot
 ```
 
-**Highest leverage:** 30s of real phone footage (ringing phone + van/bay + hands) ledgered under `library/footage/`.
+Set `PEXELS_API_KEY` / `PIXABAY_API_KEY` for higher-quality free stock. Gen path: recipes + `alternative-model-routing.md`.
 
 ## Layout
 

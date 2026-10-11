@@ -28,11 +28,12 @@ Ads, creatives, hooks, UGC, Meta/TikTok/Instagram/X/YouTube, “ads for my site,
 
 1. `node scripts/probe-harness.mjs` → tool card + **hardware/ceiling** ([`harness-equalization.md`](prompts/harness-equalization.md))
 2. URL/site? → `brief-from-url.mjs` then **`brand-harvest.mjs <url>`** (Gate 2.5 — lock palette/mascot/CTA from the site; never invent)
-3. Provision fonts from [`library/typography/`](../../library/typography/) if craft names them; voice tier per [`library/sound/`](../../library/sound/)
-4. `start-package.mjs` → `retrieve.mjs --compact` — open **`gold_fixtures`**; library-access if Meta/TikTok wall
-5. Emulate study structure ([`studies/README.md`](studies/README.md)) → Concept → ≥6 exact-VO rows → Craft via [`human-build-os.md`](references/human-build-os.md)
-6. Lint until `"ok": true` → **finish-the-cut** (full duration + audio) → `pipeline/qa/run-qa.mjs` on the export
-7. Deliver package + real job ids + QA JSON (not hook-only, not silent)
+3. **Materials** — [`library/assets/TOOL-ROUTING.md`](../../library/assets/TOOL-ROUTING.md): `assert-assets.mjs --niche …`; if footage gaps → `fill-niche-gaps.mjs` (Pexels/Pixabay keys if set, else Wikimedia) or gen via recipes + [`alternative-model-routing.md`](references/creative-stack/alternative-model-routing.md). Disclose ceiling before designing cards on a void.
+4. Provision fonts from [`library/typography/`](../../library/typography/); beds/SFX from [`library/sound/`](../../library/sound/) + [`license-ledger.json`](../../library/assets/license-ledger.json)
+5. `start-package.mjs` → `retrieve.mjs --compact` — open **`gold_fixtures`** + study-card **shot recipes / asset_ids**
+6. Emulate study structure → Concept → ≥6 exact-VO rows → Craft with **photographed/ledgered setups** ([`human-build-os.md`](references/human-build-os.md))
+7. Lint until `"ok": true` → **finish-the-cut** (full duration + licensed audio) → `pipeline/qa/run-qa.mjs` on the export
+8. Deliver package + real job ids + QA JSON + attributions (not hook-only, not silent)
 
 Ready check: `node scripts/agent-ready.mjs`  
 No shell: paste [`prompts/context-pack-lite.md`](prompts/context-pack-lite.md) · offline [`retrieve-offline-compact.json`](references/retrieve-offline-compact.json) · [`no-shell-lint-checklist.md`](prompts/no-shell-lint-checklist.md).

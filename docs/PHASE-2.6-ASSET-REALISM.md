@@ -55,8 +55,20 @@ Executable presets in `library/realism/`:
 
 - Music: Incompetech (CC BY), Free Music Archive, Pixabay, YouTube Audio Library, Uppbeat  
 - SFX: Mixkit, Freesound (CC0), Pixabay SFX  
-- Footage: Pexels, Pixabay Video, Mixkit, Coverr — **check each license**  
+- Footage: Pexels, Pixabay Video, Mixkit, Coverr, **Wikimedia Commons** — **check each license**  
 - Real UGC: phone shoot or creator marketplace  
+
+## Agent acquire path (implemented)
+
+| Step | Command |
+| --- | --- |
+| Route | [`library/assets/TOOL-ROUTING.md`](../library/assets/TOOL-ROUTING.md) |
+| Sources | [`library/assets/sources.json`](../library/assets/sources.json) |
+| Fill gaps | `node library/scripts/fill-niche-gaps.mjs --niche home-services` |
+| Explicit | `acquire-assets.mjs --source wikimedia\|pexels\|pixabay\|github` |
+| Gen motion | `library/realism/gen-recipes.json` + `alternative-model-routing.md` |
+
+Optional free API keys: `PEXELS_API_KEY`, `PIXABAY_API_KEY`, `UNSPLASH_ACCESS_KEY`.
 
 ## Out of scope for git
 

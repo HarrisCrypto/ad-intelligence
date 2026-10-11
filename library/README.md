@@ -7,8 +7,9 @@ Prose in `skills/.../references` teaches; **this tree ships files agents can exe
 | [`typography/`](./typography/) | ✅ OFL Anton / Poppins / Inter Tight + fallback map (Gate 2.5) |
 | [`sound/`](./sound/) | ✅ Licensed beds + Mixkit SFX + room tone (ledgered) |
 | [`assets/`](./assets/) | ✅ License ledger — no row, no ship |
-| [`footage/`](./footage/) | ⚠ Gap — photographed moments not seeded yet |
+| [`footage/`](./footage/) | ✅ home-services stills (Wikimedia); acquire via `fill-niche-gaps.mjs` |
 | [`realism/`](./realism/) | ✅ Phone-native motion/grade/gen recipes |
+| [`assets/TOOL-ROUTING.md`](./assets/TOOL-ROUTING.md) | ✅ Free-first ladder + API keys |
 | [`transitions/`](./transitions/) | ✅ `catalog.json` — hard cut default for DR |
 | [`camera/`](./camera/) | ✅ `catalog.json` |
 | [`captions/`](./captions/) | ✅ presets + Meta/TikTok safe zones |

@@ -7,16 +7,19 @@
 ### Added
 - `docs/PHASE-2.6-ASSET-REALISM.md` — three libraries (study / assets / realism) + gates
 - `library/assets/license-ledger.json` — every shippable asset has license + attribution
+- `library/assets/sources.json` + `TOOL-ROUTING.md` — free-first ladder (Pexels/Pixabay/Wikimedia/GitHub/gen)
+- `library/scripts/acquire-assets.mjs` + `fill-niche-gaps.mjs` — fetch safe-license stills/video into ledger
+- `library/footage/home-services/` — Wikimedia PD/CC stills for phone/hands/van/HVAC/UGC tags
 - `library/sound/beds/` — Kevin MacLeod CC-BY + FMA bed (real files, not sine)
 - `library/sound/sfx/` — Mixkit ring/whoosh/UI/typing/impact
 - `library/sound/ambience/amb_room_tone_owned.mp3`
 - `library/realism/` — phone-native presets + gen recipes
-- `library/scripts/asset-gap-report.mjs` + `assert-assets.mjs` — lower ceiling when footage missing
+- `library/scripts/asset-gap-report.mjs` + `assert-assets.mjs` — materials ceiling gate
 - Study-card shot fields: `recipe`, `how_this_shot_was_made`, `asset_ids`
-- `classroom/ingest/` stub for private-cache → draft cards
+- SKILL one-shot step for materials acquire before craft
 
-### Honest ceiling
-`assert-assets --niche home-services` → audio OK, **footage incomplete** → `designed_cards_on_void` disclosed before generate.
+### Ceiling now
+`assert-assets --niche home-services` → **full_native_eligible** (stock stills floor). Elite look still prefers USER_SUPPLIED 30s phone shoot + Pexels video when keyed.
 
 ## Unreleased — Classroom + Production Hub
 

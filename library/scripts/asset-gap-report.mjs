@@ -87,15 +87,28 @@ if (amb.length < need.ambience) {
   gaps.push({ bucket: "ambience", have: amb.length, need: need.ambience });
 }
 
+const TAG_ALIASES = {
+  "after-hours phone on desk": ["desk-phone", "phone", "smartphone", "desk"],
+  "tradesperson hands / tools": ["trades-hands", "hands", "tools", "technician", "wrench"],
+  "work van or bay": ["work-van", "van", "bay", "hvac-bay", "truck"],
+  "real facility exterior": ["facility", "hvac-tech", "hvac-bay", "outdoor unit", "building"],
+  "owner/talking-head UGC": ["owner-ugc", "portrait", "talking", "person"],
+  "real hands on laptop": ["laptop-hands", "laptop", "typing"],
+  "office desk practical light": ["office-desk", "office", "desk"],
+  "phone notification moment": ["desk-phone", "notification", "smartphone"],
+};
+
 const footageGaps = [];
 for (const tag of need.footage_tags || []) {
-  const hit = footage.some((a) =>
-    JSON.stringify(a).toLowerCase().includes(tag.split(" ")[0].toLowerCase())
-  );
+  const aliases = TAG_ALIASES[tag] || tag.toLowerCase().split(/[\s/]+/).filter(Boolean);
+  const hit = footage.some((a) => {
+    const blob = `${(a.tags || []).join(" ")} ${a.id} ${a.path} ${a.query || ""}`.toLowerCase();
+    return aliases.some((al) => blob.includes(String(al).toLowerCase()));
+  });
   if (!hit) {
     footageGaps.push({
       missing: tag,
-      note: "No ledgered footage — gen recipe or USER_SUPPLIED shoot required",
+      note: "No ledgered footage — run fill-niche-gaps.mjs or USER_SUPPLIED shoot",
     });
   }
 }

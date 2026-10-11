@@ -1,26 +1,41 @@
 # Footage library
 
-**Status:** Gap — this is the materials unlock. Audio is seeded; photographed moments are not.
+Usable stills/video for timelines — **not** competitor ads. Every file must appear in [`../assets/license-ledger.json`](../assets/license-ledger.json).
 
-## Required for home-services (asset-gap-report)
+## Acquire (free first)
 
-| Tag | Have | Notes |
-| --- | --- | --- |
-| After-hours phone on desk | ❌ | Highest leverage for voice-agent ads |
-| Tradesperson hands / tools | ❌ | Work proof |
-| Work van or bay | ❌ | Geo trust |
-| Real facility exterior | ❌ | Local |
-| Owner / talking-head UGC | ❌ | Confession / objection |
+```bash
+# Auto-fill niche gaps (Pexels if PEXELS_API_KEY set, else Wikimedia)
+node library/scripts/fill-niche-gaps.mjs --niche home-services --limit 2
 
-## How to seed (legal)
+# Explicit
+node library/scripts/acquire-assets.mjs --source wikimedia \
+  --query "HVAC technician working" --tag hvac-tech --niche home-services
 
-1. Download from Pexels / Pixabay Video / Mixkit / Coverr — **read license**.  
-2. Place under `library/footage/<niche>/`.  
-3. Add a row to `library/assets/license-ledger.json` (`kind: footage`).  
-4. Re-run `node library/scripts/asset-gap-report.mjs --niche home-services`.
+PEXELS_API_KEY=… node library/scripts/acquire-assets.mjs --source pexels \
+  --query "phone on desk night" --tag desk-phone --niche home-services --video
+```
 
-**Better:** shoot 30s on a phone (ringing phone + van + hands). User-supplied clips go in `classroom/private-cache/` or ledgered here with `license: USER_SUPPLIED`.
+Routing ladder + API key links: [`../assets/TOOL-ROUTING.md`](../assets/TOOL-ROUTING.md).
 
-## Rule
+## home-services (seeded)
 
-If footage buckets are empty, `assert-assets.mjs` lowers the quality ceiling and compose must disclose **designed_cards_on_void** before generating.
+Stills from Wikimedia (Public domain / CC BY / CC BY-SA). Prefer PD/CC-BY for paid ads; BY-SA requires share-alike compliance — check before ship or replace with Pexels.
+
+| Tag | Role |
+| --- | --- |
+| `desk-phone` | Missed-call / after-hours object |
+| `trades-hands` | Work proof |
+| `work-van` | Geo trust |
+| `hvac-tech` / `hvac-bay` | Facility / tech |
+| `owner-ugc` | Talking-head energy |
+
+Turn stills into motion with i2v per [`../realism/gen-recipes.json`](../realism/gen-recipes.json) + [`alternative-model-routing.md`](../../skills/ad-intelligence/references/creative-stack/alternative-model-routing.md).
+
+## Ceiling
+
+```bash
+node library/scripts/asset-gap-report.mjs --niche home-services
+```
+
+Empty buckets → compose discloses `designed_cards_on_void`. Full buckets → still prefer a real 30s phone shoot for elite native look.

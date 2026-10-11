@@ -129,11 +129,12 @@ const next = [
   files.brand_harvest && network
     ? "Brand harvest (Gate 2.5): node scripts/brand-harvest.mjs <url> — lock consistency from ASSET_VERIFIED"
     : "Brand harvest: paste site facts; never invent palette/mascot",
-  "Provision fonts: library/typography (Anton/Poppins/Inter Tight OFL)",
+  "Materials: node library/scripts/assert-assets.mjs --niche <n> — fill gaps via fill-niche-gaps.mjs (Pexels/Pixabay/Wikimedia) per library/assets/TOOL-ROUTING.md",
+  "Provision fonts: library/typography (Anton/Poppins/Inter Tight OFL) + ledgered beds/SFX",
   "node scripts/start-package.mjs --out packages/<brand>-ad.md",
-  "node scripts/retrieve.mjs --niche <n> --platform <p> --limit 5 --compact — open gold_fixtures",
+  "node scripts/retrieve.mjs --niche <n> --platform <p> --limit 5 --compact — open gold_fixtures + shot recipes",
   "Open examples/visual/attention-lab.html + research URLs",
-  "Fill Concept ≥6 beats Craft → node scripts/lint-package.mjs … until ok:true",
+  "Fill Concept ≥6 beats Craft with ledgered footage/gen recipes → lint until ok:true",
   "Finish-the-cut + pipeline/qa/run-qa.mjs on the export",
 ];
 

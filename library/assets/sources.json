@@ -1,0 +1,155 @@
+{
+  "id": "free-asset-sources",
+  "version": "1.0.0",
+  "updated": "2026-10-11",
+  "rule": "Prefer free + safe licenses. Ledger every file. Never scrape competitor ads. Skip trademarked brand vehicles when possible.",
+  "license_allowlist": [
+    "Public domain",
+    "CC0",
+    "CC0 1.0",
+    "CC BY 1.0",
+    "CC BY 2.0",
+    "CC BY 2.5",
+    "CC BY 3.0",
+    "CC BY 4.0",
+    "CC-BY-4.0",
+    "CC-BY-3.0",
+    "Mixkit-License",
+    "OWNED",
+    "USER_SUPPLIED"
+  ],
+  "license_caution": [
+    "CC BY-SA 2.0",
+    "CC BY-SA 3.0",
+    "CC BY-SA 4.0"
+  ],
+  "sources": [
+    {
+      "id": "wikimedia_commons",
+      "name": "Wikimedia Commons",
+      "kind": ["still", "footage"],
+      "cost": "free",
+      "auth": "none",
+      "quality": "variable — filter for photographs, not diagrams",
+      "api": "https://commons.wikimedia.org/w/api.php",
+      "acquire": "library/scripts/acquire-assets.mjs --source wikimedia",
+      "safe": true,
+      "notes": "No API key. Prefer Public domain / CC BY. Always attribute."
+    },
+    {
+      "id": "pexels",
+      "name": "Pexels",
+      "kind": ["still", "footage"],
+      "cost": "free",
+      "auth": "PEXELS_API_KEY",
+      "quality": "high UGC/stock look",
+      "api": "https://api.pexels.com/v1/search",
+      "video_api": "https://api.pexels.com/videos/search",
+      "acquire": "PEXELS_API_KEY=… node library/scripts/acquire-assets.mjs --source pexels",
+      "safe": true,
+      "notes": "Free API key at https://www.pexels.com/api/ — best free photo/video for ads"
+    },
+    {
+      "id": "pixabay",
+      "name": "Pixabay",
+      "kind": ["still", "footage", "music", "sfx"],
+      "cost": "free",
+      "auth": "PIXABAY_API_KEY",
+      "quality": "high",
+      "api": "https://pixabay.com/api/",
+      "acquire": "PIXABAY_API_KEY=… node library/scripts/acquire-assets.mjs --source pixabay",
+      "safe": true,
+      "notes": "https://pixabay.com/api/docs/"
+    },
+    {
+      "id": "unsplash",
+      "name": "Unsplash",
+      "kind": ["still"],
+      "cost": "free",
+      "auth": "UNSPLASH_ACCESS_KEY",
+      "quality": "high editorial",
+      "api": "https://api.unsplash.com/search/photos",
+      "safe": true,
+      "notes": "Attribution appreciated; check current API ToS for ads"
+    },
+    {
+      "id": "mixkit",
+      "name": "Mixkit",
+      "kind": ["sfx", "music", "footage"],
+      "cost": "free",
+      "auth": "none for many SFX CDN urls",
+      "quality": "good for SFX; video CDN may 403 from bots",
+      "safe": true,
+      "notes": "Already seeded SFX in library/sound/sfx/"
+    },
+    {
+      "id": "coverr",
+      "name": "Coverr",
+      "kind": ["footage"],
+      "cost": "free",
+      "auth": "none / site download",
+      "quality": "high vertical/horizontal stock video",
+      "safe": true,
+      "notes": "Manual or site API if available — check license page"
+    },
+    {
+      "id": "incompetech",
+      "name": "Incompetech (Kevin MacLeod)",
+      "kind": ["music"],
+      "cost": "free",
+      "auth": "none",
+      "license": "CC-BY-4.0",
+      "safe": true,
+      "notes": "Beds already in library/sound/beds/"
+    },
+    {
+      "id": "github_cc0_packs",
+      "name": "GitHub CC0 / open asset packs",
+      "kind": ["sfx", "still", "other"],
+      "cost": "free",
+      "auth": "none (public raw/release)",
+      "safe": true,
+      "repos": [
+        {
+          "repo": "Kenney/UI-Audio",
+          "note": "If available — UI clicks (verify license file)"
+        },
+        {
+          "repo": "googlefonts/*",
+          "note": "OFL fonts — already mirrored under library/typography"
+        }
+      ],
+      "acquire": "node library/scripts/acquire-assets.mjs --source github --repo owner/name --path path --license CC0"
+    },
+    {
+      "id": "connected_image_gen",
+      "name": "Connected image gen (Flux / SD / Higgsfield / etc.)",
+      "kind": ["still"],
+      "cost": "credits or local GPU",
+      "auth": "MCP / API / local",
+      "quality": "best when recipe from library/realism/gen-recipes.json",
+      "safe": true,
+      "notes": "Generate then ledger as OWNED/ASSUMED generated; de-shine with realism presets"
+    },
+    {
+      "id": "connected_video_gen",
+      "name": "Connected video gen",
+      "kind": ["footage"],
+      "cost": "credits or local",
+      "auth": "MCP / API / open weights",
+      "quality": "use alternative-model-routing.md ladder",
+      "safe": true,
+      "route_doc": "skills/ad-intelligence/references/creative-stack/alternative-model-routing.md"
+    },
+    {
+      "id": "user_shoot",
+      "name": "User phone shoot / creator marketplace",
+      "kind": ["footage", "still"],
+      "cost": "time / hire",
+      "auth": "USER_SUPPLIED",
+      "quality": "highest for native FB/TikTok look",
+      "safe": true,
+      "notes": "30s ringing phone + van + hands beats every stock pack"
+    }
+  ]
+}
