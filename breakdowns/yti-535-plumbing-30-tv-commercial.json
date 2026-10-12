@@ -41,17 +41,23 @@
   "pacing": "YouTube's results label states 31 seconds, from a hiring question to a short service list to a reliability close.",
   "text_overlays": [
     {
-      "wording": "You can count on 535 Plumbing to be there for you.",
-      "size": "Not stated on the official page.",
-      "placement": "Spoken on the official page; the page does not say these words are burned in.",
-      "timing": "close"
+      "wording": "(808) 300-0535",
+      "size": "Lower-third type",
+      "placement": "Lower third, on screen through the spot and on the end card",
+      "timing": "Throughout"
+    },
+    {
+      "wording": "535plumbing.com",
+      "size": "Lower-third type",
+      "placement": "URL bar in the lower third, on screen through the spot and on the end card",
+      "timing": "Throughout"
     }
   ],
   "typography_ui": "The official page does not describe a typeface.",
   "color_grade": "Not stated on the official page.",
   "music_sound": "The official page does not describe the score.",
   "voiceover": "Spoken lines are on the watch page.",
-  "cta": "The close is a reliability promise, not a discount.",
+  "cta": "Call (808) 300-0535 or go to 535plumbing.com.",
   "emotional_angle": "Trust and care for the household, including a zero-contact line.",
   "why_it_worked": "The spot answers the hiring fear first, then lists three jobs, then stops. It does not tour a truck.",
   "cinematic_qualities": [

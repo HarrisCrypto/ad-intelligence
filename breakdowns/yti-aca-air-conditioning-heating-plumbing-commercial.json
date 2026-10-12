@@ -40,17 +40,41 @@
   "pacing": "YouTube's results label states 31 seconds: history, then the emergency, then a phone-call close.",
   "text_overlays": [
     {
-      "wording": "ACA, we're just a phone call away.",
-      "size": "Not stated on the official page.",
-      "placement": "Spoken on the official page; the page does not say these words are burned in.",
-      "timing": "close"
+      "wording": "CALL NOW (318) 443-6321",
+      "size": "Lower-third type",
+      "placement": "Lower third, on screen",
+      "timing": "Throughout"
+    },
+    {
+      "wording": "acaalex.com",
+      "size": "Lower-third type",
+      "placement": "Lower third, on screen, with a visit line",
+      "timing": "Throughout"
+    },
+    {
+      "wording": "75+ YEARS",
+      "size": "Card type",
+      "placement": "On a mid-spot card, on screen",
+      "timing": "Middle"
+    },
+    {
+      "wording": "24/7 PLUMBING",
+      "size": "Card type",
+      "placement": "On a mid-spot card, on screen",
+      "timing": "Middle"
+    },
+    {
+      "wording": "ANYTIME DAY OR NIGHT",
+      "size": "Card type",
+      "placement": "On the same mid-spot card, on screen",
+      "timing": "Middle"
     }
   ],
   "typography_ui": "The official page does not describe a typeface.",
   "color_grade": "Not stated on the official page.",
   "music_sound": "The official page does not describe the score.",
   "voiceover": "Spoken lines are on the watch page.",
-  "cta": "Call ACA. The page does not print the digits in the captions.",
+  "cta": "Call (318) 443-6321 or visit acaalex.com.",
   "emotional_angle": "Urgency without panic: the problem can happen anytime, and someone answers.",
   "why_it_worked": "A tenure line and two concrete failures do the work. The ask is simply to call.",
   "cinematic_qualities": [

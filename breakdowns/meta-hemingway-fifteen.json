@@ -6,7 +6,7 @@
   "voiceover": "Not stated on the official page.",
   "cta": "Not stated on the official page.",
   "emotional_angle": "The official page does not name an emotional angle.",
-  "last_verified": "2026-10-11",
+  "last_verified": "2026-10-12",
   "rebuild_recipe": [
     "Condense one story you have rights to into about 15 seconds.",
     "Give each episode its own visual system.",
@@ -16,8 +16,8 @@
   "id": "meta-hemingway-fifteen",
   "brand": "Ernest Hemingway Foundation",
   "advertiser": "The Ernest Hemingway Foundation",
-  "platform": "instagram_reels",
-  "format": "15-second Instagram film",
+  "platform": "meta_feed",
+  "format": "15-second Instagram feed film",
   "aspect_ratio": "1:1",
   "length_s": 15,
   "year": 2016,
@@ -56,5 +56,5 @@
     "Stated :15 length",
     "A different animation style per film"
   ],
-  "safe_zone_notes": "The page says Instagram social feed and does not print pixels. This file uses 1:1 because a 2016 feed film is not described as vertical. Check the placement before you lock a ratio."
+  "safe_zone_notes": "1:1 is an unverified guess. The 2016 One Show page says the films launched on Instagram and were viewed in the social feed. It does not print a pixel size or an aspect ratio. Reels launched later, so this card is meta_feed."
 }

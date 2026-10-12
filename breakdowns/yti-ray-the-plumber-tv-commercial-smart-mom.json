@@ -42,16 +42,28 @@
   "text_overlays": [
     {
       "wording": "1-877-CALL-RAY",
-      "size": "Not stated on the official page.",
-      "placement": "Spoken on the official page; the page does not say these words are burned in.",
-      "timing": "close"
+      "size": "Lower-third type",
+      "placement": "Lower third, on screen",
+      "timing": "Throughout"
+    },
+    {
+      "wording": "24/7 SERVICE",
+      "size": "Lower-third type",
+      "placement": "Lower third, on screen beside the number",
+      "timing": "Throughout"
+    },
+    {
+      "wording": "SAME DAY SERVICE",
+      "size": "Lower-third type",
+      "placement": "Lower third, on screen beside the number",
+      "timing": "Throughout"
     }
   ],
   "typography_ui": "The official page does not describe a typeface.",
   "color_grade": "Not stated on the official page.",
   "music_sound": "The official page does not describe the score.",
   "voiceover": "Spoken lines are on the watch page.",
-  "cta": "Call 1-877-CALL-RAY for fast, dependable, same-day service.",
+  "cta": "Call 1-877-CALL-RAY. The number is on screen with 24/7 service and same-day service.",
   "emotional_angle": "Admiration. Mom is the authority, and her plumber choice is the proof.",
   "why_it_worked": "The joke stack makes the phone number feel like the smart decision, not a shout.",
   "cinematic_qualities": [

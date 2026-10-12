@@ -2,8 +2,8 @@
   "id": "yti-ramp-multiply-30",
   "brand": "Ramp",
   "advertiser": "Ramp",
-  "platform": "youtube_instream",
-  "format": "Super Bowl commercial, vertical file",
+  "platform": "youtube_shorts",
+  "format": "YouTube Short",
   "aspect_ratio": "9:16",
   "length_s": 30,
   "year": 2026,
@@ -42,17 +42,23 @@
   "pacing": "The Shorts player lists lengthSeconds 30 and approxDurationMs about 30000. The beats are short office interruptions, not a product demo.",
   "text_overlays": [
     {
-      "wording": "Multiply what's possible at ramp.com.",
-      "size": "Not stated on the official page.",
-      "placement": "Spoken on the official page; the page does not say these words are burned in.",
-      "timing": "close"
+      "wording": "Policy Violation",
+      "size": "UI label",
+      "placement": "On the Ramp screen inside the office scene, on screen",
+      "timing": "Middle"
+    },
+    {
+      "wording": "Multiply what's possible",
+      "size": "End super",
+      "placement": "On screen at the close. ramp.com is spoken, not this super.",
+      "timing": "Close"
     }
   ],
   "typography_ui": "The official page does not describe a typeface.",
   "color_grade": "Not stated on the official page.",
   "music_sound": "The official page does not name a track. The description names the director and the lead.",
   "voiceover": "Spoken lines are on the watch page.",
-  "cta": "Multiply what's possible at ramp.com.",
+  "cta": "The on-screen close is Multiply what's possible. The voice says at ramp.com.",
   "emotional_angle": "Relief inside a chaotic expense meeting. The product is the person who walks in and fixes it.",
   "why_it_worked": "A 30-second office farce lets the expense mess stay funny while the only sell is the closing URL.",
   "cinematic_qualities": [
@@ -67,6 +73,6 @@
     "Keep the file's real aspect. This one is vertical.",
     "Do not copy the brand's logos, characters, art, or exact copy."
   ],
-  "safe_zone_notes": "The Shorts player for video id kOAKdpWaWcI lists a 1080x1920 stream and lengthSeconds 30. Public frame0.jpg is 268x480. A 1280x720 thumbnail also exists and is not the video aspect. This file is 9:16. A 30-second non-skippable connected-TV placement requires a horizontal master, so do not treat this upload as that master. In a vertical player, leave about 14% of the top and 35% of the bottom clear of type. Upload date Jan 27, 2026.",
+  "safe_zone_notes": "The Shorts player for video id kOAKdpWaWcI lists a 1080x1920 stream and lengthSeconds 30. Public frame0.jpg is 268x480. This file is a 9:16 YouTube Short, not an in-stream horizontal master. Like, comment, and share sit on the right. The Shorts spec does not print one pixel inset. Keep type out of the right-hand buttons and the bottom caption. Upload date Jan 27, 2026.",
   "last_verified": "2026-10-12"
 }

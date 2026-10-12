@@ -41,17 +41,29 @@
   "pacing": "YouTube's results label states 31 seconds. Casual stakes, then one decision he will not gamble.",
   "text_overlays": [
     {
-      "wording": "Give Deluxe a call.",
-      "size": "Not stated on the official page.",
-      "placement": "Spoken on the official page; the page does not say these words are burned in.",
-      "timing": "close"
+      "wording": "Worry-Free Will",
+      "size": "Name super",
+      "placement": "Lower center, on screen through the spot",
+      "timing": "Throughout"
+    },
+    {
+      "wording": "DeluxePlumbing.com",
+      "size": "End-card type",
+      "placement": "End card, on screen",
+      "timing": "End card"
+    },
+    {
+      "wording": "(518)",
+      "size": "End-card type",
+      "placement": "Start of the phone number on the end card. The remaining digits were not read, so they are not filled in.",
+      "timing": "End card"
     }
   ],
   "typography_ui": "The official page does not describe a typeface.",
   "color_grade": "Not stated on the official page.",
   "music_sound": "The captions mark music and applause at the end. They do not name a track.",
   "voiceover": "Spoken lines are on the watch page.",
-  "cta": "Call Deluxe. The captions do not print a phone number.",
+  "cta": "Call the number on the end card or go to DeluxePlumbing.com. The number begins (518).",
   "emotional_angle": "Ease. The only worry he refuses is a bad plumber.",
   "why_it_worked": "The character's indifference to everything else makes the plumber choice the one serious beat.",
   "cinematic_qualities": [

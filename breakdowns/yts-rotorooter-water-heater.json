@@ -41,17 +41,41 @@
   "pacing": "The Shorts player lists lengthSeconds 31. One question, three types, a call.",
   "text_overlays": [
     {
-      "wording": "Call the pros today.",
-      "size": "Not stated on the official page.",
-      "placement": "Spoken on the official page; the page does not say these words are burned in.",
-      "timing": "close"
+      "wording": "GAS",
+      "size": "Section label",
+      "placement": "On screen over the gas-heater section",
+      "timing": "Early"
+    },
+    {
+      "wording": "ELECTRIC",
+      "size": "Section label",
+      "placement": "On screen over the electric-heater section",
+      "timing": "Middle"
+    },
+    {
+      "wording": "TANKLESS",
+      "size": "Section label",
+      "placement": "On screen over the tankless section",
+      "timing": "Middle"
+    },
+    {
+      "wording": "1-800-GET-ROTO",
+      "size": "End-card type",
+      "placement": "End card, on screen",
+      "timing": "End card"
+    },
+    {
+      "wording": "rotorooter.com",
+      "size": "End-card type",
+      "placement": "End card, on screen under the phone line",
+      "timing": "End card"
     }
   ],
   "typography_ui": "The official page does not describe a typeface.",
   "color_grade": "Not stated on the official page.",
   "music_sound": "The official page does not describe the score.",
   "voiceover": "Spoken lines are on the watch page.",
-  "cta": "Call Roto-Rooter. The captions say call the pros and do not print digits.",
+  "cta": "Call 1-800-GET-ROTO or go to rotorooter.com.",
   "emotional_angle": "Practical help. The choice is framed as confusing, then reduced to three lines.",
   "why_it_worked": "A 30-second Short can teach the choice and still end on the company that installs it.",
   "cinematic_qualities": [

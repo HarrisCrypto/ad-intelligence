@@ -40,17 +40,17 @@
   "pacing": "YouTube's results label states 60 seconds. This cut adds the crowd joining, which the 31-second cut skips.",
   "text_overlays": [
     {
-      "wording": "Canva, the thing that makes anything a thing.",
-      "size": "Not stated on the official page.",
-      "placement": "Spoken on the official page; the page does not say these words are burned in.",
-      "timing": "close"
+      "wording": "THE THING.",
+      "size": "End super",
+      "placement": "End still, on screen, with the Canva wordmark",
+      "timing": "End"
     }
   ],
   "typography_ui": "The official page does not describe a typeface.",
   "color_grade": "Not stated on the official page.",
   "music_sound": "The captions mark music and singing and do not name the track.",
   "voiceover": "Spoken lines are on the watch page.",
-  "cta": "Make the thing. Same end line as the shorter Canva cut.",
+  "cta": "Make the thing. The end still shows The thing and the Canva wordmark, not a URL.",
   "emotional_angle": "Belonging. The longer cut is about other people joining, not only the founder of the thing.",
   "why_it_worked": "The extra half minute is the crowd. Keep both cuts only because that beat is actually different.",
   "cinematic_qualities": [

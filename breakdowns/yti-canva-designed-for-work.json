@@ -40,17 +40,17 @@
   "pacing": "YouTube's results label states 31 seconds. Three tools, then a work claim.",
   "text_overlays": [
     {
-      "wording": "It's not just design. It's designed for work.",
-      "size": "Not stated on the official page.",
-      "placement": "Spoken on the official page; the page does not say these words are burned in.",
-      "timing": "close"
+      "wording": "DESIGNED FOR WORK.",
+      "size": "End super",
+      "placement": "End still, on screen, with the Canva wordmark",
+      "timing": "End"
     }
   ],
   "typography_ui": "The official page does not describe a typeface.",
   "color_grade": "Not stated on the official page.",
   "music_sound": "The official page does not describe the score.",
   "voiceover": "Spoken lines are on the watch page.",
-  "cta": "Use it for work, not only for design. The captions do not print a URL.",
+  "cta": "Use it for work. The end still shows Designed for work and the Canva wordmark, not a URL.",
   "emotional_angle": "Ambition at work. Design is pulled into ordinary team tasks.",
   "why_it_worked": "Each office object gets one elevated job, so the end line feels earned.",
   "cinematic_qualities": [

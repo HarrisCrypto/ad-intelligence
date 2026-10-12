@@ -42,17 +42,23 @@
   "pacing": "YouTube's results label states 2 minutes 34 seconds. A definition, a scale claim, one product example.",
   "text_overlays": [
     {
-      "wording": "Find your thing.",
-      "size": "Not stated on the official page.",
-      "placement": "Spoken on the official page; the page does not say these words are burned in.",
-      "timing": "close"
+      "wording": "FIND YOUR THING",
+      "size": "End super",
+      "placement": "End card, on screen",
+      "timing": "End"
+    },
+    {
+      "wording": "REDBUBBLE.COM",
+      "size": "End-card type",
+      "placement": "Lower right of the end card, on screen",
+      "timing": "End"
     }
   ],
   "typography_ui": "The official page does not describe a typeface.",
   "color_grade": "Not stated on the official page.",
   "music_sound": "The captions mark music at the ends and do not name it.",
   "voiceover": "Spoken lines are on the watch page.",
-  "cta": "Visit the marketplace and find a design. The captions start a URL and do not finish it cleanly, so this card does not invent the address.",
+  "cta": "Find your thing at redbubble.com. The URL is on the end card.",
   "emotional_angle": "Belonging. A mass object becomes personal because an artist made the art.",
   "why_it_worked": "The avocado case is the whole argument: same product, different maker, different meaning.",
   "cinematic_qualities": [

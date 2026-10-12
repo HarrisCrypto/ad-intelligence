@@ -40,10 +40,16 @@
   "pacing": "YouTube's results label states 29 seconds. Panic, a tool, a silly answer, done.",
   "text_overlays": [
     {
-      "wording": "Don't panic. Gift easy with Gift Mode.",
-      "size": "Not stated on the official page.",
-      "placement": "Spoken on the official page; the page does not say these words are burned in.",
-      "timing": "close"
+      "wording": "Don't panic.",
+      "size": "End super",
+      "placement": "On screen at the close",
+      "timing": "Close"
+    },
+    {
+      "wording": "Gift easy with Gift Mode.",
+      "size": "End super",
+      "placement": "On screen at the close, over the Etsy phone UI",
+      "timing": "Close"
     }
   ],
   "typography_ui": "The official page does not describe a typeface.",

@@ -1,10 +1,16 @@
 {
   "text_overlays": [
     {
-      "wording": "Built strong. Engineered smart.",
-      "size": "Not stated on the official page.",
-      "placement": "Spoken on the watch page, not confirmed as type",
-      "timing": "close"
+      "wording": "BUILT STRONG. ENGINEERED SMART.",
+      "size": "End line",
+      "placement": "On screen at the close",
+      "timing": "Close"
+    },
+    {
+      "wording": "IT'S HARD TO STOP A TRANE.",
+      "size": "End line",
+      "placement": "On screen under the end line",
+      "timing": "Close"
     }
   ],
   "typography_ui": "The official page does not describe a typeface.",

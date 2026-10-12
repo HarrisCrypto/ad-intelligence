@@ -40,17 +40,17 @@
   "pacing": "YouTube's results label states 31 seconds. The lines move from weather image to technicians to a comfort promise.",
   "text_overlays": [
     {
-      "wording": "CDL keeping you comfortable no matter the weather.",
-      "size": "Not stated on the official page.",
-      "placement": "Spoken on the official page; the page does not say these words are burned in.",
-      "timing": "close"
+      "wording": "CDL Electric",
+      "size": "Logo",
+      "placement": "The logo at the open, on the truck, and at the close. No other super was on the sampled frames.",
+      "timing": "Open and close"
     }
   ],
   "typography_ui": "The official page does not describe a typeface.",
   "color_grade": "Not stated on the official page.",
   "music_sound": "The official page does not describe the score.",
   "voiceover": "Spoken lines are on the watch page.",
-  "cta": "The close asks the viewer to trust CDL for comfort in any weather.",
+  "cta": "The on-screen close is the CDL logo. The voice asks the viewer to trust CDL for comfort.",
   "emotional_angle": "Relief from heat, framed as something a crew handles for you.",
   "why_it_worked": "The spot spends its half minute on one promise, comfort, and names the crew instead of a product tour.",
   "cinematic_qualities": [

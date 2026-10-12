@@ -1,5 +1,30 @@
 {
-  "text_overlays": [],
+  "text_overlays": [
+    {
+      "wording": "Schedule",
+      "size": "UI label",
+      "placement": "On the product screen, on screen",
+      "timing": "Middle"
+    },
+    {
+      "wording": "Quote",
+      "size": "UI label",
+      "placement": "On the product screen, on screen",
+      "timing": "Middle"
+    },
+    {
+      "wording": "Invoice",
+      "size": "UI label",
+      "placement": "On the product screen, on screen",
+      "timing": "Middle"
+    },
+    {
+      "wording": "Jobber",
+      "size": "Logo",
+      "placement": "Wordmark on the product screen, on screen",
+      "timing": "Middle"
+    }
+  ],
   "typography_ui": "The official page does not describe a typeface.",
   "color_grade": "Not stated on the official page.",
   "music_sound": "Not stated on the official page.",

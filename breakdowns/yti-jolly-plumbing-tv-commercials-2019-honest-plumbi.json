@@ -40,17 +40,23 @@
   "pacing": "YouTube's results label states 16 seconds. A slogan, a family boast, then a poker-table tag.",
   "text_overlays": [
     {
-      "wording": "Jolly plumbing flush beats a full house.",
-      "size": "Not stated on the official page.",
-      "placement": "Spoken on the official page; the page does not say these words are burned in.",
-      "timing": "close"
+      "wording": "HONEST PLUMBING STARTS WITH HONEST PLUMBERS",
+      "size": "Open super",
+      "placement": "On screen at the open",
+      "timing": "Open"
+    },
+    {
+      "wording": "A JOLLY PLUMBING FLUSH BEATS A FULL HOUSE",
+      "size": "End-card type",
+      "placement": "End card, on screen",
+      "timing": "End card"
     }
   ],
   "typography_ui": "The official page does not describe a typeface.",
   "color_grade": "Not stated on the official page.",
   "music_sound": "The captions mark music after the tag. They do not name the track.",
   "voiceover": "Spoken lines are on the watch page.",
-  "cta": "The tagline is the close. The captions do not give a phone number or a URL.",
+  "cta": "The on-screen close is the flush tagline. The sampled frames do not show a phone number or a URL.",
   "emotional_angle": "Pride and a joke. The family boast is the entertainment; the flush line is the brand.",
   "why_it_worked": "Sixteen seconds is enough for one brag and one tag. The honesty line is the only claim.",
   "cinematic_qualities": [
