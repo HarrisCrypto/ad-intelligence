@@ -1,0 +1,62 @@
+{
+  "id": "yti-canva-free-delivery",
+  "brand": "Canva",
+  "advertiser": "Canva",
+  "platform": "youtube_instream",
+  "format": "Brand film",
+  "aspect_ratio": "16:9",
+  "length_s": 16,
+  "year": 2023,
+  "award": null,
+  "niche": "etsy-printables",
+  "goal": "awareness",
+  "official_url": "https://www.youtube.com/watch?v=wRVsjDWp6hA",
+  "hook_0_3s": "The captions say we use Canva Print for everything, and free delivery.",
+  "story_beats": [
+    "Someone says they love this.",
+    "The close asks what you will decide today at canva.com.",
+    "The official title is the Canva channel upload. The results label states 16 seconds."
+  ],
+  "shot_list": [
+    {
+      "t": "open",
+      "shot": "A claim that Canva Print is used for everything, with free delivery.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "close",
+      "shot": "A pleased reaction, then a question pointed at canva.com.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    }
+  ],
+  "pacing": "YouTube's results label states 16 seconds. Claim, reaction, URL.",
+  "text_overlays": [
+    {
+      "wording": "What will you decide today at canva.com?",
+      "size": "Not stated on the official page.",
+      "placement": "Spoken on the official page; the page does not say these words are burned in.",
+      "timing": "close"
+    }
+  ],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The official page does not describe the score.",
+  "voiceover": "Spoken lines are on the watch page.",
+  "cta": "Decide today at canva.com.",
+  "emotional_angle": "Casual satisfaction. The offer is delivery, not a speech.",
+  "why_it_worked": "Sixteen seconds can carry one offer and one URL if the offer is already the whole joke.",
+  "cinematic_qualities": [
+    "Results label 16 seconds",
+    "One offer and a URL"
+  ],
+  "rebuild_recipe": [
+    "Say the offer in one breath.",
+    "Let someone react.",
+    "Put your own URL at the end.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "safe_zone_notes": "Public frame0.jpg is 480x268, classed as 16:9. YouTube's results label for this video states 16 seconds. The watch page upload date is Mar 13, 2023. The in-stream spec recommends 1920x1080, 1080x1920, or 1080x1080 and does not print one pixel inset. Keep type off the skip control and the bottom bar.",
+  "last_verified": "2026-10-12"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "yti-etsy-non-billionaire-jeffs",
+  "brand": "Etsy",
+  "advertiser": "Etsy",
+  "platform": "youtube_instream",
+  "format": "Brand film",
+  "aspect_ratio": "16:9",
+  "length_s": 16,
+  "year": 2026,
+  "award": null,
+  "niche": "ecommerce",
+  "goal": "awareness",
+  "official_url": "https://www.youtube.com/watch?v=qe0Tgb0oXc4",
+  "hook_0_3s": "The captions say one Jeff should not rule commerce.",
+  "story_beats": [
+    "They claim there are over 5,000 Jeffs on Etsy, real people making real things.",
+    "Three voices each say I'm Jeff.",
+    "The close is shop non-billionaire Jeffs."
+  ],
+  "shot_list": [
+    {
+      "t": "open",
+      "shot": "A line rejects the idea that one Jeff should rule commerce.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "middle",
+      "shot": "A number of Jeffs on Etsy, then three people introducing themselves as Jeff.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "close",
+      "shot": "Shop non-billionaire Jeffs.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    }
+  ],
+  "pacing": "YouTube's results label states 16 seconds. A jab, a count, three hellos, a shop line.",
+  "text_overlays": [
+    {
+      "wording": "Shop non-billionaire Jeffs.",
+      "size": "Not stated on the official page.",
+      "placement": "Spoken on the official page; the page does not say these words are burned in.",
+      "timing": "close"
+    }
+  ],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The official page does not describe the score.",
+  "voiceover": "Spoken lines are on the watch page.",
+  "cta": "Shop the Jeffs who make things. The captions do not name a URL.",
+  "emotional_angle": "A joke at concentrated power, then ordinary people with the same name.",
+  "why_it_worked": "Sixteen seconds is a setup and a crowd. The sellers are the punchline.",
+  "cinematic_qualities": [
+    "Results label 16 seconds",
+    "One name, many sellers"
+  ],
+  "rebuild_recipe": [
+    "Pick a crowded ordinary name.",
+    "Let several real people say it.",
+    "Invite a shop in your own words.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "safe_zone_notes": "Public frame0.jpg is 480x268, classed as 16:9. YouTube's results label for this video states 16 seconds. The watch page upload date is Jun 15, 2026. The in-stream spec recommends 1920x1080, 1080x1920, or 1080x1080 and does not print one pixel inset. Keep type off the skip control and the bottom bar.",
+  "last_verified": "2026-10-12"
+}

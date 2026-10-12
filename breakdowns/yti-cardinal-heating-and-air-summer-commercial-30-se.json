@@ -1,56 +1,69 @@
 {
-  "text_overlays": [],
-  "typography_ui": "The official page does not describe a typeface.",
-  "color_grade": "Not stated on the official page.",
-  "music_sound": "Not stated on the official page.",
-  "voiceover": "Not stated on the official page.",
-  "cta": "Not stated beyond the title.",
-  "emotional_angle": "The official page does not name an emotional angle.",
-  "last_verified": "2026-10-11",
-  "rebuild_recipe": [
-    "Cut an original spot near 31 seconds.",
-    "Put the offer in an original title line before you design shots.",
-    "Keep type inside a 16:9 frame only if your own export is horizontal.",
-    "Do not copy the brand's logos, characters, art, or exact copy."
-  ],
   "id": "yti-cardinal-heating-and-air-summer-commercial-30-se",
-  "brand": "CardinalHeating",
+  "brand": "Cardinal Heating and Air",
   "advertiser": "CardinalHeating",
   "platform": "youtube_instream",
-  "format": "YouTube watch page labeled as a commercial",
+  "format": "TV commercial",
   "aspect_ratio": "16:9",
   "length_s": 31,
-  "year": null,
+  "year": 2024,
   "award": null,
   "niche": "home-services",
-  "goal": "conversion",
+  "goal": "consideration",
   "official_url": "https://www.youtube.com/watch?v=keZVYoRzjpI",
-  "hook_0_3s": "The official page does not describe the first three seconds. YouTube's public result for this video titles it: Cardinal Heating and Air Summer Commercial 30 sec",
+  "hook_0_3s": "The captions open with Cardinal Heating and Air saying comfort is the priority.",
   "story_beats": [
-    "The official title is: Cardinal Heating and Air Summer Commercial 30 sec",
-    "The channel on the oEmbed record is CardinalHeating.",
-    "YouTube's public results label for this video states 31 seconds.",
-    "The results label does not describe shots, framing, or camera motion."
+    "The jobs named are air-conditioner repair and adding high-efficiency cooling.",
+    "Slim, quiet heat pumps are described as fitting in the yard and staying out of sight all year.",
+    "A smart-thermostat upgrade is the control-from-anywhere beat.",
+    "The close says elevate your comfort this summer with Cardinal Heating and Air."
   ],
   "shot_list": [
     {
-      "t": "0-3s",
-      "shot": "Opening seconds are not described on the public result.",
-      "framing": "Not stated on the official page.",
-      "motion": "Not stated on the official page."
+      "t": "open",
+      "shot": "A voice sets comfort as the priority and names air-conditioner repair.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
     },
     {
-      "t": "0-31s",
-      "shot": "The result gives a title and a length, and does not list shots.",
-      "framing": "Not stated on the official page.",
-      "motion": "Not stated on the official page."
+      "t": "middle",
+      "shot": "Quiet heat pumps are placed in the yard, out of sight, for year-round use.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "close",
+      "shot": "A smart thermostat you can adjust from anywhere, then a summer comfort line.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
     }
   ],
-  "pacing": "The public result states 31 seconds and does not describe cut rhythm.",
-  "why_it_worked": "YouTube lists “Cardinal Heating and Air Summer Commercial 30 sec” at 31 seconds on the CardinalHeating channel. The usable lesson is the labeled length and the one-line premise in the title, not an unseen picture.",
-  "cinematic_qualities": [
-    "Public result length of 31 seconds",
-    "Title states the commercial premise in one line"
+  "pacing": "YouTube's results label states 31 seconds. Repair, then the equipment, then remote control.",
+  "text_overlays": [
+    {
+      "wording": "Elevate your comfort this summer with Cardinal Heating and Air.",
+      "size": "Not stated on the official page.",
+      "placement": "Spoken on the official page; the page does not say these words are burned in.",
+      "timing": "close"
+    }
   ],
-  "safe_zone_notes": "The results label does not print pixels. This file uses 16:9 because the title presents a TV or Big Game commercial. Confirm the frame on the watch page before you match a safe zone."
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The official page does not describe the score.",
+  "voiceover": "Spoken lines are on the watch page.",
+  "cta": "The close invites a summer comfort upgrade. The captions do not print a phone number.",
+  "emotional_angle": "Ease. The equipment is quiet and out of the way.",
+  "why_it_worked": "The spot sells the thing you do not want to see: a quiet pump in the yard and a thermostat on the phone.",
+  "cinematic_qualities": [
+    "Results label 31 seconds",
+    "Repair, hidden equipment, remote control"
+  ],
+  "rebuild_recipe": [
+    "Start with the repair people already need.",
+    "Describe the equipment by how little space and noise it takes.",
+    "End on the season, in your own words.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "safe_zone_notes": "Public frame0.jpg is 480x268, classed as 16:9. YouTube's results label for this video states 31 seconds. The watch page upload date is Premiered Sep 4, 2024. The in-stream spec recommends 1920x1080, 1080x1920, or 1080x1080 and does not print one pixel inset. Keep type off the skip control and the bottom bar.",
+  "last_verified": "2026-10-12"
 }

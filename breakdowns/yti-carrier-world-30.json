@@ -6,7 +6,7 @@
   "voiceover": "The watch page returns a spoken brand statement.",
   "cta": "Not stated on the official page.",
   "emotional_angle": "The lines aim at togetherness and support rather than a price.",
-  "last_verified": "2026-10-11",
+  "last_verified": "2026-10-12",
   "rebuild_recipe": [
     "Write a 30-second statement about the job your product does for people.",
     "Do not show a feature list.",
@@ -20,7 +20,7 @@
   "format": "Brand film",
   "aspect_ratio": "16:9",
   "length_s": 31,
-  "year": null,
+  "year": 2025,
   "award": null,
   "niche": "home-services",
   "goal": "awareness",
@@ -53,5 +53,5 @@
     "Title-stated Official :30",
     "One spoken idea across the whole cut"
   ],
-  "safe_zone_notes": "The watch page does not print pixels. The title says Official :30."
+  "safe_zone_notes": "The watch page does not print pixels. The title says Official :30. Watch-page upload year recorded 2026-10-12: 2025."
 }

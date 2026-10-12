@@ -1,0 +1,71 @@
+{
+  "id": "yti-redbubble-find-your-thing",
+  "brand": "Redbubble",
+  "advertiser": "Redbubble",
+  "platform": "youtube_instream",
+  "format": "Brand film",
+  "aspect_ratio": "16:9",
+  "length_s": 154,
+  "year": 2017,
+  "award": null,
+  "niche": "etsy-printables",
+  "goal": "awareness",
+  "official_url": "https://www.youtube.com/watch?v=OjXtVlaSRf8",
+  "hook_0_3s": "A speaker calls Find Your Thing an invitation to a treasure hunt for something that feels like you.",
+  "story_beats": [
+    "The examples are an interest, an inside joke, or something funny, cool, beautiful, or twisted.",
+    "The scale named is more than 400,000 independent artists and over 10 million designs.",
+    "An avocado phone case is the contrast: a generic factory design versus an artist's original.",
+    "The result claimed is an object you love, a creative person supported, and a more creative world.",
+    "The speaker also says the marketplace should stay easy to buy from and that everyday objects like pillows and mugs can become meaningful."
+  ],
+  "shot_list": [
+    {
+      "t": "open",
+      "shot": "Find Your Thing is explained as a treasure hunt for a design that feels like you.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "middle",
+      "shot": "Artist and design counts, then an avocado phone case against a generic one.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "close",
+      "shot": "You love the object, an artist gets paid, the world is more creative.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    }
+  ],
+  "pacing": "YouTube's results label states 2 minutes 34 seconds. A definition, a scale claim, one product example.",
+  "text_overlays": [
+    {
+      "wording": "Find your thing.",
+      "size": "Not stated on the official page.",
+      "placement": "Spoken on the official page; the page does not say these words are burned in.",
+      "timing": "close"
+    }
+  ],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The captions mark music at the ends and do not name it.",
+  "voiceover": "Spoken lines are on the watch page.",
+  "cta": "Visit the marketplace and find a design. The captions start a URL and do not finish it cleanly, so this card does not invent the address.",
+  "emotional_angle": "Belonging. A mass object becomes personal because an artist made the art.",
+  "why_it_worked": "The avocado case is the whole argument: same product, different maker, different meaning.",
+  "cinematic_qualities": [
+    "Results label 154 seconds",
+    "One product used as the proof"
+  ],
+  "rebuild_recipe": [
+    "Explain the hunt in one sentence.",
+    "Contrast a generic object with one artist-made version.",
+    "Name the artist getting paid.",
+    "Use your own product, not this avocado case.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "safe_zone_notes": "Public frame0.jpg is 480x268, classed as 16:9. YouTube's results label for this video states 154 seconds. The watch page upload date is Dec 11, 2017. The in-stream spec recommends 1920x1080, 1080x1920, or 1080x1080 and does not print one pixel inset. Keep type off the skip control and the bottom bar.",
+  "last_verified": "2026-10-12"
+}

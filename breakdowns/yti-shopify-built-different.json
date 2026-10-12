@@ -1,0 +1,70 @@
+{
+  "id": "yti-shopify-built-different",
+  "brand": "Shopify",
+  "advertiser": "Shopify",
+  "platform": "youtube_instream",
+  "format": "Brand film",
+  "aspect_ratio": "16:9",
+  "length_s": 70,
+  "year": 2025,
+  "award": null,
+  "niche": "ecommerce",
+  "goal": "awareness",
+  "official_url": "https://www.youtube.com/watch?v=m_RWLfHCA2I",
+  "hook_0_3s": "The captions say Black Friday is coming and you have never felt more alive.",
+  "story_beats": [
+    "Shoppers dream of deals while the merchant tests, adjusts, and fights unseen fires.",
+    "Coffee is cold. A voice says stop. Another voice, yours, says this week is the glory.",
+    "Late-night wins and 3am decisions are the work of building something from nothing.",
+    "Most people will not understand the week. The close is yeah, we're built different.",
+    "The description thanks featured Shopify merchants and says Black Friday belongs to entrepreneurs."
+  ],
+  "shot_list": [
+    {
+      "t": "open",
+      "shot": "Black Friday arrives as energy for the person building, not the person buying.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "middle",
+      "shot": "Cold coffee, a voice that says stop, and a 3am decision.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "close",
+      "shot": "Most people will not understand. We're built different.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    }
+  ],
+  "pacing": "YouTube's results label states 1 minute 10 seconds. Pressure, a refusal to stop, a salute.",
+  "text_overlays": [
+    {
+      "wording": "Yeah, we're built different.",
+      "size": "Not stated on the official page.",
+      "placement": "Spoken on the official page; the page does not say these words are burned in.",
+      "timing": "close"
+    }
+  ],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The official page does not describe the score.",
+  "voiceover": "Spoken lines are on the watch page.",
+  "cta": "The film thanks merchants. It does not print a shop URL in the captions.",
+  "emotional_angle": "Pride for the person who is working while everyone else is shopping.",
+  "why_it_worked": "The sale is the setting, not the offer. The hero is the merchant who stays up.",
+  "cinematic_qualities": [
+    "Results label 70 seconds",
+    "Sale week filmed from the merchant's side"
+  ],
+  "rebuild_recipe": [
+    "Set the ad during a sale your customer actually works through.",
+    "Show the private cost, not the storefront.",
+    "Salute them in your own words.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "safe_zone_notes": "Public frame0.jpg is 480x268, classed as 16:9. YouTube's results label for this video states 70 seconds. The watch page upload date is Nov 21, 2025. The in-stream spec recommends 1920x1080, 1080x1920, or 1080x1080 and does not print one pixel inset. Keep type off the skip control and the bottom bar.",
+  "last_verified": "2026-10-12"
+}

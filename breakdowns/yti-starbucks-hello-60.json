@@ -1,25 +1,4 @@
 {
-  "text_overlays": [
-    {
-      "wording": "Hello again",
-      "size": "Not stated on the official page.",
-      "placement": "Spoken at the end of the watch page",
-      "timing": "close"
-    }
-  ],
-  "typography_ui": "The official page does not describe a typeface.",
-  "color_grade": "Not stated on the official page.",
-  "music_sound": "The watch page marks Thunderstruck.",
-  "voiceover": "A narrator plus a barista line, Milk man, on the watch page.",
-  "cta": "Not stated on the official page.",
-  "emotional_angle": "The film treats a familiar drink as something that is ready again.",
-  "last_verified": "2026-10-11",
-  "rebuild_recipe": [
-    "Show the steps of your own product as a short ritual.",
-    "Count one step so the middle has a beat.",
-    "End on an original welcome back line.",
-    "Do not copy the brand's logos, characters, art, or exact copy."
-  ],
   "id": "yti-starbucks-hello-60",
   "brand": "Starbucks",
   "advertiser": "Starbucks Coffee",
@@ -27,43 +6,67 @@
   "format": "Brand film",
   "aspect_ratio": "16:9",
   "length_s": 60,
-  "year": null,
+  "year": 2025,
   "award": null,
   "niche": "food",
   "goal": "awareness",
   "official_url": "https://www.youtube.com/watch?v=lPbsMJr5lr4",
-  "hook_0_3s": "The official page does not describe the first three seconds. The title says Hello Again :60.",
+  "hook_0_3s": "The captions start in darkness, then energy, over Thunderstruck.",
   "story_beats": [
-    "The oEmbed title is Hello Again :60 | The Starbucks Coffee Company.",
-    "The watch page starts in darkness, then energy, then the steps of a drink: beans ground, milk frothed, shots pulled.",
-    "A spoken count says the espresso is shaken 10 times, no more, no less.",
-    "The close says the Starbucks you love is ready, and Hello again."
+    "A barista calls milk man. The voice lists beans ground, milk frothed, and shots pulled.",
+    "Espresso is shaken ten times, no more, no less, then 165-degree milk into a double shot.",
+    "The film calls it the story of coffee and company, inspired by Italy and reimagined in Seattle.",
+    "Baristas, beans, a note on the cup, and the perfect sip are each called ready.",
+    "The close is the Starbucks you love is ready, then Hello again."
   ],
   "shot_list": [
     {
       "t": "open",
-      "shot": "The voice starts in darkness and then energy.",
-      "framing": "Not stated on the official page.",
-      "motion": "Not stated on the official page."
+      "shot": "Darkness, then energy, with Thunderstruck under the voice.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
     },
     {
       "t": "middle",
-      "shot": "Drink-making steps, including a shake counted to 10.",
-      "framing": "Not stated on the official page.",
-      "motion": "Not stated on the official page."
+      "shot": "The drink is counted: ten shakes, then hot milk into a double shot.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
     },
     {
       "t": "close",
-      "shot": "Hello again.",
-      "framing": "Not stated on the official page.",
-      "motion": "Not stated on the official page."
+      "shot": "A ready checklist for baristas, beans, the cup, and the sip, then Hello again.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
     }
   ],
-  "pacing": "The title states a :60. The lines move from darkness to a counted ritual to a hello.",
-  "why_it_worked": "The title is a :60 hello, and the watch page fills it with a counted coffee ritual so the return of the brand is a process, not a slogan alone.",
-  "cinematic_qualities": [
-    "Title-stated :60",
-    "A counted ritual in the middle"
+  "pacing": "The oEmbed title prints :60. The lines move from a dark open through a counted recipe to a ready checklist.",
+  "text_overlays": [
+    {
+      "wording": "Hello again.",
+      "size": "Not stated on the official page.",
+      "placement": "Spoken on the official page; the page does not say these words are burned in.",
+      "timing": "close"
+    }
   ],
-  "safe_zone_notes": "Pixels are not printed. The title says :60."
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The captions mark Thunderstruck by AC/DC. A rebuild needs its own music.",
+  "voiceover": "Spoken lines are on the watch page.",
+  "cta": "Hello again. The film says the Starbucks you love is ready.",
+  "emotional_angle": "Return. A familiar drink is treated as a ritual that is ready again.",
+  "why_it_worked": "The counted shakes give the minute a middle, and the ready list turns the ritual into a welcome back.",
+  "cinematic_qualities": [
+    "Title states :60",
+    "Counted recipe in the middle",
+    "Thunderstruck under the ritual"
+  ],
+  "rebuild_recipe": [
+    "Show the steps of your own product as a ritual.",
+    "Count one step so the middle has a beat.",
+    "End on an original welcome-back line.",
+    "Clear the recording. This film uses a famous track.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "safe_zone_notes": "Public frame0.jpg is 480x268, about 16:9. The oEmbed title is Hello Again :60. A results search on 2026-10-12 did not return a duration label for this video id, so length follows the title's :60, which matches a prior player read of 60 seconds. Upload date Feb 4, 2025. Keep type off the skip control.",
+  "last_verified": "2026-10-12"
 }

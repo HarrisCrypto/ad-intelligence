@@ -1,0 +1,70 @@
+{
+  "id": "yti-etsy-wheres-waldo",
+  "brand": "Etsy",
+  "advertiser": "Etsy",
+  "platform": "youtube_instream",
+  "format": "Brand film",
+  "aspect_ratio": "16:9",
+  "length_s": 60,
+  "year": 2024,
+  "award": null,
+  "niche": "ecommerce",
+  "goal": "awareness",
+  "official_url": "https://www.youtube.com/watch?v=eYgOUJIgd7c",
+  "hook_0_3s": "A voice says he loves crowds, then someone finds him.",
+  "story_beats": [
+    "People ask where's Wally and never who Wally is.",
+    "He says it sometimes takes someone who really knows you to make you feel seen.",
+    "The close is gifts that say I get you. Etsy has it.",
+    "The description credits Where's Waldo / Where's Wally to DreamWorks Distribution, 2024."
+  ],
+  "shot_list": [
+    {
+      "t": "open",
+      "shot": "A character who likes crowds is found by someone who knows him.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "middle",
+      "shot": "Strangers ask where he is and never who he is.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "close",
+      "shot": "Being seen by someone who knows you, then gifts that say I get you.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    }
+  ],
+  "pacing": "YouTube's results label states 60 seconds. A search joke, then a turn from where to who.",
+  "text_overlays": [
+    {
+      "wording": "Gifts that say I get you. Etsy has it.",
+      "size": "Not stated on the official page.",
+      "placement": "Spoken on the official page; the page does not say these words are burned in.",
+      "timing": "close"
+    }
+  ],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The captions mark music between lines and do not name it.",
+  "voiceover": "Spoken lines are on the watch page.",
+  "cta": "Etsy has gifts that say I get you.",
+  "emotional_angle": "The loneliness of being searched for and never known.",
+  "why_it_worked": "The familiar search game becomes a complaint, and the gift is the correction.",
+  "cinematic_qualities": [
+    "Results label 60 seconds",
+    "A where-to-who turn"
+  ],
+  "rebuild_recipe": [
+    "Use a recognition joke only if you have the rights.",
+    "Turn the joke into feeling unseen.",
+    "End on a gift that says you know the person, in your own words.",
+    "Do not restage this character.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "safe_zone_notes": "Public frame0.jpg is 480x268, classed as 16:9. YouTube's results label for this video states 60 seconds. The watch page upload date is Nov 1, 2024. The in-stream spec recommends 1920x1080, 1080x1920, or 1080x1080 and does not print one pixel inset. Keep type off the skip control and the bottom bar.",
+  "last_verified": "2026-10-12"
+}

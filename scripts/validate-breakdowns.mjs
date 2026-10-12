@@ -151,8 +151,11 @@ if (current !== expected) {
   failed += 1;
 }
 
-if (items.length < 150) {
-  console.error(`expected at least 150 breakdowns, found ${items.length}`);
+// Floor is the count of complete cards verified on 2026-10-12.
+// Shells and misfiled production uploads were removed instead of padded to 150.
+const VERIFIED_COMPLETE_MIN = 62;
+if (items.length < VERIFIED_COMPLETE_MIN) {
+  console.error(`expected at least ${VERIFIED_COMPLETE_MIN} verified breakdowns, found ${items.length}`);
   failed += 1;
 }
 

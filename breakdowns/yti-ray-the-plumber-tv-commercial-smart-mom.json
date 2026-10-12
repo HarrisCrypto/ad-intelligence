@@ -1,56 +1,69 @@
 {
-  "text_overlays": [],
-  "typography_ui": "The official page does not describe a typeface.",
-  "color_grade": "Not stated on the official page.",
-  "music_sound": "Not stated on the official page.",
-  "voiceover": "Not stated on the official page.",
-  "cta": "Not stated beyond the title.",
-  "emotional_angle": "The official page does not name an emotional angle.",
-  "last_verified": "2026-10-11",
-  "rebuild_recipe": [
-    "Cut an original spot near 31 seconds.",
-    "Put the offer in an original title line before you design shots.",
-    "Keep type inside a 16:9 frame only if your own export is horizontal.",
-    "Do not copy the brand's logos, characters, art, or exact copy."
-  ],
   "id": "yti-ray-the-plumber-tv-commercial-smart-mom",
-  "brand": "Ray The Plumber",
+  "brand": "Ray the Plumber",
   "advertiser": "Ray The Plumber",
   "platform": "youtube_instream",
-  "format": "YouTube watch page labeled as a commercial",
-  "aspect_ratio": "16:9",
+  "format": "TV commercial",
+  "aspect_ratio": "3:2",
   "length_s": 31,
-  "year": null,
+  "year": 2017,
   "award": null,
   "niche": "home-services",
   "goal": "conversion",
   "official_url": "https://www.youtube.com/watch?v=gQgKTP3gJ9c",
-  "hook_0_3s": "The official page does not describe the first three seconds. YouTube's public result for this video titles it: Ray The Plumber TV Commercial  Smart Mom",
+  "hook_0_3s": "A child says mom is really smart and starts listing what she is good at.",
   "story_beats": [
-    "The official title is: Ray The Plumber TV Commercial  Smart Mom",
-    "The channel on the oEmbed record is Ray The Plumber.",
-    "YouTube's public results label for this video states 31 seconds.",
-    "The results label does not describe shots, framing, or camera motion."
+    "The list runs through spelling, a divorce, and a discount-plus-tax math problem.",
+    "The child says she also helps with homework, her job, and cookies at once.",
+    "When she needs a plumber she calls Ray. The number spoken is 1-877-CALL-RAY.",
+    "The close says Ray has fast, dependable, same-day service."
   ],
   "shot_list": [
     {
-      "t": "0-3s",
-      "shot": "Opening seconds are not described on the public result.",
-      "framing": "Not stated on the official page.",
-      "motion": "Not stated on the official page."
+      "t": "open",
+      "shot": "A child praises mom's spelling and then her handling of a divorce and a tax math problem.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
     },
     {
-      "t": "0-31s",
-      "shot": "The result gives a title and a length, and does not list shots.",
-      "framing": "Not stated on the official page.",
-      "motion": "Not stated on the official page."
+      "t": "middle",
+      "shot": "The list adds homework, work, and cookies, then the plumber she calls.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "close",
+      "shot": "The number 1-877-CALL-RAY and a same-day service line.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
     }
   ],
-  "pacing": "The public result states 31 seconds and does not describe cut rhythm.",
-  "why_it_worked": "YouTube lists “Ray The Plumber TV Commercial Smart Mom” at 31 seconds on the Ray The Plumber channel. The usable lesson is the labeled length and the one-line premise in the title, not an unseen picture.",
-  "cinematic_qualities": [
-    "Public result length of 31 seconds",
-    "Title states the commercial premise in one line"
+  "pacing": "The results label for this video id states 31 seconds. The child's list is the clock; the number is the close.",
+  "text_overlays": [
+    {
+      "wording": "1-877-CALL-RAY",
+      "size": "Not stated on the official page.",
+      "placement": "Spoken on the official page; the page does not say these words are burned in.",
+      "timing": "close"
+    }
   ],
-  "safe_zone_notes": "The results label does not print pixels. This file uses 16:9 because the title presents a TV or Big Game commercial. Confirm the frame on the watch page before you match a safe zone."
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The official page does not describe the score.",
+  "voiceover": "Spoken lines are on the watch page.",
+  "cta": "Call 1-877-CALL-RAY for fast, dependable, same-day service.",
+  "emotional_angle": "Admiration. Mom is the authority, and her plumber choice is the proof.",
+  "why_it_worked": "The joke stack makes the phone number feel like the smart decision, not a shout.",
+  "cinematic_qualities": [
+    "Results label 31 seconds",
+    "A child's proof list ending on a phone number"
+  ],
+  "rebuild_recipe": [
+    "Let a customer explain the choice in their own life.",
+    "Put the phone number once, at the end.",
+    "Describe same-day service in your own words.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "safe_zone_notes": "Public frame0.jpg is 540x360, which is 3:2. The Shorts page did not publish a video width and height, so this card does not call the file 16:9. The results label states 31 seconds. The watch page upload date is Dec 28, 2017. Keep the phone number clear of player chrome.",
+  "last_verified": "2026-10-12"
 }

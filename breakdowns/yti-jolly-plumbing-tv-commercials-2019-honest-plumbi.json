@@ -1,56 +1,68 @@
 {
-  "text_overlays": [],
-  "typography_ui": "The official page does not describe a typeface.",
-  "color_grade": "Not stated on the official page.",
-  "music_sound": "Not stated on the official page.",
-  "voiceover": "Not stated on the official page.",
-  "cta": "Not stated beyond the title.",
-  "emotional_angle": "The official page does not name an emotional angle.",
-  "last_verified": "2026-10-11",
-  "rebuild_recipe": [
-    "Cut an original spot near 16 seconds.",
-    "Put the offer in an original title line before you design shots.",
-    "Keep type inside a 16:9 frame only if your own export is horizontal.",
-    "Do not copy the brand's logos, characters, art, or exact copy."
-  ],
   "id": "yti-jolly-plumbing-tv-commercials-2019-honest-plumbi",
-  "brand": "Jolly Heating, Air, Plumbing, Electric",
+  "brand": "Jolly",
   "advertiser": "Jolly Heating, Air, Plumbing, Electric",
   "platform": "youtube_instream",
-  "format": "YouTube watch page labeled as a commercial",
+  "format": "TV commercial",
   "aspect_ratio": "16:9",
   "length_s": 16,
   "year": 2019,
   "award": null,
   "niche": "home-services",
-  "goal": "conversion",
+  "goal": "awareness",
   "official_url": "https://www.youtube.com/watch?v=idaOy_vWZ2Y",
-  "hook_0_3s": "The official page does not describe the first three seconds. YouTube's public result for this video titles it: Jolly Plumbing TV Commercials 2019 - Honest Plumbing Daughter",
+  "hook_0_3s": "The captions open on the line that honest plumbing starts with honest plumbers.",
   "story_beats": [
-    "The official title is: Jolly Plumbing TV Commercials 2019 - Honest Plumbing Daughter",
-    "The channel on the oEmbed record is Jolly Heating, Air, Plumbing, Electric.",
-    "YouTube's public results label for this video states 16 seconds.",
-    "The results label does not describe shots, framing, or camera motion."
+    "A speaker says they forgot to mention that daughter Amber got the lead in the musical.",
+    "The reply is surprise, because she is tone-deaf.",
+    "The tag is that a Jolly plumbing flush beats a full house."
   ],
   "shot_list": [
     {
-      "t": "0-3s",
-      "shot": "Opening seconds are not described on the public result.",
-      "framing": "Not stated on the official page.",
-      "motion": "Not stated on the official page."
+      "t": "open",
+      "shot": "The first line states that honest plumbing starts with honest plumbers.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
     },
     {
-      "t": "0-16s",
-      "shot": "The result gives a title and a length, and does not list shots.",
-      "framing": "Not stated on the official page.",
-      "motion": "Not stated on the official page."
+      "t": "middle",
+      "shot": "A parent boasts that Amber got the lead, and someone notes she is tone-deaf.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "close",
+      "shot": "The tagline compares a Jolly flush to a full house.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
     }
   ],
-  "pacing": "The public result states 16 seconds and does not describe cut rhythm.",
-  "why_it_worked": "YouTube lists “Jolly Plumbing TV Commercials 2019 - Honest Plumbing Daughter” at 16 seconds on the Jolly Heating, Air, Plumbing, Electric channel. The usable lesson is the labeled length and the one-line premise in the title, not an unseen picture.",
-  "cinematic_qualities": [
-    "Public result length of 16 seconds",
-    "Title states the commercial premise in one line"
+  "pacing": "YouTube's results label states 16 seconds. A slogan, a family boast, then a poker-table tag.",
+  "text_overlays": [
+    {
+      "wording": "Jolly plumbing flush beats a full house.",
+      "size": "Not stated on the official page.",
+      "placement": "Spoken on the official page; the page does not say these words are burned in.",
+      "timing": "close"
+    }
   ],
-  "safe_zone_notes": "The results label does not print pixels. This file uses 16:9 because the title presents a TV or Big Game commercial. Confirm the frame on the watch page before you match a safe zone."
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The captions mark music after the tag. They do not name the track.",
+  "voiceover": "Spoken lines are on the watch page.",
+  "cta": "The tagline is the close. The captions do not give a phone number or a URL.",
+  "emotional_angle": "Pride and a joke. The family boast is the entertainment; the flush line is the brand.",
+  "why_it_worked": "Sixteen seconds is enough for one brag and one tag. The honesty line is the only claim.",
+  "cinematic_qualities": [
+    "Results label 16 seconds",
+    "Slogan, family boast, tagline"
+  ],
+  "rebuild_recipe": [
+    "Open on one honest claim about the work.",
+    "Let a family joke carry the middle.",
+    "End on an original tag, not a borrowed card-game line.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "safe_zone_notes": "Public frame0.jpg is 480x270, classed as 16:9. YouTube's results label for this video states 16 seconds. The watch page upload date is Feb 4, 2019. The in-stream spec recommends 1920x1080, 1080x1920, or 1080x1080 and does not print one pixel inset. Keep type off the skip control and the bottom bar.",
+  "last_verified": "2026-10-12"
 }

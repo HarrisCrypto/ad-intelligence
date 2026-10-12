@@ -1,0 +1,68 @@
+{
+  "id": "yti-canva-social-things",
+  "brand": "Canva",
+  "advertiser": "Canva",
+  "platform": "youtube_instream",
+  "format": "Brand film",
+  "aspect_ratio": "16:9",
+  "length_s": 31,
+  "year": 2026,
+  "award": null,
+  "niche": "ecommerce",
+  "goal": "awareness",
+  "official_url": "https://www.youtube.com/watch?v=Vs5A9sfL4Q4",
+  "hook_0_3s": "The captions say that keeping your thing a thing requires internet things so people follow it.",
+  "story_beats": [
+    "On Canva you make things for followers, and they share those with friends.",
+    "Someone has to send one to Daryl. Daryl likes it.",
+    "The close returns to Canva, the thing that makes anything a thing."
+  ],
+  "shot_list": [
+    {
+      "t": "open",
+      "shot": "A thing needs posts if it is going to keep being a thing.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "middle",
+      "shot": "Followers share the posts onward. Someone sends one to Daryl.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "close",
+      "shot": "Daryl likes it. The Canva tagline returns.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    }
+  ],
+  "pacing": "YouTube's results label states 31 seconds. A distribution joke with one named friend.",
+  "text_overlays": [
+    {
+      "wording": "Canva, the thing that makes anything a thing.",
+      "size": "Not stated on the official page.",
+      "placement": "Spoken on the official page; the page does not say these words are burned in.",
+      "timing": "close"
+    }
+  ],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The captions mark music and laughter and do not name a track.",
+  "voiceover": "Spoken lines are on the watch page.",
+  "cta": "Make the posts. The captions do not print a URL.",
+  "emotional_angle": "The small thrill of a friend forwarding your thing.",
+  "why_it_worked": "The strategy is social, but the scene is one person sending one post to Daryl.",
+  "cinematic_qualities": [
+    "Results label 31 seconds",
+    "A share chain that ends on one friend"
+  ],
+  "rebuild_recipe": [
+    "Show the post leaving your account.",
+    "Land it on one named person.",
+    "Use your own tagline.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "safe_zone_notes": "Public frame0.jpg is 480x268, classed as 16:9. YouTube's results label for this video states 31 seconds. The watch page upload date is May 13, 2026. The in-stream spec recommends 1920x1080, 1080x1920, or 1080x1080 and does not print one pixel inset. Keep type off the skip control and the bottom bar.",
+  "last_verified": "2026-10-12"
+}

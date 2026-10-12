@@ -1,0 +1,68 @@
+{
+  "id": "yti-canva-the-thing-30",
+  "brand": "Canva",
+  "advertiser": "Canva",
+  "platform": "youtube_instream",
+  "format": "Brand film",
+  "aspect_ratio": "16:9",
+  "length_s": 31,
+  "year": 2026,
+  "award": null,
+  "niche": "ecommerce",
+  "goal": "awareness",
+  "official_url": "https://www.youtube.com/watch?v=0hrm5eBJ4G8",
+  "hook_0_3s": "The captions say many of us are searching for a thing, then look out.",
+  "story_beats": [
+    "Finding the thing means you want the world to know it, so you use Canva to make more of it.",
+    "It becomes a weird squirrel-praising movement, until the next thing.",
+    "The close is sweet little thing, then Canva, the thing that makes anything a thing."
+  ],
+  "shot_list": [
+    {
+      "t": "open",
+      "shot": "A search for a thing, and a warning to look out.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "middle",
+      "shot": "Canva multiplies the thing until it is a very specific movement.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "close",
+      "shot": "The next thing arrives. Sweet little thing. The tagline.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    }
+  ],
+  "pacing": "YouTube's results label states 31 seconds. Search, spread, absurd peak, next thing.",
+  "text_overlays": [
+    {
+      "wording": "Canva, the thing that makes anything a thing.",
+      "size": "Not stated on the official page.",
+      "placement": "Spoken on the official page; the page does not say these words are burned in.",
+      "timing": "close"
+    }
+  ],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The official page does not describe the score.",
+  "voiceover": "Spoken lines are on the watch page.",
+  "cta": "Make the thing in Canva. The captions do not print a URL.",
+  "emotional_angle": "The pleasure and the silliness of a trend that gets too specific.",
+  "why_it_worked": "The 30-second cut stops at the absurd peak. It does not wait for a crowd to join.",
+  "cinematic_qualities": [
+    "Results label 31 seconds",
+    "A trend that peaks and yields"
+  ],
+  "rebuild_recipe": [
+    "Start with someone hunting for an idea.",
+    "Let it get too specific.",
+    "Hand the next idea to your own tool.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "safe_zone_notes": "Public frame0.jpg is 480x268, classed as 16:9. YouTube's results label for this video states 31 seconds. The watch page upload date is May 3, 2026. The in-stream spec recommends 1920x1080, 1080x1920, or 1080x1080 and does not print one pixel inset. Keep type off the skip control and the bottom bar.",
+  "last_verified": "2026-10-12"
+}

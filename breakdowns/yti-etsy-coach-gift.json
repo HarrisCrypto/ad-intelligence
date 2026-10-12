@@ -1,0 +1,68 @@
+{
+  "id": "yti-etsy-coach-gift",
+  "brand": "Etsy",
+  "advertiser": "Etsy",
+  "platform": "youtube_instream",
+  "format": "Brand film",
+  "aspect_ratio": "16:9",
+  "length_s": 31,
+  "year": 2026,
+  "award": null,
+  "niche": "ecommerce",
+  "goal": "awareness",
+  "official_url": "https://www.youtube.com/watch?v=9r2keVQ1z64",
+  "hook_0_3s": "A coach says last week was bad and asks what they have to do.",
+  "story_beats": [
+    "The team answer is to keep their chins up, and the coach sends them off until next week.",
+    "They were going to focus on the next game.",
+    "Instead they are handed a gift. The line is gifts that say I get you, then thanks, then Etsy."
+  ],
+  "shot_list": [
+    {
+      "t": "open",
+      "shot": "A coach names a bad week and the team answers with chins up.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "middle",
+      "shot": "The plan is the next game, until a gift interrupts it.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "close",
+      "shot": "Gifts that say I get you, thanks, Etsy.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    }
+  ],
+  "pacing": "YouTube's results label states 31 seconds. A locker-room reset, interrupted by a gift.",
+  "text_overlays": [
+    {
+      "wording": "Gifts that say I get you.",
+      "size": "Not stated on the official page.",
+      "placement": "Spoken on the official page; the page does not say these words are burned in.",
+      "timing": "close"
+    }
+  ],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The official page does not describe the score.",
+  "voiceover": "Spoken lines are on the watch page.",
+  "cta": "The gift is the point. Etsy is the last word.",
+  "emotional_angle": "Being known by the team, not just coached.",
+  "why_it_worked": "The pep talk is the setup. The gift proves someone was paying attention.",
+  "cinematic_qualities": [
+    "Results label 31 seconds",
+    "Pep talk interrupted by a gift"
+  ],
+  "rebuild_recipe": [
+    "Start in a room where people usually get a speech.",
+    "Replace the speech with a specific gift.",
+    "Say what the gift means in your own words.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "safe_zone_notes": "Public frame0.jpg is 480x268, classed as 16:9. YouTube's results label for this video states 31 seconds. The watch page upload date is Jan 29, 2026. The in-stream spec recommends 1920x1080, 1080x1920, or 1080x1080 and does not print one pixel inset. Keep type off the skip control and the bottom bar.",
+  "last_verified": "2026-10-12"
+}

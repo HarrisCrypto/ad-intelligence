@@ -1,0 +1,68 @@
+{
+  "id": "yti-etsy-keep-commerce-human",
+  "brand": "Etsy",
+  "advertiser": "Etsy",
+  "platform": "youtube_instream",
+  "format": "Brand film",
+  "aspect_ratio": "16:9",
+  "length_s": 45,
+  "year": 2024,
+  "award": null,
+  "niche": "ecommerce",
+  "goal": "awareness",
+  "official_url": "https://www.youtube.com/watch?v=wRd4TAcT_E8",
+  "hook_0_3s": "The captions ask what a robot knows about love.",
+  "story_beats": [
+    "The next line is about translating a leap in the human heart into something you can see and hold.",
+    "Fingerprints left behind are the proof of wanting to give the world a piece of yourself.",
+    "The only brand word at the end is Etsy. The title on the page is Keep Commerce Human, 2024."
+  ],
+  "shot_list": [
+    {
+      "t": "open",
+      "shot": "A question about what a robot knows of love.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "middle",
+      "shot": "A leap in the heart becomes an object you can hold, then fingerprints.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "close",
+      "shot": "The word Etsy.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    }
+  ],
+  "pacing": "YouTube's results label states 45 seconds. Question, image, brand name.",
+  "text_overlays": [
+    {
+      "wording": "Etsy.",
+      "size": "Not stated on the official page.",
+      "placement": "Spoken on the official page; the page does not say these words are burned in.",
+      "timing": "close"
+    }
+  ],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The captions mark music and do not name the track.",
+  "voiceover": "Spoken lines are on the watch page.",
+  "cta": "The brand name is the last word. The title states the idea: keep commerce human.",
+  "emotional_angle": "Defense of handmade work against a machine that cannot love.",
+  "why_it_worked": "The film never explains a feature. It argues that an object should carry a person.",
+  "cinematic_qualities": [
+    "Results label 45 seconds",
+    "A question about machines, then a human trace"
+  ],
+  "rebuild_recipe": [
+    "Ask what a machine cannot know.",
+    "Show an object that carries a person's mark.",
+    "Say the brand once, at the end.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "safe_zone_notes": "Public frame0.jpg is 480x268, classed as 16:9. YouTube's results label for this video states 45 seconds. The watch page upload date is Jul 9, 2024. The in-stream spec recommends 1920x1080, 1080x1920, or 1080x1080 and does not print one pixel inset. Keep type off the skip control and the bottom bar.",
+  "last_verified": "2026-10-12"
+}

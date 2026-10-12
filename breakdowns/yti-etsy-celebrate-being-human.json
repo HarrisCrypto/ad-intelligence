@@ -1,0 +1,68 @@
+{
+  "id": "yti-etsy-celebrate-being-human",
+  "brand": "Etsy",
+  "advertiser": "Etsy",
+  "platform": "youtube_instream",
+  "format": "Brand film",
+  "aspect_ratio": "16:9",
+  "length_s": 61,
+  "year": 2026,
+  "award": null,
+  "niche": "ecommerce",
+  "goal": "awareness",
+  "official_url": "https://www.youtube.com/watch?v=zo6GykyjB6Q",
+  "hook_0_3s": "The captions open on a counted life: about 26,823 days and 76 summers.",
+  "story_beats": [
+    "The count continues through jobs, fresh starts, friends, dogs, loves, and heartbreaks.",
+    "It lands on the claim that the most human moments should be celebrated with humans.",
+    "The close is celebrate being human, then Etsy."
+  ],
+  "shot_list": [
+    {
+      "t": "open",
+      "shot": "A voice counts a life in days and summers.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "middle",
+      "shot": "The list moves through friends, dogs, loves, and broken laces.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "close",
+      "shot": "Human moments should be celebrated with humans. Etsy.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    }
+  ],
+  "pacing": "YouTube's results label states 61 seconds. The count is the structure. The brand name is the last word.",
+  "text_overlays": [
+    {
+      "wording": "Celebrate being human. Etsy.",
+      "size": "Not stated on the official page.",
+      "placement": "Spoken on the official page; the page does not say these words are burned in.",
+      "timing": "close"
+    }
+  ],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The captions mark music between the counts and do not name it.",
+  "voiceover": "Spoken lines are on the watch page.",
+  "cta": "The close is the line celebrate being human, then the brand name.",
+  "emotional_angle": "Scale and tenderness. A life is reduced to a handful of human counts.",
+  "why_it_worked": "The arithmetic makes a marketplace feel like a place for people, and the logo waits until the last beat.",
+  "cinematic_qualities": [
+    "Results label 61 seconds",
+    "A counted life before the brand name"
+  ],
+  "rebuild_recipe": [
+    "Count a life in a few human units.",
+    "Hold the brand name until the last line.",
+    "Write your own counts. Do not reuse these numbers as if they were yours.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "safe_zone_notes": "Public frame0.jpg is 480x268, classed as 16:9. YouTube's results label for this video states 61 seconds. The watch page upload date is May 26, 2026. The in-stream spec recommends 1920x1080, 1080x1920, or 1080x1080 and does not print one pixel inset. Keep type off the skip control and the bottom bar.",
+  "last_verified": "2026-10-12"
+}

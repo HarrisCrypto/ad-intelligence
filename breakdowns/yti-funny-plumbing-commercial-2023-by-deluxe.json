@@ -1,23 +1,9 @@
 {
-  "text_overlays": [],
-  "typography_ui": "The official page does not describe a typeface.",
-  "color_grade": "Not stated on the official page.",
-  "music_sound": "Not stated on the official page.",
-  "voiceover": "Not stated on the official page.",
-  "cta": "Not stated beyond the title.",
-  "emotional_angle": "The official page does not name an emotional angle.",
-  "last_verified": "2026-10-11",
-  "rebuild_recipe": [
-    "Cut an original spot near 31 seconds.",
-    "Put the offer in an original title line before you design shots.",
-    "Keep type inside a 16:9 frame only if your own export is horizontal.",
-    "Do not copy the brand's logos, characters, art, or exact copy."
-  ],
   "id": "yti-funny-plumbing-commercial-2023-by-deluxe",
   "brand": "Deluxe Plumbing & Heating",
   "advertiser": "Deluxe Plumbing & Heating",
   "platform": "youtube_instream",
-  "format": "YouTube watch page labeled as a commercial",
+  "format": "TV commercial",
   "aspect_ratio": "16:9",
   "length_s": 31,
   "year": 2023,
@@ -25,32 +11,59 @@
   "niche": "home-services",
   "goal": "conversion",
   "official_url": "https://www.youtube.com/watch?v=K1DD2QoWBq8",
-  "hook_0_3s": "The official page does not describe the first three seconds. YouTube's public result for this video titles it: Funny Plumbing Commercial 2023 by Deluxe",
+  "hook_0_3s": "A man named Will says he likes to live worry free, then lists things he does not stress about.",
   "story_beats": [
-    "The official title is: Funny Plumbing Commercial 2023 by Deluxe",
-    "The channel on the oEmbed record is Deluxe Plumbing & Heating.",
-    "YouTube's public results label for this video states 31 seconds.",
-    "The results label does not describe shots, framing, or camera motion."
+    "He shrugs off a perfect meal, a halftime deficit, and takeout.",
+    "He says choosing a plumber for the latest issue was not something he would chance.",
+    "He says he went with Deluxe because the service is quality he can trust.",
+    "The close tells the viewer to give Deluxe a call if they want to live worry free like him."
   ],
   "shot_list": [
     {
-      "t": "0-3s",
-      "shot": "Opening seconds are not described on the public result.",
-      "framing": "Not stated on the official page.",
-      "motion": "Not stated on the official page."
+      "t": "open",
+      "shot": "Will introduces himself as someone who lives worry free.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
     },
     {
-      "t": "0-31s",
-      "shot": "The result gives a title and a length, and does not list shots.",
-      "framing": "Not stated on the official page.",
-      "motion": "Not stated on the official page."
+      "t": "middle",
+      "shot": "He treats dinner and a losing half as low stakes, then treats the plumber hire as high stakes.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "close",
+      "shot": "He names Deluxe and asks the viewer to call.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
     }
   ],
-  "pacing": "The public result states 31 seconds and does not describe cut rhythm.",
-  "why_it_worked": "YouTube lists “Funny Plumbing Commercial 2023 by Deluxe” at 31 seconds on the Deluxe Plumbing & Heating channel. The usable lesson is the labeled length and the one-line premise in the title, not an unseen picture.",
-  "cinematic_qualities": [
-    "Public result length of 31 seconds",
-    "Title states the commercial premise in one line"
+  "pacing": "YouTube's results label states 31 seconds. Casual stakes, then one decision he will not gamble.",
+  "text_overlays": [
+    {
+      "wording": "Give Deluxe a call.",
+      "size": "Not stated on the official page.",
+      "placement": "Spoken on the official page; the page does not say these words are burned in.",
+      "timing": "close"
+    }
   ],
-  "safe_zone_notes": "The results label does not print pixels. This file uses 16:9 because the title presents a TV or Big Game commercial. Confirm the frame on the watch page before you match a safe zone."
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The captions mark music and applause at the end. They do not name a track.",
+  "voiceover": "Spoken lines are on the watch page.",
+  "cta": "Call Deluxe. The captions do not print a phone number.",
+  "emotional_angle": "Ease. The only worry he refuses is a bad plumber.",
+  "why_it_worked": "The character's indifference to everything else makes the plumber choice the one serious beat.",
+  "cinematic_qualities": [
+    "Results label 31 seconds",
+    "Low-stakes life, then one careful hire"
+  ],
+  "rebuild_recipe": [
+    "Let a character shrug off ordinary stress.",
+    "Make the hire the one thing they will not chance.",
+    "End on a call in your own words.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "safe_zone_notes": "Public frame0.jpg is 480x268, classed as 16:9. YouTube's results label for this video states 31 seconds. The watch page upload date is Mar 5, 2023. The in-stream spec recommends 1920x1080, 1080x1920, or 1080x1080 and does not print one pixel inset. Keep type off the skip control and the bottom bar.",
+  "last_verified": "2026-10-12"
 }

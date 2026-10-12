@@ -1,56 +1,68 @@
 {
-  "text_overlays": [],
-  "typography_ui": "The official page does not describe a typeface.",
-  "color_grade": "Not stated on the official page.",
-  "music_sound": "Not stated on the official page.",
-  "voiceover": "Not stated on the official page.",
-  "cta": "Not stated beyond the title.",
-  "emotional_angle": "The official page does not name an emotional angle.",
-  "last_verified": "2026-10-11",
-  "rebuild_recipe": [
-    "Cut an original spot near 31 seconds.",
-    "Put the offer in an original title line before you design shots.",
-    "Keep type inside a 16:9 frame only if your own export is horizontal.",
-    "Do not copy the brand's logos, characters, art, or exact copy."
-  ],
   "id": "yti-aca-air-conditioning-heating-plumbing-commercial",
-  "brand": "ACA Residential",
+  "brand": "ACA",
   "advertiser": "ACA Residential",
   "platform": "youtube_instream",
-  "format": "YouTube watch page labeled as a commercial",
+  "format": "TV commercial",
   "aspect_ratio": "16:9",
   "length_s": 31,
-  "year": null,
+  "year": 2024,
   "award": null,
   "niche": "home-services",
   "goal": "conversion",
   "official_url": "https://www.youtube.com/watch?v=UPHpUE7I9NM",
-  "hook_0_3s": "The official page does not describe the first three seconds. YouTube's public result for this video titles it: ACA Air Conditioning Heating Plumbing - Commercial - Plumbing",
+  "hook_0_3s": "The captions open on more than 75 years as a round-the-clock plumber in Central Louisiana.",
   "story_beats": [
-    "The official title is: ACA Air Conditioning Heating Plumbing - Commercial - Plumbing",
-    "The channel on the oEmbed record is ACA Residential.",
-    "YouTube's public results label for this video states 31 seconds.",
-    "The results label does not describe shots, framing, or camera motion."
+    "The spot says plumbing problems are unpredictable: clogged toilets, burst pipes, and other surprises.",
+    "It offers 24/7 plumbing service as the response.",
+    "The close is that ACA is a phone call away, and the name is repeated."
   ],
   "shot_list": [
     {
-      "t": "0-3s",
-      "shot": "Opening seconds are not described on the public result.",
-      "framing": "Not stated on the official page.",
-      "motion": "Not stated on the official page."
+      "t": "open",
+      "shot": "A voice claims more than 75 years of emergency plumbing in Central Louisiana.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
     },
     {
-      "t": "0-31s",
-      "shot": "The result gives a title and a length, and does not list shots.",
-      "framing": "Not stated on the official page.",
-      "motion": "Not stated on the official page."
+      "t": "middle",
+      "shot": "The examples are a clogged toilet and a burst pipe.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "close",
+      "shot": "The spot says ACA is a phone call away and repeats the name.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
     }
   ],
-  "pacing": "The public result states 31 seconds and does not describe cut rhythm.",
-  "why_it_worked": "YouTube lists “ACA Air Conditioning Heating Plumbing - Commercial - Plumbing” at 31 seconds on the ACA Residential channel. The usable lesson is the labeled length and the one-line premise in the title, not an unseen picture.",
-  "cinematic_qualities": [
-    "Public result length of 31 seconds",
-    "Title states the commercial premise in one line"
+  "pacing": "YouTube's results label states 31 seconds: history, then the emergency, then a phone-call close.",
+  "text_overlays": [
+    {
+      "wording": "ACA, we're just a phone call away.",
+      "size": "Not stated on the official page.",
+      "placement": "Spoken on the official page; the page does not say these words are burned in.",
+      "timing": "close"
+    }
   ],
-  "safe_zone_notes": "The results label does not print pixels. This file uses 16:9 because the title presents a TV or Big Game commercial. Confirm the frame on the watch page before you match a safe zone."
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The official page does not describe the score.",
+  "voiceover": "Spoken lines are on the watch page.",
+  "cta": "Call ACA. The page does not print the digits in the captions.",
+  "emotional_angle": "Urgency without panic: the problem can happen anytime, and someone answers.",
+  "why_it_worked": "A tenure line and two concrete failures do the work. The ask is simply to call.",
+  "cinematic_qualities": [
+    "Results label 31 seconds",
+    "Tenure, two failures, a phone-call close"
+  ],
+  "rebuild_recipe": [
+    "State how long you have done the work if that fact is true.",
+    "Name two failures the viewer already recognizes.",
+    "End on a call, in your own words.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "safe_zone_notes": "Public frame0.jpg is 480x268, classed as 16:9. YouTube's results label for this video states 31 seconds. The watch page upload date is Oct 14, 2024. The in-stream spec recommends 1920x1080, 1080x1920, or 1080x1080 and does not print one pixel inset. Keep type off the skip control and the bottom bar.",
+  "last_verified": "2026-10-12"
 }

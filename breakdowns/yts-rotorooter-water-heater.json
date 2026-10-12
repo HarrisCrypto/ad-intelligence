@@ -9,97 +9,61 @@
   "year": 2026,
   "award": null,
   "niche": "home-services",
-  "goal": "conversion",
+  "goal": "consideration",
   "official_url": "https://www.youtube.com/shorts/4EuF5EYWxXw",
-  "hook_0_3s": "The official page does not describe the first three seconds. The page titles the Short: Which Water Heater is Right For You?",
+  "hook_0_3s": "The captions ask which water heater to choose, gas or electric, and promise a quick breakdown.",
   "story_beats": [
-    "The Shorts page titles the video: Which Water Heater is Right For You?",
-    "The description opens: Choosing the right water heater for your household can be daunting. Here are some advantages of the most common types of water heaters: gas, electric, and tankless. But there are many extra features that you may find de…",
-    "The page states 31 seconds, channel Roto-Rooter, published 2026-07-28.",
-    "The description prints timed chapter labels and does not describe framing or camera motion."
+    "Gas is described as fast heat for higher-demand homes, often with lower operating cost.",
+    "Electric is described as cheaper up front and easier where there is no gas line.",
+    "Tankless is the endless-hot-water option that heats on demand and saves energy and space.",
+    "The close says Roto-Rooter will help and to call the pros."
   ],
   "shot_list": [
     {
-      "t": "0:00-0:05",
-      "shot": "Description chapter: Which Option is Best?",
-      "framing": "Not stated on the official page.",
-      "motion": "Not stated on the official page."
+      "t": "open",
+      "shot": "A question pits a gas heater against an electric one.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
     },
     {
-      "t": "0:06-0:11",
-      "shot": "Description chapter: Gas Water Heater Advantages",
-      "framing": "Not stated on the official page.",
-      "motion": "Not stated on the official page."
+      "t": "middle",
+      "shot": "Three types get one advantage each: gas, electric, then tankless.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
     },
     {
-      "t": "0:12-0:18",
-      "shot": "Description chapter: Electric Water Heater Advantages",
-      "framing": "Not stated on the official page.",
-      "motion": "Not stated on the official page."
-    },
-    {
-      "t": "0:19-0:25",
-      "shot": "Description chapter: Tankless Water Heater Advantages",
-      "framing": "Not stated on the official page.",
-      "motion": "Not stated on the official page."
-    },
-    {
-      "t": "0:26-0:30",
-      "shot": "Description chapter: Roto-Rooter Can Help",
-      "framing": "Not stated on the official page.",
-      "motion": "Not stated on the official page."
+      "t": "close",
+      "shot": "Roto-Rooter offers to help and says to call the pros.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
     }
   ],
-  "pacing": "The page states 31 seconds and does not describe cut rhythm.",
+  "pacing": "The Shorts player lists lengthSeconds 31. One question, three types, a call.",
   "text_overlays": [
     {
-      "wording": "Which Option is Best?",
-      "size": "Not stated",
-      "placement": "Chapter label in the description",
-      "timing": "0:00-0:05"
-    },
-    {
-      "wording": "Gas Water Heater Advantages",
-      "size": "Not stated",
-      "placement": "Chapter label in the description",
-      "timing": "0:06-0:11"
-    },
-    {
-      "wording": "Electric Water Heater Advantages",
-      "size": "Not stated",
-      "placement": "Chapter label in the description",
-      "timing": "0:12-0:18"
-    },
-    {
-      "wording": "Tankless Water Heater Advantages",
-      "size": "Not stated",
-      "placement": "Chapter label in the description",
-      "timing": "0:19-0:25"
-    },
-    {
-      "wording": "Roto-Rooter Can Help",
-      "size": "Not stated",
-      "placement": "Chapter label in the description",
-      "timing": "0:26-0:30"
+      "wording": "Call the pros today.",
+      "size": "Not stated on the official page.",
+      "placement": "Spoken on the official page; the page does not say these words are burned in.",
+      "timing": "close"
     }
   ],
-  "typography_ui": "The official page does not describe typeface or weight.",
-  "color_grade": "The official page does not describe a color grade.",
-  "music_sound": "Not stated on the official page.",
-  "voiceover": "Not stated on the official page.",
-  "cta": "The description includes a next step: *For fast, professional Roto-Rooter plumbing/drain, or water cleanup service, call 1-800-GET-ROTO or schedule online at: https://www.rotorooter.com/schedule-se…",
-  "emotional_angle": "The official page does not name an emotional angle. The title states the premise.",
-  "why_it_worked": "The Roto-Rooter Shorts page states a 31-second vertical video titled “Which Water Heater is Right For You?”. That title is the only opening claim the page prints, so a rebuild can copy the structure of a one-line premise plus a short description, not the footage.",
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The official page does not describe the score.",
+  "voiceover": "Spoken lines are on the watch page.",
+  "cta": "Call Roto-Rooter. The captions say call the pros and do not print digits.",
+  "emotional_angle": "Practical help. The choice is framed as confusing, then reduced to three lines.",
+  "why_it_worked": "A 30-second Short can teach the choice and still end on the company that installs it.",
   "cinematic_qualities": [
-    "Official URL is a YouTube Shorts watch page",
-    "Stated length of 31 seconds"
+    "Player length 31 seconds",
+    "Three heater types, one line each"
   ],
   "rebuild_recipe": [
-    "Cut an original vertical Short near 31 seconds.",
-    "Lead with one original premise line the way this page leads with its title.",
-    "If you use chapters, print your own labels. Leave framing and motion to the footage you shoot.",
+    "Ask the choice the customer is already stuck on.",
+    "Give each option one real advantage.",
+    "End on a call in your own words.",
     "Do not copy the brand's logos, characters, art, or exact copy."
   ],
-  "safe_zone_notes": "The watch page does not print a pixel size. This file uses 9:16 because the official URL is a YouTube Short. Keep type clear of the right-side buttons and the bottom caption.",
-  "last_verified": "2026-10-11"
+  "safe_zone_notes": "The Shorts player lists 1080x1920 and lengthSeconds 31. Public frame0.jpg is 268x480. Like, comment, and share sit on the right. Keep type out of that column and the bottom caption. Upload date Jul 28, 2026.",
+  "last_verified": "2026-10-12"
 }
