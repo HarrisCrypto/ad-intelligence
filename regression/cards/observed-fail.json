@@ -1,0 +1,53 @@
+{
+  "id": "lint-observed-fail",
+  "status": "draft",
+  "source": {
+    "platform": "fixture",
+    "url_or_library_id": "regression/cards/observed-fail.json",
+    "accessed": "2026-10-11",
+    "rights": "owned"
+  },
+  "niche": "home-services",
+  "format": "polished_video",
+  "structure": {
+    "format": "video_timed",
+    "timing_observable": true
+  },
+  "duration_s": 6,
+  "aspect": "9:16",
+  "hook": {
+    "mechanism": "ci fixture",
+    "first_second_description": "Not an ad. Proves observed honesty rejects digital silence."
+  },
+  "shots": [
+    {
+      "t_start": 0,
+      "t_end": 6,
+      "purpose": "fixture"
+    }
+  ],
+  "stats": {
+    "shot_count": 1,
+    "loudness_lufs": -80,
+    "stats_source": "measured"
+  },
+  "audio": {},
+  "look": {},
+  "cta": {},
+  "offer_and_proof": {
+    "offer": "none",
+    "proof": "none — fixture"
+  },
+  "why_it_works": "CI fixture only.",
+  "steal": [],
+  "what_not_to_copy": ["This file is a lint fixture, not a creative to imitate."],
+  "tags": ["fixture"],
+  "provenance": {
+    "observed": true,
+    "basis": "ci-fixture",
+    "media_committed": false
+  },
+  "measured_by": {
+    "tooling": ["ci-fixture"]
+  }
+}

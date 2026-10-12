@@ -1,0 +1,56 @@
+{
+  "text_overlays": [],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "The listing returns a spoken prayer.",
+  "cta": "Join the prayer practice this Lent, as the description frames it.",
+  "emotional_angle": "A shared thanks, then an invitation.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "Write a 30-second invitation in your own words.",
+    "If the spot is a prayer or testimonial, record it with permission.",
+    "Match the length the page states before you add supers.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "yti-hallow-lent-30",
+  "brand": "Hallow",
+  "advertiser": "Hallow: Prayer & Meditation",
+  "platform": "youtube_instream",
+  "format": "Big Game commercial",
+  "aspect_ratio": "16:9",
+  "length_s": 30,
+  "year": 2024,
+  "award": null,
+  "niche": "other",
+  "goal": "consideration",
+  "official_url": "https://www.youtube.com/watch?v=0-U1TyEr4IE",
+  "hook_0_3s": "The official page does not describe the first three seconds. The description calls it the full original 30-second commercial.",
+  "story_beats": [
+    "The public YouTube listing titles it Hallow's Official Big Game Commercial and says Length 00:30.",
+    "The description says to watch the full original 30-second commercial that aired during the Big Game.",
+    "The listing date is 2024-02-11.",
+    "The returned lines are a short prayer of thanks and an invitation to join in prayer this Lent."
+  ],
+  "shot_list": [
+    {
+      "t": "0-30s",
+      "shot": "A short spoken prayer, as returned on the public listing.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "end",
+      "shot": "An invitation to join the prayer practice for Lent.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The description and the listing length both say 30 seconds.",
+  "why_it_worked": "Hallow's own description and YouTube's length field agree on a 30-second Big Game prayer, so the whole spot is one invitation rather than a feature tour.",
+  "cinematic_qualities": [
+    "Description-stated 30-second commercial",
+    "One spoken prayer"
+  ],
+  "safe_zone_notes": "The listing says Length 00:30 and does not print pixels."
+}

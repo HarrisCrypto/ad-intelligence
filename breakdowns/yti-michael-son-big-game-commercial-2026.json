@@ -1,0 +1,68 @@
+{
+  "id": "yti-michael-son-big-game-commercial-2026",
+  "brand": "Michael and Son",
+  "advertiser": "Michael and Son Services",
+  "platform": "youtube_instream",
+  "format": "Big-game commercial",
+  "aspect_ratio": "16:9",
+  "length_s": 31,
+  "year": 2026,
+  "award": null,
+  "niche": "home-services",
+  "goal": "awareness",
+  "official_url": "https://www.youtube.com/watch?v=TJ8vlA1yuQ0",
+  "hook_0_3s": "The captions open with the company saying it loves working with the experts.",
+  "story_beats": [
+    "The turn is that a home needs real pros, so call the experts' expert.",
+    "The closer is: if you can't, we can.",
+    "The channel on the watch page is Michael and Son Services. The caption track spells the name as Michael and Sun."
+  ],
+  "shot_list": [
+    {
+      "t": "open",
+      "shot": "The company says it likes working with experts.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "middle",
+      "shot": "The line shifts from those experts to the person you call for the house.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "close",
+      "shot": "If you can't, we can, over music the captions mark but do not name.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    }
+  ],
+  "pacing": "YouTube's results label states 31 seconds. Two short claims and a reversal.",
+  "text_overlays": [
+    {
+      "wording": "IF YOU CAN'T, WE CAN.",
+      "size": "End-card type",
+      "placement": "On screen in the spot and on the end card",
+      "timing": "Close"
+    }
+  ],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The captions mark music at the end and do not name it.",
+  "voiceover": "Spoken lines are on the watch page.",
+  "cta": "The on-screen close is If you can't, we can. The sampled frames do not show a phone number.",
+  "emotional_angle": "Confidence. The joke is that the experts have an expert.",
+  "why_it_worked": "The whole spot is a status flip: the people you hire still need someone for the house.",
+  "cinematic_qualities": [
+    "Results label 31 seconds",
+    "One reversal and a four-word close"
+  ],
+  "rebuild_recipe": [
+    "Name the experts your customer already trusts.",
+    "Flip to the job those experts cannot do.",
+    "End on a short original closer.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "safe_zone_notes": "Public frame0.jpg is 480x268, classed as 16:9. YouTube's results label for this video states 31 seconds. The watch page upload date is Feb 9, 2026. The in-stream spec recommends 1920x1080, 1080x1920, or 1080x1080 and does not print one pixel inset. Keep type off the skip control and the bottom bar.",
+  "last_verified": "2026-10-12"
+}

@@ -1,0 +1,75 @@
+{
+  "id": "yti-535-plumbing-30-tv-commercial",
+  "brand": "535 Plumbing",
+  "advertiser": "535 Plumbing LLC",
+  "platform": "youtube_instream",
+  "format": "TV commercial",
+  "aspect_ratio": "16:9",
+  "length_s": 31,
+  "year": 2022,
+  "award": null,
+  "niche": "home-services",
+  "goal": "conversion",
+  "official_url": "https://www.youtube.com/watch?v=dCLdkuBOw60",
+  "hook_0_3s": "The captions open with a question: looking for an honest reliable plumber?",
+  "story_beats": [
+    "535 Plumbing says it is ready to work and wants the first call to feel right.",
+    "It names zero-contact service as protection for the household and the crew.",
+    "The services named are pipe replacement, drain cleaning, and water heaters.",
+    "The close says you can count on 535 Plumbing to be there."
+  ],
+  "shot_list": [
+    {
+      "t": "open",
+      "shot": "A question asks for an honest, reliable plumber, then names 535 Plumbing.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "middle",
+      "shot": "The lines list zero-contact service, then pipes, drains, and water heaters.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "close",
+      "shot": "The spot closes on counting on 535 Plumbing to show up.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    }
+  ],
+  "pacing": "YouTube's results label states 31 seconds, from a hiring question to a short service list to a reliability close.",
+  "text_overlays": [
+    {
+      "wording": "(808) 300-0535",
+      "size": "Lower-third type",
+      "placement": "Lower third, on screen through the spot and on the end card",
+      "timing": "Throughout"
+    },
+    {
+      "wording": "535plumbing.com",
+      "size": "Lower-third type",
+      "placement": "URL bar in the lower third, on screen through the spot and on the end card",
+      "timing": "Throughout"
+    }
+  ],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The official page does not describe the score.",
+  "voiceover": "Spoken lines are on the watch page.",
+  "cta": "Call (808) 300-0535 or go to 535plumbing.com.",
+  "emotional_angle": "Trust and care for the household, including a zero-contact line.",
+  "why_it_worked": "The spot answers the hiring fear first, then lists three jobs, then stops. It does not tour a truck.",
+  "cinematic_qualities": [
+    "Results label 31 seconds",
+    "Question, service list, reliability close"
+  ],
+  "rebuild_recipe": [
+    "Open with the fear of hiring the wrong tradesperson.",
+    "Name a few jobs you actually do.",
+    "Close on showing up, in your own words.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "safe_zone_notes": "Public frame0.jpg is 480x268, classed as 16:9. YouTube's results label for this video states 31 seconds. The watch page upload date is Jan 24, 2022. The in-stream spec recommends 1920x1080, 1080x1920, or 1080x1080 and does not print one pixel inset. Keep type off the skip control and the bottom bar.",
+  "last_verified": "2026-10-12"
+}

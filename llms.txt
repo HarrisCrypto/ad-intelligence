@@ -1,0 +1,37 @@
+# Ad example library
+
+> Breakdowns of public ads for any LLM or agent. Each file is an original analysis plus the official page link. No video files.
+
+This library is for studying structure. Query it, read a few matches, then build a new ad with the user's own tools.
+
+## Start
+
+- [AGENTS.md](AGENTS.md) — the only workflow
+- [index.json](index.json) — generated catalog
+- [schema/ad-breakdown.schema.json](schema/ad-breakdown.schema.json)
+
+## Search
+
+```
+node scripts/search.mjs --platform tiktok --niche ai-saas --goal conversion --keyword demo
+```
+
+Filters: `--platform`, `--niche`, `--goal`, `--keyword`.
+
+## Platforms
+
+- [TikTok](platforms/tiktok.md)
+- [Instagram Reels](platforms/instagram-reels.md)
+- [YouTube Shorts](platforms/youtube-shorts.md)
+- [YouTube in-stream](platforms/youtube-instream.md)
+- [YouTube bumper](platforms/youtube-bumper.md)
+- [Meta feed](platforms/meta-feed.md)
+- [Meta Stories](platforms/meta-stories.md)
+- [X](platforms/x.md)
+- [Pinterest](platforms/pinterest.md)
+
+## Rules
+
+- Store the official link and the written breakdown. Do not download, rehost, or scrape the video.
+- If an award is not on a public page, `award` is null.
+- `rebuild_recipe` must not reproduce the brand's art, logos, characters, or exact lines.

@@ -1,0 +1,63 @@
+{
+  "text_overlays": [
+    {
+      "wording": "nerds gummy clusters unleash your senses",
+      "size": "Not stated on the official page.",
+      "placement": "Spoken on the watch page, not confirmed as type",
+      "timing": "near the end of the returned audio"
+    }
+  ],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "The watch page returns sung lyrics and a product line.",
+  "cta": "Not stated on the official page.",
+  "emotional_angle": "The official page does not name an emotional angle.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "Use a short music bed you have rights to, not this recording.",
+    "Land one original product line at the end.",
+    "Export near 30 seconds and measure the file.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "yti-nerds-shaboozey-2025",
+  "brand": "NERDS",
+  "advertiser": "NERDS Candy",
+  "platform": "youtube_instream",
+  "format": "Big Game commercial",
+  "aspect_ratio": "16:9",
+  "length_s": 31,
+  "year": 2025,
+  "award": null,
+  "niche": "food",
+  "goal": "awareness",
+  "official_url": "https://www.youtube.com/watch?v=nwcZ2dxPUo0",
+  "hook_0_3s": "The official page does not describe the first three seconds. The title says Official :30 and the public results label says 31 seconds.",
+  "story_beats": [
+    "The oEmbed title is NERDS Big Game Commercial ft. Shaboozey | Official :30 | 2025.",
+    "YouTube's public results label for this video states 31 seconds.",
+    "The watch page returns a What a Wonderful World lyric and the line nerds gummy clusters unleash your senses.",
+    "The page does not list shots."
+  ],
+  "shot_list": [
+    {
+      "t": "0-31s",
+      "shot": "Returned audio is a song leading to the gummy-clusters line.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "title",
+      "shot": "Official :30 is in the title, and the results label says 31 seconds.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "Title says :30. The results label says 31 seconds. Cut rhythm is not described.",
+  "why_it_worked": "The 2025 title pairs a known song with one product line, and YouTube labels the file at 31 seconds, so the structure is a short music bite plus a single product name.",
+  "cinematic_qualities": [
+    "Song-led :30",
+    "Results label of 31 seconds"
+  ],
+  "safe_zone_notes": "Pixels are not printed. The title calls it an Official :30 Big Game commercial."
+}

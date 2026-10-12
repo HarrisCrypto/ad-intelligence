@@ -1,0 +1,74 @@
+{
+  "id": "yti-jolly-plumbing-tv-commercials-2019-honest-plumbi",
+  "brand": "Jolly",
+  "advertiser": "Jolly Heating, Air, Plumbing, Electric",
+  "platform": "youtube_instream",
+  "format": "TV commercial",
+  "aspect_ratio": "16:9",
+  "length_s": 16,
+  "year": 2019,
+  "award": null,
+  "niche": "home-services",
+  "goal": "awareness",
+  "official_url": "https://www.youtube.com/watch?v=idaOy_vWZ2Y",
+  "hook_0_3s": "The captions open on the line that honest plumbing starts with honest plumbers.",
+  "story_beats": [
+    "A speaker says they forgot to mention that daughter Amber got the lead in the musical.",
+    "The reply is surprise, because she is tone-deaf.",
+    "The tag is that a Jolly plumbing flush beats a full house."
+  ],
+  "shot_list": [
+    {
+      "t": "open",
+      "shot": "The first line states that honest plumbing starts with honest plumbers.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "middle",
+      "shot": "A parent boasts that Amber got the lead, and someone notes she is tone-deaf.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "close",
+      "shot": "The tagline compares a Jolly flush to a full house.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    }
+  ],
+  "pacing": "YouTube's results label states 16 seconds. A slogan, a family boast, then a poker-table tag.",
+  "text_overlays": [
+    {
+      "wording": "HONEST PLUMBING STARTS WITH HONEST PLUMBERS",
+      "size": "Open super",
+      "placement": "On screen at the open",
+      "timing": "Open"
+    },
+    {
+      "wording": "A JOLLY PLUMBING FLUSH BEATS A FULL HOUSE",
+      "size": "End-card type",
+      "placement": "End card, on screen",
+      "timing": "End card"
+    }
+  ],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The captions mark music after the tag. They do not name the track.",
+  "voiceover": "Spoken lines are on the watch page.",
+  "cta": "The on-screen close is the flush tagline. The sampled frames do not show a phone number or a URL.",
+  "emotional_angle": "Pride and a joke. The family boast is the entertainment; the flush line is the brand.",
+  "why_it_worked": "Sixteen seconds is enough for one brag and one tag. The honesty line is the only claim.",
+  "cinematic_qualities": [
+    "Results label 16 seconds",
+    "Slogan, family boast, tagline"
+  ],
+  "rebuild_recipe": [
+    "Open on one honest claim about the work.",
+    "Let a family joke carry the middle.",
+    "End on an original tag, not a borrowed card-game line.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "safe_zone_notes": "Public frame0.jpg is 480x270, classed as 16:9. YouTube's results label for this video states 16 seconds. The watch page upload date is Feb 4, 2019. The in-stream spec recommends 1920x1080, 1080x1920, or 1080x1080 and does not print one pixel inset. Keep type off the skip control and the bottom bar.",
+  "last_verified": "2026-10-12"
+}

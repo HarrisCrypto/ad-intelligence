@@ -1,0 +1,92 @@
+{
+  "id": "yti-aca-air-conditioning-heating-plumbing-commercial",
+  "brand": "ACA",
+  "advertiser": "ACA Residential",
+  "platform": "youtube_instream",
+  "format": "TV commercial",
+  "aspect_ratio": "16:9",
+  "length_s": 31,
+  "year": 2024,
+  "award": null,
+  "niche": "home-services",
+  "goal": "conversion",
+  "official_url": "https://www.youtube.com/watch?v=UPHpUE7I9NM",
+  "hook_0_3s": "The captions open on more than 75 years as a round-the-clock plumber in Central Louisiana.",
+  "story_beats": [
+    "The spot says plumbing problems are unpredictable: clogged toilets, burst pipes, and other surprises.",
+    "It offers 24/7 plumbing service as the response.",
+    "The close is that ACA is a phone call away, and the name is repeated."
+  ],
+  "shot_list": [
+    {
+      "t": "open",
+      "shot": "A voice claims more than 75 years of emergency plumbing in Central Louisiana.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "middle",
+      "shot": "The examples are a clogged toilet and a burst pipe.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "close",
+      "shot": "The spot says ACA is a phone call away and repeats the name.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    }
+  ],
+  "pacing": "YouTube's results label states 31 seconds: history, then the emergency, then a phone-call close.",
+  "text_overlays": [
+    {
+      "wording": "CALL NOW (318) 443-6321",
+      "size": "Lower-third type",
+      "placement": "Lower third, on screen",
+      "timing": "Throughout"
+    },
+    {
+      "wording": "acaalex.com",
+      "size": "Lower-third type",
+      "placement": "Lower third, on screen, with a visit line",
+      "timing": "Throughout"
+    },
+    {
+      "wording": "75+ YEARS",
+      "size": "Card type",
+      "placement": "On a mid-spot card, on screen",
+      "timing": "Middle"
+    },
+    {
+      "wording": "24/7 PLUMBING SERVICES",
+      "size": "Card type",
+      "placement": "On a mid-spot card, on screen",
+      "timing": "Middle"
+    },
+    {
+      "wording": "ANYTIME DAY OR NIGHT",
+      "size": "Card type",
+      "placement": "On its own later card, on screen",
+      "timing": "Later"
+    }
+  ],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The official page does not describe the score.",
+  "voiceover": "Spoken lines are on the watch page.",
+  "cta": "Call (318) 443-6321 or visit acaalex.com.",
+  "emotional_angle": "Urgency without panic: the problem can happen anytime, and someone answers.",
+  "why_it_worked": "A tenure line and two concrete failures do the work. The ask is simply to call.",
+  "cinematic_qualities": [
+    "Results label 31 seconds",
+    "Tenure, two failures, a phone-call close"
+  ],
+  "rebuild_recipe": [
+    "State how long you have done the work if that fact is true.",
+    "Name two failures the viewer already recognizes.",
+    "End on a call, in your own words.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "safe_zone_notes": "Public frame0.jpg is 480x268, classed as 16:9. YouTube's results label for this video states 31 seconds. The watch page upload date is Oct 14, 2024. The in-stream spec recommends 1920x1080, 1080x1920, or 1080x1080 and does not print one pixel inset. Keep type off the skip control and the bottom bar.",
+  "last_verified": "2026-10-12"
+}

@@ -1,0 +1,61 @@
+{
+  "text_overlays": [],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The page says the film uses two versions of George Harrison's Isn't it a Pity and has no dialogue.",
+  "voiceover": "Not stated on the official page.",
+  "cta": "Not stated on the official page.",
+  "emotional_angle": "The page says the story is about kindness and connection.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "If the film is long, let a cleared song carry a turn instead of adding voiceover.",
+    "Mix two visual languages only if both serve one story.",
+    "Do not reuse this song or Apple's characters.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "awd-apple-fuzzy-feelings",
+  "brand": "Apple",
+  "advertiser": "Apple",
+  "platform": "youtube_instream",
+  "format": "Holiday short film",
+  "aspect_ratio": "16:9",
+  "length_s": 225,
+  "year": 2024,
+  "award": {
+    "name": "The One Show",
+    "year": 2024,
+    "category": "Gold Pencil, Use of Licensed Music",
+    "evidence_url": "https://www.oneclub.org/awards/theoneshow/-award/53304/fuzzy-feelings/"
+  },
+  "niche": "other",
+  "goal": "awareness",
+  "official_url": "https://www.oneclub.org/awards/theoneshow/-award/53304/fuzzy-feelings/",
+  "hook_0_3s": "The official page does not describe the first three seconds. The page says the film is 3:45 and premiered on Apple's YouTube channel.",
+  "story_beats": [
+    "The 2024 page says this 3:45 short mixes live action and stop-motion in London.",
+    "It says there is no dialogue and the story is carried by an edit of George Harrison's Isn't it a Pity.",
+    "It says the film premiered on Apple's YouTube channel.",
+    "The page describes humor up front and an emotional turn, without listing frames."
+  ],
+  "shot_list": [
+    {
+      "t": "3:45",
+      "shot": "Live action and stop-motion in one short, as the page describes the blend.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "music",
+      "shot": "No dialogue. The song carries the turn.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The page states 3 minutes 45 seconds and a turn from humor to warmth. It does not count cuts.",
+  "why_it_worked": "The One Show page states a 3:45 YouTube premiere with no dialogue, so the licensed song and the live-action/stop-motion blend do the storytelling.",
+  "cinematic_qualities": [
+    "Stated 3:45 length",
+    "No dialogue, music-led turn"
+  ],
+  "safe_zone_notes": "The page says the film premiered on YouTube and does not print pixels. This file uses 16:9 as an unverified film master."
+}

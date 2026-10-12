@@ -1,0 +1,56 @@
+{
+  "text_overlays": [],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "Not stated on the official page.",
+  "cta": "Not stated on the official page.",
+  "emotional_angle": "The person is the hero. The tool is a quiet collaborator.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "Drop into a real task already underway.",
+    "Show the person succeed before you show the tool.",
+    "Put the prompt in the credits in your own example, not a copied one.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "awd-openai-thirty",
+  "brand": "OpenAI",
+  "advertiser": "OpenAI",
+  "platform": "youtube_instream",
+  "format": "30-second film series",
+  "aspect_ratio": "16:9",
+  "length_s": 30,
+  "year": null,
+  "award": null,
+  "niche": "ai-saas",
+  "goal": "awareness",
+  "official_url": "https://www.oneclub.org/awards/theoneshow/-award/64124/with-chatgpt/",
+  "hook_0_3s": "The page says each film drops the viewer into a moment already in progress, not into a message.",
+  "story_beats": [
+    "The page says the series is seven :30 films for TV, VOD, and online video.",
+    "Each film is one shot of a person making a small leap, then end credits built from a real prompt and response.",
+    "The page says the films were shot on 35mm and avoid interface demos.",
+    "The page lists a Silver Pencil and does not print an award year in the text that was read."
+  ],
+  "shot_list": [
+    {
+      "t": "0-30s",
+      "shot": "One shot, mid-moment, of a human turning point.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "credits",
+      "shot": "The prompt and the answer appear as end credits.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The page states :30 films with a fixed three-part structure and one shot.",
+  "why_it_worked": "The page gives a repeatable :30 container for an AI product: arrive mid-scene, show a human win, and reveal the prompt only in the credits.",
+  "cinematic_qualities": [
+    "Stated :30 single-shot films",
+    "Product withheld until the credits"
+  ],
+  "safe_zone_notes": "The page says TV, VOD, and online and does not print pixels. This file uses 16:9. Award year was not printed in the text that was read, so award is null."
+}

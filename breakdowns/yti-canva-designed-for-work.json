@@ -1,0 +1,68 @@
+{
+  "id": "yti-canva-designed-for-work",
+  "brand": "Canva",
+  "advertiser": "Canva",
+  "platform": "youtube_instream",
+  "format": "Brand film",
+  "aspect_ratio": "16:9",
+  "length_s": 31,
+  "year": 2024,
+  "award": null,
+  "niche": "ecommerce",
+  "goal": "awareness",
+  "official_url": "https://www.youtube.com/watch?v=O1Dm5cy7X1E",
+  "hook_0_3s": "The captions say a Canva whiteboard is a playground for ideas.",
+  "story_beats": [
+    "A doc is a way to wow with words. A presentation is visual communication.",
+    "The scope is every task, teammate, and department.",
+    "The close is it's not just design, it's designed for work."
+  ],
+  "shot_list": [
+    {
+      "t": "open",
+      "shot": "A whiteboard is reframed as a playground.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "middle",
+      "shot": "A doc and a presentation each get a one-line job.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "close",
+      "shot": "Every team, then designed for work.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    }
+  ],
+  "pacing": "YouTube's results label states 31 seconds. Three tools, then a work claim.",
+  "text_overlays": [
+    {
+      "wording": "DESIGNED FOR WORK.",
+      "size": "End super",
+      "placement": "End still, on screen, with the Canva wordmark",
+      "timing": "End"
+    }
+  ],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The official page does not describe the score.",
+  "voiceover": "Spoken lines are on the watch page.",
+  "cta": "Use it for work. The end still shows Designed for work and the Canva wordmark, not a URL.",
+  "emotional_angle": "Ambition at work. Design is pulled into ordinary team tasks.",
+  "why_it_worked": "Each office object gets one elevated job, so the end line feels earned.",
+  "cinematic_qualities": [
+    "Results label 31 seconds",
+    "Three work objects, one claim"
+  ],
+  "rebuild_recipe": [
+    "Name three tools people already use.",
+    "Give each a job in one line.",
+    "End by saying who the product is for.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "safe_zone_notes": "Public frame0.jpg is 480x268, classed as 16:9. YouTube's results label for this video states 31 seconds. The watch page upload date is Mar 11, 2024. The in-stream spec recommends 1920x1080, 1080x1920, or 1080x1080 and does not print one pixel inset. Keep type off the skip control and the bottom bar.",
+  "last_verified": "2026-10-12"
+}

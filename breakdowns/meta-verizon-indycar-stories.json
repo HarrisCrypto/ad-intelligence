@@ -1,0 +1,60 @@
+{
+  "text_overlays": [],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "Not stated on the official page.",
+  "cta": "The page says a touch pauses the Story so the message can be read.",
+  "emotional_angle": "The official page does not name an emotional angle.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "Make a frame that is intentionally too fast, and reward a pause.",
+    "Keep the readable line short enough for one held frame.",
+    "Do not copy Verizon's race creative.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "meta-verizon-indycar-stories",
+  "brand": "Verizon",
+  "advertiser": "Verizon",
+  "platform": "meta_stories",
+  "format": "1-second Instagram Story",
+  "aspect_ratio": "9:16",
+  "length_s": 1,
+  "year": 2018,
+  "award": {
+    "name": "The One Show",
+    "year": 2019,
+    "category": "Silver Pencil, Mobile-First Video / Under 3 Seconds",
+    "evidence_url": "https://www.oneclub.org/awards/theoneshow/-award/33275/indycar-fastest-instagram-stories/"
+  },
+  "niche": "other",
+  "goal": "awareness",
+  "official_url": "https://www.oneclub.org/awards/theoneshow/-award/33275/indycar-fastest-instagram-stories/",
+  "hook_0_3s": "The page says the Stories are 1 second and too fast to watch unless the viewer holds to pause.",
+  "story_beats": [
+    "The page sets the sponsorship in 2018 and the Silver Pencil in the 2019 awards.",
+    "The execution is 1-second Instagram Stories, too fast to read unless the viewer touches to pause.",
+    "The page says the pause is the point, because Stories already let people hold to read."
+  ],
+  "shot_list": [
+    {
+      "t": "0-1s",
+      "shot": "A Story frame that flies by unless the viewer holds.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "pause",
+      "shot": "The page says a touch reveals the message.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The page says the Stories are 1 second, under the category Under 3 Seconds.",
+  "why_it_worked": "The One Show page uses Instagram's own pause gesture as the idea: a 1-second Story that is only readable if you choose to stop, which matches a speed sponsorship.",
+  "cinematic_qualities": [
+    "Stated 1-second Story",
+    "The platform pause is the interaction"
+  ],
+  "safe_zone_notes": "The page does not print pixels. It names Instagram Stories, so this file uses 9:16. Leave space for the Story progress bar."
+}

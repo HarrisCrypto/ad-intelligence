@@ -1,0 +1,69 @@
+{
+  "id": "yti-cardinal-heating-and-air-summer-commercial-30-se",
+  "brand": "Cardinal Heating and Air",
+  "advertiser": "CardinalHeating",
+  "platform": "youtube_instream",
+  "format": "TV commercial",
+  "aspect_ratio": "16:9",
+  "length_s": 31,
+  "year": 2024,
+  "award": null,
+  "niche": "home-services",
+  "goal": "consideration",
+  "official_url": "https://www.youtube.com/watch?v=keZVYoRzjpI",
+  "hook_0_3s": "The captions open with Cardinal Heating and Air saying comfort is the priority.",
+  "story_beats": [
+    "The jobs named are air-conditioner repair and adding high-efficiency cooling.",
+    "Slim, quiet heat pumps are described as fitting in the yard and staying out of sight all year.",
+    "A smart-thermostat upgrade is the control-from-anywhere beat.",
+    "The close says elevate your comfort this summer with Cardinal Heating and Air."
+  ],
+  "shot_list": [
+    {
+      "t": "open",
+      "shot": "A voice sets comfort as the priority and names air-conditioner repair.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "middle",
+      "shot": "Quiet heat pumps are placed in the yard, out of sight, for year-round use.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "close",
+      "shot": "A smart thermostat you can adjust from anywhere, then a summer comfort line.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    }
+  ],
+  "pacing": "YouTube's results label states 31 seconds. Repair, then the equipment, then remote control.",
+  "text_overlays": [
+    {
+      "wording": "CARDINAL HEATING & AIR",
+      "size": "Logo",
+      "placement": "Logo lockup on screen through the spot and on the end card",
+      "timing": "Throughout"
+    }
+  ],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The official page does not describe the score.",
+  "voiceover": "Spoken lines are on the watch page.",
+  "cta": "The on-screen close is the Cardinal Heating & Air logo. The sampled frames do not show a phone number.",
+  "emotional_angle": "Ease. The equipment is quiet and out of the way.",
+  "why_it_worked": "The spot sells the thing you do not want to see: a quiet pump in the yard and a thermostat on the phone.",
+  "cinematic_qualities": [
+    "Results label 31 seconds",
+    "Repair, hidden equipment, remote control"
+  ],
+  "rebuild_recipe": [
+    "Start with the repair people already need.",
+    "Describe the equipment by how little space and noise it takes.",
+    "End on the season, in your own words.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "safe_zone_notes": "Public frame0.jpg is 480x268, classed as 16:9. YouTube's results label for this video states 31 seconds. The watch page upload date is Premiered Sep 4, 2024. The in-stream spec recommends 1920x1080, 1080x1920, or 1080x1080 and does not print one pixel inset. Keep type off the skip control and the bottom bar.",
+  "last_verified": "2026-10-12"
+}

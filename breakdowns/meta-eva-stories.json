@@ -1,0 +1,61 @@
+{
+  "text_overlays": [],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "Not stated on the official page.",
+  "cta": "Not stated on the official page.",
+  "emotional_angle": "A historical diary told as if the platform already existed.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "Cut a longer story into chapters that fit the placement's clip length.",
+    "Film in a way that looks like the platform's own camera.",
+    "Do not restage a real person's diary without rights and care.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "meta-eva-stories",
+  "brand": "Eva Stories",
+  "advertiser": "Eva.Stories",
+  "platform": "meta_stories",
+  "format": "15-second Instagram Stories",
+  "aspect_ratio": "9:16",
+  "length_s": 15,
+  "year": 2020,
+  "award": {
+    "name": "The One Show",
+    "year": 2020,
+    "category": "Best in Discipline, Branded Entertainment",
+    "evidence_url": "https://www.oneclub.org/articles/all/-view/eva-stories/"
+  },
+  "niche": "nonprofit",
+  "goal": "awareness",
+  "official_url": "https://www.oneclub.org/articles/all/-view/eva-stories/",
+  "hook_0_3s": "The official page does not describe the first three seconds. The page says the film was cut into 15-second videos.",
+  "story_beats": [
+    "The One Club article says Eva.Stories retells a diary as Instagram Stories.",
+    "It says the stories were filmed on a smartphone, then cut into 15-second videos.",
+    "It says there are 220 Instagram videos uploaded in 24 hours.",
+    "It says the project won two Gold Pencils and Best of Discipline at The One Show."
+  ],
+  "shot_list": [
+    {
+      "t": "0-15s",
+      "shot": "One smartphone scene cut to a 15-second Story.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "series",
+      "shot": "The page says 220 of those videos posted in a day.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The page says each piece is 15 seconds and that the set was posted in 24 hours.",
+  "why_it_worked": "The article treats Instagram's 15-second Story as the chapter length of a diary, filmed on a phone and posted as a one-day series.",
+  "cinematic_qualities": [
+    "Stated 15-second cuts",
+    "Phone-filmed first person"
+  ],
+  "safe_zone_notes": "The page says smartphone and Instagram Stories and does not print pixels. This file uses 9:16 for Stories."
+}

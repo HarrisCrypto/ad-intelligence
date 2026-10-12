@@ -1,0 +1,88 @@
+{
+  "text_overlays": [
+    {
+      "wording": "Schedule",
+      "size": "UI label",
+      "placement": "On the product screen, on screen",
+      "timing": "Middle"
+    },
+    {
+      "wording": "Quote",
+      "size": "UI label",
+      "placement": "On the product screen, on screen",
+      "timing": "Middle"
+    },
+    {
+      "wording": "Invoice",
+      "size": "UI label",
+      "placement": "On the product screen, on screen",
+      "timing": "Middle"
+    },
+    {
+      "wording": "Jobber",
+      "size": "Logo",
+      "placement": "Wordmark on the product screen, on screen",
+      "timing": "Middle"
+    }
+  ],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "A named service owner speaks on the watch page.",
+  "cta": "The close says you can try it for free or choose a plan.",
+  "emotional_angle": "The speaker is a working plumber talking about less paperwork.",
+  "last_verified": "2026-10-12",
+  "rebuild_recipe": [
+    "Have a real customer category narrate the workflow in about a minute.",
+    "Order the steps the way the work actually happens.",
+    "End on a try or plan offer in your own words.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "yti-jobber-sixty",
+  "brand": "Jobber",
+  "advertiser": "Jobber",
+  "platform": "youtube_instream",
+  "format": "Product explainer",
+  "aspect_ratio": "16:9",
+  "length_s": 64,
+  "year": 2025,
+  "award": null,
+  "niche": "local-service",
+  "goal": "consideration",
+  "official_url": "https://www.youtube.com/watch?v=YuXZvGGe2SE",
+  "hook_0_3s": "The official page does not describe the first three seconds. The title says How Jobber Works in 60 Seconds.",
+  "story_beats": [
+    "The title states a 60-second explainer.",
+    "A plumber on the watch page says the right tools matter and that service pros use Jobber to run their businesses.",
+    "The lines walk from first contact and quote to payment and a review, in one place, including a mobile app.",
+    "The close offers a free try or a plan that fits the business.",
+    "YouTube's public results label for this video states 64 seconds."
+  ],
+  "shot_list": [
+    {
+      "t": "open",
+      "shot": "A service owner introduces himself and the product.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "middle",
+      "shot": "The lines list the job path from quote to payment.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "close",
+      "shot": "A free-try or plan offer.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The title locks the film at 60 seconds and the lines move from user to workflow to offer.",
+  "why_it_worked": "The title promises the whole product in 60 seconds, and the watch page spends that minute on one job path a contractor already recognizes, ending on a try-or-plan offer.",
+  "cinematic_qualities": [
+    "Title-stated 60 seconds",
+    "One workflow from first contact to review"
+  ],
+  "safe_zone_notes": "The watch page does not print pixels. The film is an explainer on a standard YouTube watch URL. Watch-page upload year recorded 2026-10-12: 2025."
+}

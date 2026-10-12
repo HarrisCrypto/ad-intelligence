@@ -1,0 +1,61 @@
+{
+  "text_overlays": [],
+  "typography_ui": "The page says the film uses fonts native to TikTok.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "Not stated on the official page.",
+  "cta": "The page's repeated line is It Matters Where You Stay.",
+  "emotional_angle": "Reward for not rushing.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "If staying is the message, make the film long enough that staying is a choice.",
+    "Shoot vertical on a phone and cut the way the platform already looks.",
+    "Clear every creator yourself.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "awd-hilton-ten-minute",
+  "brand": "Hilton",
+  "advertiser": "Hilton",
+  "platform": "tiktok",
+  "format": "10-minute TikTok",
+  "aspect_ratio": "9:16",
+  "length_s": 600,
+  "year": 2023,
+  "award": {
+    "name": "The One Show",
+    "year": 2023,
+    "category": "Merit, Social Video / Over 15 Seconds",
+    "evidence_url": "https://www.oneclub.org/awards/theoneshow/-award/49398/the-ad-you-stay-in/"
+  },
+  "niche": "other",
+  "goal": "awareness",
+  "official_url": "https://www.oneclub.org/awards/theoneshow/-award/49398/the-ad-you-stay-in/",
+  "hook_0_3s": "The official page does not describe the first three seconds. The page says the video is 10 minutes and was made for TikTok.",
+  "story_beats": [
+    "The 2023 page says Hilton posted a 10-minute TikTok while typical engaged videos were 21 to 34 seconds.",
+    "It says the film was shot on an iPhone, vertically, with TikTok-native editing and fonts.",
+    "Creators appear in their own styles, including a duet and a remix.",
+    "The line repeated on the page is It Matters Where You Stay."
+  ],
+  "shot_list": [
+    {
+      "t": "10 min",
+      "shot": "A vertical phone film long enough that staying is the point.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "segments",
+      "shot": "Creator sections in their own formats, as the page describes.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The page contrasts a 10-minute length with the 21 to 34 second videos people usually finish.",
+  "why_it_worked": "The page makes the length the product proof: a 10-minute vertical TikTok that rewards people for staying, shot like the platform rather than like a TV spot.",
+  "cinematic_qualities": [
+    "Stated 10-minute length",
+    "Vertical phone capture named on the page"
+  ],
+  "safe_zone_notes": "The page says the TikTok was captured vertically on an iPhone. It does not print a pixel inset. This file uses 9:16."
+}

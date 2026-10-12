@@ -1,0 +1,61 @@
+{
+  "text_overlays": [],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The page says the soundtrack is yoik sung by Sami people.",
+  "voiceover": "Not stated on the official page.",
+  "cta": "Not stated on the official page.",
+  "emotional_angle": "A quiet, coordinated effort that looks effortless.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "Film one practiced routine with people who can actually do it.",
+    "If you use traditional music, clear it with the community.",
+    "Keep the world visually simple.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "awd-rekorderlig-silver-skaters",
+  "brand": "Rekorderlig",
+  "advertiser": "Rekorderlig",
+  "platform": "youtube_instream",
+  "format": "TV commercial",
+  "aspect_ratio": "16:9",
+  "length_s": 60,
+  "year": 2016,
+  "award": {
+    "name": "The One Show",
+    "year": 2016,
+    "category": "Merit, Consumer Television / 60 Second - Single",
+    "evidence_url": "https://www.oneclub.org/awards/theoneshow/-award/23900/silver-skaters/"
+  },
+  "niche": "food",
+  "goal": "awareness",
+  "official_url": "https://www.oneclub.org/awards/theoneshow/-award/23900/silver-skaters/",
+  "hook_0_3s": "The official page does not describe the first three seconds. The page files the film as a 60 Second single.",
+  "story_beats": [
+    "The 2016 page describes a training session between two skating brothers and their coach, who also sings.",
+    "The world on the page has no technology and no high-rise offices.",
+    "The soundtrack is named as yoik, sung by Sami people of northern Sweden.",
+    "The category is a 60-second television single."
+  ],
+  "shot_list": [
+    {
+      "t": "0-60s",
+      "shot": "Three men skating a routine together, as the page describes.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "sound",
+      "shot": "The coach sings. The page names yoik as the music.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The page files a 60-second film and describes one continuous routine.",
+  "why_it_worked": "The page builds a 60-second film as one synchronized routine in a world without tech, so the product's origin is a mood rather than a bottle close-up.",
+  "cinematic_qualities": [
+    "60-second television category",
+    "One routine instead of a montage of parties"
+  ],
+  "safe_zone_notes": "The page files it as television and does not print pixels. This file uses 16:9."
+}

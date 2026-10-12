@@ -1,13 +1,11 @@
 ---
-description: Route ad/creative requests through Ad Intelligence one-shot path
+description: Use the ad example library, then the user's own storyboard tools
 alwaysApply: false
 ---
 
-When the user asks for ads, creatives, hooks, UGC, TikTok/Meta/YouTube spots,
-launch films, storyboards, or “make ads that don’t look like AI slop”:
+When the user asks for ads, creatives, hooks, UGC, TikTok, Reels, Shorts, Meta, or YouTube spots:
 
-1. Use the **ad-intelligence** skill (`.cursor/skills/ad-intelligence` → `SKILL.md`).
-2. `node skills/ad-intelligence/scripts/probe-harness.mjs` → fill tool card → choose rung.
-3. URL/site → `brief-from-url.mjs`. Then one-shot: attention model → Concept → dense beats → craft → lint.
-4. Run start-package → retrieve `--compact` → Attention Lab → lint until ok.
-5. Equalize missing MCP (handoff/assembler) — never invent job ids or lint JSON.
+1. Read `AGENTS.md`.
+2. `node scripts/search.mjs` with platform, niche, goal, and a keyword.
+3. Read 3–5 matching files in `breakdowns/`.
+4. Rebuild the approach in the user's storyboard or render tools. Do not copy brand art, logos, characters, or exact lines.

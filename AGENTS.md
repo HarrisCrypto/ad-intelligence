@@ -1,28 +1,16 @@
-# AGENTS — Ad Intelligence
+# Ad example library
 
-Any coding agent (Cursor, Claude Code, Codex, Gemini CLI, OpenClaw, Copilot, …): when the user wants **ads / creatives / UGC / TikTok / Meta / Reels / Shorts / launch film**, use this skill.
+Use this repo to study how real ads are built. Then make a new ad in the user's own storyboard and render tools.
 
-## Load
+1. Pick platform, niche, and goal.
+2. `node scripts/search.mjs --platform tiktok --niche home-services --goal conversion --keyword missed`
+3. Open 3–5 matching files in `breakdowns/`.
+4. Copy the structure (hook, beats, shot order, pacing, safe zones). Hand the result to the user's storyboard or render tool.
 
-| Harness | Path |
-| --- | --- |
-| Cursor | `.cursor/skills/ad-intelligence` |
-| Claude Code | `.claude/skills/ad-intelligence` |
-| Copilot | `.github/skills/ad-intelligence` |
-| Generic / OpenClaw | `.agents/skills/ad-intelligence` or `skills/ad-intelligence/` |
-| No skill loader | Paste `skills/ad-intelligence/prompts/context-pack.md` |
+`rebuild_recipe` is tool-agnostic. Do not copy a brand's art, logos, characters, or exact copy. Do not download or rehost the videos. `official_url` is the page to read.
 
-## Mandatory
+Platform sizes and safe zones are in `platforms/`. Specs were checked on the date in each file.
 
-1. `node skills/ad-intelligence/scripts/probe-harness.mjs` — equalize tools → rung  
-2. Follow `skills/ad-intelligence/prompts/one-shot.md` — retrieve **studies** + attention models, emulate structure, map `human_build`  
-3. `lint-package.mjs` until `"ok": true` — never invent lint or job ids  
-4. Finish the cut when gen tools exist (`prompts/finish-the-cut.md`)  
+Schema: `schema/ad-breakdown.schema.json`. Refresh the catalog with `node scripts/build-index.mjs`. Lint with `node scripts/validate-breakdowns.mjs`.
 
-## Ready check
-
-```bash
-node skills/ad-intelligence/scripts/agent-ready.mjs
-```
-
-Docs: [INSTALL.md](./INSTALL.md) · [skills/ad-intelligence/SKILL.md](./skills/ad-intelligence/SKILL.md)
+Card lint, claim checks, and render QA still live here for fixtures only: `classroom/scripts/validate-card.mjs`, `classroom/scripts/observed-honesty.mjs`, `pipeline/qa/run-qa.mjs`. The previous tree is on branch `archive/v0`.

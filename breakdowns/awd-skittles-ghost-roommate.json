@@ -1,0 +1,56 @@
+{
+  "text_overlays": [],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "Not stated on the official page.",
+  "cta": "Not stated on the official page.",
+  "emotional_angle": "Comedy and nostalgia instead of a scare.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "Write episodes that each last about 6 seconds and still have a turn.",
+    "Release them on a schedule so people look for the next one.",
+    "Invent your own characters. Do not copy these roommates.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "awd-skittles-ghost-roommate",
+  "brand": "Skittles",
+  "advertiser": "Skittles",
+  "platform": "tiktok",
+  "format": "6-second episode series",
+  "aspect_ratio": "9:16",
+  "length_s": 6,
+  "year": 2025,
+  "award": null,
+  "niche": "food",
+  "goal": "awareness",
+  "official_url": "https://www.oneclub.org/awards/theoneshow/-award/63625/ghost-roommate/",
+  "hook_0_3s": "The official page does not describe the first three seconds. The page says the episodes are 6 seconds, so there is no time for a setup.",
+  "story_beats": [
+    "The page says Halloween candy is dominated by chocolate and Skittles needed to be remembered.",
+    "It describes seven 6-second episodes on TikTok and YouTube.",
+    "The situation is two roommates, one alive and one dead, who love the candy.",
+    "The results section is set in the 2025 Halloween season. The page lists a Merit and does not print an award year, so award is null."
+  ],
+  "shot_list": [
+    {
+      "t": "0-6s",
+      "shot": "One sitcom beat between the two roommates, as the page frames each episode.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "series",
+      "shot": "Seven episodes released on a schedule.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The page says each episode is 6 seconds and that they were released on a cadence.",
+  "why_it_worked": "The page uses a 6-second sitcom episode, posted on a schedule, so a candy brand can tell a continuing joke without a horror trope.",
+  "cinematic_qualities": [
+    "Stated 6-second episodes",
+    "A scheduled series rather than one post"
+  ],
+  "safe_zone_notes": "The page names TikTok and YouTube and does not print pixels. This file uses 9:16 because it names TikTok. A YouTube cut may differ."
+}

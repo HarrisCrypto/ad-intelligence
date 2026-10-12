@@ -1,0 +1,56 @@
+{
+  "text_overlays": [],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "Not stated on the official page.",
+  "cta": "Not stated on the official page.",
+  "emotional_angle": "The jolt of a show ending before it begins.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "Make a familiar format fail because it is too short.",
+    "Match that failure to a true speed claim.",
+    "Clear any show likeness yourself. Do not copy these episodes.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "awd-wero-ten-seconds",
+  "brand": "Wero",
+  "advertiser": "Wero",
+  "platform": "youtube_instream",
+  "format": "10-second TV mini-episodes",
+  "aspect_ratio": "16:9",
+  "length_s": 10,
+  "year": null,
+  "award": null,
+  "niche": "finance",
+  "goal": "consideration",
+  "official_url": "https://www.oneclub.org/awards/theoneshow/-award/57874/10-seconds/",
+  "hook_0_3s": "The page says viewers think a favorite show is starting. It does not time that illusion to the first three seconds.",
+  "story_beats": [
+    "The page says Wero moves money in under 10 seconds.",
+    "The films shorten popular TV shows to 10 seconds and air just before the real episode.",
+    "Ten mini-episodes cover different genres and use the shows' hosts and theme music.",
+    "The page lists a Merit and does not print an award year in the text that was read."
+  ],
+  "shot_list": [
+    {
+      "t": "0-10s",
+      "shot": "A fake cold open that ends before the story can start.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "reveal",
+      "shot": "The page says viewers realize the show was the ad.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The page states 10-second episodes and says 10 seconds is too short for a show and long enough for the product.",
+  "why_it_worked": "The page proves the product's speed by making a beloved show last 10 seconds, so the viewer feels the length instead of hearing a claim.",
+  "cinematic_qualities": [
+    "Stated 10-second episodes",
+    "The show's own music and hosts, as the page describes"
+  ],
+  "safe_zone_notes": "The page describes television mini-episodes and does not print pixels. This file uses 16:9. The award year is not printed in the text that was read, so award is null."
+}

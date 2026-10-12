@@ -1,0 +1,68 @@
+{
+  "id": "yti-canva-print-things",
+  "brand": "Canva",
+  "advertiser": "Canva",
+  "platform": "youtube_instream",
+  "format": "Brand film",
+  "aspect_ratio": "16:9",
+  "length_s": 31,
+  "year": 2026,
+  "award": null,
+  "niche": "etsy-printables",
+  "goal": "awareness",
+  "official_url": "https://www.youtube.com/watch?v=Ggpjft7fkQg",
+  "hook_0_3s": "The captions say that when your thing becomes a thing, you may want to print it.",
+  "story_beats": [
+    "The path is Canva, then the thing on other things: a sweatshirt and a tote bag.",
+    "People love the printed things.",
+    "The close is Canva, the thing that makes anything a thing."
+  ],
+  "shot_list": [
+    {
+      "t": "open",
+      "shot": "A thing that caught on now needs to be printed.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "middle",
+      "shot": "The thing goes onto a sweatshirt and a tote.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "close",
+      "shot": "People love their things. Canva makes anything a thing.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    }
+  ],
+  "pacing": "YouTube's results label states 31 seconds. Idea, two printed objects, a tagline.",
+  "text_overlays": [
+    {
+      "wording": "PRINT THINGS.",
+      "size": "End super",
+      "placement": "End still, on screen, with the Canva logo",
+      "timing": "End"
+    }
+  ],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The captions mark music and do not name it.",
+  "voiceover": "Spoken lines are on the watch page.",
+  "cta": "Print the thing. The end still shows Print things and the Canva logo, not a URL.",
+  "emotional_angle": "Delight at seeing your own idea become an object.",
+  "why_it_worked": "Print is the proof the idea is real. Two products are enough.",
+  "cinematic_qualities": [
+    "Results label 31 seconds",
+    "One idea printed onto two objects"
+  ],
+  "rebuild_recipe": [
+    "Start with an idea people already repeat.",
+    "Put it on two objects you can actually print.",
+    "Name the product in your own tagline.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "safe_zone_notes": "Public frame0.jpg is 480x268, classed as 16:9. YouTube's results label for this video states 31 seconds. The watch page upload date is May 13, 2026. The in-stream spec recommends 1920x1080, 1080x1920, or 1080x1080 and does not print one pixel inset. Keep type off the skip control and the bottom bar.",
+  "last_verified": "2026-10-12"
+}

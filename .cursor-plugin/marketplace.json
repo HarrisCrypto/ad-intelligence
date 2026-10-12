@@ -4,24 +4,20 @@
     "name": "HarrisCrypto"
   },
   "metadata": {
-    "description": "Pattern-first ad intelligence skills for LLM agents."
+    "description": "Ad example library: official-page breakdowns for agents."
   },
   "plugins": [
     {
       "name": "ad-intelligence",
       "source": ".",
-      "description": "One-shot agency-grade ads — provenanced studies, ingest, human-build logs, craft lint.",
-      "version": "3.20.0",
+      "description": "Searchable breakdowns of public ads plus platform spec sheets.",
+      "version": "4.0.0",
       "keywords": [
         "ads",
-        "viral",
         "tiktok",
-        "ugc",
-        "high-production",
         "meta",
         "youtube",
-        "creative",
-        "one-shot"
+        "breakdowns"
       ]
     }
   ]

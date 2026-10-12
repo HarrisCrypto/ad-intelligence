@@ -1,0 +1,81 @@
+{
+  "id": "yti-funny-plumbing-commercial-2023-by-deluxe",
+  "brand": "Deluxe Plumbing & Heating",
+  "advertiser": "Deluxe Plumbing & Heating",
+  "platform": "youtube_instream",
+  "format": "TV commercial",
+  "aspect_ratio": "16:9",
+  "length_s": 31,
+  "year": 2023,
+  "award": null,
+  "niche": "home-services",
+  "goal": "conversion",
+  "official_url": "https://www.youtube.com/watch?v=K1DD2QoWBq8",
+  "hook_0_3s": "A man named Will says he likes to live worry free, then lists things he does not stress about.",
+  "story_beats": [
+    "He shrugs off a perfect meal, a halftime deficit, and takeout.",
+    "He says choosing a plumber for the latest issue was not something he would chance.",
+    "He says he went with Deluxe because the service is quality he can trust.",
+    "The close tells the viewer to give Deluxe a call if they want to live worry free like him."
+  ],
+  "shot_list": [
+    {
+      "t": "open",
+      "shot": "Will introduces himself as someone who lives worry free.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "middle",
+      "shot": "He treats dinner and a losing half as low stakes, then treats the plumber hire as high stakes.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "close",
+      "shot": "He names Deluxe and asks the viewer to call.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    }
+  ],
+  "pacing": "YouTube's results label states 31 seconds. Casual stakes, then one decision he will not gamble.",
+  "text_overlays": [
+    {
+      "wording": "Worry-Free Will",
+      "size": "Name super",
+      "placement": "On screen only in roughly the first 3 seconds",
+      "timing": "First 3 seconds"
+    },
+    {
+      "wording": "DeluxePlumbing.com",
+      "size": "End-card type",
+      "placement": "End card, on screen",
+      "timing": "End card"
+    },
+    {
+      "wording": "(518)",
+      "size": "End-card type",
+      "placement": "Start of the phone number on the end card. The remaining digits were not read, so they are not filled in.",
+      "timing": "End card"
+    }
+  ],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The captions mark music and applause at the end. They do not name a track.",
+  "voiceover": "Spoken lines are on the watch page.",
+  "cta": "Call the number on the end card or go to DeluxePlumbing.com. The number begins (518).",
+  "emotional_angle": "Ease. The only worry he refuses is a bad plumber.",
+  "why_it_worked": "The character's indifference to everything else makes the plumber choice the one serious beat.",
+  "cinematic_qualities": [
+    "Results label 31 seconds",
+    "Low-stakes life, then one careful hire"
+  ],
+  "rebuild_recipe": [
+    "Let a character shrug off ordinary stress.",
+    "Make the hire the one thing they will not chance.",
+    "End on a call in your own words.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "safe_zone_notes": "Public frame0.jpg is 480x268, classed as 16:9. YouTube's results label for this video states 31 seconds. The watch page upload date is Mar 5, 2023. The in-stream spec recommends 1920x1080, 1080x1920, or 1080x1080 and does not print one pixel inset. Keep type off the skip control and the bottom bar.",
+  "last_verified": "2026-10-12"
+}

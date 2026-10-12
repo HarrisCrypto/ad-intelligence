@@ -1,0 +1,61 @@
+{
+  "text_overlays": [],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "Not stated on the official page.",
+  "cta": "Not stated on the official page.",
+  "emotional_angle": "A car sold for the family, then found again.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "Find a true owner story you have permission to tell.",
+    "Cut the reunion moment to about 60 seconds.",
+    "Keep a longer version only if the search is worth the time.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "awd-chevy-my-dads-car",
+  "brand": "Chevrolet",
+  "advertiser": "Chevrolet",
+  "platform": "youtube_instream",
+  "format": "TV spot and long-form film",
+  "aspect_ratio": "16:9",
+  "length_s": 60,
+  "year": 2012,
+  "award": {
+    "name": "The One Show",
+    "year": 2012,
+    "category": "Merit, Consumer Television / 60 Second - Single",
+    "evidence_url": "https://www.oneclub.org/awards/theoneshow/-award/17677/my-dads-car/"
+  },
+  "niche": "auto",
+  "goal": "awareness",
+  "official_url": "https://www.oneclub.org/awards/theoneshow/-award/17677/my-dads-car/",
+  "hook_0_3s": "The official page does not describe the first three seconds. The page says they launched a :60 TV spot and a long-form version.",
+  "story_beats": [
+    "The page says the :60 and a longer film show Herb Younger reunited with a 1965 Impala.",
+    "He had sold the car in the late 1980s to pay for his children's education.",
+    "His sons searched for five years and found the car.",
+    "The page says the reunion moment is the emotional peak."
+  ],
+  "shot_list": [
+    {
+      "t": "0-60s",
+      "shot": "The :60 version of a real reunion, as the page summarizes.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "long",
+      "shot": "The page also names a long-form online version and does not state its length.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The page states a :60 TV spot plus an untimed long-form cut of the same story.",
+  "why_it_worked": "The page builds a :60 around one true reunion, and keeps a longer cut for people who want the search, so the short film is the moment and the long film is the hunt.",
+  "cinematic_qualities": [
+    "Stated :60 plus an untimed long cut",
+    "One real reunion as the peak"
+  ],
+  "safe_zone_notes": "The page says TV and online and does not print pixels. This file uses 16:9 for the :60."
+}

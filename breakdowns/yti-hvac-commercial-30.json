@@ -1,0 +1,68 @@
+{
+  "id": "yti-hvac-commercial-30",
+  "brand": "CDL Electric",
+  "advertiser": "CDL Electric Company Inc.",
+  "platform": "youtube_instream",
+  "format": "TV commercial",
+  "aspect_ratio": "16:9",
+  "length_s": 31,
+  "year": 2024,
+  "award": null,
+  "niche": "home-services",
+  "goal": "consideration",
+  "official_url": "https://www.youtube.com/watch?v=jcT6Nh56CY0",
+  "hook_0_3s": "The captions open on CDL's HVAC service compared to a cool breeze on a scorching day.",
+  "story_beats": [
+    "A voice says skilled technicians are on the job so comfort is not compromised.",
+    "It tells the viewer not to settle, and to trust CDL for temperature and comfort.",
+    "The close is CDL keeping you comfortable no matter the weather."
+  ],
+  "shot_list": [
+    {
+      "t": "open",
+      "shot": "Voiceover compares the service to a cool breeze on a hot day.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "middle",
+      "shot": "The line credits technicians working out of sight when the weather is extreme.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "close",
+      "shot": "The spot ends on comfort in any weather and the CDL name.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    }
+  ],
+  "pacing": "YouTube's results label states 31 seconds. The lines move from weather image to technicians to a comfort promise.",
+  "text_overlays": [
+    {
+      "wording": "CDL Electric",
+      "size": "Logo",
+      "placement": "The logo at the open, on the truck, and at the close. No other super was on the sampled frames.",
+      "timing": "Open and close"
+    }
+  ],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The official page does not describe the score.",
+  "voiceover": "Spoken lines are on the watch page.",
+  "cta": "The on-screen close is the CDL logo. The voice asks the viewer to trust CDL for comfort.",
+  "emotional_angle": "Relief from heat, framed as something a crew handles for you.",
+  "why_it_worked": "The spot spends its half minute on one promise, comfort, and names the crew instead of a product tour.",
+  "cinematic_qualities": [
+    "Results label 31 seconds",
+    "One comfort promise from open to close"
+  ],
+  "rebuild_recipe": [
+    "Open on the weather problem your service removes.",
+    "Credit the people who do the work, not a feature list.",
+    "End on a comfort promise in your own words.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "safe_zone_notes": "Public frame0.jpg is 480x268, classed as 16:9. YouTube's results label for this video states 31 seconds. The watch page upload date is Jan 5, 2024. The in-stream spec recommends 1920x1080, 1080x1920, or 1080x1080 and does not print one pixel inset. Keep type off the skip control and the bottom bar.",
+  "last_verified": "2026-10-12"
+}

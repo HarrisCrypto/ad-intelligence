@@ -1,0 +1,80 @@
+{
+  "id": "yti-fast-installer-bathmasters-30-tv-ad-2025",
+  "brand": "BathMasters",
+  "advertiser": "BathMasters",
+  "platform": "youtube_instream",
+  "format": "TV commercial",
+  "aspect_ratio": "16:9",
+  "length_s": 31,
+  "year": 2025,
+  "award": null,
+  "niche": "home-services",
+  "goal": "consideration",
+  "official_url": "https://www.youtube.com/watch?v=kXBau09IGrM",
+  "hook_0_3s": "Two people talk about a bathroom remodel that finished quickly because codes were skipped.",
+  "story_beats": [
+    "One speaker admits taking shortcuts. The other says they should have called BathMasters.",
+    "BathMasters says it does not cut corners, is licensed, builds to code, pulls permits, and passes inspections.",
+    "The close says it is a full-service bathroom and kitchen remodeler that will do the job right."
+  ],
+  "shot_list": [
+    {
+      "t": "open",
+      "shot": "A finished remodel is explained as the result of skipped codes and shortcuts.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "middle",
+      "shot": "The regret line is that they should have called BathMasters.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "close",
+      "shot": "The brand lists licenses, code, permits, and inspections, then a do-it-right close.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    }
+  ],
+  "pacing": "YouTube's results label states 31 seconds. The joke lands first, then the credentials.",
+  "text_overlays": [
+    {
+      "wording": "I TOLD YOU WE SHOULD HAVE CALLED BATHMASTERS.",
+      "size": "Mid-spot super",
+      "placement": "On screen over the conversation",
+      "timing": "Middle"
+    },
+    {
+      "wording": "BATHROOM REMODELING",
+      "size": "Truck lettering",
+      "placement": "On the truck, on screen",
+      "timing": "Middle"
+    },
+    {
+      "wording": "BATHMASTERS",
+      "size": "End-card type",
+      "placement": "End card, on screen",
+      "timing": "End card"
+    }
+  ],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The official page does not describe the score.",
+  "voiceover": "Spoken lines are on the watch page.",
+  "cta": "Hire BathMasters to remodel a bathroom or kitchen. The sampled frames do not show a phone number or a URL.",
+  "emotional_angle": "Regret, then relief that a licensed remodeler exists.",
+  "why_it_worked": "The shortcut confession makes the license list feel like the punchline instead of a brochure.",
+  "cinematic_qualities": [
+    "Results label 31 seconds",
+    "Shortcut confession before the credential list"
+  ],
+  "rebuild_recipe": [
+    "Show the cheap way failing in a conversation.",
+    "Answer with the checks you actually perform.",
+    "Close on doing the job right, in your own words.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "safe_zone_notes": "Public frame0.jpg is 480x268, classed as 16:9. YouTube's results label for this video states 31 seconds. The watch page upload date is Feb 4, 2025. The in-stream spec recommends 1920x1080, 1080x1920, or 1080x1080 and does not print one pixel inset. Keep type off the skip control and the bottom bar.",
+  "last_verified": "2026-10-12"
+}

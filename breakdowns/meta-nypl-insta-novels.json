@@ -1,0 +1,61 @@
+{
+  "text_overlays": [],
+  "typography_ui": "The page names a lighter Founders Grotesk and Georgia for body text on small screens.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "Not stated on the official page.",
+  "voiceover": "Not stated on the official page.",
+  "cta": "The page says each book lived as a Story highlight people could reopen.",
+  "emotional_angle": "Public-domain books brought to the place readers already scroll.",
+  "last_verified": "2026-10-11",
+  "rebuild_recipe": [
+    "Design the first 10 seconds as a cover, not a summary of the whole story.",
+    "Tell people how to pause if the placement auto-advances.",
+    "Keep motion simple enough to read on a phone.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "id": "meta-nypl-insta-novels",
+  "brand": "New York Public Library",
+  "advertiser": "New York Public Library",
+  "platform": "meta_stories",
+  "format": "Instagram Stories book",
+  "aspect_ratio": "9:16",
+  "length_s": 10,
+  "year": 2018,
+  "award": {
+    "name": "D&AD Awards",
+    "year": 2019,
+    "category": "Wood Pencil, Art Direction and Digital Marketing",
+    "evidence_url": "https://www.dandad.org/insights/awards/insta-novels-case-study-insights"
+  },
+  "niche": "nonprofit",
+  "goal": "consideration",
+  "official_url": "https://www.dandad.org/insights/awards/insta-novels-case-study-insights",
+  "hook_0_3s": "The page says the covers had 10 seconds and were briefed as mini-trailers.",
+  "story_beats": [
+    "The D&AD page says books launched in August 2018 as Instagram Stories highlights.",
+    "Covers had 10 seconds and were treated as mini-trailers.",
+    "Stories advance every ten seconds, so readers must hold a finger to keep reading.",
+    "Type notes on the page: a lighter Founders Grotesk and Georgia for small screens, with a cap of 198 pages."
+  ],
+  "shot_list": [
+    {
+      "t": "0-10s",
+      "shot": "Animated book cover, briefed as a mini-trailer.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    },
+    {
+      "t": "pages",
+      "shot": "Simple page animation. The page says complicated motion performed worse.",
+      "framing": "Not stated on the official page.",
+      "motion": "Not stated on the official page."
+    }
+  ],
+  "pacing": "The page says Stories advance every ten seconds and that simpler animation worked better.",
+  "why_it_worked": "The D&AD page shows a library using Instagram's 10-second Story advance as the design constraint: trailer covers, a hold-to-read hint, and type chosen for a phone.",
+  "cinematic_qualities": [
+    "Stated 10-second cover",
+    "Hold-to-read against the 10-second advance"
+  ],
+  "safe_zone_notes": "The page does not print a pixel inset. It is an Instagram Stories project, so this file uses 9:16. Keep type clear of the top and bottom Story chrome."
+}

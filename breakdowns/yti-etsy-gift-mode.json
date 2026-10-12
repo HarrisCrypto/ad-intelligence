@@ -1,0 +1,74 @@
+{
+  "id": "yti-etsy-gift-mode",
+  "brand": "Etsy",
+  "advertiser": "Etsy",
+  "platform": "youtube_instream",
+  "format": "Brand film",
+  "aspect_ratio": "16:9",
+  "length_s": 29,
+  "year": 2024,
+  "award": null,
+  "niche": "ecommerce",
+  "goal": "awareness",
+  "official_url": "https://www.youtube.com/watch?v=cXT8JgdvCHc",
+  "hook_0_3s": "Someone panics that a great gift means they now owe France a gift too.",
+  "story_beats": [
+    "A colleague says they could use Etsy's new Gift Mode.",
+    "Asked what the French like, the room lands on cheese.",
+    "The task is called done. The end line is don't panic, gift easy with Gift Mode, new on Etsy."
+  ],
+  "shot_list": [
+    {
+      "t": "open",
+      "shot": "Panic over owing someone a gift as good as the one just received.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "middle",
+      "shot": "Gift Mode is proposed, and the room guesses cheese.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    },
+    {
+      "t": "close",
+      "shot": "Done, then don't panic, gift easy with Gift Mode.",
+      "framing": "The captions do not name the lens or the camera move.",
+      "motion": "The captions do not name the lens or the camera move."
+    }
+  ],
+  "pacing": "YouTube's results label states 29 seconds. Panic, a tool, a silly answer, done.",
+  "text_overlays": [
+    {
+      "wording": "Don't panic.",
+      "size": "End super",
+      "placement": "On screen at the close",
+      "timing": "Close"
+    },
+    {
+      "wording": "Gift easy with Gift Mode.",
+      "size": "End super",
+      "placement": "On screen at the close, over the Etsy phone UI",
+      "timing": "Close"
+    }
+  ],
+  "typography_ui": "The official page does not describe a typeface.",
+  "color_grade": "Not stated on the official page.",
+  "music_sound": "The official page does not describe the score.",
+  "voiceover": "Spoken lines are on the watch page.",
+  "cta": "Use Gift Mode on Etsy. The description repeats don't panic, gift easy with Etsy.",
+  "emotional_angle": "Social panic, then a shortcut that lets the room look competent.",
+  "why_it_worked": "The joke is the impossible recipient. The product is the way out of the meeting.",
+  "cinematic_qualities": [
+    "Results label 29 seconds",
+    "Panic, then a finished gift"
+  ],
+  "rebuild_recipe": [
+    "Open on the moment a gift creates a new obligation.",
+    "Show a group solving it badly, then a tool solving it.",
+    "End on calm, in your own words.",
+    "Do not copy the brand's logos, characters, art, or exact copy."
+  ],
+  "safe_zone_notes": "Public frame0.jpg is 480x268, classed as 16:9. YouTube's results label for this video states 29 seconds. The watch page upload date is Feb 1, 2024. The in-stream spec recommends 1920x1080, 1080x1920, or 1080x1080 and does not print one pixel inset. Keep type off the skip control and the bottom bar.",
+  "last_verified": "2026-10-12"
+}

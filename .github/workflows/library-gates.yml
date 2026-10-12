@@ -1,0 +1,33 @@
+name: Library gates
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  gates:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install ffmpeg (render QA)
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Validate breakdowns and index
+        run: node scripts/validate-breakdowns.mjs
+
+      - name: Search smoke
+        run: node scripts/search.mjs --platform tiktok --niche home-services --goal conversion --keyword hvac
+
+      - name: Card lint and observed honesty
+        run: node scripts/prove-card-lint.mjs
+
+      - name: Render QA regression
+        run: node pipeline/qa/prove-qa.mjs
