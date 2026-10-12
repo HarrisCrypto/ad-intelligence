@@ -41,24 +41,6 @@
   "pacing": "The Shorts player lists lengthSeconds 31. One question, three types, a call.",
   "text_overlays": [
     {
-      "wording": "GAS",
-      "size": "Section label",
-      "placement": "On screen over the gas-heater section",
-      "timing": "Early"
-    },
-    {
-      "wording": "ELECTRIC",
-      "size": "Section label",
-      "placement": "On screen over the electric-heater section",
-      "timing": "Middle"
-    },
-    {
-      "wording": "TANKLESS",
-      "size": "Section label",
-      "placement": "On screen over the tankless section",
-      "timing": "Middle"
-    },
-    {
       "wording": "1-800-GET-ROTO",
       "size": "End-card type",
       "placement": "End card, on screen",

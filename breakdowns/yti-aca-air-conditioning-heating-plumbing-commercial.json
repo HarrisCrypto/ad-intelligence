@@ -58,7 +58,7 @@
       "timing": "Middle"
     },
     {
-      "wording": "24/7 PLUMBING",
+      "wording": "24/7 PLUMBING SERVICES",
       "size": "Card type",
       "placement": "On a mid-spot card, on screen",
       "timing": "Middle"
@@ -66,8 +66,8 @@
     {
       "wording": "ANYTIME DAY OR NIGHT",
       "size": "Card type",
-      "placement": "On the same mid-spot card, on screen",
-      "timing": "Middle"
+      "placement": "On its own later card, on screen",
+      "timing": "Later"
     }
   ],
   "typography_ui": "The official page does not describe a typeface.",

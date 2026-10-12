@@ -42,23 +42,23 @@
   "pacing": "The Shorts player lists lengthSeconds 30 and approxDurationMs about 30000. The beats are short office interruptions, not a product demo.",
   "text_overlays": [
     {
-      "wording": "Policy Violation",
-      "size": "UI label",
-      "placement": "On the Ramp screen inside the office scene, on screen",
-      "timing": "Middle"
-    },
-    {
       "wording": "Multiply what's possible",
       "size": "End super",
-      "placement": "On screen at the close. ramp.com is spoken, not this super.",
+      "placement": "On screen at the close",
       "timing": "Close"
+    },
+    {
+      "wording": "ramp.com",
+      "size": "Full-screen end card",
+      "placement": "Full-screen end card, on screen",
+      "timing": "About 28s"
     }
   ],
   "typography_ui": "The official page does not describe a typeface.",
   "color_grade": "Not stated on the official page.",
   "music_sound": "The official page does not name a track. The description names the director and the lead.",
-  "voiceover": "Spoken lines are on the watch page.",
-  "cta": "The on-screen close is Multiply what's possible. The voice says at ramp.com.",
+  "voiceover": "Policy Violation is spoken in the office scene. Other spoken lines are on the watch page.",
+  "cta": "The full-screen end card at about 28 seconds is ramp.com.",
   "emotional_angle": "Relief inside a chaotic expense meeting. The product is the person who walks in and fixes it.",
   "why_it_worked": "A 30-second office farce lets the expense mess stay funny while the only sell is the closing URL.",
   "cinematic_qualities": [
